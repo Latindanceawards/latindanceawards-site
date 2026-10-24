@@ -555,7 +555,7 @@ rank_main = f'''
     {r("p", "Für die erste Ausgabe haben wir die sechs größten Bachata-Städte Deutschlands gewählt. Dort gibt es genug Schulen für einen fairen Vergleich, und viele Tänzer suchen hier gezielt nach einem Kurs. Weitere Städte kommen in den nächsten Ausgaben dazu.", "For the first edition we chose Germany's six biggest Bachata cities. They have enough schools for a fair comparison, and many dancers there search specifically for a class. More cities join in future editions.")}
     {r("p", "Jede Stadt bekommt ein eigenes Top-10-Ranking. Die beste Schule jeder Stadt erhält den Award <strong>Beste Schule der Stadt</strong>, die höchste Punktzahl im ganzen Land den Award <strong>Beste Bachata-Schule Deutschlands</strong>.", "Every city gets its own top 10. The best school in each city receives the <strong>Best School of the City</strong> award, and the highest score in the country wins <strong>Best Bachata School in Germany</strong>.")}
     <div class="citylinks">{city_links}</div>
-    {r("p", "Mehr zu den Schulen vor Ort: <a href=\"bachata-berlin.html\">Bachata Berlin</a>.", "More on the schools locally: <a href=\"bachata-berlin.html\">Bachata Berlin</a>.")}
+    {r("p", "Mehr zu den Schulen vor Ort: <a href=\"bachata-berlin.html\">Berlin</a>, <a href=\"bachata-hamburg.html\">Hamburg</a>, <a href=\"bachata-muenchen.html\">München</a>.", "More on the schools locally: <a href=\"bachata-berlin.html\">Berlin</a>, <a href=\"bachata-hamburg.html\">Hamburg</a>, <a href=\"bachata-muenchen.html\">Munich</a>.")}
   </div>
 </section>
 

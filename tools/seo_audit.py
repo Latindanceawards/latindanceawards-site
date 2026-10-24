@@ -6,6 +6,8 @@ PAGES = {  # page: (main keyword, target word count from competitor research or 
     'rankings.html': ('beste Bachata-Schulen Deutschland', 960),
     'bewerbung.html': ('Bachata-Schule anmelden', 0),
     'bachata-berlin.html': ('Bachata Berlin', 900),
+    'bachata-hamburg.html': ('Bachata Hamburg', 900),
+    'bachata-muenchen.html': ('Bachata München', 850),
 }
 sitemap = open(os.path.join(ROOT, 'sitemap.xml')).read()
 llms = open(os.path.join(ROOT, 'llms.txt')).read()

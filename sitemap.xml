@@ -32,4 +32,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/bachata-berlin.html?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-berlin.html"/>
   </url>
+  <url>
+    <loc>https://latindanceawards.com/bachata-hamburg.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-hamburg.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/bachata-hamburg.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-hamburg.html"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/bachata-muenchen.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-muenchen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/bachata-muenchen.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-muenchen.html"/>
+  </url>
 </urlset>
