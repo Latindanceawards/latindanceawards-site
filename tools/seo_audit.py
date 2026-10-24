@@ -5,6 +5,7 @@ PAGES = {  # page: (main keyword, target word count from competitor research or 
     'index.html': ('Bachata Awards', 0),
     'rankings.html': ('beste Bachata-Schulen Deutschland', 960),
     'bewerbung.html': ('Bachata-Schule anmelden', 0),
+    'bachata-berlin.html': ('Bachata Berlin', 900),
 }
 sitemap = open(os.path.join(ROOT, 'sitemap.xml')).read()
 llms = open(os.path.join(ROOT, 'llms.txt')).read()
@@ -32,7 +33,7 @@ for page, (kw, target) in PAGES.items():
     schema = ' '.join(re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S))
     imgs = re.findall(r'<img[^>]*>', body)
     bad_imgs = [i for i in imgs if not re.search(r'alt="[^"]+"', i)]
-    internal = set(re.findall(r'href="((?:/|)(?:index|rankings|bewerbung)\.html[^"]*)"', s))
+    internal = set(re.findall(r'href="((?:/|)(?:index|rankings|bewerbung|bachata-[a-z]+)\.html[^"]*)"', s))
     outbound = re.findall(r'<a [^>]*href="https://(?!latindanceawards\.com)[^"]+"[^>]*rel="noopener"', s)
     url = 'https://latindanceawards.com/' + ('' if page == 'index.html' else page)
     checks = [
