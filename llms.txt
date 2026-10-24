@@ -1,0 +1,15 @@
+# Latin Dance Awards
+
+> Independent awards and rankings for Bachata schools in Europe. The first edition (Bachata Awards 2026) ranks Bachata schools in Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf. Results are published on December 20, 2026. Schools cannot pay to be ranked. The site is in German with an English version (?lang=en).
+
+Every school is scored on the same nine public factors, 100 points in total: weighted Google rating (25), festival and congress appearances (15), review volume (10), years active (10), classes and beginner offer (10), events and guest teachers (10), social media (10), recent reviews from the last 12 months (5) and competition results (5).
+
+## Pages
+
+- [Bachata Awards 2026 (homepage)](https://latindanceawards.com/): what the awards are, the five award categories, the scoring method and FAQ
+- [Best Bachata schools in Germany 2026 (rankings)](https://latindanceawards.com/rankings.html): city and national rankings, published December 20, 2026
+- [Enter a Bachata school (application)](https://latindanceawards.com/bewerbung.html): free application for schools, deadline November 30, 2026
+
+## Contact
+
+- Email: hello@latindanceawards.com

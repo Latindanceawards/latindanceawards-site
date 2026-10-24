@@ -9,7 +9,7 @@ FOOTER = idx[idx.index('<footer>'): idx.index('</footer>') + 9]
 EN_INDEX = json.loads(re.search(r'var EN=(\{.*?\});\n', idx, re.S).group(1))
 
 def fix_links(h):
-    for a in ['#why', '#method', '#categories']:
+    for a in ['#why', '#method', '#categories', '#faq']:
         h = h.replace(f'href="{a}"', f'href="index.html{a}"')
     return h.replace('href="#top"', 'href="index.html"')
 
@@ -128,16 +128,32 @@ PAGE_CSS = r'''
 .note-card h3{font-family:var(--serif);font-weight:500;font-size:26px;margin-bottom:4px}
 .note-card p{color:var(--muted)}
 
+.prose > *{max-width:760px}
+.prose h2,.sec-h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4vw,50px);line-height:1.1;letter-spacing:-.01em;margin-bottom:18px}
+.prose h3{font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.2;margin:30px 0 8px}
+.prose p{color:var(--muted);margin-bottom:14px}
+.prose p strong{color:var(--cream)}
+.prose ul{color:var(--muted);padding-left:20px;margin-bottom:14px}
+.prose li{margin-bottom:8px}
+.prose a{color:var(--gold-light)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cards article{padding:28px 26px;border-radius:22px;background:var(--card);border:1px solid var(--line)}
+.cards h3{font-family:var(--serif);font-weight:500;font-size:23px;line-height:1.2;margin-bottom:8px}
+.cards p{color:var(--muted);font-size:15.5px}
+.citylinks{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.citylinks a{padding:10px 18px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-weight:600;font-size:15px;text-decoration:none}
+.citylinks a:hover{border-color:rgba(228,185,91,.5);color:var(--gold-light)}
 @media (max-width:960px){
+  .cards{grid-template-columns:1fr}
   .page-hero .wrap{grid-template-columns:1fr}
-  .page-hero .seal-box{order:-1}
+  .page-hero .seal-box{order:-1;margin-top:16px}
   .page-hero .seal{width:min(260px,70vw)}
   .steps{grid-template-columns:1fr 1fr}
   .need{grid-template-columns:1fr}
   .breakdown{grid-template-columns:1fr 1fr;padding-left:22px}
 }
 @media (max-width:620px){
-  .page-hero{padding:70px 0 70px}
+  .page-hero{padding:34px 0 70px}
   .block{padding:80px 0}
   .steps{grid-template-columns:1fr}
   .form-card{padding:26px 20px}
@@ -172,9 +188,24 @@ LANG_JS = r'''
   META.de={title:document.title, desc:document.querySelector('meta[name="description"]').content};
 '''
 
-def page(fname, title_de, desc_de, title_en, desc_en, canonical, main_html, en_dict, page_js):
+SITE = 'https://latindanceawards.com/'
+
+def crumbs(name, url):
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Latin Dance Awards", "item": SITE},
+        {"@type": "ListItem", "position": 2, "name": name, "item": SITE + url}]}
+
+def faq_schema(items):
+    return {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": re.sub(r'<[^>]+>', '', a)}}
+        for q, _, a, _ in items]}
+
+def page(fname, title_de, desc_de, title_en, desc_en, canonical, main_html, en_dict, page_js, schema=()):
     en = dict(SHARED_EN); en.update(en_dict)
     head = idx[:idx.index('<style>')]
+    head = re.sub(r'<script type="application/ld\+json">.*?</script>\n', '', head, flags=re.S)
+    head += '<script type="application/ld+json">\n' + json.dumps(list(schema), ensure_ascii=False, indent=1) + '\n</script>\n'
+    head = re.sub(r'<meta property="og:type" content="[^"]*">', '<meta property="og:type" content="article">' if False else '<meta property="og:type" content="website">', head, count=1)
     head = re.sub(r'<title>.*?</title>', f'<title>{title_de}</title>', head, count=1)
     head = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{desc_de}">', head, count=1)
     head = re.sub(r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{title_de}">', head, count=1)
@@ -260,8 +291,8 @@ app_main = f'''
   <div class="wrap">
     <div>
       <span class="edition rise d1"><i></i>{t("span", "Bewerbung · Awards 2026", "Application · Awards 2026")}</span>
-      <h1 id="app-title" class="rise d2">{t("span", "Bewirb deine Schule für die <em class=\"foil\">Bachata Awards 2026</em>", "Enter your school for the <em class=\"foil\">Bachata Awards 2026</em>")}</h1>
-      <p class="lede rise d3">{t("span", "Kostenlos, in fünf Minuten erledigt und offen für jede Bachata-Schule in Deutschlands sechs größten Bachata-Städten.", "Free, done in five minutes, and open to every Bachata school in Germany's six biggest Bachata cities.")}</p>
+      <h1 id="app-title" class="rise d2">{t("span", "Bachata-Schule anmelden für die <em class=\"foil\">Bachata Awards 2026</em>", "Enter your Bachata school for the <em class=\"foil\">Bachata Awards 2026</em>")}</h1>
+      <p class="lede rise d3">{t("span", "Melde deine Bachata-Schule kostenlos an: Die Bewerbung dauert fünf Minuten und ist offen für jede Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt und Düsseldorf.", "Enter your Bachata school for free: applying takes five minutes and is open to every Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf.")}</p>
       <div class="facts rise d4">
         <span>{ICON["free"]}{t("b", "Kostenlos", "Free")}</span>
         <span>{ICON["clock"]}{t("b", "5 Minuten", "5 minutes")}</span>
@@ -274,7 +305,7 @@ app_main = f'''
       </div>
     </div>
     <div class="seal-box rise d3">
-      <img class="seal" src="badge-winner-template.svg" alt="" width="360" height="360">
+      <img class="seal" src="badge-winner-template.svg" alt="Siegel Best School · Official Winner der Bachata Awards 2026" width="360" height="360" fetchpriority="low">
       {t("p", "Dein Siegel, wenn deine Schule gewinnt", "Your seal, if your school wins", 'class="seal-cap"')}
     </div>
   </div>
@@ -289,6 +320,28 @@ app_main = f'''
     <ol class="steps">
 {steps_html}
     </ol>
+  </div>
+</section>
+
+<section class="block" aria-labelledby="why-title">
+  <div class="wrap">
+    <div class="sec-head">
+      {t("h2", "Warum sich die Anmeldung lohnt", "Why entering is worth it", 'id="why-title"')}
+      {t("p", "Die Teilnahme kostet nichts und bringt deiner Schule Sichtbarkeit bei Tänzern, die gerade eine Bachata-Schule suchen.", "Taking part costs nothing and puts your school in front of dancers who are looking for a Bachata school right now.")}
+    </div>
+    <div class="cards">
+      <article>{t("h3", "Ein offizielles Siegel", "An official seal", "")}{t("p", "Gewinner bekommen das Award-Siegel für Website, Studio und Social Media. Es zeigt neuen Schülern auf einen Blick, dass eure Qualität unabhängig bestätigt wurde.", "Winners get the award seal for their website, studio and social media. It shows new students at a glance that your quality has been confirmed independently.")}</article>
+      <article>{t("h3", "Sichtbar in deiner Stadt", "Visible in your city", "")}{t("p", "Jede Stadt bekommt eine eigene Ranking-Seite. Dort landen Tänzer, die nach einer Bachata-Schule in Berlin, München oder Köln suchen.", "Every city gets its own ranking page. That is where dancers land when they look for a Bachata school in Berlin, Munich or Cologne.")}</article>
+      <article>{t("h3", "Ehrliches Feedback", "Honest feedback", "")}{t("p", "Du siehst deine Punkte in allen neun Kriterien. So weißt du genau, wo eure Schule stark ist und wo noch Potenzial liegt.", "You see your points in all nine factors, so you know exactly where your school is strong and where there is room to grow.")}</article>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" aria-labelledby="score-title">
+  <div class="wrap prose">
+    {t("h2", "So bewerten wir die Schulen", "How we score the schools", 'id="score-title" class="sec-h2"')}
+    {t("p", "Alle Bachata-Schulen werden nach denselben neun Kriterien bewertet, zusammen <strong>100 Punkte</strong>. Die meisten Punkte gibt es für die Google-Bewertung (25), Festivals und Kongresse (15), die Anzahl der Bewertungen, die Jahre im Unterricht, das Kursangebot für Einsteiger, eigene Events und Social Media (je 10). Aktuelle Bewertungen und Wettbewerbe zählen je 5 Punkte.", "All Bachata schools are scored on the same nine factors, <strong>100 points</strong> in total. The most points come from the Google rating (25), festivals and congresses (15), and review volume, years of teaching, the beginner offer, own events and social media (10 each). Recent reviews and competitions count 5 points each.")}
+    {t("p", "Mit deiner Bewerbung bestätigst du die Angaben, die wir sonst nur schätzen könnten. Was wir nicht bestätigen können, zählt mit 0 Punkten. Die vollständige Methode steht auf der <a href=\"index.html#method\">Startseite</a>.", "Your application confirms the information we could otherwise only estimate. Anything we can't confirm counts as 0 points. The full method is on the <a href=\"index.html#method\">homepage</a>.")}
   </div>
 </section>
 
@@ -350,11 +403,12 @@ app_js = r'''
 '''
 
 page('bewerbung.html',
-     'Bewerbung · Bachata Awards 2026 · Latin Dance Awards',
-     'Bewirb deine Bachata-Schule kostenlos für die Latin Dance Awards 2026. Bewerbungsschluss 30. November, Ergebnisse am 20. Dezember.',
-     'Apply · Bachata Awards 2026 · Latin Dance Awards',
+     'Bachata-Schule anmelden · Bachata Awards 2026',
+     'Bachata-Schule kostenlos anmelden für die Bachata Awards 2026: Bewerbung in fünf Minuten, Bewerbungsschluss 30. November, Ergebnisse am 20. Dezember.',
+     'Enter your Bachata school · Bachata Awards 2026',
      'Enter your Bachata school for the Latin Dance Awards 2026 for free. Deadline November 30, results on December 20.',
-     'bewerbung.html', app_main, t.en, app_js)
+     'bewerbung.html', app_main, t.en, app_js,
+     schema=[crumbs('Bewerbung', 'bewerbung.html'), faq_schema(faq)])
 
 # ======================================================================
 # RANKINGS PAGE
@@ -367,13 +421,37 @@ tabs_html = '\n'.join(
     f'      <button type="button" role="tab" id="tab-{slug}" aria-controls="panel" aria-selected="{"true" if i==0 else "false"}" data-city="{slug}">{r("span", de, en)}</button>'
     for i, (slug, de, en) in enumerate(CITIES))
 
+
+rfaq = [
+ ('Wann wird das Bachata-Ranking veröffentlicht?', 'When is the Bachata ranking published?',
+  'Alle Rankings erscheinen am 20. Dezember 2026 um 19 Uhr auf dieser Seite, zuerst für die sechs Städte und gleichzeitig für ganz Deutschland.',
+  'All rankings go live on December 20, 2026 at 7 pm (CET) on this page, for the six cities and for Germany as a whole.'),
+ ('Welche Städte sind im Ranking 2026?', 'Which cities are in the 2026 ranking?',
+  'Berlin, München, Hamburg, Köln, Frankfurt und Düsseldorf. Weitere Städte und Länder folgen in den nächsten Ausgaben.',
+  'Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf. More cities and countries follow in future editions.'),
+ ('Kann eine Schule für einen besseren Platz bezahlen?', 'Can a school pay for a better place?',
+  'Nein. Plätze sind nicht käuflich. Jede Schule wird nach denselben neun Kriterien bewertet, und die Punkteaufschlüsselung ist öffentlich.',
+  'No. Places cannot be bought. Every school is scored on the same nine factors, and the score breakdown is public.'),
+ ('Brauche ich einen Tanzpartner für einen Bachata-Kurs?', 'Do I need a partner for a Bachata class?',
+  'In den meisten Bachata-Kursen nicht. Viele Schulen lassen die Paare regelmäßig wechseln, sodass du auch allein kommen kannst. Frag am besten vorher bei der Schule nach.',
+  'In most Bachata classes you don\'t. Many schools rotate partners regularly, so you can come on your own. It is best to ask the school beforehand.'),
+ ('Meine Schule fehlt. Was kann ich tun?', 'My school is missing. What can I do?',
+  'Melde sie bis zum 30. November kostenlos über die <a href="bewerbung.html">Bewerbungsseite</a> an. Wir nehmen jede Bachata-Schule in den sechs Städten auf.',
+  'Enter it for free by November 30 on the <a href="bewerbung.html">application page</a>. We include every Bachata school in the six cities.'),
+ ('Wie oft wird das Ranking aktualisiert?', 'How often is the ranking updated?',
+  'Das Ranking erscheint einmal im Jahr. Korrekturen an falschen Daten prüfen wir laufend und übernehmen sie nach der Prüfung.',
+  'The ranking is published once a year. We review corrections to wrong data on an ongoing basis and apply them once checked.'),
+]
+rfaq_html = '\n'.join(f'      <details>{r("summary", q_de, q_en)}{r("p", a_de, a_en)}</details>' for q_de, q_en, a_de, a_en in rfaq)
+city_links = ''.join(f'<a href="#{slug}">{r("span", de, en)}</a>' for slug, de, en in CITIES[1:])
+
 rank_main = f'''
 <section class="page-hero" aria-labelledby="rk-title">
   <div class="wrap">
     <div>
       <span class="edition rise d1"><i></i>{r("span", "Rankings 2026 · Deutschland", "Rankings 2026 · Germany")}</span>
-      <h1 id="rk-title" class="rise d2">{r("span", "Die besten Bachata-Schulen <em class=\"foil\">Deutschlands 2026</em>", "The best Bachata schools <em class=\"foil\">in Germany 2026</em>")}</h1>
-      <p class="lede rise d3">{r("span", "Sechs Städte, ein nationaler Sieger. Die Ergebnisse werden am 20. Dezember 2026 um 19 Uhr veröffentlicht.", "Six cities, one national winner. Results will be published on December 20, 2026 at 7 pm (CET).")}</p>
+      <h1 id="rk-title" class="rise d2">{r("span", "Beste Bachata-Schulen in <em class=\"foil\">Deutschland 2026</em>", "Best Bachata schools in <em class=\"foil\">Germany 2026</em>")}</h1>
+      <p class="lede rise d3">{r("span", "Die besten Bachata-Schulen in Deutschland, bewertet nach neun öffentlichen Kriterien: sechs Städte, ein nationaler Sieger. Die Ergebnisse erscheinen am 20. Dezember 2026 um 19 Uhr.", "The best Bachata schools in Germany, scored on nine public factors: six cities, one national winner. Results are published on December 20, 2026 at 7 pm (CET).")}</p>
       <div class="countdown rise d4" id="countdown" aria-live="off">
         <div><b data-u="d">00</b>{r("small", "Tage", "days")}</div>
         <div><b data-u="h">00</b>{r("small", "Stunden", "hours")}</div>
@@ -385,7 +463,7 @@ rank_main = f'''
         <a class="btn btn-ghost" href="bewerbung.html">{r("span", "Schule kostenlos bewerben", "Enter a school for free")}</a>
       </div>
     </div>
-    <div class="seal-box rise d3"><img class="seal" src="badge-bachata-2026.svg" alt="" width="360" height="360"></div>
+    <div class="seal-box rise d3"><img class="seal" src="badge-bachata-2026.svg" alt="Siegel der Bachata Awards 2026, Deutschland" width="360" height="360" fetchpriority="low"></div>
   </div>
 </section>
 
@@ -395,6 +473,97 @@ rank_main = f'''
 {tabs_html}
     </div>
     <div id="panel" role="tabpanel"></div>
+  </div>
+</section>
+
+<section class="block" aria-labelledby="how-title">
+  <div class="wrap prose">
+    {r("h2", "So entsteht das Bachata-Ranking 2026", "How the 2026 Bachata ranking is made", 'id="how-title"')}
+    {r("p", "Wir recherchieren jede Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt und Düsseldorf und bewerten sie nach denselben <strong>neun Kriterien</strong>, zusammen 100 Punkte. Die wichtigsten sind die gewichtete Google-Bewertung (25 Punkte) und Auftritte der Lehrer auf Festivals und Kongressen (15 Punkte).", "We research every Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf and score each one on the same <strong>nine factors</strong>, 100 points in total. The most important are the weighted Google rating (25 points) and teachers' appearances at festivals and congresses (15 points).")}
+    {r("p", "Dazu kommen die Anzahl der Bewertungen, die Jahre im Unterricht, das Kursangebot für Einsteiger, eigene Events und Gastlehrer sowie Social Media mit je 10 Punkten. Aktuelle Bewertungen der letzten 12 Monate und Wettbewerbsergebnisse zählen je 5 Punkte. Alle Daten sind öffentlich und werden von Hand geprüft. Schulen, die sich bewerben, können ihre Angaben zusätzlich mit Links belegen.", "Review volume, years of teaching, the beginner offer, own events and guest teachers, and social media add 10 points each. Recent reviews from the last 12 months and competition results count 5 points each. All data is public and checked by hand. Schools that apply can also back up their information with links.")}
+    {r("p", "Damit kleine Schulen eine faire Chance haben, gewichten wir Bewertungen nach ihrer Anzahl: Eine 5,0 aus vier Bewertungen schlägt keine 4,8 aus dreihundert. Die vollständige Methode findest du auf der <a href=\"index.html#method\">Startseite</a>.", "To give small schools a fair chance, ratings are weighted by their number: a 5.0 from four reviews does not beat a 4.8 from three hundred. The full method is on the <a href=\"index.html#method\">homepage</a>.")}
+  </div>
+</section>
+
+<section class="block alt" aria-labelledby="awards-title">
+  <div class="wrap prose">
+    {r("h2", "Die fünf Bachata Awards 2026 im Überblick", "The five Bachata Awards 2026 at a glance", 'id="awards-title"')}
+    {r("p", "Neben den Ranglisten vergeben wir fünf Auszeichnungen. Jeder Gewinner erhält ein offizielles Siegel für Website, Studio und Social Media.", "Alongside the rankings we give five awards. Every winner receives an official seal for their website, studio and social media.")}
+    <ul>
+      <li>{r("span", "<strong>Beste Bachata-Schule Deutschlands:</strong> die höchste Gesamtpunktzahl aller sechs Städte.", "<strong>Best Bachata School in Germany:</strong> the highest total score across all six cities.")}</li>
+      <li>{r("span", "<strong>Beste Schule der Stadt:</strong> die bestplatzierte Schule in Berlin, München, Hamburg, Köln, Frankfurt und Düsseldorf.", "<strong>Best School of the City:</strong> the top-ranked school in Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf.")}</li>
+      <li>{r("span", "<strong>Aufsteiger des Jahres:</strong> die bestbewertete Schule, die in den letzten drei Jahren gegründet wurde.", "<strong>Rising School of the Year:</strong> the best-rated school founded in the last three years.")}</li>
+      <li>{r("span", "<strong>Legacy Award:</strong> für eine Schule, die ihre lokale Bachata-Szene seit zehn Jahren oder länger prägt.", "<strong>Legacy Award:</strong> for a school that has shaped its local Bachata scene for ten years or more.")}</li>
+      <li>{r("span", "<strong>Festival Stage Award:</strong> für die Schule, deren Lehrer am häufigsten auf europäischen Festivals und Kongressen unterrichten.", "<strong>Festival Stage Award:</strong> for the school whose teachers teach most often at European festivals and congresses.")}</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" aria-labelledby="use-title">
+  <div class="wrap prose">
+    {r("h2", "So nutzt du das Ranking bei der Schulwahl", "How to use the ranking to choose a school", 'id="use-title"')}
+    {r("p", "Die Gesamtpunktzahl zeigt, welche Schulen insgesamt am stärksten sind. Für deine Wahl lohnt sich aber ein Blick in die <strong>Punkteaufschlüsselung</strong>: Tippe nach der Veröffentlichung auf eine Schule und sieh dir an, wo sie ihre Punkte holt.", "The total score shows which schools are strongest overall. For your own choice, look at the <strong>score breakdown</strong>: after publication, tap a school to see where its points come from.")}
+    {r("p", "Du bist Anfänger? Dann achte vor allem auf <strong>Kurse und Einsteiger</strong> sowie auf eigene Socials. Du willst auf Festival-Niveau trainieren? Dann zählen Festivalauftritte und Gastlehrer mehr. Wähle zwei oder drei Schulen aus deiner Stadt, besuche jeweils eine Probestunde und entscheide nach Gefühl: Am Ende ist die beste Schule die, in der du gern wiederkommst.", "Are you a beginner? Then focus on <strong>classes and beginners</strong> and on the school's own socials. Want to train at festival level? Then festival appearances and guest teachers matter more. Pick two or three schools in your city, take a trial class at each and go with your gut: in the end, the best school is the one you love coming back to.")}
+  </div>
+</section>
+
+<section class="block alt" aria-labelledby="good-title">
+  <div class="wrap prose">
+    {r("h2", "Woran du eine gute Bachata-Schule erkennst", "How to recognise a good Bachata school", 'id="good-title"')}
+    {r("p", "Ein Platz im Ranking ist ein guter Startpunkt. Ob eine Schule zu dir passt, merkst du aber erst im Unterricht. Achte auf diese Punkte:", "A place in the ranking is a good starting point, but you only find out whether a school suits you in class. Look out for these points:")}
+    <ul>
+      <li>{r("span", "<strong>Probestunde oder feste Einsteigertermine:</strong> Du kannst ohne Risiko anfangen und mit einer neuen Gruppe starten.", "<strong>Trial class or fixed beginner start dates:</strong> you can start without risk and join a new group.")}</li>
+      <li>{r("span", "<strong>Partnerwechsel im Kurs:</strong> Du lernst mit vielen Partnern zu tanzen und brauchst niemanden mitzubringen.", "<strong>Partner rotation in class:</strong> you learn to dance with many partners and don't need to bring anyone.")}</li>
+      <li>{r("span", "<strong>Technik statt nur Figuren:</strong> Gute Lehrer erklären Führen, Folgen und Musikalität, nicht nur Schrittfolgen.", "<strong>Technique, not just moves:</strong> good teachers explain leading, following and musicality, not just step sequences.")}</li>
+      <li>{r("span", "<strong>Klare Levels:</strong> Getrennte Kurse für Anfänger, Mittelstufe und Fortgeschrittene, damit niemand über- oder unterfordert ist.", "<strong>Clear levels:</strong> separate classes for beginners, intermediate and advanced dancers, so nobody is over- or under-challenged.")}</li>
+      <li>{r("span", "<strong>Socials und Übungsabende:</strong> Auf Partys wendest du das Gelernte an. Schulen mit eigenen Socials bringen dich schneller voran.", "<strong>Socials and practice nights:</strong> parties are where you use what you learned. Schools with their own socials help you progress faster.")}</li>
+      <li>{r("span", "<strong>Lehrer mit Festivalerfahrung:</strong> Wer auf Festivals unterrichtet, kennt aktuelle Stile und bringt Ideen aus der ganzen Szene mit.", "<strong>Teachers with festival experience:</strong> teachers who teach at festivals know current styles and bring ideas from the whole scene.")}</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" aria-labelledby="style-title">
+  <div class="wrap prose">
+    {r("h2", "Bachata-Stile: Dominicana, Sensual und Moderna", "Bachata styles: Dominican, Sensual and Moderna", 'id="style-title"')}
+    {r("p", "Bachata kommt aus der Dominikanischen Republik und steht seit 2019 auf der <a href=\"https://de.wikipedia.org/wiki/Bachata\" rel=\"noopener\">UNESCO-Liste des immateriellen Kulturerbes</a>. In Deutschland unterrichten die meisten Schulen einen oder mehrere dieser Stile:", "Bachata comes from the Dominican Republic and has been on the <a href=\"https://en.wikipedia.org/wiki/Bachata_(music)\" rel=\"noopener\">UNESCO Intangible Cultural Heritage list</a> since 2019. Most schools in Germany teach one or more of these styles:")}
+    {r("h3", "Bachata Dominicana", "Dominican Bachata")}
+    {r("p", "Der ursprüngliche Stil: schnelle Fußarbeit, verspielte Rhythmen und eher offene Haltung. Ideal, wenn du Musikalität und Footwork liebst.", "The original style: fast footwork, playful rhythms and a more open hold. Ideal if you love musicality and footwork.")}
+    {r("h3", "Bachata Sensual", "Bachata Sensual")}
+    {r("p", "In Europa entstanden und dort sehr beliebt: enge Verbindung, Wellen, Körperbewegungen und fließende Drehungen. Auf vielen Festivals der Hauptstil.", "Developed in Europe and very popular there: close connection, body waves and flowing turns. The main style at many festivals.")}
+    {r("h3", "Bachata Moderna", "Bachata Moderna")}
+    {r("p", "Eine Mischung aus dem Grundschritt mit Drehfiguren und Elementen aus anderen Tänzen. Viele Einsteigerkurse beginnen hier, weil er leicht zugänglich ist.", "A mix of the basic step with turn patterns and elements from other dances. Many beginner classes start here because it is easy to get into.")}
+  </div>
+</section>
+
+<section class="block alt" aria-labelledby="tips-title">
+  <div class="wrap prose">
+    {r("h2", "Tipps für deine erste Bachata-Stunde", "Tips for your first Bachata class", 'id="tips-title"')}
+    <ul>
+      <li>{r("span", "<strong>Bequeme Schuhe mit glatter Sohle:</strong> Turnschuhe mit viel Grip machen Drehungen schwer.", "<strong>Comfortable shoes with a smooth sole:</strong> trainers with lots of grip make turns hard.")}</li>
+      <li>{r("span", "<strong>Mit einer neuen Gruppe starten:</strong> Frag nach dem nächsten Einsteigertermin, statt mitten in einen laufenden Kurs zu springen.", "<strong>Start with a new group:</strong> ask for the next beginner start date instead of jumping into a running course.")}</li>
+      <li>{r("span", "<strong>Allein kommen ist normal:</strong> Durch den Partnerwechsel tanzt du ohnehin mit vielen Leuten.", "<strong>Coming alone is normal:</strong> with partner rotation you dance with many people anyway.")}</li>
+      <li>{r("span", "<strong>Dranbleiben:</strong> Ein Kurs pro Woche über mehrere Monate bringt dich weiter als ein einzelner Intensiv-Workshop. Der Grundschritt sitzt meist nach wenigen Wochen.", "<strong>Stick with it:</strong> one class a week over several months gets you further than a single intensive workshop. The basic step usually feels natural after a few weeks.")}</li>
+      <li>{r("span", "<strong>Bachata-Musik hören:</strong> Wer den Takt kennt, findet im Unterricht schneller den Einstieg. Achte auf die Zählweise 1-2-3-Tap, die sich durch jeden Bachata-Song zieht.", "<strong>Listen to Bachata music:</strong> knowing the beat helps you get going faster in class. Listen for the 1-2-3-tap count that runs through every Bachata song.")}</li>
+      <li>{r("span", "<strong>Zum ersten Social gehen:</strong> Schon nach wenigen Stunden kannst du auf einer Party den Grundschritt üben.", "<strong>Go to your first social:</strong> after just a few classes you can practise the basic step at a party.")}</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" aria-labelledby="cities-title">
+  <div class="wrap prose">
+    {r("h2", "Die sechs Städte im Ranking", "The six cities in the ranking", 'id="cities-title"')}
+    {r("p", "Für die erste Ausgabe haben wir die sechs größten Bachata-Städte Deutschlands gewählt. Dort gibt es genug Schulen für einen fairen Vergleich, und viele Tänzer suchen hier gezielt nach einem Kurs. Weitere Städte kommen in den nächsten Ausgaben dazu.", "For the first edition we chose Germany's six biggest Bachata cities. They have enough schools for a fair comparison, and many dancers there search specifically for a class. More cities join in future editions.")}
+    {r("p", "Jede Stadt bekommt ein eigenes Top-10-Ranking. Die beste Schule jeder Stadt erhält den Award <strong>Beste Schule der Stadt</strong>, die höchste Punktzahl im ganzen Land den Award <strong>Beste Bachata-Schule Deutschlands</strong>.", "Every city gets its own top 10. The best school in each city receives the <strong>Best School of the City</strong> award, and the highest score in the country wins <strong>Best Bachata School in Germany</strong>.")}
+    <div class="citylinks">{city_links}</div>
+  </div>
+</section>
+
+<section class="block alt" id="faq" aria-labelledby="rfaq-title">
+  <div class="wrap">
+    <div class="sec-head">{r("h2", "Häufige Fragen zum Bachata-Ranking", "Bachata ranking FAQ", 'id="rfaq-title"')}</div>
+    <div class="faq">
+{rfaq_html}
+    </div>
   </div>
 </section>
 '''
@@ -523,7 +692,7 @@ rank_js = r'''
     render();
   }
   document.querySelectorAll(".tabs button").forEach(function(b){ b.addEventListener("click",function(){ select(b.dataset.city,true); }); });
-  window.addEventListener("hashchange",function(){ select(location.hash.slice(1),false); });
+  window.addEventListener("hashchange",function(){ var c=location.hash.slice(1); if(TX.cities[c]){ select(c,false); document.querySelector(".tabs").scrollIntoView({behavior:"smooth",block:"start"}); } });
   document.addEventListener("langchange",render);
   select((location.hash||"").slice(1)||"deutschland",false);
 
@@ -540,8 +709,38 @@ rank_js = r'''
 '''
 
 page('rankings.html',
-     'Rankings 2026 · Die besten Bachata-Schulen Deutschlands · Latin Dance Awards',
-     'Die besten Bachata-Schulen in Berlin, München, Hamburg, Köln, Frankfurt und Düsseldorf. Ergebnisse der Latin Dance Awards am 20. Dezember 2026.',
-     'Rankings 2026 · The best Bachata schools in Germany · Latin Dance Awards',
+     'Beste Bachata-Schulen Deutschland 2026 · Ranking',
+     'Die besten Bachata-Schulen in Deutschland: unabhängiges Ranking für Berlin, München, Hamburg, Köln, Frankfurt und Düsseldorf. Ergebnisse am 20. Dezember 2026.',
+     'Best Bachata schools in Germany 2026 · Ranking',
      'The best Bachata schools in Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf. Latin Dance Awards results on December 20, 2026.',
-     'rankings.html', rank_main, r.en, rank_js)
+     'rankings.html', rank_main, r.en, rank_js,
+     schema=[crumbs('Rankings 2026', 'rankings.html'), faq_schema(rfaq)])
+
+
+# ======================================================================
+# 404 PAGE
+# ======================================================================
+n = T('n')
+nf_main = f'''
+<section class="page-hero" aria-labelledby="nf-title">
+  <div class="wrap">
+    <div>
+      <h1 id="nf-title">{n("span", "Diese Seite gibt es nicht", "This page doesn't exist")}</h1>
+      <p class="lede">{n("span", "Der Link ist veraltet oder falsch geschrieben. Hier geht es weiter:", "The link is outdated or mistyped. Continue here:")}</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="/">{n("span", "Zur Startseite", "Go to the homepage")}</a>
+        <a class="btn btn-ghost" href="/rankings.html">{n("span", "Zu den Rankings", "See the rankings")}</a>
+      </div>
+    </div>
+  </div>
+</section>
+'''
+page('404.html', 'Seite nicht gefunden · Latin Dance Awards', 'Diese Seite gibt es nicht. Zur Startseite der Bachata Awards 2026.',
+     'Page not found · Latin Dance Awards', 'This page does not exist.', '404.html', nf_main, n.en, '', schema=[])
+p404 = os.path.join(ROOT, '404.html')
+h = open(p404, encoding='utf-8').read()
+h = re.sub(r'<meta name="robots" content="[^"]*">', '<meta name="robots" content="noindex">', h)
+h = re.sub(r'<link rel="(canonical|alternate)"[^>]*>\n', '', h)
+# absolute links so the 404 works on any path
+h = h.replace('href="index.html', 'href="/index.html').replace('href="rankings.html', 'href="/rankings.html').replace('href="bewerbung.html', 'href="/bewerbung.html').replace('href="favicon.svg"', 'href="/favicon.svg"').replace('href="apple-touch-icon.png"', 'href="/apple-touch-icon.png"')
+open(p404, 'w', encoding='utf-8').write(h)

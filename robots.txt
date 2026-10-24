@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /automation/
+Disallow: /tools/
+
+Sitemap: https://latindanceawards.com/sitemap.xml
