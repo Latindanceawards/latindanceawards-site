@@ -228,6 +228,36 @@ PAGE_CSS = r'''
 .irk .iwhy .lk a{color:var(--gold-light);font-weight:600;text-decoration:none}
 @media(max-width:560px){.irk summary{grid-template-columns:40px minmax(0,1fr) auto 14px;gap:10px;padding:16px}
 .irk .rk{width:38px;height:38px;font-size:17px}.irk .who b{font-size:18px}.irk .score{font-size:26px}.irk .meter{margin:0}.irk .iwhy{padding:0 16px 18px}}
+
+/* first-place motion */
+@keyframes irkIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes irkFill{from{width:0}}
+@keyframes irkGlow{0%,100%{box-shadow:0 0 0 0 rgba(228,185,91,0),0 10px 40px -18px rgba(228,185,91,.35)}50%{box-shadow:0 0 34px 2px rgba(228,185,91,.28),0 14px 50px -16px rgba(228,185,91,.55)}}
+@keyframes irkSheen{0%{transform:translateX(-120%) skewX(-18deg)}55%,100%{transform:translateX(260%) skewX(-18deg)}}
+@keyframes irkFloat{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-4px) rotate(4deg)}}
+@keyframes irkSpark{0%,100%{opacity:0;transform:scale(.4)}50%{opacity:1;transform:scale(1)}}
+.ilist>li{animation:irkIn .6s cubic-bezier(.2,.7,.2,1) both}
+.ilist>li:nth-child(2){animation-delay:.08s}.ilist>li:nth-child(3){animation-delay:.16s}.ilist>li:nth-child(4){animation-delay:.24s}
+.ilist>li:nth-child(5){animation-delay:.3s}.ilist>li:nth-child(6){animation-delay:.36s}.ilist>li:nth-child(7){animation-delay:.42s}.ilist>li:nth-child(8){animation-delay:.48s}
+.irk .meter i{animation:irkFill 1.3s cubic-bezier(.2,.7,.2,1) .35s both}
+.irk.g1{position:relative;overflow:hidden;animation:irkGlow 3.4s ease-in-out infinite}
+.irk.g1::before{content:"";position:absolute;top:0;bottom:0;left:0;width:34%;background:linear-gradient(100deg,transparent,rgba(255,236,170,.16),transparent);animation:irkSheen 4.6s ease-in-out 1.2s infinite;pointer-events:none}
+.irk.g1 .rk{position:relative;overflow:visible}
+.irk.g1 .rk svg{position:absolute;left:50%;top:-17px;width:26px;height:20px;margin-left:-13px;animation:irkFloat 3s ease-in-out infinite;filter:drop-shadow(0 2px 6px rgba(228,185,91,.6))}
+.irk.g1 .rk::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(228,185,91,.55);animation:irkSpark 2.6s ease-in-out infinite}
+.irk.g1 .score{text-shadow:0 0 18px rgba(228,185,91,.45)}
+.irk.g1 .who b{background:linear-gradient(90deg,var(--cream),var(--gold-light),var(--cream));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:irkText 5s linear infinite}
+@keyframes irkText{to{background-position:200% center}}
+.irk.g1 summary{padding-top:26px}
+.irk.g2 .rk,.irk.g3 .rk{animation:irkSpark 0s}
+@media(prefers-reduced-motion:reduce){.ilist>li,.irk .meter i,.irk.g1,.irk.g1::before,.irk.g1 .rk svg,.irk.g1 .rk::after,.irk.g1 .who b{animation:none!important}.irk.g1 .who b{color:var(--cream);background:none}}
+.helpbox{margin-top:36px;padding:26px 28px;border-radius:22px;background:var(--card);border:1px solid var(--line)}
+.helpbox h3{font-family:var(--serif);font-weight:500;font-size:26px;margin-bottom:6px}
+.helpbox>p{color:var(--muted);margin-bottom:18px;max-width:640px}
+.helpbox .hb-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.helpbox details{border-top:1px solid var(--line);padding-top:14px}
+.helpbox summary{cursor:pointer;color:var(--gold-light);font-weight:600}
+.helpbox ul{margin:12px 0 0 18px;color:var(--muted);display:grid;gap:8px}
 .howto{margin-top:22px;color:var(--muted);font-size:14.5px}.howto summary{cursor:pointer;color:var(--gold-light);font-weight:600}.howto p{margin-top:10px;max-width:760px}
 .plist li{position:relative;padding-left:52px}
 .plist .ipos{position:absolute;left:16px;top:12px;font-family:var(--serif);font-size:24px;color:var(--gold-light);line-height:1}
@@ -842,6 +872,12 @@ R_TEXT = {
  'title_city': ['Beste Bachata-Schulen in {c}', 'Best Bachata schools in {c}'],
  'title_de': ['Beste Bachata-Schulen Deutschlands', 'Best Bachata schools in Germany'],
  'sub_interim': ['Zwischenstand: Die Platzierungen können sich bis zum 20. Dezember noch ändern.', 'Interim standing: places can still change until December 20.'],
+ 'help_h': ['Wie funktioniert das Ranking?', 'How does the ranking work?'],
+ 'help_p': ['Jede Schule wird nach denselben neun öffentlichen Kriterien bewertet (100 Punkte). Platzierungen sind nicht käuflich.', 'Every school is scored on the same nine public criteria (100 points). Places cannot be bought.'],
+ 'help_how': ['So wird bewertet', 'How scoring works'],
+ 'help_add': ['Meine Schule hinzufügen', 'Add my school'],
+ 'help_tips_h': ['So verbesserst du die Platzierung deiner Schule', 'How to improve your school\'s place'],
+ 'help_tips': [['Google-Eintrag pflegen und Schüler um eine Bewertung bitten (Google-Bewertung 25 P., Anzahl 10 P., aktuelle 5 P.)', 'Gründungsjahr, Lehrerteam und Kursstufen auf der Website nennen (Jahre 10 P.)', 'Probestunde und feste Einsteigertermine anbieten (Einsteigerangebot 10 P.)', 'Socials, Workshops und Gastlehrer veranstalten und online zeigen (Events 10 P.)', 'Instagram regelmäßig bespielen (Social Media 10 P.)', 'Festivalauftritte und Wettbewerbe per Link nachweisen (Festivals 15 P., Wettbewerbe 5 P.)'], ['Keep your Google listing up to date and ask students for a review (rating 25 pts, number 10, recent 5)', 'State founding year, teaching team and course levels on your website (years 10 pts)', 'Offer a trial class and fixed beginner start dates (beginner offer 10 pts)', 'Run socials, workshops and guest teachers and show them online (events 10 pts)', 'Post on Instagram regularly (social media 10 pts)', 'Prove festival appearances and competitions with links (festivals 15 pts, competitions 5 pts)']],
  'sub_locked': ['Die Top 10 werden am 20. Dezember 2026 enthüllt.', 'The top 10 will be revealed on December 20, 2026.'],
  'sub_open': ['Endergebnis der Bachata Awards 2026. Tippe auf eine Schule, um ihre Punkteaufschlüsselung zu sehen.', 'Final results of the Bachata Awards 2026. Tap a school to see its score breakdown.'],
  'locked': ['Wird am 20. Dezember enthüllt', 'Revealed on December 20'],
@@ -853,7 +889,7 @@ R_TEXT = {
  'note_btn': ['Kostenlos bewerben', 'Apply for free'],
  'prelim_badge': ['Zwischenstand · kein Endergebnis, die Schulen sind noch im Wettbewerb', 'Interim standing · not final, schools are still competing'],
  'prelim_h': ['So entsteht der Zwischenstand', 'How the interim standing is calculated'],
- 'prelim_p': ['Das Ranking nutzt dieselbe 100-Punkte-Skala wie das Endergebnis. Bisher zählen nur Angaben, die die Schulen selbst öffentlich machen: Jahre im Unterricht, Einsteigerangebot, Kursstufen sowie Events und Gastlehrer (zusammen höchstens 40 Punkte). Google-Bewertungen, Festivalauftritte und weitere Kriterien sind noch nicht eingerechnet und zählen vorerst 0. Weitere Schulen können sich bis 30. November bewerben. Die Platzierungen können sich noch ändern. Endergebnis am 20. Dezember 2026.', 'The ranking uses the same 100-point scale as the final result. So far only facts the schools publish themselves count: years teaching, beginner offer, course levels, and events and guest teachers (40 points at most together). Google ratings, festival appearances and other criteria are not counted yet and score 0 for now. More schools can apply until November 30. Positions can still change. Final results on December 20, 2026.'],
+ 'prelim_p': ['Dieselbe 100-Punkte-Skala wie im Endergebnis. Bisher gewertet sind 6 von 9 Kriterien (zusammen höchstens 75 Punkte): Google-Bewertung und Anzahl der Bewertungen (Stand heute, aus Google Maps), Jahre im Unterricht, Einsteigerangebot, Events und Gastlehrer sowie Social Media (Follower und Beiträge auf Instagram). Festivalauftritte, aktuelle Bewertungen und Wettbewerbe fehlen noch und zählen vorerst 0. Alle Daten sind öffentlich. Weitere Schulen können sich bis 30. November bewerben, und Schulen können Angaben mit Links ergänzen. Die Platzierungen können sich noch ändern. Endergebnis am 20. Dezember 2026.', 'The same 100-point scale as the final result. So far 6 of 9 criteria are scored (75 points at most together): Google rating and number of reviews (as of today, from Google Maps), years teaching, beginner offer, events and guest teachers, and social media (Instagram followers and posts). Festival appearances, recent reviews and competitions are still missing and score 0 for now. All data is public. More schools can apply until November 30, and schools can add information with links. Positions can still change. Final results on December 20, 2026.'],
  'preview': ['Vorschau mit Beispieldaten', 'Preview with sample data'],
  'empty': ['Für diese Stadt gibt es noch keine Ergebnisse.', 'There are no results for this city yet.'],
  'cities': {slug: [de, en] for slug, de, en in CITIES},
@@ -883,16 +919,16 @@ rank_js = r'''
   /* PRELIMINARY LIST: schools verified on their own website. Alphabetical, no scores. Not a ranking. */
   var CANDIDATES = {
     berlin: [
-      {name:"BachatAcademy", sc:[0, 10, 6, 7], url:"https://www.bachatacademy.de/"},
-      {name:"La Mambita", sc:[10, 8, 6, 7], url:"https://www.mambita.de/"},
-      {name:"Zapatissimo", sc:[0, 8, 8, 7], url:"https://www.zapatissimo.de/"}
+      {name:"BachatAcademy", sc:[0, 10, 7, 19.9, 6.3, 8.6],fx:["5,0 ★ · 32","2.857 · 238"], url:"https://www.bachatacademy.de/"},
+      {name:"La Mambita", sc:[10, 8, 7, 22.4, 10, 7.9],fx:["4,9 ★ · 252","1.642 · 138"], url:"https://www.mambita.de/"},
+      {name:"Zapatissimo", sc:[0, 8, 7, 20.9, 9.9, 7.8],fx:["4,8 ★ · 234","2.583 · 48"], url:"https://www.zapatissimo.de/"}
     ],
-    muenchen: [ {name:"Salsea Dance Academy", sc:[0, 10, 10, 10], url:"https://salsea.de/"} ],
-    hamburg: [ {name:"A Bailar Hamburg", sc:[0, 10, 6, 9], url:"https://www.abailar-hamburg.de/"} ],
-    koeln: [ {name:"La Danza Tanzzentrum", sc:[0, 5, 4, 5], url:"https://la-danza.de/"} ],
+    muenchen: [ {name:"Salsea Dance Academy", sc:[0, 10, 10, 21.2, 8.2, 8.8],fx:["4,9 ★ · 94","4.395 · 175"], url:"https://salsea.de/"} ],
+    hamburg: [ {name:"A Bailar Hamburg", sc:[0, 10, 9, 18.4, 7.9, 9.3],fx:["4,7 ★ · 77","4.363 · 532"], url:"https://www.abailar-hamburg.de/"} ],
+    koeln: [ {name:"La Danza Tanzzentrum", sc:[0, 5, 5, 15.1, 8.1, 9.9],fx:["4,4 ★ · 87","7.376 · 980"], url:"https://la-danza.de/"} ],
     frankfurt: [
-      {name:"FluxDance", sc:[1, 8, 10, 9], url:"https://www.fluxdance.de/"},
-      {name:"LaCalidad Dance Center", sc:[0, 10, 8, 5], url:"https://www.lacalidad.de/"}
+      {name:"FluxDance", sc:[1, 8, 9, 0, 0.0, 6.5],fx:["–","612 · 32"], url:"https://www.fluxdance.de/"},
+      {name:"LaCalidad Dance Center", sc:[0, 10, 5, 22.2, 9.6, 9.8],fx:["4,9 ★ · 205","5.958 · 1.017"], url:"https://www.lacalidad.de/"}
     ],
     duesseldorf: []
   };
@@ -977,26 +1013,33 @@ rank_js = r'''
     if(!open){
       var pl=[];
       Object.keys(CANDIDATES).forEach(function(k){ if(c==="deutschland"||c===k) CANDIDATES[k].forEach(function(e){ pl.push(Object.assign({city:k},e)); }); });
-      pl.forEach(function(e){ e.pts=e.sc.reduce(function(x,y){return x+y;},0); });
+      pl.forEach(function(e){ e.pts=Math.round(e.sc.reduce(function(x,y){return x+y;},0)*10)/10; });
       pl.sort(function(a,b){ return (b.pts-a.pts)||a.name.localeCompare(b.name); });
       if(pl.length){
         var en=window.LANG==="en", cn=function(e){return esc(TX.cities[e.city][en?1:0]);};
-        var FAC=en?["Years teaching","Beginner offer","Course levels","Events and guests"]:["Jahre im Unterricht","Einsteigerangebot","Kursstufen","Events und Gastlehrer"];
+        var FAC=en?["Years teaching","Beginner offer","Events and guests","Google rating","Number of reviews","Social media"]:["Jahre im Unterricht","Einsteigerangebot","Events und Gastlehrer","Google-Bewertung","Anzahl Bewertungen","Social Media"];
+        var CROWN='<svg viewBox="0 0 26 20" aria-hidden="true"><path d="M2 17 0.5 5l6.5 5L13 1l6 9 6.500-5L24 17z" fill="#E4B95B" stroke="#F6DFA2" stroke-width="1" stroke-linejoin="round"/><rect x="2" y="17.5" width="22" height="2" rx="1" fill="#C9962F"/></svg>';
+        var MAX=[10,10,10,25,10,10], NYC=en?"Not counted yet: festivals (15), recent reviews (5), competitions (5)":"Noch nicht gewertet: Festivals (15), aktuelle Bewertungen (5), Wettbewerbe (5)";
         h+='<div class="prelim"><span class="prelim-badge">'+esc(L("prelim_badge"))+'</span><ol class="ilist">';
         pl.forEach(function(e,i){
           var u=safeUrl(e.url), g=i<3?" g"+(i+1):"", why="";
-          FAC.forEach(function(f,k){ why+='<div><b>'+esc(f)+'</b> · '+e.sc[k]+' / 10<div class="bar"><i style="width:'+(e.sc[k]*10)+'%"></i></div></div>'; });
+          FAC.forEach(function(f,k){ var fx=(k===3?e.fx[0]:(k===4?e.fx[0].split(" · ")[1]:(k===5?e.fx[1]:"")));
+            why+='<div><b>'+esc(f)+'</b> · '+num(e.sc[k])+' / '+MAX[k]+(fx&&fx!=="–"?' <small>('+esc(k===5?(en?"followers · posts: ":"Follower · Posts: ")+fx:fx)+')</small>':'')+'<div class="bar"><i style="width:'+(e.sc[k]/MAX[k]*100)+'%"></i></div></div>'; });
+          why+='<div class="lk" style="color:var(--muted)">'+esc(NYC)+'</div>';
           if(u) why+='<div class="lk"><a href="'+u+'" rel="noopener">'+esc(L("site"))+' →</a></div>';
-          h+='<li><details class="irk'+g+'"><summary><span class="rk">'+(i+1)+'</span><span class="who"><b>'+esc(e.name)+'</b>'
-            +(c==="deutschland"?'<small>'+cn(e)+'</small>':'')+'</span><span class="score">'+e.pts+'<small> / 100</small></span><span class="meter"><i style="width:'+e.pts+'%"></i></span></summary>'
+          h+='<li><details class="irk'+g+'"><summary><span class="rk">'+(i===0?CROWN:'')+(i+1)+'</span><span class="who"><b>'+esc(e.name)+'</b>'
+            +(c==="deutschland"?'<small>'+cn(e)+'</small>':'')+'</span><span class="score">'+num(e.pts)+'<small> / 100</small></span><span class="meter"><i style="width:'+e.pts+'%"></i></span></summary>'
             +'<div class="iwhy">'+why+'</div></details></li>';
         });
         h+='</ol>';
         h+='<details class="howto"><summary>'+esc(L("prelim_h"))+'</summary><p>'+esc(L("prelim_p"))+'</p></details></div>';
       }
+      var tips=TX.help_tips[window.LANG==="en"?1:0].map(function(x){return '<li>'+esc(x)+'</li>';}).join("");
+      h+='<div class="helpbox"><h3>'+esc(L("help_h"))+'</h3><p>'+esc(L("help_p"))+'</p><div class="hb-btns"><a class="btn btn-ghost" href="index.html#method">'+esc(L("help_how"))+'</a><a class="btn btn-gold" href="bewerbung.html">'+esc(L("help_add"))+'</a></div><details><summary>'+esc(L("help_tips_h"))+'</summary><ul>'+tips+'</ul></details></div>';
       h+='<div class="note-card"><div><h3>'+esc(L("note_h"))+'</h3><p>'+esc(L("note_p"))+'</p></div><a class="btn btn-gold" href="bewerbung.html">'+esc(L("note_btn"))+'</a></div>';
     }
     panel.innerHTML=h;
+    try{ if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){ panel.querySelectorAll(".irk .score").forEach(function(el){ var tn=el.firstChild, to=parseFloat(String(tn.nodeValue).replace(",",".")); if(!(to>0)) return; var t0=null; function st(ts){ t0=t0||ts; var k=Math.min(1,(ts-t0)/1200), v=to*(1-Math.pow(1-k,3)); tn.nodeValue=num(v); if(k<1) requestAnimationFrame(st); } requestAnimationFrame(st); }); } }catch(e){}
     panel.setAttribute("aria-labelledby","tab-"+c);
   }
   function select(c, push){
