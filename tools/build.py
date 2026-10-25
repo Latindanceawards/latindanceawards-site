@@ -965,35 +965,47 @@ rank_js = r'''
       {name:"La Mambita", sc:[10, 8, 7, 22.4, 10, 7.9], fx:["4,9 ★ · 252","1.642 · 138"], url:"https://www.mambita.de/"},
       {name:"Zapatissimo", st:["Sensual"], sc:[0, 8, 7, 20.9, 9.9, 7.8], fx:["4,8 ★ · 234","2.583 · 48"], url:"https://www.zapatissimo.de/"},
       {name:"Cumbancha Tanzschule", sc:[10, 10, 4, 23.9, 9.9, 9.7], fx:["5,0 ★ · 243","5.739 · 1.483"], url:"https://www.cumbancha.de/"},
-      {name:"Tumba'o Danzas", sc:[0, 0, 3, 13.8, 1.3, 5.8], fx:["5,0 ★ · 1","186 · 54"], url:"https://tumbao-danzas.de/"}
+      {name:"Tumba'o Danzas", sc:[0, 0, 3, 13.8, 1.3, 5.8], fx:["5,0 ★ · 1","186 · 54"], url:"https://tumbao-danzas.de/"},
+      {name:"Bailaconsol", st:["Sensual"], sc:[0, 7, 4, 22.4, 8.1, 8.0], fx:["5,0 ★ · 87","2.660 · 106"], url:"http://www.bailaconsol.com/"}
     ],
     muenchen: [
       {name:"Salsea Dance Academy", sc:[0, 10, 10, 21.2, 8.2, 8.8], fx:["4,9 ★ · 94","4.395 · 175"], url:"https://salsea.de/"},
       {name:"Dance With George", sc:[0, 7, 8, 20.8, 9.7, 9.0], fx:["4,8 ★ · 211","2.706 · 656"], url:"https://www.dancewithgeorge.com/"},
       {name:"Salsa Y Corazon", sc:[10, 7, 8, 21.4, 8.4, 8.3], fx:["4,9 ★ · 103","2.000 · 254"], url:"https://www.salsa-y-corazon.de/"},
       {name:"Salsa Club Munich", sc:[5, 7, 5, 19.9, 8.2, 9.6], fx:["4,8 ★ · 90","8.876 · 427"], url:"http://www.salsaclub-munich.de/"},
-      {name:"Lazarte Dance Academy", sc:[0, 10, 6, 21.5, 7.3, 6.0], fx:["5,0 ★ · 58","404 · 31"], url:"https://www.lazartedanceacademy.de/"}
+      {name:"Lazarte Dance Academy", sc:[0, 10, 6, 21.5, 7.3, 6.0], fx:["5,0 ★ · 58","404 · 31"], url:"https://www.lazartedanceacademy.de/"},
+      {name:"Salsamás Munich", sc:[10, 8, 6, 21.0, 7.0, 0], fx:["5,0 ★ · 48","–"], url:"https://www.salsamas.de/"}
     ],
     hamburg: [
       {name:"A Bailar Hamburg", st:["Dominicana"], sc:[0, 10, 9, 18.4, 7.9, 9.3], fx:["4,7 ★ · 77","4.363 · 532"], url:"https://www.abailar-hamburg.de/"},
       {name:"SalsaHH", sc:[10, 7, 7, 16.1, 6.2, 0], fx:["4,6 ★ · 30","–"], url:"http://www.salsahh.de/"},
-      {name:"ICB Studios", st:["Sensual"], sc:[0, 7, 7, 20.0, 6.4, 8.2], fx:["5,0 ★ · 33","2.579 · 116"], url:"https://icbstudios.com/"}
+      {name:"ICB Studios", st:["Sensual"], sc:[0, 7, 7, 20.0, 6.4, 8.2], fx:["5,0 ★ · 33","2.579 · 116"], url:"https://icbstudios.com/"},
+      {name:"Bachata Hamburg", st:["Sensual"], sc:[0, 10, 6, 19.7, 6.2, 8.7], fx:["5,0 ★ · 30","2.566 · 259"], url:"https://www.bachata-hamburg.de/"},
+      {name:"BachataSalsaHamburg", sc:[0, 10, 0, 19.6, 6.1, 9.6], fx:["5,0 ★ · 29","11.000 · 316"], url:"https://www.bachatasalsahamburg.de/"},
+      {name:"BellasArtes Latin DanceSchool", sc:[0, 8, 3, 21.6, 7.7, 5.0], fx:["4,9 ★ · 72","344 · 9"], url:"https://salsahamburg.info/"}
     ],
     koeln: [
       {name:"La Danza Tanzzentrum", st:["Sensual","Dominicana"], sc:[0, 5, 5, 15.1, 8.1, 9.9], fx:["4,4 ★ · 87","7.376 · 980"], url:"https://la-danza.de/"},
       {name:"Bachata Mastery Köln", st:["Sensual"], sc:[0, 10, 9, 24.2, 10, 9.3], fx:["5,0 ★ · 327","5.100 · 493"], url:"https://www.bachatakoeln.de/bachata-kurse-koeln"},
       {name:"Tanzen Lernen In Köln", sc:[0, 7, 7, 21.1, 7.3, 6.1], fx:["4,9 ★ · 57","302 · 40"], url:"https://salsaundbachatalerneninkoeln.de/"},
-      {name:"LatinSalsa", sc:[0, 10, 6, 17.9, 6.2, 0], fx:["4,8 ★ · 30","–"], url:"https://latinsalsa.de/"}
+      {name:"LatinSalsa", sc:[0, 10, 6, 17.9, 6.2, 0], fx:["4,8 ★ · 30","–"], url:"https://latinsalsa.de/"},
+      {name:"Salsa Köln", sc:[0, 5, 9, 21.1, 7.0, 7.8], fx:["5,0 ★ · 49","3.312 · 73"], url:"http://salsakoeln.de/"},
+      {name:"Salsa in Köln", sc:[0, 8, 5, 21.3, 7.2, 8.8], fx:["5,0 ★ · 53","2.316 · 334"], url:"https://www.salsainkoeln.de/"},
+      {name:"Tanzraum Köln", st:["Sensual","Dominicana"], sc:[0, 10, 4, 23.1, 9.4, 10], fx:["4,9 ★ · 180","13.000 · 1.001"], url:"https://tanzschule-tanzraum.de/"}
     ],
     frankfurt: [
       {name:"FluxDance", sc:[1, 8, 9, 0, 0.0, 6.5], fx:["–","612 · 32"], url:"https://www.fluxdance.de/"},
       {name:"LaCalidad Dance Center", sc:[0, 10, 5, 22.2, 9.6, 9.8], fx:["4,9 ★ · 205","5.958 · 1.017"], url:"https://www.lacalidad.de/"},
-      {name:"Movida Dance Academy", st:["Dominicana"], sc:[0, 8, 8, 23.9, 10, 0], fx:["4,9 ★ · 478","–"], url:"https://www.bachata-frankfurt.de/"}
+      {name:"Movida Dance Academy", st:["Dominicana"], sc:[0, 8, 8, 23.9, 10, 0], fx:["4,9 ★ · 478","–"], url:"https://www.bachata-frankfurt.de/"},
+      {name:"Alma Dance Frankfurt", st:["Sensual","Dominicana"], sc:[10, 10, 10, 23.4, 9.1, 9.5], fx:["5,0 ★ · 155","4.123 · 490"], url:"https://alma-dance-frankfurt.de/"},
+      {name:"Salsa Auténtica", sc:[7, 5, 5, 22.1, 8.1, 8.0], fx:["4,9 ★ · 90","1.726 · 142"], url:"http://www.salsa-autentica.de/"},
+      {name:"Tanzschule Conexión", sc:[0, 5, 9, 21.4, 9.4, 0], fx:["4,5 ★ · 188","–"], url:"http://www.conexion.de/"}
     ],
     duesseldorf: [
       {name:"La Cati Dance", sc:[0, 5, 5, 23.5, 9.3, 8.9], fx:["5,0 ★ · 165","1.843 · 1.073"], url:"https://www.lacatidance.de/"},
       {name:"Anima Dance Community", sc:[0, 10, 5, 18.4, 6.6, 7.7], fx:["4,8 ★ · 38","2.420 · 38"], url:"https://anima-dance.de/"},
-      {name:"Salsa 'n' Fun", sc:[0, 10, 8, 19.8, 8.0, 8.2], fx:["4,8 ★ · 84","1.935 · 195"], url:"http://www.salsanfun.de/"}
+      {name:"Salsa 'n' Fun", sc:[0, 10, 8, 19.8, 8.0, 8.2], fx:["4,8 ★ · 84","1.935 · 195"], url:"http://www.salsanfun.de/"},
+      {name:"Salsa-Teaching", sc:[0, 7, 3, 19.9, 6.5, 6.8], fx:["4,9 ★ · 35","1.192 · 42"], url:"http://www.salsa-teaching.de/"}
     ]
   };
   var PUBLISH_DATE = new Date("2026-12-20T19:00:00+01:00");
