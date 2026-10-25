@@ -206,8 +206,9 @@ PAGE_CSS = r'''
 .irk.g1{background:linear-gradient(170deg,var(--gold-soft),var(--card) 65%);border-color:rgba(228,185,91,.55)}
 .irk summary{display:grid;grid-template-columns:48px minmax(0,1fr) auto 22px;align-items:center;gap:16px;padding:18px 22px 18px;cursor:pointer;list-style:none}
 .irk summary::-webkit-details-marker{display:none}
-.irk summary::after{content:"+";grid-column:4;grid-row:1;color:var(--gold);font-size:22px;text-align:right;transition:transform .3s}
-.irk[open] summary::after{transform:rotate(45deg)}
+.irk summary::after{content:"";grid-column:4;grid-row:1;justify-self:center;width:9px;height:9px;border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(45deg);margin-top:-5px;transition:transform .3s,margin .3s}
+.irk[open] summary::after{transform:rotate(-135deg);margin-top:5px}
+.irk summary:hover::after{border-color:var(--gold-light)}
 .irk .rk{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:20px;color:var(--gold);border:1px solid var(--line)}
 .irk.g1 .rk{background:var(--foil);color:#131011;border:0}
 .irk.g2 .rk{background:linear-gradient(135deg,#F2F2F2,#A9ADB4);color:#131011;border:0}
@@ -225,7 +226,7 @@ PAGE_CSS = r'''
 .irk .iwhy .bar i{display:block;height:100%;background:var(--gold)}
 .irk .iwhy .lk{grid-column:1/-1}
 .irk .iwhy .lk a{color:var(--gold-light);font-weight:600;text-decoration:none}
-@media(max-width:560px){.irk summary{grid-template-columns:40px minmax(0,1fr) auto;gap:12px;padding:16px}.irk summary::after{display:none}
+@media(max-width:560px){.irk summary{grid-template-columns:40px minmax(0,1fr) auto 14px;gap:10px;padding:16px}
 .irk .rk{width:38px;height:38px;font-size:17px}.irk .who b{font-size:18px}.irk .score{font-size:26px}.irk .meter{margin:0}.irk .iwhy{padding:0 16px 18px}}
 .howto{margin-top:22px;color:var(--muted);font-size:14.5px}.howto summary{cursor:pointer;color:var(--gold-light);font-weight:600}.howto p{margin-top:10px;max-width:760px}
 .plist li{position:relative;padding-left:52px}
