@@ -190,6 +190,15 @@ PAGE_CSS = r'''
 .breakdown .links{grid-column:1/-1;display:flex;gap:16px}
 .breakdown .links a{color:var(--gold-light);font-weight:600}
 .preview-note{display:inline-flex;margin-bottom:24px;padding:8px 16px;border-radius:999px;background:var(--gold);color:#131011;font-size:13px;font-weight:700}
+.prelim{margin-top:40px}
+.prelim .prelim-badge{display:inline-flex;margin-bottom:14px;padding:7px 14px;border-radius:999px;border:1px solid rgba(228,185,91,.6);color:var(--gold-light);font-size:13px;font-weight:700}
+.prelim h3{font-family:var(--serif);font-weight:500;font-size:26px;margin-bottom:8px}
+.prelim>p{color:var(--muted);max-width:760px;margin-bottom:18px}
+.plist{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.plist li{padding:14px 18px;border-radius:16px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;gap:2px}
+.plist li a,.plist li span.n{font-weight:600;color:var(--cream);text-decoration:none}
+.plist li a:hover{color:var(--gold-light)}
+.plist li small{color:var(--muted);font-size:13px}
 .note-card{margin-top:36px;padding:30px 32px;border-radius:22px;background:var(--card);border:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
 .note-card h3{font-family:var(--serif);font-weight:500;font-size:26px;margin-bottom:4px}
 .note-card p{color:var(--muted)}
@@ -807,6 +816,9 @@ R_TEXT = {
  'note_h': ['Deine Schule fehlt noch?', 'Is your school missing?'],
  'note_p': ['Bewirb dich bis zum 30. November kostenlos für die Awards 2026.', 'Enter for the 2026 awards for free by November 30.'],
  'note_btn': ['Kostenlos bewerben', 'Apply for free'],
+ 'prelim_badge': ['Vorläufig · kein Endergebnis', 'Preliminary · not the final result'],
+ 'prelim_h': ['Teilnehmende Schulen (vorläufige Liste)', 'Participating schools (preliminary list)'],
+ 'prelim_p': ['Das ist noch kein Ranking: Die Schulen stehen in alphabetischer Reihenfolge und haben noch keine Punkte. Die Liste wächst, bis die Bewerbungsphase am 30. November endet. Die Platzierungen erscheinen am 20. Dezember 2026.', 'This is not a ranking yet: schools are in alphabetical order and have no scores. The list grows until applications close on November 30. Places are published on December 20, 2026.'],
  'preview': ['Vorschau mit Beispieldaten', 'Preview with sample data'],
  'empty': ['Für diese Stadt gibt es noch keine Ergebnisse.', 'There are no results for this city yet.'],
  'cities': {slug: [de, en] for slug, de, en in CITIES},
@@ -831,6 +843,22 @@ rank_js = r'''
     hamburg: [],
     koeln: [],
     frankfurt: [],
+    duesseldorf: []
+  };
+  /* PRELIMINARY LIST: schools verified on their own website. Alphabetical, no scores. Not a ranking. */
+  var CANDIDATES = {
+    berlin: [
+      {name:"BachatAcademy", url:"https://www.bachatacademy.de/"},
+      {name:"La Mambita", url:"https://www.mambita.de/"},
+      {name:"Zapatissimo", url:"https://www.zapatissimo.de/"}
+    ],
+    muenchen: [ {name:"Salsea Dance Academy", url:"https://salsea.de/"} ],
+    hamburg: [ {name:"A Bailar Hamburg", url:"https://www.abailar-hamburg.de/"} ],
+    koeln: [ {name:"La Danza Tanzzentrum", url:"https://la-danza.de/"} ],
+    frankfurt: [
+      {name:"FluxDance", url:"https://www.fluxdance.de/"},
+      {name:"LaCalidad Dance Center", url:"https://www.lacalidad.de/"}
+    ],
     duesseldorf: []
   };
   var PUBLISH_DATE = new Date("2026-12-20T19:00:00+01:00");
@@ -906,6 +934,18 @@ rank_js = r'''
     }
     h+='</ol>';
     if(!open){
+      var pl=[];
+      Object.keys(CANDIDATES).forEach(function(k){ if(c==="deutschland"||c===k) CANDIDATES[k].forEach(function(e){ pl.push(Object.assign({city:k},e)); }); });
+      pl.sort(function(a,b){ return a.name.localeCompare(b.name); });
+      if(pl.length){
+        h+='<div class="prelim"><span class="prelim-badge">'+esc(L("prelim_badge"))+'</span><h3>'+esc(L("prelim_h"))+'</h3><p>'+esc(L("prelim_p"))+'</p><ul class="plist">';
+        pl.forEach(function(e){
+          var u=safeUrl(e.url);
+          h+='<li>'+(u?'<a href="'+u+'" rel="noopener">'+esc(e.name)+'</a>':'<span class="n">'+esc(e.name)+'</span>')
+            +(c==="deutschland"?'<small>'+esc(TX.cities[e.city][window.LANG==="en"?1:0])+'</small>':'')+'</li>';
+        });
+        h+='</ul></div>';
+      }
       h+='<div class="note-card"><div><h3>'+esc(L("note_h"))+'</h3><p>'+esc(L("note_p"))+'</p></div><a class="btn btn-gold" href="bewerbung.html">'+esc(L("note_btn"))+'</a></div>';
     }
     panel.innerHTML=h;
