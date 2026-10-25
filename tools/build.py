@@ -971,7 +971,8 @@ rank_js = r'''
       {name:"Salsea Dance Academy", sc:[0, 10, 10, 21.2, 8.2, 8.8], fx:["4,9 ★ · 94","4.395 · 175"], url:"https://salsea.de/"},
       {name:"Dance With George", sc:[0, 7, 8, 20.8, 9.7, 9.0], fx:["4,8 ★ · 211","2.706 · 656"], url:"https://www.dancewithgeorge.com/"},
       {name:"Salsa Y Corazon", sc:[10, 7, 8, 21.4, 8.4, 8.3], fx:["4,9 ★ · 103","2.000 · 254"], url:"https://www.salsa-y-corazon.de/"},
-      {name:"Salsa Club Munich", sc:[5, 7, 5, 19.9, 8.2, 9.6], fx:["4,8 ★ · 90","8.876 · 427"], url:"http://www.salsaclub-munich.de/"}
+      {name:"Salsa Club Munich", sc:[5, 7, 5, 19.9, 8.2, 9.6], fx:["4,8 ★ · 90","8.876 · 427"], url:"http://www.salsaclub-munich.de/"},
+      {name:"Lazarte Dance Academy", sc:[0, 10, 6, 21.5, 7.3, 6.0], fx:["5,0 ★ · 58","404 · 31"], url:"https://www.lazartedanceacademy.de/"}
     ],
     hamburg: [
       {name:"A Bailar Hamburg", st:["Dominicana"], sc:[0, 10, 9, 18.4, 7.9, 9.3], fx:["4,7 ★ · 77","4.363 · 532"], url:"https://www.abailar-hamburg.de/"},
@@ -981,11 +982,13 @@ rank_js = r'''
     koeln: [
       {name:"La Danza Tanzzentrum", st:["Sensual","Dominicana"], sc:[0, 5, 5, 15.1, 8.1, 9.9], fx:["4,4 ★ · 87","7.376 · 980"], url:"https://la-danza.de/"},
       {name:"Bachata Mastery Köln", st:["Sensual"], sc:[0, 10, 9, 24.2, 10, 9.3], fx:["5,0 ★ · 327","5.100 · 493"], url:"https://www.bachatakoeln.de/bachata-kurse-koeln"},
+      {name:"Tanzen Lernen In Köln", sc:[0, 7, 7, 21.1, 7.3, 6.1], fx:["4,9 ★ · 57","302 · 40"], url:"https://salsaundbachatalerneninkoeln.de/"},
       {name:"LatinSalsa", sc:[0, 10, 6, 17.9, 6.2, 0], fx:["4,8 ★ · 30","–"], url:"https://latinsalsa.de/"}
     ],
     frankfurt: [
       {name:"FluxDance", sc:[1, 8, 9, 0, 0.0, 6.5], fx:["–","612 · 32"], url:"https://www.fluxdance.de/"},
-      {name:"LaCalidad Dance Center", sc:[0, 10, 5, 22.2, 9.6, 9.8], fx:["4,9 ★ · 205","5.958 · 1.017"], url:"https://www.lacalidad.de/"}
+      {name:"LaCalidad Dance Center", sc:[0, 10, 5, 22.2, 9.6, 9.8], fx:["4,9 ★ · 205","5.958 · 1.017"], url:"https://www.lacalidad.de/"},
+      {name:"Movida Dance Academy", st:["Dominicana"], sc:[0, 8, 8, 23.9, 10, 0], fx:["4,9 ★ · 478","–"], url:"https://www.bachata-frankfurt.de/"}
     ],
     duesseldorf: [
       {name:"La Cati Dance", sc:[0, 5, 5, 23.5, 9.3, 8.9], fx:["5,0 ★ · 165","1.843 · 1.073"], url:"https://www.lacatidance.de/"},
