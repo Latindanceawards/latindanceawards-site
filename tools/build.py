@@ -224,6 +224,8 @@ PAGE_CSS = r'''
 .irk .iwhy b{color:var(--cream);font-weight:600}
 .irk .iwhy .bar{height:4px;margin-top:6px;border-radius:4px;background:rgba(255,255,255,.07);overflow:hidden}
 .irk .iwhy .bar i{display:block;height:100%;background:var(--gold)}
+.irk .iwhy .tbc .chip{display:inline-block;padding:2px 10px;border-radius:999px;border:1px dashed rgba(228,185,91,.55);color:var(--gold-light);font-size:12px;font-weight:600}
+.irk .iwhy .bar.dash{background:none;border-top:2px dashed rgba(255,255,255,.14);height:0;margin-top:9px}
 .irk .iwhy .lk{grid-column:1/-1}
 .irk .iwhy .lk a{color:var(--gold-light);font-weight:600;text-decoration:none}
 @media(max-width:560px){.irk summary{grid-template-columns:40px minmax(0,1fr) auto 14px;gap:10px;padding:16px}
@@ -928,7 +930,7 @@ R_TEXT = {
  'note_btn': ['Kostenlos bewerben', 'Apply for free'],
  'prelim_badge': ['Zwischenstand · kein Endergebnis, die Schulen sind noch im Wettbewerb', 'Interim standing · not final, schools are still competing'],
  'prelim_h': ['So entsteht der Zwischenstand', 'How the interim standing is calculated'],
- 'prelim_p': ['Dieselbe 100-Punkte-Skala wie im Endergebnis. Bisher gewertet sind 6 von 9 Kriterien (zusammen höchstens 75 Punkte): Google-Bewertung und Anzahl der Bewertungen (Stand heute, aus Google Maps), Jahre im Unterricht, Einsteigerangebot, Events und Gastlehrer sowie Social Media (Follower und Beiträge auf Instagram). Festivalauftritte, aktuelle Bewertungen und Wettbewerbe fehlen noch und zählen vorerst 0. Alle Daten sind öffentlich. Weitere Schulen können sich bis 30. November bewerben, und Schulen können Angaben mit Links ergänzen. Die Platzierungen können sich noch ändern. Endergebnis am 20. Dezember 2026.', 'The same 100-point scale as the final result. So far 6 of 9 criteria are scored (75 points at most together): Google rating and number of reviews (as of today, from Google Maps), years teaching, beginner offer, events and guest teachers, and social media (Instagram followers and posts). Festival appearances, recent reviews and competitions are still missing and score 0 for now. All data is public. More schools can apply until November 30, and schools can add information with links. Positions can still change. Final results on December 20, 2026.'],
+ 'prelim_p': ['Dieselbe 100-Punkte-Skala wie im Endergebnis. Bisher gewertet sind 6 von 9 Kriterien (zusammen höchstens 75 Punkte): Google-Bewertung und Anzahl der Bewertungen (Stand heute, aus Google Maps), Jahre im Unterricht, Einsteigerangebot, Events und Gastlehrer sowie Social Media (Follower und Beiträge auf Instagram). Festivalauftritte, aktuelle Bewertungen und Wettbewerbe sind als „zu bestätigen“ markiert und zählen vorerst 0. Alle Daten sind öffentlich. Weitere Schulen können sich bis 30. November bewerben, und Schulen können Angaben mit Links ergänzen. Die Platzierungen können sich noch ändern. Endergebnis am 20. Dezember 2026.', 'The same 100-point scale as the final result. So far 6 of 9 criteria are scored (75 points at most together): Google rating and number of reviews (as of today, from Google Maps), years teaching, beginner offer, events and guest teachers, and social media (Instagram followers and posts). Festival appearances, recent reviews and competitions are marked “to be confirmed” and score 0 for now. All data is public. More schools can apply until November 30, and schools can add information with links. Positions can still change. Final results on December 20, 2026.'],
  'preview': ['Vorschau mit Beispieldaten', 'Preview with sample data'],
  'empty': ['Für diese Stadt gibt es noch keine Ergebnisse.', 'There are no results for this city yet.'],
  'cities': {slug: [de, en] for slug, de, en in CITIES},
@@ -958,18 +960,37 @@ rank_js = r'''
   /* PRELIMINARY LIST: schools verified on their own website. Alphabetical, no scores. Not a ranking. */
   var CANDIDATES = {
     berlin: [
-      {name:"BachatAcademy", sc:[0, 10, 7, 19.9, 6.3, 8.6],fx:["5,0 ★ · 32","2.857 · 238"], url:"https://www.bachatacademy.de/"},
-      {name:"La Mambita", sc:[10, 8, 7, 22.4, 10, 7.9],fx:["4,9 ★ · 252","1.642 · 138"], url:"https://www.mambita.de/"},
-      {name:"Zapatissimo", sc:[0, 8, 7, 20.9, 9.9, 7.8],fx:["4,8 ★ · 234","2.583 · 48"], url:"https://www.zapatissimo.de/"}
+      {name:"BachatAcademy", sc:[0, 10, 7, 19.9, 6.3, 8.6], fx:["5,0 ★ · 32","2.857 · 238"], url:"https://www.bachatacademy.de/"},
+      {name:"La Mambita", sc:[10, 8, 7, 22.4, 10, 7.9], fx:["4,9 ★ · 252","1.642 · 138"], url:"https://www.mambita.de/"},
+      {name:"Zapatissimo", sc:[0, 8, 7, 20.9, 9.9, 7.8], fx:["4,8 ★ · 234","2.583 · 48"], url:"https://www.zapatissimo.de/"},
+      {name:"Cumbancha Tanzschule", sc:[10, 10, 4, 23.9, 9.9, 9.7], fx:["5,0 ★ · 243","5.739 · 1.483"], url:"https://www.cumbancha.de/"},
+      {name:"Tumba'o Danzas", sc:[0, 0, 3, 13.8, 1.3, 5.8], fx:["5,0 ★ · 1","186 · 54"], url:"https://tumbao-danzas.de/"}
     ],
-    muenchen: [ {name:"Salsea Dance Academy", sc:[0, 10, 10, 21.2, 8.2, 8.8],fx:["4,9 ★ · 94","4.395 · 175"], url:"https://salsea.de/"} ],
-    hamburg: [ {name:"A Bailar Hamburg", sc:[0, 10, 9, 18.4, 7.9, 9.3],fx:["4,7 ★ · 77","4.363 · 532"], url:"https://www.abailar-hamburg.de/"} ],
-    koeln: [ {name:"La Danza Tanzzentrum", sc:[0, 5, 5, 15.1, 8.1, 9.9],fx:["4,4 ★ · 87","7.376 · 980"], url:"https://la-danza.de/"} ],
+    muenchen: [
+      {name:"Salsea Dance Academy", sc:[0, 10, 10, 21.2, 8.2, 8.8], fx:["4,9 ★ · 94","4.395 · 175"], url:"https://salsea.de/"},
+      {name:"Dance With George", sc:[0, 7, 8, 20.8, 9.7, 9.0], fx:["4,8 ★ · 211","2.706 · 656"], url:"https://www.dancewithgeorge.com/"},
+      {name:"Salsa Y Corazon", sc:[10, 7, 8, 21.4, 8.4, 8.3], fx:["4,9 ★ · 103","2.000 · 254"], url:"https://www.salsa-y-corazon.de/"},
+      {name:"Salsa Club Munich", sc:[5, 7, 5, 19.9, 8.2, 9.6], fx:["4,8 ★ · 90","8.876 · 427"], url:"http://www.salsaclub-munich.de/"}
+    ],
+    hamburg: [
+      {name:"A Bailar Hamburg", sc:[0, 10, 9, 18.4, 7.9, 9.3], fx:["4,7 ★ · 77","4.363 · 532"], url:"https://www.abailar-hamburg.de/"},
+      {name:"SalsaHH", sc:[10, 7, 7, 16.1, 6.2, 0], fx:["4,6 ★ · 30","–"], url:"http://www.salsahh.de/"},
+      {name:"ICB Studios", sc:[0, 7, 7, 20.0, 6.4, 8.2], fx:["5,0 ★ · 33","2.579 · 116"], url:"https://icbstudios.com/"}
+    ],
+    koeln: [
+      {name:"La Danza Tanzzentrum", sc:[0, 5, 5, 15.1, 8.1, 9.9], fx:["4,4 ★ · 87","7.376 · 980"], url:"https://la-danza.de/"},
+      {name:"Bachata Mastery Köln", sc:[0, 10, 9, 24.2, 10, 9.3], fx:["5,0 ★ · 327","5.100 · 493"], url:"https://www.bachatakoeln.de/bachata-kurse-koeln"},
+      {name:"LatinSalsa", sc:[0, 10, 6, 17.9, 6.2, 0], fx:["4,8 ★ · 30","–"], url:"https://latinsalsa.de/"}
+    ],
     frankfurt: [
-      {name:"FluxDance", sc:[1, 8, 9, 0, 0.0, 6.5],fx:["–","612 · 32"], url:"https://www.fluxdance.de/"},
-      {name:"LaCalidad Dance Center", sc:[0, 10, 5, 22.2, 9.6, 9.8],fx:["4,9 ★ · 205","5.958 · 1.017"], url:"https://www.lacalidad.de/"}
+      {name:"FluxDance", sc:[1, 8, 9, 0, 0.0, 6.5], fx:["–","612 · 32"], url:"https://www.fluxdance.de/"},
+      {name:"LaCalidad Dance Center", sc:[0, 10, 5, 22.2, 9.6, 9.8], fx:["4,9 ★ · 205","5.958 · 1.017"], url:"https://www.lacalidad.de/"}
     ],
-    duesseldorf: []
+    duesseldorf: [
+      {name:"La Cati Dance", sc:[0, 5, 5, 23.5, 9.3, 8.9], fx:["5,0 ★ · 165","1.843 · 1.073"], url:"https://www.lacatidance.de/"},
+      {name:"Anima Dance Community", sc:[0, 10, 5, 18.4, 6.6, 7.7], fx:["4,8 ★ · 38","2.420 · 38"], url:"https://anima-dance.de/"},
+      {name:"Salsa 'n' Fun", sc:[0, 10, 8, 19.8, 8.0, 8.2], fx:["4,8 ★ · 84","1.935 · 195"], url:"http://www.salsanfun.de/"}
+    ]
   };
   var PUBLISH_DATE = new Date("2026-12-20T19:00:00+01:00");
 
@@ -1064,13 +1085,16 @@ rank_js = r'''
           var u=safeUrl(e.url), g=i<3?" g"+(i+1):"", why="";
           FAC.forEach(function(f,k){ var fx=(k===3?e.fx[0]:(k===4?e.fx[0].split(" · ")[1]:(k===5?e.fx[1]:"")));
             why+='<div><b>'+esc(f)+'</b> · '+num(e.sc[k])+' / '+MAX[k]+(fx&&fx!=="–"?' <small>('+esc(k===5?(en?"followers · posts: ":"Follower · Posts: ")+fx:fx)+')</small>':'')+'<div class="bar"><i style="width:'+(e.sc[k]/MAX[k]*100)+'%"></i></div></div>'; });
-          why+='<div class="lk" style="color:var(--muted)">'+esc(NYC)+'</div>';
+          var TBC=en?[["Festivals","15"],["Recent reviews","5"],["Competitions entered","5"],["Competitions won","5"]]:[["Festivals","15"],["Aktuelle Bewertungen","5"],["Teilnahme an Wettbewerben","5"],["Wettbewerbe gewonnen","5"]];
+          TBC.forEach(function(x){ why+='<div class="tbc"><b>'+esc(x[0])+'</b> · <span class="chip">'+esc(en?"To be confirmed":"Zu bestätigen")+'</span><div class="bar dash"></div></div>'; });
+          why+='<div class="lk" style="color:var(--muted)">'+esc(en?"Not scored yet. Schools confirm these with links when they apply.":"Noch ohne Punkte. Schulen bestätigen diese Angaben mit Links bei der Bewerbung.")+' <a href="bewerbung.html">'+esc(en?"Confirm now":"Jetzt bestätigen")+' →</a></div>';
           if(u) why+='<div class="lk"><a href="'+u+'" rel="noopener">'+esc(L("site"))+' →</a></div>';
-          h+='<li><details class="irk'+g+'"><summary><span class="rk">'+(i===0?CROWN+'<i class="sp a"></i><i class="sp b"></i><i class="sp c"></i><i class="sp d"></i>':'')+(i+1)+'</span><span class="who"><b>'+esc(e.name)+'</b>'
+          h+='<li'+(i>=10?' class="more" hidden':'')+'><details class="irk'+g+'"><summary><span class="rk">'+(i===0?CROWN+'<i class="sp a"></i><i class="sp b"></i><i class="sp c"></i><i class="sp d"></i>':'')+(i+1)+'</span><span class="who"><b>'+esc(e.name)+'</b>'
             +(c==="deutschland"?'<small>'+cn(e)+'</small>':'')+'</span><span class="score">'+num(e.pts)+'<small> / 100</small></span><span class="meter"><i style="width:'+e.pts+'%"></i></span></summary>'
             +'<div class="iwhy">'+why+'</div></details></li>';
         });
         h+='</ol>';
+        if(pl.length>10) h+='<button type="button" class="btn btn-ghost showall" style="margin-top:16px">'+esc(en?"Show all "+pl.length+" schools":"Alle "+pl.length+" Schulen anzeigen")+'</button>';
         h+='<details class="howto"><summary>'+esc(L("prelim_h"))+'</summary><p>'+esc(L("prelim_p"))+'</p></details></div>';
       }
       var tips=TX.help_tips[window.LANG==="en"?1:0].map(function(x){return '<li>'+esc(x)+'</li>';}).join("");
@@ -1078,6 +1102,7 @@ rank_js = r'''
       h+='<div class="note-card"><div><h3>'+esc(L("note_h"))+'</h3><p>'+esc(L("note_p"))+'</p></div><a class="btn btn-gold" href="bewerbung.html">'+esc(L("note_btn"))+'</a></div>';
     }
     panel.innerHTML=h;
+    var sa=panel.querySelector(".showall"); if(sa) sa.addEventListener("click",function(){ panel.querySelectorAll("li.more").forEach(function(l){ l.hidden=false; }); sa.remove(); });
     try{ if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){ panel.querySelectorAll(".irk .score").forEach(function(el){ var tn=el.firstChild, to=parseFloat(String(tn.nodeValue).replace(",",".")); if(!(to>0)) return; var t0=null; function st(ts){ t0=t0||ts; var k=Math.min(1,(ts-t0)/1200), v=to*(1-Math.pow(1-k,3)); tn.nodeValue=num(v); if(k<1) requestAnimationFrame(st); } requestAnimationFrame(st); }); } }catch(e){}
     panel.setAttribute("aria-labelledby","tab-"+c);
   }
