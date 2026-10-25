@@ -199,6 +199,35 @@ PAGE_CSS = r'''
 .plist li a,.plist li span.n{font-weight:600;color:var(--cream);text-decoration:none}
 .plist li a:hover{color:var(--gold-light)}
 .plist li small{color:var(--muted);font-size:13px}
+.ilist{list-style:none;display:grid;gap:12px;margin:0;padding:0}
+.irk{border-radius:20px;background:var(--card);border:1px solid var(--line);transition:border-color .25s,transform .25s}
+.irk:hover{border-color:rgba(228,185,91,.5)}
+.irk[open]{border-color:rgba(228,185,91,.6)}
+.irk.g1{background:linear-gradient(170deg,var(--gold-soft),var(--card) 65%);border-color:rgba(228,185,91,.55)}
+.irk summary{display:grid;grid-template-columns:48px minmax(0,1fr) auto 22px;align-items:center;gap:16px;padding:18px 22px 18px;cursor:pointer;list-style:none}
+.irk summary::-webkit-details-marker{display:none}
+.irk summary::after{content:"+";grid-column:4;grid-row:1;color:var(--gold);font-size:22px;text-align:right;transition:transform .3s}
+.irk[open] summary::after{transform:rotate(45deg)}
+.irk .rk{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:20px;color:var(--gold);border:1px solid var(--line)}
+.irk.g1 .rk{background:var(--foil);color:#131011;border:0}
+.irk.g2 .rk{background:linear-gradient(135deg,#F2F2F2,#A9ADB4);color:#131011;border:0}
+.irk.g3 .rk{background:linear-gradient(135deg,#E8B58A,#9C5F34);color:#131011;border:0}
+.irk .who{min-width:0}
+.irk .who b{display:block;font-family:var(--serif);font-weight:500;font-size:21px;line-height:1.2;overflow-wrap:anywhere}
+.irk .who small{display:block;color:var(--muted);font-size:13.5px;margin-top:2px}
+.irk .score{text-align:right;font-family:var(--serif);font-size:30px;line-height:1;color:var(--gold-light);white-space:nowrap}
+.irk .score small{font-family:var(--sans);font-size:13px;color:var(--muted)}
+.irk .meter{grid-column:1/-1;grid-row:2;display:block;height:5px;margin:0;border-radius:5px;background:rgba(255,255,255,.07);overflow:hidden}
+.irk .meter i{display:block;height:100%;background:var(--foil);border-radius:5px}
+.irk .iwhy{padding:2px 22px 20px 86px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px 28px;font-size:14px;color:var(--muted)}
+.irk .iwhy b{color:var(--cream);font-weight:600}
+.irk .iwhy .bar{height:4px;margin-top:6px;border-radius:4px;background:rgba(255,255,255,.07);overflow:hidden}
+.irk .iwhy .bar i{display:block;height:100%;background:var(--gold)}
+.irk .iwhy .lk{grid-column:1/-1}
+.irk .iwhy .lk a{color:var(--gold-light);font-weight:600;text-decoration:none}
+@media(max-width:560px){.irk summary{grid-template-columns:40px minmax(0,1fr) auto;gap:12px;padding:16px}.irk summary::after{display:none}
+.irk .rk{width:38px;height:38px;font-size:17px}.irk .who b{font-size:18px}.irk .score{font-size:26px}.irk .meter{margin:0}.irk .iwhy{padding:0 16px 18px}}
+.howto{margin-top:22px;color:var(--muted);font-size:14.5px}.howto summary{cursor:pointer;color:var(--gold-light);font-weight:600}.howto p{margin-top:10px;max-width:760px}
 .plist li{position:relative;padding-left:52px}
 .plist .ipos{position:absolute;left:16px;top:12px;font-family:var(--serif);font-size:24px;color:var(--gold-light);line-height:1}
 .plist .ipts{color:var(--gold-light);font-size:14px;font-weight:600;margin-top:2px}
@@ -811,6 +840,7 @@ rank_main = f'''
 R_TEXT = {
  'title_city': ['Beste Bachata-Schulen in {c}', 'Best Bachata schools in {c}'],
  'title_de': ['Beste Bachata-Schulen Deutschlands', 'Best Bachata schools in Germany'],
+ 'sub_interim': ['Zwischenstand: Die Platzierungen können sich bis zum 20. Dezember noch ändern.', 'Interim standing: places can still change until December 20.'],
  'sub_locked': ['Die Top 10 werden am 20. Dezember 2026 enthüllt.', 'The top 10 will be revealed on December 20, 2026.'],
  'sub_open': ['Endergebnis der Bachata Awards 2026. Tippe auf eine Schule, um ihre Punkteaufschlüsselung zu sehen.', 'Final results of the Bachata Awards 2026. Tap a school to see its score breakdown.'],
  'locked': ['Wird am 20. Dezember enthüllt', 'Revealed on December 20'],
@@ -821,8 +851,8 @@ R_TEXT = {
  'note_p': ['Bewirb dich bis zum 30. November kostenlos für die Awards 2026.', 'Enter for the 2026 awards for free by November 30.'],
  'note_btn': ['Kostenlos bewerben', 'Apply for free'],
  'prelim_badge': ['Zwischenstand · kein Endergebnis, die Schulen sind noch im Wettbewerb', 'Interim standing · not final, schools are still competing'],
- 'prelim_h': ['Zwischenstand der Teilnehmer', 'Interim standing of participants'],
- 'prelim_p': ['Vorläufige Punkte (maximal 40) aus vier öffentlich prüfbaren Angaben der Schulen selbst: Jahre im Unterricht, Einsteigerangebot, Kursstufen sowie Events und Gastlehrer. Das ist nicht die endgültige Wertung: Google-Bewertungen, Festivalauftritte und weitere Kriterien (100 Punkte) kommen dazu, und weitere Schulen können sich bis 30. November bewerben. Die Platzierungen können sich noch ändern. Endergebnis am 20. Dezember 2026.', 'Interim points (maximum 40) from four publicly verifiable facts published by the schools themselves: years teaching, beginner offer, course levels, and events and guest teachers. This is not the final score: Google ratings, festival appearances and other criteria (100 points) are added, and more schools can apply until November 30. Positions can still change. Final results on December 20, 2026.'],
+ 'prelim_h': ['So entsteht der Zwischenstand', 'How the interim standing is calculated'],
+ 'prelim_p': ['Das Ranking nutzt dieselbe 100-Punkte-Skala wie das Endergebnis. Bisher zählen nur Angaben, die die Schulen selbst öffentlich machen: Jahre im Unterricht, Einsteigerangebot, Kursstufen sowie Events und Gastlehrer (zusammen höchstens 40 Punkte). Google-Bewertungen, Festivalauftritte und weitere Kriterien sind noch nicht eingerechnet und zählen vorerst 0. Weitere Schulen können sich bis 30. November bewerben. Die Platzierungen können sich noch ändern. Endergebnis am 20. Dezember 2026.', 'The ranking uses the same 100-point scale as the final result. So far only facts the schools publish themselves count: years teaching, beginner offer, course levels, and events and guest teachers (40 points at most together). Google ratings, festival appearances and other criteria are not counted yet and score 0 for now. More schools can apply until November 30. Positions can still change. Final results on December 20, 2026.'],
  'preview': ['Vorschau mit Beispieldaten', 'Preview with sample data'],
  'empty': ['Für diese Stadt gibt es noch keine Ergebnisse.', 'There are no results for this city yet.'],
  'cities': {slug: [de, en] for slug, de, en in CITIES},
@@ -852,16 +882,16 @@ rank_js = r'''
   /* PRELIMINARY LIST: schools verified on their own website. Alphabetical, no scores. Not a ranking. */
   var CANDIDATES = {
     berlin: [
-      {name:"BachatAcademy", pts:23, url:"https://www.bachatacademy.de/"},
-      {name:"La Mambita", pts:31, url:"https://www.mambita.de/"},
-      {name:"Zapatissimo", pts:23, url:"https://www.zapatissimo.de/"}
+      {name:"BachatAcademy", sc:[0, 10, 6, 7], url:"https://www.bachatacademy.de/"},
+      {name:"La Mambita", sc:[10, 8, 6, 7], url:"https://www.mambita.de/"},
+      {name:"Zapatissimo", sc:[0, 8, 8, 7], url:"https://www.zapatissimo.de/"}
     ],
-    muenchen: [ {name:"Salsea Dance Academy", pts:30, url:"https://salsea.de/"} ],
-    hamburg: [ {name:"A Bailar Hamburg", pts:25, url:"https://www.abailar-hamburg.de/"} ],
-    koeln: [ {name:"La Danza Tanzzentrum", pts:14, url:"https://la-danza.de/"} ],
+    muenchen: [ {name:"Salsea Dance Academy", sc:[0, 10, 10, 10], url:"https://salsea.de/"} ],
+    hamburg: [ {name:"A Bailar Hamburg", sc:[0, 10, 6, 9], url:"https://www.abailar-hamburg.de/"} ],
+    koeln: [ {name:"La Danza Tanzzentrum", sc:[0, 5, 4, 5], url:"https://la-danza.de/"} ],
     frankfurt: [
-      {name:"FluxDance", pts:28, url:"https://www.fluxdance.de/"},
-      {name:"LaCalidad Dance Center", pts:23, url:"https://www.lacalidad.de/"}
+      {name:"FluxDance", sc:[1, 8, 10, 9], url:"https://www.fluxdance.de/"},
+      {name:"LaCalidad Dance Center", sc:[0, 10, 8, 5], url:"https://www.lacalidad.de/"}
     ],
     duesseldorf: []
   };
@@ -909,12 +939,13 @@ rank_js = r'''
       +(current==="deutschland"?'<div class="sc">'+esc(TX.cities[e.city][window.LANG==="en"?1:0])+'</div>':'')
       +'<div class="sc"><b>'+num(total(e))+'</b> '+esc(L("pts"))+'</div></div>';
   }
+  function hasCand(c){ var r=false; Object.keys(CANDIDATES).forEach(function(k){ if((c==="deutschland"||c===k)&&CANDIDATES[k].length) r=true; }); return r; }
   function render(){
     var c=current, cityName=TX.cities[c][window.LANG==="en"?1:0];
     var title = c==="deutschland" ? L("title_de") : L("title_city").replace("{c}",cityName);
     var list=listFor(c), open=isOpen()&&list.length>0;
     var h=(preview?'<span class="preview-note">'+esc(L("preview"))+'</span>':'')
-      +'<h2 class="panel-title">'+esc(title)+'</h2><p class="panel-sub">'+esc(open?L("sub_open"):L("sub_locked"))+'</p>';
+      +'<h2 class="panel-title">'+esc(title)+'</h2><p class="panel-sub">'+esc(open?L("sub_open"):(hasCand(c)?L("sub_interim"):L("sub_locked")))+'</p>';
     var hasPl=false;
     if(!open){ Object.keys(CANDIDATES).forEach(function(k){ if((c==="deutschland"||c===k)&&CANDIDATES[k].length) hasPl=true; }); }
     var locked=!open;
@@ -945,15 +976,22 @@ rank_js = r'''
     if(!open){
       var pl=[];
       Object.keys(CANDIDATES).forEach(function(k){ if(c==="deutschland"||c===k) CANDIDATES[k].forEach(function(e){ pl.push(Object.assign({city:k},e)); }); });
+      pl.forEach(function(e){ e.pts=e.sc.reduce(function(x,y){return x+y;},0); });
       pl.sort(function(a,b){ return (b.pts-a.pts)||a.name.localeCompare(b.name); });
       if(pl.length){
-        h+='<div class="prelim"><span class="prelim-badge">'+esc(L("prelim_badge"))+'</span><h3>'+esc(L("prelim_h"))+'</h3><p>'+esc(L("prelim_p"))+'</p><ul class="plist">';
-        pl.forEach(function(e){
-          var u=safeUrl(e.url);
-          h+='<li><span class="ipos">'+(pl.indexOf(e)+1)+'</span>'+(u?'<a href="'+u+'" rel="noopener">'+esc(e.name)+'</a>':'<span class="n">'+esc(e.name)+'</span>')
-            +(c==="deutschland"?'<small>'+esc(TX.cities[e.city][window.LANG==="en"?1:0])+'</small>':'')+'<b class="ipts">'+e.pts+' / 40</b></li>';
+        var en=window.LANG==="en", cn=function(e){return esc(TX.cities[e.city][en?1:0]);};
+        var FAC=en?["Years teaching","Beginner offer","Course levels","Events and guests"]:["Jahre im Unterricht","Einsteigerangebot","Kursstufen","Events und Gastlehrer"];
+        h+='<div class="prelim"><span class="prelim-badge">'+esc(L("prelim_badge"))+'</span><ol class="ilist">';
+        pl.forEach(function(e,i){
+          var u=safeUrl(e.url), g=i<3?" g"+(i+1):"", why="";
+          FAC.forEach(function(f,k){ why+='<div><b>'+esc(f)+'</b> · '+e.sc[k]+' / 10<div class="bar"><i style="width:'+(e.sc[k]*10)+'%"></i></div></div>'; });
+          if(u) why+='<div class="lk"><a href="'+u+'" rel="noopener">'+esc(L("site"))+' →</a></div>';
+          h+='<li><details class="irk'+g+'"><summary><span class="rk">'+(i+1)+'</span><span class="who"><b>'+esc(e.name)+'</b>'
+            +(c==="deutschland"?'<small>'+cn(e)+'</small>':'')+'</span><span class="score">'+e.pts+'<small> / 100</small></span><span class="meter"><i style="width:'+e.pts+'%"></i></span></summary>'
+            +'<div class="iwhy">'+why+'</div></details></li>';
         });
-        h+='</ul></div>';
+        h+='</ol>';
+        h+='<details class="howto"><summary>'+esc(L("prelim_h"))+'</summary><p>'+esc(L("prelim_p"))+'</p></details></div>';
       }
       h+='<div class="note-card"><div><h3>'+esc(L("note_h"))+'</h3><p>'+esc(L("note_p"))+'</p></div><a class="btn btn-gold" href="bewerbung.html">'+esc(L("note_btn"))+'</a></div>';
     }
