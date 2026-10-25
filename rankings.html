@@ -595,28 +595,47 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
 @media(max-width:560px){.irk summary{grid-template-columns:40px minmax(0,1fr) auto 14px;gap:10px;padding:16px}
 .irk .rk{width:38px;height:38px;font-size:17px}.irk .who b{font-size:18px}.irk .score{font-size:26px}.irk .meter{margin:0}.irk .iwhy{padding:0 16px 18px}}
 
-/* first-place motion */
-@keyframes irkIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+/* podium motion */
+@property --ang{syntax:"<angle>";initial-value:0deg;inherits:false}
+@keyframes irkIn{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
 @keyframes irkFill{from{width:0}}
-@keyframes irkGlow{0%,100%{box-shadow:0 0 0 0 rgba(228,185,91,0),0 10px 40px -18px rgba(228,185,91,.35)}50%{box-shadow:0 0 34px 2px rgba(228,185,91,.28),0 14px 50px -16px rgba(228,185,91,.55)}}
-@keyframes irkSheen{0%{transform:translateX(-120%) skewX(-18deg)}55%,100%{transform:translateX(260%) skewX(-18deg)}}
-@keyframes irkFloat{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-4px) rotate(4deg)}}
-@keyframes irkSpark{0%,100%{opacity:0;transform:scale(.4)}50%{opacity:1;transform:scale(1)}}
-.ilist>li{animation:irkIn .6s cubic-bezier(.2,.7,.2,1) both}
-.ilist>li:nth-child(2){animation-delay:.08s}.ilist>li:nth-child(3){animation-delay:.16s}.ilist>li:nth-child(4){animation-delay:.24s}
-.ilist>li:nth-child(5){animation-delay:.3s}.ilist>li:nth-child(6){animation-delay:.36s}.ilist>li:nth-child(7){animation-delay:.42s}.ilist>li:nth-child(8){animation-delay:.48s}
-.irk .meter i{animation:irkFill 1.3s cubic-bezier(.2,.7,.2,1) .35s both}
-.irk.g1{position:relative;overflow:hidden;animation:irkGlow 3.4s ease-in-out infinite}
-.irk.g1::before{content:"";position:absolute;top:0;bottom:0;left:0;width:34%;background:linear-gradient(100deg,transparent,rgba(255,236,170,.16),transparent);animation:irkSheen 4.6s ease-in-out 1.2s infinite;pointer-events:none}
-.irk.g1 .rk{position:relative;overflow:visible}
-.irk.g1 .rk svg{position:absolute;left:50%;top:-17px;width:26px;height:20px;margin-left:-13px;animation:irkFloat 3s ease-in-out infinite;filter:drop-shadow(0 2px 6px rgba(228,185,91,.6))}
-.irk.g1 .rk::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(228,185,91,.55);animation:irkSpark 2.6s ease-in-out infinite}
-.irk.g1 .score{text-shadow:0 0 18px rgba(228,185,91,.45)}
-.irk.g1 .who b{background:linear-gradient(90deg,var(--cream),var(--gold-light),var(--cream));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:irkText 5s linear infinite}
-@keyframes irkText{to{background-position:200% center}}
-.irk.g1 summary{padding-top:26px}
-.irk.g2 .rk,.irk.g3 .rk{animation:irkSpark 0s}
-@media(prefers-reduced-motion:reduce){.ilist>li,.irk .meter i,.irk.g1,.irk.g1::before,.irk.g1 .rk svg,.irk.g1 .rk::after,.irk.g1 .who b{animation:none!important}.irk.g1 .who b{color:var(--cream);background:none}}
+@keyframes irkSpin{to{--ang:360deg}}
+@keyframes irkGlow{0%,100%{box-shadow:0 0 0 0 rgba(228,185,91,0),0 12px 44px -20px rgba(228,185,91,.4)}50%{box-shadow:0 0 38px 0 rgba(228,185,91,.3),0 16px 54px -16px rgba(228,185,91,.6)}}
+@keyframes irkGlowS{0%,100%{box-shadow:0 0 0 0 rgba(200,208,222,0)}50%{box-shadow:0 0 26px -2px rgba(200,208,222,.22)}}
+@keyframes irkGlowB{0%,100%{box-shadow:0 0 0 0 rgba(214,148,96,0)}50%{box-shadow:0 0 26px -2px rgba(214,148,96,.26)}}
+@keyframes irkSheen{0%{transform:translateX(-130%) skewX(-18deg)}50%,100%{transform:translateX(330%) skewX(-18deg)}}
+@keyframes irkFloat{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-5px) rotate(5deg)}}
+@keyframes irkRing{0%{transform:scale(.92);opacity:.9}100%{transform:scale(1.5);opacity:0}}
+@keyframes irkTw{0%,100%{opacity:0;transform:scale(.2) rotate(0)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+@keyframes irkMedal{from{background-position:0 0}to{background-position:-300% 0}}
+@keyframes irkText{to{background-position:-200% center}}
+.ilist>li{animation:irkIn .7s cubic-bezier(.2,.7,.2,1) both}
+.ilist>li:nth-child(1){animation-delay:.35s}.ilist>li:nth-child(2){animation-delay:.1s}.ilist>li:nth-child(3){animation-delay:.2s}
+.ilist>li:nth-child(n+4){animation-delay:.45s}
+.irk{transition:border-color .25s,transform .25s}.irk:hover{transform:translateY(-2px)}
+.irk .meter i{animation:irkFill 1.4s cubic-bezier(.2,.7,.2,1) .5s both}
+/* 1st: rotating gold border, glow, sheen, crown, sparkles */
+.irk.g1{position:relative;overflow:hidden;border:1.5px solid transparent;
+ background:linear-gradient(170deg,rgba(228,185,91,.16),rgba(228,185,91,0) 65%) padding-box,linear-gradient(#1c1715,#1c1715) padding-box,conic-gradient(from var(--ang),#7a5a1c,#F6DFA2,#E4B95B,#7a5a1c,#E4B95B,#F6DFA2,#7a5a1c) border-box;
+ animation:irkGlow 3.6s ease-in-out infinite,irkSpin 6s linear infinite,irkIn .7s cubic-bezier(.2,.7,.2,1) .35s both}
+.irk.g1::before{content:"";position:absolute;top:0;bottom:0;left:0;width:28%;background:linear-gradient(100deg,transparent,rgba(255,236,170,.2),transparent);animation:irkSheen 5s ease-in-out 1.4s infinite;pointer-events:none}
+.irk.g1 .rk{position:relative;overflow:visible;background:linear-gradient(115deg,#B8862B,#F6DFA2,#E4B95B,#B8862B);background-size:300% 100%;animation:irkMedal 4s linear infinite}
+.irk.g1 .rk::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(228,185,91,.7);animation:irkRing 2.4s ease-out infinite}
+.irk.g1 .rk svg{position:absolute;left:50%;top:-19px;width:28px;height:21px;margin-left:-14px;animation:irkFloat 3.2s ease-in-out infinite;filter:drop-shadow(0 2px 6px rgba(228,185,91,.7))}
+.irk .sp{position:absolute;width:9px;height:9px;pointer-events:none;background:#F6DFA2;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);animation:irkTw 2.4s ease-in-out infinite}
+.irk .sp.a{left:-9px;top:-6px}.irk .sp.b{right:-10px;top:2px;width:7px;height:7px;animation-delay:.8s}.irk .sp.c{right:-3px;bottom:-9px;width:6px;height:6px;animation-delay:1.5s}.irk .sp.d{left:-12px;bottom:4px;width:6px;height:6px;animation-delay:2s}
+.irk.g1 .score{text-shadow:0 0 20px rgba(228,185,91,.5)}
+.irk.g1 .who b{background:linear-gradient(90deg,var(--cream) 0,var(--gold-light) 25%,var(--cream) 50%,var(--gold-light) 75%,var(--cream) 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:irkText 5s linear infinite}
+.irk.g1 summary{padding-top:28px}
+/* 2nd silver, 3rd bronze */
+.irk.g2{border-color:rgba(200,208,222,.35);animation:irkGlowS 4s ease-in-out infinite,irkIn .7s cubic-bezier(.2,.7,.2,1) .1s both}
+.irk.g3{border-color:rgba(214,148,96,.38);animation:irkGlowB 4s ease-in-out 1s infinite,irkIn .7s cubic-bezier(.2,.7,.2,1) .2s both}
+.irk.g2 .rk{background:linear-gradient(115deg,#8E939C,#FFFFFF,#C4C8CF,#8E939C);background-size:300% 100%;animation:irkMedal 5s linear infinite}
+.irk.g3 .rk{background:linear-gradient(115deg,#8A4E26,#F0BE92,#C07842,#8A4E26);background-size:300% 100%;animation:irkMedal 5.5s linear infinite}
+.irk.g2::before,.irk.g3::before{content:"";position:absolute;top:0;bottom:0;left:0;width:22%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.07),transparent);animation:irkSheen 7s ease-in-out 2s infinite;pointer-events:none}
+.irk.g2,.irk.g3{position:relative;overflow:hidden}
+.irk.g2 .score{color:#E6E9EE}.irk.g3 .score{color:#F0C9A4}
+@media(prefers-reduced-motion:reduce){.ilist>li,.irk,.irk .meter i,.irk::before,.irk .rk,.irk .rk svg,.irk .rk::after,.irk .sp,.irk .who b{animation:none!important}.irk.g1 .who b{color:var(--cream);background:none}.irk .sp{display:none}}
 .helpbox{margin-top:36px;padding:26px 28px;border-radius:22px;background:var(--card);border:1px solid var(--line)}
 .helpbox h3{font-family:var(--serif);font-weight:500;font-size:26px;margin-bottom:6px}
 .helpbox>p{color:var(--muted);margin-bottom:18px;max-width:640px}
@@ -716,8 +735,7 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
       </div>
       <div class="ctas rise d5">
         <a class="btn btn-gold" href="#ranking"><span data-i18n="r33">Zwischenstand ansehen ↓</span></a>
-        <a class="btn btn-ghost" href="https://instagram.com/" rel="noopener"><span data-i18n="r34">Auf Instagram erinnern lassen</span></a>
-        <a class="btn btn-ghost" href="bewerbung.html"><span data-i18n="r35">Schule kostenlos bewerben</span></a>
+        <a class="btn btn-ghost" href="bewerbung.html"><span data-i18n="r34">Schule kostenlos bewerben</span></a>
       </div>
     </div>
     <div class="seal-box rise d3"><img class="seal" src="badge-bachata-2026.svg" alt="Siegel der Bachata Awards 2026, Deutschland" width="360" height="360" fetchpriority="low"></div>
@@ -739,92 +757,113 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
   </div>
 </section>
 
-<section class="block" aria-labelledby="how-title">
-  <div class="wrap prose">
-    <h2 id="how-title" data-i18n="r36">So entsteht das Bachata-Ranking 2026</h2>
-    <p data-i18n="r37">Wir recherchieren jede Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt und Düsseldorf und bewerten sie nach denselben <strong>neun Kriterien</strong>, zusammen 100 Punkte. Die wichtigsten sind die gewichtete Google-Bewertung (25 Punkte) und Auftritte der Lehrer auf Festivals und Kongressen (15 Punkte).</p>
-    <p data-i18n="r38">Dazu kommen die Anzahl der Bewertungen, die Jahre im Unterricht, das Kursangebot für Einsteiger, eigene Events und Gastlehrer sowie Social Media mit je 10 Punkten. Aktuelle Bewertungen der letzten 12 Monate und Wettbewerbsergebnisse zählen je 5 Punkte. Alle Daten sind öffentlich und werden von Hand geprüft. Schulen, die sich bewerben, können ihre Angaben zusätzlich mit Links belegen.</p>
-    <p data-i18n="r39">Damit kleine Schulen eine faire Chance haben, gewichten wir Bewertungen nach ihrer Anzahl: Eine 5,0 aus vier Bewertungen schlägt keine 4,8 aus dreihundert. Die vollständige Methode findest du auf der <a href="index.html#method">Startseite</a>.</p>
+<section class="block" aria-labelledby="why-title">
+  <div class="wrap">
+    <h2 id="why-title" class="sec-h2" data-i18n="r35">Warum das Ranking wichtig ist</h2>
+    <p class="lede" style="color:var(--muted);max-width:640px;margin-bottom:34px" data-i18n="r36">Ein faires, öffentliches Ranking hilft allen, die Bachata in Deutschland lieben.</p>
+    <div class="cards">
+      <article>
+        <h3 data-i18n="r37">Für Tänzer</h3>
+        <p data-i18n="r38">Statt Raten gibt es eine klare Orientierung: Du siehst, welche Schule in deiner Stadt zu dir passt, ob es eine Probestunde gibt und wie gut die Schule bewertet ist. Das spart Zeit und schützt vor Fehlstarts.</p>
+      </article>
+      <article>
+        <h3 data-i18n="r39">Für Schulen</h3>
+        <p data-i18n="r40">Gute Arbeit wird sichtbar, auch bei kleinen Schulen. Die Punkteaufschlüsselung zeigt, wo ihr stark seid und wo ihr wachsen könnt. Gewinner erhalten ein offizielles Siegel für Website, Studio und Social Media.</p>
+      </article>
+      <article>
+        <h3 data-i18n="r41">Für die Community</h3>
+        <p data-i18n="r42">Wettbewerb motiviert, bessere Kurse, mehr Socials und mehr Gastlehrer anzubieten. Davon profitiert die ganze Szene: Mehr Tänzer finden den Einstieg, und die Bachata-Community in Deutschland wächst gemeinsam.</p>
+      </article>
+    </div>
   </div>
 </section>
 
-<section class="block alt" aria-labelledby="awards-title">
+<section class="block alt" aria-labelledby="how-title">
   <div class="wrap prose">
-    <h2 id="awards-title" data-i18n="r40">Die fünf Bachata Awards 2026 im Überblick</h2>
-    <p data-i18n="r41">Neben den Ranglisten vergeben wir fünf Auszeichnungen. Jeder Gewinner erhält ein offizielles Siegel für Website, Studio und Social Media.</p>
+    <h2 id="how-title" data-i18n="r43">So entsteht das Bachata-Ranking 2026</h2>
+    <p data-i18n="r44">Wir recherchieren jede Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt und Düsseldorf und bewerten sie nach denselben <strong>neun Kriterien</strong>, zusammen 100 Punkte. Die wichtigsten sind die gewichtete Google-Bewertung (25 Punkte) und Auftritte der Lehrer auf Festivals und Kongressen (15 Punkte).</p>
+    <p data-i18n="r45">Dazu kommen die Anzahl der Bewertungen, die Jahre im Unterricht, das Kursangebot für Einsteiger, eigene Events und Gastlehrer sowie Social Media mit je 10 Punkten. Aktuelle Bewertungen der letzten 12 Monate und Wettbewerbsergebnisse zählen je 5 Punkte. Alle Daten sind öffentlich und werden von Hand geprüft. Schulen, die sich bewerben, können ihre Angaben zusätzlich mit Links belegen.</p>
+    <p data-i18n="r46">Damit kleine Schulen eine faire Chance haben, gewichten wir Bewertungen nach ihrer Anzahl: Eine 5,0 aus vier Bewertungen schlägt keine 4,8 aus dreihundert. Die vollständige Methode findest du auf der <a href="index.html#method">Startseite</a>.</p>
+  </div>
+</section>
+
+<section class="block" aria-labelledby="awards-title">
+  <div class="wrap prose">
+    <h2 id="awards-title" data-i18n="r47">Die fünf Bachata Awards 2026 im Überblick</h2>
+    <p data-i18n="r48">Neben den Ranglisten vergeben wir fünf Auszeichnungen. Jeder Gewinner erhält ein offizielles Siegel für Website, Studio und Social Media.</p>
     <ul>
-      <li><span data-i18n="r42"><strong>Beste Bachata-Schule Deutschlands:</strong> die höchste Gesamtpunktzahl aller sechs Städte.</span></li>
-      <li><span data-i18n="r43"><strong>Beste Schule der Stadt:</strong> die bestplatzierte Schule in Berlin, München, Hamburg, Köln, Frankfurt und Düsseldorf.</span></li>
-      <li><span data-i18n="r44"><strong>Aufsteiger des Jahres:</strong> die bestbewertete Schule, die in den letzten drei Jahren gegründet wurde.</span></li>
-      <li><span data-i18n="r45"><strong>Legacy Award:</strong> für eine Schule, die ihre lokale Bachata-Szene seit zehn Jahren oder länger prägt.</span></li>
-      <li><span data-i18n="r46"><strong>Festival Stage Award:</strong> für die Schule, deren Lehrer am häufigsten auf europäischen Festivals und Kongressen unterrichten.</span></li>
+      <li><span data-i18n="r49"><strong>Beste Bachata-Schule Deutschlands:</strong> die höchste Gesamtpunktzahl aller sechs Städte.</span></li>
+      <li><span data-i18n="r50"><strong>Beste Schule der Stadt:</strong> die bestplatzierte Schule in Berlin, München, Hamburg, Köln, Frankfurt und Düsseldorf.</span></li>
+      <li><span data-i18n="r51"><strong>Aufsteiger des Jahres:</strong> die bestbewertete Schule, die in den letzten drei Jahren gegründet wurde.</span></li>
+      <li><span data-i18n="r52"><strong>Legacy Award:</strong> für eine Schule, die ihre lokale Bachata-Szene seit zehn Jahren oder länger prägt.</span></li>
+      <li><span data-i18n="r53"><strong>Festival Stage Award:</strong> für die Schule, deren Lehrer am häufigsten auf europäischen Festivals und Kongressen unterrichten.</span></li>
     </ul>
   </div>
 </section>
 
-<section class="block" aria-labelledby="use-title">
+<section class="block alt" aria-labelledby="use-title">
   <div class="wrap prose">
-    <h2 id="use-title" data-i18n="r47">So nutzt du das Ranking bei der Schulwahl</h2>
-    <p data-i18n="r48">Die Gesamtpunktzahl zeigt, welche Schulen insgesamt am stärksten sind. Für deine Wahl lohnt sich aber ein Blick in die <strong>Punkteaufschlüsselung</strong>: Tippe nach der Veröffentlichung auf eine Schule und sieh dir an, wo sie ihre Punkte holt.</p>
-    <p data-i18n="r49">Du bist Anfänger? Dann achte vor allem auf <strong>Kurse und Einsteiger</strong> sowie auf eigene Socials. Du willst auf Festival-Niveau trainieren? Dann zählen Festivalauftritte und Gastlehrer mehr. Wähle zwei oder drei Schulen aus deiner Stadt, besuche jeweils eine Probestunde und entscheide nach Gefühl: Am Ende ist die beste Schule die, in der du gern wiederkommst.</p>
+    <h2 id="use-title" data-i18n="r54">So nutzt du das Ranking bei der Schulwahl</h2>
+    <p data-i18n="r55">Die Gesamtpunktzahl zeigt, welche Schulen insgesamt am stärksten sind. Für deine Wahl lohnt sich aber ein Blick in die <strong>Punkteaufschlüsselung</strong>: Tippe nach der Veröffentlichung auf eine Schule und sieh dir an, wo sie ihre Punkte holt.</p>
+    <p data-i18n="r56">Du bist Anfänger? Dann achte vor allem auf <strong>Kurse und Einsteiger</strong> sowie auf eigene Socials. Du willst auf Festival-Niveau trainieren? Dann zählen Festivalauftritte und Gastlehrer mehr. Wähle zwei oder drei Schulen aus deiner Stadt, besuche jeweils eine Probestunde und entscheide nach Gefühl: Am Ende ist die beste Schule die, in der du gern wiederkommst.</p>
   </div>
 </section>
 
-<section class="block alt" aria-labelledby="good-title">
+<section class="block" aria-labelledby="good-title">
   <div class="wrap prose">
-    <h2 id="good-title" data-i18n="r50">Woran du eine gute Bachata-Schule erkennst</h2>
-    <p data-i18n="r51">Ein Platz im Ranking ist ein guter Startpunkt. Ob eine Schule zu dir passt, merkst du aber erst im Unterricht. Achte auf diese Punkte:</p>
+    <h2 id="good-title" data-i18n="r57">Woran du eine gute Bachata-Schule erkennst</h2>
+    <p data-i18n="r58">Ein Platz im Ranking ist ein guter Startpunkt. Ob eine Schule zu dir passt, merkst du aber erst im Unterricht. Achte auf diese Punkte:</p>
     <ul>
-      <li><span data-i18n="r52"><strong>Probestunde oder feste Einsteigertermine:</strong> Du kannst ohne Risiko anfangen und mit einer neuen Gruppe starten.</span></li>
-      <li><span data-i18n="r53"><strong>Partnerwechsel im Kurs:</strong> Du lernst mit vielen Partnern zu tanzen und brauchst niemanden mitzubringen.</span></li>
-      <li><span data-i18n="r54"><strong>Technik statt nur Figuren:</strong> Gute Lehrer erklären Führen, Folgen und Musikalität, nicht nur Schrittfolgen.</span></li>
-      <li><span data-i18n="r55"><strong>Klare Levels:</strong> Getrennte Kurse für Anfänger, Mittelstufe und Fortgeschrittene, damit niemand über- oder unterfordert ist.</span></li>
-      <li><span data-i18n="r56"><strong>Socials und Übungsabende:</strong> Auf Partys wendest du das Gelernte an. Schulen mit eigenen Socials bringen dich schneller voran.</span></li>
-      <li><span data-i18n="r57"><strong>Lehrer mit Festivalerfahrung:</strong> Wer auf Festivals unterrichtet, kennt aktuelle Stile und bringt Ideen aus der ganzen Szene mit.</span></li>
+      <li><span data-i18n="r59"><strong>Probestunde oder feste Einsteigertermine:</strong> Du kannst ohne Risiko anfangen und mit einer neuen Gruppe starten.</span></li>
+      <li><span data-i18n="r60"><strong>Partnerwechsel im Kurs:</strong> Du lernst mit vielen Partnern zu tanzen und brauchst niemanden mitzubringen.</span></li>
+      <li><span data-i18n="r61"><strong>Technik statt nur Figuren:</strong> Gute Lehrer erklären Führen, Folgen und Musikalität, nicht nur Schrittfolgen.</span></li>
+      <li><span data-i18n="r62"><strong>Klare Levels:</strong> Getrennte Kurse für Anfänger, Mittelstufe und Fortgeschrittene, damit niemand über- oder unterfordert ist.</span></li>
+      <li><span data-i18n="r63"><strong>Socials und Übungsabende:</strong> Auf Partys wendest du das Gelernte an. Schulen mit eigenen Socials bringen dich schneller voran.</span></li>
+      <li><span data-i18n="r64"><strong>Lehrer mit Festivalerfahrung:</strong> Wer auf Festivals unterrichtet, kennt aktuelle Stile und bringt Ideen aus der ganzen Szene mit.</span></li>
     </ul>
   </div>
 </section>
 
-<section class="block" aria-labelledby="style-title">
+<section class="block alt" aria-labelledby="style-title">
   <div class="wrap prose">
-    <h2 id="style-title" data-i18n="r58">Bachata-Stile: Dominicana, Sensual und Moderna</h2>
-    <p data-i18n="r59">Bachata kommt aus der Dominikanischen Republik und steht seit 2019 auf der <a href="https://de.wikipedia.org/wiki/Bachata" rel="noopener">UNESCO-Liste des immateriellen Kulturerbes</a>. In Deutschland unterrichten die meisten Schulen einen oder mehrere dieser Stile:</p>
-    <h3 data-i18n="r60">Bachata Dominicana</h3>
-    <p data-i18n="r61">Der ursprüngliche Stil: schnelle Fußarbeit, verspielte Rhythmen und eher offene Haltung. Ideal, wenn du Musikalität und Footwork liebst.</p>
-    <h3 data-i18n="r62">Bachata Sensual</h3>
-    <p data-i18n="r63">In Europa entstanden und dort sehr beliebt: enge Verbindung, Wellen, Körperbewegungen und fließende Drehungen. Auf vielen Festivals der Hauptstil.</p>
-    <h3 data-i18n="r64">Bachata Moderna</h3>
-    <p data-i18n="r65">Eine Mischung aus dem Grundschritt mit Drehfiguren und Elementen aus anderen Tänzen. Viele Einsteigerkurse beginnen hier, weil er leicht zugänglich ist.</p>
+    <h2 id="style-title" data-i18n="r65">Bachata-Stile: Dominicana, Sensual und Moderna</h2>
+    <p data-i18n="r66">Bachata kommt aus der Dominikanischen Republik und steht seit 2019 auf der <a href="https://de.wikipedia.org/wiki/Bachata" rel="noopener">UNESCO-Liste des immateriellen Kulturerbes</a>. In Deutschland unterrichten die meisten Schulen einen oder mehrere dieser Stile:</p>
+    <h3 data-i18n="r67">Bachata Dominicana</h3>
+    <p data-i18n="r68">Der ursprüngliche Stil: schnelle Fußarbeit, verspielte Rhythmen und eher offene Haltung. Ideal, wenn du Musikalität und Footwork liebst.</p>
+    <h3 data-i18n="r69">Bachata Sensual</h3>
+    <p data-i18n="r70">In Europa entstanden und dort sehr beliebt: enge Verbindung, Wellen, Körperbewegungen und fließende Drehungen. Auf vielen Festivals der Hauptstil.</p>
+    <h3 data-i18n="r71">Bachata Moderna</h3>
+    <p data-i18n="r72">Eine Mischung aus dem Grundschritt mit Drehfiguren und Elementen aus anderen Tänzen. Viele Einsteigerkurse beginnen hier, weil er leicht zugänglich ist.</p>
   </div>
 </section>
 
 <section class="block alt" aria-labelledby="tips-title">
   <div class="wrap prose">
-    <h2 id="tips-title" data-i18n="r66">Tipps für deine erste Bachata-Stunde</h2>
+    <h2 id="tips-title" data-i18n="r73">Tipps für deine erste Bachata-Stunde</h2>
     <ul>
-      <li><span data-i18n="r67"><strong>Bequeme Schuhe mit glatter Sohle:</strong> Turnschuhe mit viel Grip machen Drehungen schwer.</span></li>
-      <li><span data-i18n="r68"><strong>Mit einer neuen Gruppe starten:</strong> Frag nach dem nächsten Einsteigertermin, statt mitten in einen laufenden Kurs zu springen.</span></li>
-      <li><span data-i18n="r69"><strong>Allein kommen ist normal:</strong> Durch den Partnerwechsel tanzt du ohnehin mit vielen Leuten.</span></li>
-      <li><span data-i18n="r70"><strong>Dranbleiben:</strong> Ein Kurs pro Woche über mehrere Monate bringt dich weiter als ein einzelner Intensiv-Workshop. Der Grundschritt sitzt meist nach wenigen Wochen.</span></li>
-      <li><span data-i18n="r71"><strong>Bachata-Musik hören:</strong> Wer den Takt kennt, findet im Unterricht schneller den Einstieg. Achte auf die Zählweise 1-2-3-Tap, die sich durch jeden Bachata-Song zieht.</span></li>
-      <li><span data-i18n="r72"><strong>Zum ersten Social gehen:</strong> Schon nach wenigen Stunden kannst du auf einer Party den Grundschritt üben.</span></li>
+      <li><span data-i18n="r74"><strong>Bequeme Schuhe mit glatter Sohle:</strong> Turnschuhe mit viel Grip machen Drehungen schwer.</span></li>
+      <li><span data-i18n="r75"><strong>Mit einer neuen Gruppe starten:</strong> Frag nach dem nächsten Einsteigertermin, statt mitten in einen laufenden Kurs zu springen.</span></li>
+      <li><span data-i18n="r76"><strong>Allein kommen ist normal:</strong> Durch den Partnerwechsel tanzt du ohnehin mit vielen Leuten.</span></li>
+      <li><span data-i18n="r77"><strong>Dranbleiben:</strong> Ein Kurs pro Woche über mehrere Monate bringt dich weiter als ein einzelner Intensiv-Workshop. Der Grundschritt sitzt meist nach wenigen Wochen.</span></li>
+      <li><span data-i18n="r78"><strong>Bachata-Musik hören:</strong> Wer den Takt kennt, findet im Unterricht schneller den Einstieg. Achte auf die Zählweise 1-2-3-Tap, die sich durch jeden Bachata-Song zieht.</span></li>
+      <li><span data-i18n="r79"><strong>Zum ersten Social gehen:</strong> Schon nach wenigen Stunden kannst du auf einer Party den Grundschritt üben.</span></li>
     </ul>
   </div>
 </section>
 
 <section class="block" aria-labelledby="cities-title">
   <div class="wrap prose">
-    <h2 id="cities-title" data-i18n="r73">Die sechs Städte im Ranking</h2>
-    <p data-i18n="r74">Für die erste Ausgabe haben wir die sechs größten Bachata-Städte Deutschlands gewählt. Dort gibt es genug Schulen für einen fairen Vergleich, und viele Tänzer suchen hier gezielt nach einem Kurs. Weitere Städte kommen in den nächsten Ausgaben dazu.</p>
-    <p data-i18n="r75">Jede Stadt bekommt ein eigenes Top-10-Ranking. Die beste Schule jeder Stadt erhält den Award <strong>Beste Schule der Stadt</strong>, die höchste Punktzahl im ganzen Land den Award <strong>Beste Bachata-Schule Deutschlands</strong>.</p>
+    <h2 id="cities-title" data-i18n="r80">Die sechs Städte im Ranking</h2>
+    <p data-i18n="r81">Für die erste Ausgabe haben wir die sechs größten Bachata-Städte Deutschlands gewählt. Dort gibt es genug Schulen für einen fairen Vergleich, und viele Tänzer suchen hier gezielt nach einem Kurs. Weitere Städte kommen in den nächsten Ausgaben dazu.</p>
+    <p data-i18n="r82">Jede Stadt bekommt ein eigenes Top-10-Ranking. Die beste Schule jeder Stadt erhält den Award <strong>Beste Schule der Stadt</strong>, die höchste Punktzahl im ganzen Land den Award <strong>Beste Bachata-Schule Deutschlands</strong>.</p>
     <div class="citylinks"><a href="#berlin"><span data-i18n="r20">Berlin</span></a><a href="#muenchen"><span data-i18n="r21">München</span></a><a href="#hamburg"><span data-i18n="r22">Hamburg</span></a><a href="#koeln"><span data-i18n="r23">Köln</span></a><a href="#frankfurt"><span data-i18n="r24">Frankfurt</span></a><a href="#duesseldorf"><span data-i18n="r25">Düsseldorf</span></a></div>
-    <p data-i18n="r76">Mehr zu den Schulen vor Ort: <a href="bachata-berlin.html">Berlin</a>, <a href="bachata-hamburg.html">Hamburg</a>, <a href="bachata-muenchen.html">München</a>.</p>
+    <p data-i18n="r83">Mehr zu den Schulen vor Ort: <a href="bachata-berlin.html">Berlin</a>, <a href="bachata-hamburg.html">Hamburg</a>, <a href="bachata-muenchen.html">München</a>.</p>
   </div>
 </section>
 
 <section class="block alt" id="faq" aria-labelledby="rfaq-title">
   <div class="wrap">
-    <div class="sec-head"><h2 id="rfaq-title" data-i18n="r77">Häufige Fragen zum Bachata-Ranking</h2></div>
+    <div class="sec-head"><h2 id="rfaq-title" data-i18n="r84">Häufige Fragen zum Bachata-Ranking</h2></div>
     <div class="faq">
       <details><summary data-i18n="r8">Wann wird das Bachata-Ranking veröffentlicht?</summary><p data-i18n="r9">Alle Rankings erscheinen am 20. Dezember 2026 um 19 Uhr auf dieser Seite, zuerst für die sechs Städte und gleichzeitig für ganz Deutschland.</p></details>
       <details><summary data-i18n="r10">Welche Städte sind im Ranking 2026?</summary><p data-i18n="r11">Berlin, München, Hamburg, Köln, Frankfurt und Düsseldorf. Weitere Städte und Länder folgen in den nächsten Ausgaben.</p></details>
@@ -864,7 +903,7 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
 
 <script>
 (function(){
-  var EN={"t3": "Categories", "ffaq": "FAQ", "t2": "Why it matters", "t4": "How we rank", "nav_apply": "Apply", "t103": "Award categories", "t101": "An independent project celebrating Europe's Latin dance schools. Rankings are based on public data and can't be bought.", "t1": "Rankings", "t5": "Apply for free", "t107": "Bachata Edition · Germany", "t106": "Apply for free", "t105": "Get in touch", "t102": "Germany 2026", "t104": "How we rank", "r1": "All Germany", "r2": "Berlin", "r3": "Munich", "r4": "Hamburg", "r5": "Cologne", "r6": "Frankfurt", "r7": "Düsseldorf", "r8": "When is the Bachata ranking published?", "r9": "All rankings go live on December 20, 2026 at 7 pm (CET) on this page, for the six cities and for Germany as a whole.", "r10": "Which cities are in the 2026 ranking?", "r11": "Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf. More cities and countries follow in future editions.", "r12": "Can a school pay for a better place?", "r13": "No. Places cannot be bought. Every school is scored on the same nine factors, and the score breakdown is public.", "r14": "Do I need a partner for a Bachata class?", "r15": "In most Bachata classes you don't. Many schools rotate partners regularly, so you can come on your own. It is best to ask the school beforehand.", "r16": "My school is missing. What can I do?", "r17": "Enter it for free by November 30 on the <a href=\"bewerbung.html\">application page</a>. We include every Bachata school in the six cities.", "r18": "How often is the ranking updated?", "r19": "The ranking is published once a year. We review corrections to wrong data on an ongoing basis and apply them once checked.", "r20": "Berlin", "r21": "Munich", "r22": "Hamburg", "r23": "Cologne", "r24": "Frankfurt", "r25": "Düsseldorf", "r26": "Rankings 2026 · Germany", "r27": "Best Bachata schools in <em class=\"foil\">Germany 2026</em>", "r28": "The best Bachata schools in Germany, scored on nine public factors: six cities, one national winner. Results are published on December 20, 2026 at 7 pm (CET).", "r29": "days", "r30": "hours", "r31": "minutes", "r32": "seconds", "r33": "See the interim standing ↓", "r34": "Get notified on Instagram", "r35": "Enter a school for free", "r36": "How the 2026 Bachata ranking is made", "r37": "We research every Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf and score each one on the same <strong>nine factors</strong>, 100 points in total. The most important are the weighted Google rating (25 points) and teachers' appearances at festivals and congresses (15 points).", "r38": "Review volume, years of teaching, the beginner offer, own events and guest teachers, and social media add 10 points each. Recent reviews from the last 12 months and competition results count 5 points each. All data is public and checked by hand. Schools that apply can also back up their information with links.", "r39": "To give small schools a fair chance, ratings are weighted by their number: a 5.0 from four reviews does not beat a 4.8 from three hundred. The full method is on the <a href=\"index.html#method\">homepage</a>.", "r40": "The five Bachata Awards 2026 at a glance", "r41": "Alongside the rankings we give five awards. Every winner receives an official seal for their website, studio and social media.", "r42": "<strong>Best Bachata School in Germany:</strong> the highest total score across all six cities.", "r43": "<strong>Best School of the City:</strong> the top-ranked school in Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf.", "r44": "<strong>Rising School of the Year:</strong> the best-rated school founded in the last three years.", "r45": "<strong>Legacy Award:</strong> for a school that has shaped its local Bachata scene for ten years or more.", "r46": "<strong>Festival Stage Award:</strong> for the school whose teachers teach most often at European festivals and congresses.", "r47": "How to use the ranking to choose a school", "r48": "The total score shows which schools are strongest overall. For your own choice, look at the <strong>score breakdown</strong>: after publication, tap a school to see where its points come from.", "r49": "Are you a beginner? Then focus on <strong>classes and beginners</strong> and on the school's own socials. Want to train at festival level? Then festival appearances and guest teachers matter more. Pick two or three schools in your city, take a trial class at each and go with your gut: in the end, the best school is the one you love coming back to.", "r50": "How to recognise a good Bachata school", "r51": "A place in the ranking is a good starting point, but you only find out whether a school suits you in class. Look out for these points:", "r52": "<strong>Trial class or fixed beginner start dates:</strong> you can start without risk and join a new group.", "r53": "<strong>Partner rotation in class:</strong> you learn to dance with many partners and don't need to bring anyone.", "r54": "<strong>Technique, not just moves:</strong> good teachers explain leading, following and musicality, not just step sequences.", "r55": "<strong>Clear levels:</strong> separate classes for beginners, intermediate and advanced dancers, so nobody is over- or under-challenged.", "r56": "<strong>Socials and practice nights:</strong> parties are where you use what you learned. Schools with their own socials help you progress faster.", "r57": "<strong>Teachers with festival experience:</strong> teachers who teach at festivals know current styles and bring ideas from the whole scene.", "r58": "Bachata styles: Dominican, Sensual and Moderna", "r59": "Bachata comes from the Dominican Republic and has been on the <a href=\"https://en.wikipedia.org/wiki/Bachata_(music)\" rel=\"noopener\">UNESCO Intangible Cultural Heritage list</a> since 2019. Most schools in Germany teach one or more of these styles:", "r60": "Dominican Bachata", "r61": "The original style: fast footwork, playful rhythms and a more open hold. Ideal if you love musicality and footwork.", "r62": "Bachata Sensual", "r63": "Developed in Europe and very popular there: close connection, body waves and flowing turns. The main style at many festivals.", "r64": "Bachata Moderna", "r65": "A mix of the basic step with turn patterns and elements from other dances. Many beginner classes start here because it is easy to get into.", "r66": "Tips for your first Bachata class", "r67": "<strong>Comfortable shoes with a smooth sole:</strong> trainers with lots of grip make turns hard.", "r68": "<strong>Start with a new group:</strong> ask for the next beginner start date instead of jumping into a running course.", "r69": "<strong>Coming alone is normal:</strong> with partner rotation you dance with many people anyway.", "r70": "<strong>Stick with it:</strong> one class a week over several months gets you further than a single intensive workshop. The basic step usually feels natural after a few weeks.", "r71": "<strong>Listen to Bachata music:</strong> knowing the beat helps you get going faster in class. Listen for the 1-2-3-tap count that runs through every Bachata song.", "r72": "<strong>Go to your first social:</strong> after just a few classes you can practise the basic step at a party.", "r73": "The six cities in the ranking", "r74": "For the first edition we chose Germany's six biggest Bachata cities. They have enough schools for a fair comparison, and many dancers there search specifically for a class. More cities join in future editions.", "r75": "Every city gets its own top 10. The best school in each city receives the <strong>Best School of the City</strong> award, and the highest score in the country wins <strong>Best Bachata School in Germany</strong>.", "r76": "More on the schools locally: <a href=\"bachata-berlin.html\">Berlin</a>, <a href=\"bachata-hamburg.html\">Hamburg</a>, <a href=\"bachata-muenchen.html\">Munich</a>.", "r77": "Bachata ranking FAQ"};
+  var EN={"t107": "Bachata Edition · Germany", "t104": "How we rank", "t5": "Apply for free", "t101": "An independent project celebrating Europe's Latin dance schools. Rankings are based on public data and can't be bought.", "t3": "Categories", "nav_apply": "Apply", "t4": "How we rank", "t1": "Rankings", "ffaq": "FAQ", "t103": "Award categories", "t2": "Why it matters", "t102": "Germany 2026", "t105": "Get in touch", "t106": "Apply for free", "r1": "All Germany", "r2": "Berlin", "r3": "Munich", "r4": "Hamburg", "r5": "Cologne", "r6": "Frankfurt", "r7": "Düsseldorf", "r8": "When is the Bachata ranking published?", "r9": "All rankings go live on December 20, 2026 at 7 pm (CET) on this page, for the six cities and for Germany as a whole.", "r10": "Which cities are in the 2026 ranking?", "r11": "Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf. More cities and countries follow in future editions.", "r12": "Can a school pay for a better place?", "r13": "No. Places cannot be bought. Every school is scored on the same nine factors, and the score breakdown is public.", "r14": "Do I need a partner for a Bachata class?", "r15": "In most Bachata classes you don't. Many schools rotate partners regularly, so you can come on your own. It is best to ask the school beforehand.", "r16": "My school is missing. What can I do?", "r17": "Enter it for free by November 30 on the <a href=\"bewerbung.html\">application page</a>. We include every Bachata school in the six cities.", "r18": "How often is the ranking updated?", "r19": "The ranking is published once a year. We review corrections to wrong data on an ongoing basis and apply them once checked.", "r20": "Berlin", "r21": "Munich", "r22": "Hamburg", "r23": "Cologne", "r24": "Frankfurt", "r25": "Düsseldorf", "r26": "Rankings 2026 · Germany", "r27": "Best Bachata schools in <em class=\"foil\">Germany 2026</em>", "r28": "The best Bachata schools in Germany, scored on nine public factors: six cities, one national winner. Results are published on December 20, 2026 at 7 pm (CET).", "r29": "days", "r30": "hours", "r31": "minutes", "r32": "seconds", "r33": "See the interim standing ↓", "r34": "Enter a school for free", "r35": "Why the ranking matters", "r36": "A fair, public ranking helps everyone who loves Bachata in Germany.", "r37": "For dancers", "r38": "Instead of guessing, you get clear guidance: see which school in your city suits you, whether there is a trial class and how well the school is rated. It saves time and avoids a bad start.", "r39": "For schools", "r40": "Good work becomes visible, even for small schools. The score breakdown shows where you are strong and where you can grow. Winners receive an official seal for their website, studio and social media.", "r41": "For the community", "r42": "Friendly competition motivates schools to offer better classes, more socials and more guest teachers. The whole scene benefits: more dancers find their way in, and the German Bachata community grows together.", "r43": "How the 2026 Bachata ranking is made", "r44": "We research every Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf and score each one on the same <strong>nine factors</strong>, 100 points in total. The most important are the weighted Google rating (25 points) and teachers' appearances at festivals and congresses (15 points).", "r45": "Review volume, years of teaching, the beginner offer, own events and guest teachers, and social media add 10 points each. Recent reviews from the last 12 months and competition results count 5 points each. All data is public and checked by hand. Schools that apply can also back up their information with links.", "r46": "To give small schools a fair chance, ratings are weighted by their number: a 5.0 from four reviews does not beat a 4.8 from three hundred. The full method is on the <a href=\"index.html#method\">homepage</a>.", "r47": "The five Bachata Awards 2026 at a glance", "r48": "Alongside the rankings we give five awards. Every winner receives an official seal for their website, studio and social media.", "r49": "<strong>Best Bachata School in Germany:</strong> the highest total score across all six cities.", "r50": "<strong>Best School of the City:</strong> the top-ranked school in Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf.", "r51": "<strong>Rising School of the Year:</strong> the best-rated school founded in the last three years.", "r52": "<strong>Legacy Award:</strong> for a school that has shaped its local Bachata scene for ten years or more.", "r53": "<strong>Festival Stage Award:</strong> for the school whose teachers teach most often at European festivals and congresses.", "r54": "How to use the ranking to choose a school", "r55": "The total score shows which schools are strongest overall. For your own choice, look at the <strong>score breakdown</strong>: after publication, tap a school to see where its points come from.", "r56": "Are you a beginner? Then focus on <strong>classes and beginners</strong> and on the school's own socials. Want to train at festival level? Then festival appearances and guest teachers matter more. Pick two or three schools in your city, take a trial class at each and go with your gut: in the end, the best school is the one you love coming back to.", "r57": "How to recognise a good Bachata school", "r58": "A place in the ranking is a good starting point, but you only find out whether a school suits you in class. Look out for these points:", "r59": "<strong>Trial class or fixed beginner start dates:</strong> you can start without risk and join a new group.", "r60": "<strong>Partner rotation in class:</strong> you learn to dance with many partners and don't need to bring anyone.", "r61": "<strong>Technique, not just moves:</strong> good teachers explain leading, following and musicality, not just step sequences.", "r62": "<strong>Clear levels:</strong> separate classes for beginners, intermediate and advanced dancers, so nobody is over- or under-challenged.", "r63": "<strong>Socials and practice nights:</strong> parties are where you use what you learned. Schools with their own socials help you progress faster.", "r64": "<strong>Teachers with festival experience:</strong> teachers who teach at festivals know current styles and bring ideas from the whole scene.", "r65": "Bachata styles: Dominican, Sensual and Moderna", "r66": "Bachata comes from the Dominican Republic and has been on the <a href=\"https://en.wikipedia.org/wiki/Bachata_(music)\" rel=\"noopener\">UNESCO Intangible Cultural Heritage list</a> since 2019. Most schools in Germany teach one or more of these styles:", "r67": "Dominican Bachata", "r68": "The original style: fast footwork, playful rhythms and a more open hold. Ideal if you love musicality and footwork.", "r69": "Bachata Sensual", "r70": "Developed in Europe and very popular there: close connection, body waves and flowing turns. The main style at many festivals.", "r71": "Bachata Moderna", "r72": "A mix of the basic step with turn patterns and elements from other dances. Many beginner classes start here because it is easy to get into.", "r73": "Tips for your first Bachata class", "r74": "<strong>Comfortable shoes with a smooth sole:</strong> trainers with lots of grip make turns hard.", "r75": "<strong>Start with a new group:</strong> ask for the next beginner start date instead of jumping into a running course.", "r76": "<strong>Coming alone is normal:</strong> with partner rotation you dance with many people anyway.", "r77": "<strong>Stick with it:</strong> one class a week over several months gets you further than a single intensive workshop. The basic step usually feels natural after a few weeks.", "r78": "<strong>Listen to Bachata music:</strong> knowing the beat helps you get going faster in class. Listen for the 1-2-3-tap count that runs through every Bachata song.", "r79": "<strong>Go to your first social:</strong> after just a few classes you can practise the basic step at a party.", "r80": "The six cities in the ranking", "r81": "For the first edition we chose Germany's six biggest Bachata cities. They have enough schools for a fair comparison, and many dancers there search specifically for a class. More cities join in future editions.", "r82": "Every city gets its own top 10. The best school in each city receives the <strong>Best School of the City</strong> award, and the highest score in the country wins <strong>Best Bachata School in Germany</strong>.", "r83": "More on the schools locally: <a href=\"bachata-berlin.html\">Berlin</a>, <a href=\"bachata-hamburg.html\">Hamburg</a>, <a href=\"bachata-muenchen.html\">Munich</a>.", "r84": "Bachata ranking FAQ"};
   var META={en:{title:"Best Bachata schools in Germany 2026 · Ranking",desc:"The best Bachata schools in Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf. Latin Dance Awards results on December 20, 2026."}};
 
   var DE={}, nodes=document.querySelectorAll("[data-i18n]");
@@ -1011,7 +1050,7 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
             why+='<div><b>'+esc(f)+'</b> · '+num(e.sc[k])+' / '+MAX[k]+(fx&&fx!=="–"?' <small>('+esc(k===5?(en?"followers · posts: ":"Follower · Posts: ")+fx:fx)+')</small>':'')+'<div class="bar"><i style="width:'+(e.sc[k]/MAX[k]*100)+'%"></i></div></div>'; });
           why+='<div class="lk" style="color:var(--muted)">'+esc(NYC)+'</div>';
           if(u) why+='<div class="lk"><a href="'+u+'" rel="noopener">'+esc(L("site"))+' →</a></div>';
-          h+='<li><details class="irk'+g+'"><summary><span class="rk">'+(i===0?CROWN:'')+(i+1)+'</span><span class="who"><b>'+esc(e.name)+'</b>'
+          h+='<li><details class="irk'+g+'"><summary><span class="rk">'+(i===0?CROWN+'<i class="sp a"></i><i class="sp b"></i><i class="sp c"></i><i class="sp d"></i>':'')+(i+1)+'</span><span class="who"><b>'+esc(e.name)+'</b>'
             +(c==="deutschland"?'<small>'+cn(e)+'</small>':'')+'</span><span class="score">'+num(e.pts)+'<small> / 100</small></span><span class="meter"><i style="width:'+e.pts+'%"></i></span></summary>'
             +'<div class="iwhy">'+why+'</div></details></li>';
         });

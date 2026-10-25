@@ -229,28 +229,47 @@ PAGE_CSS = r'''
 @media(max-width:560px){.irk summary{grid-template-columns:40px minmax(0,1fr) auto 14px;gap:10px;padding:16px}
 .irk .rk{width:38px;height:38px;font-size:17px}.irk .who b{font-size:18px}.irk .score{font-size:26px}.irk .meter{margin:0}.irk .iwhy{padding:0 16px 18px}}
 
-/* first-place motion */
-@keyframes irkIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+/* podium motion */
+@property --ang{syntax:"<angle>";initial-value:0deg;inherits:false}
+@keyframes irkIn{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
 @keyframes irkFill{from{width:0}}
-@keyframes irkGlow{0%,100%{box-shadow:0 0 0 0 rgba(228,185,91,0),0 10px 40px -18px rgba(228,185,91,.35)}50%{box-shadow:0 0 34px 2px rgba(228,185,91,.28),0 14px 50px -16px rgba(228,185,91,.55)}}
-@keyframes irkSheen{0%{transform:translateX(-120%) skewX(-18deg)}55%,100%{transform:translateX(260%) skewX(-18deg)}}
-@keyframes irkFloat{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-4px) rotate(4deg)}}
-@keyframes irkSpark{0%,100%{opacity:0;transform:scale(.4)}50%{opacity:1;transform:scale(1)}}
-.ilist>li{animation:irkIn .6s cubic-bezier(.2,.7,.2,1) both}
-.ilist>li:nth-child(2){animation-delay:.08s}.ilist>li:nth-child(3){animation-delay:.16s}.ilist>li:nth-child(4){animation-delay:.24s}
-.ilist>li:nth-child(5){animation-delay:.3s}.ilist>li:nth-child(6){animation-delay:.36s}.ilist>li:nth-child(7){animation-delay:.42s}.ilist>li:nth-child(8){animation-delay:.48s}
-.irk .meter i{animation:irkFill 1.3s cubic-bezier(.2,.7,.2,1) .35s both}
-.irk.g1{position:relative;overflow:hidden;animation:irkGlow 3.4s ease-in-out infinite}
-.irk.g1::before{content:"";position:absolute;top:0;bottom:0;left:0;width:34%;background:linear-gradient(100deg,transparent,rgba(255,236,170,.16),transparent);animation:irkSheen 4.6s ease-in-out 1.2s infinite;pointer-events:none}
-.irk.g1 .rk{position:relative;overflow:visible}
-.irk.g1 .rk svg{position:absolute;left:50%;top:-17px;width:26px;height:20px;margin-left:-13px;animation:irkFloat 3s ease-in-out infinite;filter:drop-shadow(0 2px 6px rgba(228,185,91,.6))}
-.irk.g1 .rk::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(228,185,91,.55);animation:irkSpark 2.6s ease-in-out infinite}
-.irk.g1 .score{text-shadow:0 0 18px rgba(228,185,91,.45)}
-.irk.g1 .who b{background:linear-gradient(90deg,var(--cream),var(--gold-light),var(--cream));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:irkText 5s linear infinite}
-@keyframes irkText{to{background-position:200% center}}
-.irk.g1 summary{padding-top:26px}
-.irk.g2 .rk,.irk.g3 .rk{animation:irkSpark 0s}
-@media(prefers-reduced-motion:reduce){.ilist>li,.irk .meter i,.irk.g1,.irk.g1::before,.irk.g1 .rk svg,.irk.g1 .rk::after,.irk.g1 .who b{animation:none!important}.irk.g1 .who b{color:var(--cream);background:none}}
+@keyframes irkSpin{to{--ang:360deg}}
+@keyframes irkGlow{0%,100%{box-shadow:0 0 0 0 rgba(228,185,91,0),0 12px 44px -20px rgba(228,185,91,.4)}50%{box-shadow:0 0 38px 0 rgba(228,185,91,.3),0 16px 54px -16px rgba(228,185,91,.6)}}
+@keyframes irkGlowS{0%,100%{box-shadow:0 0 0 0 rgba(200,208,222,0)}50%{box-shadow:0 0 26px -2px rgba(200,208,222,.22)}}
+@keyframes irkGlowB{0%,100%{box-shadow:0 0 0 0 rgba(214,148,96,0)}50%{box-shadow:0 0 26px -2px rgba(214,148,96,.26)}}
+@keyframes irkSheen{0%{transform:translateX(-130%) skewX(-18deg)}50%,100%{transform:translateX(330%) skewX(-18deg)}}
+@keyframes irkFloat{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-5px) rotate(5deg)}}
+@keyframes irkRing{0%{transform:scale(.92);opacity:.9}100%{transform:scale(1.5);opacity:0}}
+@keyframes irkTw{0%,100%{opacity:0;transform:scale(.2) rotate(0)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+@keyframes irkMedal{from{background-position:0 0}to{background-position:-300% 0}}
+@keyframes irkText{to{background-position:-200% center}}
+.ilist>li{animation:irkIn .7s cubic-bezier(.2,.7,.2,1) both}
+.ilist>li:nth-child(1){animation-delay:.35s}.ilist>li:nth-child(2){animation-delay:.1s}.ilist>li:nth-child(3){animation-delay:.2s}
+.ilist>li:nth-child(n+4){animation-delay:.45s}
+.irk{transition:border-color .25s,transform .25s}.irk:hover{transform:translateY(-2px)}
+.irk .meter i{animation:irkFill 1.4s cubic-bezier(.2,.7,.2,1) .5s both}
+/* 1st: rotating gold border, glow, sheen, crown, sparkles */
+.irk.g1{position:relative;overflow:hidden;border:1.5px solid transparent;
+ background:linear-gradient(170deg,rgba(228,185,91,.16),rgba(228,185,91,0) 65%) padding-box,linear-gradient(#1c1715,#1c1715) padding-box,conic-gradient(from var(--ang),#7a5a1c,#F6DFA2,#E4B95B,#7a5a1c,#E4B95B,#F6DFA2,#7a5a1c) border-box;
+ animation:irkGlow 3.6s ease-in-out infinite,irkSpin 6s linear infinite,irkIn .7s cubic-bezier(.2,.7,.2,1) .35s both}
+.irk.g1::before{content:"";position:absolute;top:0;bottom:0;left:0;width:28%;background:linear-gradient(100deg,transparent,rgba(255,236,170,.2),transparent);animation:irkSheen 5s ease-in-out 1.4s infinite;pointer-events:none}
+.irk.g1 .rk{position:relative;overflow:visible;background:linear-gradient(115deg,#B8862B,#F6DFA2,#E4B95B,#B8862B);background-size:300% 100%;animation:irkMedal 4s linear infinite}
+.irk.g1 .rk::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(228,185,91,.7);animation:irkRing 2.4s ease-out infinite}
+.irk.g1 .rk svg{position:absolute;left:50%;top:-19px;width:28px;height:21px;margin-left:-14px;animation:irkFloat 3.2s ease-in-out infinite;filter:drop-shadow(0 2px 6px rgba(228,185,91,.7))}
+.irk .sp{position:absolute;width:9px;height:9px;pointer-events:none;background:#F6DFA2;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);animation:irkTw 2.4s ease-in-out infinite}
+.irk .sp.a{left:-9px;top:-6px}.irk .sp.b{right:-10px;top:2px;width:7px;height:7px;animation-delay:.8s}.irk .sp.c{right:-3px;bottom:-9px;width:6px;height:6px;animation-delay:1.5s}.irk .sp.d{left:-12px;bottom:4px;width:6px;height:6px;animation-delay:2s}
+.irk.g1 .score{text-shadow:0 0 20px rgba(228,185,91,.5)}
+.irk.g1 .who b{background:linear-gradient(90deg,var(--cream) 0,var(--gold-light) 25%,var(--cream) 50%,var(--gold-light) 75%,var(--cream) 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:irkText 5s linear infinite}
+.irk.g1 summary{padding-top:28px}
+/* 2nd silver, 3rd bronze */
+.irk.g2{border-color:rgba(200,208,222,.35);animation:irkGlowS 4s ease-in-out infinite,irkIn .7s cubic-bezier(.2,.7,.2,1) .1s both}
+.irk.g3{border-color:rgba(214,148,96,.38);animation:irkGlowB 4s ease-in-out 1s infinite,irkIn .7s cubic-bezier(.2,.7,.2,1) .2s both}
+.irk.g2 .rk{background:linear-gradient(115deg,#8E939C,#FFFFFF,#C4C8CF,#8E939C);background-size:300% 100%;animation:irkMedal 5s linear infinite}
+.irk.g3 .rk{background:linear-gradient(115deg,#8A4E26,#F0BE92,#C07842,#8A4E26);background-size:300% 100%;animation:irkMedal 5.5s linear infinite}
+.irk.g2::before,.irk.g3::before{content:"";position:absolute;top:0;bottom:0;left:0;width:22%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.07),transparent);animation:irkSheen 7s ease-in-out 2s infinite;pointer-events:none}
+.irk.g2,.irk.g3{position:relative;overflow:hidden}
+.irk.g2 .score{color:#E6E9EE}.irk.g3 .score{color:#F0C9A4}
+@media(prefers-reduced-motion:reduce){.ilist>li,.irk,.irk .meter i,.irk::before,.irk .rk,.irk .rk svg,.irk .rk::after,.irk .sp,.irk .who b{animation:none!important}.irk.g1 .who b{color:var(--cream);background:none}.irk .sp{display:none}}
 .helpbox{margin-top:36px;padding:26px 28px;border-radius:22px;background:var(--card);border:1px solid var(--line)}
 .helpbox h3{font-family:var(--serif);font-weight:500;font-size:26px;margin-bottom:6px}
 .helpbox>p{color:var(--muted);margin-bottom:18px;max-width:640px}
@@ -758,7 +777,6 @@ rank_main = f'''
       </div>
       <div class="ctas rise d5">
         <a class="btn btn-gold" href="#ranking">{r("span", "Zwischenstand ansehen ↓", "See the interim standing ↓")}</a>
-        <a class="btn btn-ghost" href="https://instagram.com/" rel="noopener">{r("span", "Auf Instagram erinnern lassen", "Get notified on Instagram")}</a>
         <a class="btn btn-ghost" href="bewerbung.html">{r("span", "Schule kostenlos bewerben", "Enter a school for free")}</a>
       </div>
     </div>
@@ -775,7 +793,28 @@ rank_main = f'''
   </div>
 </section>
 
-<section class="block" aria-labelledby="how-title">
+<section class="block" aria-labelledby="why-title">
+  <div class="wrap">
+    {r("h2", "Warum das Ranking wichtig ist", "Why the ranking matters", 'id="why-title" class="sec-h2"')}
+    {r("p", "Ein faires, öffentliches Ranking hilft allen, die Bachata in Deutschland lieben.", "A fair, public ranking helps everyone who loves Bachata in Germany.", 'class="lede" style="color:var(--muted);max-width:640px;margin-bottom:34px"')}
+    <div class="cards">
+      <article>
+        {r("h3", "Für Tänzer", "For dancers")}
+        {r("p", "Statt Raten gibt es eine klare Orientierung: Du siehst, welche Schule in deiner Stadt zu dir passt, ob es eine Probestunde gibt und wie gut die Schule bewertet ist. Das spart Zeit und schützt vor Fehlstarts.", "Instead of guessing, you get clear guidance: see which school in your city suits you, whether there is a trial class and how well the school is rated. It saves time and avoids a bad start.")}
+      </article>
+      <article>
+        {r("h3", "Für Schulen", "For schools")}
+        {r("p", "Gute Arbeit wird sichtbar, auch bei kleinen Schulen. Die Punkteaufschlüsselung zeigt, wo ihr stark seid und wo ihr wachsen könnt. Gewinner erhalten ein offizielles Siegel für Website, Studio und Social Media.", "Good work becomes visible, even for small schools. The score breakdown shows where you are strong and where you can grow. Winners receive an official seal for their website, studio and social media.")}
+      </article>
+      <article>
+        {r("h3", "Für die Community", "For the community")}
+        {r("p", "Wettbewerb motiviert, bessere Kurse, mehr Socials und mehr Gastlehrer anzubieten. Davon profitiert die ganze Szene: Mehr Tänzer finden den Einstieg, und die Bachata-Community in Deutschland wächst gemeinsam.", "Friendly competition motivates schools to offer better classes, more socials and more guest teachers. The whole scene benefits: more dancers find their way in, and the German Bachata community grows together.")}
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" aria-labelledby="how-title">
   <div class="wrap prose">
     {r("h2", "So entsteht das Bachata-Ranking 2026", "How the 2026 Bachata ranking is made", 'id="how-title"')}
     {r("p", "Wir recherchieren jede Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt und Düsseldorf und bewerten sie nach denselben <strong>neun Kriterien</strong>, zusammen 100 Punkte. Die wichtigsten sind die gewichtete Google-Bewertung (25 Punkte) und Auftritte der Lehrer auf Festivals und Kongressen (15 Punkte).", "We research every Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf and score each one on the same <strong>nine factors</strong>, 100 points in total. The most important are the weighted Google rating (25 points) and teachers' appearances at festivals and congresses (15 points).")}
@@ -784,7 +823,7 @@ rank_main = f'''
   </div>
 </section>
 
-<section class="block alt" aria-labelledby="awards-title">
+<section class="block" aria-labelledby="awards-title">
   <div class="wrap prose">
     {r("h2", "Die fünf Bachata Awards 2026 im Überblick", "The five Bachata Awards 2026 at a glance", 'id="awards-title"')}
     {r("p", "Neben den Ranglisten vergeben wir fünf Auszeichnungen. Jeder Gewinner erhält ein offizielles Siegel für Website, Studio und Social Media.", "Alongside the rankings we give five awards. Every winner receives an official seal for their website, studio and social media.")}
@@ -798,7 +837,7 @@ rank_main = f'''
   </div>
 </section>
 
-<section class="block" aria-labelledby="use-title">
+<section class="block alt" aria-labelledby="use-title">
   <div class="wrap prose">
     {r("h2", "So nutzt du das Ranking bei der Schulwahl", "How to use the ranking to choose a school", 'id="use-title"')}
     {r("p", "Die Gesamtpunktzahl zeigt, welche Schulen insgesamt am stärksten sind. Für deine Wahl lohnt sich aber ein Blick in die <strong>Punkteaufschlüsselung</strong>: Tippe nach der Veröffentlichung auf eine Schule und sieh dir an, wo sie ihre Punkte holt.", "The total score shows which schools are strongest overall. For your own choice, look at the <strong>score breakdown</strong>: after publication, tap a school to see where its points come from.")}
@@ -806,7 +845,7 @@ rank_main = f'''
   </div>
 </section>
 
-<section class="block alt" aria-labelledby="good-title">
+<section class="block" aria-labelledby="good-title">
   <div class="wrap prose">
     {r("h2", "Woran du eine gute Bachata-Schule erkennst", "How to recognise a good Bachata school", 'id="good-title"')}
     {r("p", "Ein Platz im Ranking ist ein guter Startpunkt. Ob eine Schule zu dir passt, merkst du aber erst im Unterricht. Achte auf diese Punkte:", "A place in the ranking is a good starting point, but you only find out whether a school suits you in class. Look out for these points:")}
@@ -821,7 +860,7 @@ rank_main = f'''
   </div>
 </section>
 
-<section class="block" aria-labelledby="style-title">
+<section class="block alt" aria-labelledby="style-title">
   <div class="wrap prose">
     {r("h2", "Bachata-Stile: Dominicana, Sensual und Moderna", "Bachata styles: Dominican, Sensual and Moderna", 'id="style-title"')}
     {r("p", "Bachata kommt aus der Dominikanischen Republik und steht seit 2019 auf der <a href=\"https://de.wikipedia.org/wiki/Bachata\" rel=\"noopener\">UNESCO-Liste des immateriellen Kulturerbes</a>. In Deutschland unterrichten die meisten Schulen einen oder mehrere dieser Stile:", "Bachata comes from the Dominican Republic and has been on the <a href=\"https://en.wikipedia.org/wiki/Bachata_(music)\" rel=\"noopener\">UNESCO Intangible Cultural Heritage list</a> since 2019. Most schools in Germany teach one or more of these styles:")}
@@ -1027,7 +1066,7 @@ rank_js = r'''
             why+='<div><b>'+esc(f)+'</b> · '+num(e.sc[k])+' / '+MAX[k]+(fx&&fx!=="–"?' <small>('+esc(k===5?(en?"followers · posts: ":"Follower · Posts: ")+fx:fx)+')</small>':'')+'<div class="bar"><i style="width:'+(e.sc[k]/MAX[k]*100)+'%"></i></div></div>'; });
           why+='<div class="lk" style="color:var(--muted)">'+esc(NYC)+'</div>';
           if(u) why+='<div class="lk"><a href="'+u+'" rel="noopener">'+esc(L("site"))+' →</a></div>';
-          h+='<li><details class="irk'+g+'"><summary><span class="rk">'+(i===0?CROWN:'')+(i+1)+'</span><span class="who"><b>'+esc(e.name)+'</b>'
+          h+='<li><details class="irk'+g+'"><summary><span class="rk">'+(i===0?CROWN+'<i class="sp a"></i><i class="sp b"></i><i class="sp c"></i><i class="sp d"></i>':'')+(i+1)+'</span><span class="who"><b>'+esc(e.name)+'</b>'
             +(c==="deutschland"?'<small>'+cn(e)+'</small>':'')+'</span><span class="score">'+num(e.pts)+'<small> / 100</small></span><span class="meter"><i style="width:'+e.pts+'%"></i></span></summary>'
             +'<div class="iwhy">'+why+'</div></details></li>';
         });
