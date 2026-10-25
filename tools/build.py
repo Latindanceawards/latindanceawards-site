@@ -61,6 +61,72 @@ PAGE_CSS = r'''
 .form-fallback{padding:34px;border-radius:20px;border:1px dashed rgba(228,185,91,.45);text-align:center}
 .form-fallback p{color:var(--muted);margin:0 auto 22px;max-width:30em}
 
+
+/* application wizard */
+.wiz{max-width:760px}
+#lda-form,#form-ok{scroll-margin-top:110px}
+.fld{scroll-margin-top:130px}
+.wiz-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:14px;color:var(--muted);margin-bottom:10px}
+.wiz-top b{color:var(--gold-light);font-weight:700}
+.wiz-bar{height:8px;border-radius:8px;background:rgba(246,231,211,.12);overflow:hidden;margin-bottom:8px}
+.wiz-bar i{display:block;height:100%;width:12%;border-radius:8px;background:var(--foil,var(--gold));transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.wiz-dots{display:flex;gap:8px;margin-bottom:26px}
+.wiz-dots > span{flex:1;font-size:12.5px;font-weight:600;color:var(--muted);padding-top:6px;border-top:2px solid rgba(246,231,211,.14);transition:all .3s}
+.wiz-dots > span.on{color:var(--gold-light);border-color:var(--gold)}
+.wiz-dots > span.done{color:var(--cream);border-color:var(--gold)}
+.step-pane{padding:0;display:none;animation:stepin .45s cubic-bezier(.2,.8,.2,1)}
+.step-pane.on{display:block}
+@keyframes stepin{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.step-pane{animation:none}.wiz-bar i{transition:none}}
+.step-pane h3{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.4vw,34px);line-height:1.15;margin-bottom:6px}
+.step-pane .sub{color:var(--muted);margin-bottom:24px}
+.fld{margin-bottom:18px}
+.fld label,.fld .lab{display:block;font-weight:600;font-size:15px;margin-bottom:7px}
+.fld .opt{font-weight:400;color:var(--muted);font-size:13px;margin-left:6px}
+.fld input[type=text],.fld input[type=email],.fld input[type=url],.fld input[type=number],.fld textarea{width:100%;font:inherit;font-size:17px;color:var(--cream);
+  background:rgba(255,255,255,.05);border:1.5px solid var(--line);border-radius:16px;padding:15px 18px;min-height:52px;transition:border-color .2s,background .2s,box-shadow .2s}
+.fld textarea{min-height:96px;resize:vertical}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.08);box-shadow:0 0 0 4px rgba(228,185,91,.14)}
+.fld.bad input,.fld.bad textarea{border-color:#e0685c}
+.fld .help{font-size:13px;color:var(--muted);margin-top:6px}
+.fld .errtxt{font-size:13.5px;color:#f2a299;margin-top:4px;height:20px;line-height:20px;visibility:hidden}
+.fld.bad .errtxt{visibility:visible}
+.chips,.cards2{display:flex;flex-wrap:wrap;gap:10px}
+.chips label,.cards2 label{position:relative;margin:0;cursor:pointer}
+.chips input,.cards2 input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer}
+.chips label > span{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;border-radius:999px;border:1.5px solid var(--line);background:rgba(255,255,255,.04);font-weight:600;font-size:15.5px;transition:all .2s}
+.chips input:checked + span{background:var(--gold);color:#131011;border-color:var(--gold)}
+.chips input:focus-visible + span,.cards2 input:focus-visible + span{outline:3px solid var(--gold-light);outline-offset:2px}
+.cards2 label > span{display:block;min-width:160px;padding:16px 22px;border-radius:18px;border:1.5px solid var(--line);background:rgba(255,255,255,.04);font-weight:600;transition:all .2s}
+.cards2 label > span small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
+.cards2 input:checked + span{border-color:var(--gold);background:var(--gold-soft)}
+.bonus{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:var(--gold-soft);color:var(--gold-light);font-size:13px;font-weight:700;margin-bottom:14px}
+.wiz-nav{display:flex;gap:12px;align-items:center;margin-top:26px}
+.wiz-nav .btn{min-height:52px}
+.wiz-nav .back{background:none;border:0;color:var(--muted);font:inherit;font-weight:600;cursor:pointer;padding:12px 6px}
+.wiz-nav .back:hover{color:var(--cream)}
+.wiz-nav .btn-gold{flex:1;justify-content:center}
+.consent{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start;font-size:14.5px;color:var(--muted);margin-top:8px}
+.consent input{width:22px;height:22px;accent-color:var(--gold);margin-top:2px}
+.wiz .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.wiz .msg{padding:14px 18px;border-radius:14px;font-size:15px;margin-top:16px;background:rgba(220,80,70,.14);border:1px solid rgba(220,80,70,.5)}
+.trust{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:22px;font-size:13px;color:var(--muted)}
+.trust > span::before{content:"✓";color:var(--gold);margin-right:6px;font-weight:700}
+.form-ok{padding:40px 30px;border-radius:24px;border:1px solid rgba(228,185,91,.5);background:linear-gradient(170deg,var(--gold-soft),var(--card) 70%);text-align:center}
+.form-ok h3{font-family:var(--serif);font-weight:500;font-size:clamp(28px,4vw,38px);margin-bottom:8px}
+.form-ok p{color:var(--muted);max-width:34em;margin:0 auto 18px}
+.form-ok ol{list-style:none;text-align:left;max-width:30em;margin:22px auto 0;display:grid;gap:10px}
+.form-ok li{padding:12px 16px;border-radius:14px;background:var(--card);border:1px solid var(--line);font-size:15px}
+.form-ok li b{color:var(--gold-light)}
+@media (max-width:620px){.wiz-dots > span{font-size:11px}.cards2 label > span{min-width:0}.cards2 label{flex:1 1 140px}}
+
+.wiz-nav .skip{background:none;border:0;color:var(--gold-light);font:inherit;font-weight:600;cursor:pointer;padding:12px 8px}
+.chips label,.cards2 label{margin:0}
+.chips span span,.cards2 span span{display:inline}
+.fld.reveal{margin-top:-6px}
+.fld[hidden]{display:none}
+.fld .chips{margin-bottom:2px}
+.step-pane .fld + .fld{margin-top:26px}
 /* faq */
 .faq{display:grid;gap:12px;max-width:860px}
 .faq details{border-radius:18px;background:var(--card);border:1px solid var(--line);transition:border-color .3s}
@@ -220,9 +286,12 @@ def page(fname, title_de, desc_de, title_en, desc_en, canonical, main_html, en_d
     open(os.path.join(ROOT, fname), 'w', encoding='utf-8').write(html)
     print('wrote', fname, len(html))
 
+def _noop(): pass
 class T:
     """Collects German markup + English translations."""
     def __init__(self, prefix): self.p = prefix; self.en = {}; self.n = 0
+    def key(self, de, en):
+        self.n += 1; k = f'{self.p}{self.n}'; self.en[k] = en; return k
     def __call__(self, tag, de, en, attrs=''):
         self.n += 1; k = f'{self.p}{self.n}'; self.en[k] = en
         a = (' ' + attrs) if attrs else ''
@@ -285,6 +354,96 @@ faq = [
   'We only use your information for the awards. We only publish the school name, city, score, score breakdown and your public links. Contact details stay private.'),
 ]
 faq_html = '\n'.join(f'      <details>{t("summary", q_de, q_en)}{t("p", a_de, a_en)}</details>' for q_de, q_en, a_de, a_en in faq)
+
+
+# ---------- stepped application wizard (one or two questions per screen) ----------
+def _opt(kind, name, val, de, en, sub=None):
+    inner = t("span", de, en) + (f'<small>{t("span", sub[0], sub[1])}</small>' if sub else '')
+    return f'<label><input type="{kind}" name="{name}" value="{val}"><span>{inner}</span></label>'
+def _text(name, de, en, typ='text', ph='', help_=None, err=None, req=True, auto='', optional=False):
+    opt = f' <span class="opt">{t("span", "optional", "optional")}</span>' if optional else ''
+    h = f'<p class="help">{t("span", help_[0], help_[1])}</p>' if help_ else ''
+    er = f'<p class="errtxt">{t("span", err[0], err[1])}</p>' if err else '<p class="errtxt"></p>'
+    return (f'<div class="fld"><label for="f-{name}">{t("span", de, en)}{opt}</label>'
+            f'<input id="f-{name}" name="{name}" type="{typ}" maxlength="400"{" required" if req else ""}{(" autocomplete=" + chr(34) + auto + chr(34)) if auto else ""}'
+            f'{(" placeholder=" + chr(34) + ph + chr(34)) if ph else ""}{" inputmode=" + chr(34) + "url" + chr(34) if typ == "url" or ph.startswith("https") else ""}>{h}{er}</div>')
+def _choice(name, lab_de, lab_en, opts, cls='chips', kind='radio', err=None, req=True):
+    er = f'<p class="errtxt">{t("span", err[0], err[1])}</p>' if err else '<p class="errtxt"></p>'
+    lid = f'{name}-l'
+    items = ''.join(_opt(kind, name, *o) for o in opts)
+    return (f'<div class="fld" data-group="{name}"{" data-req=" + chr(34) + "1" + chr(34) if req else ""}><span class="lab" id="{lid}">{t("span", lab_de, lab_en)}</span>'
+            f'<div class="{cls}" role="{"radiogroup" if kind == "radio" else "group"}" aria-labelledby="{lid}">{items}</div>{er}</div>')
+def _yn_text(name, lab_de, lab_en, ph_de, ph_en):
+    yn = [('Yes', 'Ja', 'Yes'), ('No', 'Nein', 'No')]
+    items = ''.join(_opt('radio', name + '_has', *o) for o in yn)
+    return (f'<div class="fld" data-group="{name}_has" data-req="1"><span class="lab" id="{name}-l">{t("span", lab_de, lab_en)}</span>'
+            f'<div class="chips" role="radiogroup" aria-labelledby="{name}-l">{items}</div><p class="errtxt">{t("span", "Bitte wähle eine Antwort.", "Please choose an answer.")}</p></div>'
+            f'<div class="fld reveal" id="rv-{name}" hidden><label for="f-{name}">{t("span", ph_de, ph_en)}</label><textarea id="f-{name}" name="{name}" maxlength="1500"></textarea></div>')
+_ERR_URL = ("Bitte gib einen vollständigen Link ein (mit https://).", "Please enter a full link (starting with https://).")
+_ERR_PICK = ("Bitte wähle eine Antwort.", "Please choose an answer.")
+YEARS = [('2024–2026', '2024–2026', '2024–2026'), ('2021–2023', '2021–2023', '2021–2023'), ('2018–2020', '2018–2020', '2018–2020'),
+         ('2015–2017', '2015–2017', '2015–2017'), ('2012–2014', '2012–2014', '2012–2014'), ('Before 2012', 'Vor 2012', 'Before 2012')]
+CITIES_O = [('Berlin', 'Berlin', 'Berlin'), ('München / Munich', 'München', 'Munich'), ('Hamburg', 'Hamburg', 'Hamburg'), ('Köln / Cologne', 'Köln', 'Cologne'),
+            ('Frankfurt', 'Frankfurt', 'Frankfurt'), ('Düsseldorf', 'Düsseldorf', 'Düsseldorf'), ('Other', 'Andere', 'Other')]
+# (chapter, title_de, title_en, sub_de, sub_en, body_html, optional, auto)
+WIZ = [
+ (0, 'Wie heißt deine Schule?', 'What is your school called?', 'Jetzt noch ein paar Angaben zu eurer Schule.', 'Now a few details about your school.',
+  _text('school', 'Name der Schule', 'School name', err=("Bitte gib den Namen deiner Schule ein.", "Please enter your school's name."), auto='organization'), False, False),
+ (0, 'In welcher Stadt unterrichtet ihr?', 'Which city do you teach in?', 'Nur antippen, keine Tipparbeit.', 'Just tap, no typing.',
+  _choice('city', 'Stadt', 'City', CITIES_O, err=_ERR_PICK), False, True),
+ (0, 'Wie erreichen wir dich?', 'How can we reach you?', 'Dorthin schicken wir deine Bestätigung. Kein Spam.', "We'll send your confirmation there. No spam.",
+  _text('contact', 'Dein Name', 'Your name', err=("Bitte gib deinen Namen ein.", "Please enter your name."), auto='name') +
+  _text('email', 'E-Mail', 'Email', 'email', 'name@schule.de', err=("Bitte gib eine gültige E-Mail-Adresse ein.", "Please enter a valid email address."), auto='email'), False, False),
+ (1, 'Wie sieht eure Website aus?', 'What is your website?', 'Kopiere einfach den Link aus dem Browser.', 'Just copy the link from your browser.',
+  _text('website', 'Website', 'Website', 'url', 'https://', err=_ERR_URL), False, False),
+ (1, 'Und euer Google-Maps-Eintrag?', 'And your Google Maps listing?', 'Dort holen wir Bewertungen und Rezensionen.', 'That is where we read your rating and reviews.',
+  _text('maps', 'Google-Maps-Link', 'Google Maps link', 'url', 'https://maps.app.goo.gl/…', help_=("In Google Maps nach eurer Schule suchen, auf Teilen tippen, Link kopieren.", "Search your school in Google Maps, tap Share, copy the link."), err=_ERR_URL), False, False),
+ (1, 'Seid ihr in den sozialen Medien?', 'Are you on social media?', 'Beides ist freiwillig, bringt aber Punkte.', 'Both are optional but earn points.',
+  _text('instagram', 'Instagram', 'Instagram', 'text', 'https://instagram.com/…', req=False, optional=True) + _text('tiktok', 'TikTok', 'TikTok', 'text', 'https://tiktok.com/@…', req=False, optional=True), True, False),
+ (2, 'Seit wann unterrichtet ihr Bachata?', 'Since when have you taught Bachata?', 'Eine grobe Angabe reicht.', 'A rough answer is fine.',
+  _choice('year', 'Gründungsjahr', 'Year founded', YEARS, err=_ERR_PICK), False, True),
+ (2, 'Wie sieht euer Angebot aus?', 'What do you offer?', 'Tippe auf alles, was zutrifft.', 'Tap everything that applies.',
+  _choice('trial', 'Probestunde für Anfänger?', 'Trial class for beginners?', [('Yes', 'Ja', 'Yes'), ('No', 'Nein', 'No')], err=_ERR_PICK) +
+  _choice('levels', 'Welche Levels bietet ihr an?', 'Which levels do you teach?', [('Beginner', 'Anfänger', 'Beginner'), ('Intermediate', 'Mittelstufe', 'Intermediate'), ('Advanced', 'Fortgeschrittene', 'Advanced')], kind='checkbox', err=("Bitte wähle mindestens ein Level.", "Please choose at least one level.")), False, False),
+ (2, 'Wo finden wir euren Kursplan?', 'Where can we find your class schedule?', 'Ein Link zur Seite mit euren Kursen genügt.', 'A link to the page with your classes is enough.',
+  _text('schedule', 'Link zum Kursplan', 'Link to your schedule', 'url', 'https://', err=_ERR_URL), False, False),
+ (3, 'Haben eure Lehrer auf Festivals unterrichtet?', 'Have your teachers taught at festivals?', 'Bonuspunkte: 2025–2026 zählt.', 'Bonus points: 2025–2026 counts.',
+  _yn_text('festivals', 'Festivals und Kongresse', 'Festivals and congresses', 'Auf welchen Festivals?', 'Which festivals?'), False, False),
+ (3, 'Wie oft habt ihr Events?', 'How often do you run events?', 'Socials, Workshops und Gäste der letzten 12 Monate.', 'Socials, workshops and guests in the last 12 months.',
+  _choice('social', 'Eigene Socials oder Workshops', 'Own socials or workshops', [('Weekly', 'Wöchentlich', 'Weekly'), ('Monthly', 'Monatlich', 'Monthly'), ('Few per year', 'Ein paar im Jahr', 'A few a year'), ('None', 'Keine', 'None')], err=_ERR_PICK) +
+  _choice('guests', 'Gastlehrer aus dem Ausland?', 'International guest teachers?', [('Yes', 'Ja', 'Yes'), ('No', 'Nein', 'No')], err=_ERR_PICK), False, False),
+ (3, 'Habt ihr Wettbewerbe gewonnen?', 'Have you won competitions?', 'Schüler oder Lehrer, mit online veröffentlichten Ergebnissen.', 'Students or teachers, with results published online.',
+  _yn_text('competitions', 'Wettbewerbe', 'Competitions', 'Welcher Wettbewerb, welches Jahr, welcher Platz?', 'Which competition, which year, which place?'), False, False),
+ (3, 'Fast geschafft!', 'Almost done!', 'Noch ein Haken, dann bist du dabei.', 'One last tick and you are in.',
+  '<label class="consent"><input type="checkbox" name="consent" required><span>' + t("span", "Ich stimme zu, dass meine Angaben für die Latin Dance Awards gespeichert und ausgewertet werden. Öffentlich gezeigt werden nur Schulname, Stadt, Punktzahl und öffentliche Links.", "I agree that my information is stored and evaluated for the Latin Dance Awards. Only the school name, city, score and public links are shown publicly.") + '</span></label>'
+  '<p class="errtxt" id="consent-err" style="display:none;color:#f2a299;font-size:13.5px;margin-top:6px">' + t("span", "Bitte stimme zu, damit wir deine Bewerbung speichern dürfen.", "Please agree so we can save your application.") + '</p>', False, False),
+]
+_ORDER = [(1, 0), (6, 0), (7, 0), (10, 0), (9, 0), (11, 0), (0, 1), (3, 1), (4, 1), (8, 1), (5, 1), (2, 2), (12, 2)]
+WIZ = [(ch,) + WIZ[k][1:] for k, ch in _ORDER]
+_panes = ''
+for i, (ch, td, te, sd, se, body, optional, auto) in enumerate(WIZ):
+    _panes += (f'<section class="step-pane{" on" if i == 0 else ""}" data-ch="{ch}"{" data-opt=" + chr(34) + "1" + chr(34) if optional else ""}{" data-auto=" + chr(34) + "1" + chr(34) if auto else ""} aria-labelledby="sh{i}">'
+               f'{t("h3", td, te, f"id=" + chr(34) + f"sh{i}" + chr(34) + " tabindex=" + chr(34) + "-1" + chr(34))}{t("p", sd, se, "class=" + chr(34) + "sub" + chr(34))}{body}</section>\n')
+wiz_html = f"""      <div class="wiz">
+      <form id="lda-form" novalidate hidden data-total="{len(WIZ)}">
+        <div class="hp" aria-hidden="true"><label>Website2 <input type="text" name="hp" tabindex="-1" autocomplete="off"></label></div>
+        <div class="wiz-top"><span>{t("span", "Schritt", "Step")} <b id="w-n">1</b> {t("span", "von", "of")} {len(WIZ)}</span><span id="w-left">{t("span", "noch ca. 2 Min.", "about 2 min left")}</span></div>
+        <div class="wiz-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="8" id="w-bar"><i></i></div>
+        <div class="wiz-dots" aria-hidden="true"><span class="on">{t("span", "Fragen", "Questions")}</span><span>{t("span", "Eure Schule", "Your school")}</span><span>{t("span", "Kontakt", "Contact")}</span></div>
+{_panes}        <div class="msg" id="form-err" hidden role="alert"></div>
+        <div class="wiz-nav">
+          <button type="button" class="back" id="w-back" hidden>← {t("span", "Zurück", "Back")}</button>
+          <button type="button" class="skip" id="w-skip" hidden>{t("span", "Überspringen", "Skip")}</button>
+          <button class="btn btn-gold" type="button" id="w-next">{t("span", "Weiter", "Continue")} →</button>
+        </div>
+        <div class="trust"><span>{t("span", "Kostenlos", "Free")}</span><span>{t("span", "Keine Zahlung", "No payment")}</span><span>{t("span", "Bewerbungsschluss 30. November", "Deadline November 30")}</span></div>
+      </form>
+      <div class="form-ok" id="form-ok" hidden>
+        {t("h3", "Geschafft, deine Schule ist dabei!", "Done, your school is in!")}
+        {t("p", "Wir haben deine Bewerbung erhalten. Schau auch im Spam-Ordner nach der Bestätigung.", "We've received your application. Check your spam folder for the confirmation too.")}
+        <ol><li><b>{t("span", "In 3 Tagen", "In 3 days")}</b> · {t("span", "Wir melden uns per E-Mail und bitten um ein paar Nachweise.", "We email you and ask for a few proofs.")}</li><li><b>{t("span", "Bis 30. November", "By November 30")}</b> · {t("span", "Nachweise als einfache Links schicken.", "Send the proofs as simple links.")}</li><li><b>{t("span", "20. Dezember, 19 Uhr", "December 20, 7 pm")}</b> · {t("span", "Ergebnisse und Award-Siegel.", "Results and award seal.")}</li></ol>
+      </div>
+      </div>"""
 
 app_main = f'''
 <section class="page-hero" aria-labelledby="app-title">
@@ -360,9 +519,9 @@ app_main = f'''
 <section class="block alt" id="formular" aria-labelledby="form-title">
   <div class="wrap">
     <div class="form-card">
-      {t("h2", "Bewerbungsformular", "Application form", 'id="form-title"')}
-      {t("p", "Alle Felder mit * sind Pflichtfelder. Nach dem Absenden bekommst du sofort eine Bestätigung per E-Mail.", "Fields marked * are required. You'll get a confirmation email right after you submit.")}
-      <div id="form-slot"></div>
+      {t("h2", "In 2 Minuten bewerben", "Apply in 2 minutes", 'id="form-title"')}
+      {t("p", "Eine kleine Frage nach der anderen, meist mit einem Tipp. Kostenlos, ohne Zahlung.", "One small question at a time, mostly with a tap. Free, no payment.")}
+{wiz_html}
       <div class="form-fallback" id="form-fallback" hidden>
         {t("p", "Das Formular wird gerade eingerichtet. Schreib uns in der Zwischenzeit eine E-Mail, und wir nehmen deine Schule auf.", "The form is being set up. In the meantime, send us an email and we'll add your school.")}
         <a class="btn btn-gold" href="mailto:hello@latindanceawards.com?subject=Bewerbung%20Bachata%20Awards%202026">{t("span", "Per E-Mail bewerben", "Apply by email")}</a>
@@ -382,24 +541,91 @@ app_main = f'''
 '''
 
 app_js = r'''
-  /* ===== Paste your Tally form IDs here (the part after tally.so/r/) ===== */
-  var TALLY_FORM_DE = "";   // e.g. "w2XyZ1"
-  var TALLY_FORM_EN = "";   // optional English version; leave empty to always use the German form
+  /* ===== Paste the Google Apps Script web-app URL here (see automation/collect.gs) ===== */
+  var FORM_ENDPOINT = "";   // e.g. "https://script.google.com/macros/s/XXXX/exec"
 
-  var slot=document.getElementById("form-slot"), fb=document.getElementById("form-fallback");
-  function loadForm(l){
-    var id = (l==="en" && TALLY_FORM_EN) ? TALLY_FORM_EN : TALLY_FORM_DE;
-    if(!id){ slot.innerHTML=""; fb.hidden=false; return; }
-    fb.hidden=true;
-    slot.innerHTML='<iframe data-tally-src="https://tally.so/embed/'+id+'?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" title="Bewerbungsformular / Application form"></iframe>';
-    if(window.Tally){ window.Tally.loadEmbeds(); }
-    else if(!document.getElementById("tally-js")){
-      var s=document.createElement("script"); s.id="tally-js"; s.src="https://tally.so/widgets/embed.js";
-      s.onload=function(){ window.Tally && window.Tally.loadEmbeds(); }; document.body.appendChild(s);
-    }
+  var form=document.getElementById("lda-form"), fb=document.getElementById("form-fallback"), ok=document.getElementById("form-ok"),
+      err=document.getElementById("form-err"), nextB=document.getElementById("w-next"), backB=document.getElementById("w-back"), skipB=document.getElementById("w-skip"),
+      bar=document.getElementById("w-bar"), nEl=document.getElementById("w-n"), leftEl=document.getElementById("w-left"),
+      panes=[].slice.call(document.querySelectorAll(".step-pane")), dots=[].slice.call(document.querySelectorAll(".wiz-dots > span"));
+  var STEPS=panes.length, cur=0, timer=null;
+  var MSG={
+    de:{next:"Weiter", send:"Bewerbung absenden", wait:"Wird gesendet …", fail:"Das Senden hat nicht geklappt. Bitte versuche es noch einmal oder schreib uns an hello@latindanceawards.com.", left:["noch ca. 2 Min.","noch ca. 1 Min.","noch ca. 30 Sek.","fast fertig"]},
+    en:{next:"Continue", send:"Submit application", wait:"Sending …", fail:"Sending failed. Please try again or email us at hello@latindanceawards.com.", left:["about 2 min left","about 1 min left","about 30 sec left","almost done"]}
+  };
+  function M(){ return MSG[window.LANG==="en"?"en":"de"]; }
+  if(FORM_ENDPOINT){ form.hidden=false; fb.hidden=true; } else { form.hidden=true; fb.hidden=false; }
+
+  function checked(n){ return [].slice.call(form.querySelectorAll('[name="'+n+'"]:checked')).map(function(x){return x.value;}); }
+  var TEXT=["school","contact","email","website","maps","instagram","tiktok","schedule","festivals","competitions"];
+  var PICK=["city","year","trial","social","guests","festivals_has","competitions_has"], MULTI=["levels"];
+  function save(){ try{ var o={}; TEXT.forEach(function(k){ o[k]=form.elements[k].value; }); PICK.forEach(function(k){ o[k]=checked(k)[0]||""; }); o.levels=checked("levels").join("|"); localStorage.setItem("lda-apply2",JSON.stringify(o)); }catch(e){} }
+  function restore(){ try{ var o=JSON.parse(localStorage.getItem("lda-apply2")||"{}");
+      TEXT.forEach(function(k){ if(o[k]) form.elements[k].value=o[k]; });
+      PICK.forEach(function(k){ if(o[k]){ var r=form.querySelector('[name="'+k+'"][value="'+o[k].replace(/"/g,"")+'"]'); if(r) r.checked=true; } });
+      (o.levels||"").split("|").forEach(function(v){ var r=v&&form.querySelector('[name="levels"][value="'+v+'"]'); if(r) r.checked=true; }); }catch(e){}
+    ["festivals","competitions"].forEach(reveal); }
+  function reveal(n){ var has=checked(n+"_has")[0]; document.getElementById("rv-"+n).hidden=(has!=="Yes"); }
+  form.addEventListener("input",save); form.addEventListener("change",save);
+
+  function urlOK(v){ return /^https?:\/\/\S+\.\S+/i.test(v); }
+  function setBad(box,bad){ if(box) box.classList.toggle("bad",bad); }
+  function validPane(p){
+    var first=null;
+    [].slice.call(p.querySelectorAll(".fld[data-req]")).forEach(function(box){
+      var n=box.dataset.group, good=checked(n).length>0; setBad(box,!good); if(!good&&!first) first=box.querySelector("input"); });
+    [].slice.call(p.querySelectorAll("input[required]:not([type=radio]):not([type=checkbox])")).forEach(function(el){
+      var v=el.value.trim(), good=!!v;
+      if(good&&el.type==="email") good=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v);
+      if(good&&el.type==="url") good=urlOK(v);
+      setBad(el.closest(".fld"),!good); if(!good&&!first) first=el; });
+    if(p.querySelector('[name="consent"]')){ var c=form.elements.consent, ce=document.getElementById("consent-err"); ce.style.display=c.checked?"none":"block"; if(!c.checked&&!first) first=c; }
+    if(first){ first.focus({preventScroll:false}); return false; } return true; }
+  form.addEventListener("focusout",function(e){ var el=e.target; if(el.name&&el.required&&el.type!=="radio"&&el.type!=="checkbox"&&(el.value||"").length){
+      var v=el.value.trim(), good=(el.type==="email"?/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v):el.type==="url"?urlOK(v):true); setBad(el.closest(".fld"),!good); } });
+
+  function show(i,focus){
+    cur=i; panes.forEach(function(p,k){ p.classList.toggle("on",k===i); });
+    var ch=+panes[i].dataset.ch; dots.forEach(function(d,k){ d.className=k<ch?"done":(k===ch?"on":""); });
+    var pct=Math.round(8+(i/(STEPS-1))*86); bar.firstElementChild.style.width=pct+"%"; bar.setAttribute("aria-valuenow",pct);
+    nEl.textContent=i+1; var rem=(STEPS-i)*8; leftEl.textContent=M().left[rem>75?0:rem>45?1:rem>20?2:3];
+    backB.hidden=(i===0); skipB.hidden=!panes[i].dataset.opt; renderBtn(); err.hidden=true;
+    // pure single-choice screens advance by themselves, so hide the button there
+    nextB.style.display=(panes[i].dataset.auto?"none":"");
+    if(focus){ var h=panes[i].querySelector("h3"); h.focus({preventScroll:true}); form.scrollIntoView({behavior:"smooth",block:"start"}); }
   }
-  document.addEventListener("langchange",function(e){ loadForm(e.detail); });
-  loadForm("de");
+  function renderBtn(){ var last=(cur===STEPS-1); nextB.innerHTML=(last?M().send:M().next)+(last?"":" →"); }
+  function go(){ if(!validPane(panes[cur])) return; if(cur<STEPS-1) show(cur+1,true); else submit(); }
+  nextB.addEventListener("click",go);
+  skipB.addEventListener("click",function(){ show(cur+1,true); });
+  backB.addEventListener("click",function(){ clearTimeout(timer); if(cur>0) show(cur-1,true); });
+  form.addEventListener("keydown",function(e){ if(e.key==="Enter"&&e.target.tagName!=="TEXTAREA"&&e.target.type!=="checkbox"&&e.target.type!=="radio"){ e.preventDefault(); go(); } });
+  form.addEventListener("submit",function(e){ e.preventDefault(); });
+  form.addEventListener("change",function(e){
+    var t=e.target; if(t.type!=="radio"&&t.type!=="checkbox") return;
+    setBad(t.closest(".fld"),false);
+    if(t.name==="festivals_has"||t.name==="competitions_has") reveal(t.name.replace("_has",""));
+    var p=t.closest(".step-pane"); if(!p) return;
+    var advance=(p.dataset.auto&&t.type==="radio")||((t.name==="festivals_has"||t.name==="competitions_has")&&t.value==="No");
+    if(advance){ clearTimeout(timer); timer=setTimeout(function(){ if(cur<STEPS-1&&panes[cur]===p) show(cur+1,true); },320); }
+  });
+
+  function submit(){
+    var f=form.elements; if(f.hp.value) return;
+    nextB.disabled=true; nextB.textContent=M().wait;
+    var body=new URLSearchParams(), v=function(n){ return f[n].value.trim(); };
+    ["school","contact","email","website","maps","instagram","tiktok","schedule"].forEach(function(k){ body.append(k,v(k)); });
+    ["city","year","trial","social","guests"].forEach(function(k){ body.append(k,checked(k)[0]||""); });
+    body.append("levels",checked("levels").join(", "));
+    ["festivals","competitions"].forEach(function(k){ var h=checked(k+"_has")[0]; body.append(k,h==="No"?"No":(v(k)||(h==="Yes"?"Yes":""))); });
+    body.append("language", window.LANG==="en"?"EN":"DE");
+    fetch(FORM_ENDPOINT,{method:"POST",mode:"no-cors",body:body}).then(function(){
+      try{ localStorage.removeItem("lda-apply2"); }catch(e){}
+      form.hidden=true; ok.hidden=false; ok.scrollIntoView({behavior:"smooth",block:"center"});
+    }).catch(function(){ nextB.disabled=false; renderBtn(); err.textContent=M().fail; err.hidden=false; });
+  }
+  document.addEventListener("langchange",function(){ if(!nextB.disabled){ renderBtn(); var rem=(STEPS-cur)*8; leftEl.textContent=M().left[rem>75?0:rem>45?1:rem>20?2:3]; } });
+  restore(); show(0,false);
 '''
 
 page('bewerbung.html',

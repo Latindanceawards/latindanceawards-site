@@ -350,6 +350,72 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
 .form-fallback{padding:34px;border-radius:20px;border:1px dashed rgba(228,185,91,.45);text-align:center}
 .form-fallback p{color:var(--muted);margin:0 auto 22px;max-width:30em}
 
+
+/* application wizard */
+.wiz{max-width:760px}
+#lda-form,#form-ok{scroll-margin-top:110px}
+.fld{scroll-margin-top:130px}
+.wiz-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:14px;color:var(--muted);margin-bottom:10px}
+.wiz-top b{color:var(--gold-light);font-weight:700}
+.wiz-bar{height:8px;border-radius:8px;background:rgba(246,231,211,.12);overflow:hidden;margin-bottom:8px}
+.wiz-bar i{display:block;height:100%;width:12%;border-radius:8px;background:var(--foil,var(--gold));transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.wiz-dots{display:flex;gap:8px;margin-bottom:26px}
+.wiz-dots > span{flex:1;font-size:12.5px;font-weight:600;color:var(--muted);padding-top:6px;border-top:2px solid rgba(246,231,211,.14);transition:all .3s}
+.wiz-dots > span.on{color:var(--gold-light);border-color:var(--gold)}
+.wiz-dots > span.done{color:var(--cream);border-color:var(--gold)}
+.step-pane{padding:0;display:none;animation:stepin .45s cubic-bezier(.2,.8,.2,1)}
+.step-pane.on{display:block}
+@keyframes stepin{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.step-pane{animation:none}.wiz-bar i{transition:none}}
+.step-pane h3{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.4vw,34px);line-height:1.15;margin-bottom:6px}
+.step-pane .sub{color:var(--muted);margin-bottom:24px}
+.fld{margin-bottom:18px}
+.fld label,.fld .lab{display:block;font-weight:600;font-size:15px;margin-bottom:7px}
+.fld .opt{font-weight:400;color:var(--muted);font-size:13px;margin-left:6px}
+.fld input[type=text],.fld input[type=email],.fld input[type=url],.fld input[type=number],.fld textarea{width:100%;font:inherit;font-size:17px;color:var(--cream);
+  background:rgba(255,255,255,.05);border:1.5px solid var(--line);border-radius:16px;padding:15px 18px;min-height:52px;transition:border-color .2s,background .2s,box-shadow .2s}
+.fld textarea{min-height:96px;resize:vertical}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.08);box-shadow:0 0 0 4px rgba(228,185,91,.14)}
+.fld.bad input,.fld.bad textarea{border-color:#e0685c}
+.fld .help{font-size:13px;color:var(--muted);margin-top:6px}
+.fld .errtxt{font-size:13.5px;color:#f2a299;margin-top:4px;height:20px;line-height:20px;visibility:hidden}
+.fld.bad .errtxt{visibility:visible}
+.chips,.cards2{display:flex;flex-wrap:wrap;gap:10px}
+.chips label,.cards2 label{position:relative;margin:0;cursor:pointer}
+.chips input,.cards2 input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer}
+.chips label > span{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;border-radius:999px;border:1.5px solid var(--line);background:rgba(255,255,255,.04);font-weight:600;font-size:15.5px;transition:all .2s}
+.chips input:checked + span{background:var(--gold);color:#131011;border-color:var(--gold)}
+.chips input:focus-visible + span,.cards2 input:focus-visible + span{outline:3px solid var(--gold-light);outline-offset:2px}
+.cards2 label > span{display:block;min-width:160px;padding:16px 22px;border-radius:18px;border:1.5px solid var(--line);background:rgba(255,255,255,.04);font-weight:600;transition:all .2s}
+.cards2 label > span small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
+.cards2 input:checked + span{border-color:var(--gold);background:var(--gold-soft)}
+.bonus{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:var(--gold-soft);color:var(--gold-light);font-size:13px;font-weight:700;margin-bottom:14px}
+.wiz-nav{display:flex;gap:12px;align-items:center;margin-top:26px}
+.wiz-nav .btn{min-height:52px}
+.wiz-nav .back{background:none;border:0;color:var(--muted);font:inherit;font-weight:600;cursor:pointer;padding:12px 6px}
+.wiz-nav .back:hover{color:var(--cream)}
+.wiz-nav .btn-gold{flex:1;justify-content:center}
+.consent{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start;font-size:14.5px;color:var(--muted);margin-top:8px}
+.consent input{width:22px;height:22px;accent-color:var(--gold);margin-top:2px}
+.wiz .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.wiz .msg{padding:14px 18px;border-radius:14px;font-size:15px;margin-top:16px;background:rgba(220,80,70,.14);border:1px solid rgba(220,80,70,.5)}
+.trust{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:22px;font-size:13px;color:var(--muted)}
+.trust > span::before{content:"✓";color:var(--gold);margin-right:6px;font-weight:700}
+.form-ok{padding:40px 30px;border-radius:24px;border:1px solid rgba(228,185,91,.5);background:linear-gradient(170deg,var(--gold-soft),var(--card) 70%);text-align:center}
+.form-ok h3{font-family:var(--serif);font-weight:500;font-size:clamp(28px,4vw,38px);margin-bottom:8px}
+.form-ok p{color:var(--muted);max-width:34em;margin:0 auto 18px}
+.form-ok ol{list-style:none;text-align:left;max-width:30em;margin:22px auto 0;display:grid;gap:10px}
+.form-ok li{padding:12px 16px;border-radius:14px;background:var(--card);border:1px solid var(--line);font-size:15px}
+.form-ok li b{color:var(--gold-light)}
+@media (max-width:620px){.wiz-dots > span{font-size:11px}.cards2 label > span{min-width:0}.cards2 label{flex:1 1 140px}}
+
+.wiz-nav .skip{background:none;border:0;color:var(--gold-light);font:inherit;font-weight:600;cursor:pointer;padding:12px 8px}
+.chips label,.cards2 label{margin:0}
+.chips span span,.cards2 span span{display:inline}
+.fld.reveal{margin-top:-6px}
+.fld[hidden]{display:none}
+.fld .chips{margin-bottom:2px}
+.step-pane .fld + .fld{margin-top:26px}
 /* faq */
 .faq{display:grid;gap:12px;max-width:860px}
 .faq details{border-radius:18px;background:var(--card);border:1px solid var(--line);transition:border-color .3s}
@@ -528,7 +594,7 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
 
 <script>
 (function(){
-  var EN={"t102": "Germany 2026", "t107": "Bachata Edition · Germany", "ffaq": "FAQ", "t103": "Award categories", "nav_apply": "Apply", "t4": "How we rank", "t105": "Get in touch", "t106": "Apply for free", "t3": "Categories", "t104": "How we rank", "t101": "An independent project celebrating Europe's Latin dance schools. Rankings are based on public data and can't be bought.", "t2": "Why it matters", "t1": "Rankings", "t5": "Apply for free", "n1": "This page doesn't exist", "n2": "The link is outdated or mistyped. Continue here:", "n3": "Go to the homepage", "n4": "See the rankings"};
+  var EN={"ffaq": "FAQ", "t3": "Categories", "t101": "An independent project celebrating Europe's Latin dance schools. Rankings are based on public data and can't be bought.", "t4": "How we rank", "t106": "Apply for free", "t102": "Germany 2026", "t103": "Award categories", "t107": "Bachata Edition · Germany", "t105": "Get in touch", "t104": "How we rank", "t1": "Rankings", "nav_apply": "Apply", "t5": "Apply for free", "t2": "Why it matters", "n1": "This page doesn't exist", "n2": "The link is outdated or mistyped. Continue here:", "n3": "Go to the homepage", "n4": "See the rankings"};
   var META={en:{title:"Page not found · Latin Dance Awards",desc:"This page does not exist."}};
 
   var DE={}, nodes=document.querySelectorAll("[data-i18n]");

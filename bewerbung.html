@@ -427,6 +427,72 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
 .form-fallback{padding:34px;border-radius:20px;border:1px dashed rgba(228,185,91,.45);text-align:center}
 .form-fallback p{color:var(--muted);margin:0 auto 22px;max-width:30em}
 
+
+/* application wizard */
+.wiz{max-width:760px}
+#lda-form,#form-ok{scroll-margin-top:110px}
+.fld{scroll-margin-top:130px}
+.wiz-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:14px;color:var(--muted);margin-bottom:10px}
+.wiz-top b{color:var(--gold-light);font-weight:700}
+.wiz-bar{height:8px;border-radius:8px;background:rgba(246,231,211,.12);overflow:hidden;margin-bottom:8px}
+.wiz-bar i{display:block;height:100%;width:12%;border-radius:8px;background:var(--foil,var(--gold));transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.wiz-dots{display:flex;gap:8px;margin-bottom:26px}
+.wiz-dots > span{flex:1;font-size:12.5px;font-weight:600;color:var(--muted);padding-top:6px;border-top:2px solid rgba(246,231,211,.14);transition:all .3s}
+.wiz-dots > span.on{color:var(--gold-light);border-color:var(--gold)}
+.wiz-dots > span.done{color:var(--cream);border-color:var(--gold)}
+.step-pane{padding:0;display:none;animation:stepin .45s cubic-bezier(.2,.8,.2,1)}
+.step-pane.on{display:block}
+@keyframes stepin{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.step-pane{animation:none}.wiz-bar i{transition:none}}
+.step-pane h3{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.4vw,34px);line-height:1.15;margin-bottom:6px}
+.step-pane .sub{color:var(--muted);margin-bottom:24px}
+.fld{margin-bottom:18px}
+.fld label,.fld .lab{display:block;font-weight:600;font-size:15px;margin-bottom:7px}
+.fld .opt{font-weight:400;color:var(--muted);font-size:13px;margin-left:6px}
+.fld input[type=text],.fld input[type=email],.fld input[type=url],.fld input[type=number],.fld textarea{width:100%;font:inherit;font-size:17px;color:var(--cream);
+  background:rgba(255,255,255,.05);border:1.5px solid var(--line);border-radius:16px;padding:15px 18px;min-height:52px;transition:border-color .2s,background .2s,box-shadow .2s}
+.fld textarea{min-height:96px;resize:vertical}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.08);box-shadow:0 0 0 4px rgba(228,185,91,.14)}
+.fld.bad input,.fld.bad textarea{border-color:#e0685c}
+.fld .help{font-size:13px;color:var(--muted);margin-top:6px}
+.fld .errtxt{font-size:13.5px;color:#f2a299;margin-top:4px;height:20px;line-height:20px;visibility:hidden}
+.fld.bad .errtxt{visibility:visible}
+.chips,.cards2{display:flex;flex-wrap:wrap;gap:10px}
+.chips label,.cards2 label{position:relative;margin:0;cursor:pointer}
+.chips input,.cards2 input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer}
+.chips label > span{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;border-radius:999px;border:1.5px solid var(--line);background:rgba(255,255,255,.04);font-weight:600;font-size:15.5px;transition:all .2s}
+.chips input:checked + span{background:var(--gold);color:#131011;border-color:var(--gold)}
+.chips input:focus-visible + span,.cards2 input:focus-visible + span{outline:3px solid var(--gold-light);outline-offset:2px}
+.cards2 label > span{display:block;min-width:160px;padding:16px 22px;border-radius:18px;border:1.5px solid var(--line);background:rgba(255,255,255,.04);font-weight:600;transition:all .2s}
+.cards2 label > span small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
+.cards2 input:checked + span{border-color:var(--gold);background:var(--gold-soft)}
+.bonus{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:var(--gold-soft);color:var(--gold-light);font-size:13px;font-weight:700;margin-bottom:14px}
+.wiz-nav{display:flex;gap:12px;align-items:center;margin-top:26px}
+.wiz-nav .btn{min-height:52px}
+.wiz-nav .back{background:none;border:0;color:var(--muted);font:inherit;font-weight:600;cursor:pointer;padding:12px 6px}
+.wiz-nav .back:hover{color:var(--cream)}
+.wiz-nav .btn-gold{flex:1;justify-content:center}
+.consent{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start;font-size:14.5px;color:var(--muted);margin-top:8px}
+.consent input{width:22px;height:22px;accent-color:var(--gold);margin-top:2px}
+.wiz .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.wiz .msg{padding:14px 18px;border-radius:14px;font-size:15px;margin-top:16px;background:rgba(220,80,70,.14);border:1px solid rgba(220,80,70,.5)}
+.trust{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:22px;font-size:13px;color:var(--muted)}
+.trust > span::before{content:"✓";color:var(--gold);margin-right:6px;font-weight:700}
+.form-ok{padding:40px 30px;border-radius:24px;border:1px solid rgba(228,185,91,.5);background:linear-gradient(170deg,var(--gold-soft),var(--card) 70%);text-align:center}
+.form-ok h3{font-family:var(--serif);font-weight:500;font-size:clamp(28px,4vw,38px);margin-bottom:8px}
+.form-ok p{color:var(--muted);max-width:34em;margin:0 auto 18px}
+.form-ok ol{list-style:none;text-align:left;max-width:30em;margin:22px auto 0;display:grid;gap:10px}
+.form-ok li{padding:12px 16px;border-radius:14px;background:var(--card);border:1px solid var(--line);font-size:15px}
+.form-ok li b{color:var(--gold-light)}
+@media (max-width:620px){.wiz-dots > span{font-size:11px}.cards2 label > span{min-width:0}.cards2 label{flex:1 1 140px}}
+
+.wiz-nav .skip{background:none;border:0;color:var(--gold-light);font:inherit;font-weight:600;cursor:pointer;padding:12px 8px}
+.chips label,.cards2 label{margin:0}
+.chips span span,.cards2 span span{display:inline}
+.fld.reveal{margin-top:-6px}
+.fld[hidden]{display:none}
+.fld .chips{margin-bottom:2px}
+.step-pane .fld + .fld{margin-top:26px}
 /* faq */
 .faq{display:grid;gap:12px;max-width:860px}
 .faq details{border-radius:18px;background:var(--card);border:1px solid var(--line);transition:border-color .3s}
@@ -567,23 +633,23 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
 <section class="page-hero" aria-labelledby="app-title">
   <div class="wrap">
     <div>
-      <span class="edition rise d1"><i></i><span data-i18n="a42">Bewerbung · Awards 2026</span></span>
-      <h1 id="app-title" class="rise d2"><span data-i18n="a43">Bachata-Schule anmelden für die <em class="foil">Bachata Awards 2026</em></span></h1>
-      <p class="lede rise d3"><span data-i18n="a44">Melde deine Bachata-Schule kostenlos an: Die Bewerbung dauert fünf Minuten und ist offen für jede Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt und Düsseldorf.</span></p>
+      <span class="edition rise d1"><i></i><span data-i18n="a153">Bewerbung · Awards 2026</span></span>
+      <h1 id="app-title" class="rise d2"><span data-i18n="a154">Bachata-Schule anmelden für die <em class="foil">Bachata Awards 2026</em></span></h1>
+      <p class="lede rise d3"><span data-i18n="a155">Melde deine Bachata-Schule kostenlos an: Die Bewerbung dauert fünf Minuten und ist offen für jede Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt und Düsseldorf.</span></p>
       <div class="facts rise d4">
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v8H4v-8M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg><b data-i18n="a45">Kostenlos</b></span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b data-i18n="a46">5 Minuten</b></span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span data-i18n="a47">Bewerbungsschluss <b>30. November</b></span></span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v5a5 5 0 0 1-10 0zM7 6H4c0 3 1.5 4.5 3.5 4.5M17 6h3c0 3-1.5 4.5-3.5 4.5M12 14v3M8 21h8l-1-4H9z"/></svg><span data-i18n="a48">Ergebnisse <b>20. Dezember</b></span></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v8H4v-8M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg><b data-i18n="a156">Kostenlos</b></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b data-i18n="a157">5 Minuten</b></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span data-i18n="a158">Bewerbungsschluss <b>30. November</b></span></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v5a5 5 0 0 1-10 0zM7 6H4c0 3 1.5 4.5 3.5 4.5M17 6h3c0 3-1.5 4.5-3.5 4.5M12 14v3M8 21h8l-1-4H9z"/></svg><span data-i18n="a159">Ergebnisse <b>20. Dezember</b></span></span>
       </div>
       <div class="ctas rise d5">
-        <a class="btn btn-gold" href="#formular"><span data-i18n="a49">Zum Formular</span></a>
-        <a class="btn btn-ghost" href="index.html#method"><span data-i18n="a50">So bewerten wir</span></a>
+        <a class="btn btn-gold" href="#formular"><span data-i18n="a160">Zum Formular</span></a>
+        <a class="btn btn-ghost" href="index.html#method"><span data-i18n="a161">So bewerten wir</span></a>
       </div>
     </div>
     <div class="seal-box rise d3">
       <img class="seal" src="badge-winner-template.svg" alt="Siegel Best School · Official Winner der Bachata Awards 2026" width="360" height="360" fetchpriority="low">
-      <p class="seal-cap" data-i18n="a51">Dein Siegel, wenn deine Schule gewinnt</p>
+      <p class="seal-cap" data-i18n="a162">Dein Siegel, wenn deine Schule gewinnt</p>
     </div>
   </div>
 </section>
@@ -591,8 +657,8 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
 <section class="block alt" aria-labelledby="steps-title">
   <div class="wrap">
     <div class="sec-head">
-      <h2 id="steps-title" data-i18n="a52">So läuft es ab</h2>
-      <p data-i18n="a53">Vier einfache Schritte, ohne Papierkram.</p>
+      <h2 id="steps-title" data-i18n="a163">So läuft es ab</h2>
+      <p data-i18n="a164">Vier einfache Schritte, ohne Papierkram.</p>
     </div>
     <ol class="steps">
       <li class="step"><span class="num">1</span><span class="when" data-i18n="a1">Jetzt bis 30. November</span><h3 data-i18n="a2">Bewerben</h3><p data-i18n="a3">Fülle das Formular aus. Es dauert etwa fünf Minuten.</p></li>
@@ -606,30 +672,30 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
 <section class="block" aria-labelledby="why-title">
   <div class="wrap">
     <div class="sec-head">
-      <h2 id="why-title" data-i18n="a54">Warum sich die Anmeldung lohnt</h2>
-      <p data-i18n="a55">Die Teilnahme kostet nichts und bringt deiner Schule Sichtbarkeit bei Tänzern, die gerade eine Bachata-Schule suchen.</p>
+      <h2 id="why-title" data-i18n="a165">Warum sich die Anmeldung lohnt</h2>
+      <p data-i18n="a166">Die Teilnahme kostet nichts und bringt deiner Schule Sichtbarkeit bei Tänzern, die gerade eine Bachata-Schule suchen.</p>
     </div>
     <div class="cards">
-      <article><h3 data-i18n="a56">Ein offizielles Siegel</h3><p data-i18n="a57">Gewinner bekommen das Award-Siegel für Website, Studio und Social Media. Es zeigt neuen Schülern auf einen Blick, dass eure Qualität unabhängig bestätigt wurde.</p></article>
-      <article><h3 data-i18n="a58">Sichtbar in deiner Stadt</h3><p data-i18n="a59">Jede Stadt bekommt eine eigene Ranking-Seite. Dort landen Tänzer, die nach einer Bachata-Schule in Berlin, München oder Köln suchen.</p></article>
-      <article><h3 data-i18n="a60">Ehrliches Feedback</h3><p data-i18n="a61">Du siehst deine Punkte in allen neun Kriterien. So weißt du genau, wo eure Schule stark ist und wo noch Potenzial liegt.</p></article>
+      <article><h3 data-i18n="a167">Ein offizielles Siegel</h3><p data-i18n="a168">Gewinner bekommen das Award-Siegel für Website, Studio und Social Media. Es zeigt neuen Schülern auf einen Blick, dass eure Qualität unabhängig bestätigt wurde.</p></article>
+      <article><h3 data-i18n="a169">Sichtbar in deiner Stadt</h3><p data-i18n="a170">Jede Stadt bekommt eine eigene Ranking-Seite. Dort landen Tänzer, die nach einer Bachata-Schule in Berlin, München oder Köln suchen.</p></article>
+      <article><h3 data-i18n="a171">Ehrliches Feedback</h3><p data-i18n="a172">Du siehst deine Punkte in allen neun Kriterien. So weißt du genau, wo eure Schule stark ist und wo noch Potenzial liegt.</p></article>
     </div>
   </div>
 </section>
 
 <section class="block alt" aria-labelledby="score-title">
   <div class="wrap prose">
-    <h2 id="score-title" class="sec-h2" data-i18n="a62">So bewerten wir die Schulen</h2>
-    <p data-i18n="a63">Alle Bachata-Schulen werden nach denselben neun Kriterien bewertet, zusammen <strong>100 Punkte</strong>. Die meisten Punkte gibt es für die Google-Bewertung (25), Festivals und Kongresse (15), die Anzahl der Bewertungen, die Jahre im Unterricht, das Kursangebot für Einsteiger, eigene Events und Social Media (je 10). Aktuelle Bewertungen und Wettbewerbe zählen je 5 Punkte.</p>
-    <p data-i18n="a64">Mit deiner Bewerbung bestätigst du die Angaben, die wir sonst nur schätzen könnten. Was wir nicht bestätigen können, zählt mit 0 Punkten. Die vollständige Methode steht auf der <a href="index.html#method">Startseite</a>.</p>
+    <h2 id="score-title" class="sec-h2" data-i18n="a173">So bewerten wir die Schulen</h2>
+    <p data-i18n="a174">Alle Bachata-Schulen werden nach denselben neun Kriterien bewertet, zusammen <strong>100 Punkte</strong>. Die meisten Punkte gibt es für die Google-Bewertung (25), Festivals und Kongresse (15), die Anzahl der Bewertungen, die Jahre im Unterricht, das Kursangebot für Einsteiger, eigene Events und Social Media (je 10). Aktuelle Bewertungen und Wettbewerbe zählen je 5 Punkte.</p>
+    <p data-i18n="a175">Mit deiner Bewerbung bestätigst du die Angaben, die wir sonst nur schätzen könnten. Was wir nicht bestätigen können, zählt mit 0 Punkten. Die vollständige Methode steht auf der <a href="index.html#method">Startseite</a>.</p>
   </div>
 </section>
 
 <section class="block" aria-labelledby="need-title">
   <div class="wrap">
     <div class="sec-head">
-      <h2 id="need-title" data-i18n="a65">Was du brauchst</h2>
-      <p data-i18n="a66">Halte diese Angaben bereit. Das meiste findest du auf eurer Website oder eurem Instagram.</p>
+      <h2 id="need-title" data-i18n="a176">Was du brauchst</h2>
+      <p data-i18n="a177">Halte diese Angaben bereit. Das meiste findest du auf eurer Website oder eurem Instagram.</p>
     </div>
     <ul class="need">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M8 12.5l2.7 2.7L16 9.8"/></svg><div><span data-i18n="a13">Name und Stadt der Schule</span><small data-i18n="a14">Berlin, München, Hamburg, Köln, Frankfurt oder Düsseldorf</small></div></li>
@@ -647,12 +713,44 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
 <section class="block alt" id="formular" aria-labelledby="form-title">
   <div class="wrap">
     <div class="form-card">
-      <h2 id="form-title" data-i18n="a67">Bewerbungsformular</h2>
-      <p data-i18n="a68">Alle Felder mit * sind Pflichtfelder. Nach dem Absenden bekommst du sofort eine Bestätigung per E-Mail.</p>
-      <div id="form-slot"></div>
+      <h2 id="form-title" data-i18n="a178">In 2 Minuten bewerben</h2>
+      <p data-i18n="a179">Eine kleine Frage nach der anderen, meist mit einem Tipp. Kostenlos, ohne Zahlung.</p>
+      <div class="wiz">
+      <form id="lda-form" novalidate hidden data-total="13">
+        <div class="hp" aria-hidden="true"><label>Website2 <input type="text" name="hp" tabindex="-1" autocomplete="off"></label></div>
+        <div class="wiz-top"><span><span data-i18n="a133">Schritt</span> <b id="w-n">1</b> <span data-i18n="a134">von</span> 13</span><span id="w-left"><span data-i18n="a135">noch ca. 2 Min.</span></span></div>
+        <div class="wiz-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="8" id="w-bar"><i></i></div>
+        <div class="wiz-dots" aria-hidden="true"><span class="on"><span data-i18n="a136">Fragen</span></span><span><span data-i18n="a137">Eure Schule</span></span><span><span data-i18n="a138">Kontakt</span></span></div>
+<section class="step-pane on" data-ch="0" data-auto="1" aria-labelledby="sh0"><h3 id="sh0" tabindex="-1" data-i18n="a107">In welcher Stadt unterrichtet ihr?</h3><p class="sub" data-i18n="a108">Nur antippen, keine Tipparbeit.</p><div class="fld" data-group="city" data-req="1"><span class="lab" id="city-l"><span data-i18n="a52">Stadt</span></span><div class="chips" role="radiogroup" aria-labelledby="city-l"><label><input type="radio" name="city" value="Berlin"><span><span data-i18n="a45">Berlin</span></span></label><label><input type="radio" name="city" value="München / Munich"><span><span data-i18n="a46">München</span></span></label><label><input type="radio" name="city" value="Hamburg"><span><span data-i18n="a47">Hamburg</span></span></label><label><input type="radio" name="city" value="Köln / Cologne"><span><span data-i18n="a48">Köln</span></span></label><label><input type="radio" name="city" value="Frankfurt"><span><span data-i18n="a49">Frankfurt</span></span></label><label><input type="radio" name="city" value="Düsseldorf"><span><span data-i18n="a50">Düsseldorf</span></span></label><label><input type="radio" name="city" value="Other"><span><span data-i18n="a51">Andere</span></span></label></div><p class="errtxt"><span data-i18n="a44">Bitte wähle eine Antwort.</span></p></div></section>
+<section class="step-pane" data-ch="0" data-auto="1" aria-labelledby="sh1"><h3 id="sh1" tabindex="-1" data-i18n="a109">Seit wann unterrichtet ihr Bachata?</h3><p class="sub" data-i18n="a110">Eine grobe Angabe reicht.</p><div class="fld" data-group="year" data-req="1"><span class="lab" id="year-l"><span data-i18n="a73">Gründungsjahr</span></span><div class="chips" role="radiogroup" aria-labelledby="year-l"><label><input type="radio" name="year" value="2024–2026"><span><span data-i18n="a67">2024–2026</span></span></label><label><input type="radio" name="year" value="2021–2023"><span><span data-i18n="a68">2021–2023</span></span></label><label><input type="radio" name="year" value="2018–2020"><span><span data-i18n="a69">2018–2020</span></span></label><label><input type="radio" name="year" value="2015–2017"><span><span data-i18n="a70">2015–2017</span></span></label><label><input type="radio" name="year" value="2012–2014"><span><span data-i18n="a71">2012–2014</span></span></label><label><input type="radio" name="year" value="Before 2012"><span><span data-i18n="a72">Vor 2012</span></span></label></div><p class="errtxt"><span data-i18n="a66">Bitte wähle eine Antwort.</span></p></div></section>
+<section class="step-pane" data-ch="0" aria-labelledby="sh2"><h3 id="sh2" tabindex="-1" data-i18n="a111">Wie sieht euer Angebot aus?</h3><p class="sub" data-i18n="a112">Tippe auf alles, was zutrifft.</p><div class="fld" data-group="trial" data-req="1"><span class="lab" id="trial-l"><span data-i18n="a77">Probestunde für Anfänger?</span></span><div class="chips" role="radiogroup" aria-labelledby="trial-l"><label><input type="radio" name="trial" value="Yes"><span><span data-i18n="a75">Ja</span></span></label><label><input type="radio" name="trial" value="No"><span><span data-i18n="a76">Nein</span></span></label></div><p class="errtxt"><span data-i18n="a74">Bitte wähle eine Antwort.</span></p></div><div class="fld" data-group="levels" data-req="1"><span class="lab" id="levels-l"><span data-i18n="a82">Welche Levels bietet ihr an?</span></span><div class="chips" role="group" aria-labelledby="levels-l"><label><input type="checkbox" name="levels" value="Beginner"><span><span data-i18n="a79">Anfänger</span></span></label><label><input type="checkbox" name="levels" value="Intermediate"><span><span data-i18n="a80">Mittelstufe</span></span></label><label><input type="checkbox" name="levels" value="Advanced"><span><span data-i18n="a81">Fortgeschrittene</span></span></label></div><p class="errtxt"><span data-i18n="a78">Bitte wähle mindestens ein Level.</span></p></div></section>
+<section class="step-pane" data-ch="0" aria-labelledby="sh3"><h3 id="sh3" tabindex="-1" data-i18n="a113">Wie oft habt ihr Events?</h3><p class="sub" data-i18n="a114">Socials, Workshops und Gäste der letzten 12 Monate.</p><div class="fld" data-group="social" data-req="1"><span class="lab" id="social-l"><span data-i18n="a95">Eigene Socials oder Workshops</span></span><div class="chips" role="radiogroup" aria-labelledby="social-l"><label><input type="radio" name="social" value="Weekly"><span><span data-i18n="a91">Wöchentlich</span></span></label><label><input type="radio" name="social" value="Monthly"><span><span data-i18n="a92">Monatlich</span></span></label><label><input type="radio" name="social" value="Few per year"><span><span data-i18n="a93">Ein paar im Jahr</span></span></label><label><input type="radio" name="social" value="None"><span><span data-i18n="a94">Keine</span></span></label></div><p class="errtxt"><span data-i18n="a90">Bitte wähle eine Antwort.</span></p></div><div class="fld" data-group="guests" data-req="1"><span class="lab" id="guests-l"><span data-i18n="a99">Gastlehrer aus dem Ausland?</span></span><div class="chips" role="radiogroup" aria-labelledby="guests-l"><label><input type="radio" name="guests" value="Yes"><span><span data-i18n="a97">Ja</span></span></label><label><input type="radio" name="guests" value="No"><span><span data-i18n="a98">Nein</span></span></label></div><p class="errtxt"><span data-i18n="a96">Bitte wähle eine Antwort.</span></p></div></section>
+<section class="step-pane" data-ch="0" aria-labelledby="sh4"><h3 id="sh4" tabindex="-1" data-i18n="a115">Haben eure Lehrer auf Festivals unterrichtet?</h3><p class="sub" data-i18n="a116">Bonuspunkte: 2025–2026 zählt.</p><div class="fld" data-group="festivals_has" data-req="1"><span class="lab" id="festivals-l"><span data-i18n="a87">Festivals und Kongresse</span></span><div class="chips" role="radiogroup" aria-labelledby="festivals-l"><label><input type="radio" name="festivals_has" value="Yes"><span><span data-i18n="a85">Ja</span></span></label><label><input type="radio" name="festivals_has" value="No"><span><span data-i18n="a86">Nein</span></span></label></div><p class="errtxt"><span data-i18n="a88">Bitte wähle eine Antwort.</span></p></div><div class="fld reveal" id="rv-festivals" hidden><label for="f-festivals"><span data-i18n="a89">Auf welchen Festivals?</span></label><textarea id="f-festivals" name="festivals" maxlength="1500"></textarea></div></section>
+<section class="step-pane" data-ch="0" aria-labelledby="sh5"><h3 id="sh5" tabindex="-1" data-i18n="a117">Habt ihr Wettbewerbe gewonnen?</h3><p class="sub" data-i18n="a118">Schüler oder Lehrer, mit online veröffentlichten Ergebnissen.</p><div class="fld" data-group="competitions_has" data-req="1"><span class="lab" id="competitions-l"><span data-i18n="a102">Wettbewerbe</span></span><div class="chips" role="radiogroup" aria-labelledby="competitions-l"><label><input type="radio" name="competitions_has" value="Yes"><span><span data-i18n="a100">Ja</span></span></label><label><input type="radio" name="competitions_has" value="No"><span><span data-i18n="a101">Nein</span></span></label></div><p class="errtxt"><span data-i18n="a103">Bitte wähle eine Antwort.</span></p></div><div class="fld reveal" id="rv-competitions" hidden><label for="f-competitions"><span data-i18n="a104">Welcher Wettbewerb, welches Jahr, welcher Platz?</span></label><textarea id="f-competitions" name="competitions" maxlength="1500"></textarea></div></section>
+<section class="step-pane" data-ch="1" aria-labelledby="sh6"><h3 id="sh6" tabindex="-1" data-i18n="a119">Wie heißt deine Schule?</h3><p class="sub" data-i18n="a120">Jetzt noch ein paar Angaben zu eurer Schule.</p><div class="fld"><label for="f-school"><span data-i18n="a43">Name der Schule</span></label><input id="f-school" name="school" type="text" maxlength="400" required autocomplete="organization"><p class="errtxt"><span data-i18n="a42">Bitte gib den Namen deiner Schule ein.</span></p></div></section>
+<section class="step-pane" data-ch="1" aria-labelledby="sh7"><h3 id="sh7" tabindex="-1" data-i18n="a121">Wie sieht eure Website aus?</h3><p class="sub" data-i18n="a122">Kopiere einfach den Link aus dem Browser.</p><div class="fld"><label for="f-website"><span data-i18n="a58">Website</span></label><input id="f-website" name="website" type="url" maxlength="400" required placeholder="https://" inputmode="url"><p class="errtxt"><span data-i18n="a57">Bitte gib einen vollständigen Link ein (mit https://).</span></p></div></section>
+<section class="step-pane" data-ch="1" aria-labelledby="sh8"><h3 id="sh8" tabindex="-1" data-i18n="a123">Und euer Google-Maps-Eintrag?</h3><p class="sub" data-i18n="a124">Dort holen wir Bewertungen und Rezensionen.</p><div class="fld"><label for="f-maps"><span data-i18n="a61">Google-Maps-Link</span></label><input id="f-maps" name="maps" type="url" maxlength="400" required placeholder="https://maps.app.goo.gl/…" inputmode="url"><p class="help"><span data-i18n="a59">In Google Maps nach eurer Schule suchen, auf Teilen tippen, Link kopieren.</span></p><p class="errtxt"><span data-i18n="a60">Bitte gib einen vollständigen Link ein (mit https://).</span></p></div></section>
+<section class="step-pane" data-ch="1" aria-labelledby="sh9"><h3 id="sh9" tabindex="-1" data-i18n="a125">Wo finden wir euren Kursplan?</h3><p class="sub" data-i18n="a126">Ein Link zur Seite mit euren Kursen genügt.</p><div class="fld"><label for="f-schedule"><span data-i18n="a84">Link zum Kursplan</span></label><input id="f-schedule" name="schedule" type="url" maxlength="400" required placeholder="https://" inputmode="url"><p class="errtxt"><span data-i18n="a83">Bitte gib einen vollständigen Link ein (mit https://).</span></p></div></section>
+<section class="step-pane" data-ch="1" data-opt="1" aria-labelledby="sh10"><h3 id="sh10" tabindex="-1" data-i18n="a127">Seid ihr in den sozialen Medien?</h3><p class="sub" data-i18n="a128">Beides ist freiwillig, bringt aber Punkte.</p><div class="fld"><label for="f-instagram"><span data-i18n="a63">Instagram</span> <span class="opt"><span data-i18n="a62">optional</span></span></label><input id="f-instagram" name="instagram" type="text" maxlength="400" placeholder="https://instagram.com/…" inputmode="url"><p class="errtxt"></p></div><div class="fld"><label for="f-tiktok"><span data-i18n="a65">TikTok</span> <span class="opt"><span data-i18n="a64">optional</span></span></label><input id="f-tiktok" name="tiktok" type="text" maxlength="400" placeholder="https://tiktok.com/@…" inputmode="url"><p class="errtxt"></p></div></section>
+<section class="step-pane" data-ch="2" aria-labelledby="sh11"><h3 id="sh11" tabindex="-1" data-i18n="a129">Wie erreichen wir dich?</h3><p class="sub" data-i18n="a130">Dorthin schicken wir deine Bestätigung. Kein Spam.</p><div class="fld"><label for="f-contact"><span data-i18n="a54">Dein Name</span></label><input id="f-contact" name="contact" type="text" maxlength="400" required autocomplete="name"><p class="errtxt"><span data-i18n="a53">Bitte gib deinen Namen ein.</span></p></div><div class="fld"><label for="f-email"><span data-i18n="a56">E-Mail</span></label><input id="f-email" name="email" type="email" maxlength="400" required autocomplete="email" placeholder="name@schule.de"><p class="errtxt"><span data-i18n="a55">Bitte gib eine gültige E-Mail-Adresse ein.</span></p></div></section>
+<section class="step-pane" data-ch="2" aria-labelledby="sh12"><h3 id="sh12" tabindex="-1" data-i18n="a131">Fast geschafft!</h3><p class="sub" data-i18n="a132">Noch ein Haken, dann bist du dabei.</p><label class="consent"><input type="checkbox" name="consent" required><span><span data-i18n="a105">Ich stimme zu, dass meine Angaben für die Latin Dance Awards gespeichert und ausgewertet werden. Öffentlich gezeigt werden nur Schulname, Stadt, Punktzahl und öffentliche Links.</span></span></label><p class="errtxt" id="consent-err" style="display:none;color:#f2a299;font-size:13.5px;margin-top:6px"><span data-i18n="a106">Bitte stimme zu, damit wir deine Bewerbung speichern dürfen.</span></p></section>
+        <div class="msg" id="form-err" hidden role="alert"></div>
+        <div class="wiz-nav">
+          <button type="button" class="back" id="w-back" hidden>← <span data-i18n="a139">Zurück</span></button>
+          <button type="button" class="skip" id="w-skip" hidden><span data-i18n="a140">Überspringen</span></button>
+          <button class="btn btn-gold" type="button" id="w-next"><span data-i18n="a141">Weiter</span> →</button>
+        </div>
+        <div class="trust"><span><span data-i18n="a142">Kostenlos</span></span><span><span data-i18n="a143">Keine Zahlung</span></span><span><span data-i18n="a144">Bewerbungsschluss 30. November</span></span></div>
+      </form>
+      <div class="form-ok" id="form-ok" hidden>
+        <h3 data-i18n="a145">Geschafft, deine Schule ist dabei!</h3>
+        <p data-i18n="a146">Wir haben deine Bewerbung erhalten. Schau auch im Spam-Ordner nach der Bestätigung.</p>
+        <ol><li><b><span data-i18n="a147">In 3 Tagen</span></b> · <span data-i18n="a148">Wir melden uns per E-Mail und bitten um ein paar Nachweise.</span></li><li><b><span data-i18n="a149">Bis 30. November</span></b> · <span data-i18n="a150">Nachweise als einfache Links schicken.</span></li><li><b><span data-i18n="a151">20. Dezember, 19 Uhr</span></b> · <span data-i18n="a152">Ergebnisse und Award-Siegel.</span></li></ol>
+      </div>
+      </div>
       <div class="form-fallback" id="form-fallback" hidden>
-        <p data-i18n="a69">Das Formular wird gerade eingerichtet. Schreib uns in der Zwischenzeit eine E-Mail, und wir nehmen deine Schule auf.</p>
-        <a class="btn btn-gold" href="mailto:hello@latindanceawards.com?subject=Bewerbung%20Bachata%20Awards%202026"><span data-i18n="a70">Per E-Mail bewerben</span></a>
+        <p data-i18n="a180">Das Formular wird gerade eingerichtet. Schreib uns in der Zwischenzeit eine E-Mail, und wir nehmen deine Schule auf.</p>
+        <a class="btn btn-gold" href="mailto:hello@latindanceawards.com?subject=Bewerbung%20Bachata%20Awards%202026"><span data-i18n="a181">Per E-Mail bewerben</span></a>
       </div>
     </div>
   </div>
@@ -660,7 +758,7 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
 
 <section class="block" aria-labelledby="faq-title">
   <div class="wrap">
-    <div class="sec-head"><h2 id="faq-title" data-i18n="a71">Gut zu wissen</h2></div>
+    <div class="sec-head"><h2 id="faq-title" data-i18n="a182">Gut zu wissen</h2></div>
     <div class="faq">
       <details><summary data-i18n="a30">Kostet die Teilnahme etwas?</summary><p data-i18n="a31">Nein. Bewerbung, Bewertung und Award-Siegel sind komplett kostenlos.</p></details>
       <details><summary data-i18n="a32">Garantiert eine Bewerbung einen Preis?</summary><p data-i18n="a33">Nein. Jede Schule wird nach denselben neun Kriterien bewertet. Die Bewerbung hilft uns nur, eure Daten vollständig und korrekt zu erfassen. <a href="index.html#method">So bewerten wir</a>.</p></details>
@@ -700,7 +798,7 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
 
 <script>
 (function(){
-  var EN={"t102": "Germany 2026", "t107": "Bachata Edition · Germany", "ffaq": "FAQ", "t103": "Award categories", "nav_apply": "Apply", "t4": "How we rank", "t105": "Get in touch", "t106": "Apply for free", "t3": "Categories", "t104": "How we rank", "t101": "An independent project celebrating Europe's Latin dance schools. Rankings are based on public data and can't be bought.", "t2": "Why it matters", "t1": "Rankings", "t5": "Apply for free", "a1": "Now until November 30", "a2": "Apply", "a3": "Fill in the form. It takes about five minutes.", "a4": "After 3 days", "a5": "Confirmation", "a6": "You'll get an email: your application is accepted. We just ask for a few proofs.", "a7": "Within 10 days", "a8": "Send proofs", "a9": "Just send links, for example to a festival lineup or your class schedule. No paperwork.", "a10": "December 20, 2026", "a11": "Results", "a12": "All rankings are published. Winners receive their official award seal.", "a13": "School name and city", "a14": "Berlin, Munich, Hamburg, Cologne, Frankfurt or Düsseldorf", "a15": "Website, Instagram and TikTok", "a16": "Just the links", "a17": "Link to your Google Maps listing", "a18": "For your rating and number of reviews", "a19": "Year founded", "a20": "Since when have you taught Bachata?", "a21": "Class schedule and levels", "a22": "Including trial class and start dates for beginners", "a23": "Your teachers and their festivals", "a24": "Festivals and congresses in 2025–2026 where they taught", "a25": "Events and guest teachers", "a26": "Socials, workshops and international guests from the last 12 months", "a27": "Competition results", "a28": "optional", "a29": "Competition, year and placement", "a30": "Does it cost anything to take part?", "a31": "No. Applying, being scored and the award seal are completely free.", "a32": "Does applying guarantee an award?", "a33": "No. Every school is scored on the same nine factors. Applying only helps us capture your data completely and correctly. <a href=\"index.html#method\">How we score</a>.", "a34": "Can we appear in the ranking without applying?", "a35": "Yes, we research every school ourselves. But when you apply, we can confirm more of your information, which usually leads to a more accurate score.", "a36": "Who can apply?", "a37": "Owners, teachers or staff of a Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt or Düsseldorf. Your school is in another city? Apply anyway and we'll include you in future editions.", "a38": "How do we prove our information?", "a39": "With links that usually already exist: a festival lineup, your class schedule, posts about your events. To confirm the application really comes from you, you'll also send us a short message from your official Instagram account.", "a40": "What happens to our data?", "a41": "We only use your information for the awards. We only publish the school name, city, score, score breakdown and your public links. Contact details stay private.", "a42": "Application · Awards 2026", "a43": "Enter your Bachata school for the <em class=\"foil\">Bachata Awards 2026</em>", "a44": "Enter your Bachata school for free: applying takes five minutes and is open to every Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf.", "a45": "Free", "a46": "5 minutes", "a47": "Deadline <b>November 30</b>", "a48": "Results <b>December 20</b>", "a49": "Go to the form", "a50": "How we score", "a51": "Your seal, if your school wins", "a52": "How it works", "a53": "Four simple steps, no paperwork.", "a54": "Why entering is worth it", "a55": "Taking part costs nothing and puts your school in front of dancers who are looking for a Bachata school right now.", "a56": "An official seal", "a57": "Winners get the award seal for their website, studio and social media. It shows new students at a glance that your quality has been confirmed independently.", "a58": "Visible in your city", "a59": "Every city gets its own ranking page. That is where dancers land when they look for a Bachata school in Berlin, Munich or Cologne.", "a60": "Honest feedback", "a61": "You see your points in all nine factors, so you know exactly where your school is strong and where there is room to grow.", "a62": "How we score the schools", "a63": "All Bachata schools are scored on the same nine factors, <strong>100 points</strong> in total. The most points come from the Google rating (25), festivals and congresses (15), and review volume, years of teaching, the beginner offer, own events and social media (10 each). Recent reviews and competitions count 5 points each.", "a64": "Your application confirms the information we could otherwise only estimate. Anything we can't confirm counts as 0 points. The full method is on the <a href=\"index.html#method\">homepage</a>.", "a65": "What you'll need", "a66": "Have this information ready. You'll find most of it on your website or Instagram.", "a67": "Application form", "a68": "Fields marked * are required. You'll get a confirmation email right after you submit.", "a69": "The form is being set up. In the meantime, send us an email and we'll add your school.", "a70": "Apply by email", "a71": "Good to know"};
+  var EN={"ffaq": "FAQ", "t3": "Categories", "t101": "An independent project celebrating Europe's Latin dance schools. Rankings are based on public data and can't be bought.", "t4": "How we rank", "t106": "Apply for free", "t102": "Germany 2026", "t103": "Award categories", "t107": "Bachata Edition · Germany", "t105": "Get in touch", "t104": "How we rank", "t1": "Rankings", "nav_apply": "Apply", "t5": "Apply for free", "t2": "Why it matters", "a1": "Now until November 30", "a2": "Apply", "a3": "Fill in the form. It takes about five minutes.", "a4": "After 3 days", "a5": "Confirmation", "a6": "You'll get an email: your application is accepted. We just ask for a few proofs.", "a7": "Within 10 days", "a8": "Send proofs", "a9": "Just send links, for example to a festival lineup or your class schedule. No paperwork.", "a10": "December 20, 2026", "a11": "Results", "a12": "All rankings are published. Winners receive their official award seal.", "a13": "School name and city", "a14": "Berlin, Munich, Hamburg, Cologne, Frankfurt or Düsseldorf", "a15": "Website, Instagram and TikTok", "a16": "Just the links", "a17": "Link to your Google Maps listing", "a18": "For your rating and number of reviews", "a19": "Year founded", "a20": "Since when have you taught Bachata?", "a21": "Class schedule and levels", "a22": "Including trial class and start dates for beginners", "a23": "Your teachers and their festivals", "a24": "Festivals and congresses in 2025–2026 where they taught", "a25": "Events and guest teachers", "a26": "Socials, workshops and international guests from the last 12 months", "a27": "Competition results", "a28": "optional", "a29": "Competition, year and placement", "a30": "Does it cost anything to take part?", "a31": "No. Applying, being scored and the award seal are completely free.", "a32": "Does applying guarantee an award?", "a33": "No. Every school is scored on the same nine factors. Applying only helps us capture your data completely and correctly. <a href=\"index.html#method\">How we score</a>.", "a34": "Can we appear in the ranking without applying?", "a35": "Yes, we research every school ourselves. But when you apply, we can confirm more of your information, which usually leads to a more accurate score.", "a36": "Who can apply?", "a37": "Owners, teachers or staff of a Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt or Düsseldorf. Your school is in another city? Apply anyway and we'll include you in future editions.", "a38": "How do we prove our information?", "a39": "With links that usually already exist: a festival lineup, your class schedule, posts about your events. To confirm the application really comes from you, you'll also send us a short message from your official Instagram account.", "a40": "What happens to our data?", "a41": "We only use your information for the awards. We only publish the school name, city, score, score breakdown and your public links. Contact details stay private.", "a42": "Please enter your school's name.", "a43": "School name", "a44": "Please choose an answer.", "a45": "Berlin", "a46": "Munich", "a47": "Hamburg", "a48": "Cologne", "a49": "Frankfurt", "a50": "Düsseldorf", "a51": "Other", "a52": "City", "a53": "Please enter your name.", "a54": "Your name", "a55": "Please enter a valid email address.", "a56": "Email", "a57": "Please enter a full link (starting with https://).", "a58": "Website", "a59": "Search your school in Google Maps, tap Share, copy the link.", "a60": "Please enter a full link (starting with https://).", "a61": "Google Maps link", "a62": "optional", "a63": "Instagram", "a64": "optional", "a65": "TikTok", "a66": "Please choose an answer.", "a67": "2024–2026", "a68": "2021–2023", "a69": "2018–2020", "a70": "2015–2017", "a71": "2012–2014", "a72": "Before 2012", "a73": "Year founded", "a74": "Please choose an answer.", "a75": "Yes", "a76": "No", "a77": "Trial class for beginners?", "a78": "Please choose at least one level.", "a79": "Beginner", "a80": "Intermediate", "a81": "Advanced", "a82": "Which levels do you teach?", "a83": "Please enter a full link (starting with https://).", "a84": "Link to your schedule", "a85": "Yes", "a86": "No", "a87": "Festivals and congresses", "a88": "Please choose an answer.", "a89": "Which festivals?", "a90": "Please choose an answer.", "a91": "Weekly", "a92": "Monthly", "a93": "A few a year", "a94": "None", "a95": "Own socials or workshops", "a96": "Please choose an answer.", "a97": "Yes", "a98": "No", "a99": "International guest teachers?", "a100": "Yes", "a101": "No", "a102": "Competitions", "a103": "Please choose an answer.", "a104": "Which competition, which year, which place?", "a105": "I agree that my information is stored and evaluated for the Latin Dance Awards. Only the school name, city, score and public links are shown publicly.", "a106": "Please agree so we can save your application.", "a107": "Which city do you teach in?", "a108": "Just tap, no typing.", "a109": "Since when have you taught Bachata?", "a110": "A rough answer is fine.", "a111": "What do you offer?", "a112": "Tap everything that applies.", "a113": "How often do you run events?", "a114": "Socials, workshops and guests in the last 12 months.", "a115": "Have your teachers taught at festivals?", "a116": "Bonus points: 2025–2026 counts.", "a117": "Have you won competitions?", "a118": "Students or teachers, with results published online.", "a119": "What is your school called?", "a120": "Now a few details about your school.", "a121": "What is your website?", "a122": "Just copy the link from your browser.", "a123": "And your Google Maps listing?", "a124": "That is where we read your rating and reviews.", "a125": "Where can we find your class schedule?", "a126": "A link to the page with your classes is enough.", "a127": "Are you on social media?", "a128": "Both are optional but earn points.", "a129": "How can we reach you?", "a130": "We'll send your confirmation there. No spam.", "a131": "Almost done!", "a132": "One last tick and you are in.", "a133": "Step", "a134": "of", "a135": "about 2 min left", "a136": "Questions", "a137": "Your school", "a138": "Contact", "a139": "Back", "a140": "Skip", "a141": "Continue", "a142": "Free", "a143": "No payment", "a144": "Deadline November 30", "a145": "Done, your school is in!", "a146": "We've received your application. Check your spam folder for the confirmation too.", "a147": "In 3 days", "a148": "We email you and ask for a few proofs.", "a149": "By November 30", "a150": "Send the proofs as simple links.", "a151": "December 20, 7 pm", "a152": "Results and award seal.", "a153": "Application · Awards 2026", "a154": "Enter your Bachata school for the <em class=\"foil\">Bachata Awards 2026</em>", "a155": "Enter your Bachata school for free: applying takes five minutes and is open to every Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt and Düsseldorf.", "a156": "Free", "a157": "5 minutes", "a158": "Deadline <b>November 30</b>", "a159": "Results <b>December 20</b>", "a160": "Go to the form", "a161": "How we score", "a162": "Your seal, if your school wins", "a163": "How it works", "a164": "Four simple steps, no paperwork.", "a165": "Why entering is worth it", "a166": "Taking part costs nothing and puts your school in front of dancers who are looking for a Bachata school right now.", "a167": "An official seal", "a168": "Winners get the award seal for their website, studio and social media. It shows new students at a glance that your quality has been confirmed independently.", "a169": "Visible in your city", "a170": "Every city gets its own ranking page. That is where dancers land when they look for a Bachata school in Berlin, Munich or Cologne.", "a171": "Honest feedback", "a172": "You see your points in all nine factors, so you know exactly where your school is strong and where there is room to grow.", "a173": "How we score the schools", "a174": "All Bachata schools are scored on the same nine factors, <strong>100 points</strong> in total. The most points come from the Google rating (25), festivals and congresses (15), and review volume, years of teaching, the beginner offer, own events and social media (10 each). Recent reviews and competitions count 5 points each.", "a175": "Your application confirms the information we could otherwise only estimate. Anything we can't confirm counts as 0 points. The full method is on the <a href=\"index.html#method\">homepage</a>.", "a176": "What you'll need", "a177": "Have this information ready. You'll find most of it on your website or Instagram.", "a178": "Apply in 2 minutes", "a179": "One small question at a time, mostly with a tap. Free, no payment.", "a180": "The form is being set up. In the meantime, send us an email and we'll add your school.", "a181": "Apply by email", "a182": "Good to know"};
   var META={en:{title:"Enter your Bachata school · Bachata Awards 2026",desc:"Enter your Bachata school for the Latin Dance Awards 2026 for free. Deadline November 30, results on December 20."}};
 
   var DE={}, nodes=document.querySelectorAll("[data-i18n]");
@@ -721,24 +819,91 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
   try{ var q=new URLSearchParams(location.search).get("lang"); if(q==="en"||q==="de") start=q; else if(localStorage.getItem("lda-lang")) start=localStorage.getItem("lda-lang"); }catch(e){}
   META.de={title:document.title, desc:document.querySelector('meta[name="description"]').content};
 
-  /* ===== Paste your Tally form IDs here (the part after tally.so/r/) ===== */
-  var TALLY_FORM_DE = "";   // e.g. "w2XyZ1"
-  var TALLY_FORM_EN = "";   // optional English version; leave empty to always use the German form
+  /* ===== Paste the Google Apps Script web-app URL here (see automation/collect.gs) ===== */
+  var FORM_ENDPOINT = "";   // e.g. "https://script.google.com/macros/s/XXXX/exec"
 
-  var slot=document.getElementById("form-slot"), fb=document.getElementById("form-fallback");
-  function loadForm(l){
-    var id = (l==="en" && TALLY_FORM_EN) ? TALLY_FORM_EN : TALLY_FORM_DE;
-    if(!id){ slot.innerHTML=""; fb.hidden=false; return; }
-    fb.hidden=true;
-    slot.innerHTML='<iframe data-tally-src="https://tally.so/embed/'+id+'?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" title="Bewerbungsformular / Application form"></iframe>';
-    if(window.Tally){ window.Tally.loadEmbeds(); }
-    else if(!document.getElementById("tally-js")){
-      var s=document.createElement("script"); s.id="tally-js"; s.src="https://tally.so/widgets/embed.js";
-      s.onload=function(){ window.Tally && window.Tally.loadEmbeds(); }; document.body.appendChild(s);
-    }
+  var form=document.getElementById("lda-form"), fb=document.getElementById("form-fallback"), ok=document.getElementById("form-ok"),
+      err=document.getElementById("form-err"), nextB=document.getElementById("w-next"), backB=document.getElementById("w-back"), skipB=document.getElementById("w-skip"),
+      bar=document.getElementById("w-bar"), nEl=document.getElementById("w-n"), leftEl=document.getElementById("w-left"),
+      panes=[].slice.call(document.querySelectorAll(".step-pane")), dots=[].slice.call(document.querySelectorAll(".wiz-dots > span"));
+  var STEPS=panes.length, cur=0, timer=null;
+  var MSG={
+    de:{next:"Weiter", send:"Bewerbung absenden", wait:"Wird gesendet …", fail:"Das Senden hat nicht geklappt. Bitte versuche es noch einmal oder schreib uns an hello@latindanceawards.com.", left:["noch ca. 2 Min.","noch ca. 1 Min.","noch ca. 30 Sek.","fast fertig"]},
+    en:{next:"Continue", send:"Submit application", wait:"Sending …", fail:"Sending failed. Please try again or email us at hello@latindanceawards.com.", left:["about 2 min left","about 1 min left","about 30 sec left","almost done"]}
+  };
+  function M(){ return MSG[window.LANG==="en"?"en":"de"]; }
+  if(FORM_ENDPOINT){ form.hidden=false; fb.hidden=true; } else { form.hidden=true; fb.hidden=false; }
+
+  function checked(n){ return [].slice.call(form.querySelectorAll('[name="'+n+'"]:checked')).map(function(x){return x.value;}); }
+  var TEXT=["school","contact","email","website","maps","instagram","tiktok","schedule","festivals","competitions"];
+  var PICK=["city","year","trial","social","guests","festivals_has","competitions_has"], MULTI=["levels"];
+  function save(){ try{ var o={}; TEXT.forEach(function(k){ o[k]=form.elements[k].value; }); PICK.forEach(function(k){ o[k]=checked(k)[0]||""; }); o.levels=checked("levels").join("|"); localStorage.setItem("lda-apply2",JSON.stringify(o)); }catch(e){} }
+  function restore(){ try{ var o=JSON.parse(localStorage.getItem("lda-apply2")||"{}");
+      TEXT.forEach(function(k){ if(o[k]) form.elements[k].value=o[k]; });
+      PICK.forEach(function(k){ if(o[k]){ var r=form.querySelector('[name="'+k+'"][value="'+o[k].replace(/"/g,"")+'"]'); if(r) r.checked=true; } });
+      (o.levels||"").split("|").forEach(function(v){ var r=v&&form.querySelector('[name="levels"][value="'+v+'"]'); if(r) r.checked=true; }); }catch(e){}
+    ["festivals","competitions"].forEach(reveal); }
+  function reveal(n){ var has=checked(n+"_has")[0]; document.getElementById("rv-"+n).hidden=(has!=="Yes"); }
+  form.addEventListener("input",save); form.addEventListener("change",save);
+
+  function urlOK(v){ return /^https?:\/\/\S+\.\S+/i.test(v); }
+  function setBad(box,bad){ if(box) box.classList.toggle("bad",bad); }
+  function validPane(p){
+    var first=null;
+    [].slice.call(p.querySelectorAll(".fld[data-req]")).forEach(function(box){
+      var n=box.dataset.group, good=checked(n).length>0; setBad(box,!good); if(!good&&!first) first=box.querySelector("input"); });
+    [].slice.call(p.querySelectorAll("input[required]:not([type=radio]):not([type=checkbox])")).forEach(function(el){
+      var v=el.value.trim(), good=!!v;
+      if(good&&el.type==="email") good=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v);
+      if(good&&el.type==="url") good=urlOK(v);
+      setBad(el.closest(".fld"),!good); if(!good&&!first) first=el; });
+    if(p.querySelector('[name="consent"]')){ var c=form.elements.consent, ce=document.getElementById("consent-err"); ce.style.display=c.checked?"none":"block"; if(!c.checked&&!first) first=c; }
+    if(first){ first.focus({preventScroll:false}); return false; } return true; }
+  form.addEventListener("focusout",function(e){ var el=e.target; if(el.name&&el.required&&el.type!=="radio"&&el.type!=="checkbox"&&(el.value||"").length){
+      var v=el.value.trim(), good=(el.type==="email"?/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v):el.type==="url"?urlOK(v):true); setBad(el.closest(".fld"),!good); } });
+
+  function show(i,focus){
+    cur=i; panes.forEach(function(p,k){ p.classList.toggle("on",k===i); });
+    var ch=+panes[i].dataset.ch; dots.forEach(function(d,k){ d.className=k<ch?"done":(k===ch?"on":""); });
+    var pct=Math.round(8+(i/(STEPS-1))*86); bar.firstElementChild.style.width=pct+"%"; bar.setAttribute("aria-valuenow",pct);
+    nEl.textContent=i+1; var rem=(STEPS-i)*8; leftEl.textContent=M().left[rem>75?0:rem>45?1:rem>20?2:3];
+    backB.hidden=(i===0); skipB.hidden=!panes[i].dataset.opt; renderBtn(); err.hidden=true;
+    // pure single-choice screens advance by themselves, so hide the button there
+    nextB.style.display=(panes[i].dataset.auto?"none":"");
+    if(focus){ var h=panes[i].querySelector("h3"); h.focus({preventScroll:true}); form.scrollIntoView({behavior:"smooth",block:"start"}); }
   }
-  document.addEventListener("langchange",function(e){ loadForm(e.detail); });
-  loadForm("de");
+  function renderBtn(){ var last=(cur===STEPS-1); nextB.innerHTML=(last?M().send:M().next)+(last?"":" →"); }
+  function go(){ if(!validPane(panes[cur])) return; if(cur<STEPS-1) show(cur+1,true); else submit(); }
+  nextB.addEventListener("click",go);
+  skipB.addEventListener("click",function(){ show(cur+1,true); });
+  backB.addEventListener("click",function(){ clearTimeout(timer); if(cur>0) show(cur-1,true); });
+  form.addEventListener("keydown",function(e){ if(e.key==="Enter"&&e.target.tagName!=="TEXTAREA"&&e.target.type!=="checkbox"&&e.target.type!=="radio"){ e.preventDefault(); go(); } });
+  form.addEventListener("submit",function(e){ e.preventDefault(); });
+  form.addEventListener("change",function(e){
+    var t=e.target; if(t.type!=="radio"&&t.type!=="checkbox") return;
+    setBad(t.closest(".fld"),false);
+    if(t.name==="festivals_has"||t.name==="competitions_has") reveal(t.name.replace("_has",""));
+    var p=t.closest(".step-pane"); if(!p) return;
+    var advance=(p.dataset.auto&&t.type==="radio")||((t.name==="festivals_has"||t.name==="competitions_has")&&t.value==="No");
+    if(advance){ clearTimeout(timer); timer=setTimeout(function(){ if(cur<STEPS-1&&panes[cur]===p) show(cur+1,true); },320); }
+  });
+
+  function submit(){
+    var f=form.elements; if(f.hp.value) return;
+    nextB.disabled=true; nextB.textContent=M().wait;
+    var body=new URLSearchParams(), v=function(n){ return f[n].value.trim(); };
+    ["school","contact","email","website","maps","instagram","tiktok","schedule"].forEach(function(k){ body.append(k,v(k)); });
+    ["city","year","trial","social","guests"].forEach(function(k){ body.append(k,checked(k)[0]||""); });
+    body.append("levels",checked("levels").join(", "));
+    ["festivals","competitions"].forEach(function(k){ var h=checked(k+"_has")[0]; body.append(k,h==="No"?"No":(v(k)||(h==="Yes"?"Yes":""))); });
+    body.append("language", window.LANG==="en"?"EN":"DE");
+    fetch(FORM_ENDPOINT,{method:"POST",mode:"no-cors",body:body}).then(function(){
+      try{ localStorage.removeItem("lda-apply2"); }catch(e){}
+      form.hidden=true; ok.hidden=false; ok.scrollIntoView({behavior:"smooth",block:"center"});
+    }).catch(function(){ nextB.disabled=false; renderBtn(); err.textContent=M().fail; err.hidden=false; });
+  }
+  document.addEventListener("langchange",function(){ if(!nextB.disabled){ renderBtn(); var rem=(STEPS-cur)*8; leftEl.textContent=M().left[rem>75?0:rem>45?1:rem>20?2:3]; } });
+  restore(); show(0,false);
 
   if(start==="en") setLang("en");
 })();
