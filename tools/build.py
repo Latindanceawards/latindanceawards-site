@@ -649,7 +649,7 @@ page('bewerbung.html',
 # RANKINGS PAGE
 # ======================================================================
 r = T('r')
-CITIES = [('deutschland', 'Deutschland', 'Germany'), ('berlin', 'Berlin', 'Berlin'), ('muenchen', 'München', 'Munich'),
+CITIES = [('deutschland', 'Ganz Deutschland', 'All Germany'), ('berlin', 'Berlin', 'Berlin'), ('muenchen', 'München', 'Munich'),
           ('hamburg', 'Hamburg', 'Hamburg'), ('koeln', 'Köln', 'Cologne'), ('frankfurt', 'Frankfurt', 'Frankfurt'),
           ('duesseldorf', 'Düsseldorf', 'Düsseldorf')]
 tabs_html = '\n'.join(
@@ -816,8 +816,8 @@ R_TEXT = {
  'note_h': ['Deine Schule fehlt noch?', 'Is your school missing?'],
  'note_p': ['Bewirb dich bis zum 30. November kostenlos für die Awards 2026.', 'Enter for the 2026 awards for free by November 30.'],
  'note_btn': ['Kostenlos bewerben', 'Apply for free'],
- 'prelim_badge': ['Vorläufig · kein Endergebnis', 'Preliminary · not the final result'],
- 'prelim_h': ['Teilnehmende Schulen (vorläufige Liste)', 'Participating schools (preliminary list)'],
+ 'prelim_badge': ['Vorläufig · die Schulen sind noch im Wettbewerb', 'Preliminary · schools are still competing'],
+ 'prelim_h': ['Aktuelle Teilnehmer (vorläufig)', 'Current participants (preliminary)'],
  'prelim_p': ['Das ist noch kein Ranking: Die Schulen stehen in alphabetischer Reihenfolge und haben noch keine Punkte. Die Liste wächst, bis die Bewerbungsphase am 30. November endet. Die Platzierungen erscheinen am 20. Dezember 2026.', 'This is not a ranking yet: schools are in alphabetical order and have no scores. The list grows until applications close on November 30. Places are published on December 20, 2026.'],
  'preview': ['Vorschau mit Beispieldaten', 'Preview with sample data'],
  'empty': ['Für diese Stadt gibt es noch keine Ergebnisse.', 'There are no results for this city yet.'],
