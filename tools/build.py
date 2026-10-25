@@ -697,7 +697,8 @@ rank_main = f'''
         <div><b data-u="s">00</b>{r("small", "Sekunden", "seconds")}</div>
       </div>
       <div class="ctas rise d5">
-        <a class="btn btn-gold" href="https://instagram.com/" rel="noopener">{r("span", "Auf Instagram erinnern lassen", "Get notified on Instagram")}</a>
+        <a class="btn btn-gold" href="#ranking">{r("span", "Zwischenstand ansehen ↓", "See the interim standing ↓")}</a>
+        <a class="btn btn-ghost" href="https://instagram.com/" rel="noopener">{r("span", "Auf Instagram erinnern lassen", "Get notified on Instagram")}</a>
         <a class="btn btn-ghost" href="bewerbung.html">{r("span", "Schule kostenlos bewerben", "Enter a school for free")}</a>
       </div>
     </div>
@@ -705,7 +706,7 @@ rank_main = f'''
   </div>
 </section>
 
-<section class="block alt" aria-label="Rankings">
+<section class="block alt" id="ranking" aria-label="Rankings">
   <div class="wrap">
     <div class="tabs" role="tablist" aria-label="Städte / Cities">
 {tabs_html}
@@ -914,28 +915,33 @@ rank_js = r'''
     var list=listFor(c), open=isOpen()&&list.length>0;
     var h=(preview?'<span class="preview-note">'+esc(L("preview"))+'</span>':'')
       +'<h2 class="panel-title">'+esc(title)+'</h2><p class="panel-sub">'+esc(open?L("sub_open"):L("sub_locked"))+'</p>';
-    h+='<div class="podium3">'+podCard(2,open?list[1]:null)+podCard(1,open?list[0]:null)+podCard(3,open?list[2]:null)+'</div>';
-    h+='<ol class="rlist">';
-    for(var i=3;i<10;i++){
-      var e=open?list[i]:null;
-      if(open&&!e) break;
-      if(!e){
-        h+='<li class="rrow"><div class="rr"><span class="pos">'+(i+1)+'</span><span class="blur" style="width:'+(60-i*3)+'%;margin:0"></span></div></li>';
-      } else {
-        var bd='', s=e.scores||{};
-        Object.keys(TX.factors).forEach(function(k){
-          if(s[k]==null) return; var f=TX.factors[k];
-          bd+='<div><b>'+esc(f[window.LANG==="en"?2:1])+'</b> · '+num(s[k])+' / '+f[0]+'<div class="bar"><i style="width:'+Math.min(100,s[k]/f[0]*100)+'%"></i></div></div>';
-        });
-        var links='';
-        if(safeUrl(e.url)) links+='<a href="'+safeUrl(e.url)+'" rel="noopener">'+esc(L("site"))+'</a>';
-        if(safeUrl(e.instagram)) links+='<a href="'+safeUrl(e.instagram)+'" rel="noopener">'+esc(L("insta"))+'</a>';
-        h+='<li><details class="rrow"><summary><span class="pos">'+(i+1)+'</span><span class="nm">'+esc(e.name)
-          +(c==="deutschland"?'<small>'+esc(TX.cities[e.city][window.LANG==="en"?1:0])+'</small>':'')+'</span><span class="pts">'+num(total(e))+'</span></summary>'
-          +'<div class="breakdown">'+bd+(links?'<div class="links">'+links+'</div>':'')+'</div></details></li>';
+    var hasPl=false;
+    if(!open){ Object.keys(CANDIDATES).forEach(function(k){ if((c==="deutschland"||c===k)&&CANDIDATES[k].length) hasPl=true; }); }
+    var locked=!open;
+    if(!(locked&&hasPl)){
+      h+='<div class="podium3">'+podCard(2,open?list[1]:null)+podCard(1,open?list[0]:null)+podCard(3,open?list[2]:null)+'</div>';
+      h+='<ol class="rlist">';
+      for(var i=3;i<10;i++){
+        var e=open?list[i]:null;
+        if(open&&!e) break;
+        if(!e){
+          h+='<li class="rrow"><div class="rr"><span class="pos">'+(i+1)+'</span><span class="blur" style="width:'+(60-i*3)+'%;margin:0"></span></div></li>';
+        } else {
+          var bd='', s=e.scores||{};
+          Object.keys(TX.factors).forEach(function(k){
+            if(s[k]==null) return; var f=TX.factors[k];
+            bd+='<div><b>'+esc(f[window.LANG==="en"?2:1])+'</b> · '+num(s[k])+' / '+f[0]+'<div class="bar"><i style="width:'+Math.min(100,s[k]/f[0]*100)+'%"></i></div></div>';
+          });
+          var links='';
+          if(safeUrl(e.url)) links+='<a href="'+safeUrl(e.url)+'" rel="noopener">'+esc(L("site"))+'</a>';
+          if(safeUrl(e.instagram)) links+='<a href="'+safeUrl(e.instagram)+'" rel="noopener">'+esc(L("insta"))+'</a>';
+          h+='<li><details class="rrow"><summary><span class="pos">'+(i+1)+'</span><span class="nm">'+esc(e.name)
+            +(c==="deutschland"?'<small>'+esc(TX.cities[e.city][window.LANG==="en"?1:0])+'</small>':'')+'</span><span class="pts">'+num(total(e))+'</span></summary>'
+            +'<div class="breakdown">'+bd+(links?'<div class="links">'+links+'</div>':'')+'</div></details></li>';
+        }
       }
+      h+='</ol>';
     }
-    h+='</ol>';
     if(!open){
       var pl=[];
       Object.keys(CANDIDATES).forEach(function(k){ if(c==="deutschland"||c===k) CANDIDATES[k].forEach(function(e){ pl.push(Object.assign({city:k},e)); }); });
