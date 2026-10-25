@@ -542,7 +542,7 @@ app_main = f'''
 
 app_js = r'''
   /* ===== Paste the Google Apps Script web-app URL here (see automation/collect.gs) ===== */
-  var FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbxrokd6j5c-3DgMjxOIEku7nH2aU47mM1Mlu2g4PBDb--usrb1KRVOG2W7QoC-ivCoolQ/exec";
+  var FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbzAANOuM7cA3QgqeXZXOKZEYumNFsENBZaIicJSaJluR90rTl2iw30Sk522vxIurDsg/exec";
 
   var form=document.getElementById("lda-form"), fb=document.getElementById("form-fallback"), ok=document.getElementById("form-ok"),
       err=document.getElementById("form-err"), nextB=document.getElementById("w-next"), backB=document.getElementById("w-back"), skipB=document.getElementById("w-skip"),
