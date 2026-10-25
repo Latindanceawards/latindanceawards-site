@@ -1014,3 +1014,44 @@ h = re.sub(r'<link rel="(canonical|alternate)"[^>]*>\n', '', h)
 # absolute links so the 404 works on any path
 h = h.replace('href="index.html', 'href="/index.html').replace('href="rankings.html', 'href="/rankings.html').replace('href="bewerbung.html', 'href="/bewerbung.html').replace('href="favicon.svg"', 'href="/favicon.svg"').replace('href="apple-touch-icon.png"', 'href="/apple-touch-icon.png"')
 open(p404, 'w', encoding='utf-8').write(h)
+
+# ======================================================================
+# LEGAL PAGES (drafts: noindex, not linked until operator details are filled in)
+# ======================================================================
+def legal(fname, tid, title_de, title_en, h_de, h_en, blocks):
+    L = T(tid)
+    body = ''.join(
+        f'<h2>{L("span", hd, he)}</h2><p>{L("span", bd, be)}</p>' for hd, he, bd, be in blocks)
+    main = f'''
+<section class="page-hero" aria-labelledby="{tid}-t"><div class="wrap"><div>
+  <h1 id="{tid}-t">{L("span", h_de, h_en)}</h1>
+  <p class="lede">{L("span", "ENTWURF: Die Felder in [eckigen Klammern] müssen vor der Veröffentlichung ausgefüllt werden.", "DRAFT: fields in [square brackets] must be filled in before publishing.")}</p>
+</div></div></section>
+<section class="section"><div class="wrap" style="max-width:760px;line-height:1.7">{body}</div></section>
+'''
+    page(fname, title_de, title_de, title_en, title_en, fname, main, L.en, '', schema=[])
+    pth = os.path.join(ROOT, fname)
+    h = open(pth, encoding='utf-8').read()
+    h = re.sub(r'<meta name="robots" content="[^"]*">', '<meta name="robots" content="noindex">', h)
+    open(pth, 'w', encoding='utf-8').write(h)
+
+legal('impressum.html', 'i', 'Impressum · Latin Dance Awards', 'Legal notice · Latin Dance Awards', 'Impressum', 'Legal notice', [
+ ('Angaben gemäß § 5 DDG', 'Information pursuant to § 5 DDG',
+  '[Vor- und Nachname bzw. Firma und Rechtsform] · [Straße und Hausnummer] · [PLZ und Ort] · [Land]',
+  '[Full name or company and legal form] · [Street and number] · [Postcode and city] · [Country]'),
+ ('Kontakt', 'Contact', 'E-Mail: info@latindanceawards.com', 'Email: info@latindanceawards.com'),
+ ('Umsatzsteuer-ID', 'VAT ID', '[Umsatzsteuer-Identifikationsnummer, falls vorhanden]', '[VAT identification number, if any]'),
+ ('Verantwortlich für den Inhalt', 'Responsible for content', '[Name und Anschrift wie oben]', '[Name and address as above]'),
+ ('Unabhängigkeit', 'Independence', 'Latin Dance Awards ist ein unabhängiges Ranking. Die Platzierung kann nicht gekauft werden. Alle Bewertungen beruhen auf öffentlich zugänglichen Angaben.', 'Latin Dance Awards is an independent ranking. Places cannot be bought. All scores are based on publicly available information.'),
+])
+
+legal('datenschutz.html', 'd', 'Datenschutzerklärung · Latin Dance Awards', 'Privacy policy · Latin Dance Awards', 'Datenschutzerklärung', 'Privacy policy', [
+ ('Verantwortlicher', 'Controller', '[Name und Anschrift wie im Impressum] · E-Mail: info@latindanceawards.com', '[Name and address as in the legal notice] · Email: info@latindanceawards.com'),
+ ('Hosting', 'Hosting', 'Diese Website wird bei Cloudflare, Inc. gehostet. Dabei werden technisch notwendige Daten (z. B. IP-Adresse, Zeitpunkt, aufgerufene Seite) in Server-Logs verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (sicherer und stabiler Betrieb).', 'This website is hosted by Cloudflare, Inc. Technically necessary data (e.g. IP address, time, page requested) is processed in server logs. Legal basis: Art. 6(1)(f) GDPR (secure and stable operation).'),
+ ('Bewerbungsformular', 'Application form', 'Wenn du dich bewirbst, speichern wir deine Angaben (Schulname, Stadt, Ansprechpartner, E-Mail, Angaben zu Kursen, Events und Links) in einer Google-Tabelle (Google Sheets / Apps Script, Google Ireland Ltd.). Wir nutzen sie ausschließlich, um deine Bewerbung zu prüfen und dich zu kontaktieren. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b und f DSGVO. Wir löschen die Daten spätestens 12 Monate nach Ende der Awards-Edition, sofern keine gesetzliche Pflicht entgegensteht.', 'When you apply, we store your details (school name, city, contact person, email, information on classes, events and links) in a Google spreadsheet (Google Sheets / Apps Script, Google Ireland Ltd.). We use them only to review your application and contact you. Legal basis: Art. 6(1)(b) and (f) GDPR. We delete the data at the latest 12 months after the end of the awards edition unless a legal duty requires otherwise.'),
+ ('Öffentlich zugängliche Daten über Schulen', 'Publicly available data about schools', 'Für das Ranking verwenden wir Angaben, die Schulen selbst öffentlich auf ihren Websites und Profilen veröffentlicht haben (z. B. Kursangebot, Gründungsjahr). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Wenn du Angaben korrigieren oder entfernen lassen möchtest, schreibe uns an info@latindanceawards.com.', 'For the ranking we use information schools have published themselves on their websites and profiles (e.g. classes, founding year). Legal basis: Art. 6(1)(f) GDPR. To correct or remove information, email info@latindanceawards.com.'),
+ ('Schriftarten', 'Fonts', 'Die Website lädt Schriftarten von Google Fonts (Google Ireland Ltd.). Dabei wird deine IP-Adresse an Google übertragen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. [Prüfen: Schriftarten idealerweise lokal einbinden.]', 'The website loads fonts from Google Fonts (Google Ireland Ltd.), which transmits your IP address to Google. Legal basis: Art. 6(1)(f) GDPR. [Review: ideally self-host the fonts.]'),
+ ('E-Mail-Kontakt', 'Email contact', 'Wenn du uns schreibst, verarbeiten wir deine Nachricht, um sie zu beantworten. Unser E-Mail-Dienst ist Spacemail (Namecheap/Spaceship).', 'If you write to us, we process your message to answer it. Our email provider is Spacemail (Namecheap/Spaceship).'),
+ ('Deine Rechte', 'Your rights', 'Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Du kannst dich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren. Schreibe uns einfach an info@latindanceawards.com.', 'You have the right of access, rectification, erasure, restriction, data portability and objection. You may also lodge a complaint with a data protection authority. Just email info@latindanceawards.com.'),
+ ('Cookies und Tracking', 'Cookies and tracking', 'Wir setzen derzeit keine Tracking- oder Werbe-Cookies ein. [Prüfen und anpassen, falls später Analyse-Tools hinzukommen.]', 'We currently do not use tracking or advertising cookies. [Review and update if analytics tools are added later.]'),
+])
