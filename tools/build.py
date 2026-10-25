@@ -201,7 +201,7 @@ PAGE_CSS = r'''
 .plist li small{color:var(--muted);font-size:13px}
 .ilist{list-style:none;display:grid;gap:12px;margin:0;padding:0}
 .irk{border-radius:20px;background:var(--card);border:1px solid var(--line);transition:border-color .25s,transform .25s}
-.irk:hover{border-color:rgba(228,185,91,.5)}
+.irk:hover{border:1px solid rgba(228,185,91,.5)}
 .irk[open]{border-color:rgba(228,185,91,.6)}
 .irk.g1{background:linear-gradient(170deg,var(--gold-soft),var(--card) 65%);border-color:rgba(228,185,91,.55)}
 .irk summary{display:grid;grid-template-columns:48px minmax(0,1fr) auto 22px;align-items:center;gap:16px;padding:18px 22px 18px;cursor:pointer;list-style:none}
@@ -224,7 +224,8 @@ PAGE_CSS = r'''
 .irk .iwhy b{color:var(--cream);font-weight:600}
 .irk .iwhy .bar{height:4px;margin-top:6px;border-radius:4px;background:rgba(255,255,255,.07);overflow:hidden}
 .irk .iwhy .bar i{display:block;height:100%;background:var(--gold)}
-.irk .iwhy .tbc .chip{display:inline-block;padding:2px 10px;border-radius:999px;border:1px dashed rgba(228,185,91,.55);color:var(--gold-light);font-size:12px;font-weight:600}
+.irk .iwhy .tbc .chip.st{background:rgba(228,185,91,.16);color:#E4B95B;border:1px solid rgba(228,185,91,.5)}
+  .tbc .chip{display:inline-block;padding:2px 10px;border-radius:999px;border:1px dashed rgba(228,185,91,.55);color:var(--gold-light);font-size:12px;font-weight:600}
 .irk .iwhy .bar.dash{background:none;border-top:2px dashed rgba(255,255,255,.14);height:0;margin-top:9px}
 .irk .iwhy .lk{grid-column:1/-1}
 .irk .iwhy .lk a{color:var(--gold-light);font-weight:600;text-decoration:none}
@@ -962,7 +963,7 @@ rank_js = r'''
     berlin: [
       {name:"BachatAcademy", sc:[0, 10, 7, 19.9, 6.3, 8.6], fx:["5,0 ★ · 32","2.857 · 238"], url:"https://www.bachatacademy.de/"},
       {name:"La Mambita", sc:[10, 8, 7, 22.4, 10, 7.9], fx:["4,9 ★ · 252","1.642 · 138"], url:"https://www.mambita.de/"},
-      {name:"Zapatissimo", sc:[0, 8, 7, 20.9, 9.9, 7.8], fx:["4,8 ★ · 234","2.583 · 48"], url:"https://www.zapatissimo.de/"},
+      {name:"Zapatissimo", st:["Sensual"], sc:[0, 8, 7, 20.9, 9.9, 7.8], fx:["4,8 ★ · 234","2.583 · 48"], url:"https://www.zapatissimo.de/"},
       {name:"Cumbancha Tanzschule", sc:[10, 10, 4, 23.9, 9.9, 9.7], fx:["5,0 ★ · 243","5.739 · 1.483"], url:"https://www.cumbancha.de/"},
       {name:"Tumba'o Danzas", sc:[0, 0, 3, 13.8, 1.3, 5.8], fx:["5,0 ★ · 1","186 · 54"], url:"https://tumbao-danzas.de/"}
     ],
@@ -973,13 +974,13 @@ rank_js = r'''
       {name:"Salsa Club Munich", sc:[5, 7, 5, 19.9, 8.2, 9.6], fx:["4,8 ★ · 90","8.876 · 427"], url:"http://www.salsaclub-munich.de/"}
     ],
     hamburg: [
-      {name:"A Bailar Hamburg", sc:[0, 10, 9, 18.4, 7.9, 9.3], fx:["4,7 ★ · 77","4.363 · 532"], url:"https://www.abailar-hamburg.de/"},
+      {name:"A Bailar Hamburg", st:["Dominicana"], sc:[0, 10, 9, 18.4, 7.9, 9.3], fx:["4,7 ★ · 77","4.363 · 532"], url:"https://www.abailar-hamburg.de/"},
       {name:"SalsaHH", sc:[10, 7, 7, 16.1, 6.2, 0], fx:["4,6 ★ · 30","–"], url:"http://www.salsahh.de/"},
-      {name:"ICB Studios", sc:[0, 7, 7, 20.0, 6.4, 8.2], fx:["5,0 ★ · 33","2.579 · 116"], url:"https://icbstudios.com/"}
+      {name:"ICB Studios", st:["Sensual"], sc:[0, 7, 7, 20.0, 6.4, 8.2], fx:["5,0 ★ · 33","2.579 · 116"], url:"https://icbstudios.com/"}
     ],
     koeln: [
-      {name:"La Danza Tanzzentrum", sc:[0, 5, 5, 15.1, 8.1, 9.9], fx:["4,4 ★ · 87","7.376 · 980"], url:"https://la-danza.de/"},
-      {name:"Bachata Mastery Köln", sc:[0, 10, 9, 24.2, 10, 9.3], fx:["5,0 ★ · 327","5.100 · 493"], url:"https://www.bachatakoeln.de/bachata-kurse-koeln"},
+      {name:"La Danza Tanzzentrum", st:["Sensual","Dominicana"], sc:[0, 5, 5, 15.1, 8.1, 9.9], fx:["4,4 ★ · 87","7.376 · 980"], url:"https://la-danza.de/"},
+      {name:"Bachata Mastery Köln", st:["Sensual"], sc:[0, 10, 9, 24.2, 10, 9.3], fx:["5,0 ★ · 327","5.100 · 493"], url:"https://www.bachatakoeln.de/bachata-kurse-koeln"},
       {name:"LatinSalsa", sc:[0, 10, 6, 17.9, 6.2, 0], fx:["4,8 ★ · 30","–"], url:"https://latinsalsa.de/"}
     ],
     frankfurt: [
@@ -1085,6 +1086,8 @@ rank_js = r'''
           var u=safeUrl(e.url), g=i<3?" g"+(i+1):"", why="";
           FAC.forEach(function(f,k){ var fx=(k===3?e.fx[0]:(k===4?e.fx[0].split(" · ")[1]:(k===5?e.fx[1]:"")));
             why+='<div><b>'+esc(f)+'</b> · '+num(e.sc[k])+' / '+MAX[k]+(fx&&fx!=="–"?' <small>('+esc(k===5?(en?"followers · posts: ":"Follower · Posts: ")+fx:fx)+')</small>':'')+'<div class="bar"><i style="width:'+(e.sc[k]/MAX[k]*100)+'%"></i></div></div>'; });
+          var sty=e.st&&e.st.length?e.st.map(function(x){return '<span class="chip st">'+esc(x)+'</span>';}).join(" "):'<span class="chip">'+esc(en?"To be confirmed":"Zu bestätigen")+'</span>';
+          why+='<div class="tbc"><b>'+esc(en?"Style variety (Dominicana, Sensual, Moderna)":"Stilvielfalt (Dominicana, Sensual, Moderna)")+'</b> · '+sty+'</div>';
           var TBC=en?[["Festivals","15"],["Recent reviews","5"],["Competitions entered","5"],["Competitions won","5"]]:[["Festivals","15"],["Aktuelle Bewertungen","5"],["Teilnahme an Wettbewerben","5"],["Wettbewerbe gewonnen","5"]];
           TBC.forEach(function(x){ why+='<div class="tbc"><b>'+esc(x[0])+'</b> · <span class="chip">'+esc(en?"To be confirmed":"Zu bestätigen")+'</span><div class="bar dash"></div></div>'; });
           why+='<div class="lk" style="color:var(--muted)">'+esc(en?"Not scored yet. Schools confirm these with links when they apply.":"Noch ohne Punkte. Schulen bestätigen diese Angaben mit Links bei der Bewerbung.")+' <a href="bewerbung.html">'+esc(en?"Confirm now":"Jetzt bestätigen")+' →</a></div>';
