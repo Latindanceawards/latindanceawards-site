@@ -224,6 +224,17 @@ PAGE_CSS = r'''
 .irk .iwhy b{color:var(--cream);font-weight:600}
 .irk .iwhy .bar{height:4px;margin-top:6px;border-radius:4px;background:rgba(255,255,255,.07);overflow:hidden}
 .irk .iwhy .bar i{display:block;height:100%;background:var(--gold)}
+.vote [hidden],.vote[hidden]{display:none!important}
+.votebanner{margin:0 0 16px;padding:12px 16px;border-radius:14px;border:1px solid rgba(228,185,91,.35);background:rgba(228,185,91,.07);color:var(--cream);font-size:14px;line-height:1.5}
+.votebanner b{color:var(--gold-light)}
+.irk .iwhy .vote{grid-column:1/-1;margin-top:6px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08)}
+.vote .vform{display:grid;gap:10px;max-width:420px}
+.vote .vform label{display:grid;gap:6px;color:var(--cream);font-size:14px}
+.vote .vform input[type=email]{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(246,231,211,.35);background:rgba(255,255,255,.06);color:var(--cream);font:inherit;font-size:16px}
+.vote .vform small,.vote .vmsg{color:var(--muted);font-size:13px;line-height:1.5}
+.vote .vmsg{margin:10px 0 0;color:var(--gold-light)}
+.vote .vform button[type=submit]{justify-content:center}
+.vote button.btn{font:inherit;font-weight:600;cursor:pointer;-webkit-appearance:none;appearance:none}
 button.btn.showall{background:transparent;-webkit-appearance:none;appearance:none;font:inherit;font-weight:600;color:var(--cream);border:1px solid rgba(246,231,211,.35);cursor:pointer}
 .showall:hover{border-color:var(--gold);color:var(--gold-light)}
 .irk .iwhy .tbc .chip.st{background:rgba(228,185,91,.16);color:#E4B95B;border:1px solid rgba(228,185,91,.5)}
@@ -931,6 +942,15 @@ R_TEXT = {
  'note_h': ['Deine Schule fehlt noch?', 'Is your school missing?'],
  'note_p': ['Bewirb dich bis zum 30. November kostenlos für die Awards 2026.', 'Enter for the 2026 awards for free by November 30.'],
  'note_btn': ['Kostenlos bewerben', 'Apply for free'],
+ 'vote_h': ['Publikumspreis', 'Audience Award'],
+ 'vote_banner': ['Publikumspreis: Öffne eine Schule und stimme ab. Eine Stimme pro Person, bestätigt per E-Mail. Der Publikumspreis ist unabhängig von den 100 Punkten, das Ergebnis kommt am 20. Dezember.', 'Audience Award: open a school and vote. One vote per person, confirmed by email. It is separate from the 100 points, and the result comes on December 20.'],
+ 'vote_btn': ['Für diese Schule abstimmen', 'Vote for this school'],
+ 'vote_mail': ['Deine E-Mail-Adresse', 'Your email address'],
+ 'vote_send': ['Stimme abschicken', 'Send my vote'],
+ 'vote_note': ['Eine Stimme pro Person. Wir schicken dir einen Bestätigungslink. Deine E-Mail nutzen wir nur dafür und zum Entfernen doppelter Stimmen.', 'One vote per person. We email you a confirmation link. We use your email only for that and to remove duplicate votes.'],
+ 'vote_ok': ['Fast geschafft: Wir haben dir eine E-Mail geschickt. Klicke auf den Link darin, damit deine Stimme zählt. Schau auch im Spam-Ordner nach.', 'Almost done: we sent you an email. Click the link in it so your vote counts. Check your spam folder too.'],
+ 'vote_err': ['Das hat nicht geklappt. Bitte prüfe deine E-Mail-Adresse und versuche es noch einmal.', 'That did not work. Please check your email address and try again.'],
+ 'vote_done': ['Du hast auf diesem Gerät schon abgestimmt. Danke!', 'You already voted on this device. Thank you!'],
  'prelim_badge': ['Zwischenstand · kein Endergebnis, die Schulen sind noch im Wettbewerb', 'Interim standing · not final, schools are still competing'],
  'prelim_h': ['So entsteht der Zwischenstand', 'How the interim standing is calculated'],
  'prelim_p': ['Dieselbe 100-Punkte-Skala wie im Endergebnis. Bisher gewertet sind 6 von 9 Kriterien (zusammen höchstens 75 Punkte): Google-Bewertung und Anzahl der Bewertungen (Stand heute, aus Google Maps), Jahre im Unterricht, Einsteigerangebot, Events und Gastlehrer sowie Social Media (Follower und Beiträge auf Instagram). Festivalauftritte, aktuelle Bewertungen und Wettbewerbe sind als „zu bestätigen“ markiert und zählen vorerst 0. Alle Daten sind öffentlich. Weitere Schulen können sich bis 30. November bewerben, und Schulen können Angaben mit Links ergänzen. Die Platzierungen können sich noch ändern. Endergebnis am 20. Dezember 2026.', 'The same 100-point scale as the final result. So far 6 of 9 criteria are scored (75 points at most together): Google rating and number of reviews (as of today, from Google Maps), years teaching, beginner offer, events and guest teachers, and social media (Instagram followers and posts). Festival appearances, recent reviews and competitions are marked “to be confirmed” and score 0 for now. All data is public. More schools can apply until November 30, and schools can add information with links. Positions can still change. Final results on December 20, 2026.'],
@@ -1018,6 +1038,7 @@ rank_js = r'''
       {name:"Salsa-Teaching", sc:[0, 7, 3, 19.9, 6.5, 6.8], fx:["4,9 ★ · 35","1.192 · 42"], url:"http://www.salsa-teaching.de/"}
     ]
   };
+  var VOTE_ENDPOINT = "https://script.google.com/macros/s/AKfycbzAANOuM7cA3QgqeXZXOKZEYumNFsENBZaIicJSaJluR90rTl2iw30Sk522vxIurDsg/exec";
   var PUBLISH_DATE = new Date("2026-12-20T19:00:00+01:00");
 
   var TX = ''' + json.dumps(R_TEXT, ensure_ascii=False) + r''';
@@ -1106,7 +1127,7 @@ rank_js = r'''
         var FAC=en?["Years teaching","Beginner offer","Events and guests","Google rating","Number of reviews","Social media"]:["Jahre im Unterricht","Einsteigerangebot","Events und Gastlehrer","Google-Bewertung","Anzahl Bewertungen","Social Media"];
         var CROWN='<svg viewBox="0 0 26 20" aria-hidden="true"><path d="M2 17 0.5 5l6.5 5L13 1l6 9 6.500-5L24 17z" fill="#E4B95B" stroke="#F6DFA2" stroke-width="1" stroke-linejoin="round"/><rect x="2" y="17.5" width="22" height="2" rx="1" fill="#C9962F"/></svg>';
         var MAX=[10,10,10,25,10,10], NYC=en?"Not counted yet: festivals (15), recent reviews (5), competitions (5)":"Noch nicht gewertet: Festivals (15), aktuelle Bewertungen (5), Wettbewerbe (5)";
-        h+='<div class="prelim"><span class="prelim-badge">'+esc(L("prelim_badge"))+'</span><ol class="ilist">';
+        h+='<div class="prelim"><span class="prelim-badge">'+esc(L("prelim_badge"))+'</span><p class="votebanner"><b>&#9733; '+esc(L("vote_h"))+'</b> · '+esc(L("vote_banner"))+'</p><ol class="ilist">';
         pl.forEach(function(e,i){
           var u=safeUrl(e.url), g=i<3?" g"+(i+1):"", why="";
           FAC.forEach(function(f,k){ var fx=(k===3?e.fx[0]:(k===4?e.fx[0].split(" · ")[1]:(k===5?e.fx[1]:"")));
@@ -1116,6 +1137,8 @@ rank_js = r'''
           var TBC=en?[["Festivals","15"],["Recent reviews","5"],["Competitions entered","5"],["Competitions won","5"]]:[["Festivals","15"],["Aktuelle Bewertungen","5"],["Teilnahme an Wettbewerben","5"],["Wettbewerbe gewonnen","5"]];
           TBC.forEach(function(x){ why+='<div class="tbc"><b>'+esc(x[0])+'</b> · <span class="chip">'+esc(en?"To be confirmed":"Zu bestätigen")+'</span><div class="bar dash"></div></div>'; });
           why+='<div class="lk" style="color:var(--muted)">'+esc(en?"Not scored yet. Schools confirm these with links when they apply.":"Noch ohne Punkte. Schulen bestätigen diese Angaben mit Links bei der Bewerbung.")+' <a href="bewerbung.html">'+esc(en?"Confirm now":"Jetzt bestätigen")+' →</a></div>';
+          why+='<div class="vote"><button type="button" class="btn btn-gold vbtn" data-s="'+esc(e.name)+'" data-c="'+cn(e)+'">&#9733; '+esc(L("vote_btn"))+'</button>'
+            +'<form class="vform" hidden novalidate><input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px"><label>'+esc(L("vote_mail"))+'<input type="email" name="email" required autocomplete="email" inputmode="email"></label><button type="submit" class="btn btn-gold">'+esc(L("vote_send"))+'</button><small>'+esc(L("vote_note"))+'</small></form><p class="vmsg" role="status" hidden></p></div>';
           if(u) why+='<div class="lk"><a href="'+u+'" rel="noopener">'+esc(L("site"))+' →</a></div>';
           h+='<li'+(i>=10?' class="more" hidden':'')+'><details class="irk'+g+'"><summary><span class="rk">'+(i===0?CROWN+'<i class="sp a"></i><i class="sp b"></i><i class="sp c"></i><i class="sp d"></i>':'')+(i+1)+'</span><span class="who"><b>'+esc(e.name)+'</b>'
             +(c==="deutschland"?'<small>'+cn(e)+'</small>':'')+'</span><span class="score">'+num(e.pts)+'<small> / 100</small></span><span class="meter"><i style="width:'+e.pts+'%"></i></span></summary>'
@@ -1130,6 +1153,16 @@ rank_js = r'''
       h+='<div class="note-card"><div><h3>'+esc(L("note_h"))+'</h3><p>'+esc(L("note_p"))+'</p></div><a class="btn btn-gold" href="bewerbung.html">'+esc(L("note_btn"))+'</a></div>';
     }
     panel.innerHTML=h;
+    var voted=false; try{ voted=!!localStorage.getItem("lda-voted"); }catch(x){}
+    panel.querySelectorAll(".vote").forEach(function(v){ if(voted){ var m=v.querySelector(".vmsg"); v.querySelector(".vbtn").hidden=true; m.textContent=L("vote_done"); m.hidden=false; } });
+    panel.querySelectorAll(".vbtn").forEach(function(b){ b.addEventListener("click",function(){ var f=b.parentNode.querySelector(".vform"); f.hidden=false; b.hidden=true; f.elements.email.focus(); }); });
+    panel.querySelectorAll(".vform").forEach(function(f){ f.addEventListener("submit",function(ev){ ev.preventDefault();
+      var v=f.parentNode, b=v.querySelector(".vbtn"), msg=v.querySelector(".vmsg"), em=f.elements.email.value.trim();
+      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){ msg.textContent=L("vote_err"); msg.hidden=false; return; }
+      var sub=f.querySelector("button[type=submit]"); sub.disabled=true;
+      var body=new URLSearchParams(); body.append("action","vote"); body.append("school",b.getAttribute("data-s")); body.append("city",b.getAttribute("data-c")); body.append("email",em); body.append("hp",f.elements.hp.value); body.append("language",window.LANG==="en"?"EN":"DE");
+      fetch(VOTE_ENDPOINT,{method:"POST",mode:"no-cors",body:body}).then(function(){ try{ localStorage.setItem("lda-voted","1"); }catch(x){} f.hidden=true; msg.textContent=L("vote_ok"); msg.hidden=false; }).catch(function(){ sub.disabled=false; msg.textContent=L("vote_err"); msg.hidden=false; });
+    }); });
     var sa=panel.querySelector(".showall"); if(sa) sa.addEventListener("click",function(){ panel.querySelectorAll("li.more").forEach(function(l){ l.hidden=false; }); sa.remove(); });
     try{ if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){ panel.querySelectorAll(".irk .score").forEach(function(el){ var tn=el.firstChild, to=parseFloat(String(tn.nodeValue).replace(",",".")); if(!(to>0)) return; var t0=null; function st(ts){ t0=t0||ts; var k=Math.min(1,(ts-t0)/1200), v=to*(1-Math.pow(1-k,3)); tn.nodeValue=num(v); if(k<1) requestAnimationFrame(st); } requestAnimationFrame(st); }); } }catch(e){}
     panel.setAttribute("aria-labelledby","tab-"+c);
@@ -1229,6 +1262,7 @@ legal('datenschutz.html', 'd', 'Datenschutzerklärung · Latin Dance Awards', 'P
  ('Verantwortlicher', 'Controller', '[Name und Anschrift wie im Impressum] · E-Mail: info@latindanceawards.com', '[Name and address as in the legal notice] · Email: info@latindanceawards.com'),
  ('Hosting', 'Hosting', 'Diese Website wird bei Cloudflare, Inc. gehostet. Dabei werden technisch notwendige Daten (z. B. IP-Adresse, Zeitpunkt, aufgerufene Seite) in Server-Logs verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (sicherer und stabiler Betrieb).', 'This website is hosted by Cloudflare, Inc. Technically necessary data (e.g. IP address, time, page requested) is processed in server logs. Legal basis: Art. 6(1)(f) GDPR (secure and stable operation).'),
  ('Bewerbungsformular', 'Application form', 'Wenn du dich bewirbst, speichern wir deine Angaben (Schulname, Stadt, Ansprechpartner, E-Mail, Angaben zu Kursen, Events und Links) in einer Google-Tabelle (Google Sheets / Apps Script, Google Ireland Ltd.). Wir nutzen sie ausschließlich, um deine Bewerbung zu prüfen und dich zu kontaktieren. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b und f DSGVO. Wir löschen die Daten spätestens 12 Monate nach Ende der Awards-Edition, sofern keine gesetzliche Pflicht entgegensteht.', 'When you apply, we store your details (school name, city, contact person, email, information on classes, events and links) in a Google spreadsheet (Google Sheets / Apps Script, Google Ireland Ltd.). We use them only to review your application and contact you. Legal basis: Art. 6(1)(b) and (f) GDPR. We delete the data at the latest 12 months after the end of the awards edition unless a legal duty requires otherwise.'),
+ ('Publikumspreis (Abstimmung)', 'Audience Award (voting)', 'Wenn du beim Publikumspreis abstimmst, speichern wir deine E-Mail-Adresse, die gewählte Schule und den Zeitpunkt in einer Google-Tabelle (Google Sheets / Apps Script, Google Ireland Ltd.) und senden dir einen Bestätigungslink per E-Mail. Wir nutzen die Daten nur, um pro Person eine Stimme zu zählen und doppelte oder missbräuchliche Stimmen zu entfernen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a und f DSGVO. Die Daten werden nach Abschluss der Auswertung gelöscht. [Löschfrist prüfen.]', 'When you vote in the Audience Award, we store your email address, the chosen school and the time in a Google spreadsheet (Google Sheets / Apps Script, Google Ireland Ltd.) and email you a confirmation link. We use the data only to count one vote per person and to remove duplicate or abusive votes. Legal basis: Art. 6(1)(a) and (f) GDPR. The data is deleted after the results are evaluated. [Review retention period.]'),
  ('Öffentlich zugängliche Daten über Schulen', 'Publicly available data about schools', 'Für das Ranking verwenden wir Angaben, die Schulen selbst öffentlich auf ihren Websites und Profilen veröffentlicht haben (z. B. Kursangebot, Gründungsjahr). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Wenn du Angaben korrigieren oder entfernen lassen möchtest, schreibe uns an info@latindanceawards.com.', 'For the ranking we use information schools have published themselves on their websites and profiles (e.g. classes, founding year). Legal basis: Art. 6(1)(f) GDPR. To correct or remove information, email info@latindanceawards.com.'),
  ('Schriftarten', 'Fonts', 'Die Website lädt Schriftarten von Google Fonts (Google Ireland Ltd.). Dabei wird deine IP-Adresse an Google übertragen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. [Prüfen: Schriftarten idealerweise lokal einbinden.]', 'The website loads fonts from Google Fonts (Google Ireland Ltd.), which transmits your IP address to Google. Legal basis: Art. 6(1)(f) GDPR. [Review: ideally self-host the fonts.]'),
  ('E-Mail-Kontakt', 'Email contact', 'Wenn du uns schreibst, verarbeiten wir deine Nachricht, um sie zu beantworten. Unser E-Mail-Dienst ist Spacemail (Namecheap/Spaceship).', 'If you write to us, we process your message to answer it. Our email provider is Spacemail (Namecheap/Spaceship).'),
