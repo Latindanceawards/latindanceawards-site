@@ -224,6 +224,8 @@ PAGE_CSS = r'''
 .irk .iwhy b{color:var(--cream);font-weight:600}
 .irk .iwhy .bar{height:4px;margin-top:6px;border-radius:4px;background:rgba(255,255,255,.07);overflow:hidden}
 .irk .iwhy .bar i{display:block;height:100%;background:var(--gold)}
+button.btn.showall{background:transparent;-webkit-appearance:none;appearance:none;font:inherit;font-weight:600;color:var(--cream);border:1px solid rgba(246,231,211,.35);cursor:pointer}
+.showall:hover{border-color:var(--gold);color:var(--gold-light)}
 .irk .iwhy .tbc .chip.st{background:rgba(228,185,91,.16);color:#E4B95B;border:1px solid rgba(228,185,91,.5)}
   .tbc .chip{display:inline-block;padding:2px 10px;border-radius:999px;border:1px dashed rgba(228,185,91,.55);color:var(--gold-light);font-size:12px;font-weight:600}
 .irk .iwhy .bar.dash{background:none;border-top:2px dashed rgba(255,255,255,.14);height:0;margin-top:9px}
