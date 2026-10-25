@@ -199,6 +199,9 @@ PAGE_CSS = r'''
 .plist li a,.plist li span.n{font-weight:600;color:var(--cream);text-decoration:none}
 .plist li a:hover{color:var(--gold-light)}
 .plist li small{color:var(--muted);font-size:13px}
+.plist li{position:relative;padding-left:52px}
+.plist .ipos{position:absolute;left:16px;top:12px;font-family:var(--serif);font-size:24px;color:var(--gold-light);line-height:1}
+.plist .ipts{color:var(--gold-light);font-size:14px;font-weight:600;margin-top:2px}
 .note-card{margin-top:36px;padding:30px 32px;border-radius:22px;background:var(--card);border:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
 .note-card h3{font-family:var(--serif);font-weight:500;font-size:26px;margin-bottom:4px}
 .note-card p{color:var(--muted)}
@@ -816,9 +819,9 @@ R_TEXT = {
  'note_h': ['Deine Schule fehlt noch?', 'Is your school missing?'],
  'note_p': ['Bewirb dich bis zum 30. November kostenlos für die Awards 2026.', 'Enter for the 2026 awards for free by November 30.'],
  'note_btn': ['Kostenlos bewerben', 'Apply for free'],
- 'prelim_badge': ['Vorläufig · die Schulen sind noch im Wettbewerb', 'Preliminary · schools are still competing'],
- 'prelim_h': ['Aktuelle Teilnehmer (vorläufig)', 'Current participants (preliminary)'],
- 'prelim_p': ['Das ist noch kein Ranking: Die Schulen stehen in alphabetischer Reihenfolge und haben noch keine Punkte. Die Liste wächst, bis die Bewerbungsphase am 30. November endet. Die Platzierungen erscheinen am 20. Dezember 2026.', 'This is not a ranking yet: schools are in alphabetical order and have no scores. The list grows until applications close on November 30. Places are published on December 20, 2026.'],
+ 'prelim_badge': ['Zwischenstand · kein Endergebnis, die Schulen sind noch im Wettbewerb', 'Interim standing · not final, schools are still competing'],
+ 'prelim_h': ['Zwischenstand der Teilnehmer', 'Interim standing of participants'],
+ 'prelim_p': ['Vorläufige Punkte (maximal 40) aus vier öffentlich prüfbaren Angaben der Schulen selbst: Jahre im Unterricht, Einsteigerangebot, Kursstufen sowie Events und Gastlehrer. Das ist nicht die endgültige Wertung: Google-Bewertungen, Festivalauftritte und weitere Kriterien (100 Punkte) kommen dazu, und weitere Schulen können sich bis 30. November bewerben. Die Platzierungen können sich noch ändern. Endergebnis am 20. Dezember 2026.', 'Interim points (maximum 40) from four publicly verifiable facts published by the schools themselves: years teaching, beginner offer, course levels, and events and guest teachers. This is not the final score: Google ratings, festival appearances and other criteria (100 points) are added, and more schools can apply until November 30. Positions can still change. Final results on December 20, 2026.'],
  'preview': ['Vorschau mit Beispieldaten', 'Preview with sample data'],
  'empty': ['Für diese Stadt gibt es noch keine Ergebnisse.', 'There are no results for this city yet.'],
  'cities': {slug: [de, en] for slug, de, en in CITIES},
@@ -848,16 +851,16 @@ rank_js = r'''
   /* PRELIMINARY LIST: schools verified on their own website. Alphabetical, no scores. Not a ranking. */
   var CANDIDATES = {
     berlin: [
-      {name:"BachatAcademy", url:"https://www.bachatacademy.de/"},
-      {name:"La Mambita", url:"https://www.mambita.de/"},
-      {name:"Zapatissimo", url:"https://www.zapatissimo.de/"}
+      {name:"BachatAcademy", pts:23, url:"https://www.bachatacademy.de/"},
+      {name:"La Mambita", pts:31, url:"https://www.mambita.de/"},
+      {name:"Zapatissimo", pts:23, url:"https://www.zapatissimo.de/"}
     ],
-    muenchen: [ {name:"Salsea Dance Academy", url:"https://salsea.de/"} ],
-    hamburg: [ {name:"A Bailar Hamburg", url:"https://www.abailar-hamburg.de/"} ],
-    koeln: [ {name:"La Danza Tanzzentrum", url:"https://la-danza.de/"} ],
+    muenchen: [ {name:"Salsea Dance Academy", pts:30, url:"https://salsea.de/"} ],
+    hamburg: [ {name:"A Bailar Hamburg", pts:25, url:"https://www.abailar-hamburg.de/"} ],
+    koeln: [ {name:"La Danza Tanzzentrum", pts:14, url:"https://la-danza.de/"} ],
     frankfurt: [
-      {name:"FluxDance", url:"https://www.fluxdance.de/"},
-      {name:"LaCalidad Dance Center", url:"https://www.lacalidad.de/"}
+      {name:"FluxDance", pts:28, url:"https://www.fluxdance.de/"},
+      {name:"LaCalidad Dance Center", pts:23, url:"https://www.lacalidad.de/"}
     ],
     duesseldorf: []
   };
@@ -936,13 +939,13 @@ rank_js = r'''
     if(!open){
       var pl=[];
       Object.keys(CANDIDATES).forEach(function(k){ if(c==="deutschland"||c===k) CANDIDATES[k].forEach(function(e){ pl.push(Object.assign({city:k},e)); }); });
-      pl.sort(function(a,b){ return a.name.localeCompare(b.name); });
+      pl.sort(function(a,b){ return (b.pts-a.pts)||a.name.localeCompare(b.name); });
       if(pl.length){
         h+='<div class="prelim"><span class="prelim-badge">'+esc(L("prelim_badge"))+'</span><h3>'+esc(L("prelim_h"))+'</h3><p>'+esc(L("prelim_p"))+'</p><ul class="plist">';
         pl.forEach(function(e){
           var u=safeUrl(e.url);
-          h+='<li>'+(u?'<a href="'+u+'" rel="noopener">'+esc(e.name)+'</a>':'<span class="n">'+esc(e.name)+'</span>')
-            +(c==="deutschland"?'<small>'+esc(TX.cities[e.city][window.LANG==="en"?1:0])+'</small>':'')+'</li>';
+          h+='<li><span class="ipos">'+(pl.indexOf(e)+1)+'</span>'+(u?'<a href="'+u+'" rel="noopener">'+esc(e.name)+'</a>':'<span class="n">'+esc(e.name)+'</span>')
+            +(c==="deutschland"?'<small>'+esc(TX.cities[e.city][window.LANG==="en"?1:0])+'</small>':'')+'<b class="ipts">'+e.pts+' / 40</b></li>';
         });
         h+='</ul></div>';
       }
