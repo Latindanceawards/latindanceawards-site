@@ -281,14 +281,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/pl/bachata-katowice.html"/>
   </url>
   <url>
-    <loc>https://latindanceawards.com/europe.html</loc>
-    <lastmod>2026-10-26</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/europe.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/europe.html?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/europe.html"/>
-  </url>
-  <url>
     <loc>https://latindanceawards.com/reisen.html</loc>
     <lastmod>2026-10-26</lastmod>
     <priority>0.7</priority>
@@ -765,5 +757,13 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://latindanceawards.com/pl/bachata-bielsko-biala.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/pl/bachata-bielsko-biala.html?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/pl/bachata-bielsko-biala.html"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/deutschland.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/deutschland.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/deutschland.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/deutschland.html"/>
   </url>
 </urlset>

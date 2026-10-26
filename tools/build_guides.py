@@ -102,7 +102,7 @@ def guide_page(slug, pref, title_de, desc_de, title_en, desc_en, crumb, edition,
     secs.append(f'''<section class="block{" alt" if len(sections) % 2 == 0 else ""}" aria-labelledby="{pref}more">
   <div class="wrap prose">
     {t("h2", "Weiterlesen auf Latin Dance Awards", "More on Latin Dance Awards", f'id="{pref}more"')}
-    {t("p", 'Alle Städte, Stile und Festivals im Überblick. Die vollständige Methode steht auf der <a href="index.html#method">Startseite</a>, die Bewerbung für Schulen auf der <a href="bewerbung.html">Bewerbungsseite</a>.', 'All cities, styles and festivals at a glance. The full method is on the <a href="index.html#method">homepage</a>, and schools can enter on the <a href="bewerbung.html">application page</a>.')}
+    {t("p", 'Alle Städte, Stile und Festivals im Überblick. Die vollständige Methode steht auf der <a href="deutschland.html#method">Startseite</a>, die Bewerbung für Schulen auf der <a href="bewerbung.html">Bewerbungsseite</a>.', 'All cities, styles and festivals at a glance. The full method is on the <a href="deutschland.html#method">homepage</a>, and schools can enter on the <a href="bewerbung.html">application page</a>.')}
     <div class="citylinks">{"".join(links)}</div>
   </div>
 </section>''')
@@ -729,7 +729,7 @@ def party_page(key):
      (f'Bachata lernen in {de}: Schulen und Kurse', f'Learning Bachata in {en}: schools and classes', [
        ('p', f'Wenn du in {de} Bachata richtig lernen willst, findest du auf der Seite <a href="bachata-{key}.html">Bachata {de}</a> die Schulen im Überblick. Das Ranking erscheint am <strong>20. Dezember 2026</strong> auf der <a href="rankings.html#{key}">Ranking-Seite</a>.',
              f'If you want to properly learn Bachata in {en}, the page <a href="bachata-{key}.html">Bachata {en}</a> gives an overview of the schools. The ranking is published on <strong>December 20, 2026</strong> on the <a href="rankings.html#{key}">ranking page</a>.'),
-       ('ul', [(f'<a href="{x["slug"]}.html">{x["name"]}</a>: Zwischenstand {str(x["pts"]).replace(".", ",")} von 100 Punkten', f'<a href="{x["slug"]}.html">{x["name"]}</a>: interim score {x["pts"]} of 100 points') for x in sch]) if sch else ('p', '', ''),
+       ('ul', [(f'<a href="schools/{x["slug"]}.html">{x["name"]}</a>: Zwischenstand {str(x["pts"]).replace(".", ",")} von 100 Punkten', f'<a href="schools/{x["slug"]}.html">{x["name"]}</a>: interim score {x["pts"]} of 100 points') for x in sch]) if sch else ('p', '', ''),
        ('p', 'Reisende finden auf der <a href="reisen.html?c=' + key + '">Tanzreise-Seite</a> die Schulen, die Community und Lehrer und DJs vor Ort. <a href="bachata-socials.html#eintragen">Trag deinen Social kostenlos ein</a>, wenn er hier fehlt.',
              'Visitors will find the schools, the community and teachers and DJs on the <a href="reisen.html?c=' + key + '">dance trip page</a>. <a href="bachata-socials.html#eintragen">List your social for free</a> if it is missing here.'),
      ]),

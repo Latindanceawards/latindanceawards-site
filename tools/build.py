@@ -1,7 +1,7 @@
 # Builds bewerbung.html and rankings.html, reusing the homepage's styles, header and footer.
 import json, re, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root
-idx = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
+idx = open(os.path.join(ROOT, 'tools', 'home-de.src.html'), encoding='utf-8').read()
 NAV_JS = re.search(r'<script>\n\(function\(\)\{var n=document\.querySelector\("\.nav"\).*?</script>\n', idx, re.S).group(0)
 
 HEAD_CSS = idx[idx.index('<style>') + 7: idx.index('</style>')]
@@ -11,7 +11,7 @@ EN_INDEX = json.loads(re.search(r'var EN=(\{.*?\});\n', idx, re.S).group(1))
 
 def fix_links(h):
     for a in ['#why', '#method', '#categories', '#faq']:
-        h = h.replace(f'href="{a}"', f'href="index.html{a}"')
+        h = h.replace(f'href="{a}"', f'href="deutschland.html{a}"')
     return h.replace('href="#top"', 'href="index.html"')
 
 HEADER = fix_links(HEADER)
@@ -464,8 +464,8 @@ faq = [
  ('Kostet die Teilnahme etwas?', 'Does it cost anything to take part?',
   'Nein. Bewerbung, Bewertung und Award-Siegel sind komplett kostenlos.', 'No. Applying, being scored and the award seal are completely free.'),
  ('Garantiert eine Bewerbung einen Preis?', 'Does applying guarantee an award?',
-  'Nein. Jede Schule wird nach denselben neun Kriterien bewertet. Die Bewerbung hilft uns nur, eure Daten vollständig und korrekt zu erfassen. <a href="index.html#method">So bewerten wir</a>.',
-  'No. Every school is scored on the same nine factors. Applying only helps us capture your data completely and correctly. <a href="index.html#method">How we score</a>.'),
+  'Nein. Jede Schule wird nach denselben neun Kriterien bewertet. Die Bewerbung hilft uns nur, eure Daten vollständig und korrekt zu erfassen. <a href="deutschland.html#method">So bewerten wir</a>.',
+  'No. Every school is scored on the same nine factors. Applying only helps us capture your data completely and correctly. <a href="deutschland.html#method">How we score</a>.'),
  ('Erscheinen wir auch ohne Bewerbung im Ranking?', 'Can we appear in the ranking without applying?',
   'Ja, wir recherchieren alle Schulen selbst. Mit Bewerbung können wir aber mehr Angaben bestätigen, was meist zu einer genaueren Punktzahl führt.',
   'Yes, we research every school ourselves. But when you apply, we can confirm more of your information, which usually leads to a more accurate score.'),
@@ -586,7 +586,7 @@ app_main = f'''
       </div>
       <div class="ctas rise d5">
         <a class="btn btn-gold" href="#formular">{t("span", "Zum Formular", "Go to the form")}</a>
-        <a class="btn btn-ghost" href="index.html#method">{t("span", "So bewerten wir", "How we score")}</a>
+        <a class="btn btn-ghost" href="deutschland.html#method">{t("span", "So bewerten wir", "How we score")}</a>
       </div>
     </div>
     <div class="seal-box rise d3">
@@ -626,7 +626,7 @@ app_main = f'''
   <div class="wrap prose">
     {t("h2", "So bewerten wir die Schulen", "How we score the schools", 'id="score-title" class="sec-h2"')}
     {t("p", "Alle Bachata-Schulen werden nach denselben neun Kriterien bewertet, zusammen <strong>100 Punkte</strong>. Die meisten Punkte gibt es für die Google-Bewertung (25), Festivals und Kongresse (15), die Anzahl der Bewertungen, die Jahre im Unterricht, das Kursangebot für Einsteiger, eigene Events und Social Media (je 10). Aktuelle Bewertungen und Wettbewerbe zählen je 5 Punkte.", "All Bachata schools are scored on the same nine factors, <strong>100 points</strong> in total. The most points come from the Google rating (25), festivals and congresses (15), and review volume, years of teaching, the beginner offer, own events and social media (10 each). Recent reviews and competitions count 5 points each.")}
-    {t("p", "Mit deiner Bewerbung bestätigst du die Angaben, die wir sonst nur schätzen könnten. Was wir nicht bestätigen können, zählt mit 0 Punkten. Die vollständige Methode steht auf der <a href=\"index.html#method\">Startseite</a>.", "Your application confirms the information we could otherwise only estimate. Anything we can't confirm counts as 0 points. The full method is on the <a href=\"index.html#method\">homepage</a>.")}
+    {t("p", "Mit deiner Bewerbung bestätigst du die Angaben, die wir sonst nur schätzen könnten. Was wir nicht bestätigen können, zählt mit 0 Punkten. Die vollständige Methode steht auf der <a href=\"deutschland.html#method\">Startseite</a>.", "Your application confirms the information we could otherwise only estimate. Anything we can't confirm counts as 0 points. The full method is on the <a href=\"deutschland.html#method\">homepage</a>.")}
   </div>
 </section>
 
@@ -865,7 +865,7 @@ rank_main = f'''
     {r("h2", "So entsteht das Bachata-Ranking 2026", "How the 2026 Bachata ranking is made", 'id="how-title"')}
     {r("p", "Wir recherchieren jede Bachata-Schule in ganz Deutschland (79 Städte) und bewerten sie nach denselben <strong>neun Kriterien</strong>, zusammen 100 Punkte. Die wichtigsten sind die gewichtete Google-Bewertung (25 Punkte) und Auftritte der Lehrer auf Festivals und Kongressen (15 Punkte).", "We research every Bachata school in all of Germany (79 cities) and score each one on the same <strong>nine factors</strong>, 100 points in total. The most important are the weighted Google rating (25 points) and teachers' appearances at festivals and congresses (15 points).")}
     {r("p", "Dazu kommen die Anzahl der Bewertungen, die Jahre im Unterricht, das Kursangebot für Einsteiger, eigene Events und Gastlehrer sowie Social Media mit je 10 Punkten. Aktuelle Bewertungen der letzten 12 Monate und Wettbewerbsergebnisse zählen je 5 Punkte. Alle Daten sind öffentlich und werden von Hand geprüft. Schulen, die sich bewerben, können ihre Angaben zusätzlich mit Links belegen.", "Review volume, years of teaching, the beginner offer, own events and guest teachers, and social media add 10 points each. Recent reviews from the last 12 months and competition results count 5 points each. All data is public and checked by hand. Schools that apply can also back up their information with links.")}
-    {r("p", "Damit kleine Schulen eine faire Chance haben, gewichten wir Bewertungen nach ihrer Anzahl: Eine 5,0 aus vier Bewertungen schlägt keine 4,8 aus dreihundert. Die vollständige Methode findest du auf der <a href=\"index.html#method\">Startseite</a>.", "To give small schools a fair chance, ratings are weighted by their number: a 5.0 from four reviews does not beat a 4.8 from three hundred. The full method is on the <a href=\"index.html#method\">homepage</a>.")}
+    {r("p", "Damit kleine Schulen eine faire Chance haben, gewichten wir Bewertungen nach ihrer Anzahl: Eine 5,0 aus vier Bewertungen schlägt keine 4,8 aus dreihundert. Die vollständige Methode findest du auf der <a href=\"deutschland.html#method\">Startseite</a>.", "To give small schools a fair chance, ratings are weighted by their number: a 5.0 from four reviews does not beat a 4.8 from three hundred. The full method is on the <a href=\"deutschland.html#method\">homepage</a>.")}
   </div>
 </section>
 
@@ -1545,7 +1545,7 @@ rank_js = r'''
         h+='<details class="howto"><summary>'+esc(L("prelim_h"))+'</summary><p>'+esc(L("prelim_p"))+'</p></details></div>';
       }
       var tips=TX.help_tips[window.LANG==="en"?1:0].map(function(x){return '<li>'+esc(x)+'</li>';}).join("");
-      h+='<div class="helpbox"><h3>'+esc(L("help_h"))+'</h3><p>'+esc(L("help_p"))+'</p><div class="hb-btns"><a class="btn btn-ghost" href="index.html#method">'+esc(L("help_how"))+'</a><a class="btn btn-gold" href="bewerbung.html">'+esc(L("help_add"))+'</a></div><details><summary>'+esc(L("help_tips_h"))+'</summary><ul>'+tips+'</ul></details></div>';
+      h+='<div class="helpbox"><h3>'+esc(L("help_h"))+'</h3><p>'+esc(L("help_p"))+'</p><div class="hb-btns"><a class="btn btn-ghost" href="deutschland.html#method">'+esc(L("help_how"))+'</a><a class="btn btn-gold" href="bewerbung.html">'+esc(L("help_add"))+'</a></div><details><summary>'+esc(L("help_tips_h"))+'</summary><ul>'+tips+'</ul></details></div>';
       h+='<div class="note-card"><div><h3>'+esc(L("note_h"))+'</h3><p>'+esc(L("note_p"))+'</p></div><a class="btn btn-gold" href="bewerbung.html">'+esc(L("note_btn"))+'</a></div>';
     }
     panel.innerHTML=h;
@@ -1661,8 +1661,16 @@ h = open(p404, encoding='utf-8').read()
 h = re.sub(r'<meta name="robots" content="[^"]*">', '<meta name="robots" content="noindex">', h)
 h = re.sub(r'<link rel="(canonical|alternate)"[^>]*>\n', '', h)
 # absolute links so the 404 works on any path
-h = h.replace('href="index.html', 'href="/index.html').replace('href="rankings.html', 'href="/rankings.html').replace('href="bewerbung.html', 'href="/bewerbung.html').replace('href="favicon.svg"', 'href="/favicon.svg"').replace('href="apple-touch-icon.png"', 'href="/apple-touch-icon.png"')
+h = h.replace('href="index.html', 'href="/index.html').replace('href="deutschland.html', 'href="/deutschland.html').replace('href="rankings.html', 'href="/rankings.html').replace('href="bewerbung.html', 'href="/bewerbung.html').replace('href="favicon.svg"', 'href="/favicon.svg"').replace('href="apple-touch-icon.png"', 'href="/apple-touch-icon.png"')
 open(p404, 'w', encoding='utf-8').write(h)
+
+# ======================================================================
+# GERMANY HOME  (deutschland.html): the former homepage, now a country page; index.html is the Europe hub (build_pl.py)
+# ======================================================================
+_dh = idx
+_dh = _dh.replace('href="https://latindanceawards.com/"', 'href="https://latindanceawards.com/deutschland.html"').replace('href="https://latindanceawards.com/?lang=en"', 'href="https://latindanceawards.com/deutschland.html?lang=en"').replace('content="https://latindanceawards.com/"', 'content="https://latindanceawards.com/deutschland.html"')
+open(os.path.join(ROOT, 'deutschland.html'), 'w', encoding='utf-8').write(_dh)
+print('wrote deutschland.html')
 
 # ======================================================================
 # LEGAL PAGES (drafts: noindex, not linked until operator details are filled in)

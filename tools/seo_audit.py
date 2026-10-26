@@ -2,7 +2,8 @@
 import re, os, json, html as H
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAGES = {  # page: (main keyword, target word count from competitor research or 0)
-    'index.html': ('Bachata Awards', 0),
+    'index.html': ('Bachata Schulen Europa', 0),
+    'deutschland.html': ('Bachata Awards', 0),
     'rankings.html': ('beste Bachata-Schulen Deutschland', 960),
     'bewerbung.html': ('Bachata-Schule anmelden', 0),
     'bachata-berlin.html': ('Bachata Berlin', 900),

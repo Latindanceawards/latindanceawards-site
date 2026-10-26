@@ -1,4 +1,4 @@
-# Builds the Poland section (/pl/) in Polish + English, and the Europe overview (europe.html).
+# Builds the Poland section (/pl/) in Polish + English, and the Europe hub is built by build_hub.py.
 # Run after build.py/build_guides.py:  python3 tools/build_pl.py
 import os, sys, re, io, json, contextlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -20,8 +20,8 @@ _PLH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="pl/#ranking" data-i18n="pn1">Ranking</a></li>
         <li><a href="pl/#miasta" data-i18n="pn2">Miasta</a></li>
         <li><a href="pl/#metoda" data-i18n="pn3">Metoda</a></li>
-        <li><a href="europe.html" data-i18n="pn4">Europa</a></li>
-        <li><a href="index.html" data-i18n="pn5">Niemcy</a></li>
+        <li><a href="index.html" data-i18n="pn4">Europa</a></li>
+        <li><a href="deutschland.html" data-i18n="pn5">Niemcy</a></li>
       </ul>''', _PLH, count=1, flags=re.S)
 _PLH = _PLH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">PL<')
 _PLH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="pn6">Zgłoś szkołę</a>', _PLH, count=1)
@@ -35,7 +35,7 @@ _PLF = f'''<footer>
       </div>
       <div>
         <p class="fh" data-i18n="pf2">Rankingi</p>
-        <ul><li><a href="pl/#ranking" data-i18n="pf3">Polska 2027</a></li><li><a href="pl/#metoda" data-i18n="pf4">Metoda oceny</a></li>{''.join(f'<li><a href="pl/bachata-{k}.html">Bachata {v[0]}</a></li>' for k, v in list(P.CITIES.items())[:4])}<li><a href="europe.html" data-i18n="pn4">Europa</a></li></ul>
+        <ul><li><a href="pl/#ranking" data-i18n="pf3">Polska 2027</a></li><li><a href="pl/#metoda" data-i18n="pf4">Metoda oceny</a></li>{''.join(f'<li><a href="pl/bachata-{k}.html">Bachata {v[0]}</a></li>' for k, v in list(P.CITIES.items())[:4])}<li><a href="index.html" data-i18n="pn4">Europa</a></li></ul>
       </div>
       <div>
         <p class="fh" data-i18n="pf5">Kontakt</p>
@@ -114,7 +114,7 @@ main += f'''
 </div></section>
 {sec(t, 1, ("Bachata w polskich miastach", "Bachata in Polish cities"), '<div class="cards two" id="miasta">' + city_cards + '</div>', alt=False).replace('<section class="block"', '<section class="block" id="miasta-sec"')}
 {sec(t, 2, ("Jak oceniamy szkoły bachaty", "How we score Bachata schools"), t("p", *METHOD_PL) + t("p", 'Ranking opiera się wyłącznie na danych publicznych. Miejsca nie można kupić, a płatne wzmianki, jeśli się pojawią, będą oznaczone jako reklama i nie wpływają na punkty. Dane o szkołach zbieramy samodzielnie z Map Google i stron szkół, dlatego mogą zawierać błędy: <a href="/bewerbung.html?lang=en">zgłoś szkołę lub poprawkę</a>.', 'The ranking is based only on public data. Places cannot be bought, and paid mentions, if any, will be labelled as ads and do not affect points. We collect the school data ourselves from Google Maps and the schools\' websites, so it may contain errors: <a href="/bewerbung.html?lang=en">enter a school or send a correction</a>.'), alt=True).replace('<section class="block alt"', '<section class="block alt" id="metoda"')}
-{sec(t, 3, ("Ranking Europy i rankingi krajów", "Europe ranking and country rankings"), t("p", 'Latin Dance Awards tworzy jeden ranking szkół w całej Europie oraz osobny ranking dla każdego kraju. Polska jest drugim krajem po Niemczech. Zobacz <a href="/europe.html">przegląd Europy</a> albo <a href="/rankings.html">ranking Niemiec</a>.', 'Latin Dance Awards builds one ranking of schools across Europe plus a separate ranking for each country. Poland is the second country after Germany. See the <a href="/europe.html">Europe overview</a> or the <a href="/rankings.html">Germany ranking</a>.'), alt=False)}
+{sec(t, 3, ("Ranking Europy i rankingi krajów", "Europe ranking and country rankings"), t("p", 'Latin Dance Awards tworzy jeden ranking szkół w całej Europie oraz osobny ranking dla każdego kraju. Polska jest drugim krajem po Niemczech. Zobacz <a href="/">przegląd Europy</a> albo <a href="/deutschland.html">ranking Niemiec</a>.', 'Latin Dance Awards builds one ranking of schools across Europe plus a separate ranking for each country. Poland is the second country after Germany. See the <a href="/">Europe overview</a> or the <a href="/rankings.html">Germany ranking</a>.'), alt=False)}
 '''
 faq = [
  ('Jaka jest najlepsza szkoła bachaty w Polsce?', 'What is the best Bachata school in Poland?',
@@ -154,7 +154,7 @@ for k, (cpl, cen, loc) in P.CITIES.items():
    ('<strong>Lekcja próbna:</strong> zapytaj o zajęcia próbne lub start nowej grupy, zanim kupisz karnet.', '<strong>Trial class:</strong> ask for a trial class or a new group start before buying a pass.'),
    ('<strong>Partner:</strong> zwykle nie musisz przychodzić z partnerem. Zapytaj, czy pary się zmieniają.', '<strong>Partner:</strong> you usually do not need to bring a partner. Ask whether partners rotate.'),
    ('<strong>Styl:</strong> bachata dominicana, moderna i sensual różnią się charakterem. Zobacz, który styl uczy szkoła.', '<strong>Style:</strong> Dominicana, moderna and sensual bachata differ in character. Check which style the school teaches.')]) + '</ul>', alt=True)}
-{sec(t, 3, ("Ranking Polski, Europy i Niemiec", "Poland, Europe and Germany rankings"), t("p", 'Zobacz <a href="/pl/">ranking całej Polski</a>, <a href="/europe.html">przegląd Europy</a> albo <a href="/rankings.html">ranking Niemiec</a>. Prowadzisz szkołę w ' + loc + '? <a href="/bewerbung.html?lang=en">Zgłoś ją bezpłatnie</a>.', f'See the <a href="/pl/">Poland ranking</a>, the <a href="/europe.html">Europe overview</a> or the <a href="/rankings.html">Germany ranking</a>. Do you run a school in {cen}? <a href="/bewerbung.html?lang=en">Enter it for free</a>.'), alt=False)}
+{sec(t, 3, ("Ranking Polski, Europy i Niemiec", "Poland, Europe and Germany rankings"), t("p", 'Zobacz <a href="/pl/">ranking całej Polski</a>, <a href="/">przegląd Europy</a> albo <a href="/deutschland.html">ranking Niemiec</a>. Prowadzisz szkołę w ' + loc + '? <a href="/bewerbung.html?lang=en">Zgłoś ją bezpłatnie</a>.', f'See the <a href="/pl/">Poland ranking</a>, the <a href="/">Europe overview</a> or the <a href="/rankings.html">Germany ranking</a>. Do you run a school in {cen}? <a href="/bewerbung.html?lang=en">Enter it for free</a>.'), alt=False)}
 '''
     top = ss[0]
     faq = [
@@ -170,29 +170,3 @@ for k, (cpl, cen, loc) in P.CITIES.items():
       f'Bachata {cen}: the best dance schools 2027', f'Bachata {cen}: {n} schools with Google ratings and 2027 ranking points. Choose a Bachata class in {cen} and see the interim ranking.',
       main, t.en, [crumbs(f'Bachata {cpl}', f'pl/bachata-{k}.html'), faq_schema(faq)])
 
-# ---------- Europe overview (German default + English) ----------
-t = T('eu')
-G = B.SCH
-gtop = G[:3]
-ger = ''.join(f'<li><b>{i}</b><a href="/{s["slug"]}.html">{s["name"]}</a><span>{str(s["pts"]).replace(".", ",")} / 75</span></li>' for i, s in enumerate(gtop, 1))
-plt = ''.join(f'<li><b>{i}</b><a href="{s[4]}" rel="nofollow noopener" target="_blank">{s[0]}</a><span>{f1(P.pts(s[2], s[3]))} / 35</span></li>' for i, s in enumerate(ranked[:3], 1))
-eh = hero(t, ('Europa · Bachata Awards', 'Europe · Bachata Awards'), ('Beste Bachata-Schulen in Europa: Ranking nach Ländern', 'The best Bachata schools in Europe: ranking by country'),
-  (f'Ein Ranking für ganz Europa und ein eigenes Ranking für jedes Land. Heute: Deutschland mit {len(G)} Schulen und Polen mit {N} Schulen.', f'One ranking for all of Europe plus a separate ranking for each country. Today: Germany with {len(G)} schools and Poland with {N} schools.'),
-  [('cal', '<b>2 Länder</b> am Start', '<b>2 countries</b> at launch'), ('check', 'Unabhängig, <b>nicht käuflich</b>', 'Independent, <b>not for sale</b>')],
-  f'<a class="btn btn-gold" href="/rankings.html">{t("span", "Deutschland ansehen", "See Germany")}</a><a class="btn btn-ghost" href="/pl/">{t("span", "Polen ansehen", "See Poland")}</a>', 'badge-bachata-europe.svg', 'Siegel der Bachata Awards Europa')
-eh += f'''
-<section class="block alt"><div class="wrap tp" style="max-width:900px">
-  {t("h2", "Rankings nach Ländern", "Rankings by country")}
-  <div class="people">
-    <div class="box"><h3>{t("span", "Deutschland", "Germany")}</h3><p class="muted">{t("span", f"{len(G)} Schulen in 79 Städten. Ergebnisse am 20. Dezember 2026.", f"{len(G)} schools in 79 cities. Results on December 20, 2026.")}</p><ol class="top">{ger}</ol><div class="btnrow"><a class="btn btn-gold" href="/rankings.html">{t("span", "Zum Ranking", "To the ranking")}</a></div></div>
-    <div class="box"><h3>{t("span", "Polen", "Poland")}</h3><p class="muted">{t("span", f"{N} Schulen in {NC} Städten. Ergebnisse im Frühjahr 2027.", f"{N} schools in {NC} cities. Results in spring 2027.")}</p><ol class="top">{plt}</ol><div class="btnrow"><a class="btn btn-gold" href="/pl/">{t("span", "Zum Ranking", "To the ranking")}</a></div></div>
-  </div>
-</div></section>
-{sec(t, 1, ("Wie das Europa-Ranking entsteht", "How the Europe ranking is built"), t("p", "Jedes Land bekommt ein eigenes Ranking mit denselben neun Kriterien und 100 Punkten. Das Europa-Ranking führt alle Schulen aller Länder zusammen. Es erscheint, sobald die Länder ihre vollständigen Daten haben, damit die Punkte vergleichbar sind. Die Zwischenstände der Länder sind noch nicht direkt vergleichbar: Deutschland zeigt sechs von neun Kriterien (höchstens 75 Punkte), Polen bisher zwei (höchstens 35 Punkte).", "Each country gets its own ranking with the same nine factors and 100 points. The Europe ranking combines all schools from all countries. It is published once the countries have their full data, so that points are comparable. The interim standings are not directly comparable yet: Germany shows six of nine factors (max 75 points), Poland two so far (max 35 points)."), alt=False)}
-{sec(t, 2, ("Dein Land fehlt?", "Is your country missing?"), t("p", 'Wir starten weitere Länder Schritt für Schritt. Schreib uns an <a href="mailto:hello@latindanceawards.com">hello@latindanceawards.com</a>, wenn du eine Schule betreibst oder die Szene in deinem Land kennst.', 'We are adding more countries step by step. Email <a href="mailto:hello@latindanceawards.com">hello@latindanceawards.com</a> if you run a school or know the scene in your country.'), alt=True)}
-'''
-B.page('europe.html', 'Beste Bachata-Schulen in Europa: Ranking',
-  f'Bachata-Ranking für Europa: ein Ranking pro Land, bisher Deutschland mit {len(G)} Schulen und Polen mit {N} Schulen. Unabhängig und nicht käuflich.',
-  'The best Bachata schools in Europe: ranking by country · Latin Dance Awards',
-  f'Bachata ranking for Europe: one ranking per country, so far Germany with {len(G)} schools and Poland with {N} schools. Independent and not for sale.',
-  'europe.html', eh, t.en, '', schema=[crumbs('Europa', 'europe.html')])
