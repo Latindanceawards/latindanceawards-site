@@ -8,7 +8,7 @@ CITIES = {
  'szczecin': ('Szczecin', 'Szczecin', 'Szczecinie'), 'bialystok': ('Białystok', 'Białystok', 'Białymstoku'),
  'czestochowa': ('Częstochowa', 'Częstochowa', 'Częstochowie'), 'torun': ('Toruń', 'Toruń', 'Toruniu'), 'kielce': ('Kielce', 'Kielce', 'Kielcach'),
  'rzeszow': ('Rzeszów', 'Rzeszów', 'Rzeszowie'), 'radom': ('Radom', 'Radom', 'Radomiu'), 'olsztyn': ('Olsztyn', 'Olsztyn', 'Olsztynie'),
- 'tarnow': ('Tarnów', 'Tarnów', 'Tarnowie'), 'opole': ('Opole', 'Opole', 'Opolu'), 'bielsko-biala': ('Bielsko-Biała', 'Bielsko-Biała', 'Bielsku-Białej'),
+ 'tarnow': ('Tarnów', 'Tarnów', 'Tarnowie'), 'opole': ('Opole', 'Opole', 'Opolu'), 'bielsko-biala': ('Bielsko-Biała', 'Bielsko-Biała', 'Bielsku-Białej'), 'rybnik': ('Rybnik', 'Rybnik', 'Rybniku'),
 }
 # (name, city, rating, reviews, website)
 SCHOOLS = [
@@ -77,6 +77,12 @@ SCHOOLS = [
  ('Szkoła Tańca Cubana', 'bielsko-biala', 4.8, 80, 'https://www.cubana.bielsko.pl'),
  ('Sun Salsa', 'tarnow', 4.9, 95, 'https://sunsalsa.pl'),
  ('Baila Studio Tańca', 'tarnow', 5.0, 17, 'https://bailastudio.pl'),
+ ('Śląska Szkoła Tańca Dariusz Kurzej', 'katowice', 4.9, 67, 'https://tanca.com.pl/szkola-tanca-katowice/'),
+ ('Taneczna Kompania', 'katowice', 4.7, 85, 'https://tanecznakompania.pl'),
+ ('Studio Tańca Anna Kowalska', 'szczecin', 4.9, 138, 'https://annakowalska.pl'),
+ ('Szkoła Tańca Gryf', 'szczecin', 5.0, 173, 'https://taniec-szczecin.pl'),
+ ('Havana Dance Studio', 'rybnik', 5.0, 84, 'https://havanasalsaclub.pl'),
+ ('El Pachanguero', 'rybnik', 4.9, 69, 'https://pachanguero.pl'),
  ('Dance Move Lab', 'wroclaw', 5.0, 46, 'https://dancemovelab.pl'),
  ('Studio Tańca Al-Mara', 'wroclaw', 4.9, 166, 'https://al-mara.pl'),
  ('Akademia Tańca Esens', 'wroclaw', 4.6, 143, 'https://esens.com.pl'),
