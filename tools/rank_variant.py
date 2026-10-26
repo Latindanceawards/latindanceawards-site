@@ -1,6 +1,11 @@
 # Reuses the live Germany ranking panel (rankings.html: tabs, city picker, crown/medal cards, score bars, voting)
 # for other scopes (Europe hub, country pages) by patching its JS and text. The design is not touched.
-import re, json, math, io, contextlib
+import re, json, math, io, contextlib, unicodedata
+
+def pl_slug(name):
+    x = unicodedata.normalize('NFD', name.lower().replace('ł', 'l'))
+    x = ''.join(c for c in x if not unicodedata.combining(c))
+    return re.sub(r'[^a-z0-9]+', '-', x).strip('-')
 with contextlib.redirect_stdout(io.StringIO()):
     import build as B
 
@@ -40,7 +45,7 @@ def polish_entries(P):
         g, rv = parts(r, v)
         y, b, ev, f, po, st = P.EXTRA.get(name, (0, 0, 0, 0, 0, []))
         fxs = f'{f:,}'.replace(',', '.') + ' · ' + f'{po:,}'.replace(',', '.') if f else '–'
-        out.setdefault(city, []).append(dict(name=name, sc=[y, b, ev, g, rv, social(f, po)], fx=[fx_str(r, v), fxs], url=url, st=st, np=1))
+        out.setdefault(city, []).append(dict(name=name, sc=[y, b, ev, g, rv, social(f, po)], fx=[fx_str(r, v), fxs], url=url, st=st, np=1, pg='/pl/szkoly/' + pl_slug(name) + '.html'))
     return out
 
 def total(e): return round(sum(e['sc']), 1)
@@ -49,7 +54,7 @@ def cand_js(cands):
     lines = []
     for city, es in cands.items():
         items = ',\n'.join('      ' + json.dumps(e, ensure_ascii=False, separators=(', ', ':')).replace('{"name":', '{name:', 1)
-                           .replace(', "sc":', ', sc:').replace(', "fx":', ', fx:').replace(', "url":', ', url:').replace(', "st":', ', st:').replace(', "np":', ', np:')
+                           .replace(', "sc":', ', sc:').replace(', "fx":', ', fx:').replace(', "url":', ', url:').replace(', "st":', ', st:').replace(', "np":', ', np:').replace(', "pg":', ', pg:')
                            for e in es)
         lines.append(f'    {json.dumps(city)}: [\n{items}\n    ]')
     return '{\n' + ',\n'.join(lines) + '\n  }'
@@ -87,8 +92,8 @@ def make_js(scope, groups, tx, cands, quick, scale, pl=False, extra=None):
         js = re.sub(r"why\+='<div class=\"tbc\"><b>'\+esc\(en\?\"Style variety[^\n]*\n", '', js, count=1)
     # schools without an own page here link to their website
     js = sub1(js, '<b><a href="schools/\'+slug(e.name)+\'.html">',
-              '<b><a href="\'+(e.np?(safeUrl(e.url)||"#"):"schools/"+slug(e.name)+".html")+\'"\'+(e.np?\' rel="nofollow noopener" target="_blank"\':"")+\'>')
-    js = sub1(js, "why+='<div class=\"lk\"><a href=\"schools/'", "if(!e.np) why+='<div class=\"lk\"><a href=\"schools/'")
+              '<b><a href="\'+(e.np?e.pg:"schools/"+slug(e.name)+".html")+\'">')
+    js = sub1(js, "why+='<div class=\"lk\"><a href=\"schools/'+slug(e.name)+'.html\">", "why+='<div class=\"lk\"><a href=\"'+(e.np?e.pg:'schools/'+slug(e.name)+'.html')+'\">")
     # factors that no country has collected yet are shown as "to be confirmed"
     old_tbc = re.search(r'var TBC=en\?\[.*?\]\]:\[\[.*?\]\];', js, re.S).group(0)
     ff = extra['tbc']

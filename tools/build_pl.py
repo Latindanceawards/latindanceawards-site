@@ -148,6 +148,7 @@ _tx('vote_done', 'Na tym urządzeniu już głosowano. Dziękujemy!', B.R_TEXT['v
 _tx('prelim_badge', 'Stan przejściowy · nie wynik końcowy, szkoły wciąż rywalizują', 'Interim standing · not final, schools are still competing')
 _tx('prelim_h', 'Jak powstaje stan przejściowy', 'How the interim standing is calculated')
 _tx('prelim_p', 'Punkty liczymy tak samo jak w Niemczech: do 75 punktów za sześć kryteriów (lata działalności, oferta dla początkujących, wydarzenia, ocena w Google, liczba opinii, media społecznościowe) i do 25 punktów za festiwale, aktualne opinie i konkursy, które są jeszcze „do potwierdzenia”. Dane: strony szkół, Mapy Google i Instagram, stan na październik 2026. Czego nie potwierdzono, liczy się na najniższym poziomie. Miejsca mogą się jeszcze zmienić.', 'Points are calculated exactly as in Germany: up to 75 points for six factors (years active, beginner offer, events, Google rating, number of reviews, social media) and up to 25 points for festivals, recent reviews and competitions, which are still “to be confirmed”. Data: school websites, Google Maps and Instagram, status October 2026. Anything unconfirmed counts at the lowest level. Positions can still change.')
+_tx('page_link', 'Strona szkoły, opinie i głosowanie', B.R_TEXT['page_link'][1])
 _tx('empty', 'Dla tego miasta nie ma jeszcze wyników.', 'There are no results for this city yet.')
 _PL_TBC = ['Festiwale', 'Aktualne opinie', 'Udział w konkursach', 'Wygrane konkursy']
 _EN_TBC = ['Festivals', 'Recent reviews', 'Competitions entered', 'Competitions won']
