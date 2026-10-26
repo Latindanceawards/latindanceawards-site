@@ -433,7 +433,7 @@ steps_html = '\n'.join(
     for i, (w_de, w_en, h_de, h_en, p_de, p_en) in enumerate(steps))
 
 need = [
- ('Name und Stadt der Schule', 'School name and city', 'Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover oder Nürnberg', 'Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover or Nuremberg', False),
+ ('Name und Stadt der Schule', 'School name and city', 'Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg oder Wiesbaden', 'Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg or Wiesbaden', False),
  ('Website, Instagram und TikTok', 'Website, Instagram and TikTok', 'Einfach die Links', 'Just the links', False),
  ('Link zu eurem Google-Maps-Eintrag', 'Link to your Google Maps listing', 'Für Bewertungen und Anzahl der Bewertungen', 'For your rating and number of reviews', False),
  ('Gründungsjahr', 'Year founded', 'Seit wann unterrichtet ihr Bachata?', 'Since when have you taught Bachata?', False),
@@ -456,8 +456,8 @@ faq = [
   'Ja, wir recherchieren alle Schulen selbst. Mit Bewerbung können wir aber mehr Angaben bestätigen, was meist zu einer genaueren Punktzahl führt.',
   'Yes, we research every school ourselves. But when you apply, we can confirm more of your information, which usually leads to a more accurate score.'),
  ('Wer darf sich bewerben?', 'Who can apply?',
-  'Inhaber, Lehrer oder Mitarbeiter einer Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover oder Nürnberg. Eure Schule ist in einer anderen Stadt? Bewerbt euch trotzdem, wir nehmen euch für kommende Ausgaben auf.',
-  "Owners, teachers or staff of a Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover or Nuremberg. Your school is in another city? Apply anyway and we'll include you in future editions."),
+  'Inhaber, Lehrer oder Mitarbeiter einer Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg oder Wiesbaden. Eure Schule ist in einer anderen Stadt? Bewerbt euch trotzdem, wir nehmen euch für kommende Ausgaben auf.',
+  "Owners, teachers or staff of a Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg or Wiesbaden. Your school is in another city? Apply anyway and we'll include you in future editions."),
  ('Wie weisen wir unsere Angaben nach?', 'How do we prove our information?',
   'Mit Links, die es meistens schon gibt: ein Festival-Lineup, euer Kursplan, Posts zu euren Events. Damit wir wissen, dass die Bewerbung wirklich von euch kommt, schickt ihr uns außerdem eine kurze Nachricht von eurem offiziellen Instagram-Account.',
   "With links that usually already exist: a festival lineup, your class schedule, posts about your events. To confirm the application really comes from you, you'll also send us a short message from your official Instagram account."),
@@ -496,7 +496,7 @@ _ERR_PICK = ("Bitte wähle eine Antwort.", "Please choose an answer.")
 YEARS = [('2024–2026', '2024–2026', '2024–2026'), ('2021–2023', '2021–2023', '2021–2023'), ('2018–2020', '2018–2020', '2018–2020'),
          ('2015–2017', '2015–2017', '2015–2017'), ('2012–2014', '2012–2014', '2012–2014'), ('Before 2012', 'Vor 2012', 'Before 2012')]
 CITIES_O = [('Berlin', 'Berlin', 'Berlin'), ('München / Munich', 'München', 'Munich'), ('Hamburg', 'Hamburg', 'Hamburg'), ('Köln / Cologne', 'Köln', 'Cologne'),
-            ('Frankfurt', 'Frankfurt', 'Frankfurt'), ('Düsseldorf', 'Düsseldorf', 'Düsseldorf'), ('Stuttgart', 'Stuttgart', 'Stuttgart'), ('Leipzig', 'Leipzig', 'Leipzig'), ('Dortmund', 'Dortmund', 'Dortmund'), ('Essen', 'Essen', 'Essen'), ('Bremen', 'Bremen', 'Bremen'), ('Dresden', 'Dresden', 'Dresden'), ('Hannover', 'Hannover', 'Hannover'), ('Nürnberg / Nuremberg', 'Nürnberg', 'Nuremberg'), ('Other', 'Andere', 'Other')]
+            ('Frankfurt', 'Frankfurt', 'Frankfurt'), ('Düsseldorf', 'Düsseldorf', 'Düsseldorf'), ('Stuttgart', 'Stuttgart', 'Stuttgart'), ('Leipzig', 'Leipzig', 'Leipzig'), ('Dortmund', 'Dortmund', 'Dortmund'), ('Essen', 'Essen', 'Essen'), ('Bremen', 'Bremen', 'Bremen'), ('Dresden', 'Dresden', 'Dresden'), ('Hannover', 'Hannover', 'Hannover'), ('Nürnberg / Nuremberg', 'Nürnberg', 'Nuremberg'), ('Duisburg', 'Duisburg', 'Duisburg'), ('Bochum', 'Bochum', 'Bochum'), ('Bielefeld', 'Bielefeld', 'Bielefeld'), ('Bonn', 'Bonn', 'Bonn'), ('Karlsruhe', 'Karlsruhe', 'Karlsruhe'), ('Mannheim', 'Mannheim', 'Mannheim'), ('Augsburg', 'Augsburg', 'Augsburg'), ('Wiesbaden', 'Wiesbaden', 'Wiesbaden'), ('Other', 'Andere', 'Other')]
 # (chapter, title_de, title_en, sub_de, sub_en, body_html, optional, auto)
 WIZ = [
  (0, 'Wie heißt deine Schule?', 'What is your school called?', 'Jetzt noch ein paar Angaben zu eurer Schule.', 'Now a few details about your school.',
@@ -563,7 +563,7 @@ app_main = f'''
     <div>
       <span class="edition rise d1"><i></i>{t("span", "Bewerbung · Awards 2026", "Application · Awards 2026")}</span>
       <h1 id="app-title" class="rise d2">{t("span", "Bachata-Schule anmelden für die <em class=\"foil\">Bachata Awards 2026</em>", "Enter your Bachata school for the <em class=\"foil\">Bachata Awards 2026</em>")}</h1>
-      <p class="lede rise d3">{t("span", "Melde deine Bachata-Schule kostenlos an: Die Bewerbung dauert fünf Minuten und ist offen für jede Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover und Nürnberg.", "Enter your Bachata school for free: applying takes five minutes and is open to every Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover and Nuremberg.")}</p>
+      <p class="lede rise d3">{t("span", "Melde deine Bachata-Schule kostenlos an: Die Bewerbung dauert fünf Minuten und ist offen für jede Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg und Wiesbaden.", "Enter your Bachata school for free: applying takes five minutes and is open to every Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg and Wiesbaden.")}</p>
       <div class="facts rise d4">
         <span>{ICON["free"]}{t("b", "Kostenlos", "Free")}</span>
         <span>{ICON["clock"]}{t("b", "5 Minuten", "5 minutes")}</span>
@@ -756,7 +756,9 @@ CITIES = [('deutschland', 'Ganz Deutschland', 'All Germany'), ('berlin', 'Berlin
           ('hamburg', 'Hamburg', 'Hamburg'), ('koeln', 'Köln', 'Cologne'), ('frankfurt', 'Frankfurt', 'Frankfurt'),
           ('duesseldorf', 'Düsseldorf', 'Düsseldorf'), ('stuttgart', 'Stuttgart', 'Stuttgart'), ('leipzig', 'Leipzig', 'Leipzig'),
           ('dortmund', 'Dortmund', 'Dortmund'), ('essen', 'Essen', 'Essen'), ('bremen', 'Bremen', 'Bremen'), ('dresden', 'Dresden', 'Dresden'),
-          ('hannover', 'Hannover', 'Hannover'), ('nuernberg', 'Nürnberg', 'Nuremberg')]
+          ('hannover', 'Hannover', 'Hannover'), ('nuernberg', 'Nürnberg', 'Nuremberg'),
+          ('duisburg', 'Duisburg', 'Duisburg'), ('bochum', 'Bochum', 'Bochum'), ('bielefeld', 'Bielefeld', 'Bielefeld'), ('bonn', 'Bonn', 'Bonn'),
+          ('karlsruhe', 'Karlsruhe', 'Karlsruhe'), ('mannheim', 'Mannheim', 'Mannheim'), ('augsburg', 'Augsburg', 'Augsburg'), ('wiesbaden', 'Wiesbaden', 'Wiesbaden')]
 tabs_html = '\n'.join(
     f'      <button type="button" role="tab" id="tab-{slug}" aria-controls="panel" aria-selected="{"true" if i==0 else "false"}" data-city="{slug}">{r("span", de, en)}</button>'
     for i, (slug, de, en) in enumerate(CITIES))
@@ -764,11 +766,11 @@ tabs_html = '\n'.join(
 
 rfaq = [
  ('Wann wird das Bachata-Ranking veröffentlicht?', 'When is the Bachata ranking published?',
-  'Alle Rankings erscheinen am 20. Dezember 2026 um 19 Uhr auf dieser Seite, zuerst für die 14 Städte und gleichzeitig für ganz Deutschland.',
-  'All rankings go live on December 20, 2026 at 7 pm (CET) on this page, for the 14 cities and for Germany as a whole.'),
+  'Alle Rankings erscheinen am 20. Dezember 2026 um 19 Uhr auf dieser Seite, zuerst für die 22 Städte und gleichzeitig für ganz Deutschland.',
+  'All rankings go live on December 20, 2026 at 7 pm (CET) on this page, for the 22 cities and for Germany as a whole.'),
  ('Welche Städte sind im Ranking 2026?', 'Which cities are in the 2026 ranking?',
-  'Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover und Nürnberg. Weitere Städte und Länder folgen in den nächsten Ausgaben.',
-  'Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover and Nuremberg. More cities and countries follow in future editions.'),
+  'Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg und Wiesbaden. Weitere Städte und Länder folgen in den nächsten Ausgaben.',
+  'Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg and Wiesbaden. More cities and countries follow in future editions.'),
  ('Kann eine Schule für einen besseren Platz bezahlen?', 'Can a school pay for a better place?',
   'Nein. Plätze sind nicht käuflich. Jede Schule wird nach denselben neun Kriterien bewertet, und die Punkteaufschlüsselung ist öffentlich.',
   'No. Places cannot be bought. Every school is scored on the same nine factors, and the score breakdown is public.'),
@@ -776,8 +778,8 @@ rfaq = [
   'In den meisten Bachata-Kursen nicht. Viele Schulen lassen die Paare regelmäßig wechseln, sodass du auch allein kommen kannst. Frag am besten vorher bei der Schule nach.',
   'In most Bachata classes you don\'t. Many schools rotate partners regularly, so you can come on your own. It is best to ask the school beforehand.'),
  ('Meine Schule fehlt. Was kann ich tun?', 'My school is missing. What can I do?',
-  'Melde sie bis zum 30. November kostenlos über die <a href="bewerbung.html">Bewerbungsseite</a> an. Wir nehmen jede Bachata-Schule in den 14 Städten auf.',
-  'Enter it for free by November 30 on the <a href="bewerbung.html">application page</a>. We include every Bachata school in the 14 cities.'),
+  'Melde sie bis zum 30. November kostenlos über die <a href="bewerbung.html">Bewerbungsseite</a> an. Wir nehmen jede Bachata-Schule in den 22 Städten auf.',
+  'Enter it for free by November 30 on the <a href="bewerbung.html">application page</a>. We include every Bachata school in the 22 cities.'),
  ('Wie oft wird das Ranking aktualisiert?', 'How often is the ranking updated?',
   'Das Ranking erscheint einmal im Jahr. Korrekturen an falschen Daten prüfen wir laufend und übernehmen sie nach der Prüfung.',
   'The ranking is published once a year. We review corrections to wrong data on an ongoing basis and apply them once checked.'),
@@ -791,7 +793,7 @@ rank_main = f'''
     <div>
       <span class="edition rise d1"><i></i>{r("span", "Rankings 2026 · Deutschland", "Rankings 2026 · Germany")}</span>
       <h1 id="rk-title" class="rise d2">{r("span", "Beste Bachata-Schulen in <em class=\"foil\">Deutschland 2026</em>", "Best Bachata schools in <em class=\"foil\">Germany 2026</em>")}</h1>
-      <p class="lede rise d3">{r("span", "Die besten Bachata-Schulen in Deutschland, bewertet nach neun öffentlichen Kriterien: 14 Städte, ein nationaler Sieger. Die Ergebnisse erscheinen am 20. Dezember 2026 um 19 Uhr.", "The best Bachata schools in Germany, scored on nine public factors: 14 cities, one national winner. Results are published on December 20, 2026 at 7 pm (CET).")}</p>
+      <p class="lede rise d3">{r("span", "Die besten Bachata-Schulen in Deutschland, bewertet nach neun öffentlichen Kriterien: 22 Städte, ein nationaler Sieger. Die Ergebnisse erscheinen am 20. Dezember 2026 um 19 Uhr.", "The best Bachata schools in Germany, scored on nine public factors: 22 cities, one national winner. Results are published on December 20, 2026 at 7 pm (CET).")}</p>
       <div class="countdown rise d4" id="countdown" aria-live="off">
         <div><b data-u="d">00</b>{r("small", "Tage", "days")}</div>
         <div><b data-u="h">00</b>{r("small", "Stunden", "hours")}</div>
@@ -840,7 +842,7 @@ rank_main = f'''
 <section class="block alt" aria-labelledby="how-title">
   <div class="wrap prose">
     {r("h2", "So entsteht das Bachata-Ranking 2026", "How the 2026 Bachata ranking is made", 'id="how-title"')}
-    {r("p", "Wir recherchieren jede Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover und Nürnberg und bewerten sie nach denselben <strong>neun Kriterien</strong>, zusammen 100 Punkte. Die wichtigsten sind die gewichtete Google-Bewertung (25 Punkte) und Auftritte der Lehrer auf Festivals und Kongressen (15 Punkte).", "We research every Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover and Nuremberg and score each one on the same <strong>nine factors</strong>, 100 points in total. The most important are the weighted Google rating (25 points) and teachers' appearances at festivals and congresses (15 points).")}
+    {r("p", "Wir recherchieren jede Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg und Wiesbaden und bewerten sie nach denselben <strong>neun Kriterien</strong>, zusammen 100 Punkte. Die wichtigsten sind die gewichtete Google-Bewertung (25 Punkte) und Auftritte der Lehrer auf Festivals und Kongressen (15 Punkte).", "We research every Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg and Wiesbaden and score each one on the same <strong>nine factors</strong>, 100 points in total. The most important are the weighted Google rating (25 points) and teachers' appearances at festivals and congresses (15 points).")}
     {r("p", "Dazu kommen die Anzahl der Bewertungen, die Jahre im Unterricht, das Kursangebot für Einsteiger, eigene Events und Gastlehrer sowie Social Media mit je 10 Punkten. Aktuelle Bewertungen der letzten 12 Monate und Wettbewerbsergebnisse zählen je 5 Punkte. Alle Daten sind öffentlich und werden von Hand geprüft. Schulen, die sich bewerben, können ihre Angaben zusätzlich mit Links belegen.", "Review volume, years of teaching, the beginner offer, own events and guest teachers, and social media add 10 points each. Recent reviews from the last 12 months and competition results count 5 points each. All data is public and checked by hand. Schools that apply can also back up their information with links.")}
     {r("p", "Damit kleine Schulen eine faire Chance haben, gewichten wir Bewertungen nach ihrer Anzahl: Eine 5,0 aus vier Bewertungen schlägt keine 4,8 aus dreihundert. Die vollständige Methode findest du auf der <a href=\"index.html#method\">Startseite</a>.", "To give small schools a fair chance, ratings are weighted by their number: a 5.0 from four reviews does not beat a 4.8 from three hundred. The full method is on the <a href=\"index.html#method\">homepage</a>.")}
   </div>
@@ -851,8 +853,8 @@ rank_main = f'''
     {r("h2", "Die fünf Bachata Awards 2026 im Überblick", "The five Bachata Awards 2026 at a glance", 'id="awards-title"')}
     {r("p", "Neben den Ranglisten vergeben wir fünf Auszeichnungen. Jeder Gewinner erhält ein offizielles Siegel für Website, Studio und Social Media.", "Alongside the rankings we give five awards. Every winner receives an official seal for their website, studio and social media.")}
     <ul>
-      <li>{r("span", "<strong>Beste Bachata-Schule Deutschlands:</strong> die höchste Gesamtpunktzahl aller 14 Städte.", "<strong>Best Bachata School in Germany:</strong> the highest total score across all 14 cities.")}</li>
-      <li>{r("span", "<strong>Beste Schule der Stadt:</strong> die bestplatzierte Schule in Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover und Nürnberg.", "<strong>Best School of the City:</strong> the top-ranked school in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover and Nuremberg.")}</li>
+      <li>{r("span", "<strong>Beste Bachata-Schule Deutschlands:</strong> die höchste Gesamtpunktzahl aller 22 Städte.", "<strong>Best Bachata School in Germany:</strong> the highest total score across all 22 cities.")}</li>
+      <li>{r("span", "<strong>Beste Schule der Stadt:</strong> die bestplatzierte Schule in Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg und Wiesbaden.", "<strong>Best School of the City:</strong> the top-ranked school in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg and Wiesbaden.")}</li>
       <li>{r("span", "<strong>Aufsteiger des Jahres:</strong> die bestbewertete Schule, die in den letzten drei Jahren gegründet wurde.", "<strong>Rising School of the Year:</strong> the best-rated school founded in the last three years.")}</li>
       <li>{r("span", "<strong>Legacy Award:</strong> für eine Schule, die ihre lokale Bachata-Szene seit zehn Jahren oder länger prägt.", "<strong>Legacy Award:</strong> for a school that has shaped its local Bachata scene for ten years or more.")}</li>
       <li>{r("span", "<strong>Festival Stage Award:</strong> für die Schule, deren Lehrer am häufigsten auf europäischen Festivals und Kongressen unterrichten.", "<strong>Festival Stage Award:</strong> for the school whose teachers teach most often at European festivals and congresses.")}</li>
@@ -912,8 +914,8 @@ rank_main = f'''
 
 <section class="block" aria-labelledby="cities-title">
   <div class="wrap prose">
-    {r("h2", "Die 14 Städte im Ranking", "The 14 cities in the ranking", 'id="cities-title"')}
-    {r("p", "Für die erste Ausgabe haben wir die 14 größten Bachata-Städte Deutschlands gewählt. Dort gibt es genug Schulen für einen fairen Vergleich, und viele Tänzer suchen hier gezielt nach einem Kurs. Weitere Städte kommen in den nächsten Ausgaben dazu.", "For the first edition we chose Germany's 14 biggest Bachata cities. They have enough schools for a fair comparison, and many dancers there search specifically for a class. More cities join in future editions.")}
+    {r("h2", "Die 22 Städte im Ranking", "The 22 cities in the ranking", 'id="cities-title"')}
+    {r("p", "Für die erste Ausgabe haben wir die 22 größten Bachata-Städte Deutschlands gewählt. Dort gibt es genug Schulen für einen fairen Vergleich, und viele Tänzer suchen hier gezielt nach einem Kurs. Weitere Städte kommen in den nächsten Ausgaben dazu.", "For the first edition we chose Germany's 22 biggest Bachata cities. They have enough schools for a fair comparison, and many dancers there search specifically for a class. More cities join in future editions.")}
     {r("p", "Jede Stadt bekommt ein eigenes Top-10-Ranking. Die beste Schule jeder Stadt erhält den Award <strong>Beste Schule der Stadt</strong>, die höchste Punktzahl im ganzen Land den Award <strong>Beste Bachata-Schule Deutschlands</strong>.", "Every city gets its own top 10. The best school in each city receives the <strong>Best School of the City</strong> award, and the highest score in the country wins <strong>Best Bachata School in Germany</strong>.")}
     <div class="citylinks">{city_links}</div>
     {r("p", "Mehr zu den Schulen vor Ort: <a href=\"bachata-berlin.html\">Berlin</a>, <a href=\"bachata-hamburg.html\">Hamburg</a>, <a href=\"bachata-muenchen.html\">München</a>.", "More on the schools locally: <a href=\"bachata-berlin.html\">Berlin</a>, <a href=\"bachata-hamburg.html\">Hamburg</a>, <a href=\"bachata-muenchen.html\">Munich</a>.")}
@@ -994,7 +996,15 @@ rank_js = r'''
     bremen: [],
     dresden: [],
     hannover: [],
-    nuernberg: []
+    nuernberg: [],
+    duisburg: [],
+    bochum: [],
+    bielefeld: [],
+    bonn: [],
+    karlsruhe: [],
+    mannheim: [],
+    augsburg: [],
+    wiesbaden: []
   };
   /* PRELIMINARY LIST: schools verified on their own website. Alphabetical, no scores. Not a ranking. */
   var CANDIDATES = {
@@ -1115,6 +1125,35 @@ rank_js = r'''
       {name:"Tanzschule WILFEGO", st:["Sensual"], sc:[0, 8, 7, 21.5, 8.6, 0], fx:["4,9 ★ · 118","–"], url:"https://www.wilfego.de/"},
       {name:"CubaDanza Tanzschule", sc:[0, 8, 6, 21.0, 7.0, 7.5], fx:["5,0 ★ · 48","553 · 264"], url:"https://www.cubadanza.de/"},
       {name:"Dance Cube Nürnberg", sc:[0, 10, 6, 19.0, 7.3, 8.7], fx:["4,8 ★ · 57","2.509 · 300"], url:"https://dance-cube-nuernberg.de/"}
+    ],
+    duisburg: [
+      {name:"Salsa con Corazón Duisburg", st:["Sensual", "Moderna"], sc:[0, 8, 0, 22.7, 8.4, 0], fx:["5,0 ★ · 103","–"], url:"https://www.salsacon-corazon.de/"}
+    ],
+    bochum: [
+      {name:"Salsa Flavors", sc:[0, 8, 3, 17.9, 5.1, 6.0], fx:["5,0 ★ · 16","662 · 17"], url:"https://salsaflavors.de/"},
+      {name:"Karina's World Dance Training", sc:[10, 7, 4, 19.9, 6.3, 0], fx:["5,0 ★ · 32","–"], url:"https://karinasworlddancetraining.com/"}
+    ],
+    bielefeld: [
+      {name:"Tanzstudio Schrittweise", st:["Sensual"], sc:[0, 8, 6, 17.2, 5.1, 0], fx:["4,9 ★ · 16","–"], url:"https://www.tanzstudio-schrittweise.de/"}
+    ],
+    bonn: [
+      {name:"Tanzschule Max7", sc:[0, 7, 7, 21.9, 9.2, 8.5], fx:["4,9 ★ · 156","3.215 · 183"], url:"https://www.max7.de/"},
+      {name:"bonn tanzt", sc:[10, 10, 6, 20.1, 8.7, 9.6], fx:["4,8 ★ · 120","4.100 · 777"], url:"https://www.bonntanzt.de/"},
+      {name:"YOUnited Dance", sc:[0, 8, 6, 21.2, 7.2, 7.1], fx:["5,0 ★ · 51","955 · 69"], url:"https://www.younited.dance/"}
+    ],
+    karlsruhe: [
+      {name:"Havanna Star", sc:[0, 10, 8, 19.8, 8.3, 9.2], fx:["4,8 ★ · 95","3.727 · 498"], url:"https://www.havannastar.de/"},
+      {name:"Caricia Tanzschule", sc:[10, 0, 6, 15.0, 4.9, 6.2], fx:["4,6 ★ · 14","273 · 63"], url:"https://www.caricia.de/"},
+      {name:"Tanzstudio Palladium", sc:[0, 8, 8, 17.9, 6.3, 8.1], fx:["4,8 ★ · 32","859 · 394"], url:"https://www.palladium-karlsruhe.de/"}
+    ],
+    mannheim: [
+      {name:"Chantal Miller Academy", sc:[0, 10, 5, 19.6, 7.9, 8.3], fx:["4,8 ★ · 79","1.983 · 221"], url:"https://www.chantal-miller.academy/"}
+    ],
+    augsburg: [
+      {name:"Cuban Salsa Power", st:["Sensual"], sc:[0, 8, 8, 19.7, 8.1, 0], fx:["4,8 ★ · 85","–"], url:"https://www.emilito.de/"}
+    ],
+    wiesbaden: [
+      {name:"Tanzschule Hohmann", sc:[10, 3, 7, 14.4, 8.0, 7.8], fx:["4,4 ★ · 81","851 · 257"], url:"https://www.tanzschule-hohmann.com/"}
     ]
   };
   var VOTE_ENDPOINT = "https://script.google.com/macros/s/AKfycbzAANOuM7cA3QgqeXZXOKZEYumNFsENBZaIicJSaJluR90rTl2iw30Sk522vxIurDsg/exec";
@@ -1274,9 +1313,9 @@ rank_js = r'''
 
 page('rankings.html',
      'Beste Bachata-Schulen Deutschland 2026 · Ranking',
-     'Die besten Bachata-Schulen in Deutschland: unabhängiges Ranking für Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover und Nürnberg. Ergebnisse am 20. Dezember 2026.',
+     'Die besten Bachata-Schulen in Deutschland: unabhängiges Ranking für Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg und Wiesbaden. Ergebnisse am 20. Dezember 2026.',
      'Best Bachata schools in Germany 2026 · Ranking',
-     'The best Bachata schools in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover and Nuremberg. Latin Dance Awards results on December 20, 2026.',
+     'The best Bachata schools in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg and Wiesbaden. Latin Dance Awards results on December 20, 2026.',
      'rankings.html', rank_main, r.en, rank_js,
      schema=[crumbs('Rankings 2026', 'rankings.html'), faq_schema(rfaq)])
 
