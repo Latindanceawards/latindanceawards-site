@@ -18,7 +18,7 @@ def by_city(k): return [s for s in ranked if s[1] == k]
 
 # ---------- Polish header / footer ----------
 _PLH = B.HEADER
-_PLH = _PLH.replace('<a class="brand" href="index.html"', '<a class="brand" href="pl/"', 1)
+_PLH = _PLH.replace('<a class="brand" href="index.html"', '<a class="brand" href="/"', 1)
 _PLH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="pl/#ranking" data-i18n="pn1">Ranking</a></li>
         <li><a href="pl/#miasta" data-i18n="pn2">Miasta</a></li>
@@ -28,7 +28,7 @@ _PLH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
       </ul>''', _PLH, count=1, flags=re.S)
 _PLH = _PLH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">PL<')
 _PLH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="pn6">Zgłoś szkołę</a>', _PLH, count=1)
-_brand = re.search(r'<a class="brand" href="index.html">.*?</a>', B.FOOTER, re.S).group(0).replace('href="index.html"', 'href="pl/"', 1)
+_brand = re.search(r'<a class="brand" href="index.html">.*?</a>', B.FOOTER, re.S).group(0).replace('href="index.html"', 'href="/"', 1)
 _PLF = f'''<footer>
   <div class="wrap">
     <div class="foot">
