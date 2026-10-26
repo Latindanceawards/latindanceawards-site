@@ -44,11 +44,39 @@ def render_blocks(t, blocks):
                 + (f'<a href="{c["url"]}" rel="noopener" target="_blank">{c["name"]} →</a>' if c.get('url') else '') + '</article>'
                 for c in b[1]) + '</div>')
         elif b[0] == 'raw': out.append(b[1])
+        elif b[0] == 'ev': out.append(ev_block(t, b[1]))
     return '\n'.join(out)
+
+from events_data import EVENTS, CITY_LABEL
+EV_BY_CITY = {}
+for _e in EVENTS: EV_BY_CITY.setdefault(_e['city'], []).append(_e)
+
+def ev_cards(t, evs, h='h3'):
+    out = []
+    for e in evs:
+        links = ''
+        if e['site']: links += f'<a href="{e["site"]}" rel="noopener nofollow" target="_blank">{t("span", "Veranstalter", "Organiser")}</a> '
+        links += f'<a href="{e["src"]}" rel="noopener nofollow" target="_blank">{t("span", "Quelle", "Source")}</a>'
+        price = f' ({e["price"]})' if e['price'] else ''
+        out.append(f'<article data-city="{e["city"]}">{t(h, e["name"], e["name"])}'
+                   f'<p>{e["venue"]}, {e["addr"]}</p>'
+                   f'{t("p", e["rec"][0] + ". " + e["time"][0] + ".", e["rec"][1] + ". " + e["time"][1] + ".")}'
+                   f'<span class="meta">{e["price"] or "&nbsp;"}</span><div class="evl">{links}</div></article>')
+    return '<div class="cards two evc">' + ''.join(out) + '</div>'
+
+def ev_block(t, key):
+    evs = EV_BY_CITY.get(key, [])
+    if not evs: return ''
+    note = t('p', 'Regelmäßige Socials mit Bachata, nach Stand Oktober 2026 aus öffentlichen Listen und den Seiten der Veranstalter. Zeiten und Preise ändern sich, bitte prüfe sie vor dem Besuch. Dein Social fehlt? <a href="bachata-socials.html#eintragen">Trag es kostenlos ein</a>.',
+               'Regular socials with Bachata, as of October 2026, from public listings and the organisers\' pages. Times and prices change, so please check before you go. Is your social missing? <a href="bachata-socials.html#eintragen">List it for free</a>.')
+    return ev_cards(t, evs) + '\n    ' + note
+
 
 def guide_page(slug, pref, title_de, desc_de, title_en, desc_en, crumb, edition, h1, lede, facts, sections, faq,
                ranking_anchor=None, sibling_group=None):
     t = T(pref)
+    if ranking_anchor in EV_BY_CITY:
+        sections = [(a, b, (list(c) + [('ev', ranking_anchor)]) if a.startswith('Bachata-Party in') else c) for a, b, c in sections]
     faq_html = '\n'.join(f'      <details>{t("summary", q, qe)}{t("p", a, ae)}</details>' for q, qe, a, ae in faq)
     secs = []
     for i, (h2, h2e, blocks) in enumerate(sections):
@@ -569,3 +597,81 @@ fest_faq = [
    'All upcoming Bachata festivals in Germany by date, with place, programme and link. Plus tips on which festival suits you, and a way for organisers to list their festival.'),
   [('cal', '<b>32 Festivals</b> bis Dezember 2027', '<b>32 festivals</b> until December 2027'), ('free', 'Eintrag <b>kostenlos</b>', 'Listing <b>free</b>'), ('check', 'Termine <b>vom Veranstalter prüfen</b>', 'Check dates <b>with the organiser</b>')],
   fest_sections, fest_faq, sibling_group='topic')
+
+
+# ======================================================================
+# Events page: recurring Bachata socials by city + submit form
+# ======================================================================
+B.PAGE_CSS += r'''
+.evc article p{margin:6px 0;color:var(--muted);font-size:15px;line-height:1.5}
+.evc article .evl{display:flex;gap:14px;margin-top:10px;font-size:14px}
+.evc article .evl a{color:var(--gold-light);font-weight:600}
+.evh{margin:44px 0 16px;font-family:var(--serif);font-weight:500;font-size:28px}
+.evw{max-width:1000px}
+'''
+_te = T('ev')
+_ev_secs = ''
+for _k, (_de, _en) in CITY_LABEL.items():
+    if _k in EV_BY_CITY:
+        _g = f'<a href="bachata-{_k}.html">{_te("span", "Bachata-Schulen in " + _de, "Bachata schools in " + _en)}</a>' if exists('bachata-' + _k) else ''
+        _ev_secs += f'<section class="evcity" data-city="{_k}" id="{_k}">{_te("h2", "Bachata-Socials in " + _de, "Bachata socials in " + _en, "class=\"evh\"")}{ev_cards(_te, EV_BY_CITY[_k])}<p class="muted" style="margin-top:12px">{_g}</p></section>'
+_ev_cityopts = ''.join(f'<option value="{k}">{CITY_LABEL[k][0]}</option>' for k in CITY_LABEL if k in EV_BY_CITY)
+_ev_n = len(EVENTS)
+_emain = f"""<section class="page-hero"><div class="wrap" style="grid-template-columns:1fr"><div>
+  {_te("h1", "Bachata-Socials in Deutschland", "Bachata socials in Germany")}
+  {_te("p", "Regelmäßige Bachata-Partys und Übungsabende nach Stadt, mit Ort, Zeit und Preis. Du veranstaltest einen Social? Trag ihn kostenlos ein.", "Regular Bachata parties and practice nights by city, with place, time and price. Do you run a social? List it for free.", 'class="lede"')}
+  <div class="ctas"><a class="btn btn-gold" href="#eintragen">{_te("span", "Social eintragen", "List a social")}</a></div>
+</div></div></section>
+<section class="block"><div class="wrap tp evw">
+  <label style="max-width:320px">{_te("span", "Stadt", "City")}<select id="evsel"><option value="">{_te("span", "Alle Städte", "All cities")}</option>{_ev_cityopts}</select></label>
+  <p class="muted" style="margin-top:12px">{_te("span", f"{_ev_n} Socials in fünf Städten, Stand Oktober 2026. Die Angaben stammen aus öffentlichen Veranstaltungslisten und von den Seiten der Veranstalter. Zeiten und Preise ändern sich, bitte prüfe sie vor dem Besuch. Weitere Städte folgen, sobald Veranstalter ihre Socials eintragen.", f"{_ev_n} socials in five cities, as of October 2026. Details come from public event listings and the organisers' own pages. Times and prices change, so please check before you go. More cities follow as organisers list their socials.")}</p>
+  {_ev_secs}
+  <section id="evnew" hidden><h2 class="evh">{_te("span", "Neu eingetragen", "Newly listed")}</h2><div class="cards two evc" id="evnewl"></div></section>
+
+  <div class="box" id="eintragen"><h3>{_te("span", "Social kostenlos eintragen", "List your social for free")}</h3>
+    <form id="evform" novalidate style="display:grid;gap:14px">
+      <input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+      <div class="row2"><label>{_te("span", "Name des Socials", "Name of the social")}<input type="text" name="name" maxlength="80" required></label>
+      <label>{_te("span", "Stadt", "City")}<select name="city">{B._copts_n}</select></label></div>
+      <div class="row2"><label>{_te("span", "Ort (Club oder Schule)", "Venue (club or school)")}<input type="text" name="venue" maxlength="80" required></label>
+      <label>{_te("span", "Adresse", "Address")}<input type="text" name="addr" maxlength="120"></label></div>
+      <div class="row2"><label>{_te("span", "Wann (zum Beispiel jeden 2. Freitag)", "When (for example every 2nd Friday)")}<input type="text" name="when" maxlength="80"></label>
+      <label>{_te("span", "Uhrzeit", "Time")}<input type="text" name="time" maxlength="60"></label></div>
+      <div class="row2"><label>{_te("span", "Eintritt", "Entry price")}<input type="text" name="price" maxlength="40"></label>
+      <label>{_te("span", "Link zur Veranstaltung", "Link to the event")}<input type="url" name="link" placeholder="https://" maxlength="200"></label></div>
+      <label>{_te("span", "Deine E-Mail (wird nicht veröffentlicht)", "Your email (not published)")}<input type="email" name="email" maxlength="120" required></label>
+      <label class="consent"><input type="checkbox" name="consent"><span>{_te("span", "Ich bestätige, dass ich den Social veranstalte oder dazu befugt bin, und stimme zu, dass die Angaben öffentlich angezeigt werden. Ich kann Änderung oder Löschung jederzeit per E-Mail verlangen.", "I confirm that I run this social or am authorised to list it, and I agree that the details are shown publicly. I can ask for changes or removal at any time by email.")}</span></label>
+      <div class="btnrow"><button type="submit" class="btn btn-gold">{_te("span", "Social einreichen", "Submit social")}</button></div>
+      <p class="muted" id="evmsg" role="status" hidden></p>
+    </form></div>
+  <p class="muted" style="margin-top:18px">{_te("span", "Du veranstaltest einen Social, der hier steht, und möchtest etwas ändern oder entfernen lassen? Schreib an hello@latindanceawards.com, wir antworten schnell.", "Do you run a social listed here and want something changed or removed? Email hello@latindanceawards.com and we will reply quickly.")}</p>
+</div></section>"""
+_ejs = r"""
+  var EP="__EP__";
+  var S={err:["Bitte Name, Ort und E-Mail ausfüllen und der Veröffentlichung zustimmen.","Please fill in name, venue and email and agree to publication."],ok:["Danke! Wir prüfen den Eintrag und schalten ihn danach frei.","Thank you! We will review the listing and then publish it."],fail:["Das hat nicht geklappt. Bitte versuche es noch einmal.","That did not work. Please try again."],org:["Veranstalter","Organiser"]};
+  function L(k){return S[k][window.LANG==="en"?1:0];}
+  function esc(x){return String(x==null?"":x).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  var sel=document.getElementById("evsel");
+  function filt(){ var v=sel.value; [].forEach.call(document.querySelectorAll(".evcity"),function(s){ s.hidden=!!v&&s.getAttribute("data-city")!==v; }); }
+  sel.addEventListener("change",function(){ try{history.replaceState(null,"",v_()+(sel.value?"#"+sel.value:""));}catch(e){} filt(); });
+  function v_(){ return location.pathname+location.search; }
+  var h=(location.hash||"").slice(1); if(h&&sel.querySelector('option[value="'+h+'"]')){ sel.value=h; filt(); }
+  fetch(EP+"?action=events").then(function(r){return r.json();}).then(function(j){
+    var a=j.items||[]; if(!a.length) return; var box=document.getElementById("evnewl"); box.innerHTML="";
+    a.forEach(function(p){ var u=/^https:\/\//i.test(p.link||"")?p.link:"";
+      box.innerHTML+='<article><h3>'+esc(p.name)+'</h3><p>'+esc(p.venue)+(p.addr?', '+esc(p.addr):'')+', '+esc(p.city)+'</p><p>'+esc(p.when)+(p.time?'. '+esc(p.time):'')+'</p><span class="meta">'+esc(p.price||"")+'</span>'+(u?'<div class="evl"><a href="'+esc(u)+'" rel="noopener nofollow ugc" target="_blank">'+esc(L("org"))+'</a></div>':'')+'</article>'; });
+    document.getElementById("evnew").hidden=false;
+  }).catch(function(){});
+  var f=document.getElementById("evform"),m=document.getElementById("evmsg"),mailRe=/^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+  f.addEventListener("submit",function(ev){ ev.preventDefault(); var e=f.elements;
+    if(!e.name.value.trim()||!e.venue.value.trim()||!mailRe.test(e.email.value.trim())||!e.consent.checked){ m.textContent=L("err"); m.hidden=false; return; }
+    var b=new URLSearchParams({action:"event",name:e.name.value.trim(),city:e.city.value,venue:e.venue.value.trim(),addr:e.addr.value.trim(),when:e.when.value.trim(),time:e.time.value.trim(),price:e.price.value.trim(),link:e.link.value.trim(),email:e.email.value.trim(),hp:e.hp.value,language:window.LANG==="en"?"EN":"DE"});
+    var btn=f.querySelector("button[type=submit]"); btn.disabled=true;
+    fetch(EP,{method:"POST",mode:"no-cors",body:b}).then(function(){ f.reset(); btn.disabled=false; m.textContent=L("ok"); m.hidden=false; }).catch(function(){ btn.disabled=false; m.textContent=L("fail"); m.hidden=false; });
+  });
+""".replace('__EP__', B.EP_URL)
+page('bachata-socials.html', 'Bachata-Socials in Deutschland: Partys nach Stadt · Latin Dance Awards',
+     'Regelmäßige Bachata-Socials und Partys in Berlin, Hamburg, München, Köln und Frankfurt mit Ort, Zeit und Preis. Veranstalter tragen kostenlos ein.',
+     'Bachata socials in Germany: parties by city · Latin Dance Awards',
+     'Regular Bachata socials and parties in Berlin, Hamburg, Munich, Cologne and Frankfurt with place, time and price. Organisers can list for free.',
+     'bachata-socials.html', _emain, _te.en, _ejs, schema=[crumbs('Bachata-Socials', 'bachata-socials.html')])

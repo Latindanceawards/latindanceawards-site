@@ -34,6 +34,7 @@ function doPost(e) {
   if (a === 'vote') return handleVote_(e.parameter);
   if (a === 'review') return handleReview_(e.parameter);
   if (a === 'profile') return handleProfile_(e.parameter);
+  if (a === 'event') return handleEvent_(e.parameter);
   return handleApplication_(e);
 }
 
@@ -264,6 +265,7 @@ function doGet(e) {
   var p = (e && e.parameter) || {};
   if (p.action === 'reviews') return reviewsJson_(String(p.school || ''));
   if (p.action === 'profiles') return profilesJson_(String(p.city || ''));
+  if (p.action === 'events') return eventsJson_(String(p.city || ''));
   var bad = ['Link ungültig oder abgelaufen.', 'Link invalid or expired.'];
   if (p.unsub) return unsub_(p.unsub) ? page_(['Du wurdest abgemeldet.', 'You have been unsubscribed.']) : page_(bad);
   if (p.review) {
@@ -279,4 +281,34 @@ function doGet(e) {
       : ['Danke! Deine Stimme für ' + b.school + ' ist bestätigt.', 'Thank you! Your vote for ' + b.school + ' is confirmed.']);
   }
   return page_(['Latin Dance Awards läuft.', 'Latin Dance Awards is running.']);
+}
+
+/* ===== Socials and events =====
+ * Sheet "Events": new rows arrive with Status = Pending. Set Status to Approved to publish on the events page.
+ */
+var EVENT_SHEET = 'Events';
+var EVENT_HEAD = ['Submitted at', 'Name', 'City', 'Venue', 'Address', 'When', 'Time', 'Price', 'Link', 'Contact email', 'Language', 'Status'];
+function handleEvent_(p) {
+  if (p.hp) return ContentService.createTextOutput('ok');
+  var email = normEmail_(p.email), name = String(p.name || '').trim().substring(0, 80), venue = String(p.venue || '').trim().substring(0, 80);
+  if (!email || !name || !venue) return ContentService.createTextOutput('invalid');
+  var lock = LockService.getScriptLock(); lock.waitLock(20000);
+  try {
+    var sh = sheet_(EVENT_SHEET, EVENT_HEAD), d = sh.getDataRange().getValues();
+    for (var r = 1; r < d.length; r++) if (d[r][9] === email && d[r][1] === name && d[r][3] === venue) return ContentService.createTextOutput('ok');
+    sh.appendRow([new Date(), safe_(name), safe_(String(p.city || '').substring(0, 40)), safe_(venue), safe_(String(p.addr || '').substring(0, 120)),
+      safe_(String(p.when || '').substring(0, 80)), safe_(String(p.time || '').substring(0, 60)), safe_(String(p.price || '').substring(0, 40)),
+      url_(p.link), email, p.language === 'EN' ? 'EN' : 'DE', 'Pending']);
+    try { MailApp.sendEmail(Session.getEffectiveUser().getEmail(), 'New social to review: ' + name, name + ' (' + p.city + ', ' + venue + ') was submitted. Open the Events sheet and set Status to Approved to publish.'); } catch (x) {}
+    return ContentService.createTextOutput('ok');
+  } finally { lock.releaseLock(); }
+}
+function eventsJson_(city) {
+  var sh = sheet_(EVENT_SHEET, EVENT_HEAD), d = sh.getDataRange().getValues(), items = [];
+  for (var i = 1; i < d.length; i++) {
+    if (d[i][11] !== 'Approved') continue;
+    if (city && d[i][2] !== city) continue;
+    items.push({ name: String(d[i][1]), city: String(d[i][2]), venue: String(d[i][3]), addr: String(d[i][4]), when: String(d[i][5]), time: String(d[i][6]), price: String(d[i][7]), link: String(d[i][8]) });
+  }
+  return ContentService.createTextOutput(JSON.stringify({ items: items })).setMimeType(ContentService.MimeType.JSON);
 }
