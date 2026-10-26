@@ -408,6 +408,7 @@ def page(fname, title_de, desc_de, title_en, desc_en, canonical, main_html, en_d
     if '/' in fname:
         html = re.sub(r'(href|src)="(?!https?:|/|#|mailto:|tel:|data:|javascript:)', r'\1="/', html)
         html = re.sub(r'(href|src)=\\"(?!https?:|/|#|mailto:|tel:|data:|javascript:)', r'\1=\\"/', html)
+        html = html.replace('url(fonts/', 'url(/fonts/')
     open(os.path.join(ROOT, fname), 'w', encoding='utf-8').write(html)
     print('wrote', fname, len(html))
 
