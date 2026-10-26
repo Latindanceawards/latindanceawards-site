@@ -405,7 +405,7 @@ fest_cards = []
 for _k in _order:
     if _k in fest_extra: fest_cards.append(fest_extra[_k])
     else: fest_cards.append(next(c for c in _base if c["name"].startswith(_k)))
-assert len(fest_cards) == 20
+assert len(fest_cards) == 21
 
 fest_sections = [
  ('Bachata-Festivals in Deutschland: Was dich erwartet', 'Bachata festivals in Germany: what to expect', [
@@ -451,8 +451,8 @@ fest_sections = [
 ]
 fest_faq = [
  ('Welche Bachata-Festivals gibt es in Deutschland 2026 und 2027?', 'Which Bachata festivals are there in Germany in 2026 and 2027?',
-  'Auf dieser Seite findest du 20 Festivals, unter anderem in Frankfurt, Stuttgart, Berlin, Hamburg, Köln, Freiburg und Karlsruhe, sortiert nach Datum. Das nächste ist The Bachata Flow Generation in Frankfurt vom 30. Oktober bis 1. November 2026.',
-  'This page lists 20 festivals, including Frankfurt, Stuttgart, Berlin, Hamburg, Cologne, Freiburg and Karlsruhe, sorted by date. The next one is The Bachata Flow Generation in Frankfurt from October 30 to November 1, 2026.'),
+  'Auf dieser Seite findest du 21 Festivals, unter anderem in Frankfurt, Stuttgart, Berlin, Hamburg, Köln, Freiburg und Karlsruhe, sortiert nach Datum. Das nächste ist The Bachata Flow Generation in Frankfurt vom 30. Oktober bis 1. November 2026.',
+  'This page lists 21 festivals, including Frankfurt, Stuttgart, Berlin, Hamburg, Cologne, Freiburg and Karlsruhe, sorted by date. The next one is The Bachata Flow Generation in Frankfurt from October 30 to November 1, 2026.'),
  ('Wann ist das Bachatation Festival?', 'When is the Bachatation Festival?',
   'Die Website nennt für die Ausgabe 2027 den Zeitraum 25. bis 28. Februar in Karlsruhe bei Son Latino Studios. Das Workshop-Programm war zuletzt noch nicht veröffentlicht.',
   'For the 2027 edition the website gives February 25 to 28 in Karlsruhe at Son Latino Studios. The workshop programme had not been published at the last check.'),
@@ -475,5 +475,5 @@ guide_page('bachata-festivals-deutschland', 'bf',
   ('Bachata Festival Deutschland: <em class="foil">Termine</em> 2026/2027', 'Bachata festivals in Germany: <em class="foil">dates</em> 2026/2027'),
   ('Alle kommenden Bachata-Festivals in Deutschland nach Datum, mit Ort, Programm und Link. Dazu Tipps, welches Festival zu dir passt, und die Möglichkeit für Veranstalter, ihr Festival einzutragen.',
    'All upcoming Bachata festivals in Germany by date, with place, programme and link. Plus tips on which festival suits you, and a way for organisers to list their festival.'),
-  [('cal', '<b>20 Festivals</b> bis August 2027', '<b>20 festivals</b> until August 2027'), ('free', 'Eintrag <b>kostenlos</b>', 'Listing <b>free</b>'), ('check', 'Termine <b>vom Veranstalter prüfen</b>', 'Check dates <b>with the organiser</b>')],
+  [('cal', '<b>21 Festivals</b> bis August 2027', '<b>21 festivals</b> until August 2027'), ('free', 'Eintrag <b>kostenlos</b>', 'Listing <b>free</b>'), ('check', 'Termine <b>vom Veranstalter prüfen</b>', 'Check dates <b>with the organiser</b>')],
   fest_sections, fest_faq, sibling_group='topic')
