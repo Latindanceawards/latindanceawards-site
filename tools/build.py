@@ -150,6 +150,17 @@ PAGE_CSS = r'''
   padding:11px 20px;border-radius:999px;cursor:pointer;transition:all .25s}
 .tabs button:hover{color:var(--cream);border-color:rgba(228,185,91,.45)}
 .tabs button[aria-selected="true"]{background:var(--gold);color:var(--velvet-deep);border-color:var(--gold)}
+.citypick{position:relative;flex:1 1 230px;max-width:330px}
+.citypick input{width:100%;font:inherit;font-size:15px;font-weight:600;color:var(--cream);background:var(--card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23b9ad98' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 16px center;border:1px solid var(--line);padding:11px 38px 11px 20px;border-radius:999px;outline:none;transition:all .25s}
+.citypick input::placeholder{color:var(--muted);opacity:1}
+.citypick input:hover,.citypick input:focus{border-color:rgba(228,185,91,.55)}
+.citypick.sel input{background-color:var(--gold);color:var(--velvet-deep);border-color:var(--gold)}
+#citylist{position:absolute;z-index:30;left:0;right:0;top:calc(100% + 8px);max-height:340px;overflow:auto;margin:0;padding:6px;list-style:none;background:#1a1612;border:1px solid rgba(228,185,91,.4);border-radius:16px;box-shadow:0 18px 40px rgba(0,0,0,.55)}
+#citylist[hidden]{display:none}
+#citylist li{display:flex;justify-content:space-between;gap:12px;padding:10px 14px;border-radius:10px;cursor:pointer;color:var(--cream);font-size:15px}
+#citylist li small{color:var(--muted);font-size:13px}
+#citylist li.act,#citylist li:hover{background:rgba(228,185,91,.16)}
+#citylist li.none{cursor:default;color:var(--muted)}
 .panel-title{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3.4vw,42px);line-height:1.1;margin-bottom:8px}
 .panel-sub{color:var(--muted);margin-bottom:40px}
 
@@ -763,7 +774,7 @@ CITIES = [('deutschland', 'Ganz Deutschland', 'All Germany'), ('berlin', 'Berlin
           ('hamm', 'Hamm', 'Hamm'), ('saarbruecken', 'Saarbrücken', 'Saarbrücken'), ('ludwigshafen', 'Ludwigshafen', 'Ludwigshafen'), ('potsdam', 'Potsdam', 'Potsdam'), ('oldenburg', 'Oldenburg', 'Oldenburg'), ('paderborn', 'Paderborn', 'Paderborn'), ('wuerzburg', 'Würzburg', 'Würzburg'), ('heilbronn', 'Heilbronn', 'Heilbronn')]
 tabs_html = '\n'.join(
     f'      <button type="button" role="tab" id="tab-{slug}" aria-controls="panel" aria-selected="{"true" if i==0 else "false"}" data-city="{slug}">{r("span", de, en)}</button>'
-    for i, (slug, de, en) in enumerate(CITIES))
+    for i, (slug, de, en) in enumerate(CITIES) if i < 7)
 
 
 rfaq = [
@@ -815,6 +826,10 @@ rank_main = f'''
   <div class="wrap">
     <div class="tabs" role="tablist" aria-label="Städte / Cities">
 {tabs_html}
+      <div class="citypick" id="citypick">
+        <input id="cityq" type="text" role="combobox" aria-expanded="false" aria-controls="citylist" aria-autocomplete="list" autocomplete="off" spellcheck="false" data-ph-de="Stadt suchen …" data-ph-en="Search city …" aria-label="Stadt suchen / Search city">
+        <ul id="citylist" role="listbox" hidden></ul>
+      </div>
     </div>
     <div id="panel" role="tabpanel"></div>
   </div>
@@ -1383,18 +1398,58 @@ rank_js = r'''
     }); });
     var sa=panel.querySelector(".showall"); if(sa) sa.addEventListener("click",function(){ panel.querySelectorAll("li.more").forEach(function(l){ l.hidden=false; }); sa.remove(); });
     try{ if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){ panel.querySelectorAll(".irk .score").forEach(function(el){ var tn=el.firstChild, to=parseFloat(String(tn.nodeValue).replace(",",".")); if(!(to>0)) return; var t0=null; function st(ts){ t0=t0||ts; var k=Math.min(1,(ts-t0)/1200), v=to*(1-Math.pow(1-k,3)); tn.nodeValue=num(v); if(k<1) requestAnimationFrame(st); } requestAnimationFrame(st); }); } }catch(e){}
-    panel.setAttribute("aria-labelledby","tab-"+c);
+    if(document.getElementById("tab-"+c)) panel.setAttribute("aria-labelledby","tab-"+c); else panel.setAttribute("aria-label",cname(c));
   }
+  var QUICK=["deutschland","berlin","muenchen","hamburg","koeln","frankfurt","duesseldorf"];
+  var cq=document.getElementById("cityq"), cl=document.getElementById("citylist"), cp=document.getElementById("citypick"), actI=-1, shown=[];
+  function cname(c){ return TX.cities[c][window.LANG==="en"?1:0]; }
+  function norm(t){ return String(t).toLowerCase().replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ß/g,"ss").normalize("NFD").replace(/[\u0300-\u036f]/g,""); }
+  function cityList(q){
+    q=norm(q||"").trim();
+    var o=Object.keys(TX.cities).filter(function(c){ return QUICK.indexOf(c)<0 && (!q || norm(TX.cities[c][0]).indexOf(q)>-1 || norm(TX.cities[c][1]).indexOf(q)>-1); });
+    o.sort(function(a,b){ return norm(cname(a)).localeCompare(norm(cname(b))); });
+    return o;
+  }
+  function openList(q){
+    shown=cityList(q); actI=-1;
+    cl.innerHTML=shown.length ? shown.map(function(c,i){ var n=(CANDIDATES[c]||[]).length; return '<li role="option" data-c="'+c+'" id="co-'+c+'">'+esc(cname(c))+'<small>'+n+'</small></li>'; }).join("") : '<li class="none">'+(window.LANG==="en"?"No city found":"Keine Stadt gefunden")+'</li>';
+    cl.hidden=false; cq.setAttribute("aria-expanded","true");
+  }
+  function closeList(){ cl.hidden=true; cq.setAttribute("aria-expanded","false"); }
+  function setAct(i){
+    var li=cl.querySelectorAll("li[data-c]"); if(!li.length) return;
+    actI=(i+li.length)%li.length; li.forEach(function(x,k){ x.classList.toggle("act",k===actI); });
+    li[actI].scrollIntoView({block:"nearest"}); cq.setAttribute("aria-activedescendant",li[actI].id);
+  }
+  function syncPicker(){
+    cq.placeholder = cq.getAttribute(window.LANG==="en"?"data-ph-en":"data-ph-de");
+    var inQ = QUICK.indexOf(current)>-1;
+    cp.classList.toggle("sel",!inQ);
+    cq.value = inQ ? "" : cname(current);
+  }
+  cq.addEventListener("focus",function(){ cq.select(); openList(""); });
+  cq.addEventListener("click",function(){ if(cl.hidden){ cq.select(); openList(""); } });
+  cq.addEventListener("input",function(){ openList(cq.value); });
+  cq.addEventListener("keydown",function(ev){
+    if(ev.key==="ArrowDown"){ ev.preventDefault(); if(cl.hidden) openList(cq.value); setAct(actI+1); }
+    else if(ev.key==="ArrowUp"){ ev.preventDefault(); setAct(actI-1); }
+    else if(ev.key==="Enter"){ ev.preventDefault(); var c = actI>-1 ? shown[actI] : (shown.length===1?shown[0]:null); if(c){ select(c,true); closeList(); cq.blur(); } }
+    else if(ev.key==="Escape"){ closeList(); syncPicker(); cq.blur(); }
+  });
+  cl.addEventListener("mousedown",function(ev){ var li=ev.target.closest("li[data-c]"); if(!li) return; ev.preventDefault(); select(li.getAttribute("data-c"),true); closeList(); cq.blur(); });
+  document.addEventListener("click",function(ev){ if(!cp.contains(ev.target)){ if(!cl.hidden){ closeList(); syncPicker(); } } });
+  cq.addEventListener("blur",function(){ setTimeout(function(){ closeList(); syncPicker(); },120); });
   function select(c, push){
     if(!TX.cities[c]) c="deutschland";
     current=c;
     document.querySelectorAll(".tabs button").forEach(function(b){ b.setAttribute("aria-selected", b.dataset.city===c?"true":"false"); });
     if(push){ try{ history.replaceState(null,"","#"+c); }catch(e){} }
+    syncPicker();
     render();
   }
   document.querySelectorAll(".tabs button").forEach(function(b){ b.addEventListener("click",function(){ select(b.dataset.city,true); }); });
   window.addEventListener("hashchange",function(){ var c=location.hash.slice(1); if(TX.cities[c]){ select(c,false); document.querySelector(".tabs").scrollIntoView({behavior:"smooth",block:"start"}); } });
-  document.addEventListener("langchange",render);
+  document.addEventListener("langchange",function(){ syncPicker(); render(); });
   select((location.hash||"").slice(1)||"deutschland",false);
 
   // Countdown
