@@ -11,8 +11,17 @@ def parts(r, v):
 
 def fx_str(r, v): return f'{r:.1f}'.replace('.', ',') + f' ★ · {v}'
 
+def social(f, p):
+    return round(min(10.0, max(0.0, 0.6429 * math.log(f) + 0.5871 * math.log(p + 1) + 0.2215)), 1) if f > 0 else 0.0
+
 def german_entries():
-    """Germany on the common interim basis (Google rating + review volume), every other factor left out."""
+    """Germany with its full nine-factor data (same numbers as the live Germany ranking)."""
+    out = {}
+    for e in B.SCH:
+        out.setdefault(e['city'], []).append(dict(name=e['name'], sc=e['sc'], fx=e['fx'], url=e['url'], st=e['st']))
+    return out
+
+def german_entries_interim():
     out = {}
     for e in B.SCH:
         m = re.match(r'([\d,]+) ★ · ([\d.]+)', e['fx'][0].replace('\xa0', ' '))
@@ -29,14 +38,18 @@ def polish_entries(P):
     out = {}
     for name, city, r, v, url in P.SCHOOLS:
         g, rv = parts(r, v)
-        out.setdefault(city, []).append(dict(name=name, sc=[0, 0, 0, g, rv, 0], fx=[fx_str(r, v), '–'], url=url, np=1))
+        y, b, ev, f, po, st = P.EXTRA.get(name, (0, 0, 0, 0, 0, []))
+        fxs = f'{f:,}'.replace(',', '.') + ' · ' + f'{po:,}'.replace(',', '.') if f else '–'
+        out.setdefault(city, []).append(dict(name=name, sc=[y, b, ev, g, rv, social(f, po)], fx=[fx_str(r, v), fxs], url=url, st=st, np=1))
     return out
+
+def total(e): return round(sum(e['sc']), 1)
 
 def cand_js(cands):
     lines = []
     for city, es in cands.items():
         items = ',\n'.join('      ' + json.dumps(e, ensure_ascii=False, separators=(', ', ':')).replace('{"name":', '{name:', 1)
-                           .replace(', "sc":', ', sc:').replace(', "fx":', ', fx:').replace(', "url":', ', url:').replace(', "np":', ', np:')
+                           .replace(', "sc":', ', sc:').replace(', "fx":', ', fx:').replace(', "url":', ', url:').replace(', "st":', ', st:').replace(', "np":', ', np:')
                            for e in es)
         lines.append(f'    {json.dumps(city)}: [\n{items}\n    ]')
     return '{\n' + ',\n'.join(lines) + '\n  }'
@@ -66,11 +79,12 @@ def make_js(scope, groups, tx, cands, quick, scale, pl=False, extra=None):
     js = sub1(js, 'if(!TX.cities[c]) c="deutschland";', 'if(!TX.cities[c]) c=SCOPE;')
     js = sub1(js, '||"deutschland",false)', '||SCOPE,false)')
     js = sub1(js, 'tick(); setInterval(tick,1000);', '')
-    # common interim basis: only Google rating and review volume are scored, so the bars and the total use that scale
-    js = sub1(js, '<small> / 100</small></span><span class="meter"><i style="width:\'+e.pts+\'%"></i>',
-              '<small> / \'+SCALE+\'</small></span><span class="meter"><i style="width:\'+(e.pts/SCALE*100)+\'%"></i>')
-    js = sub1(js, 'FAC.forEach(function(f,k){ var fx=', 'FAC.forEach(function(f,k){ if(k<3||k===5) return; var fx=')
-    js = re.sub(r"why\+='<div class=\"tbc\"><b>'\+esc\(en\?\"Style variety[^\n]*\n", '', js, count=1)
+    if scale != 100:
+        # common interim basis: only Google rating and review volume are scored, so the bars and the total use that scale
+        js = sub1(js, '<small> / 100</small></span><span class="meter"><i style="width:\'+e.pts+\'%"></i>',
+                  '<small> / \'+SCALE+\'</small></span><span class="meter"><i style="width:\'+(e.pts/SCALE*100)+\'%"></i>')
+        js = sub1(js, 'FAC.forEach(function(f,k){ var fx=', 'FAC.forEach(function(f,k){ if(k<3||k===5) return; var fx=')
+        js = re.sub(r"why\+='<div class=\"tbc\"><b>'\+esc\(en\?\"Style variety[^\n]*\n", '', js, count=1)
     # schools without an own page here link to their website
     js = sub1(js, '<b><a href="schools/\'+slug(e.name)+\'.html">',
               '<b><a href="\'+(e.np?(safeUrl(e.url)||"#"):"schools/"+slug(e.name)+".html")+\'"\'+(e.np?\' rel="nofollow noopener" target="_blank"\':"")+\'>')

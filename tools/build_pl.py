@@ -5,12 +5,15 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 with contextlib.redirect_stdout(io.StringIO()):
     import build as B
 import poland_data as P
+import rank_variant as RV
+FULL = {e['name']: RV.total(e) for es in RV.polish_entries(P).values() for e in es}
 from build import T, page, crumbs, faq_schema, ICON, ROOT
 os.makedirs(os.path.join(ROOT, 'pl'), exist_ok=True)
 
 def f1(x): return f'{x:.1f}'.replace('.', ',')
 def f1en(x): return f'{x:.1f}'
-ranked = sorted(P.SCHOOLS, key=lambda s: (-P.pts(s[2], s[3]), s[0]))
+ranked = sorted(P.SCHOOLS, key=lambda s: (-FULL[s[0]], s[0]))
+_TOP = [FULL[ranked[0][0]]]
 def by_city(k): return [s for s in ranked if s[1] == k]
 
 # ---------- Polish header / footer ----------
@@ -68,7 +71,7 @@ def pl_page(fname, canon, title, desc, title_en, desc_en, main, en, schema, js='
 def school_list(ss, t, start=1):
     lis = []
     for i, s in enumerate(ss, start):
-        lis.append(f'<li><b>{i}</b><a href="{s[4]}" rel="nofollow noopener" target="_blank">{s[0]}</a><span>{f1(P.pts(s[2], s[3]))} pkt · {f1(s[2])} ★ ({s[3]})</span></li>')
+        lis.append(f'<li><b>{i}</b><a href="{s[4]}" rel="nofollow noopener" target="_blank">{s[0]}</a><span>{f1(FULL[s[0]])} pkt · {f1(s[2])} ★ ({s[3]})</span></li>')
     return '<ol class="top">' + ''.join(lis) + '</ol>'
 
 def hero(t, edition, h1, lede, facts, ctas, seal='badge-bachata-poland-2027.svg', alt='Odznaka Bachata Awards Polska 2027'):
@@ -90,8 +93,8 @@ def faq_html(t, faq):
     return '<section class="block alt" id="faq"><div class="wrap"><div class="sec-head">' + t("h2", 'Najczęstsze pytania', 'Frequently asked questions') + '</div><div class="faq">' + ''.join(f'<details>{t("summary", q, qe)}{t("p", a, ae)}</details>' for q, qe, a, ae in faq) + '</div></div></section>'
 
 N = len(P.SCHOOLS); NC = len(P.CITIES)
-METHOD_PL = ('Na razie oceniamy szkoły na podstawie dwóch publicznych kryteriów: średniej oceny w Google (do 25 punktów, z korektą dla małej liczby opinii) i liczby opinii (do 10 punktów). To daje maksymalnie 35 punktów. Pozostałe kryteria, jak lata działalności, oferta dla początkujących, imprezy i media społecznościowe, dodamy po zgłoszeniach szkół. Wtedy pełny ranking będzie liczony na 100 punktów, tak jak w Niemczech.',
-             'For now we score schools on two public factors: the Google rating (up to 25 points, adjusted for a small number of reviews) and the number of reviews (up to 10 points). That gives a maximum of 35 points. The other factors, such as years active, beginner offer, events and social media, will be added after schools apply. The full ranking will then be scored out of 100 points, as in Germany.')
+METHOD_PL = ('Oceniamy szkoły tak samo jak w Niemczech, według dziewięciu kryteriów i 100 punktów: lata działalności, oferta dla początkujących, wydarzenia, ocena w Google, liczba opinii i media społecznościowe (razem 75 punktów) oraz festiwale, aktualne opinie i konkursy (25 punktów, na razie „do potwierdzenia”). Dane pochodzą ze stron szkół, z Map Google i z Instagrama. Czego nie da się potwierdzić, liczy się na najniższym poziomie, a szkoła może to uzupełnić w zgłoszeniu.',
+             'We score schools exactly as in Germany, on nine factors and 100 points: years active, beginner offer, events, Google rating, number of reviews and social media (75 points together), plus festivals, recent reviews and competitions (25 points, still “to be confirmed”). The data comes from the schools’ websites, Google Maps and Instagram. Anything we cannot confirm counts at the lowest level, and a school can complete it in its application.')
 
 def city_label(k): return P.CITIES[k]
 
@@ -144,13 +147,13 @@ _tx('vote_err', 'To nie zadziałało. Sprawdź adres e-mail i spróbuj ponownie.
 _tx('vote_done', 'Na tym urządzeniu już głosowano. Dziękujemy!', B.R_TEXT['vote_done'][1])
 _tx('prelim_badge', 'Stan przejściowy · nie wynik końcowy, szkoły wciąż rywalizują', 'Interim standing · not final, schools are still competing')
 _tx('prelim_h', 'Jak powstaje stan przejściowy', 'How the interim standing is calculated')
-_tx('prelim_p', 'Na razie liczą się dwa kryteria, które mamy dla wszystkich szkół: ocena w Google (maks. 25 punktów, z korektą dla małej liczby opinii) i liczba opinii (maks. 10 punktów), razem maks. 35 punktów. Stan na październik 2026, z Map Google. Pozostałe kryteria są oznaczone jako „do potwierdzenia” i zostaną dodane, gdy szkoły się zgłoszą lub zbierzemy dane. Pełny ranking według dziewięciu kryteriów i 100 punktów ukaże się wiosną 2027. Miejsca mogą się jeszcze zmienić.', 'For now two criteria count that we have for every school: the Google rating (25 points at most, adjusted for a small number of reviews) and the number of reviews (10 points at most), 35 points at most together. Status: October 2026, from Google Maps. The other criteria are marked “to be confirmed” and are added as schools apply or we collect the data. The full ranking on nine criteria and 100 points follows in spring 2027. Positions can still change.')
+_tx('prelim_p', 'Punkty liczymy tak samo jak w Niemczech: do 75 punktów za sześć kryteriów (lata działalności, oferta dla początkujących, wydarzenia, ocena w Google, liczba opinii, media społecznościowe) i do 25 punktów za festiwale, aktualne opinie i konkursy, które są jeszcze „do potwierdzenia”. Dane: strony szkół, Mapy Google i Instagram, stan na październik 2026. Czego nie potwierdzono, liczy się na najniższym poziomie. Miejsca mogą się jeszcze zmienić.', 'Points are calculated exactly as in Germany: up to 75 points for six factors (years active, beginner offer, events, Google rating, number of reviews, social media) and up to 25 points for festivals, recent reviews and competitions, which are still “to be confirmed”. Data: school websites, Google Maps and Instagram, status October 2026. Anything unconfirmed counts at the lowest level. Positions can still change.')
 _tx('empty', 'Dla tego miasta nie ma jeszcze wyników.', 'There are no results for this city yet.')
-_PL_TBC = ['Lata nauczania', 'Oferta dla początkujących', 'Wydarzenia i gościnni instruktorzy', 'Media społecznościowe', 'Festiwale', 'Aktualne opinie', 'Udział w konkursach', 'Wygrane konkursy']
-_EN_TBC = ['Years teaching', 'Beginner offer', 'Events and guests', 'Social media', 'Festivals', 'Recent reviews', 'Competitions entered', 'Competitions won']
-_MX = ['10', '10', '10', '10', '15', '5', '5', '5']
+_PL_TBC = ['Festiwale', 'Aktualne opinie', 'Udział w konkursach', 'Wygrane konkursy']
+_EN_TBC = ['Festivals', 'Recent reviews', 'Competitions entered', 'Competitions won']
+_MX = ['15', '5', '5', '5']
 _QUICK = ['polska', 'warszawa', 'krakow', 'wroclaw', 'poznan', 'gdansk', 'lodz']
-pl_js = RV.make_js('polska', {}, TX, PL_C, _QUICK, 35, pl=True, extra={
+pl_js = RV.make_js('polska', {}, TX, PL_C, _QUICK, 100, pl=True, extra={
   'tbc': ([[n, m] for n, m in zip(_PL_TBC, _MX)], [[n, m] for n, m in zip(_EN_TBC, _MX)]),
   'literals': {
     '"Follower · Posts: "': '"Obserwujący · posty: "',
@@ -171,8 +174,8 @@ main += f'''
 '''
 faq = [
  ('Jaka jest najlepsza szkoła bachaty w Polsce?', 'What is the best Bachata school in Poland?',
-  f'Na dziś, według ocen w Google, prowadzi {ranked[0][0]} ({P.CITIES[ranked[0][1]][0]}) z {f1(P.pts(ranked[0][2], ranked[0][3]))} z 35 punktów. To stan przejściowy, pełny ranking ukaże się wiosną 2027.',
-  f'As of today, by Google ratings, {ranked[0][0]} ({P.CITIES[ranked[0][1]][1]}) leads with {f1en(P.pts(ranked[0][2], ranked[0][3]))} of 35 points. This is an interim standing; the full ranking comes in spring 2027.'),
+  f'Na dziś, według naszych danych, prowadzi {ranked[0][0]} ({P.CITIES[ranked[0][1]][0]}) z {f1(_TOP[0])} z 100 punktów. To stan przejściowy, wyniki końcowe ukażą się wiosną 2027.',
+  f'As of today, by our data, {ranked[0][0]} ({P.CITIES[ranked[0][1]][1]}) leads with {f1en(_TOP[0])} of 100 points. This is an interim standing; final results come in spring 2027.'),
  ('Skąd bierzecie dane do rankingu?', 'Where does the ranking data come from?',
   'Z publicznych źródeł: ocen i liczby opinii w Mapach Google oraz ze stron internetowych szkół, na których sprawdzamy, czy szkoła uczy bachaty.', 'From public sources: ratings and review counts on Google Maps and the schools\' own websites, where we check that the school teaches Bachata.'),
  ('Czy mogę kupić miejsce w rankingu?', 'Can I buy a place in the ranking?', 'Nie. Miejsc nie można kupić, a płatne wzmianki nie wpływają na punkty.', 'No. Places cannot be bought, and paid mentions do not affect points.'),
@@ -198,7 +201,7 @@ for k, (cpl, cen, loc) in P.CITIES.items():
     main += f'''
 <section class="block alt" id="ranking"><div class="wrap tp" style="max-width:860px">
   {t("h2", f"Ranking szkół bachaty w {loc}", f"Ranking of Bachata schools in {cen}")}
-  {t("p", f"Stan przejściowy według ocen w Google z października 2026 (maks. 35 punktów). Pełny ranking, liczony na 100 punktów, ukaże się wiosną 2027.", "Interim standing by Google ratings as of October 2026 (max 35 points). The full ranking, scored out of 100 points, is published in spring 2027.", 'class="muted"')}
+  {t("p", f"Stan przejściowy według ocen w Google z października 2026 (maks. 100 punktów). Wyniki końcowe ukażą się wiosną 2027.", "Interim standing by Google ratings as of October 2026 (max 100 points). The final results are published in spring 2027.", 'class="muted"')}
   <div class="box">{school_list(ss, t)}</div>
 </div></section>
 {sec(t, 1, (f"Szkoły bachaty w {loc} w skrócie", f"Bachata schools in {cen} at a glance"), t("p", f"W {loc} znaleźliśmy {n} szkół, które uczą bachaty. Kolejność jest oparta na przejściowych punktach, a nie na pełnej ocenie. Godziny, ceny i grupy zmieniają się, więc sprawdź je na stronie szkoły.", f"In {cen} we found {n} schools that teach Bachata. The order is based on interim points, not a full assessment. Times, prices and groups change, so check them on the school's website.") + '<div class="cards two">' + cards + '</div>', alt=False)}
@@ -212,7 +215,7 @@ for k, (cpl, cen, loc) in P.CITIES.items():
     top = ss[0]
     faq = [
      (f'Gdzie nauczyć się bachaty w {loc}?', f'Where can I learn Bachata in {cen}?', f'W {loc} bachaty uczą m.in. {", ".join(s[0] for s in ss[:3])}. Pełna lista jest powyżej.', f'In {cen} Bachata is taught by {", ".join(s[0] for s in ss[:3])} and others. The full list is above.'),
-     (f'Jaka jest najlepsza szkoła bachaty w {loc}?', f'What is the best Bachata school in {cen}?', f'Na dziś, według ocen w Google, prowadzi {top[0]} ({f1(top[2])} ★, {top[3]} opinii). To stan przejściowy, a nie ostateczny ranking.', f'As of today, by Google ratings, {top[0]} leads ({f1en(top[2])} ★, {top[3]} reviews). This is an interim standing, not the final ranking.'),
+     (f'Jaka jest najlepsza szkoła bachaty w {loc}?', f'What is the best Bachata school in {cen}?', f'Na dziś, według naszych danych, prowadzi {top[0]} ({f1(top[2])} ★, {top[3]} opinii). To stan przejściowy, a nie ostateczny ranking.', f'As of today, by Google ratings, {top[0]} leads ({f1en(top[2])} ★, {top[3]} reviews). This is an interim standing, not the final ranking.'),
      ('Czy potrzebuję partnera na kurs bachaty?', 'Do I need a partner for a Bachata class?', 'Zazwyczaj nie. W wielu szkołach pary się zmieniają. Zapytaj o to przed pierwszymi zajęciami.', 'Usually not. Many schools rotate partners. Ask before your first class.'),
      ('Od jakiego stylu bachaty zacząć?', 'Which Bachata style should I start with?', 'Większość początkujących zaczyna od bachaty moderna lub sensual. Najważniejszy jest krok podstawowy i rytm, a styl można później zmienić.', 'Most beginners start with moderna or sensual. What matters is the basic step and the rhythm, and you can change style later.'),
      ('Kiedy ukaże się pełny ranking?', 'When is the full ranking published?', 'Wiosną 2027. Do tego czasu pokazujemy stan przejściowy, oparty na ocenach w Google.', 'In spring 2027. Until then we show an interim standing based on Google ratings.'),

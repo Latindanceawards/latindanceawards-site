@@ -85,3 +85,47 @@ def pts(r, v):
     g = max(0.0, 25 - 17.2 * (5 - b))
     rv = 10 * min(1.0, math.log(1 + v) / math.log(251))
     return round(g + rv, 1)
+
+# Scoring data collected Oct 2026 from the schools' own sites and Instagram profiles.
+# name: (years active 0/5/10, beginner offer 0/5/8/10, events 0/4/7/10, ig followers, ig posts, styles)
+# Anything not confirmed on the website is left at 0 (the lowest value); schools can confirm it through the application.
+EXTRA = {
+ 'Szkoła Tańców Karaibskich SHO': (0, 5, 4, 6196, 2951, []),
+ 'BachataDance.pl': (5, 8, 4, 0, 0, ['Sensual', 'Dominicana', 'Moderna']),
+ 'KrakowBachata.pl': (0, 10, 0, 1799, 76, []),
+ 'Forum Tańca': (0, 0, 0, 9242, 750, []),
+ 'Salsa House Kraków': (0, 8, 0, 2738, 867, []),
+ 'La Rosa Negra': (0, 0, 4, 6179, 1528, []),
+ 'No Limits': (10, 5, 0, 9073, 1199, ['Sensual']),
+ 'Dance Flow': (10, 0, 0, 0, 0, []),
+ 'Art Dance': (0, 5, 0, 1186, 79, ['Sensual', 'Dominicana']),
+ 'Salsa Siempre': (10, 5, 4, 3453, 1139, ['Sensual']),
+ 'Bailando Poznań': (0, 5, 0, 766, 153, []),
+ 'Art of Move': (0, 8, 7, 6047, 785, []),
+ 'So!Salsa': (0, 5, 10, 8002, 1667, []),
+ 'Dance Atelier': (0, 5, 0, 3744, 1379, []),
+ 'Latin Dance Academy': (0, 5, 0, 6014, 693, []),
+ 'TONdance': (0, 5, 0, 0, 0, []),
+ 'Urban Dance Zone': (0, 5, 0, 0, 0, []),
+ 'Bachata Master Studio': (0, 0, 0, 410, 90, []),
+ 'Good Mood': (10, 0, 0, 1648, 236, []),
+ 'Dance Fusion': (0, 5, 0, 3141, 789, []),
+ 'Paulina Turska Dance Academy': (0, 0, 0, 872, 60, []),
+ 'Bailamos': (0, 10, 0, 2268, 730, []),
+ 'Szkoła Tańca Bohema': (0, 5, 0, 0, 0, []),
+ 'SALSAme Dance Studio': (0, 5, 0, 2753, 1232, ['Dominicana']),
+ 'Casa de la Danza': (0, 5, 0, 3453, 785, []),
+ 'Abballu': (0, 5, 0, 3522, 1083, []),
+ 'Kimama': (0, 8, 7, 0, 0, ['Sensual']),
+ 'QuieroSalsa': (0, 8, 0, 0, 0, []),
+ 'All About Dance Studio': (0, 8, 0, 0, 0, []),
+ 'Latin Studio': (0, 5, 0, 1695, 901, ['Sensual']),
+ 'CZĘSTOTAŃCZ': (0, 8, 10, 0, 0, []),
+ 'Studio Tańca Fantom': (0, 5, 0, 1044, 736, []),
+ 'Jagielski Dance Project': (0, 8, 0, 5917, 1259, []),
+ 'Candela Studio Tańca': (0, 5, 0, 1590, 1096, []),
+ 'Karrie & Kamil': (0, 8, 0, 0, 0, []),
+ 'Studio Tańca Rejdance': (0, 5, 0, 0, 0, []),
+ 'AllDance': (0, 5, 0, 0, 0, []),
+ 'LOFToDANCE': (0, 0, 0, 0, 0, ['Sensual']),
+}

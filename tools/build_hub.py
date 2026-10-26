@@ -7,6 +7,8 @@ with contextlib.redirect_stdout(io.StringIO()):
 import poland_data as P
 from build import T, page, crumbs, faq_schema, ICON, ROOT
 import rank_variant as RV
+DE_FULL = {e['name']: RV.total(e) for es in RV.german_entries().values() for e in es}
+PL_FULL = {e['name']: RV.total(e) for es in RV.polish_entries(P).values() for e in es}
 
 def f1(x): return f'{x:.1f}'.replace('.', ',')
 def _num(x): return float(x.replace(',', '.'))
@@ -18,13 +20,13 @@ def de_rows():
         cn = B.CITY_NAMES.get(e['city'], (e['city'].title(), e['city'].title()))
         if m:
             r, v = _num(m.group(1)), int(m.group(2).replace('.', ''))
-            out.append(dict(name=e['name'], cc='de', city=cn[0], r=r, v=v, pts=P.pts(r, v), href=f'/schools/{e["slug"]}.html'))
+            out.append(dict(name=e['name'], cc='de', city=cn[0], r=r, v=v, pts=DE_FULL[e['name']], href=f'/schools/{e["slug"]}.html'))
         else:
             out.append(dict(name=e['name'], cc='de', city=cn[0], r=None, v=0, pts=0.0, href=f'/schools/{e["slug"]}.html'))
     return out
 
 def pl_rows():
-    return [dict(name=s[0], cc='pl', city=P.CITIES[s[1]][0], r=s[2], v=s[3], pts=P.pts(s[2], s[3]), href=f'/pl/bachata-{s[1]}.html') for s in P.SCHOOLS]
+    return [dict(name=s[0], cc='pl', city=P.CITIES[s[1]][0], r=s[2], v=s[3], pts=PL_FULL[s[0]], href=f'/pl/bachata-{s[1]}.html') for s in P.SCHOOLS]
 
 ALL = sorted(de_rows() + pl_rows(), key=lambda x: (-x['pts'], x['name']))
 ND = sum(1 for x in ALL if x['cc'] == 'de'); NP = len(ALL) - ND
@@ -52,18 +54,18 @@ def row(i, x):
     flag = x['cc'].upper()
     hid = ' class="more" hidden' if i > TOPN else ''
     return (f'<li data-c="{x["cc"]}"{hid}><b>{i}</b><a href="{x["href"]}">{x["name"]}</a>'
-            f'<em>{x["city"]} · {flag}</em><span>' + (f'{f1(x["pts"])} / 35 · {f1(x["r"])} ★ ({x["v"]})' if x['r'] else 'keine Google-Bewertung') + '</span></li>')
+            f'<em>{x["city"]} · {flag}</em><span>' + (f'{f1(x["pts"])} / 100 · {f1(x["r"])} ★ ({x["v"]})' if x['r'] else 'keine Google-Bewertung') + '</span></li>')
 
 def top3(cc):
     xs = [x for x in ALL if x['cc'] == cc][:3]
-    return '<ol class="top">' + ''.join(f'<li><b>{i}</b><a href="{x["href"]}">{x["name"]}</a><span>{f1(x["pts"])} / 35</span></li>' for i, x in enumerate(xs, 1)) + '</ol>'
+    return '<ol class="top">' + ''.join(f'<li><b>{i}</b><a href="{x["href"]}">{x["name"]}</a><span>{f1(x["pts"])} / 100</span></li>' for i, x in enumerate(xs, 1)) + '</ol>'
 
 rows = ''.join(row(i, x) for i, x in enumerate(ALL, 1))
 
 faq = [
  ('Wie entsteht das Europa-Ranking?', 'How is the Europe ranking built?',
-  'Jedes Land bekommt ein eigenes Ranking, und das Europa-Ranking führt alle Schulen zusammen. Zurzeit gilt für alle Schulen derselbe Zwischenstand: die gewichtete Google-Bewertung und die Zahl der Bewertungen, zusammen höchstens 35 Punkte. Die vollständige Wertung nach neun Kriterien und 100 Punkten kommt, sobald ein Land seine Daten komplett hat.',
-  'Each country gets its own ranking, and the Europe ranking brings all schools together. Right now every school has the same interim score: the weighted Google rating and the number of reviews, 35 points at most. The full scoring on nine factors and 100 points follows as soon as a country has its data complete.'),
+  'Jedes Land bekommt ein eigenes Ranking, und das Europa-Ranking führt alle Schulen zusammen. Überall gilt dieselbe Wertung: neun Kriterien, 100 Punkte, Daten aus Google Maps, von den Schulwebseiten und von Instagram. Was sich nicht bestätigen lässt, zählt mit dem niedrigsten Wert.',
+  'Each country gets its own ranking, and the Europe ranking brings all schools together. The same scoring applies everywhere: nine factors, 100 points, with data from Google Maps, the schools’ websites and Instagram. Anything that cannot be confirmed counts at the lowest value.'),
  ('Kann eine Schule für einen besseren Platz bezahlen?', 'Can a school pay for a better place?',
   'Nein. Die Rankings basieren auf öffentlichen Daten und sind nicht käuflich. Anmelden ist kostenlos.', 'No. The rankings are based on public data and cannot be bought. Applying is free.'),
  ('Wann erscheinen die Ergebnisse?', 'When are the results published?',
@@ -106,12 +108,12 @@ TX['sub_interim'] = ['Zwischenstand: Die Platzierungen können sich noch ändern
 TX['help_p'] = ['Jede Schule wird nach denselben öffentlichen Kriterien bewertet, in jedem Land gleich. Platzierungen sind nicht käuflich.', 'Every school is scored on the same public criteria, identical in every country. Places cannot be bought.']
 TX['note_p'] = ['Melde deine Schule kostenlos an, egal in welchem Land.', 'Enter your school for free, in any country.']
 TX['vote_banner'] = ['Publikumspreis: Öffne eine Schule und stimme ab. Eine Stimme pro Person, bestätigt per E-Mail. Der Publikumspreis ist unabhängig von den Punkten, das Ergebnis kommt mit dem jeweiligen Land.', 'Audience Award: open a school and vote. One vote per person, confirmed by email. It is separate from the points, and the result comes with each country.']
-TX['prelim_p'] = ['Für den Europa-Vergleich zählen bisher in jedem Land nur die zwei Kriterien, die überall schon vorliegen: Google-Bewertung (höchstens 25 Punkte) und Anzahl der Bewertungen (höchstens 10 Punkte), zusammen höchstens 35 Punkte. Stand: Oktober 2026, aus Google Maps. Die übrigen Kriterien sind als „zu bestätigen“ markiert und fließen ein, sobald ein Land seine vollständigen Daten hat. Die Länderrankings werden nach allen neun Kriterien mit 100 Punkten bewertet: Deutschland am 20. Dezember 2026, Polen im Frühjahr 2027. Die Platzierungen können sich noch ändern.', 'For the Europe comparison, so far only the two criteria that every country already has are counted: Google rating (25 points at most) and number of reviews (10 points at most), 35 points at most together. Status: October 2026, from Google Maps. The other criteria are marked “to be confirmed” and are added as soon as a country has its full data. The country rankings are scored on all nine criteria with 100 points: Germany on December 20, 2026, Poland in spring 2027. Positions can still change.']
-TBC = ([ 'Jahre im Unterricht', 'Einsteigerangebot', 'Events und Gastlehrer', 'Social Media', 'Festivals', 'Aktuelle Bewertungen', 'Teilnahme an Wettbewerben', 'Wettbewerbe gewonnen'],
-       ['Years teaching', 'Beginner offer', 'Events and guests', 'Social media', 'Festivals', 'Recent reviews', 'Competitions entered', 'Competitions won'])
-MAXV = ['10', '10', '10', '10', '15', '5', '5', '5']
+TX['prelim_p'] = ['Überall gilt dieselbe Wertung: bis zu 75 Punkte für sechs Kriterien (Jahre im Unterricht, Einsteigerangebot, Events, Google-Bewertung, Anzahl der Bewertungen, Social Media) und bis zu 25 Punkte für Festivals, aktuelle Bewertungen und Wettbewerbe, die noch „zu bestätigen“ sind. Daten: Schulwebseiten, Google Maps und Instagram, Stand Oktober 2026. Was nicht bestätigt ist, zählt mit dem niedrigsten Wert. Deutschland wird am 20. Dezember 2026 final, Polen im Frühjahr 2027. Die Platzierungen können sich noch ändern.', 'The same scoring applies everywhere: up to 75 points for six factors (years teaching, beginner offer, events, Google rating, number of reviews, social media) and up to 25 points for festivals, recent reviews and competitions, which are still “to be confirmed”. Data: school websites, Google Maps and Instagram, status October 2026. Anything unconfirmed counts at the lowest value. Germany becomes final on December 20, 2026, Poland in spring 2027. Positions can still change.']
+TBC = ([ 'Festivals', 'Aktuelle Bewertungen', 'Teilnahme an Wettbewerben', 'Wettbewerbe gewonnen'],
+       ['Festivals', 'Recent reviews', 'Competitions entered', 'Competitions won'])
+MAXV = ['15', '5', '5', '5']
 tbc_pairs = ([[n, m] for n, m in zip(TBC[0], MAXV)], [[n, m] for n, m in zip(TBC[1], MAXV)])
-hub_js = RV.make_js('europa', {'de': list(DE_C), 'pl': list(PL_C)}, TX, CANDS, ['europa', 'de', 'pl'], 35, extra={'tbc': tbc_pairs})
+hub_js = RV.make_js('europa', {'de': list(DE_C), 'pl': list(PL_C)}, TX, CANDS, ['europa', 'de', 'pl'], 100, extra={'tbc': tbc_pairs})
 tabs = RV.tabs_html(t, [('europa', 'Ganz Europa', 'All Europe'), ('de', 'Deutschland', 'Germany'), ('pl', 'Polen', 'Poland')])
 rank_section = RV.ranking_section(tabs, 'Stadt suchen …', 'Search city …', 'Länder und Städte / Countries and cities')
 
