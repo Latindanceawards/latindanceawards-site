@@ -25,10 +25,6 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Goldenes Siegel der Bachata Awards 2026, Latin Dance Awards">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400&family=Manrope:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400&family=Manrope:wght@400;600;700&display=swap"></noscript>
 <script type="application/ld+json">
 [
  {
@@ -142,9 +138,16 @@
  }
 ]
 </script>
+<link rel="preload" href="fonts/fraunces-regular.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="fonts/inter-400.woff" as="font" type="font/woff" crossorigin>
 <style>
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:400 500;font-display:swap;src:url(fonts/fraunces-regular.woff) format("woff")}
+@font-face{font-family:"Fraunces";font-style:italic;font-weight:400 500;font-display:swap;src:url(fonts/fraunces-italic.woff) format("woff")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-400.woff) format("woff")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/inter-600.woff) format("woff")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/inter-700.woff) format("woff")}
 @font-face{font-family:"Fraunces Fallback";src:local("Georgia");size-adjust:104%;ascent-override:96%;descent-override:25%}
-@font-face{font-family:"Manrope Fallback";src:local("Arial");size-adjust:104%;ascent-override:102%;descent-override:29%}
+@font-face{font-family:"Inter Fallback";src:local("Arial");size-adjust:107%;ascent-override:90%;descent-override:22%}
 :root{
   --velvet:#131011;
   --velvet-deep:#080707;
@@ -158,7 +161,7 @@
   --line:rgba(228,185,91,.22);
   --foil:linear-gradient(100deg,#A87424 0%,#F8E2A6 28%,#E4B95B 45%,#FFF1C9 55%,#C8952E 75%,#F2D27A 100%);
   --serif:"Fraunces","Fraunces Fallback",Georgia,serif;
-  --sans:"Manrope","Manrope Fallback",system-ui,sans-serif;
+  --sans:"Inter","Inter Fallback",system-ui,sans-serif;
   --wrap:1180px;
   --card:rgba(40,33,34,.45);
   --gold-soft:rgba(228,185,91,.14);
@@ -507,11 +510,11 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
 <circle cx="200" cy="200" r="125" fill="none" stroke="url(#hbg)" stroke-width="1.4"/>
 <g fill="url(#hbg)" opacity=".85"><circle cx="317.0" cy="200.0" r="1.6"/><circle cx="316.4" cy="212.2" r="1.6"/><circle cx="314.4" cy="224.3" r="1.6"/><circle cx="311.3" cy="236.2" r="1.6"/><circle cx="306.9" cy="247.6" r="1.6"/><circle cx="301.3" cy="258.5" r="1.6"/><circle cx="294.7" cy="268.8" r="1.6"/><circle cx="286.9" cy="278.3" r="1.6"/><circle cx="278.3" cy="286.9" r="1.6"/><circle cx="268.8" cy="294.7" r="1.6"/><circle cx="258.5" cy="301.3" r="1.6"/><circle cx="247.6" cy="306.9" r="1.6"/><circle cx="236.2" cy="311.3" r="1.6"/><circle cx="224.3" cy="314.4" r="1.6"/><circle cx="212.2" cy="316.4" r="1.6"/><circle cx="200.0" cy="317.0" r="1.6"/><circle cx="187.8" cy="316.4" r="1.6"/><circle cx="175.7" cy="314.4" r="1.6"/><circle cx="163.8" cy="311.3" r="1.6"/><circle cx="152.4" cy="306.9" r="1.6"/><circle cx="141.5" cy="301.3" r="1.6"/><circle cx="131.2" cy="294.7" r="1.6"/><circle cx="121.7" cy="286.9" r="1.6"/><circle cx="113.1" cy="278.3" r="1.6"/><circle cx="105.3" cy="268.8" r="1.6"/><circle cx="98.7" cy="258.5" r="1.6"/><circle cx="93.1" cy="247.6" r="1.6"/><circle cx="88.7" cy="236.2" r="1.6"/><circle cx="85.6" cy="224.3" r="1.6"/><circle cx="83.6" cy="212.2" r="1.6"/><circle cx="83.0" cy="200.0" r="1.6"/><circle cx="83.6" cy="187.8" r="1.6"/><circle cx="85.6" cy="175.7" r="1.6"/><circle cx="88.7" cy="163.8" r="1.6"/><circle cx="93.1" cy="152.4" r="1.6"/><circle cx="98.7" cy="141.5" r="1.6"/><circle cx="105.3" cy="131.2" r="1.6"/><circle cx="113.1" cy="121.7" r="1.6"/><circle cx="121.7" cy="113.1" r="1.6"/><circle cx="131.2" cy="105.3" r="1.6"/><circle cx="141.5" cy="98.7" r="1.6"/><circle cx="152.4" cy="93.1" r="1.6"/><circle cx="163.8" cy="88.7" r="1.6"/><circle cx="175.7" cy="85.6" r="1.6"/><circle cx="187.8" cy="83.6" r="1.6"/><circle cx="200.0" cy="83.0" r="1.6"/><circle cx="212.2" cy="83.6" r="1.6"/><circle cx="224.3" cy="85.6" r="1.6"/><circle cx="236.2" cy="88.7" r="1.6"/><circle cx="247.6" cy="93.1" r="1.6"/><circle cx="258.5" cy="98.7" r="1.6"/><circle cx="268.8" cy="105.3" r="1.6"/><circle cx="278.3" cy="113.1" r="1.6"/><circle cx="286.9" cy="121.7" r="1.6"/><circle cx="294.7" cy="131.2" r="1.6"/><circle cx="301.3" cy="141.5" r="1.6"/><circle cx="306.9" cy="152.4" r="1.6"/><circle cx="311.3" cy="163.8" r="1.6"/><circle cx="314.4" cy="175.7" r="1.6"/><circle cx="316.4" cy="187.8" r="1.6"/></g>
 <circle cx="200" cy="200" r="109" fill="none" stroke="url(#hbg)" stroke-width=".8" opacity=".7"/>
-<text font-family="Manrope, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" letter-spacing="4.2" fill="url(#hbg)" text-anchor="middle"><textPath href="#hbtop" startOffset="50%">LATIN DANCE AWARDS</textPath></text>
+<text font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" letter-spacing="4.2" fill="url(#hbg)" text-anchor="middle"><textPath href="#hbtop" startOffset="50%">LATIN DANCE AWARDS</textPath></text>
 <path d="M200.0 137.0 L203.2 145.6 L212.4 146.0 L205.2 151.7 L207.6 160.5 L200.0 155.5 L192.4 160.5 L194.8 151.7 L187.6 146.0 L196.8 145.6Z" fill="url(#hbg)"/>
 <path d="M166.0 150.0 L167.2 153.3 L170.8 153.5 L168.0 155.6 L168.9 159.0 L166.0 157.1 L163.1 159.0 L164.0 155.6 L161.2 153.5 L164.8 153.3Z" fill="url(#hbg)" opacity=".75"/><path d="M234.0 150.0 L235.2 153.3 L238.8 153.5 L236.0 155.6 L236.9 159.0 L234.0 157.1 L231.1 159.0 L232.0 155.6 L229.2 153.5 L232.8 153.3Z" fill="url(#hbg)" opacity=".75"/>
 <text x="200" y="211" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="52" fill="url(#hbg)">Bachata</text>
-<text x="200" y="236" text-anchor="middle" font-family="Manrope, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="5" fill="#E9CFA0">EUROPE · EDITION I</text>
+<text x="200" y="236" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="5" fill="#E9CFA0">EUROPE · EDITION I</text>
 <!-- ribbon -->
 <g>
 <path d="M30 270 L76 258 L76 304 L30 316 L46 293Z" fill="#8A6424"/>
@@ -521,7 +524,7 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
 <path d="M84 252 Q200 276 316 252 L316 292 Q200 316 84 292Z" fill="url(#hbg)"/>
 <path d="M84 255 Q200 279 316 255" fill="none" stroke="#FFF4D6" stroke-opacity=".45" stroke-width="1"/>
 <path id="hbrb" d="M96 279 Q200 302 304 279" fill="none"/>
-<text font-family="Manrope, Helvetica, Arial, sans-serif" font-size="19" font-weight="800" letter-spacing="3.2" fill="#2A1A08" text-anchor="middle"><textPath href="#hbrb" startOffset="50%">GERMANY 2026</textPath></text>
+<text font-family="Inter, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="3.2" fill="#2A1A08" text-anchor="middle"><textPath href="#hbrb" startOffset="50%">GERMANY 2026</textPath></text>
 </g>
 </svg>
         <div class="sheen"></div>
