@@ -77,6 +77,12 @@ SCHOOLS = [
  ('Szkoła Tańca Cubana', 'bielsko-biala', 4.8, 80, 'https://www.cubana.bielsko.pl'),
  ('Sun Salsa', 'tarnow', 4.9, 95, 'https://sunsalsa.pl'),
  ('Baila Studio Tańca', 'tarnow', 5.0, 17, 'https://bailastudio.pl'),
+ ('Prowadzimy w Tańcu', 'warszawa', 5.0, 61, 'https://prowadzimywtancu.pl'),
+ ('Studio Tańca Spin', 'warszawa', 4.9, 27, 'https://studiotanca.eu'),
+ ('Szkoła Tańca Oye!', 'warszawa', 4.8, 129, 'https://szkolatancaoye.pl'),
+ ('Studio Tańca Prodance', 'warszawa', 4.9, 30, 'https://studiotanca.net'),
+ ('Akademia Tańca Tu Się Tańczy', 'warszawa', 4.7, 71, 'https://tusietanczy.pl'),
+ ('Arthur Murray Dance Studio Warsaw', 'warszawa', 4.9, 80, 'https://arthurmurraypoland.pl'),
 ]
 import math
 def pts(r, v):
