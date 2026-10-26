@@ -67,7 +67,7 @@ function handleApplication_(e) {
 
 /* ===== Audience Award voting + school reviews (all confirmed by e-mail link) ===== */
 var VOTE_SHEET = 'Votes';
-var VOTE_HEAD = ['Submitted at', 'School', 'City', 'Email (normalized)', 'Token', 'Status', 'Confirmed at', 'Language'];
+var VOTE_HEAD = ['Submitted at', 'School', 'City', 'Email (normalized)', 'Token', 'Status', 'Confirmed at', 'Language', 'Newsletter opt-in'];
 var REVIEW_SHEET = 'Reviews';
 var REVIEW_HEAD = ['Submitted at', 'School', 'City', 'Name', 'Rating', 'Text', 'Email (normalized)', 'Token', 'Status', 'Confirmed at', 'Language'];
 var MAX_MAILS_PER_DAY = 90;
@@ -113,8 +113,8 @@ function sendConfirm_(to, en, kind, school, city, link) {
   var what = kind === 'review' ? (en ? 'review' : 'Bewertung') : (en ? 'vote' : 'Stimme');
   var subj = en ? 'Please confirm your ' + what + ': ' + school : 'Bitte bestätige deine ' + what + ': ' + school;
   var body = en
-    ? 'Hi!\n\nYou left a ' + what + ' for ' + school + ' (' + city + ') on Latin Dance Awards.\n\nPlease confirm it with this link:\n' + link + '\n\nIf this was not you, just ignore this e-mail.\n\nLatin Dance Awards\nhttps://latindanceawards.com'
-    : 'Hallo!\n\nDu hast bei den Latin Dance Awards eine ' + what + ' für ' + school + ' (' + city + ') abgegeben.\n\nBitte bestätige sie mit diesem Link:\n' + link + '\n\nWenn du das nicht warst, ignoriere diese E-Mail einfach.\n\nLatin Dance Awards\nhttps://latindanceawards.com';
+    ? 'Hi!\n\nYou left a ' + what + ' for ' + school + ' (' + city + ') on Latin Dance Awards.\n\nPlease confirm it with this link:\n' + link + '\n\nIf you also ticked the newsletter box, this click confirms that too (you can unsubscribe at any time). If this was not you, just ignore this e-mail.\n\nLatin Dance Awards\nhttps://latindanceawards.com'
+    : 'Hallo!\n\nDu hast bei den Latin Dance Awards eine ' + what + ' für ' + school + ' (' + city + ') abgegeben.\n\nBitte bestätige sie mit diesem Link:\n' + link + '\n\nFalls du auch den Newsletter angekreuzt hast, bestätigt dieser Klick auch das (Abmeldung jederzeit möglich). Wenn du das nicht warst, ignoriere diese E-Mail einfach.\n\nLatin Dance Awards\nhttps://latindanceawards.com';
   MailApp.sendEmail({ to: to, subject: subj, body: body, name: 'Latin Dance Awards', replyTo: 'hello@latindanceawards.com' });
 }
 
@@ -134,7 +134,7 @@ function handleVote_(p) {
     }
     if (mailsToday_() >= MAX_MAILS_PER_DAY) return ContentService.createTextOutput('busy');
     var token = Utilities.getUuid();
-    var row = [new Date(), school, city, email, token, 'Pending', '', p.language === 'EN' ? 'EN' : 'DE'];
+    var row = [new Date(), school, city, email, token, 'Pending', '', p.language === 'EN' ? 'EN' : 'DE', p.news === '1' ? 'Yes' : 'No'];
     if (pendingRow > 0) sh.getRange(pendingRow, 1, 1, row.length).setValues([row]); else sh.appendRow(row);
     sendConfirm_(p.email, p.language === 'EN', 'vote', school, city, ScriptApp.getService().getUrl() + '?vote=' + token);
     return ContentService.createTextOutput('ok');
@@ -158,11 +158,25 @@ function handleReview_(p) {
     }
     if (mailsToday_() >= MAX_MAILS_PER_DAY) return ContentService.createTextOutput('busy');
     var token = Utilities.getUuid();
-    var row = [new Date(), school, city, safe_(name), rating, safe_(text), email, token, 'Pending', '', p.language === 'EN' ? 'EN' : 'DE'];
+    var row = [new Date(), school, city, safe_(name), rating, safe_(text), email, token, 'Pending', '', p.language === 'EN' ? 'EN' : 'DE', p.news === '1' ? 'Yes' : 'No'];
     if (pendingRow > 0) sh.getRange(pendingRow, 1, 1, row.length).setValues([row]); else sh.appendRow(row);
     sendConfirm_(p.email, p.language === 'EN', 'review', school, city, ScriptApp.getService().getUrl() + '?review=' + token);
     return ContentService.createTextOutput('ok');
   } finally { lock.releaseLock(); }
+}
+
+/* ===== Leads: only people who ticked the newsletter box AND clicked the confirmation link (double opt-in) ===== */
+var LEAD_SHEET = 'Leads';
+var LEAD_HEAD = ['Confirmed at', 'Email', 'School', 'City', 'Language', 'Source', 'Unsubscribe token', 'Status'];
+function addLead_(email, school, city, lang, source) {
+  var sh = sheet_(LEAD_SHEET, LEAD_HEAD), d = sh.getDataRange().getValues();
+  for (var i = 1; i < d.length; i++) if (d[i][1] === email) return;
+  sh.appendRow([new Date(), email, school, city, lang, source, Utilities.getUuid(), 'Subscribed']);
+}
+function unsub_(token) {
+  var sh = sheet_(LEAD_SHEET, LEAD_HEAD), d = sh.getDataRange().getValues();
+  for (var i = 1; i < d.length; i++) if (d[i][6] === token) { sh.getRange(i + 1, 8).setValue('Unsubscribed'); return true; }
+  return false;
 }
 
 function confirm_(sheetName, head, tokenCol, statusCol, token) {
@@ -179,6 +193,8 @@ function confirm_(sheetName, head, tokenCol, statusCol, token) {
         }
         sh.getRange(r + 1, statusCol + 1).setValue('Confirmed');
         sh.getRange(r + 1, statusCol + 2).setValue(new Date());
+        var optCol = sheetName === VOTE_SHEET ? 8 : 11, emailCol = sheetName === VOTE_SHEET ? 3 : 6;
+        if (data[r][optCol] === 'Yes') addLead_(data[r][emailCol], school, data[r][2], data[r][optCol - 1], sheetName === VOTE_SHEET ? 'Vote' : 'Review');
         return { school: school, again: false };
       }
     }
@@ -207,6 +223,7 @@ function doGet(e) {
   var p = (e && e.parameter) || {};
   if (p.action === 'reviews') return reviewsJson_(String(p.school || ''));
   var bad = ['Link ungültig oder abgelaufen.', 'Link invalid or expired.'];
+  if (p.unsub) return unsub_(p.unsub) ? page_(['Du wurdest abgemeldet.', 'You have been unsubscribed.']) : page_(bad);
   if (p.review) {
     var a = confirm_(REVIEW_SHEET, REVIEW_HEAD, 7, 8, p.review);
     if (!a) return page_(bad);

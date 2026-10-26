@@ -244,6 +244,7 @@ PAGE_CSS = r'''
 .vote .vform{display:grid;gap:10px;max-width:420px}
 .vote .vform label{display:grid;gap:6px;color:var(--cream);font-size:14px}
 .vote .vform input[type=email]{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(246,231,211,.35);background:rgba(255,255,255,.06);color:var(--cream);font:inherit;font-size:16px}
+.vote .vform .newsopt,.sp-form .newsopt{display:flex!important;grid-template-columns:none;gap:10px;align-items:flex-start;font-size:13px;line-height:1.45;color:var(--muted)}.newsopt input{margin-top:3px;flex:none;width:18px;height:18px;accent-color:#e4b95b}
 .vote .vform small,.vote .vmsg{color:var(--muted);font-size:13px;line-height:1.5}
 .vote .vmsg{margin:10px 0 0;color:var(--gold-light)}
 .vote .vform button[type=submit]{justify-content:center}
@@ -975,6 +976,7 @@ R_TEXT = {
  'vote_btn': ['Für diese Schule abstimmen', 'Vote for this school'],
  'vote_mail': ['Deine E-Mail-Adresse', 'Your email address'],
  'vote_send': ['Stimme abschicken', 'Send my vote'],
+ 'news_opt': ['Ja, schickt mir gelegentlich Neuigkeiten, Events und Angebote rund um Bachata per E-Mail. Abmeldung jederzeit möglich.', 'Yes, send me occasional news, events and offers about Bachata by email. You can unsubscribe at any time.'],
  'vote_note': ['Eine Stimme pro Person. Wir schicken dir einen Bestätigungslink. Deine E-Mail nutzen wir nur dafür und zum Entfernen doppelter Stimmen.', 'One vote per person. We email you a confirmation link. We use your email only for that and to remove duplicate votes.'],
  'vote_ok': ['Fast geschafft: Wir haben dir eine E-Mail geschickt. Klicke auf den Link darin, damit deine Stimme zählt. Schau auch im Spam-Ordner nach.', 'Almost done: we sent you an email. Click the link in it so your vote counts. Check your spam folder too.'],
  'vote_err': ['Das hat nicht geklappt. Bitte prüfe deine E-Mail-Adresse und versuche es noch einmal.', 'That did not work. Please check your email address and try again.'],
@@ -1529,7 +1531,7 @@ rank_js = r'''
           TBC.forEach(function(x){ why+='<div class="tbc"><b>'+esc(x[0])+'</b> · <span class="chip">'+esc(en?"To be confirmed":"Zu bestätigen")+'</span><div class="bar dash"></div></div>'; });
           why+='<div class="lk" style="color:var(--muted)">'+esc(en?"Not scored yet. Schools confirm these with links when they apply.":"Noch ohne Punkte. Schulen bestätigen diese Angaben mit Links bei der Bewerbung.")+' <a href="bewerbung.html">'+esc(en?"Confirm now":"Jetzt bestätigen")+' →</a></div>';
           why+='<div class="vote"><button type="button" class="btn btn-gold vbtn" data-s="'+esc(e.name)+'" data-c="'+cn(e)+'">&#9733; '+esc(L("vote_btn"))+'</button>'
-            +'<form class="vform" hidden novalidate><input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px"><label>'+esc(L("vote_mail"))+'<input type="email" name="email" required autocomplete="email" inputmode="email"></label><button type="submit" class="btn btn-gold">'+esc(L("vote_send"))+'</button><small>'+esc(L("vote_note"))+'</small></form><p class="vmsg" role="status" hidden></p></div>';
+            +'<form class="vform" hidden novalidate><input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px"><label>'+esc(L("vote_mail"))+'<input type="email" name="email" required autocomplete="email" inputmode="email"></label><label class="newsopt"><input type="checkbox" name="news" value="1"> <span>'+esc(L("news_opt"))+'</span></label><button type="submit" class="btn btn-gold">'+esc(L("vote_send"))+'</button><small>'+esc(L("vote_note"))+'</small></form><p class="vmsg" role="status" hidden></p></div>';
           why+='<div class="lk"><a href="schools/'+slug(e.name)+'.html"><b>'+esc(L("page_link"))+' →</b></a></div>';
           if(u) why+='<div class="lk"><a href="'+u+'" rel="noopener">'+esc(L("site"))+' →</a></div>';
           h+='<li'+(i>=10?' class="more" hidden':'')+'><details class="irk'+g+'"><summary><span class="rk">'+(i===0?CROWN+'<i class="sp a"></i><i class="sp b"></i><i class="sp c"></i><i class="sp d"></i>':'')+(i+1)+'</span><span class="who"><b><a href="schools/'+slug(e.name)+'.html">'+esc(e.name)+'</a></b>'
@@ -1552,7 +1554,7 @@ rank_js = r'''
       var v=f.parentNode, b=v.querySelector(".vbtn"), msg=v.querySelector(".vmsg"), em=f.elements.email.value.trim();
       if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){ msg.textContent=L("vote_err"); msg.hidden=false; return; }
       var sub=f.querySelector("button[type=submit]"); sub.disabled=true;
-      var body=new URLSearchParams(); body.append("action","vote"); body.append("school",b.getAttribute("data-s")); body.append("city",b.getAttribute("data-c")); body.append("email",em); body.append("hp",f.elements.hp.value); body.append("language",window.LANG==="en"?"EN":"DE");
+      var body=new URLSearchParams(); body.append("action","vote"); body.append("school",b.getAttribute("data-s")); body.append("city",b.getAttribute("data-c")); body.append("email",em); body.append("hp",f.elements.hp.value); body.append("news",f.elements.news&&f.elements.news.checked?"1":"0"); body.append("language",window.LANG==="en"?"EN":"DE");
       fetch(VOTE_ENDPOINT,{method:"POST",mode:"no-cors",body:body}).then(function(){ try{ localStorage.setItem("lda-voted","1"); }catch(x){} f.hidden=true; msg.textContent=L("vote_ok"); msg.hidden=false; }).catch(function(){ sub.disabled=false; msg.textContent=L("vote_err"); msg.hidden=false; });
     }); });
     var sa=panel.querySelector(".showall"); if(sa) sa.addEventListener("click",function(){ panel.querySelectorAll("li.more").forEach(function(l){ l.hidden=false; }); sa.remove(); });
@@ -1789,6 +1791,7 @@ SCHOOL_JS = r'''
   var SCHOOL = __SCHOOL__, EP = "__EP__", MAILTO = "hello@latindanceawards.com";
   var S = {
     vote_btn:["Für diese Schule abstimmen","Vote for this school"], vote_mail:["Deine E-Mail-Adresse","Your email address"], vote_send:["Stimme abschicken","Send my vote"],
+    news_opt:["Ja, schickt mir gelegentlich Neuigkeiten, Events und Angebote rund um Bachata per E-Mail. Abmeldung jederzeit möglich.","Yes, send me occasional news, events and offers about Bachata by email. You can unsubscribe at any time."],
     vote_note:["Eine Stimme pro Person. Wir schicken dir einen Bestätigungslink. Deine E-Mail nutzen wir nur dafür und zum Entfernen doppelter Stimmen.","One vote per person. We email you a confirmation link. We use your email only for that and to remove duplicate votes."],
     vote_ok:["Fast geschafft: Wir haben dir eine E-Mail geschickt. Klicke auf den Link darin, damit deine Stimme zählt. Schau auch im Spam-Ordner nach.","Almost done: we sent you an email. Click the link in it so your vote counts. Check your spam folder too."],
     vote_done:["Du hast auf diesem Gerät schon abgestimmt. Danke!","You already voted on this device. Thank you!"],
@@ -1810,7 +1813,7 @@ SCHOOL_JS = r'''
   vf.addEventListener("submit",function(ev){ ev.preventDefault(); var em=vf.elements.email.value.trim();
     if(!mailRe.test(em)){ vm.textContent=L("err_mail"); vm.hidden=false; return; }
     var sub=vf.querySelector("button[type=submit]"); sub.disabled=true;
-    var b=new URLSearchParams({action:"vote",school:SCHOOL.name,city:SCHOOL.city,email:em,hp:vf.elements.hp.value,language:window.LANG==="en"?"EN":"DE"});
+    var b=new URLSearchParams({action:"vote",school:SCHOOL.name,city:SCHOOL.city,email:em,news:vf.elements.news.checked?"1":"0",hp:vf.elements.hp.value,language:window.LANG==="en"?"EN":"DE"});
     fetch(EP,{method:"POST",mode:"no-cors",body:b}).then(function(){ try{localStorage.setItem("lda-voted","1");}catch(x){} vf.hidden=true; vm.textContent=L("vote_ok"); vm.hidden=false; }).catch(function(){ sub.disabled=false; vm.textContent=L("err_mail"); vm.hidden=false; });
   });
 
@@ -1832,7 +1835,7 @@ SCHOOL_JS = r'''
     if(!rating||text.length<10||text.length>600||/https?:|www\.|@/i.test(text+" "+name)){ rm.textContent=L("rv_err"); rm.hidden=false; return; }
     if(!mailRe.test(em)){ rm.textContent=L("err_mail"); rm.hidden=false; return; }
     var sub=rf.querySelector("button[type=submit]"); sub.disabled=true;
-    var b=new URLSearchParams({action:"review",school:SCHOOL.name,city:SCHOOL.city,name:name,rating:rating,text:text,email:em,hp:rf.elements.hp.value,language:window.LANG==="en"?"EN":"DE"});
+    var b=new URLSearchParams({action:"review",school:SCHOOL.name,city:SCHOOL.city,name:name,rating:rating,text:text,email:em,news:rf.elements.news.checked?"1":"0",hp:rf.elements.hp.value,language:window.LANG==="en"?"EN":"DE"});
     fetch(EP,{method:"POST",mode:"no-cors",body:b}).then(function(){ rf.hidden=true; rm.textContent=L("rv_ok"); rm.hidden=false; }).catch(function(){ sub.disabled=false; rm.textContent=L("err_mail"); rm.hidden=false; });
   });
 
@@ -1892,6 +1895,7 @@ def build_school(e):
       <form class="sp-form" id="vform" hidden novalidate>
         <input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
         <label>{s("span", "Deine E-Mail-Adresse", "Your email address")}<input type="email" name="email" required autocomplete="email" inputmode="email"></label>
+        <label class="newsopt"><input type="checkbox" name="news" value="1"> {s("span", "Ja, schickt mir gelegentlich Neuigkeiten, Events und Angebote rund um Bachata per E-Mail. Abmeldung jederzeit möglich.", "Yes, send me occasional news, events and offers about Bachata by email. You can unsubscribe at any time.")}</label>
         <button type="submit" class="btn btn-gold">{s("span", "Stimme abschicken", "Send my vote")}</button>
         <small>{s("span", "Eine Stimme pro Person. Wir schicken dir einen Bestätigungslink. Deine E-Mail nutzen wir nur dafür und zum Entfernen doppelter Stimmen. Mehr in der <a href=\"/datenschutz.html\">Datenschutzerklärung</a>.", "One vote per person. We email you a confirmation link. We use your email only for that and to remove duplicate votes. More in the <a href=\"/datenschutz.html\">privacy policy</a>.")}</small>
       </form>
@@ -1922,6 +1926,7 @@ def build_school(e):
         <label>{s("span", "Dein Name (freiwillig)", "Your name (optional)")}<input type="text" name="name" maxlength="40" autocomplete="nickname"></label>
         <label>{s("span", "Deine Bewertung (10 bis 600 Zeichen, keine Links)", "Your review (10 to 600 characters, no links)")}<textarea name="text" maxlength="600" required></textarea></label>
         <label>{s("span", "Deine E-Mail-Adresse (wird nicht veröffentlicht)", "Your email address (not published)")}<input type="email" name="email" required autocomplete="email" inputmode="email"></label>
+        <label class="newsopt"><input type="checkbox" name="news" value="1"> {s("span", "Ja, schickt mir gelegentlich Neuigkeiten, Events und Angebote rund um Bachata per E-Mail. Abmeldung jederzeit möglich.", "Yes, send me occasional news, events and offers about Bachata by email. You can unsubscribe at any time.")}</label>
         <button type="submit" class="btn btn-gold">{s("span", "Bewertung abschicken", "Submit review")}</button>
         <small>{s("span", "Wir nutzen deine E-Mail nur zur Bestätigung. Eine Bewertung pro Person und Schule. Unpassende Bewertungen entfernen wir. Mehr in der <a href=\"/datenschutz.html\">Datenschutzerklärung</a>.", "We use your email only for confirmation. One review per person and school. We remove inappropriate reviews. More in the <a href=\"/datenschutz.html\">privacy policy</a>.")}</small>
       </form>
