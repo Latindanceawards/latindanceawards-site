@@ -8,7 +8,7 @@ CITIES = {
  'szczecin': ('Szczecin', 'Szczecin', 'Szczecinie'), 'bialystok': ('Białystok', 'Białystok', 'Białymstoku'),
  'czestochowa': ('Częstochowa', 'Częstochowa', 'Częstochowie'), 'torun': ('Toruń', 'Toruń', 'Toruniu'), 'kielce': ('Kielce', 'Kielce', 'Kielcach'),
  'rzeszow': ('Rzeszów', 'Rzeszów', 'Rzeszowie'), 'radom': ('Radom', 'Radom', 'Radomiu'), 'olsztyn': ('Olsztyn', 'Olsztyn', 'Olsztynie'),
- 'tarnow': ('Tarnów', 'Tarnów', 'Tarnowie'), 'opole': ('Opole', 'Opole', 'Opolu'), 'bielsko-biala': ('Bielsko-Biała', 'Bielsko-Biała', 'Bielsku-Białej'), 'rybnik': ('Rybnik', 'Rybnik', 'Rybniku'), 'sosnowiec': ('Sosnowiec', 'Sosnowiec', 'Sosnowcu'), 'zabrze': ('Zabrze', 'Zabrze', 'Zabrzu'), 'legnica': ('Legnica', 'Legnica', 'Legnicy'), 'gorzow': ('Gorzów Wielkopolski', 'Gorzów Wielkopolski', 'Gorzowie Wielkopolskim'), 'tychy': ('Tychy', 'Tychy', 'Tychach'), 'nowy-sacz': ('Nowy Sącz', 'Nowy Sącz', 'Nowym Sączu'), 'siedlce': ('Siedlce', 'Siedlce', 'Siedlcach'), 'pruszkow': ('Pruszków', 'Pruszków', 'Pruszkowie'), 'piotrkow': ('Piotrków Trybunalski', 'Piotrków Trybunalski', 'Piotrkowie Trybunalskim'), 'pila': ('Piła', 'Piła', 'Pile'), 'inowroclaw': ('Inowrocław', 'Inowrocław', 'Inowrocławiu'), 'zamosc': ('Zamość', 'Zamość', 'Zamościu'),
+ 'tarnow': ('Tarnów', 'Tarnów', 'Tarnowie'), 'opole': ('Opole', 'Opole', 'Opolu'), 'bielsko-biala': ('Bielsko-Biała', 'Bielsko-Biała', 'Bielsku-Białej'), 'rybnik': ('Rybnik', 'Rybnik', 'Rybniku'), 'sosnowiec': ('Sosnowiec', 'Sosnowiec', 'Sosnowcu'), 'zabrze': ('Zabrze', 'Zabrze', 'Zabrzu'), 'legnica': ('Legnica', 'Legnica', 'Legnicy'), 'gorzow': ('Gorzów Wielkopolski', 'Gorzów Wielkopolski', 'Gorzowie Wielkopolskim'), 'tychy': ('Tychy', 'Tychy', 'Tychach'), 'nowy-sacz': ('Nowy Sącz', 'Nowy Sącz', 'Nowym Sączu'), 'siedlce': ('Siedlce', 'Siedlce', 'Siedlcach'), 'ruda-slaska': ('Ruda Śląska', 'Ruda Slaska', 'w Rudzie Śląskiej'), 'dabrowa-gornicza': ('Dąbrowa Górnicza', 'Dąbrowa Górnicza', 'Dąbrowie Górniczej'), 'bytom': ('Bytom', 'Bytom', 'Bytomiu'), 'pruszkow': ('Pruszków', 'Pruszków', 'Pruszkowie'), 'piotrkow': ('Piotrków Trybunalski', 'Piotrków Trybunalski', 'Piotrkowie Trybunalskim'), 'pila': ('Piła', 'Piła', 'Pile'), 'inowroclaw': ('Inowrocław', 'Inowrocław', 'Inowrocławiu'), 'zamosc': ('Zamość', 'Zamość', 'Zamościu'),
 }
 # (name, city, rating, reviews, website)
 SCHOOLS = [
@@ -77,6 +77,10 @@ SCHOOLS = [
  ('Szkoła Tańca Cubana', 'bielsko-biala', 4.8, 80, 'https://www.cubana.bielsko.pl'),
  ('Sun Salsa', 'tarnow', 4.9, 95, 'https://sunsalsa.pl'),
  ('Baila Studio Tańca', 'tarnow', 5.0, 17, 'https://bailastudio.pl'),
+ ('Havana Studio Tańca', 'ruda-slaska', 4.1, 13, 'http://havana-rudaslaska.pl'),
+ ('Salsa Para Siempre', 'bytom', 5.0, 4, 'https://salsaparasiempre.pl'),
+ ('Marengo Szkoła Tańca', 'dabrowa-gornicza', 4.9, 70, 'https://marengo.net.pl'),
+ ('Tanecznie Zakręcone', 'dabrowa-gornicza', 5.0, 35, 'https://taneczniezakrecone.pl'),
  ('Timbaila', 'piotrkow', 5.0, 49, 'https://timbaila.pl'),
  ('Dance Imperium Nowa Stacja', 'pruszkow', 4.6, 42, 'https://danceimperium.pl'),
  ('Szkoła Tańca Iskra', 'pila', 5.0, 80, 'https://taniec.pila.pl'),
