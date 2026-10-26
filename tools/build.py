@@ -208,6 +208,8 @@ PAGE_CSS = r'''
 .irk summary::-webkit-details-marker{display:none}
 .irk summary::after{content:"";grid-column:4;grid-row:1;justify-self:center;width:9px;height:9px;border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(45deg);margin-top:-5px;transition:transform .3s,margin .3s}
 .irk[open] summary::after{transform:rotate(-135deg);margin-top:5px}
+.irk .who b a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.irk .who b a:hover,.irk .who b a:focus-visible{color:var(--gold-light);border-bottom-color:var(--gold)}
 .irk summary:hover::after{border-color:var(--gold-light)}
 .irk .rk{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:20px;color:var(--gold);border:1px solid var(--line)}
 .irk.g1 .rk{background:var(--foil);color:#131011;border:0}
@@ -1146,7 +1148,7 @@ rank_js = r'''
             +'<form class="vform" hidden novalidate><input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px"><label>'+esc(L("vote_mail"))+'<input type="email" name="email" required autocomplete="email" inputmode="email"></label><button type="submit" class="btn btn-gold">'+esc(L("vote_send"))+'</button><small>'+esc(L("vote_note"))+'</small></form><p class="vmsg" role="status" hidden></p></div>';
           why+='<div class="lk"><a href="schools/'+slug(e.name)+'.html"><b>'+esc(L("page_link"))+' →</b></a></div>';
           if(u) why+='<div class="lk"><a href="'+u+'" rel="noopener">'+esc(L("site"))+' →</a></div>';
-          h+='<li'+(i>=10?' class="more" hidden':'')+'><details class="irk'+g+'"><summary><span class="rk">'+(i===0?CROWN+'<i class="sp a"></i><i class="sp b"></i><i class="sp c"></i><i class="sp d"></i>':'')+(i+1)+'</span><span class="who"><b>'+esc(e.name)+'</b>'
+          h+='<li'+(i>=10?' class="more" hidden':'')+'><details class="irk'+g+'"><summary><span class="rk">'+(i===0?CROWN+'<i class="sp a"></i><i class="sp b"></i><i class="sp c"></i><i class="sp d"></i>':'')+(i+1)+'</span><span class="who"><b><a href="schools/'+slug(e.name)+'.html">'+esc(e.name)+'</a></b>'
             +(c==="deutschland"?'<small>'+cn(e)+'</small>':'')+'</span><span class="score">'+num(e.pts)+'<small> / 100</small></span><span class="meter"><i style="width:'+e.pts+'%"></i></span></summary>'
             +'<div class="iwhy">'+why+'</div></details></li>';
         });
