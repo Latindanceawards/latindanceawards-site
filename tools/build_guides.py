@@ -398,14 +398,25 @@ fest_extra = {
  'xpl': {'name': 'Xplosion Ritmo Berlin Festival', 'url': 'https://www.salsavida.com/event/germany/berlin/xplosion-ritmo-berlin-festival/', 'de': '<strong>13. bis 16. Mai 2027</strong> laut Salsa Vida (andere Listen nennen den 14. bis 16. Mai). Festival in Berlin, 5. Jubiläum.', 'en': '<strong>May 13 to 16, 2027</strong> according to Salsa Vida (other listings give May 14 to 16). Festival in Berlin, 5th anniversary.'},
  'trier': {'name': 'Trier Old Town Festival', 'url': 'https://www.salsavida.com/event/germany/trier/trier-old-town-festival/', 'de': '<strong>25. bis 27. Juni 2027.</strong> Tanzfestival in der Trierer Altstadt.', 'en': "<strong>June 25 to 27, 2027.</strong> Dance festival in Trier's old town."},
  'frb': {'name': 'Euro Dance Festival, Freiburg', 'url': 'https://www.salsavida.com/event/germany/freiburg/euro-dance-festival-freiburg-edition/', 'de': '<strong>29. Juli bis 1. August 2027.</strong> Sommer-Ausgabe des Euro Dance Festivals in Freiburg.', 'en': '<strong>July 29 to August 1, 2027.</strong> Summer edition of the Euro Dance Festival in Freiburg.'},
+ 'dusfest': {'name': 'Düsseldorf Bachata Fest', 'url': 'https://dusseldorf.bachata-fest.com/', 'de': '<strong>8. bis 11. Januar 2027.</strong> Bachata-Festival in Düsseldorf laut Website des Veranstalters.', 'en': "<strong>January 8 to 11, 2027.</strong> Bachata festival in Düsseldorf according to the organiser's website."},
+ 'lvl': {'name': 'Bachata Level Up 4', 'url': 'https://www.goandance.com/en/event/9879/bachata-level-up-4', 'de': '<strong>19. bis 21. Februar 2027.</strong> Bachata-Wochenende in Sachsen laut Goandance. Die Stadt nennt die Liste nicht.', 'en': '<strong>February 19 to 21, 2027.</strong> Bachata weekend in Saxony according to Goandance. The listing does not name the city.'},
+ 'bzf': {'name': 'Bachazouk Festival Germany', 'url': 'https://www.goandance.com/en/event/9603/bachazouk-festival-germany', 'de': '<strong>5. bis 7. März 2027.</strong> Festival für Bachata und Zouk in Baden-Württemberg laut Goandance.', 'en': '<strong>March 5 to 7, 2027.</strong> Bachata and Zouk festival in Baden-Württemberg according to Goandance.'},
+ 'bof': {'name': 'Bachata on Fire Festival am Bodensee, Konstanz (2. Ausgabe)', 'url': 'https://www.goandance.com/en/event/9581/bachata-on-fire-festival-am-bodensee-2-edition', 'de': '<strong>19. bis 21. März 2027.</strong> Bachata-Festival am Bodensee in Konstanz, zweite Ausgabe.', 'en': '<strong>March 19 to 21, 2027.</strong> Bachata festival at Lake Constance in Konstanz, second edition.'},
+ 'bzw': {'name': 'Bachazouk Wave', 'url': 'https://www.goandance.com/en/event/9468/bachazouk-wave', 'de': '<strong>2. bis 4. April 2027.</strong> Bachata-und-Zouk-Event in Baden-Württemberg laut Goandance.', 'en': '<strong>April 2 to 4, 2027.</strong> Bachata and Zouk event in Baden-Württemberg according to Goandance.'},
+ 'fbu': {'name': 'Frankfurt Bachata United', 'url': 'https://www.goandance.com/en/event/9636/frankfurt-bachata-united', 'de': '<strong>9. bis 11. April 2027.</strong> Bachata-Festival in Frankfurt laut Goandance.', 'en': '<strong>April 9 to 11, 2027.</strong> Bachata festival in Frankfurt according to Goandance.'},
+ 'bss': {'name': 'Bachatasummerfestival Stuttgart', 'url': 'https://www.goandance.com/en/event/10073/bachatasummerfestival-stuttgart-2027', 'de': '<strong>25. bis 28. Juni 2027.</strong> Bachata-Sommerfestival in Stuttgart.', 'en': '<strong>June 25 to 28, 2027.</strong> Bachata summer festival in Stuttgart.'},
+ 'vib': {'name': 'Vibras Bachata Summer Festival', 'url': 'https://www.goandance.com/en/event/9925/vibras-bachata-summer-festival-2027', 'de': '<strong>27. bis 29. August 2027.</strong> Bachata-Sommerfestival in Hessen laut Goandance.', 'en': '<strong>August 27 to 29, 2027.</strong> Bachata summer festival in Hesse according to Goandance.'},
+ 'ext': {'name': 'Extravadanza Bachata Congress', 'url': 'https://www.goandance.com/en/event/10050/extravadanza-bachata-congress-2027', 'de': '<strong>17. bis 21. September 2027.</strong> Bachata-Kongress in Hessen laut Goandance.', 'en': '<strong>September 17 to 21, 2027.</strong> Bachata congress in Hesse according to Goandance.'},
+ 'bbf': {'name': 'Berlin Bachata Festival (Bachata Explosion)', 'url': 'https://bachataexplosion.com/', 'de': '<strong>22. bis 24. Oktober 2027</strong> im MOA Berlin. Tickets im Early-Bird-Verkauf.', 'en': '<strong>October 22 to 24, 2027</strong> at MOA Berlin. Early-bird tickets on sale.'},
+ 'mun': {'name': 'Munich Bachata Fest', 'url': 'https://bachata-fest.com/', 'de': '<strong>16. bis 19. Dezember 2027.</strong> Bachata-Festival in München laut Website des Veranstalters.', 'en': "<strong>December 16 to 19, 2027.</strong> Bachata festival in Munich according to the organiser's website."},
 }
-_order = ['The Bachata Flow', 'Conexión', 'dortmund', 'hannover', 'Frankfurt Bachata Festival', 'stuttgart_dec', 'Bachata Zouk', 'dus', 'wue', 'rust', 'boe', 'ham', 'Bachatation', 'bsf', 'Bachata Festival Germany', 'Pure', 'Salsa-Bachata', 'xpl', 'DJ Got', 'trier', 'frb']
+_order = ['The Bachata Flow', 'Conexión', 'dortmund', 'hannover', 'Frankfurt Bachata Festival', 'stuttgart_dec', 'Bachata Zouk', 'dus', 'dusfest', 'wue', 'rust', 'boe', 'ham', 'lvl', 'Bachatation', 'bzf', 'bof', 'bsf', 'bzw', 'Bachata Festival Germany', 'fbu', 'Pure', 'Salsa-Bachata', 'xpl', 'DJ Got', 'trier', 'bss', 'frb', 'vib', 'ext', 'bbf', 'mun']
 _base = list(fest_cards)
 fest_cards = []
 for _k in _order:
     if _k in fest_extra: fest_cards.append(fest_extra[_k])
     else: fest_cards.append(next(c for c in _base if c["name"].startswith(_k)))
-assert len(fest_cards) == 21
+assert len(fest_cards) == 32
 
 fest_sections = [
  ('Bachata-Festivals in Deutschland: Was dich erwartet', 'Bachata festivals in Germany: what to expect', [
@@ -451,8 +462,8 @@ fest_sections = [
 ]
 fest_faq = [
  ('Welche Bachata-Festivals gibt es in Deutschland 2026 und 2027?', 'Which Bachata festivals are there in Germany in 2026 and 2027?',
-  'Auf dieser Seite findest du 21 Festivals, unter anderem in Frankfurt, Stuttgart, Berlin, Hamburg, Köln, Freiburg und Karlsruhe, sortiert nach Datum. Das nächste ist The Bachata Flow Generation in Frankfurt vom 30. Oktober bis 1. November 2026.',
-  'This page lists 21 festivals, including Frankfurt, Stuttgart, Berlin, Hamburg, Cologne, Freiburg and Karlsruhe, sorted by date. The next one is The Bachata Flow Generation in Frankfurt from October 30 to November 1, 2026.'),
+  'Auf dieser Seite findest du 32 Festivals, unter anderem in Frankfurt, Stuttgart, Berlin, Hamburg, Köln, Freiburg und Karlsruhe, sortiert nach Datum. Das nächste ist The Bachata Flow Generation in Frankfurt vom 30. Oktober bis 1. November 2026.',
+  'This page lists 32 festivals, including Frankfurt, Stuttgart, Berlin, Hamburg, Cologne, Freiburg and Karlsruhe, sorted by date. The next one is The Bachata Flow Generation in Frankfurt from October 30 to November 1, 2026.'),
  ('Wann ist das Bachatation Festival?', 'When is the Bachatation Festival?',
   'Die Website nennt für die Ausgabe 2027 den Zeitraum 25. bis 28. Februar in Karlsruhe bei Son Latino Studios. Das Workshop-Programm war zuletzt noch nicht veröffentlicht.',
   'For the 2027 edition the website gives February 25 to 28 in Karlsruhe at Son Latino Studios. The workshop programme had not been published at the last check.'),
@@ -475,5 +486,5 @@ guide_page('bachata-festivals-deutschland', 'bf',
   ('Bachata Festival Deutschland: <em class="foil">Termine</em> 2026/2027', 'Bachata festivals in Germany: <em class="foil">dates</em> 2026/2027'),
   ('Alle kommenden Bachata-Festivals in Deutschland nach Datum, mit Ort, Programm und Link. Dazu Tipps, welches Festival zu dir passt, und die Möglichkeit für Veranstalter, ihr Festival einzutragen.',
    'All upcoming Bachata festivals in Germany by date, with place, programme and link. Plus tips on which festival suits you, and a way for organisers to list their festival.'),
-  [('cal', '<b>21 Festivals</b> bis August 2027', '<b>21 festivals</b> until August 2027'), ('free', 'Eintrag <b>kostenlos</b>', 'Listing <b>free</b>'), ('check', 'Termine <b>vom Veranstalter prüfen</b>', 'Check dates <b>with the organiser</b>')],
+  [('cal', '<b>32 Festivals</b> bis Dezember 2027', '<b>32 festivals</b> until December 2027'), ('free', 'Eintrag <b>kostenlos</b>', 'Listing <b>free</b>'), ('check', 'Termine <b>vom Veranstalter prüfen</b>', 'Check dates <b>with the organiser</b>')],
   fest_sections, fest_faq, sibling_group='topic')
