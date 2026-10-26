@@ -8,7 +8,7 @@ CITIES = {
  'szczecin': ('Szczecin', 'Szczecin', 'Szczecinie'), 'bialystok': ('Białystok', 'Białystok', 'Białymstoku'),
  'czestochowa': ('Częstochowa', 'Częstochowa', 'Częstochowie'), 'torun': ('Toruń', 'Toruń', 'Toruniu'), 'kielce': ('Kielce', 'Kielce', 'Kielcach'),
  'rzeszow': ('Rzeszów', 'Rzeszów', 'Rzeszowie'), 'radom': ('Radom', 'Radom', 'Radomiu'), 'olsztyn': ('Olsztyn', 'Olsztyn', 'Olsztynie'),
- 'tarnow': ('Tarnów', 'Tarnów', 'Tarnowie'), 'opole': ('Opole', 'Opole', 'Opolu'), 'bielsko-biala': ('Bielsko-Biała', 'Bielsko-Biała', 'Bielsku-Białej'), 'rybnik': ('Rybnik', 'Rybnik', 'Rybniku'), 'sosnowiec': ('Sosnowiec', 'Sosnowiec', 'Sosnowcu'), 'zabrze': ('Zabrze', 'Zabrze', 'Zabrzu'), 'legnica': ('Legnica', 'Legnica', 'Legnicy'), 'gorzow': ('Gorzów Wielkopolski', 'Gorzów Wielkopolski', 'Gorzowie Wielkopolskim'), 'tychy': ('Tychy', 'Tychy', 'Tychach'), 'nowy-sacz': ('Nowy Sącz', 'Nowy Sącz', 'Nowym Sączu'), 'siedlce': ('Siedlce', 'Siedlce', 'Siedlcach'),
+ 'tarnow': ('Tarnów', 'Tarnów', 'Tarnowie'), 'opole': ('Opole', 'Opole', 'Opolu'), 'bielsko-biala': ('Bielsko-Biała', 'Bielsko-Biała', 'Bielsku-Białej'), 'rybnik': ('Rybnik', 'Rybnik', 'Rybniku'), 'sosnowiec': ('Sosnowiec', 'Sosnowiec', 'Sosnowcu'), 'zabrze': ('Zabrze', 'Zabrze', 'Zabrzu'), 'legnica': ('Legnica', 'Legnica', 'Legnicy'), 'gorzow': ('Gorzów Wielkopolski', 'Gorzów Wielkopolski', 'Gorzowie Wielkopolskim'), 'tychy': ('Tychy', 'Tychy', 'Tychach'), 'nowy-sacz': ('Nowy Sącz', 'Nowy Sącz', 'Nowym Sączu'), 'siedlce': ('Siedlce', 'Siedlce', 'Siedlcach'), 'pila': ('Piła', 'Piła', 'Pile'), 'inowroclaw': ('Inowrocław', 'Inowrocław', 'Inowrocławiu'), 'zamosc': ('Zamość', 'Zamość', 'Zamościu'),
 }
 # (name, city, rating, reviews, website)
 SCHOOLS = [
@@ -77,6 +77,9 @@ SCHOOLS = [
  ('Szkoła Tańca Cubana', 'bielsko-biala', 4.8, 80, 'https://www.cubana.bielsko.pl'),
  ('Sun Salsa', 'tarnow', 4.9, 95, 'https://sunsalsa.pl'),
  ('Baila Studio Tańca', 'tarnow', 5.0, 17, 'https://bailastudio.pl'),
+ ('Szkoła Tańca Iskra', 'pila', 5.0, 80, 'https://taniec.pila.pl'),
+ ('Szkoła Tańca Dance Life Inowrocław', 'inowroclaw', 4.8, 40, 'https://uksdancelife.pl'),
+ ('Szkoła Tańca MYKA', 'zamosc', 4.6, 87, 'https://www.taniec.myka.pl'),
  ('Siedlecka Szkoła Tańca Marek Glinka', 'siedlce', 5.0, 190, 'https://taniecsiedlce.com'),
  ('Adelante Akademia Tańca', 'nowy-sacz', 5.0, 103, 'https://akademiatancaadelante.pl'),
  ('Salsa Los Amigos', 'sosnowiec', 4.9, 75, 'https://salsa.katowice.pl'),
