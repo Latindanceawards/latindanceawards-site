@@ -39,13 +39,13 @@ def german_entries_interim():
         out.setdefault(e['city'], []).append(dict(name=e['name'], sc=sc, fx=fx, url=e['url']))
     return out
 
-def polish_entries(P):
+def polish_entries(P, base='/pl/szkoly/'):
     out = {}
     for name, city, r, v, url in P.SCHOOLS:
         g, rv = parts(r, v)
         y, b, ev, f, po, st = P.EXTRA.get(name, (0, 0, 0, 0, 0, []))
         fxs = f'{f:,}'.replace(',', '.') + ' · ' + f'{po:,}'.replace(',', '.') if f else '–'
-        out.setdefault(city, []).append(dict(name=name, sc=[y, b, ev, g, rv, social(f, po)], fx=[fx_str(r, v), fxs], url=url, st=st, np=1, pg='/pl/szkoly/' + pl_slug(name) + '.html'))
+        out.setdefault(city, []).append(dict(name=name, sc=[y, b, ev, g, rv, social(f, po)], fx=[fx_str(r, v), fxs], url=url, st=st, np=1, pg=base + pl_slug(name) + '.html'))
     return out
 
 def total(e): return round(sum(e['sc']), 1)
@@ -63,7 +63,7 @@ def sub1(js, old, new, n=1):
     assert js.count(old) >= 1, 'missing: ' + old[:80]
     return js.replace(old, new) if n == 0 else js.replace(old, new, n)
 
-def make_js(scope, groups, tx, cands, quick, scale, pl=False, extra=None):
+def make_js(scope, groups, tx, cands, quick, scale, pl=False, extra=None, code='PL'):
     js = B.rank_js
     js = re.sub(r'var RESULTS = \{.*?\n  \};', 'var RESULTS = {};', js, count=1, flags=re.S)
     js = re.sub(r'var CANDIDATES = \{.*?\n  \};', lambda m: 'var CANDIDATES = ' + cand_js(cands) + ';', js, count=1, flags=re.S)
@@ -103,7 +103,7 @@ def make_js(scope, groups, tx, cands, quick, scale, pl=False, extra=None):
         for a, b in extra['literals'].items():
             assert a in js, 'literal missing: ' + a
             js = js.replace(a, b)
-        js = js.replace('?"EN":"DE"', '?"EN":"PL"')
+        js = js.replace('?"EN":"DE"', '?"EN":"' + code + '"')
         js = js.replace('replace(/ß/g,"ss")', 'replace(/ß/g,"ss").replace(/ł/g,"l")')
     return js
 

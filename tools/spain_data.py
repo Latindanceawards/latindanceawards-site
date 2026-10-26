@@ -1,0 +1,73 @@
+# Spanish Bachata schools. Collected 26 Oct 2026: Google Maps rating and review count; Bachata offering confirmed on the school's own
+# website (homepage or page title mentions Bachata) or in the Google Maps business name. Only schools with evidence of Bachata classes are included.
+# city key -> (Spanish name, English name, name used after "en")
+CITIES = {
+ 'madrid': ('Madrid', 'Madrid', 'Madrid'), 'barcelona': ('Barcelona', 'Barcelona', 'Barcelona'), 'valencia': ('Valencia', 'Valencia', 'Valencia'),
+ 'sevilla': ('Sevilla', 'Seville', 'Sevilla'), 'malaga': ('Málaga', 'Málaga', 'Málaga'), 'alicante': ('Alicante', 'Alicante', 'Alicante'),
+ 'zaragoza': ('Zaragoza', 'Zaragoza', 'Zaragoza'), 'bilbao': ('Bilbao', 'Bilbao', 'Bilbao'), 'palma': ('Palma de Mallorca', 'Palma de Mallorca', 'Palma de Mallorca'),
+ 'murcia': ('Murcia', 'Murcia', 'Murcia'), 'las-palmas': ('Las Palmas de Gran Canaria', 'Las Palmas de Gran Canaria', 'Las Palmas de Gran Canaria'),
+ 'granada': ('Granada', 'Granada', 'Granada'), 'cordoba': ('Córdoba', 'Córdoba', 'Córdoba'), 'pamplona': ('Pamplona', 'Pamplona', 'Pamplona'),
+ 'valladolid': ('Valladolid', 'Valladolid', 'Valladolid'), 'santa-cruz-de-tenerife': ('Santa Cruz de Tenerife', 'Santa Cruz de Tenerife', 'Santa Cruz de Tenerife'),
+ 'vigo': ('Vigo', 'Vigo', 'Vigo'),
+}
+def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
+# (name, city, rating, reviews, website)
+SCHOOLS = [
+ ('Salsabachata', 'madrid', 4.8, 1042, 'https://salsabachata.es/'),
+ ('Premiumdance Clases de Salsa y Bachata', 'madrid', 5.0, 625, 'http://www.clasesdesalsaybachata.com/'),
+ ('RLDance Madrid', 'madrid', 5.0, 98, 'https://rldancemadrid.my.canva.site/'),
+ ('Marcando el Paso', 'barcelona', 4.9, 171, 'http://marcandoelpaso.eu/'),
+ ('Seven Dance', 'barcelona', 4.4, 680, 'https://www.sevendance.com/'),
+ ('Bcn Baila', 'barcelona', 4.9, 209, 'https://bcnbaila.es/'),
+ ('Barcelona Bachata School', 'barcelona', 5.0, 23, 'https://www.barcelonabachata.com/'),
+ ('Salsabana', 'barcelona', 4.8, 248, 'https://www.salsabana.es/'),
+ ('Bachata Studio Valencia', 'valencia', 5.0, 15, 'https://bachatastudiovalencia.com/'),
+ ('Andrés y Marta Bachata School', 'valencia', 5.0, 320, 'https://bachataschool.com/'),
+ ('Academia de Baile Luis Chávez', 'valencia', 4.9, 136, 'http://www.academiadebaileluischavez.com/'),
+ ('123 y a Bailar', 'valencia', 4.9, 197, 'https://123yabailar.com/'),
+ ('IO Dance', 'valencia', 4.9, 178, 'https://iodance.es/'),
+ ('Bailarte', 'sevilla', 4.8, 72, 'https://www.bailarte.net/'),
+ ('Los Reyes del Mambo', 'sevilla', 4.8, 89, 'https://www.escuelalosreyesdelmambo.com/'),
+ ('Doble Giro', 'sevilla', 4.6, 18, 'http://www.doblegiro.com/'),
+ ('Baila con Sandra y Quique', 'malaga', 5.0, 456, 'https://www.sandracarbonell.es'),
+ ('Pura Pasión Escuela de Baile', 'malaga', 4.9, 316, _m('Pura Pasión Escuela de Baile', 'Málaga')),
+ ('MálagaSalsa', 'malaga', 4.8, 134, 'http://www.malagasalsa.com'),
+ ('Suárez y Carmen Bachata', 'malaga', 5.0, 16, _m('Suárez y Carmen Bachata', 'Málaga')),
+ ('Escuela de Baile La Terreta', 'alicante', 4.9, 129, 'http://escueladebailelaterreta.com/'),
+ ('Estudio Alicante', 'alicante', 4.6, 44, 'https://www.estudioalicante.com/'),
+ ('Bachata Room Zaragoza', 'zaragoza', 5.0, 63, 'https://www.bachataroomzaragoza.com/'),
+ ('Sabor a Salsa', 'zaragoza', 5.0, 109, 'https://www.saborasalsazaragoza.com/'),
+ ('Escuela de Baile El Almacén', 'zaragoza', 4.8, 68, 'https://escueladebaileelalmacen.com/'),
+ ('Salsaragón', 'zaragoza', 4.9, 119, 'http://www.salsaragon.es/'),
+ ('Salson Escuela de Baile', 'zaragoza', 4.9, 84, 'https://salsonescuela.es/'),
+ ('Bizkaisalsa', 'bilbao', 5.0, 267, 'http://www.bizkaisalsa.com'),
+ ('Escuela de Bachata Bilbao Infinity', 'bilbao', 5.0, 18, _m('Escuela de Bachata Bilbao Infinity', 'Bilbao')),
+ ("Victory's Dance", 'palma', 4.6, 323, 'https://victorysdance.com'),
+ ('InfiniT Dance School', 'palma', 5.0, 154, 'https://infinitdance.com'),
+ ('Centre Ball Mallorca', 'palma', 4.7, 38, 'http://www.centreballmallorca.es'),
+ ('Murcia Latin Dance Salsa y Bachata', 'murcia', 5.0, 23, 'https://murcialatindancesalsaybachata.my.canva.site'),
+ ('Murciafusion', 'murcia', 5.0, 107, 'https://murciafusion.net'),
+ ('Clases de Salsa y Bachata en Murcia', 'murcia', 5.0, 18, 'https://clasessalsaybachata.es'),
+ ('Majao Dance Studio', 'murcia', 4.9, 95, 'https://majaodancestudio.com'),
+ ('Clave y Tacón Las Palmas', 'las-palmas', 5.0, 501, _m('Clave y Tacón Las Palmas', 'Las Palmas de Gran Canaria')),
+ ('Escuela de Baile Latinnova', 'las-palmas', 4.9, 64, 'http://www.escueladebailelaspalmas.com'),
+ ('Paso a Paso Las Palmas', 'las-palmas', 4.9, 140, 'http://www.pasoapasolaspalmas.com'),
+ ('Baila2 Dance Studio', 'granada', 5.0, 143, 'https://www.baila2.com'),
+ ('Granada Dance Project', 'granada', 5.0, 25, 'https://www.granadadanceproject.es'),
+ ('Clases de Salsa y Bachata Granada', 'granada', 4.9, 92, _m('Clases de Salsa y Bachata Granada', 'Granada')),
+ ('Academia de Baile Ángel Guirao', 'cordoba', 5.0, 128, 'https://academiabaileangelguiraocordoba.es'),
+ ('Salsa Con Clase', 'cordoba', 4.9, 44, 'https://www.salsaconclase.es'),
+ ('Escuela de Baile Xanadú', 'cordoba', 4.8, 106, 'http://www.escuelaxanadu.es'),
+ ('Academia BailaSalsero', 'pamplona', 4.9, 173, 'https://www.bailasalsero.com'),
+ ('En Clave de Son', 'pamplona', 4.8, 65, 'https://www.escueladebailepamplona.com'),
+ ('Baila con Eneko', 'pamplona', 4.9, 172, 'http://www.bailaconeneko.com'),
+ ('Baila Salsa Valladolid', 'valladolid', 5.0, 25, 'http://www.bailasalsa.es'),
+ ('MMDanza', 'santa-cruz-de-tenerife', 4.4, 87, 'https://mmdanza.com'),
+ ('Pura Salsa y Sabor', 'santa-cruz-de-tenerife', 4.8, 35, 'http://purasalsaysabor.com'),
+ ('Galidancia', 'vigo', 4.9, 86, 'http://galidancia.com'),
+ ('IDLS Escuela de Baile', 'vigo', 4.8, 156, 'https://idlsescueladebaile.com'),
+]
+# Scoring data not collected yet for Spain (years active, beginner offer, events, Instagram followers/posts, styles).
+# Anything not confirmed counts at the lowest value; schools can confirm it through the application.
+# name: (years active 0/5/10, beginner offer 0/5/8/10, events 0/4/7/10, ig followers, ig posts, styles)
+EXTRA = {}
