@@ -56,3 +56,14 @@ EVENTS = [
 ]
 CITY_LABEL = {'berlin': ('Berlin', 'Berlin'), 'hamburg': ('Hamburg', 'Hamburg'), 'muenchen': ('München', 'Munich'),
               'koeln': ('Köln', 'Cologne'), 'frankfurt': ('Frankfurt', 'Frankfurt')}
+
+# Weekday numbers (0=Monday) and whether a class or workshop runs before the party (from the listings). Monthly events: weekday only.
+META = {
+ 'Wednesday Salsa & Bachata Night': ([2], True, False), 'Soda Social Club': ([3, 6], True, False), 'SalsOli Salsa & Bachata Social': ([4], None, False),
+ 'A Bailar Party (Salsa, Bachata, Kizomba)': ([5], True, True), 'Sensual Night': ([5], True, True), 'Bachata Loca': ([5], True, True),
+ 'TIMBATON Fridays': ([4], True, False), 'ICB Sunday': ([6], None, False),
+ 'Salsea Bachata Party': ([4], True, False), 'Bachata Sensual & Salsa Sunday Party': ([6], None, False), 'Bachata Social Freitag': ([4], True, False),
+ 'Latin Sunday': ([6], True, False), 'Radio Sabor': ([5], False, True),
+ 'Camino Dance: Salsa & Bachata Social': ([6], None, False), 'Bachata Nacht': ([3], True, False),
+}  # name -> (weekdays, class_before (None = not stated), monthly)
+WD = [('Montag', 'Monday'), ('Dienstag', 'Tuesday'), ('Mittwoch', 'Wednesday'), ('Donnerstag', 'Thursday'), ('Freitag', 'Friday'), ('Samstag', 'Saturday'), ('Sonntag', 'Sunday')]

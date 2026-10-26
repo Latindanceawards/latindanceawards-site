@@ -1,6 +1,6 @@
 # Builds the keyword landing pages (city guides, topic guides). Run: python3 tools/build_guides.py
 # Reuses tools/build.py (head, CSS, header, footer, helpers). Running this also rebuilds the base pages.
-import os, sys
+import os, sys, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build as B
 from build import T, page, crumbs, faq_schema, ICON, ROOT
@@ -45,9 +45,10 @@ def render_blocks(t, blocks):
                 for c in b[1]) + '</div>')
         elif b[0] == 'raw': out.append(b[1])
         elif b[0] == 'ev': out.append(ev_block(t, b[1]))
+        elif b[0] == 'evall': out.append(ev_cards(t, EV_BY_CITY[b[1]]))
     return '\n'.join(out)
 
-from events_data import EVENTS, CITY_LABEL
+from events_data import EVENTS, CITY_LABEL, META, WD
 EV_BY_CITY = {}
 for _e in EVENTS: EV_BY_CITY.setdefault(_e['city'], []).append(_e)
 
@@ -56,7 +57,8 @@ def ev_cards(t, evs, h='h3'):
     for e in evs:
         links = ''
         if e['site']: links += f'<a href="{e["site"]}" rel="noopener nofollow" target="_blank">{t("span", "Veranstalter", "Organiser")}</a> '
-        links += f'<a href="{e["src"]}" rel="noopener nofollow" target="_blank">{t("span", "Quelle", "Source")}</a>'
+        links += f'<a href="{e["src"]}" rel="noopener nofollow" target="_blank">{t("span", "Quelle", "Source")}</a> '
+        links += f'<a href="https://www.google.com/maps/search/?api=1&amp;query={urllib.parse.quote(e["venue"] + ", " + e["addr"])}" rel="noopener nofollow" target="_blank">{t("span", "Karte", "Map")}</a>'
         price = f' ({e["price"]})' if e['price'] else ''
         out.append(f'<article data-city="{e["city"]}">{t(h, e["name"], e["name"])}'
                    f'<p>{e["venue"]}, {e["addr"]}</p>'
@@ -67,15 +69,15 @@ def ev_cards(t, evs, h='h3'):
 def ev_block(t, key):
     evs = EV_BY_CITY.get(key, [])
     if not evs: return ''
-    note = t('p', 'Regelmäßige Socials mit Bachata, nach Stand Oktober 2026 aus öffentlichen Listen und den Seiten der Veranstalter. Zeiten und Preise ändern sich, bitte prüfe sie vor dem Besuch. Dein Social fehlt? <a href="bachata-socials.html#eintragen">Trag es kostenlos ein</a>.',
-               'Regular socials with Bachata, as of October 2026, from public listings and the organisers\' pages. Times and prices change, so please check before you go. Is your social missing? <a href="bachata-socials.html#eintragen">List it for free</a>.')
+    note = t('p', 'Regelmäßige Socials mit Bachata, nach Stand Oktober 2026 aus öffentlichen Listen und den Seiten der Veranstalter. Zeiten und Preise ändern sich, bitte prüfe sie vor dem Besuch. Alle Details: <a href="bachata-party-' + key + '.html">Bachata-Party in der Stadt</a>. Dein Social fehlt? <a href="bachata-socials.html#eintragen">Trag es kostenlos ein</a>.',
+               'Regular socials with Bachata, as of October 2026, from public listings and the organisers\' pages. Times and prices change, so please check before you go. Full details: <a href="bachata-party-' + key + '.html">Bachata party page</a>. Is your social missing? <a href="bachata-socials.html#eintragen">List it for free</a>.')
     return ev_cards(t, evs) + '\n    ' + note
 
 
 def guide_page(slug, pref, title_de, desc_de, title_en, desc_en, crumb, edition, h1, lede, facts, sections, faq,
                ranking_anchor=None, sibling_group=None):
     t = T(pref)
-    if ranking_anchor in EV_BY_CITY:
+    if ranking_anchor in EV_BY_CITY and not slug.startswith('bachata-party-'):
         sections = [(a, b, (list(c) + [('ev', ranking_anchor)]) if a.startswith('Bachata-Party in') else c) for a, b, c in sections]
     faq_html = '\n'.join(f'      <details>{t("summary", q, qe)}{t("p", a, ae)}</details>' for q, qe, a, ae in faq)
     secs = []
@@ -614,7 +616,7 @@ _ev_secs = ''
 for _k, (_de, _en) in CITY_LABEL.items():
     if _k in EV_BY_CITY:
         _g = f'<a href="bachata-{_k}.html">{_te("span", "Bachata-Schulen in " + _de, "Bachata schools in " + _en)}</a>' if exists('bachata-' + _k) else ''
-        _ev_secs += f'<section class="evcity" data-city="{_k}" id="{_k}">{_te("h2", "Bachata-Socials in " + _de, "Bachata socials in " + _en, "class=\"evh\"")}{ev_cards(_te, EV_BY_CITY[_k])}<p class="muted" style="margin-top:12px">{_g}</p></section>'
+        _ev_secs += f'<section class="evcity" data-city="{_k}" id="{_k}">{_te("h2", "Bachata-Socials in " + _de, "Bachata socials in " + _en, "class=\"evh\"")}{ev_cards(_te, EV_BY_CITY[_k])}<p class="muted" style="margin-top:12px"><a href="bachata-party-{_k}.html">{_te("span", "Alle Details: Bachata-Party in " + _de, "Full details: Bachata party in " + _en)}</a> · {_g}</p></section>'
 _ev_cityopts = ''.join(f'<option value="{k}">{CITY_LABEL[k][0]}</option>' for k in CITY_LABEL if k in EV_BY_CITY)
 _ev_n = len(EVENTS)
 _emain = f"""<section class="page-hero"><div class="wrap" style="grid-template-columns:1fr"><div>
@@ -675,3 +677,93 @@ page('bachata-socials.html', 'Bachata-Socials in Deutschland: Partys nach Stadt 
      'Bachata socials in Germany: parties by city · Latin Dance Awards',
      'Regular Bachata socials and parties in Berlin, Hamburg, Munich, Cologne and Frankfurt with place, time and price. Organisers can list for free.',
      'bachata-socials.html', _emain, _te.en, _ejs, schema=[crumbs('Bachata-Socials', 'bachata-socials.html')])
+
+
+# ======================================================================
+# One full page per city: "Bachata Party {city}"
+# ======================================================================
+def party_page(key):
+    de, en = CITY_LABEL[key]; evs = EV_BY_CITY[key]; slug = f'bachata-party-{key}'
+    n = len(evs)
+    by_day = {}
+    for e in evs:
+        for d in META[e['name']][0]: by_day.setdefault(d, []).append(e)
+    days = sorted(by_day)
+    day_de = ', '.join(WD[d][0] for d in days); day_en = ', '.join(WD[d][1] for d in days)
+    cls = [e for e in evs if META[e['name']][1]]
+    monthly = [e for e in evs if META[e['name']][2]]
+    weekly = n - len(monthly)
+    sch = [x for x in B.SCH if x['city'] == key][:3]
+    cal = [(f'<strong>{WD[d][0]}:</strong> ' + ', '.join(f'{e["name"]} ({e["venue"]})' for e in by_day[d]),
+            f'<strong>{WD[d][1]}:</strong> ' + ', '.join(f'{e["name"]} ({e["venue"]})' for e in by_day[d])) for d in days]
+    secs = [
+     (f'Bachata-Party in {de}: Das Wichtigste auf einen Blick', f'Bachata party in {en}: the essentials', [
+       ('p', f'In {de} findest du aktuell {n} regelmäßige Socials mit Bachata, davon {weekly} wöchentlich oder an festen Tagen und {len(monthly)} monatlich. Sie verteilen sich auf {day_de}. Die Angaben stammen aus öffentlichen Veranstaltungslisten und von den Seiten der Veranstalter (Stand Oktober 2026).',
+             f'{en} currently has {n} regular socials with Bachata, {weekly} weekly or on fixed days and {len(monthly)} monthly. They fall on {day_en}. Details come from public event listings and the organisers\' pages (as of October 2026).'),
+       ('p', 'Zeiten, Preise und Programm ändern sich. Prüfe vor dem Besuch die Seite des Veranstalters, die du bei jedem Eintrag verlinkt findest.',
+             'Times, prices and programme change. Before you go, check the organiser\'s page, which is linked on every listing.'),
+     ]),
+     (f'Bachata-Socials in {de} nach Wochentag', f'Bachata socials in {en} by weekday', [
+       ('ul', cal),
+       ('p', 'Monatliche Socials findest du unten mit ihrem festen Wochentag im Monat, zum Beispiel jeden 2. oder 3. Samstag.',
+             'Monthly socials are listed below with their fixed day of the month, for example every 2nd or 3rd Saturday.'),
+     ]),
+     (f'Alle Bachata-Partys in {de} im Detail', f'All Bachata parties in {en} in detail', [
+       ('evall', key),
+     ]),
+     (f'Bachata-Party für Anfänger in {de}', f'Bachata parties for beginners in {en}', [
+       ('p', 'Auf einen Social zu gehen ist der schnellste Weg, das Gelernte anzuwenden. Für den Einstieg sind Abende ideal, an denen vor der Party ein Kurs oder Workshop läuft: Du lernst die Grundlagen und tanzt danach mit Leuten, die auf demselben Stand sind.',
+             'Going to a social is the fastest way to use what you learned. Evenings with a class or workshop before the party are ideal for starting out: you learn the basics and then dance with people at the same level.'),
+       ('ul', [(f'<strong>{e["name"]}</strong> ({e["venue"]}): ' + e['time'][0], f'<strong>{e["name"]}</strong> ({e["venue"]}): ' + e['time'][1]) for e in cls]) if cls else ('p', 'Bei den meisten Einträgen ist kein Kurs vor der Party angegeben. Frag beim Veranstalter nach.', 'Most listings do not mention a class before the party. Ask the organiser.'),
+       ('p', 'Du brauchst keinen Partner. Auf Socials wechselt man die Tanzpartner mit jedem Lied. Du kannst jeden fragen, und ein Nein ist völlig in Ordnung.',
+             'You do not need a partner. At socials people change dance partners with every song. You can ask anyone, and a no is perfectly fine.'),
+     ]),
+     (f'Bachata-Social in {de}: Das erwartet dich', f'A Bachata social in {en}: what to expect', [
+       ('ul', [
+         ('<strong>Musik:</strong> Je nach Abend läuft Bachata Sensual, Moderna oder Dominicana, oft gemischt mit Salsa. Bei reinen Bachata-Abenden steht das im Titel.', '<strong>Music:</strong> depending on the night you will hear Bachata Sensual, Moderna or Dominicana, often mixed with Salsa. Pure Bachata nights say so in the title.'),
+         ('<strong>Etikette:</strong> Frag höflich zum Tanz, bedanke dich danach und achte auf dein Gegenüber. Ein gepflegtes Äußeres und ein Ersatzshirt sind auf Socials normal.', '<strong>Etiquette:</strong> ask politely for a dance, say thank you afterwards and pay attention to your partner. Fresh clothes and a spare shirt are normal at socials.'),
+         ('<strong>Schuhe:</strong> Nimm Schuhe mit glatter Sohle mit, mit denen du dich drehen kannst, und vermeide Sneaker mit starkem Profil.', '<strong>Shoes:</strong> bring shoes with a smooth sole you can turn in, and avoid sneakers with a heavy tread.'),
+         ('<strong>Ankunft:</strong> Komm zum Kurs oder früh am Abend. Dann ist es leerer, und du lernst die Szene leichter kennen.', '<strong>Arrival:</strong> come for the class or early in the evening. It is quieter and easier to get to know people.'),
+       ]),
+     ]),
+     (f'Bachata lernen in {de}: Schulen und Kurse', f'Learning Bachata in {en}: schools and classes', [
+       ('p', f'Wenn du in {de} Bachata richtig lernen willst, findest du auf der Seite <a href="bachata-{key}.html">Bachata {de}</a> die Schulen im Überblick. Das Ranking erscheint am <strong>20. Dezember 2026</strong> auf der <a href="rankings.html#{key}">Ranking-Seite</a>.',
+             f'If you want to properly learn Bachata in {en}, the page <a href="bachata-{key}.html">Bachata {en}</a> gives an overview of the schools. The ranking is published on <strong>December 20, 2026</strong> on the <a href="rankings.html#{key}">ranking page</a>.'),
+       ('ul', [(f'<a href="{x["slug"]}.html">{x["name"]}</a>: Zwischenstand {str(x["pts"]).replace(".", ",")} von 100 Punkten', f'<a href="{x["slug"]}.html">{x["name"]}</a>: interim score {x["pts"]} of 100 points') for x in sch]) if sch else ('p', '', ''),
+       ('p', 'Reisende finden auf der <a href="reisen.html?c=' + key + '">Tanzreise-Seite</a> die Schulen, die Community und Lehrer und DJs vor Ort. <a href="bachata-socials.html#eintragen">Trag deinen Social kostenlos ein</a>, wenn er hier fehlt.',
+             'Visitors will find the schools, the community and teachers and DJs on the <a href="reisen.html?c=' + key + '">dance trip page</a>. <a href="bachata-socials.html#eintragen">List your social for free</a> if it is missing here.'),
+     ]),
+    ]
+    first = evs[0]; fri = [e for e in evs if 4 in META[e['name']][0]]; sun = [e for e in evs if 6 in META[e['name']][0]]
+    def names(l): return ', '.join(f'{e["name"]} ({e["venue"]})' for e in l)
+    faq = [
+     (f'Wo gibt es Bachata-Partys in {de}?', f'Where are the Bachata parties in {en}?',
+      f'Regelmäßige Bachata-Socials gibt es zum Beispiel bei {names(evs[:3])}. Alle {n} Einträge mit Zeit und Preis stehen oben auf dieser Seite.',
+      f'Regular Bachata socials include {names(evs[:3])}. All {n} listings with time and price are above on this page.'),
+     (f'Gibt es freitags eine Bachata-Party in {de}?', f'Is there a Bachata party in {en} on Fridays?',
+      (f'Ja: {names(fri)}.' if fri else f'In unserer Liste steht für {de} aktuell kein fester Freitags-Social. Die Wochentage findest du oben.'),
+      (f'Yes: {names(fri)}.' if fri else f'Our list currently has no fixed Friday social for {en}. The weekdays are listed above.')),
+     (f'Gibt es sonntags eine Bachata-Party in {de}?', f'Is there a Bachata party in {en} on Sundays?',
+      (f'Ja: {names(sun)}.' if sun else f'In unserer Liste steht für {de} aktuell kein fester Sonntags-Social. Die Wochentage findest du oben.'),
+      (f'Yes: {names(sun)}.' if sun else f'Our list currently has no fixed Sunday social for {en}. The weekdays are listed above.')),
+     ('Brauche ich einen Partner für einen Bachata-Social?', 'Do I need a partner for a Bachata social?',
+      'Nein. Auf Socials werden die Tanzpartner gewechselt. Du kannst jeden zum Tanz auffordern, und ein Nein ist in Ordnung.', 'No. Partners change at socials. You can ask anyone to dance, and a no is fine.'),
+     ('Was kostet ein Bachata-Social?', 'How much does a Bachata social cost?',
+      'Bei den gelisteten Socials liegt der Eintritt meist im einstelligen bis niedrigen zweistelligen Euro-Bereich, oft mit Kurs. Den genauen Preis zeigt jeder Eintrag, aber prüfe ihn beim Veranstalter.', 'For the listed socials entry is usually a single-digit to low double-digit euro amount, often including a class. Each listing shows the price, but check it with the organiser.'),
+     (f'Wie trage ich meinen Social in {de} ein?', f'How do I list my social in {en}?',
+      'Über das <a href="bachata-socials.html#eintragen">kostenlose Formular</a>. Wir prüfen den Eintrag und schalten ihn frei.', 'Use the <a href="bachata-socials.html#eintragen">free form</a>. We review the listing and publish it.'),
+    ]
+    guide_page(slug, 'bp' + key[:2],
+      f'Bachata Party {de}: Socials und Termine 2026',
+      f'Bachata Party {de}: {n} regelmäßige Socials nach Wochentag, mit Ort, Uhrzeit, Preis und Tipps für Anfänger. Stand Oktober 2026.',
+      f'Bachata party {en}: socials and dates 2026',
+      f'Bachata party {en}: {n} regular socials by weekday with place, time, price and tips for beginners. As of October 2026.',
+      f'Bachata Party {de}', (f'Bachata Party {de} · 2026', f'Bachata party {en} · 2026'),
+      (f'Bachata Party {de}: <em class="foil">Socials</em> nach Wochentag', f'Bachata party {en}: <em class="foil">socials</em> by weekday'),
+      (f'Alle regelmäßigen Bachata-Partys und Socials in {de} auf einen Blick: Wochentag, Ort, Uhrzeit, Preis und Karte, dazu Tipps für deinen ersten Social.',
+       f'All regular Bachata parties and socials in {en} at a glance: weekday, place, time, price and map, plus tips for your first social.'),
+      [('cal', f'<b>{n} Socials</b> in {de}', f'<b>{n} socials</b> in {en}'), ('clock', f'<b>{day_de}</b>', f'<b>{day_en}</b>'), ('check', 'Stand <b>Oktober 2026</b>', 'As of <b>October 2026</b>')],
+      secs, faq, ranking_anchor=key, sibling_group='city')
+
+for _k in CITY_LABEL:
+    if _k in EV_BY_CITY: party_page(_k)
