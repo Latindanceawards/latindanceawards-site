@@ -23,6 +23,8 @@ TOPIC_PAGES = [('bachata-tanzen', 'Bachata tanzen lernen', 'Learn to dance Bacha
                ('bachata-sensual', 'Bachata Sensual', 'Bachata Sensual'),
                ('bachata-dominicana', 'Bachata Dominicana', 'Bachata Dominicana')]
 
+SHOW_FESTIVALS = False  # set True to publish the festival listing again
+
 def exists(slug): return os.path.exists(os.path.join(ROOT, slug + '.html'))
 
 def render_blocks(t, blocks):
@@ -477,7 +479,7 @@ fest_faq = [
   'Nein, Plätze sind nicht käuflich. Festival-Auftritte der Lehrer zählen als ein Kriterium von neun, bezahlte Festival-Einträge haben keinen Einfluss.',
   'No, places cannot be bought. Teachers\' festival appearances are one factor of nine, and paid festival listings have no influence.'),
 ]
-guide_page('bachata-festivals-deutschland', 'bf',
+(guide_page if SHOW_FESTIVALS else (lambda *a, **k: None))('bachata-festivals-deutschland', 'bf',
   'Bachata Festival Deutschland 2026/2027: Termine im Überblick',
   'Bachata Festival Deutschland: kommende Festivals 2026 und 2027 nach Datum, mit Orten, Programm und Links. Dazu Tipps für dein erstes Festival.',
   'Bachata festival Germany 2026/2027: dates at a glance',

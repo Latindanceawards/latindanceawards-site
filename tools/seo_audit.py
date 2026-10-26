@@ -8,7 +8,6 @@ PAGES = {  # page: (main keyword, target word count from competitor research or 
     'bachata-berlin.html': ('Bachata Berlin', 900),
     'bachata-hamburg.html': ('Bachata Hamburg', 900),
     'bachata-muenchen.html': ('Bachata München', 850),
-    'bachata-festivals-deutschland.html': ('Bachata Festival Deutschland', 850),
 }
 sitemap = open(os.path.join(ROOT, 'sitemap.xml')).read()
 llms = open(os.path.join(ROOT, 'llms.txt')).read()
@@ -67,3 +66,4 @@ for page, (kw, target) in PAGES.items():
     for name, w, ok, info in checks:
         print(f'  {"OK  " if ok else "FAIL"} {name:<36} {info}')
 print('\nALL PAGES >= 90' if total_ok else '\nSOME PAGES BELOW 90')
+
