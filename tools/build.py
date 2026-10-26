@@ -2096,3 +2096,194 @@ page('teilen.html', 'Teilen-Paket für Schulen · Latin Dance Awards', 'Fertiger
      'teilen.html', _main, _ts.en, _js, schema=[crumbs('Teilen-Paket', 'teilen.html')])
 _f = os.path.join(ROOT, 'teilen.html'); _h = open(_f, encoding='utf-8').read()
 open(_f, 'w', encoding='utf-8').write(_h.replace('<head>', '<head>\n<meta name="robots" content="noindex,follow">', 1))
+
+# ======================================================================
+# COMMUNITY PAGES: travel mode (reisen.html) + teachers and DJs (lehrer-djs.html)
+# ======================================================================
+# Fill in WhatsApp community invite links per city key (e.g. 'berlin': 'https://chat.whatsapp.com/XXXX'). Empty = "become admin" call to action.
+WHATSAPP = {}
+# Stripe Payment Link (or PayPal) for the verified badge. Empty = e-mail contact instead.
+PROFILE_PAY_URL = ''
+EP_URL = re.search(r'var VOTE_ENDPOINT = "([^"]+)"', rank_js).group(1)
+
+COMM_CSS = r"""
+.tp{max-width:860px}
+.tp select,.tp input[type=text],.tp input[type=email],.tp input[type=url],.tp textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(246,231,211,.35);background:#14100f;color:var(--cream);font:inherit}
+.tp textarea{min-height:110px;resize:vertical}
+.tp label{display:grid;gap:6px;font-size:14px;color:var(--muted)}
+.tp .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tp .box{border:1px solid var(--line);border-radius:20px;background:var(--card);padding:24px;margin-top:18px}
+.tp .box h3{font-family:var(--serif);font-weight:500;font-size:22px;margin-bottom:10px}
+.tp ol.top{list-style:none;display:grid;gap:10px;margin:0;padding:0}
+.tp ol.top li{display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.04)}
+.tp ol.top li b{font-family:var(--serif);color:var(--gold);font-size:20px;min-width:24px}
+.tp ol.top li a{color:var(--cream);font-weight:600;text-decoration:none;flex:1}
+.tp ol.top li span{color:var(--gold-light);font-size:14px}
+.tp .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.tp .btn-ghost{background:transparent!important;color:var(--cream)!important;border:1px solid var(--line)!important}
+.tp .muted{color:var(--muted);font-size:14px;line-height:1.55}
+.tp .filters{display:grid;grid-template-columns:1fr 1fr auto;gap:12px;align-items:end;margin-bottom:18px}
+.tp .chk{display:flex!important;gap:10px;align-items:center;font-size:14px;color:var(--cream);padding-bottom:12px}
+.tp .chk input{accent-color:#e4b95b;width:18px;height:18px}
+.tp .people{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.tp .person{border:1px solid var(--line);border-radius:18px;background:var(--card);padding:18px}
+.tp .person h3{font-family:var(--serif);font-weight:500;font-size:21px;margin:0 0 4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tp .person .meta{color:var(--gold);font-size:13px;margin-bottom:8px}
+.tp .person p{color:var(--muted);font-size:14.5px;line-height:1.5;margin:0 0 10px}
+.tp .person .soc{display:flex;flex-wrap:wrap;gap:8px}
+.tp .person .soc a{padding:6px 12px;border-radius:999px;border:1px solid var(--line);font-size:13px;text-decoration:none;color:var(--cream)}
+.tp .person .soc a:hover{border-color:var(--gold);color:var(--gold-light)}
+.tp .vbadge{font-family:system-ui,sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:999px;background:var(--foil);color:#131011}
+.tp .checks{display:flex;flex-wrap:wrap;gap:8px 18px}
+.tp .checks label{display:flex;gap:8px;align-items:center;color:var(--cream)}
+.tp .checks input{accent-color:#e4b95b}
+.tp .consent{display:flex!important;gap:10px;align-items:flex-start;font-size:13px;line-height:1.45}
+.tp .consent input{margin-top:3px;accent-color:#e4b95b}
+@media (max-width:700px){.tp .row2,.tp .people,.tp .filters{grid-template-columns:1fr}}
+"""
+PAGE_CSS += COMM_CSS
+
+import json as _json
+_cities_sorted = sorted(CITY_NAMES.items(), key=lambda kv: kv[1][0].lower())
+_copts = ''.join(f'<option value="{k}">{v[0]}</option>' for k, v in _cities_sorted)
+_copts_n = ''.join(f'<option value="{v[0]}">{v[0]}</option>' for k, v in _cities_sorted)
+
+# ---------- travel mode ----------
+_tdata = {}
+for _k, (_de, _en) in CITY_NAMES.items():
+    _top = sorted([e for e in SCH if e['city'] == _k], key=lambda e: (-e['pts'], e['name']))[:3]
+    _tdata[_k] = {'n': [_de, _en], 'top': [[e['name'], e['slug'], e['pts']] for e in _top], 'guide': _k in GUIDE_CITIES, 'wa': WHATSAPP.get(_k, '')}
+_tr = T('tr')
+_tmain = f"""<section class="page-hero"><div class="wrap" style="grid-template-columns:1fr">
+  <div>
+  {_tr("h1", "Tanzreise: Bachata, wo du gerade bist", "Dance trip: Bachata wherever you are")}
+  {_tr("p", "Du bist übers Wochenende in einer anderen Stadt? Wähle die Stadt und sieh die Schulen mit dem aktuellen Zwischenstand, die Community und Lehrer und DJs vor Ort.", "Spending the weekend in another city? Choose the city and see the schools with the current interim score, the community and the teachers and DJs there.", 'class="lede"')}
+  </div>
+</div></section>
+<section class="block"><div class="wrap tp">
+  <label>{_tr("span", "Stadt wählen", "Choose a city")}<select id="tcity"><option value="">&#8211;</option>{_copts}</select></label>
+  <div id="tres" hidden>
+    <div class="box"><h3 id="tt1"></h3><ol class="top" id="ttop"></ol>
+      <p class="muted" style="margin-top:10px">{_tr("span", "Zwischenstand mit sechs von neun Kriterien, nicht das Endergebnis. Das Ranking erscheint am 20. Dezember 2026.", "Interim score with six of nine factors, not the final result. The ranking is published on December 20, 2026.")}</p>
+      <div class="btnrow"><a class="btn btn-gold" id="tguide" href="#">{_tr("span", "Alle Schulen der Stadt", "All schools in this city")}</a></div></div>
+    <div class="box"><h3>{_tr("span", "Heute oder am Wochenende tanzen?", "Dancing tonight or this weekend?")}</h3>
+      {_tr("p", "Socials und Übungsabende kündigen die Schulen auf ihren Websites und in Instagram an. Frag direkt nach, ob Gäste willkommen sind. Größere Veranstaltungen findest du bei Salsa Vida.", "Schools announce socials and practice nights on their websites and Instagram. Ask directly whether guests are welcome. You can find bigger events on Salsa Vida.", 'class="muted"')}
+      <div class="btnrow"><a class="btn btn-ghost" href="https://www.salsavida.com/de/event/germany/" target="_blank" rel="noopener">{_tr("span", "Veranstaltungen bei Salsa Vida", "Events on Salsa Vida")}</a></div></div>
+    <div class="box"><h3>{_tr("span", "Community vor Ort", "Local community")}</h3><div id="twa"></div></div>
+    <div class="box"><h3>{_tr("span", "Lehrer und DJs vor Ort", "Teachers and DJs here")}</h3><div class="people" id="tpeople"></div>
+      <p class="muted" id="tpnone" hidden>{_tr("span", "Noch keine Profile in dieser Stadt.", "No profiles in this city yet.")} <a href="lehrer-djs.html#anmelden">{_tr("span", "Eigenes Profil anlegen", "Create your profile")}</a></p></div>
+  </div>
+</div></section>"""
+_tjs = r"""
+  var TD=__TD__, EP="__EP__";
+  var S={wa:["Der Community-Chat dieser Stadt auf WhatsApp. Bitte bleib respektvoll, keine Werbung ohne Absprache.","This city's community chat on WhatsApp. Please stay respectful, no advertising without agreement."],
+    wab:["WhatsApp-Gruppe beitreten","Join the WhatsApp group"], none:["Für diese Stadt gibt es noch keine Gruppe. Du kennst die Szene und willst eine starten? Wir helfen dir dabei.","There is no group for this city yet. Do you know the scene and want to start one? We will help you."],
+    nob:["Admin werden","Become an admin"], t:["Beste Schulen in ","Top schools in "], nos:["Noch keine Schulen erfasst.","No schools listed yet."], pts:["Punkte","points"], ver:["Verifiziert","Verified"]};
+  function L(k){return S[k][window.LANG==="en"?1:0];}
+  function esc(x){return String(x==null?"":x).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  var sel=document.getElementById("tcity"),res=document.getElementById("tres");
+  function render(){
+    var k=sel.value; if(!k||!TD[k]){res.hidden=true;return;} res.hidden=false; var d=TD[k], en=window.LANG==="en", nm=d.n[en?1:0];
+    document.getElementById("tt1").textContent=L("t")+nm;
+    var ol=document.getElementById("ttop"); ol.innerHTML="";
+    if(!d.top.length) ol.innerHTML="<li>"+esc(L("nos"))+"</li>";
+    d.top.forEach(function(x,i){ ol.innerHTML+='<li><b>'+(i+1)+'</b><a href="schools/'+esc(x[1])+'.html">'+esc(x[0])+'</a><span>'+String(x[2]).replace(".",en?".":",")+' '+esc(L("pts"))+'</span></li>'; });
+    document.getElementById("tguide").href=d.guide?("bachata-"+k+".html"):("rankings.html#"+k);
+    var wa=document.getElementById("twa");
+    if(d.wa&&/^https:\/\/chat\.whatsapp\.com\//.test(d.wa)) wa.innerHTML='<p class="muted">'+esc(L("wa"))+'</p><div class="btnrow"><a class="btn btn-gold" target="_blank" rel="noopener" href="'+esc(d.wa)+'">'+esc(L("wab"))+'</a></div>';
+    else wa.innerHTML='<p class="muted">'+esc(L("none"))+'</p><div class="btnrow"><a class="btn btn-ghost" href="mailto:hello@latindanceawards.com?subject='+encodeURIComponent("WhatsApp "+d.n[0])+'">'+esc(L("nob"))+'</a></div>';
+    loadPeople(k);
+  }
+  function loadPeople(k){
+    var box=document.getElementById("tpeople"),none=document.getElementById("tpnone"); box.innerHTML=""; none.hidden=true;
+    fetch(EP+"?action=profiles&city="+encodeURIComponent(TD[k].n[0])).then(function(r){return r.json();}).then(function(j){
+      if(sel.value!==k) return; var a=j.items||[]; if(!a.length){none.hidden=false;return;}
+      a.slice(0,6).forEach(function(p){ box.innerHTML+='<div class="person"><h3>'+esc(p.name)+(p.verified?' <span class="vbadge">&#10003; '+esc(L("ver"))+'</span>':'')+'</h3><div class="meta">'+esc(p.role)+'</div></div>'; });
+    }).catch(function(){none.hidden=false;});
+  }
+  sel.addEventListener("change",function(){ try{history.replaceState(null,"","?c="+sel.value);}catch(e){} render(); });
+  document.addEventListener("langchange",render);
+  var q=(location.search.match(/[?&]c=([a-z0-9]+)/)||[])[1]; if(q&&TD[q]){sel.value=q;} render();
+""".replace('__TD__', _json.dumps(_tdata, ensure_ascii=False)).replace('__EP__', EP_URL)
+page('reisen.html', 'Tanzreise: Bachata in deiner Stadt finden · Latin Dance Awards',
+     'Bachata unterwegs: Wähle eine Stadt und sieh Schulen mit Zwischenstand, Community-Gruppe sowie Lehrer und DJs vor Ort.',
+     'Dance trip: find Bachata in any city · Latin Dance Awards',
+     'Bachata on the road: choose a city and see schools with interim scores, the community group, plus teachers and DJs there.',
+     'reisen.html', _tmain, _tr.en, _tjs, schema=[crumbs('Tanzreise', 'reisen.html')])
+
+# ---------- teachers and DJs ----------
+_tp = T('tp')
+_pay = (f'<a class="btn btn-gold" href="{PROFILE_PAY_URL}" target="_blank" rel="noopener">' if PROFILE_PAY_URL else '<a class="btn btn-gold" href="mailto:hello@latindanceawards.com?subject=Profil%20verifizieren">') 
+_pmain = f"""<section class="page-hero"><div class="wrap" style="grid-template-columns:1fr"><div>
+  {_tp("h1", "Bachata-Lehrer und DJs in Deutschland", "Bachata teachers and DJs in Germany")}
+  {_tp("p", "Finde Lehrer und DJs mit ihren Social-Media-Links. Du unterrichtest oder legst auf? Leg dein Profil kostenlos an. Mit der Verifizierung bekommst du das Häkchen.", "Find teachers and DJs with their social media links. Do you teach or DJ? Create your profile for free. Verification gets you the check mark.", 'class="lede"')}
+  <div class="ctas"><a class="btn btn-gold" href="#anmelden">{_tp("span", "Profil anlegen", "Create a profile")}</a></div>
+</div></div></section>
+<section class="block"><div class="wrap tp">
+  <div class="filters">
+    <label>{_tp("span", "Stadt", "City")}<select id="pcity"><option value="">{_tp("span", "Alle Städte", "All cities")}</option>{_copts_n}</select></label>
+    <label>{_tp("span", "Rolle", "Role")}<select id="prole"><option value="">{_tp("span", "Alle", "All")}</option><option value="teacher">{_tp("span", "Lehrer", "Teacher")}</option><option value="dj">DJ</option></select></label>
+    <label class="chk"><input type="checkbox" id="pver"><span>{_tp("span", "Nur verifiziert", "Verified only")}</span></label>
+  </div>
+  <div class="people" id="plist"></div>
+  <p class="muted" id="pnone" hidden>{_tp("span", "Noch keine Profile. Leg das erste an!", "No profiles yet. Create the first one!")}</p>
+  <p class="muted" id="perr" hidden>{_tp("span", "Profile konnten nicht geladen werden.", "Profiles could not be loaded.")}</p>
+
+  <div class="box" id="verify"><h3>{_tp("span", "Verifiziert für 5 € im Monat", "Verified for €5 a month")}</h3>
+    {_tp("p", "Wir prüfen, dass du die Person hinter dem Profil bist und dass deine Social-Media-Links dir gehören. Dann zeigt dein Profil das Häkchen &#10003; Verifiziert. Jederzeit kündbar. Die Verifizierung ändert nichts am Ranking der Schulen, und Profile sind alphabetisch sortiert, nicht nach Zahlung.", "We check that you are the person behind the profile and that your social media links are yours. Your profile then shows the check mark &#10003; Verified. Cancel any time. Verification changes nothing about the school ranking, and profiles are sorted alphabetically, not by payment.", 'class="muted"')}
+    <div class="btnrow">{_pay}{_tp("span", "Profil verifizieren", "Verify my profile")}</a></div></div>
+
+  <div class="box" id="anmelden"><h3>{_tp("span", "Profil kostenlos anlegen", "Create your profile for free")}</h3>
+    <form id="pform" novalidate style="display:grid;gap:14px">
+      <input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+      <div class="row2"><label>{_tp("span", "Name oder Künstlername", "Name or stage name")}<input type="text" name="name" maxlength="60" required></label>
+      <label>{_tp("span", "Rolle", "Role")}<select name="role"><option value="Lehrer">{_tp("span", "Lehrer", "Teacher")}</option><option value="DJ">DJ</option><option value="Lehrer und DJ">{_tp("span", "Lehrer und DJ", "Teacher and DJ")}</option></select></label></div>
+      <div class="row2"><label>{_tp("span", "Stadt", "City")}<select name="city">{_copts}</select></label>
+      <label>{_tp("span", "Schule (optional)", "School (optional)")}<input type="text" name="school" maxlength="80"></label></div>
+      <div class="checks">{_tp("span", "Stile:", "Styles:")}<label><input type="checkbox" name="st" value="Dominicana"> Dominicana</label><label><input type="checkbox" name="st" value="Sensual"> Sensual</label><label><input type="checkbox" name="st" value="Moderna"> Moderna</label></div>
+      <label>{_tp("span", "Kurzvorstellung (höchstens 300 Zeichen, ohne Links)", "Short bio (up to 300 characters, no links)")}<textarea name="bio" maxlength="300"></textarea></label>
+      <div class="row2"><label>Instagram<input type="text" name="instagram" placeholder="@name" maxlength="100"></label><label>TikTok<input type="text" name="tiktok" placeholder="@name" maxlength="100"></label></div>
+      <div class="row2"><label>YouTube<input type="url" name="youtube" placeholder="https://" maxlength="200"></label><label>Spotify / SoundCloud<input type="url" name="music" placeholder="https://" maxlength="200"></label></div>
+      <label>Website<input type="url" name="website" placeholder="https://" maxlength="200"></label>
+      <label>{_tp("span", "Deine E-Mail (wird nicht veröffentlicht)", "Your email (not published)")}<input type="email" name="email" maxlength="120" required></label>
+      <label class="consent"><input type="checkbox" name="consent"><span>{_tp("span", "Ich bestätige, dass die Angaben von mir sind, und stimme zu, dass sie auf dieser Website öffentlich angezeigt werden. Ich kann die Löschung jederzeit per E-Mail verlangen.", "I confirm that the details are mine and I agree that they are shown publicly on this website. I can ask for deletion at any time by email.")}</span></label>
+      <div class="btnrow"><button type="submit" class="btn btn-gold">{_tp("span", "Profil einreichen", "Submit profile")}</button></div>
+      <p class="muted" id="pmsg" role="status" hidden></p>
+    </form></div>
+</div></section>"""
+_pjs = r"""
+  var EP="__EP__";
+  var S={ver:["Verifiziert","Verified"],all:["Alle","All"],err:["Bitte Name, E-Mail und Zustimmung ausfüllen. Die Kurzvorstellung darf keine Links enthalten.","Please fill in name, email and consent. The bio must not contain links."],ok:["Danke! Wir prüfen dein Profil und schalten es danach frei.","Thank you! We will review your profile and then publish it."],fail:["Das hat nicht geklappt. Bitte versuche es noch einmal.","That did not work. Please try again."]};
+  function L(k){return S[k][window.LANG==="en"?1:0];}
+  function esc(x){return String(x==null?"":x).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  var HOSTS=/^https:\/\/([a-z0-9-]+\.)*(instagram\.com|tiktok\.com|youtube\.com|youtu\.be|spotify\.com|soundcloud\.com|facebook\.com)(\/|$)/i;
+  function safe(u,own){ u=String(u||""); return /^https:\/\//i.test(u)&&(own||HOSTS.test(u))?u:""; }
+  var data=[],list=document.getElementById("plist");
+  function draw(){
+    var c=document.getElementById("pcity").value,r=document.getElementById("prole").value,v=document.getElementById("pver").checked;
+    var a=data.filter(function(p){ if(c&&p.city!==c) return false; if(v&&!p.verified) return false;
+      if(r==="teacher"&&!/Lehrer/.test(p.role)) return false; if(r==="dj"&&!/DJ/.test(p.role)) return false; return true; });
+    list.innerHTML=""; document.getElementById("pnone").hidden=a.length>0||!!document.getElementById("perr").offsetParent;
+    a.forEach(function(p){
+      var soc=[["Instagram",p.instagram],["TikTok",p.tiktok],["YouTube",p.youtube],["Music",p.music]].map(function(x){var u=safe(x[1]);return u?'<a href="'+esc(u)+'" target="_blank" rel="noopener nofollow ugc">'+x[0]+'</a>':"";}).join("");
+      var w=safe(p.website,true); if(w) soc+='<a href="'+esc(w)+'" target="_blank" rel="noopener nofollow ugc">Website</a>';
+      list.innerHTML+='<article class="person"><h3>'+esc(p.name)+(p.verified?' <span class="vbadge">&#10003; '+esc(L("ver"))+'</span>':'')+'</h3><div class="meta">'+esc(p.role)+' · '+esc(p.city)+(p.school?' · '+esc(p.school):'')+(p.styles?' · '+esc(p.styles):'')+'</div>'+(p.bio?'<p>'+esc(p.bio)+'</p>':'')+'<div class="soc">'+soc+'</div></article>';
+    });
+  }
+  fetch(EP+"?action=profiles").then(function(r){return r.json();}).then(function(j){ data=(j.items||[]).sort(function(a,b){return a.name.localeCompare(b.name);}); draw(); }).catch(function(){ document.getElementById("perr").hidden=false; });
+  ["pcity","prole","pver"].forEach(function(id){ document.getElementById(id).addEventListener("change",draw); });
+  document.addEventListener("langchange",draw);
+  var f=document.getElementById("pform"),m=document.getElementById("pmsg"); var mailRe=/^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+  f.addEventListener("submit",function(ev){ ev.preventDefault();
+    var e=f.elements; if(!e.name.value.trim()||!mailRe.test(e.email.value.trim())||!e.consent.checked||/https?:|www\./i.test(e.bio.value)){ m.textContent=L("err"); m.hidden=false; return; }
+    var st=[].slice.call(f.querySelectorAll("input[name=st]:checked")).map(function(x){return x.value;}).join(", ");
+    var b=new URLSearchParams({action:"profile",name:e.name.value.trim(),role:e.role.value,city:e.city.options[e.city.selectedIndex].text,school:e.school.value.trim(),styles:st,bio:e.bio.value.trim(),instagram:e.instagram.value.trim(),tiktok:e.tiktok.value.trim(),youtube:e.youtube.value.trim(),music:e.music.value.trim(),website:e.website.value.trim(),email:e.email.value.trim(),hp:e.hp.value,language:window.LANG==="en"?"EN":"DE"});
+    var btn=f.querySelector("button[type=submit]"); btn.disabled=true;
+    fetch(EP,{method:"POST",mode:"no-cors",body:b}).then(function(){ f.reset(); m.textContent=L("ok"); m.hidden=false; }).catch(function(){ btn.disabled=false; m.textContent=L("fail"); m.hidden=false; });
+  });
+""".replace('__EP__', EP_URL)
+page('lehrer-djs.html', 'Bachata-Lehrer und DJs in Deutschland · Latin Dance Awards',
+     'Bachata-Lehrer und DJs in Deutschland mit Social-Media-Links. Kostenloses Profil, Verifizierung für 5 Euro im Monat.',
+     'Bachata teachers and DJs in Germany · Latin Dance Awards',
+     'Bachata teachers and DJs in Germany with social media links. Free profile, verification for 5 euros a month.',
+     'lehrer-djs.html', _pmain, _tp.en, _pjs, schema=[crumbs('Lehrer und DJs', 'lehrer-djs.html')])

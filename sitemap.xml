@@ -169,6 +169,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-karlsruhe.html"/>
   </url>
   <url>
+    <loc>https://latindanceawards.com/reisen.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/reisen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/reisen.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/reisen.html"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/lehrer-djs.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/lehrer-djs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/lehrer-djs.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/lehrer-djs.html"/>
+  </url>
+  <url>
     <loc>https://latindanceawards.com/schools/a-bailar-hamburg.html</loc>
     <lastmod>2026-10-26</lastmod>
     <priority>0.5</priority>

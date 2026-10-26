@@ -33,6 +33,7 @@ function doPost(e) {
   var a = e && e.parameter && e.parameter.action;
   if (a === 'vote') return handleVote_(e.parameter);
   if (a === 'review') return handleReview_(e.parameter);
+  if (a === 'profile') return handleProfile_(e.parameter);
   return handleApplication_(e);
 }
 
@@ -219,9 +220,50 @@ function reviewsJson_(school) {
   return ContentService.createTextOutput(JSON.stringify({ count: n, avg: n ? Math.round(sum / n * 10) / 10 : 0, items: items })).setMimeType(ContentService.MimeType.JSON);
 }
 
+/* ===== Teacher and DJ profiles =====
+ * Sheet "Profiles": new rows arrive with Status = Pending. Set Status to Approved to publish.
+ * Set Verified = Yes (and optionally "Verified until" = a date) after the person has paid and you checked their identity/links.
+ */
+var PROFILE_SHEET = 'Profiles';
+var PROFILE_HEAD = ['Submitted at', 'Name', 'Role', 'City', 'School', 'Styles', 'Bio', 'Instagram', 'TikTok', 'YouTube', 'Music', 'Website', 'Email', 'Language', 'Status', 'Verified', 'Verified until'];
+function url_(v, host) {
+  v = String(v || '').trim().substring(0, 200);
+  if (!v) return '';
+  if (host && /^@?[A-Za-z0-9._]{1,40}$/.test(v)) return 'https://' + host + '/' + (host === 'www.tiktok.com' ? '@' : '') + v.replace(/^@/, '');
+  if (!/^https:\/\//i.test(v)) return '';
+  return v;
+}
+function handleProfile_(p) {
+  if (p.hp) return ContentService.createTextOutput('ok');
+  var email = normEmail_(p.email), name = String(p.name || '').trim().substring(0, 60), bio = String(p.bio || '').trim().substring(0, 300);
+  if (!email || !name || /https?:|www\./i.test(bio)) return ContentService.createTextOutput('invalid');
+  var role = ['Lehrer', 'DJ', 'Lehrer und DJ'].indexOf(p.role) >= 0 ? p.role : 'Lehrer';
+  var lock = LockService.getScriptLock(); lock.waitLock(20000);
+  try {
+    var sh = sheet_(PROFILE_SHEET, PROFILE_HEAD), d = sh.getDataRange().getValues();
+    for (var r = 1; r < d.length; r++) if (d[r][12] === email && d[r][1] === name) return ContentService.createTextOutput('ok');
+    sh.appendRow([new Date(), safe_(name), role, safe_(String(p.city || '').substring(0, 40)), safe_(String(p.school || '').substring(0, 80)), safe_(String(p.styles || '').substring(0, 60)), safe_(bio),
+      url_(p.instagram, 'www.instagram.com'), url_(p.tiktok, 'www.tiktok.com'), url_(p.youtube), url_(p.music), url_(p.website), email, p.language === 'EN' ? 'EN' : 'DE', 'Pending', '', '']);
+    try { MailApp.sendEmail(Session.getEffectiveUser().getEmail(), 'New profile to review: ' + name, name + ' (' + role + ', ' + p.city + ') submitted a profile. Open the Profiles sheet and set Status to Approved to publish.'); } catch (x) {}
+    return ContentService.createTextOutput('ok');
+  } finally { lock.releaseLock(); }
+}
+function profilesJson_(city) {
+  var sh = sheet_(PROFILE_SHEET, PROFILE_HEAD), d = sh.getDataRange().getValues(), items = [], today = new Date();
+  for (var i = 1; i < d.length; i++) {
+    if (d[i][14] !== 'Approved') continue;
+    if (city && d[i][3] !== city) continue;
+    var until = d[i][16], ver = d[i][15] === 'Yes' && (!until || new Date(until) >= today);
+    items.push({ name: String(d[i][1]), role: String(d[i][2]), city: String(d[i][3]), school: String(d[i][4]), styles: String(d[i][5]), bio: String(d[i][6]),
+      instagram: String(d[i][7]), tiktok: String(d[i][8]), youtube: String(d[i][9]), music: String(d[i][10]), website: String(d[i][11]), verified: ver });
+  }
+  return ContentService.createTextOutput(JSON.stringify({ items: items })).setMimeType(ContentService.MimeType.JSON);
+}
+
 function doGet(e) {
   var p = (e && e.parameter) || {};
   if (p.action === 'reviews') return reviewsJson_(String(p.school || ''));
+  if (p.action === 'profiles') return profilesJson_(String(p.city || ''));
   var bad = ['Link ungültig oder abgelaufen.', 'Link invalid or expired.'];
   if (p.unsub) return unsub_(p.unsub) ? page_(['Du wurdest abgemeldet.', 'You have been unsubscribed.']) : page_(bad);
   if (p.review) {

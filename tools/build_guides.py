@@ -223,6 +223,8 @@ guide_page('bachata-berlin', 'bb',
 # ======================================================================
 # Reusable city guide (Hamburg, München, ...)
 # ======================================================================
+t_wa_de = 'WhatsApp-Gruppe beitreten'
+
 def city_guide(slug, pref, city_de, city_en, rank_anchor, intro, cards, cards_note, party, faq_extra, lede_extra=('', '')):
     secs = [
      (f'Bachata in {city_de}: So ist die Szene', f'Bachata in {city_en}: what the scene is like', [
@@ -262,6 +264,13 @@ def city_guide(slug, pref, city_de, city_en, rank_anchor, intro, cards, cards_no
        ('p', party[0], party[1]),
        ('p', 'Tipp für den ersten Besuch: Komm früh, tanze mit Leuten aus deinem Kurs und frag nach einem Tanz. Die Szene ist offen, und Anfänger sind willkommen. Welche Schulen die meisten Events und Gastlehrer haben, zeigt bald das <a href="rankings.html#' + rank_anchor + '">Ranking</a>.',
              'Tip for your first visit: come early, dance with people from your class and ask for a dance. The scene is open and beginners are welcome. The <a href="rankings.html#' + rank_anchor + '">ranking</a> will soon show which schools run the most events and guest teachers.'),
+     ]),
+     (f'Bachata-Community in {city_de}: WhatsApp und Tanzreise', f'Bachata community in {city_en}: WhatsApp and dance trip', [
+       ('p', f'Tänzer aus {city_de} tauschen sich über Socials, Mitfahrgelegenheiten und Festivals aus. Besuchst du die Stadt nur kurz, zeigt dir die <a href="reisen.html?c={rank_anchor}">Tanzreise-Seite</a> die Schulen mit Zwischenstand, die Community und Lehrer und DJs vor Ort.',
+             f'Dancers from {city_en} swap news about socials, rides and festivals. If you are only visiting, the <a href="reisen.html?c={rank_anchor}">dance trip page</a> shows the schools with interim scores, the community and teachers and DJs there.'),
+       (('raw', f'<div class="btnrow"><a class="btn btn-gold" href="{B.WHATSAPP[rank_anchor]}" target="_blank" rel="noopener">' + t_wa_de + '</a></div>') if rank_anchor in B.WHATSAPP else
+        ('p', f'Für {city_de} gibt es noch keine WhatsApp-Gruppe. Du kennst die Szene und willst eine starten? <a href="mailto:hello@latindanceawards.com?subject=WhatsApp%20{city_de}">Schreib uns</a>, wir helfen dir beim Aufsetzen und verlinken sie hier.',
+              f'There is no WhatsApp group for {city_en} yet. Do you know the scene and want to start one? <a href="mailto:hello@latindanceawards.com?subject=WhatsApp%20{city_en}">Email us</a> and we will help you set it up and link it here.')),
      ]),
      (f'So bewerten wir die Bachata-Schulen in {city_de}', f'How we score Bachata schools in {city_en}', [
        ('p', f'Das Ranking für {city_de} erscheint am <strong>20. Dezember 2026</strong> auf der <a href="rankings.html#{rank_anchor}">Ranking-Seite</a>. Jede Schule wird nach denselben neun öffentlichen Kriterien mit zusammen 100 Punkten bewertet, unter anderem Google-Bewertung, Festivals, Jahre aktiv, Kursangebot für Einsteiger, Events und Social Media. Plätze sind nicht käuflich.',
