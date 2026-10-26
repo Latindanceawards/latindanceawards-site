@@ -8,7 +8,7 @@ CITIES = {
  'szczecin': ('Szczecin', 'Szczecin', 'Szczecinie'), 'bialystok': ('Białystok', 'Białystok', 'Białymstoku'),
  'czestochowa': ('Częstochowa', 'Częstochowa', 'Częstochowie'), 'torun': ('Toruń', 'Toruń', 'Toruniu'), 'kielce': ('Kielce', 'Kielce', 'Kielcach'),
  'rzeszow': ('Rzeszów', 'Rzeszów', 'Rzeszowie'), 'radom': ('Radom', 'Radom', 'Radomiu'), 'olsztyn': ('Olsztyn', 'Olsztyn', 'Olsztynie'),
- 'tarnow': ('Tarnów', 'Tarnów', 'Tarnowie'), 'opole': ('Opole', 'Opole', 'Opolu'), 'bielsko-biala': ('Bielsko-Biała', 'Bielsko-Biała', 'Bielsku-Białej'), 'rybnik': ('Rybnik', 'Rybnik', 'Rybniku'),
+ 'tarnow': ('Tarnów', 'Tarnów', 'Tarnowie'), 'opole': ('Opole', 'Opole', 'Opolu'), 'bielsko-biala': ('Bielsko-Biała', 'Bielsko-Biała', 'Bielsku-Białej'), 'rybnik': ('Rybnik', 'Rybnik', 'Rybniku'), 'sosnowiec': ('Sosnowiec', 'Sosnowiec', 'Sosnowcu'), 'zabrze': ('Zabrze', 'Zabrze', 'Zabrzu'), 'legnica': ('Legnica', 'Legnica', 'Legnicy'), 'gorzow': ('Gorzów Wielkopolski', 'Gorzów Wielkopolski', 'Gorzowie Wielkopolskim'), 'tychy': ('Tychy', 'Tychy', 'Tychach'),
 }
 # (name, city, rating, reviews, website)
 SCHOOLS = [
@@ -77,6 +77,11 @@ SCHOOLS = [
  ('Szkoła Tańca Cubana', 'bielsko-biala', 4.8, 80, 'https://www.cubana.bielsko.pl'),
  ('Sun Salsa', 'tarnow', 4.9, 95, 'https://sunsalsa.pl'),
  ('Baila Studio Tańca', 'tarnow', 5.0, 17, 'https://bailastudio.pl'),
+ ('Salsa Los Amigos', 'sosnowiec', 4.9, 75, 'https://salsa.katowice.pl'),
+ ('FLOW Latino Dance Studio', 'zabrze', 5.0, 73, 'https://studio-flow.pl'),
+ ('Diamond Dance Studio', 'legnica', 4.7, 87, 'https://szkolatancalegnica.pl'),
+ ('Like To Dance', 'gorzow', 5.0, 45, 'https://www.google.com/maps/search/Like+To+Dance+Gorzów+Wielkopolski'),
+ ('Szkoła Tańca Mohito', 'tychy', 4.7, 130, 'https://mohito.tychy.pl'),
  ('Śląska Szkoła Tańca Dariusz Kurzej', 'katowice', 4.9, 67, 'https://tanca.com.pl/szkola-tanca-katowice/'),
  ('Taneczna Kompania', 'katowice', 4.7, 85, 'https://tanecznakompania.pl'),
  ('Studio Tańca Anna Kowalska', 'szczecin', 4.9, 138, 'https://annakowalska.pl'),
