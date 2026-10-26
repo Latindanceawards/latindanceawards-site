@@ -1847,6 +1847,113 @@ SCHOOL_JS = r'''
     else if(navigator.clipboard){ navigator.clipboard.writeText(u).then(function(){ var o=sh.textContent; sh.textContent=L("copied"); setTimeout(function(){ sh.innerHTML=o; },1600); }); } });
 '''
 
+
+# ======================================================================
+# SHARE KIT (caption + story image per school)
+# ======================================================================
+KIT_CSS = r"""
+.kit{border:1px solid var(--line);border-radius:22px;background:var(--card);padding:28px;max-width:760px}
+.kit h2{font-family:var(--serif);font-weight:500;font-size:clamp(24px,4vw,32px);margin-bottom:8px}
+.kit p.lead{color:var(--muted);margin-bottom:20px;line-height:1.55}
+.kit .kit-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.kit label{display:grid;gap:6px;font-size:13.5px;color:var(--muted)}
+.kit textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(246,231,211,.3);background:rgba(255,255,255,.05);color:var(--cream);font:inherit;font-size:14px;line-height:1.5;resize:vertical}
+.kit .kit-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.kit .kit-row .btn{padding:12px 20px;font-size:14px}
+.kit .btn-ghost{background:transparent!important;color:var(--cream)!important;border:1px solid var(--line)!important}
+.kit .btn-ghost:hover{border-color:var(--gold)!important;color:var(--gold-light)!important}
+.kit .kit-grid{align-items:end}
+.kit textarea{min-height:190px}
+.kit .kit-link{margin:0 0 18px;padding:12px 14px;border-radius:12px;background:rgba(228,185,91,.08);border:1px dashed var(--line);font-size:14px;word-break:break-all;color:var(--gold-light)}
+.kit .kit-msg{min-height:20px;margin-top:10px;font-size:13.5px;color:var(--gold-light)}
+.kit select{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(246,231,211,.35);background:#14100f;color:var(--cream);font:inherit;margin-bottom:18px}
+@media (max-width:620px){.kit{padding:20px}.kit .kit-grid{grid-template-columns:1fr}.kit .kit-row .btn{flex:1 1 100%}}
+"""
+
+KIT_JS = r"""
+  function initKit(root, name, city, slug){
+    var base="https://latindanceawards.com/schools/"+slug+".html";
+    var $=function(q){return root.querySelector(q);};
+    var link=$(".kit-link"), de=$(".kit-de"), en=$(".kit-en"), msg=$(".kit-msg");
+    link.textContent=base;
+    var tag=city.toLowerCase().replace(/ä/g,"ae").replace(/ö/g,"oe").replace(/ü/g,"ue").replace(/ß/g,"ss").replace(/[^a-z0-9]/g,"");
+    de.value="🏆 Stimmt für "+name+" ab!\n\nWir sind im Rennen um den Publikumspreis der Bachata Awards Deutschland 2026. Deine Stimme dauert 30 Sekunden (eine Stimme pro Person, bestätigt per E-Mail):\n"+base+"\n\n#bachata #bachata"+tag+" #latindanceawards";
+    en.value="🏆 Vote for "+name+"!\n\nWe are in the running for the Audience Award of the Bachata Awards Germany 2026. Voting takes 30 seconds (one vote per person, confirmed by email):\n"+base+"\n\n#bachata #bachata"+tag+" #latindanceawards";
+    function say(t){msg.textContent=t;setTimeout(function(){msg.textContent="";},3500);}
+    function copy(txt){
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){say(window.LANG==="en"?"Copied.":"Kopiert.");},function(){fallback(txt);});}
+      else fallback(txt);
+    }
+    function fallback(txt){var t=document.createElement("textarea");t.value=txt;document.body.appendChild(t);t.select();try{document.execCommand("copy");say(window.LANG==="en"?"Copied.":"Kopiert.");}catch(e){}document.body.removeChild(t);}
+    $(".kit-copy-de").onclick=function(){copy(de.value);};
+    $(".kit-copy-en").onclick=function(){copy(en.value);};
+    $(".kit-copy-link").onclick=function(){copy(base);};
+    $(".kit-wa").onclick=function(){var t=(window.LANG==="en"?en:de).value;window.open("https://wa.me/?text="+encodeURIComponent(t),"_blank","noopener");};
+    var sh=$(".kit-share");
+    if(navigator.share){sh.hidden=false;sh.onclick=function(){navigator.share({title:name,text:(window.LANG==="en"?en:de).value,url:base}).catch(function(){});};}
+    function wrap(ctx,text,x,y,maxW,lh){var words=text.split(" "),line="",lines=[];words.forEach(function(w){var t=line?line+" "+w:w;if(ctx.measureText(t).width>maxW&&line){lines.push(line);line=w;}else line=t;});lines.push(line);lines.forEach(function(l,i){ctx.fillText(l,x,y+i*lh);});return lines.length;}
+    function image(W,H,file){
+      var c=document.createElement("canvas");c.width=W;c.height=H;var x=c.getContext("2d");
+      x.fillStyle="#080707";x.fillRect(0,0,W,H);
+      var rg=x.createRadialGradient(W/2,H*0.62,50,W/2,H*0.62,H*0.6);rg.addColorStop(0,"rgba(228,185,91,.28)");rg.addColorStop(1,"rgba(228,185,91,0)");x.fillStyle=rg;x.fillRect(0,0,W,H);
+      var g=x.createLinearGradient(0,0,W,H);g.addColorStop(0,"#fcebb6");g.addColorStop(.45,"#e2b457");g.addColorStop(1,"#b07a27");
+      x.strokeStyle=g;x.lineWidth=6;x.strokeRect(40,40,W-80,H-80);x.lineWidth=2;x.strokeRect(62,62,W-124,H-124);
+      x.textAlign="center";var en_=window.LANG==="en";var s=W/1080;
+      x.fillStyle=g;x.font="bold "+Math.round(120*s)+"px Georgia,serif";x.fillText("★",W/2,H*0.2);
+      x.fillStyle="#f6e7d3";x.font=Math.round(46*s)+"px Georgia,serif";x.fillText(en_?"Vote for":"Stimme für",W/2,H*0.2+90*s);
+      x.fillStyle=g;x.font="bold "+Math.round(96*s)+"px Georgia,serif";
+      var n=wrap(x,name,W/2,H*0.36,W-200*s,110*s);
+      var yy=H*0.36+n*110*s+30*s;
+      x.fillStyle="#f6e7d3";x.font=Math.round(48*s)+"px Georgia,serif";x.fillText(city,W/2,yy);
+      x.fillStyle="#b9ab98";x.font=Math.round(36*s)+"px Arial,sans-serif";
+      x.fillText(en_?"Audience Award · Bachata Awards Germany 2026":"Publikumspreis · Bachata Awards Deutschland 2026",W/2,yy+90*s);
+      x.fillStyle=g;x.fillRect(W/2-120*s,H*0.74,240*s,4);
+      x.fillStyle="#f6e7d3";x.font="bold "+Math.round(44*s)+"px Arial,sans-serif";x.fillText(en_?"One vote takes 30 seconds":"Eine Stimme dauert 30 Sekunden",W/2,H*0.74+90*s);
+      x.fillStyle=g;x.font="bold "+Math.round(50*s)+"px Arial,sans-serif";x.fillText("latindanceawards.com",W/2,H*0.74+170*s);
+      x.fillStyle="#b9ab98";x.font=Math.round(30*s)+"px Arial,sans-serif";x.fillText(en_?"Results on December 20, 2026":"Ergebnisse am 20. Dezember 2026",W/2,H-110*s);
+      c.toBlob(function(b){var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=file+".png";document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(a.href);},2000);say(window.LANG==="en"?"Image saved.":"Bild gespeichert.");},"image/png");
+    }
+    $(".kit-story").onclick=function(){image(1080,1920,"vote-story-"+slug);};
+    $(".kit-post").onclick=function(){image(1080,1350,"vote-post-"+slug);};
+  }
+"""
+
+def kit_body(s, with_select=False, opts=''):
+    sel = ''
+    if with_select:
+        sel = f'<label>{s("span", "Deine Schule", "Your school")}<select class="kit-select" aria-label="School">{opts}</select></label>'
+    return f"""
+    {sel}
+    <p class="kit-link" aria-live="polite"></p>
+    <div class="kit-grid">
+      <label>{s("span", "Text für Instagram, Facebook und WhatsApp (Deutsch)", "Caption for Instagram, Facebook and WhatsApp (German)")}<textarea class="kit-de" readonly></textarea></label>
+      <label>{s("span", "Caption (English)", "Caption (English)")}<textarea class="kit-en" readonly></textarea></label>
+    </div>
+    <div class="kit-row">
+      <button type="button" class="btn btn-gold kit-copy-de">{s("span", "Text kopieren (DE)", "Copy text (DE)")}</button>
+      <button type="button" class="btn btn-ghost kit-copy-en">{s("span", "Copy text (EN)", "Copy text (EN)")}</button>
+      <button type="button" class="btn btn-ghost kit-copy-link">{s("span", "Link kopieren", "Copy link")}</button>
+      <button type="button" class="btn btn-ghost kit-wa">{s("span", "Per WhatsApp teilen", "Share on WhatsApp")}</button>
+      <button type="button" class="btn btn-ghost kit-share" hidden>{s("span", "Teilen…", "Share…")}</button>
+    </div>
+    <div class="kit-row">
+      <button type="button" class="btn btn-gold kit-story">{s("span", "Story-Bild laden (1080×1920)", "Download story image (1080×1920)")}</button>
+      <button type="button" class="btn btn-ghost kit-post">{s("span", "Post-Bild laden (1080×1350)", "Download post image (1080×1350)")}</button>
+    </div>
+    <p class="kit-msg" role="status"></p>"""
+
+def kit_section(s, nm, de_city, slug):
+    return f"""<section class="block" aria-labelledby="kit-title">
+  <div class="wrap">
+    <div class="kit" id="share">
+      {s("h2", "Teile diese Seite und hol dir Stimmen", "Share this page and collect votes").replace("<h2", '<h2 id="kit-title"')}
+      {s("p", "Für Schulen: Hier ist ein fertiger Text und ein Bild für deine Story. Poste beides und bitte deine Schüler, in 30 Sekunden abzustimmen.", "For schools: here is a ready-made caption and an image for your story. Post both and ask your students to vote in 30 seconds.", 'class="lead"')}
+      {kit_body(s)}
+    </div>
+  </div>
+</section>
+"""
+
 def build_school(e):
     s = T('s')
     en_city = CITY_NAMES[e['city']][1]; de_city = CITY_NAMES[e['city']][0]
@@ -1936,6 +2043,7 @@ def build_school(e):
   </div>
 </section>
 
+{kit_section(s, nm, de_city, e['slug'])}
 <section class="block alt" aria-labelledby="own-title">
   <div class="wrap">
     <div class="sp-card" style="max-width:760px">
@@ -1950,12 +2058,35 @@ def build_school(e):
     desc_de = f'{nm} in {de_city}: Punkte, Platz {crank} im Zwischenstand des Bachata-Rankings, Bewertungen und Abstimmung für den Publikumspreis.'
     title_en = f'{nm} · Bachata {en_city} · Reviews'
     desc_en = f'{nm} in {en_city}: score, place {crank} in the interim Bachata ranking, reviews and voting for the Audience Award.'
-    js = SCHOOL_JS.replace('__SCHOOL__', json.dumps({'name': nm, 'city': de_city}, ensure_ascii=False)).replace('__EP__', re.search(r'var VOTE_ENDPOINT = "([^"]+)"', rank_js).group(1))
+    js = KIT_JS + SCHOOL_JS.replace('__SCHOOL__', json.dumps({'name': nm, 'city': de_city}, ensure_ascii=False)).replace('__EP__', re.search(r'var VOTE_ENDPOINT = "([^"]+)"', rank_js).group(1)) + '\n  initKit(document.querySelector(".kit"), ' + json.dumps(nm, ensure_ascii=False) + ', ' + json.dumps(de_city, ensure_ascii=False) + ', ' + json.dumps(e['slug']) + ');\n'
     schema = [crumbs(nm, f'schools/{e["slug"]}.html'), {"@context": "https://schema.org", "@type": "LocalBusiness", "name": nm, "url": e['url'],
               "address": {"@type": "PostalAddress", "addressLocality": de_city, "addressCountry": "DE"}}]
     page(f'schools/{e["slug"]}.html', title_de, desc_de, title_en, desc_en, f'schools/{e["slug"]}.html', main, s.en, js, schema=schema)
 
 PAGE_CSS += SCHOOL_CSS
+PAGE_CSS += KIT_CSS
 os.makedirs(os.path.join(ROOT, 'schools'), exist_ok=True)
 for _e in SCH: build_school(_e)
 print('school pages:', len(SCH))
+
+# ---- Share kit page for schools (not in sitemap, noindex)
+_ts = T('sh')
+_opts = ''.join(f'<option value="{e["slug"]}" data-n="{e["name"]}" data-c="{CITY_NAMES[e["city"]][0]}">{CITY_NAMES[e["city"]][0]}: {e["name"]}</option>'
+                for e in sorted(SCH, key=lambda e: (CITY_NAMES[e['city']][0], e['name'])))
+_main = f'''<section class="page-hero"><div class="wrap">
+  {_ts("h1", "Teilen-Paket für Schulen", "Share kit for schools")}
+  {_ts("p", "Wähle deine Schule. Du bekommst einen fertigen Text, deinen Abstimmungs-Link und ein Bild für Story oder Post. Alles ist kostenlos.", "Choose your school. You get a ready-made caption, your voting link and an image for your story or post. It is all free.", 'class="lead"')}
+</div></section>
+<section class="block"><div class="wrap"><div class="kit" id="share">{kit_body(_ts, True, _opts)}</div></div></section>'''
+_js = KIT_JS + '''
+  var _r=document.querySelector(".kit"),_sel=_r.querySelector(".kit-select");
+  function _go(){var o=_sel.options[_sel.selectedIndex];initKit(_r,o.getAttribute("data-n"),o.getAttribute("data-c"),o.value);}
+  var _q=(location.search.match(/[?&]s=([a-z0-9-]+)/)||[])[1];
+  if(_q){for(var i=0;i<_sel.options.length;i++){if(_sel.options[i].value===_q){_sel.selectedIndex=i;break;}}}
+  _sel.addEventListener("change",_go);_go();
+'''
+page('teilen.html', 'Teilen-Paket für Schulen · Latin Dance Awards', 'Fertiger Text und Bild für Instagram, Facebook und WhatsApp, damit deine Schüler für deine Schule abstimmen.',
+     'Share kit for schools · Latin Dance Awards', 'A ready-made caption and image for Instagram, Facebook and WhatsApp so your students vote for your school.',
+     'teilen.html', _main, _ts.en, _js, schema=[crumbs('Teilen-Paket', 'teilen.html')])
+_f = os.path.join(ROOT, 'teilen.html'); _h = open(_f, encoding='utf-8').read()
+open(_f, 'w', encoding='utf-8').write(_h.replace('<head>', '<head>\n<meta name="robots" content="noindex,follow">', 1))
