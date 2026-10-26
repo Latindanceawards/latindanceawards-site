@@ -994,7 +994,14 @@ rank_js = r'''
       {name:"Zapatissimo", st:["Sensual"], sc:[0, 8, 7, 20.9, 9.9, 7.8], fx:["4,8 ★ · 234","2.583 · 48"], url:"https://www.zapatissimo.de/"},
       {name:"Cumbancha Tanzschule", sc:[10, 10, 4, 23.9, 9.9, 9.7], fx:["5,0 ★ · 243","5.739 · 1.483"], url:"https://www.cumbancha.de/"},
       {name:"Tumba'o Danzas", sc:[0, 0, 3, 13.8, 1.3, 5.8], fx:["5,0 ★ · 1","186 · 54"], url:"https://tumbao-danzas.de/"},
-      {name:"Bailaconsol", st:["Sensual"], sc:[0, 7, 4, 22.4, 8.1, 8.0], fx:["5,0 ★ · 87","2.660 · 106"], url:"http://www.bailaconsol.com/"}
+      {name:"Bailaconsol", st:["Sensual"], sc:[0, 7, 4, 22.4, 8.1, 8.0], fx:["5,0 ★ · 87","2.660 · 106"], url:"http://www.bailaconsol.com/"},
+      {name:"Dolce Vita Dance Studio", sc:[0, 8, 4, 22.0, 9.3, 0], fx:["4,9 ★ · 168","–"], url:"https://www.dolce-vita-dance.com/"},
+      {name:"MiSalsa", sc:[0, 8, 3, 11.3, 6.1, 0], fx:["4,1 ★ · 28","–"], url:"https://misalsa.de/"},
+      {name:"Tanzschule Traumtänzer", sc:[10, 10, 10, 16.1, 9.7, 8.9], fx:["4,5 ★ · 212","1.470 · 864"], url:"https://www.traumtaenzer.de/"},
+      {name:"MAXIXE Tanzschule", sc:[10, 8, 7, 21.2, 8.3, 0], fx:["4,9 ★ · 97","–"], url:"https://www.maxixe.de/"},
+      {name:"TanzSuite", sc:[10, 10, 10, 20.9, 8.0, 6.6], fx:["4,9 ★ · 82","393 · 82"], url:"https://www.tanzsuite.de/"},
+      {name:"Elite Dance Studio", sc:[10, 8, 8, 20.7, 7.7, 0], fx:["4,9 ★ · 71","–"], url:"https://www.elitedancestudio.de/"},
+      {name:"Artdance Tanzstudio", st:["Moderna"], sc:[0, 5, 0, 19.6, 8.0, 0], fx:["4,8 ★ · 81","–"], url:"https://www.artdance-tanzstudio.de/"}
     ],
     muenchen: [
       {name:"Salsea Dance Academy", sc:[0, 10, 10, 21.2, 8.2, 8.8], fx:["4,9 ★ · 94","4.395 · 175"], url:"https://salsea.de/"},
@@ -1004,7 +1011,12 @@ rank_js = r'''
       {name:"Lazarte Dance Academy", sc:[0, 10, 6, 21.5, 7.3, 6.0], fx:["5,0 ★ · 58","404 · 31"], url:"https://www.lazartedanceacademy.de/"},
       {name:"Salsamás Munich", sc:[10, 8, 6, 21.0, 7.0, 0], fx:["5,0 ★ · 48","–"], url:"https://www.salsamas.de/"},
       {name:"Salsa OnStage", st:["Dominicana"], sc:[0, 7, 9, 22.5, 8.2, 9.8], fx:["5,0 ★ · 93","7.070 · 606"], url:"http://www.salsa-onstage.de/"},
-      {name:"Mike Dance", sc:[0, 6, 9, 20.2, 6.7, 7.9], fx:["4,9 ★ · 40","763 · 211"], url:"https://mike-dance.de/"}
+      {name:"Mike Dance", sc:[0, 6, 9, 20.2, 6.7, 7.9], fx:["4,9 ★ · 40","763 · 211"], url:"https://mike-dance.de/"},
+      {name:"Salsa Tanzen Munich", st:["Sensual"], sc:[0, 10, 5, 18.5, 6.0, 6.9], fx:["4,9 ★ · 27","761 · 61"], url:"https://salsatanzenmunich.com/"},
+      {name:"Casa Ritmo Dance Academy", st:["Sensual"], sc:[0, 8, 8, 17.5, 4.9, 5.8], fx:["5,0 ★ · 14","436 · 20"], url:"https://casaritmo.de/"},
+      {name:"Dance Munich", sc:[0, 8, 3, 0, 0, 0], fx:["–","–"], url:"https://dancemunich.de/"},
+      {name:"KULT Tanzschule", sc:[0, 10, 7, 18.8, 8.9, 9.8], fx:["4,7 ★ · 139","5.176 · 906"], url:"https://www.kult-tanzschule.de/"},
+      {name:"Tanzhaus Emotion", st:["Sensual"], sc:[10, 8, 6, 21.9, 9.2, 7.5], fx:["4,9 ★ · 158","959 · 128"], url:"https://www.tanzhausemotion.de/"}
     ],
     hamburg: [
       {name:"A Bailar Hamburg", st:["Dominicana"], sc:[0, 10, 9, 18.4, 7.9, 9.3], fx:["4,7 ★ · 77","4.363 · 532"], url:"https://www.abailar-hamburg.de/"},
@@ -1013,7 +1025,10 @@ rank_js = r'''
       {name:"Bachata Hamburg", st:["Sensual"], sc:[0, 10, 6, 19.7, 6.2, 8.7], fx:["5,0 ★ · 30","2.566 · 259"], url:"https://www.bachata-hamburg.de/"},
       {name:"BachataSalsaHamburg", sc:[0, 10, 0, 19.6, 6.1, 9.6], fx:["5,0 ★ · 29","11.000 · 316"], url:"https://www.bachatasalsahamburg.de/"},
       {name:"BellasArtes Latin DanceSchool", sc:[0, 8, 3, 21.6, 7.7, 5.0], fx:["4,9 ★ · 72","344 · 9"], url:"https://salsahamburg.info/"},
-      {name:"Mi Pasión Dance School", sc:[0, 3, 9, 22.2, 7.9, 9.6], fx:["5,0 ★ · 80","4.592 · 1.209"], url:"http://mipasiondanceschool.com/"}
+      {name:"Mi Pasión Dance School", sc:[0, 3, 9, 22.2, 7.9, 9.6], fx:["5,0 ★ · 80","4.592 · 1.209"], url:"http://mipasiondanceschool.com/"},
+      {name:"AH-DanceCompany", st:["Sensual"], sc:[0, 10, 3, 20.1, 6.5, 8.2], fx:["5,0 ★ · 35","1.435 · 272"], url:"https://ahdancecompany.de/"},
+      {name:"Hamburg Dance Academy", sc:[10, 10, 9, 22.4, 10, 7.6], fx:["4,9 ★ · 254","609 · 257"], url:"https://hamburg-dance-academy.de/"},
+      {name:"Tanzschule die2", sc:[10, 8, 6, 21.6, 8.8, 7.3], fx:["4,9 ★ · 128","1.054 · 82"], url:"https://tanzschuledie2.de/"}
     ],
     koeln: [
       {name:"La Danza Tanzzentrum", st:["Sensual","Dominicana"], sc:[0, 5, 5, 15.1, 8.1, 9.9], fx:["4,4 ★ · 87","7.376 · 980"], url:"https://la-danza.de/"},
@@ -1035,13 +1050,17 @@ rank_js = r'''
       {name:"Salsa Auténtica", sc:[7, 5, 5, 22.1, 8.1, 8.0], fx:["4,9 ★ · 90","1.726 · 142"], url:"http://www.salsa-autentica.de/"},
       {name:"Tanzschule Conexión", sc:[0, 5, 9, 21.4, 9.4, 0], fx:["4,5 ★ · 188","–"], url:"http://www.conexion.de/"},
       {name:"Momento Cubano", sc:[10, 10, 2, 19.8, 6.2, 0], fx:["5,0 ★ · 31","–"], url:"https://momentocubano.com/"},
-      {name:"DNA Dance Studios", sc:[0, 10, 4, 22.4, 8.1, 9.1], fx:["5,0 ★ · 87","3.379 · 346"], url:"https://www.dna-dance.com/"}
+      {name:"DNA Dance Studios", sc:[0, 10, 4, 22.4, 8.1, 9.1], fx:["5,0 ★ · 87","3.379 · 346"], url:"https://www.dna-dance.com/"},
+      {name:"Tanzschule Monika Bauer", sc:[8, 7, 8, 17.3, 8.8, 8.4], fx:["4,6 ★ · 126","1.694 · 307"], url:"https://www.monika-bauer.de/"},
+      {name:"Tanzstudio Andres", sc:[0, 5, 0, 19.0, 5.8, 0], fx:["5,0 ★ · 24","–"], url:"https://tanzmitandres.de/"}
     ],
     duesseldorf: [
       {name:"La Cati Dance", sc:[0, 5, 5, 23.5, 9.3, 8.9], fx:["5,0 ★ · 165","1.843 · 1.073"], url:"https://www.lacatidance.de/"},
       {name:"Anima Dance Community", sc:[0, 10, 5, 18.4, 6.6, 7.7], fx:["4,8 ★ · 38","2.420 · 38"], url:"https://anima-dance.de/"},
       {name:"Salsa 'n' Fun", sc:[0, 10, 8, 19.8, 8.0, 8.2], fx:["4,8 ★ · 84","1.935 · 195"], url:"http://www.salsanfun.de/"},
-      {name:"Salsa-Teaching", sc:[0, 7, 3, 19.9, 6.5, 6.8], fx:["4,9 ★ · 35","1.192 · 42"], url:"http://www.salsa-teaching.de/"}
+      {name:"Salsa-Teaching", sc:[0, 7, 3, 19.9, 6.5, 6.8], fx:["4,9 ★ · 35","1.192 · 42"], url:"http://www.salsa-teaching.de/"},
+      {name:"Salsa Cubana Düsseldorf", sc:[0, 8, 6, 17.0, 5.0, 7.4], fx:["4,9 ★ · 15","1.368 · 70"], url:"https://www.salsa-cubana-duesseldorf.de/"},
+      {name:"Salsa Flow", sc:[0, 8, 8, 17.7, 5.0, 7.7], fx:["5,0 ★ · 15","567 · 338"], url:"https://salsa-flow.de/"}
     ]
   };
   var VOTE_ENDPOINT = "https://script.google.com/macros/s/AKfycbzAANOuM7cA3QgqeXZXOKZEYumNFsENBZaIicJSaJluR90rTl2iw30Sk522vxIurDsg/exec";
