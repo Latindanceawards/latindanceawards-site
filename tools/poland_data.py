@@ -6,6 +6,8 @@ CITIES = {
  'poznan': ('Poznań', 'Poznań', 'Poznaniu'), 'gdansk': ('Gdańsk', 'Gdańsk', 'Gdańsku'), 'lodz': ('Łódź', 'Łódź', 'Łodzi'), 'katowice': ('Katowice', 'Katowice', 'Katowicach'),
  'gdynia': ('Gdynia', 'Gdynia', 'Gdyni'), 'bydgoszcz': ('Bydgoszcz', 'Bydgoszcz', 'Bydgoszczy'), 'lublin': ('Lublin', 'Lublin', 'Lublinie'),
  'szczecin': ('Szczecin', 'Szczecin', 'Szczecinie'), 'bialystok': ('Białystok', 'Białystok', 'Białymstoku'),
+ 'czestochowa': ('Częstochowa', 'Częstochowa', 'Częstochowie'), 'torun': ('Toruń', 'Toruń', 'Toruniu'), 'kielce': ('Kielce', 'Kielce', 'Kielcach'),
+ 'rzeszow': ('Rzeszów', 'Rzeszów', 'Rzeszowie'), 'radom': ('Radom', 'Radom', 'Radomiu'), 'olsztyn': ('Olsztyn', 'Olsztyn', 'Olsztynie'),
 }
 # (name, city, rating, reviews, website)
 SCHOOLS = [
@@ -54,6 +56,17 @@ SCHOOLS = [
  ('All About Dance Studio', 'szczecin', 5.0, 227, 'https://allabout-dance.pl'),
  ('Latin Studio', 'bialystok', 4.9, 118, 'https://latinstudio.pl'),
  ('Fabryka Tańca', 'bialystok', 4.9, 128, 'https://fabrykatanca.pl'),
+ ('Snake Dance', 'czestochowa', 4.8, 103, 'https://www.snake-dance.pl'),
+ ('CZĘSTOTAŃCZ', 'czestochowa', 5.0, 103, 'https://czestotancz.pl'),
+ ('Studio Tańca Fantom', 'torun', 4.8, 103, 'https://fantom.torun.pl'),
+ ('Jagielski Dance Project', 'torun', 4.6, 183, 'https://dancepro.pl'),
+ ('Candela Studio Tańca', 'kielce', 4.8, 113, 'https://candelakielce.pl'),
+ ('Karrie & Kamil', 'rzeszow', 5.0, 39, 'https://karriekamil.com'),
+ ('LEMON Salsa', 'rzeszow', 4.9, 91, 'https://www.google.com/maps/search/LEMON+Salsa+Rzeszów'),
+ ('Shantel Szkoła Tańca', 'rzeszow', 4.9, 147, 'https://www.google.com/maps/search/Shantel+Szkoła+Tańca+Rzeszów'),
+ ('Studio Tańca Rejdance', 'radom', 4.9, 111, 'https://strejdance.pl'),
+ ('Rockstep', 'radom', 4.6, 89, 'https://www.rockstep.pl'),
+ ('Przemienieccy', 'olsztyn', 4.6, 47, 'https://przemienieccy.pl'),
 ]
 import math
 def pts(r, v):
