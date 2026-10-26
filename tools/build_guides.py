@@ -385,14 +385,36 @@ fest_cards = [
   'en': '<strong>May 21 to 23, 2027.</strong> Bachata event in Stuttgart, listed on Salsa Vida.'},
 ]
 
+fest_extra = {
+ 'dortmund': {'name': 'La Klave Festival, Dortmund', 'url': 'https://www.salsavida.com/event/germany/dortmund/la-klave-festival/', 'de': '<strong>13. bis 15. November 2026.</strong> Latin-Festival in Dortmund. Der Stil-Schwerpunkt steht in der Veranstaltungsliste nicht, prüfe das Programm auf Bachata-Workshops.', 'en': '<strong>November 13 to 15, 2026.</strong> Latin festival in Dortmund. The listing does not state the style focus, so check the programme for Bachata workshops.'},
+ 'hannover': {'name': 'Creme de la Creme Deluxe Edition, Hannover', 'url': 'https://www.salsavida.com/event/germany/lower-saxony/hannover/creme-de-la-creme-deluxe-edition/', 'de': '<strong>20. bis 22. November 2026.</strong> Latin-Tanzevent in Hannover. Prüfe im Programm, welche Bachata-Angebote dabei sind.', 'en': '<strong>November 20 to 22, 2026.</strong> Latin dance event in Hannover. Check the programme for the Bachata offering.'},
+ 'stuttgart_dec': {'name': 'Latin Festival Stuttgart', 'url': 'https://www.salsavida.com/event/germany/stuttgart/latin-festival-stuttgart/', 'de': '<strong>3. bis 7. Dezember 2026.</strong> Fünftägiges Latin-Festival in Stuttgart.', 'en': '<strong>December 3 to 7, 2026.</strong> Five-day Latin festival in Stuttgart.'},
+ 'dus': {'name': 'Confuego Xmas Gala, Düsseldorf', 'url': 'https://www.salsavida.com/event/germany/dusseldorf/confuego-xmas-gala-2025/', 'de': '<strong>11. bis 13. Dezember 2026.</strong> Latin-Weihnachtsgala in Düsseldorf. Der Stil-Schwerpunkt ist in der Liste nicht angegeben.', 'en': '<strong>December 11 to 13, 2026.</strong> Latin Christmas gala in Düsseldorf. The listing does not state the style focus.'},
+ 'wue': {'name': 'Latin Festival Würzburg', 'url': 'https://www.salsavida.com/event/germany/wurzburg/latin-festival-wurzburg/', 'de': '<strong>22. bis 24. Januar 2027.</strong> Latin-Festival in Würzburg.', 'en': '<strong>January 22 to 24, 2027.</strong> Latin festival in Würzburg.'},
+ 'rust': {'name': 'Euro Dance Festival, Rust (Europa-Park)', 'url': 'https://www.salsavida.com/event/germany/rust/euro-dance-festival-rust-edition/', 'de': '<strong>9. bis 14. Februar 2027.</strong> Mehrtägiges Tanzfestival in Rust bei Freiburg.', 'en': '<strong>February 9 to 14, 2027.</strong> Multi-day dance festival in Rust near Freiburg.'},
+ 'boe': {'name': 'BachaKizz Sensation, Böblingen', 'url': 'https://www.bachamap.com/festivals/germany/bachakizz-sensation-2027-all-in-one-bachata-kizomba-festival-d24751b3', 'de': '<strong>17. bis 21. Februar 2027.</strong> All-in-one-Festival für Bachata und Kizomba in Böblingen bei Stuttgart.', 'en': '<strong>February 17 to 21, 2027.</strong> All-in-one festival for Bachata and Kizomba in Böblingen near Stuttgart.'},
+ 'ham': {'name': 'BIG3 Festival, Hamburg', 'url': 'https://www.salsavida.com/event/germany/hamburg/big3-festival-hamburg/', 'de': '<strong>19. bis 21. Februar 2027.</strong> Latin-Festival in Hamburg.', 'en': '<strong>February 19 to 21, 2027.</strong> Latin festival in Hamburg.'},
+ 'bsf': {'name': 'Berlin Salsa Festival „Fiesta Elegante“', 'url': 'https://www.salsavida.com/event/germany/berlin/berlin-salsa-festival/', 'de': '<strong>2. bis 5. April 2027.</strong> Salsa-Festival in Berlin. Bachata gehört bei vielen Berliner Festivals zum Rahmenprogramm, prüfe das Programm.', 'en': '<strong>April 2 to 5, 2027.</strong> Salsa festival in Berlin. Bachata is part of the programme at many Berlin festivals, so check the programme.'},
+ 'xpl': {'name': 'Xplosion Ritmo Berlin Festival', 'url': 'https://www.salsavida.com/event/germany/berlin/xplosion-ritmo-berlin-festival/', 'de': '<strong>13. bis 16. Mai 2027</strong> laut Salsa Vida (andere Listen nennen den 14. bis 16. Mai). Festival in Berlin, 5. Jubiläum.', 'en': '<strong>May 13 to 16, 2027</strong> according to Salsa Vida (other listings give May 14 to 16). Festival in Berlin, 5th anniversary.'},
+ 'trier': {'name': 'Trier Old Town Festival', 'url': 'https://www.salsavida.com/event/germany/trier/trier-old-town-festival/', 'de': '<strong>25. bis 27. Juni 2027.</strong> Tanzfestival in der Trierer Altstadt.', 'en': "<strong>June 25 to 27, 2027.</strong> Dance festival in Trier's old town."},
+ 'frb': {'name': 'Euro Dance Festival, Freiburg', 'url': 'https://www.salsavida.com/event/germany/freiburg/euro-dance-festival-freiburg-edition/', 'de': '<strong>29. Juli bis 1. August 2027.</strong> Sommer-Ausgabe des Euro Dance Festivals in Freiburg.', 'en': '<strong>July 29 to August 1, 2027.</strong> Summer edition of the Euro Dance Festival in Freiburg.'},
+}
+_order = ['The Bachata Flow', 'Conexión', 'dortmund', 'hannover', 'Frankfurt Bachata Festival', 'stuttgart_dec', 'Bachata Zouk', 'dus', 'wue', 'rust', 'boe', 'ham', 'Bachatation', 'bsf', 'Bachata Festival Germany', 'Pure', 'Salsa-Bachata', 'xpl', 'DJ Got', 'trier', 'frb']
+_base = list(fest_cards)
+fest_cards = []
+for _k in _order:
+    if _k in fest_extra: fest_cards.append(fest_extra[_k])
+    else: fest_cards.append(next(c for c in _base if c["name"].startswith(_k)))
+assert len(fest_cards) == 20
+
 fest_sections = [
  ('Bachata-Festivals in Deutschland: Was dich erwartet', 'Bachata festivals in Germany: what to expect', [
    ('p', 'Ein Bachata-Festival ist ein Wochenende, an dem sich die Szene trifft: Workshops tagsüber, Partys am Abend und internationale Tänzer und DJs. Für Einsteiger ist es die beste Gelegenheit, in kurzer Zeit viele Stile zu sehen und neue Leute kennenzulernen. Fortgeschrittene nutzen die Workshops, um bei Trainern zu lernen, die sonst nicht in der eigenen Stadt unterrichten.',
          'A Bachata festival is a weekend where the scene comes together: workshops during the day, parties in the evening, and international dancers and DJs. For beginners it is the best chance to see many styles in a short time and meet new people. Advanced dancers use the workshops to learn from trainers who do not usually teach in their own city.'),
    ('p', 'Die meisten Festivals mischen mehrere Elemente. Das Bachatation Festival in Karlsruhe nennt auf seiner Website zum Beispiel mehr als 40 Stunden Workshops auf verschiedenen Levels, vier Partys, Tages-Socials und einen Jack-&-Jill-Wettbewerb. Ein Jack & Jill ist ein Wettbewerb, bei dem die Paare ausgelost werden.',
          'Most festivals mix several elements. The Bachatation Festival in Karlsruhe, for example, lists on its website more than 40 hours of workshops at different levels, four parties, day socials and a Jack &amp; Jill competition. A Jack &amp; Jill is a competition in which the partners are drawn at random.'),
-   ('p', 'Auf dieser Seite sammeln wir die kommenden Bachata-Festivals in Deutschland nach Datum. Die Angaben stammen von den Websites der Veranstalter und aus der Veranstaltungsliste von Salsa Vida. Termine und Programm können sich ändern, prüfe sie deshalb immer beim Veranstalter, bevor du buchst.',
-         'On this page we collect the upcoming Bachata festivals in Germany by date. The details come from the organisers\' websites and from the Salsa Vida event listing. Dates and programmes can change, so always check with the organiser before you book.'),
+   ('p', 'Auf dieser Seite sammeln wir die kommenden Bachata- und Latin-Festivals in Deutschland nach Datum. Reine Salsa-Kongresse lassen wir weg, bei gemischten Latin-Festivals steht dabei, wenn der Bachata-Anteil nicht bekannt ist. Die Angaben stammen von den Websites der Veranstalter und aus der Veranstaltungsliste von Salsa Vida. Termine und Programm können sich ändern, prüfe sie deshalb immer beim Veranstalter, bevor du buchst.',
+         'On this page we collect the upcoming Bachata and Latin festivals in Germany by date. Pure salsa congresses are left out, and for mixed Latin festivals we note when the Bachata share is not known. The details come from the organisers\' websites and from the Salsa Vida event listing. Dates and programmes can change, so always check with the organiser before you book.'),
  ]),
  ('Kommende Bachata-Festivals 2026 und 2027 nach Datum', 'Upcoming Bachata festivals in 2026 and 2027 by date', [
    ('p', 'Die Reihenfolge ist chronologisch und keine Wertung. Die Links führen zur Eventseite oder zur Website des Veranstalters.',
@@ -429,8 +451,8 @@ fest_sections = [
 ]
 fest_faq = [
  ('Welche Bachata-Festivals gibt es in Deutschland 2026 und 2027?', 'Which Bachata festivals are there in Germany in 2026 and 2027?',
-  'Auf dieser Seite findest du Festivals in Frankfurt, Freiburg, Karlsruhe, Stuttgart, Köln und Augsburg, sortiert nach Datum. Das nächste ist The Bachata Flow Generation in Frankfurt vom 30. Oktober bis 1. November 2026.',
-  'This page lists festivals in Frankfurt, Freiburg, Karlsruhe, Stuttgart, Cologne and Augsburg, sorted by date. The next one is The Bachata Flow Generation in Frankfurt from October 30 to November 1, 2026.'),
+  'Auf dieser Seite findest du 20 Festivals, unter anderem in Frankfurt, Stuttgart, Berlin, Hamburg, Köln, Freiburg und Karlsruhe, sortiert nach Datum. Das nächste ist The Bachata Flow Generation in Frankfurt vom 30. Oktober bis 1. November 2026.',
+  'This page lists 20 festivals, including Frankfurt, Stuttgart, Berlin, Hamburg, Cologne, Freiburg and Karlsruhe, sorted by date. The next one is The Bachata Flow Generation in Frankfurt from October 30 to November 1, 2026.'),
  ('Wann ist das Bachatation Festival?', 'When is the Bachatation Festival?',
   'Die Website nennt für die Ausgabe 2027 den Zeitraum 25. bis 28. Februar in Karlsruhe bei Son Latino Studios. Das Workshop-Programm war zuletzt noch nicht veröffentlicht.',
   'For the 2027 edition the website gives February 25 to 28 in Karlsruhe at Son Latino Studios. The workshop programme had not been published at the last check.'),
@@ -453,5 +475,5 @@ guide_page('bachata-festivals-deutschland', 'bf',
   ('Bachata Festival Deutschland: <em class="foil">Termine</em> 2026/2027', 'Bachata festivals in Germany: <em class="foil">dates</em> 2026/2027'),
   ('Alle kommenden Bachata-Festivals in Deutschland nach Datum, mit Ort, Programm und Link. Dazu Tipps, welches Festival zu dir passt, und die Möglichkeit für Veranstalter, ihr Festival einzutragen.',
    'All upcoming Bachata festivals in Germany by date, with place, programme and link. Plus tips on which festival suits you, and a way for organisers to list their festival.'),
-  [('cal', '<b>9 Festivals</b> bis Mai 2027', '<b>9 festivals</b> until May 2027'), ('free', 'Eintrag <b>kostenlos</b>', 'Listing <b>free</b>'), ('check', 'Termine <b>vom Veranstalter prüfen</b>', 'Check dates <b>with the organiser</b>')],
+  [('cal', '<b>20 Festivals</b> bis August 2027', '<b>20 festivals</b> until August 2027'), ('free', 'Eintrag <b>kostenlos</b>', 'Listing <b>free</b>'), ('check', 'Termine <b>vom Veranstalter prüfen</b>', 'Check dates <b>with the organiser</b>')],
   fest_sections, fest_faq, sibling_group='topic')
