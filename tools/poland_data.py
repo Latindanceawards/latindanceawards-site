@@ -8,6 +8,7 @@ CITIES = {
  'szczecin': ('Szczecin', 'Szczecin', 'Szczecinie'), 'bialystok': ('Białystok', 'Białystok', 'Białymstoku'),
  'czestochowa': ('Częstochowa', 'Częstochowa', 'Częstochowie'), 'torun': ('Toruń', 'Toruń', 'Toruniu'), 'kielce': ('Kielce', 'Kielce', 'Kielcach'),
  'rzeszow': ('Rzeszów', 'Rzeszów', 'Rzeszowie'), 'radom': ('Radom', 'Radom', 'Radomiu'), 'olsztyn': ('Olsztyn', 'Olsztyn', 'Olsztynie'),
+ 'opole': ('Opole', 'Opole', 'Opolu'), 'bielsko-biala': ('Bielsko-Biała', 'Bielsko-Biała', 'Bielsku-Białej'),
 }
 # (name, city, rating, reviews, website)
 SCHOOLS = [
@@ -67,6 +68,13 @@ SCHOOLS = [
  ('Studio Tańca Rejdance', 'radom', 4.9, 111, 'https://strejdance.pl'),
  ('Rockstep', 'radom', 4.6, 89, 'https://www.rockstep.pl'),
  ('Przemienieccy', 'olsztyn', 4.6, 47, 'https://przemienieccy.pl'),
+ ('Salsa Fuerte', 'opole', 5.0, 125, 'https://salsafuerte.pl'),
+ ('Royal Dance Center', 'opole', 4.5, 37, 'https://www.royaldance.pl'),
+ ('Szkoła Tańca Libere', 'bielsko-biala', 4.9, 143, 'https://www.taniec-bielsko.pl'),
+ ('AllDance', 'bielsko-biala', 4.9, 128, 'https://alldance.pl'),
+ ('DANCE#LOVEit & Corazon', 'bielsko-biala', 5.0, 84, 'https://danceloveit.pl'),
+ ('Salsa Bielsko', 'bielsko-biala', 5.0, 30, 'https://www.salsa.bielsko.pl'),
+ ('Szkoła Tańca Cubana', 'bielsko-biala', 4.8, 80, 'https://www.cubana.bielsko.pl'),
 ]
 import math
 def pts(r, v):
