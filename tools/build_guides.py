@@ -350,3 +350,108 @@ city_guide('bachata-muenchen', 'bm', 'München', 'Munich', 'muenchen',
     'At Dance MUNICH new participants first take a level check, which places you in the right class. Check directly with the academy whether trial classes are offered.'),
    ('Akademien wie Dance MUNICH und Salsea nennen Social Trainings und Partys auf ihren Seiten. Frag im Kurs nach den nächsten Terminen.',
     'Academies like Dance MUNICH and Salsea list social trainings and parties on their pages. Ask in class about the next dates.')])
+
+# ======================================================================
+# BACHATA FESTIVALS DEUTSCHLAND (keyword page + festival listing)
+# ======================================================================
+FV = 'https://www.salsavida.com/event/germany/'
+fest_cards = [
+ {'name': 'The Bachata Flow Generation, Frankfurt', 'url': FV + 'frankfurt/the-bachata-flow-generation-frankfurt/',
+  'de': '<strong>30. Oktober bis 1. November 2026.</strong> Bachata-Festival in Frankfurt laut Veranstaltungsliste von Salsa Vida.',
+  'en': '<strong>October 30 to November 1, 2026.</strong> Bachata festival in Frankfurt according to the Salsa Vida event listing.'},
+ {'name': 'Conexión Gran Bachata Latin Festival, Frankfurt', 'url': FV + 'frankfurt/conexion-gran-bachata-latin-festival/',
+  'de': '<strong>6. bis 8. November 2026.</strong> Bachata- und Latin-Festival in Frankfurt, gelistet bei Salsa Vida.',
+  'en': '<strong>November 6 to 8, 2026.</strong> Bachata and Latin festival in Frankfurt, listed on Salsa Vida.'},
+ {'name': 'Frankfurt Bachata Festival', 'url': FV + 'frankfurt/frankfurt-bachata-festival/',
+  'de': '<strong>26. bis 29. November 2026.</strong> Viertägiges Bachata-Festival in Frankfurt laut Veranstaltungsliste.',
+  'en': '<strong>November 26 to 29, 2026.</strong> Four-day Bachata festival in Frankfurt according to the event listing.'},
+ {'name': 'Bachata Zouk Royals Congress (5. Ausgabe), Freiburg', 'url': FV + 'freiburg/bachata-zouk-royals-congress-fifth-edition/',
+  'de': '<strong>11. bis 13. Dezember 2026.</strong> Kongress in Freiburg, der neben Bachata auch Zouk umfasst. Fünfte Ausgabe.',
+  'en': '<strong>December 11 to 13, 2026.</strong> Congress in Freiburg that covers Zouk as well as Bachata. Fifth edition.'},
+ {'name': 'Bachatation Festival, Karlsruhe', 'url': 'https://www.bachatation.de/',
+  'de': '<strong>25. bis 28. Februar 2027</strong> bei Son Latino Studios. Laut Veranstalter über 40 Stunden Workshops mit internationalen Trainern, vier Partys (Neon, Pink, Gala in Schwarz-Weiß, Casual), Tages-Socials und ein Jack-&-Jill-Wettbewerb.',
+  'en': '<strong>February 25 to 28, 2027</strong> at Son Latino Studios. According to the organiser, more than 40 hours of workshops with international trainers, four parties (Neon, Pink, black-and-white Gala, Casual), day socials and a Jack &amp; Jill competition.'},
+ {'name': 'Bachata Festival Germany, Stuttgart', 'url': FV + 'stuttgart/bachata-festival-stuttgart/',
+  'de': '<strong>7. bis 11. April 2027.</strong> Mehrtägiges Bachata-Festival in Stuttgart, gelistet bei Salsa Vida.',
+  'en': '<strong>April 7 to 11, 2027.</strong> Multi-day Bachata festival in Stuttgart, listed on Salsa Vida.'},
+ {'name': 'Pure Bachata Summer Festival, Köln', 'url': FV + 'cologne/pure-bachata-festival/',
+  'de': '<strong>30. April bis 2. Mai 2027.</strong> Bachata-Festival in Köln laut Veranstaltungsliste.',
+  'en': '<strong>April 30 to May 2, 2027.</strong> Bachata festival in Cologne according to the event listing.'},
+ {'name': 'Salsa-Bachata-Kizomba Festival, Augsburg', 'url': FV + 'augsburg/salsafestival-augsburg/',
+  'de': '<strong>30. April bis 2. Mai 2027.</strong> Festival in Augsburg mit Salsa, Bachata und Kizomba.',
+  'en': '<strong>April 30 to May 2, 2027.</strong> Festival in Augsburg with Salsa, Bachata and Kizomba.'},
+ {'name': 'DJ Got Us Fallin in Love Bachata, Stuttgart', 'url': FV + 'stuttgart/dj-got-us-fallin-in-love-bachata/',
+  'de': '<strong>21. bis 23. Mai 2027.</strong> Bachata-Event in Stuttgart, gelistet bei Salsa Vida.',
+  'en': '<strong>May 21 to 23, 2027.</strong> Bachata event in Stuttgart, listed on Salsa Vida.'},
+]
+
+fest_sections = [
+ ('Bachata-Festivals in Deutschland: Was dich erwartet', 'Bachata festivals in Germany: what to expect', [
+   ('p', 'Ein Bachata-Festival ist ein Wochenende, an dem sich die Szene trifft: Workshops tagsüber, Partys am Abend und internationale Tänzer und DJs. Für Einsteiger ist es die beste Gelegenheit, in kurzer Zeit viele Stile zu sehen und neue Leute kennenzulernen. Fortgeschrittene nutzen die Workshops, um bei Trainern zu lernen, die sonst nicht in der eigenen Stadt unterrichten.',
+         'A Bachata festival is a weekend where the scene comes together: workshops during the day, parties in the evening, and international dancers and DJs. For beginners it is the best chance to see many styles in a short time and meet new people. Advanced dancers use the workshops to learn from trainers who do not usually teach in their own city.'),
+   ('p', 'Die meisten Festivals mischen mehrere Elemente. Das Bachatation Festival in Karlsruhe nennt auf seiner Website zum Beispiel mehr als 40 Stunden Workshops auf verschiedenen Levels, vier Partys, Tages-Socials und einen Jack-&-Jill-Wettbewerb. Ein Jack & Jill ist ein Wettbewerb, bei dem die Paare ausgelost werden.',
+         'Most festivals mix several elements. The Bachatation Festival in Karlsruhe, for example, lists on its website more than 40 hours of workshops at different levels, four parties, day socials and a Jack &amp; Jill competition. A Jack &amp; Jill is a competition in which the partners are drawn at random.'),
+   ('p', 'Auf dieser Seite sammeln wir die kommenden Bachata-Festivals in Deutschland nach Datum. Die Angaben stammen von den Websites der Veranstalter und aus der Veranstaltungsliste von Salsa Vida. Termine und Programm können sich ändern, prüfe sie deshalb immer beim Veranstalter, bevor du buchst.',
+         'On this page we collect the upcoming Bachata festivals in Germany by date. The details come from the organisers\' websites and from the Salsa Vida event listing. Dates and programmes can change, so always check with the organiser before you book.'),
+ ]),
+ ('Kommende Bachata-Festivals 2026 und 2027 nach Datum', 'Upcoming Bachata festivals in 2026 and 2027 by date', [
+   ('p', 'Die Reihenfolge ist chronologisch und keine Wertung. Die Links führen zur Eventseite oder zur Website des Veranstalters.',
+         'The order is chronological and not a rating. The links lead to the event page or the organiser\'s website.'),
+   ('cards', fest_cards),
+   ('p', 'Dein Festival fehlt? Schreib uns an <a href="mailto:hello@latindanceawards.com?subject=Festival%20eintragen">hello@latindanceawards.com</a> mit Name, Ort, Datum und Link. Der Standardeintrag ist kostenlos.',
+         'Is your festival missing? Email us at <a href="mailto:hello@latindanceawards.com?subject=List%20my%20festival">hello@latindanceawards.com</a> with the name, place, date and link. The standard listing is free.'),
+ ]),
+ ('Welches Bachata-Festival passt zu dir?', 'Which Bachata festival suits you?', [
+   ('p', 'Die Festivals unterscheiden sich in Größe, Stil und Niveau. Diese Fragen helfen bei der Auswahl:', 'Festivals differ in size, style and level. These questions help you choose:'),
+   ('ul', [
+     ('<strong>Level:</strong> Schau, ob es Workshops für dein Niveau gibt. Viele Festivals trennen Einsteiger, Mittelstufe und Fortgeschrittene.', '<strong>Level:</strong> check whether there are workshops for your level. Many festivals separate beginners, intermediate and advanced.'),
+     ('<strong>Stil:</strong> Manche setzen auf Sensual, andere auf Dominicana oder mischen Bachata mit Salsa, Kizomba oder Zouk. Das Programm zeigt den Schwerpunkt.', '<strong>Style:</strong> some focus on Sensual, others on Dominicana or mix Bachata with Salsa, Kizomba or Zouk. The programme shows the focus.'),
+     ('<strong>Dauer und Preis:</strong> Ein Fullpass gilt für alle Workshops und Partys, ein Partypass nur für die Abende. Vergleiche die Pakete auf der Website des Veranstalters.', '<strong>Length and price:</strong> a full pass covers all workshops and parties, a party pass only the evenings. Compare the packages on the organiser\'s website.'),
+     ('<strong>Anreise:</strong> Frankfurt, Stuttgart und Köln liegen gut im Netz. Plane Hotel und Zug früh, weil die Preise am Festivalwochenende steigen.', '<strong>Travel:</strong> Frankfurt, Stuttgart and Cologne are well connected. Plan the hotel and train early, as prices rise on festival weekends.'),
+   ]),
+   ('p', 'Tipp für das erste Festival: Komm mit etwas Grundlagenwissen, besuche zuerst die Einsteiger-Workshops und geh abends auf die Partys. Dort lernst du am meisten.',
+         'Tip for your first festival: arrive with some basics, start with the beginner workshops and go to the parties in the evening. That is where you learn the most.'),
+ ]),
+ ('Für Veranstalter: Festival eintragen und hervorheben', 'For organisers: list and promote your festival', [
+   ('p', 'Du organisierst ein Bachata-Festival, einen Kongress oder ein Wochenende mit Workshops in Deutschland? Dann trag es hier ein, damit Tänzer es finden.',
+         'Do you organise a Bachata festival, a congress or a workshop weekend in Germany? List it here so dancers can find it.'),
+   ('ul', [
+     ('<strong>Standardeintrag, kostenlos:</strong> Name, Ort, Datum und Link in der Liste oben.', '<strong>Standard listing, free:</strong> name, place, date and link in the list above.'),
+     ('<strong>Hervorgehobener Eintrag, 29 € pro Festival:</strong> Platz am Anfang der Liste, farbige Hervorhebung mit Hinweis „Anzeige“, Logo, Kurztext und Ticketlink. Gilt bis zum Festivaltermin.', '<strong>Featured listing, €29 per festival:</strong> a place at the top of the list, colour highlight marked "Anzeige" (advertisement), logo, short text and ticket link. Runs until the festival date.'),
+   ]),
+   ('p', 'Bezahlte Einträge sind als Anzeige gekennzeichnet und haben keinen Einfluss auf das Ranking der Schulen. Anfragen an <a href="mailto:hello@latindanceawards.com?subject=Hervorgehobener%20Festival-Eintrag">hello@latindanceawards.com</a>.',
+         'Paid listings are marked as advertisements and have no influence on the school ranking. Enquiries to <a href="mailto:hello@latindanceawards.com?subject=Featured%20festival%20listing">hello@latindanceawards.com</a>.'),
+ ]),
+ ('Festivals und das Ranking der Bachata-Schulen', 'Festivals and the Bachata school ranking', [
+   ('p', 'Auftritte der Lehrer auf Festivals und Kongressen zählen beim Ranking der Bachata-Schulen mit: Für dieses Kriterium vergeben wir bis zu 15 von 100 Punkten. Schulen, deren Lehrer 2025 oder 2026 auf Festivals unterrichtet haben, können das bei der <a href="bewerbung.html">kostenlosen Bewerbung</a> angeben. Das Ranking erscheint am <strong>20. Dezember 2026</strong> auf der <a href="rankings.html">Ranking-Seite</a>.',
+         'Teachers\' appearances at festivals and congresses count towards the Bachata school ranking: for this factor we award up to 15 of 100 points. Schools whose teachers taught at festivals in 2025 or 2026 can state this in the <a href="bewerbung.html">free application</a>. The ranking is published on <strong>December 20, 2026</strong> on the <a href="rankings.html">ranking page</a>.'),
+ ]),
+]
+fest_faq = [
+ ('Welche Bachata-Festivals gibt es in Deutschland 2026 und 2027?', 'Which Bachata festivals are there in Germany in 2026 and 2027?',
+  'Auf dieser Seite findest du Festivals in Frankfurt, Freiburg, Karlsruhe, Stuttgart, Köln und Augsburg, sortiert nach Datum. Das nächste ist The Bachata Flow Generation in Frankfurt vom 30. Oktober bis 1. November 2026.',
+  'This page lists festivals in Frankfurt, Freiburg, Karlsruhe, Stuttgart, Cologne and Augsburg, sorted by date. The next one is The Bachata Flow Generation in Frankfurt from October 30 to November 1, 2026.'),
+ ('Wann ist das Bachatation Festival?', 'When is the Bachatation Festival?',
+  'Die Website nennt für die Ausgabe 2027 den Zeitraum 25. bis 28. Februar in Karlsruhe bei Son Latino Studios. Das Workshop-Programm war zuletzt noch nicht veröffentlicht.',
+  'For the 2027 edition the website gives February 25 to 28 in Karlsruhe at Son Latino Studios. The workshop programme had not been published at the last check.'),
+ ('Brauche ich Erfahrung für ein Bachata-Festival?', 'Do I need experience for a Bachata festival?',
+  'Nein. Viele Festivals bieten Workshops für Einsteiger an, und die Partys stehen allen offen. Prüfe im Programm, ob dein Level dabei ist.',
+  'No. Many festivals offer beginner workshops, and the parties are open to everyone. Check the programme to see whether your level is included.'),
+ ('Wie kann ich mein Festival eintragen?', 'How can I list my festival?',
+  'Schreib an hello@latindanceawards.com mit Name, Ort, Datum und Link. Der Standardeintrag ist kostenlos, ein hervorgehobener Eintrag kostet 29 Euro und ist als Anzeige gekennzeichnet.',
+  'Email hello@latindanceawards.com with the name, place, date and link. The standard listing is free, a featured listing costs €29 and is marked as an advertisement.'),
+ ('Können Festivals das Ranking der Schulen beeinflussen?', 'Can festivals influence the school ranking?',
+  'Nein, Plätze sind nicht käuflich. Festival-Auftritte der Lehrer zählen als ein Kriterium von neun, bezahlte Festival-Einträge haben keinen Einfluss.',
+  'No, places cannot be bought. Teachers\' festival appearances are one factor of nine, and paid festival listings have no influence.'),
+]
+guide_page('bachata-festivals-deutschland', 'bf',
+  'Bachata Festival Deutschland 2026/2027: Termine im Überblick',
+  'Bachata Festival Deutschland: kommende Festivals 2026 und 2027 nach Datum, mit Orten, Programm und Links. Dazu Tipps für dein erstes Festival.',
+  'Bachata festival Germany 2026/2027: dates at a glance',
+  'Bachata festivals in Germany: upcoming festivals in 2026 and 2027 by date, with places, programme and links, plus tips for your first festival.',
+  'Bachata-Festivals Deutschland', ('Bachata-Festivals · 2026/2027', 'Bachata festivals · 2026/2027'),
+  ('Bachata Festival Deutschland: <em class="foil">Termine</em> 2026/2027', 'Bachata festivals in Germany: <em class="foil">dates</em> 2026/2027'),
+  ('Alle kommenden Bachata-Festivals in Deutschland nach Datum, mit Ort, Programm und Link. Dazu Tipps, welches Festival zu dir passt, und die Möglichkeit für Veranstalter, ihr Festival einzutragen.',
+   'All upcoming Bachata festivals in Germany by date, with place, programme and link. Plus tips on which festival suits you, and a way for organisers to list their festival.'),
+  [('cal', '<b>9 Festivals</b> bis Mai 2027', '<b>9 festivals</b> until May 2027'), ('free', 'Eintrag <b>kostenlos</b>', 'Listing <b>free</b>'), ('check', 'Termine <b>vom Veranstalter prüfen</b>', 'Check dates <b>with the organiser</b>')],
+  fest_sections, fest_faq, sibling_group='topic')
