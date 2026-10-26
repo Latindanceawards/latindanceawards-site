@@ -507,7 +507,7 @@ _ERR_PICK = ("Bitte wähle eine Antwort.", "Please choose an answer.")
 YEARS = [('2024–2026', '2024–2026', '2024–2026'), ('2021–2023', '2021–2023', '2021–2023'), ('2018–2020', '2018–2020', '2018–2020'),
          ('2015–2017', '2015–2017', '2015–2017'), ('2012–2014', '2012–2014', '2012–2014'), ('Before 2012', 'Vor 2012', 'Before 2012')]
 CITIES_O = [('Berlin', 'Berlin', 'Berlin'), ('München / Munich', 'München', 'Munich'), ('Hamburg', 'Hamburg', 'Hamburg'), ('Köln / Cologne', 'Köln', 'Cologne'),
-            ('Frankfurt', 'Frankfurt', 'Frankfurt'), ('Düsseldorf', 'Düsseldorf', 'Düsseldorf'), ('Stuttgart', 'Stuttgart', 'Stuttgart'), ('Leipzig', 'Leipzig', 'Leipzig'), ('Dortmund', 'Dortmund', 'Dortmund'), ('Essen', 'Essen', 'Essen'), ('Bremen', 'Bremen', 'Bremen'), ('Dresden', 'Dresden', 'Dresden'), ('Hannover', 'Hannover', 'Hannover'), ('Nürnberg / Nuremberg', 'Nürnberg', 'Nuremberg'), ('Duisburg', 'Duisburg', 'Duisburg'), ('Bochum', 'Bochum', 'Bochum'), ('Bielefeld', 'Bielefeld', 'Bielefeld'), ('Bonn', 'Bonn', 'Bonn'), ('Karlsruhe', 'Karlsruhe', 'Karlsruhe'), ('Mannheim', 'Mannheim', 'Mannheim'), ('Augsburg', 'Augsburg', 'Augsburg'), ('Wiesbaden', 'Wiesbaden', 'Wiesbaden'), ('Gelsenkirchen', 'Gelsenkirchen', 'Gelsenkirchen'), ('Mönchengladbach', 'Mönchengladbach', 'Mönchengladbach'), ('Braunschweig', 'Braunschweig', 'Braunschweig'), ('Aachen', 'Aachen', 'Aachen'), ('Chemnitz', 'Chemnitz', 'Chemnitz'), ('Kiel', 'Kiel', 'Kiel'), ('Freiburg', 'Freiburg', 'Freiburg'), ('Krefeld', 'Krefeld', 'Krefeld'), ('Mainz', 'Mainz', 'Mainz'), ('Oberhausen', 'Oberhausen', 'Oberhausen'), ('Kassel', 'Kassel', 'Kassel'), ('Darmstadt', 'Darmstadt', 'Darmstadt'), ('Hamm', 'Hamm', 'Hamm'), ('Saarbrücken', 'Saarbrücken', 'Saarbrücken'), ('Ludwigshafen', 'Ludwigshafen', 'Ludwigshafen'), ('Potsdam', 'Potsdam', 'Potsdam'), ('Oldenburg', 'Oldenburg', 'Oldenburg'), ('Paderborn', 'Paderborn', 'Paderborn'), ('Würzburg', 'Würzburg', 'Würzburg'), ('Heilbronn', 'Heilbronn', 'Heilbronn'), ('Göttingen', 'Göttingen', 'Göttingen'), ('Reutlingen', 'Reutlingen', 'Reutlingen'), ('Koblenz', 'Koblenz', 'Koblenz'), ('Trier', 'Trier', 'Trier'), ('Erlangen', 'Erlangen', 'Erlangen'), ('Bremerhaven', 'Bremerhaven', 'Bremerhaven'), ('Other', 'Andere', 'Other')]
+            ('Frankfurt', 'Frankfurt', 'Frankfurt'), ('Düsseldorf', 'Düsseldorf', 'Düsseldorf'), ('Stuttgart', 'Stuttgart', 'Stuttgart'), ('Leipzig', 'Leipzig', 'Leipzig'), ('Dortmund', 'Dortmund', 'Dortmund'), ('Essen', 'Essen', 'Essen'), ('Bremen', 'Bremen', 'Bremen'), ('Dresden', 'Dresden', 'Dresden'), ('Hannover', 'Hannover', 'Hannover'), ('Nürnberg / Nuremberg', 'Nürnberg', 'Nuremberg'), ('Duisburg', 'Duisburg', 'Duisburg'), ('Bochum', 'Bochum', 'Bochum'), ('Bielefeld', 'Bielefeld', 'Bielefeld'), ('Bonn', 'Bonn', 'Bonn'), ('Karlsruhe', 'Karlsruhe', 'Karlsruhe'), ('Mannheim', 'Mannheim', 'Mannheim'), ('Augsburg', 'Augsburg', 'Augsburg'), ('Wiesbaden', 'Wiesbaden', 'Wiesbaden'), ('Gelsenkirchen', 'Gelsenkirchen', 'Gelsenkirchen'), ('Mönchengladbach', 'Mönchengladbach', 'Mönchengladbach'), ('Braunschweig', 'Braunschweig', 'Braunschweig'), ('Aachen', 'Aachen', 'Aachen'), ('Chemnitz', 'Chemnitz', 'Chemnitz'), ('Kiel', 'Kiel', 'Kiel'), ('Freiburg', 'Freiburg', 'Freiburg'), ('Krefeld', 'Krefeld', 'Krefeld'), ('Mainz', 'Mainz', 'Mainz'), ('Oberhausen', 'Oberhausen', 'Oberhausen'), ('Kassel', 'Kassel', 'Kassel'), ('Darmstadt', 'Darmstadt', 'Darmstadt'), ('Hamm', 'Hamm', 'Hamm'), ('Saarbrücken', 'Saarbrücken', 'Saarbrücken'), ('Ludwigshafen', 'Ludwigshafen', 'Ludwigshafen'), ('Potsdam', 'Potsdam', 'Potsdam'), ('Oldenburg', 'Oldenburg', 'Oldenburg'), ('Paderborn', 'Paderborn', 'Paderborn'), ('Würzburg', 'Würzburg', 'Würzburg'), ('Heilbronn', 'Heilbronn', 'Heilbronn'), ('Göttingen', 'Göttingen', 'Göttingen'), ('Reutlingen', 'Reutlingen', 'Reutlingen'), ('Koblenz', 'Koblenz', 'Koblenz'), ('Trier', 'Trier', 'Trier'), ('Erlangen', 'Erlangen', 'Erlangen'), ('Bremerhaven', 'Bremerhaven', 'Bremerhaven'), ('Offenburg', 'Offenburg', 'Offenburg'), ('Konstanz', 'Konstanz', 'Konstanz'), ('Tübingen', 'Tübingen', 'Tübingen'), ('Ludwigsburg', 'Ludwigsburg', 'Ludwigsburg'), ('Bamberg', 'Bamberg', 'Bamberg'), ('Landshut', 'Landshut', 'Landshut'), ('Kempten', 'Kempten', 'Kempten'), ('Aschaffenburg', 'Aschaffenburg', 'Aschaffenburg'), ('Speyer', 'Speyer', 'Speyer'), ('Fulda', 'Fulda', 'Fulda'), ('Lüneburg', 'Lüneburg', 'Lüneburg'), ('Flensburg', 'Flensburg', 'Flensburg'), ('Celle', 'Celle', 'Celle'), ('Ulm', 'Ulm', 'Ulm'), ('Gera', 'Gera', 'Gera'), ('Remscheid', 'Remscheid', 'Remscheid'), ('Bottrop', 'Bottrop', 'Bottrop'), ('Witten', 'Witten', 'Witten'), ('Böblingen', 'Böblingen', 'Böblingen'), ('Friedrichshafen', 'Friedrichshafen', 'Friedrichshafen'), ('Schweinfurt', 'Schweinfurt', 'Schweinfurt'), ('Straubing', 'Straubing', 'Straubing'), ('Coburg', 'Coburg', 'Coburg'), ('Hameln', 'Hameln', 'Hameln'), ('Nürtingen', 'Nürtingen', 'Nürtingen'), ('Norderstedt', 'Norderstedt', 'Norderstedt'), ('Leonberg', 'Leonberg', 'Leonberg'), ('Ansbach', 'Ansbach', 'Ansbach'), ('Moers', 'Moers', 'Moers'), ('Heidenheim', 'Heidenheim', 'Heidenheim'), ('Minden', 'Minden', 'Minden'), ('Other', 'Andere', 'Other')]
 # (chapter, title_de, title_en, sub_de, sub_en, body_html, optional, auto)
 WIZ = [
  (0, 'Wie heißt deine Schule?', 'What is your school called?', 'Jetzt noch ein paar Angaben zu eurer Schule.', 'Now a few details about your school.',
@@ -574,7 +574,7 @@ app_main = f'''
     <div>
       <span class="edition rise d1"><i></i>{t("span", "Bewerbung · Awards 2026", "Application · Awards 2026")}</span>
       <h1 id="app-title" class="rise d2">{t("span", "Bachata-Schule anmelden für die <em class=\"foil\">Bachata Awards 2026</em>", "Enter your Bachata school for the <em class=\"foil\">Bachata Awards 2026</em>")}</h1>
-      <p class="lede rise d3">{t("span", "Melde deine Bachata-Schule kostenlos an: Die Bewerbung dauert fünf Minuten und ist offen für jede Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen und Bremerhaven.", "Enter your Bachata school for free: applying takes five minutes and is open to every Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen and Bremerhaven.")}</p>
+      <p class="lede rise d3">{t("span", "Melde deine Bachata-Schule kostenlos an: Die Bewerbung dauert fünf Minuten und ist offen für jede Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen, Bremerhaven, Offenburg, Konstanz, Tübingen, Ludwigsburg, Bamberg, Landshut, Kempten, Aschaffenburg, Speyer, Fulda, Lüneburg, Flensburg, Celle, Ulm, Gera, Remscheid, Bottrop, Witten, Böblingen, Friedrichshafen, Schweinfurt, Straubing, Coburg, Hameln, Nürtingen, Norderstedt, Leonberg, Ansbach, Moers, Heidenheim und Minden.", "Enter your Bachata school for free: applying takes five minutes and is open to every Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen, Bremerhaven, Offenburg, Konstanz, Tübingen, Ludwigsburg, Bamberg, Landshut, Kempten, Aschaffenburg, Speyer, Fulda, Lüneburg, Flensburg, Celle, Ulm, Gera, Remscheid, Bottrop, Witten, Böblingen, Friedrichshafen, Schweinfurt, Straubing, Coburg, Hameln, Nürtingen, Norderstedt, Leonberg, Ansbach, Moers, Heidenheim and Minden.")}</p>
       <div class="facts rise d4">
         <span>{ICON["free"]}{t("b", "Kostenlos", "Free")}</span>
         <span>{ICON["clock"]}{t("b", "5 Minuten", "5 minutes")}</span>
@@ -772,7 +772,7 @@ CITIES = [('deutschland', 'Ganz Deutschland', 'All Germany'), ('berlin', 'Berlin
           ('karlsruhe', 'Karlsruhe', 'Karlsruhe'), ('mannheim', 'Mannheim', 'Mannheim'), ('augsburg', 'Augsburg', 'Augsburg'), ('wiesbaden', 'Wiesbaden', 'Wiesbaden'),
           ('gelsenkirchen', 'Gelsenkirchen', 'Gelsenkirchen'), ('moenchengladbach', 'Mönchengladbach', 'Mönchengladbach'), ('braunschweig', 'Braunschweig', 'Braunschweig'), ('aachen', 'Aachen', 'Aachen'), ('chemnitz', 'Chemnitz', 'Chemnitz'), ('kiel', 'Kiel', 'Kiel'), ('freiburg', 'Freiburg', 'Freiburg'), ('krefeld', 'Krefeld', 'Krefeld'), ('mainz', 'Mainz', 'Mainz'), ('oberhausen', 'Oberhausen', 'Oberhausen'), ('kassel', 'Kassel', 'Kassel'), ('darmstadt', 'Darmstadt', 'Darmstadt'),
           ('hamm', 'Hamm', 'Hamm'), ('saarbruecken', 'Saarbrücken', 'Saarbrücken'), ('ludwigshafen', 'Ludwigshafen', 'Ludwigshafen'), ('potsdam', 'Potsdam', 'Potsdam'), ('oldenburg', 'Oldenburg', 'Oldenburg'), ('paderborn', 'Paderborn', 'Paderborn'), ('wuerzburg', 'Würzburg', 'Würzburg'), ('heilbronn', 'Heilbronn', 'Heilbronn'),
-          ('goettingen', 'Göttingen', 'Göttingen'), ('reutlingen', 'Reutlingen', 'Reutlingen'), ('koblenz', 'Koblenz', 'Koblenz'), ('trier', 'Trier', 'Trier'), ('erlangen', 'Erlangen', 'Erlangen'), ('bremerhaven', 'Bremerhaven', 'Bremerhaven')]
+          ('goettingen', 'Göttingen', 'Göttingen'), ('reutlingen', 'Reutlingen', 'Reutlingen'), ('koblenz', 'Koblenz', 'Koblenz'), ('trier', 'Trier', 'Trier'), ('erlangen', 'Erlangen', 'Erlangen'), ('bremerhaven', 'Bremerhaven', 'Bremerhaven'), ('offenburg', 'Offenburg', 'Offenburg'), ('konstanz', 'Konstanz', 'Konstanz'), ('tuebingen', 'Tübingen', 'Tübingen'), ('ludwigsburg', 'Ludwigsburg', 'Ludwigsburg'), ('bamberg', 'Bamberg', 'Bamberg'), ('landshut', 'Landshut', 'Landshut'), ('kempten', 'Kempten', 'Kempten'), ('aschaffenburg', 'Aschaffenburg', 'Aschaffenburg'), ('speyer', 'Speyer', 'Speyer'), ('fulda', 'Fulda', 'Fulda'), ('lueneburg', 'Lüneburg', 'Lüneburg'), ('flensburg', 'Flensburg', 'Flensburg'), ('celle', 'Celle', 'Celle'), ('ulm', 'Ulm', 'Ulm'), ('gera', 'Gera', 'Gera'), ('remscheid', 'Remscheid', 'Remscheid'), ('bottrop', 'Bottrop', 'Bottrop'), ('witten', 'Witten', 'Witten'), ('boeblingen', 'Böblingen', 'Böblingen'), ('friedrichshafen', 'Friedrichshafen', 'Friedrichshafen'), ('schweinfurt', 'Schweinfurt', 'Schweinfurt'), ('straubing', 'Straubing', 'Straubing'), ('coburg', 'Coburg', 'Coburg'), ('hameln', 'Hameln', 'Hameln'), ('nuertingen', 'Nürtingen', 'Nürtingen'), ('norderstedt', 'Norderstedt', 'Norderstedt'), ('leonberg', 'Leonberg', 'Leonberg'), ('ansbach', 'Ansbach', 'Ansbach'), ('moers', 'Moers', 'Moers'), ('heidenheim', 'Heidenheim', 'Heidenheim'), ('minden', 'Minden', 'Minden')]
 tabs_html = '\n'.join(
     f'      <button type="button" role="tab" id="tab-{slug}" aria-controls="panel" aria-selected="{"true" if i==0 else "false"}" data-city="{slug}">{r("span", de, en)}</button>'
     for i, (slug, de, en) in enumerate(CITIES) if i < 7)
@@ -780,11 +780,11 @@ tabs_html = '\n'.join(
 
 rfaq = [
  ('Wann wird das Bachata-Ranking veröffentlicht?', 'When is the Bachata ranking published?',
-  'Alle Rankings erscheinen am 20. Dezember 2026 um 19 Uhr auf dieser Seite, zuerst für die 48 Städte und gleichzeitig für ganz Deutschland.',
-  'All rankings go live on December 20, 2026 at 7 pm (CET) on this page, for the 48 cities and for Germany as a whole.'),
+  'Alle Rankings erscheinen am 20. Dezember 2026 um 19 Uhr auf dieser Seite, zuerst für die 79 Städte und gleichzeitig für ganz Deutschland.',
+  'All rankings go live on December 20, 2026 at 7 pm (CET) on this page, for the 79 cities and for Germany as a whole.'),
  ('Welche Städte sind im Ranking 2026?', 'Which cities are in the 2026 ranking?',
-  'Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen und Bremerhaven. Weitere Städte und Länder folgen in den nächsten Ausgaben.',
-  'Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen and Bremerhaven. More cities and countries follow in future editions.'),
+  'Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen, Bremerhaven, Offenburg, Konstanz, Tübingen, Ludwigsburg, Bamberg, Landshut, Kempten, Aschaffenburg, Speyer, Fulda, Lüneburg, Flensburg, Celle, Ulm, Gera, Remscheid, Bottrop, Witten, Böblingen, Friedrichshafen, Schweinfurt, Straubing, Coburg, Hameln, Nürtingen, Norderstedt, Leonberg, Ansbach, Moers, Heidenheim und Minden. Weitere Städte und Länder folgen in den nächsten Ausgaben.',
+  'Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen, Bremerhaven, Offenburg, Konstanz, Tübingen, Ludwigsburg, Bamberg, Landshut, Kempten, Aschaffenburg, Speyer, Fulda, Lüneburg, Flensburg, Celle, Ulm, Gera, Remscheid, Bottrop, Witten, Böblingen, Friedrichshafen, Schweinfurt, Straubing, Coburg, Hameln, Nürtingen, Norderstedt, Leonberg, Ansbach, Moers, Heidenheim and Minden. More cities and countries follow in future editions.'),
  ('Kann eine Schule für einen besseren Platz bezahlen?', 'Can a school pay for a better place?',
   'Nein. Plätze sind nicht käuflich. Jede Schule wird nach denselben neun Kriterien bewertet, und die Punkteaufschlüsselung ist öffentlich.',
   'No. Places cannot be bought. Every school is scored on the same nine factors, and the score breakdown is public.'),
@@ -792,8 +792,8 @@ rfaq = [
   'In den meisten Bachata-Kursen nicht. Viele Schulen lassen die Paare regelmäßig wechseln, sodass du auch allein kommen kannst. Frag am besten vorher bei der Schule nach.',
   'In most Bachata classes you don\'t. Many schools rotate partners regularly, so you can come on your own. It is best to ask the school beforehand.'),
  ('Meine Schule fehlt. Was kann ich tun?', 'My school is missing. What can I do?',
-  'Melde sie bis zum 30. November kostenlos über die <a href="bewerbung.html">Bewerbungsseite</a> an. Wir nehmen jede Bachata-Schule in den 48 Städten auf.',
-  'Enter it for free by November 30 on the <a href="bewerbung.html">application page</a>. We include every Bachata school in the 48 cities.'),
+  'Melde sie bis zum 30. November kostenlos über die <a href="bewerbung.html">Bewerbungsseite</a> an. Wir nehmen jede Bachata-Schule in den 79 Städten auf.',
+  'Enter it for free by November 30 on the <a href="bewerbung.html">application page</a>. We include every Bachata school in the 79 cities.'),
  ('Wie oft wird das Ranking aktualisiert?', 'How often is the ranking updated?',
   'Das Ranking erscheint einmal im Jahr. Korrekturen an falschen Daten prüfen wir laufend und übernehmen sie nach der Prüfung.',
   'The ranking is published once a year. We review corrections to wrong data on an ongoing basis and apply them once checked.'),
@@ -807,7 +807,7 @@ rank_main = f'''
     <div>
       <span class="edition rise d1"><i></i>{r("span", "Rankings 2026 · Deutschland", "Rankings 2026 · Germany")}</span>
       <h1 id="rk-title" class="rise d2">{r("span", "Beste Bachata-Schulen in <em class=\"foil\">Deutschland 2026</em>", "Best Bachata schools in <em class=\"foil\">Germany 2026</em>")}</h1>
-      <p class="lede rise d3">{r("span", "Die besten Bachata-Schulen in Deutschland, bewertet nach neun öffentlichen Kriterien: 48 Städte, ein nationaler Sieger. Die Ergebnisse erscheinen am 20. Dezember 2026 um 19 Uhr.", "The best Bachata schools in Germany, scored on nine public factors: 48 cities, one national winner. Results are published on December 20, 2026 at 7 pm (CET).")}</p>
+      <p class="lede rise d3">{r("span", "Die besten Bachata-Schulen in Deutschland, bewertet nach neun öffentlichen Kriterien: 79 Städte, ein nationaler Sieger. Die Ergebnisse erscheinen am 20. Dezember 2026 um 19 Uhr.", "The best Bachata schools in Germany, scored on nine public factors: 79 cities, one national winner. Results are published on December 20, 2026 at 7 pm (CET).")}</p>
       <div class="countdown rise d4" id="countdown" aria-live="off">
         <div><b data-u="d">00</b>{r("small", "Tage", "days")}</div>
         <div><b data-u="h">00</b>{r("small", "Stunden", "hours")}</div>
@@ -860,7 +860,7 @@ rank_main = f'''
 <section class="block alt" aria-labelledby="how-title">
   <div class="wrap prose">
     {r("h2", "So entsteht das Bachata-Ranking 2026", "How the 2026 Bachata ranking is made", 'id="how-title"')}
-    {r("p", "Wir recherchieren jede Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen und Bremerhaven und bewerten sie nach denselben <strong>neun Kriterien</strong>, zusammen 100 Punkte. Die wichtigsten sind die gewichtete Google-Bewertung (25 Punkte) und Auftritte der Lehrer auf Festivals und Kongressen (15 Punkte).", "We research every Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen and Bremerhaven and score each one on the same <strong>nine factors</strong>, 100 points in total. The most important are the weighted Google rating (25 points) and teachers' appearances at festivals and congresses (15 points).")}
+    {r("p", "Wir recherchieren jede Bachata-Schule in Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen, Bremerhaven, Offenburg, Konstanz, Tübingen, Ludwigsburg, Bamberg, Landshut, Kempten, Aschaffenburg, Speyer, Fulda, Lüneburg, Flensburg, Celle, Ulm, Gera, Remscheid, Bottrop, Witten, Böblingen, Friedrichshafen, Schweinfurt, Straubing, Coburg, Hameln, Nürtingen, Norderstedt, Leonberg, Ansbach, Moers, Heidenheim und Minden und bewerten sie nach denselben <strong>neun Kriterien</strong>, zusammen 100 Punkte. Die wichtigsten sind die gewichtete Google-Bewertung (25 Punkte) und Auftritte der Lehrer auf Festivals und Kongressen (15 Punkte).", "We research every Bachata school in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen, Bremerhaven, Offenburg, Konstanz, Tübingen, Ludwigsburg, Bamberg, Landshut, Kempten, Aschaffenburg, Speyer, Fulda, Lüneburg, Flensburg, Celle, Ulm, Gera, Remscheid, Bottrop, Witten, Böblingen, Friedrichshafen, Schweinfurt, Straubing, Coburg, Hameln, Nürtingen, Norderstedt, Leonberg, Ansbach, Moers, Heidenheim and Minden and score each one on the same <strong>nine factors</strong>, 100 points in total. The most important are the weighted Google rating (25 points) and teachers' appearances at festivals and congresses (15 points).")}
     {r("p", "Dazu kommen die Anzahl der Bewertungen, die Jahre im Unterricht, das Kursangebot für Einsteiger, eigene Events und Gastlehrer sowie Social Media mit je 10 Punkten. Aktuelle Bewertungen der letzten 12 Monate und Wettbewerbsergebnisse zählen je 5 Punkte. Alle Daten sind öffentlich und werden von Hand geprüft. Schulen, die sich bewerben, können ihre Angaben zusätzlich mit Links belegen.", "Review volume, years of teaching, the beginner offer, own events and guest teachers, and social media add 10 points each. Recent reviews from the last 12 months and competition results count 5 points each. All data is public and checked by hand. Schools that apply can also back up their information with links.")}
     {r("p", "Damit kleine Schulen eine faire Chance haben, gewichten wir Bewertungen nach ihrer Anzahl: Eine 5,0 aus vier Bewertungen schlägt keine 4,8 aus dreihundert. Die vollständige Methode findest du auf der <a href=\"index.html#method\">Startseite</a>.", "To give small schools a fair chance, ratings are weighted by their number: a 5.0 from four reviews does not beat a 4.8 from three hundred. The full method is on the <a href=\"index.html#method\">homepage</a>.")}
   </div>
@@ -871,8 +871,8 @@ rank_main = f'''
     {r("h2", "Die fünf Bachata Awards 2026 im Überblick", "The five Bachata Awards 2026 at a glance", 'id="awards-title"')}
     {r("p", "Neben den Ranglisten vergeben wir fünf Auszeichnungen. Jeder Gewinner erhält ein offizielles Siegel für Website, Studio und Social Media.", "Alongside the rankings we give five awards. Every winner receives an official seal for their website, studio and social media.")}
     <ul>
-      <li>{r("span", "<strong>Beste Bachata-Schule Deutschlands:</strong> die höchste Gesamtpunktzahl aller 48 Städte.", "<strong>Best Bachata School in Germany:</strong> the highest total score across all 48 cities.")}</li>
-      <li>{r("span", "<strong>Beste Schule der Stadt:</strong> die bestplatzierte Schule in Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen und Bremerhaven.", "<strong>Best School of the City:</strong> the top-ranked school in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen and Bremerhaven.")}</li>
+      <li>{r("span", "<strong>Beste Bachata-Schule Deutschlands:</strong> die höchste Gesamtpunktzahl aller 79 Städte.", "<strong>Best Bachata School in Germany:</strong> the highest total score across all 79 cities.")}</li>
+      <li>{r("span", "<strong>Beste Schule der Stadt:</strong> die bestplatzierte Schule in Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen, Bremerhaven, Offenburg, Konstanz, Tübingen, Ludwigsburg, Bamberg, Landshut, Kempten, Aschaffenburg, Speyer, Fulda, Lüneburg, Flensburg, Celle, Ulm, Gera, Remscheid, Bottrop, Witten, Böblingen, Friedrichshafen, Schweinfurt, Straubing, Coburg, Hameln, Nürtingen, Norderstedt, Leonberg, Ansbach, Moers, Heidenheim und Minden.", "<strong>Best School of the City:</strong> the top-ranked school in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen, Bremerhaven, Offenburg, Konstanz, Tübingen, Ludwigsburg, Bamberg, Landshut, Kempten, Aschaffenburg, Speyer, Fulda, Lüneburg, Flensburg, Celle, Ulm, Gera, Remscheid, Bottrop, Witten, Böblingen, Friedrichshafen, Schweinfurt, Straubing, Coburg, Hameln, Nürtingen, Norderstedt, Leonberg, Ansbach, Moers, Heidenheim and Minden.")}</li>
       <li>{r("span", "<strong>Aufsteiger des Jahres:</strong> die bestbewertete Schule, die in den letzten drei Jahren gegründet wurde.", "<strong>Rising School of the Year:</strong> the best-rated school founded in the last three years.")}</li>
       <li>{r("span", "<strong>Legacy Award:</strong> für eine Schule, die ihre lokale Bachata-Szene seit zehn Jahren oder länger prägt.", "<strong>Legacy Award:</strong> for a school that has shaped its local Bachata scene for ten years or more.")}</li>
       <li>{r("span", "<strong>Festival Stage Award:</strong> für die Schule, deren Lehrer am häufigsten auf europäischen Festivals und Kongressen unterrichten.", "<strong>Festival Stage Award:</strong> for the school whose teachers teach most often at European festivals and congresses.")}</li>
@@ -932,8 +932,8 @@ rank_main = f'''
 
 <section class="block" aria-labelledby="cities-title">
   <div class="wrap prose">
-    {r("h2", "Die 48 Städte im Ranking", "The 48 cities in the ranking", 'id="cities-title"')}
-    {r("p", "Für die erste Ausgabe haben wir die 48 größten Bachata-Städte Deutschlands gewählt. Dort gibt es genug Schulen für einen fairen Vergleich, und viele Tänzer suchen hier gezielt nach einem Kurs. Weitere Städte kommen in den nächsten Ausgaben dazu.", "For the first edition we chose Germany's 48 biggest Bachata cities. They have enough schools for a fair comparison, and many dancers there search specifically for a class. More cities join in future editions.")}
+    {r("h2", "Die 79 Städte im Ranking", "The 79 cities in the ranking", 'id="cities-title"')}
+    {r("p", "Für die erste Ausgabe haben wir 79 Städte in ganz Deutschland gewählt, von den größten bis zu mittleren Städten. Dort gibt es genug Schulen für einen fairen Vergleich, und viele Tänzer suchen hier gezielt nach einem Kurs. Weitere Städte kommen in den nächsten Ausgaben dazu.", "For the first edition we chose 79 cities across Germany, from the biggest to mid-sized ones. They have enough schools for a fair comparison, and many dancers there search specifically for a class. More cities join in future editions.")}
     {r("p", "Jede Stadt bekommt ein eigenes Top-10-Ranking. Die beste Schule jeder Stadt erhält den Award <strong>Beste Schule der Stadt</strong>, die höchste Punktzahl im ganzen Land den Award <strong>Beste Bachata-Schule Deutschlands</strong>.", "Every city gets its own top 10. The best school in each city receives the <strong>Best School of the City</strong> award, and the highest score in the country wins <strong>Best Bachata School in Germany</strong>.")}
     <div class="citylinks">{city_links}</div>
     {r("p", "Mehr zu den Schulen vor Ort: <a href=\"bachata-berlin.html\">Berlin</a>, <a href=\"bachata-hamburg.html\">Hamburg</a>, <a href=\"bachata-muenchen.html\">München</a>.", "More on the schools locally: <a href=\"bachata-berlin.html\">Berlin</a>, <a href=\"bachata-hamburg.html\">Hamburg</a>, <a href=\"bachata-muenchen.html\">Munich</a>.")}
@@ -1048,7 +1048,38 @@ rank_js = r'''
     koblenz: [],
     trier: [],
     erlangen: [],
-    bremerhaven: []
+    bremerhaven: [],
+    offenburg: [],
+    konstanz: [],
+    tuebingen: [],
+    ludwigsburg: [],
+    bamberg: [],
+    landshut: [],
+    kempten: [],
+    aschaffenburg: [],
+    speyer: [],
+    fulda: [],
+    lueneburg: [],
+    flensburg: [],
+    celle: [],
+    ulm: [],
+    gera: [],
+    remscheid: [],
+    bottrop: [],
+    witten: [],
+    boeblingen: [],
+    friedrichshafen: [],
+    schweinfurt: [],
+    straubing: [],
+    coburg: [],
+    hameln: [],
+    nuertingen: [],
+    norderstedt: [],
+    leonberg: [],
+    ansbach: [],
+    moers: [],
+    heidenheim: [],
+    minden: []
   };
   /* PRELIMINARY LIST: schools verified on their own website. Alphabetical, no scores. Not a ranking. */
   var CANDIDATES = {
@@ -1295,6 +1326,106 @@ rank_js = r'''
     ],
     bremerhaven: [
       {name:"Salsa Loca", sc:[8, 5, 6, 16.6, 4.3, 5.7], fx:["5,0 ★ · 10","267 · 30"], url:"https://www.salsa-loca-bremerhaven.de/"}
+    ],
+    offenburg: [
+      {name:"LaNi-Dance", sc:[0, 8, 4, 18.4, 5.4, 5.4], fx:["5,0 ★ · 19","190 · 21"], url:"https://www.lani-dance.de/"}
+    ],
+    konstanz: [
+      {name:"Tanzwerk Konstanz", sc:[10, 10, 4, 18.2, 7.9, 8.2], fx:["4,7 ★ · 76","15.000 · 20"], url:"https://www.tanzwerk.dance/"},
+      {name:"flamemotions", sc:[0, 5, 4, 17.3, 4.8, 0.0], fx:["5,0 ★ · 13","–"], url:"https://www.flamemotions.com/"}
+    ],
+    tuebingen: [
+      {name:"Tanzschule Salsamara", sc:[10, 10, 10, 18.1, 7.7, 0.0], fx:["4,7 ★ · 68","–"], url:"https://salsa-mara-tuebingen.de/"}
+    ],
+    ludwigsburg: [
+      {name:"Salsa Company Ludwigsburg", sc:[10, 8, 10, 15.0, 6.3, 7.1], fx:["4,5 ★ · 32","968 · 62"], url:"https://salsa-company-ludwigsburg.de/"},
+      {name:"MiSalsa Ludwigsburg", sc:[5, 10, 7, 20.9, 7.9, 8.8], fx:["4,9 ★ · 78","2.058 · 484"], url:"https://www.misalsa-lb.de/"}
+    ],
+    bamberg: [
+      {name:"Salsa Samstag Bamberg", sc:[0, 5, 4, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10","–"], url:"https://www.salsasamstag-bamberg.de/"}
+    ],
+    landshut: [
+      {name:"Tanz-Länd", sc:[0, 5, 4, 17.9, 6.3, 0.0], fx:["4,8 ★ · 32","–"], url:"https://tanz-laend.de/"},
+      {name:"Tanzschule Tanzparadies", sc:[0, 8, 4, 21.0, 7.1, 0.0], fx:["5,0 ★ · 49","–"], url:"https://tanzpa.de/"}
+    ],
+    kempten: [
+      {name:"Tanzschule TANZLATION", sc:[0, 10, 4, 20.5, 7.6, 8.1], fx:["4,9 ★ · 64","3.266 · 102"], url:"https://www.tanzlation.de/"},
+      {name:"J&J Dance Tanzschule", sc:[0, 10, 2, 17.0, 6.3, 8.9], fx:["4,7 ★ · 32","1.622 · 786"], url:"https://jj-dance.com/"},
+      {name:"Tanzzentrum Allgäu", sc:[0, 5, 0, 17.6, 7.1, 0.0], fx:["4,7 ★ · 49","–"], url:"https://merengue.de/"}
+    ],
+    aschaffenburg: [
+      {name:"Tanzstudio La Pasion", sc:[0, 10, 7, 21.3, 8.3, 0.0], fx:["4,9 ★ · 99","–"], url:"https://tanzstudio-lapasion.de/"}
+    ],
+    speyer: [
+      {name:"Salsa Tanzschule Habaneando", sc:[0, 8, 7, 21.3, 8.3, 9.2], fx:["4,9 ★ · 99","4.848 · 419"], url:"https://habaneando.com/"}
+    ],
+    fulda: [
+      {name:"Latin Dance Community Fulda", sc:[0, 10, 7, 20.1, 7.3, 6.9], fx:["4,9 ★ · 54","987 · 45"], url:"https://salsa-fd.de/"},
+      {name:"Tanzschule MoTaBa", sc:[10, 10, 7, 20.8, 7.8, 6.4], fx:["4,9 ★ · 74","577 · 35"], url:"https://www.motaba.org/"}
+    ],
+    lueneburg: [
+      {name:"ConFlow Latin Dance Studio", sc:[0, 8, 4, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16","–"], url:"https://conflow-lueneburg.de/"}
+    ],
+    flensburg: [
+      {name:"Demis Salsa Cubana", sc:[10, 5, 4, 19.0, 5.8, 8.2], fx:["5,0 ★ · 24","839 · 518"], url:"https://www.demis-salsa-cubana.de/"}
+    ],
+    celle: [
+      {name:"TanzHaus Celle", sc:[10, 10, 4, 18.2, 6.6, 7.6], fx:["4,8 ★ · 37","1.468 · 104"], url:"https://www.tanzhaus-celle.de/"}
+    ],
+    ulm: [
+      {name:"Ritmo Latino Tanzschule", sc:[10, 8, 10, 21.9, 9.1, 8.3], fx:["4,9 ★ · 154","1.590 · 291"], url:"https://www.ritmolatino.de/"}
+    ],
+    gera: [
+      {name:"Salsa Picante Gera", sc:[0, 10, 7, 0.0, 0.0, 0.0], fx:["–","–"], url:"https://tanzeningera.de/"}
+    ],
+    remscheid: [
+      {name:"Tanzraum Remscheid", sc:[5, 10, 4, 22.5, 8.2, 8.0], fx:["5,0 ★ · 90","1.470 · 200"], url:"https://www.tanzraum-rs.de/"}
+    ],
+    bottrop: [
+      {name:"Cantina di Danza", sc:[0, 10, 0, 18.6, 5.6, 6.6], fx:["5,0 ★ · 21","504 · 55"], url:"https://cantinadidanza.de/"}
+    ],
+    witten: [
+      {name:"Tanzschule mit Marc", sc:[0, 5, 4, 20.3, 7.4, 0.0], fx:["4,9 ★ · 60","–"], url:"https://tanzschulemitmarc.de/"}
+    ],
+    boeblingen: [
+      {name:"Salsa Company Böblingen", sc:[10, 8, 10, 12.0, 7.0, 0.0], fx:["4,2 ★ · 46","–"], url:"https://www.tanzschule-boeblingen.de/"}
+    ],
+    friedrichshafen: [
+      {name:"Love to Dance! Studio", sc:[0, 10, 10, 17.0, 5.5, 0.0], fx:["4,8 ★ · 20","–"], url:"https://www.love-to-dance.de/"}
+    ],
+    schweinfurt: [
+      {name:"Tanzschule Pelzer", sc:[0, 8, 4, 17.2, 8.4, 0.0], fx:["4,6 ★ · 101","–"], url:"https://tanzen-bei-pelzer.de/"},
+      {name:"Tanz an!", sc:[0, 5, 4, 18.1, 6.4, 0.0], fx:["4,8 ★ · 34","–"], url:"https://www.tanzan.de/"}
+    ],
+    straubing: [
+      {name:"SALSA Straubing", sc:[0, 8, 7, 14.6, 2.5, 0.0], fx:["5,0 ★ · 3","–"], url:"https://salsa-straubing.de/"}
+    ],
+    coburg: [
+      {name:"TANZTRAUM Tanzlounge", sc:[0, 5, 0, 16.9, 6.2, 0.0], fx:["4,7 ★ · 30","–"], url:"https://tanz-traum.de/"}
+    ],
+    hameln: [
+      {name:"Tanzschule FÜR SIE", sc:[0, 5, 7, 19.9, 8.3, 0.0], fx:["4,8 ★ · 98","–"], url:"https://www.tsfuersie.de/"}
+    ],
+    nuertingen: [
+      {name:"Excelencia 4 Ever Dance", sc:[0, 8, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23","–"], url:"https://tanzstudio-excelencia.de/"}
+    ],
+    norderstedt: [
+      {name:"TanzCentrum Die 3", sc:[10, 5, 0, 15.2, 6.8, 0.0], fx:["4,5 ★ · 42","–"], url:"https://www.tanzen-in-norderstedt.de/"}
+    ],
+    leonberg: [
+      {name:"Tanzschule Danceworld", sc:[0, 5, 7, 15.1, 6.5, 0.0], fx:["4,5 ★ · 36","–"], url:"https://www.tanzschule-danceworld.de/"}
+    ],
+    ansbach: [
+      {name:"Tanzschule Springer", sc:[0, 5, 4, 20.4, 9.2, 0.0], fx:["4,8 ★ · 156","–"], url:"https://www.tanzschule-springer.de/"}
+    ],
+    moers: [
+      {name:"Tanzschule Helfer", sc:[0, 5, 4, 19.6, 6.8, 0.0], fx:["4,9 ★ · 43","–"], url:"https://www.tshelfer.de/"}
+    ],
+    heidenheim: [
+      {name:"Tanzhaus Heidenheim", sc:[0, 5, 4, 18.1, 6.4, 0.0], fx:["4,8 ★ · 34","–"], url:"https://tanzen-heidenheim.de/"}
+    ],
+    minden: [
+      {name:"Tanzschule Am Ring", sc:[0, 5, 0, 12.0, 6.7, 0.0], fx:["4,2 ★ · 39","–"], url:"https://www.tanzschule-am-ring.de/"}
     ]
   };
   var VOTE_ENDPOINT = "https://script.google.com/macros/s/AKfycbzAANOuM7cA3QgqeXZXOKZEYumNFsENBZaIicJSaJluR90rTl2iw30Sk522vxIurDsg/exec";
@@ -1494,9 +1625,9 @@ rank_js = r'''
 
 page('rankings.html',
      'Beste Bachata-Schulen Deutschland 2026 · Ranking',
-     'Die besten Bachata-Schulen in Deutschland: unabhängiges Ranking für Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen und Bremerhaven. Ergebnisse am 20. Dezember 2026.',
+     'Die besten Bachata-Schulen in Deutschland: unabhängiges Ranking für Berlin, München, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nürnberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen, Bremerhaven, Offenburg, Konstanz, Tübingen, Ludwigsburg, Bamberg, Landshut, Kempten, Aschaffenburg, Speyer, Fulda, Lüneburg, Flensburg, Celle, Ulm, Gera, Remscheid, Bottrop, Witten, Böblingen, Friedrichshafen, Schweinfurt, Straubing, Coburg, Hameln, Nürtingen, Norderstedt, Leonberg, Ansbach, Moers, Heidenheim und Minden. Ergebnisse am 20. Dezember 2026.',
      'Best Bachata schools in Germany 2026 · Ranking',
-     'The best Bachata schools in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen and Bremerhaven. Latin Dance Awards results on December 20, 2026.',
+     'The best Bachata schools in Berlin, Munich, Hamburg, Cologne, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover, Nuremberg, Duisburg, Bochum, Bielefeld, Bonn, Karlsruhe, Mannheim, Augsburg, Wiesbaden, Gelsenkirchen, Mönchengladbach, Braunschweig, Aachen, Chemnitz, Kiel, Freiburg, Krefeld, Mainz, Oberhausen, Kassel, Darmstadt, Hamm, Saarbrücken, Ludwigshafen, Potsdam, Oldenburg, Paderborn, Würzburg, Heilbronn, Göttingen, Reutlingen, Koblenz, Trier, Erlangen, Bremerhaven, Offenburg, Konstanz, Tübingen, Ludwigsburg, Bamberg, Landshut, Kempten, Aschaffenburg, Speyer, Fulda, Lüneburg, Flensburg, Celle, Ulm, Gera, Remscheid, Bottrop, Witten, Böblingen, Friedrichshafen, Schweinfurt, Straubing, Coburg, Hameln, Nürtingen, Norderstedt, Leonberg, Ansbach, Moers, Heidenheim and Minden. Latin Dance Awards results on December 20, 2026.',
      'rankings.html', rank_main, r.en, rank_js,
      schema=[crumbs('Rankings 2026', 'rankings.html'), faq_schema(rfaq)])
 
