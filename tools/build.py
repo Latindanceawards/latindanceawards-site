@@ -1628,9 +1628,9 @@ rank_js = r'''
 
 page('rankings.html',
      'Beste Bachata-Schulen Deutschland 2026 · Ranking',
-     'Die besten Bachata-Schulen in Deutschland: unabhängiges Ranking für 79 Städte von Berlin bis Konstanz, mit Punkten, Bewertungen und Abstimmung. Ergebnisse am 20. Dezember 2026.',
+     'Die besten Bachata-Schulen in Deutschland: unabhängiges Ranking für 79 Städte, mit Punkten, Bewertungen und Abstimmung. Ergebnisse am 20. Dezember 2026.',
      'Best Bachata schools in Germany 2026 · Ranking',
-     'The best Bachata schools in Germany: independent ranking for 79 cities from Berlin to Konstanz, with scores, reviews and voting. Results on December 20, 2026.',
+     'The best Bachata schools in Germany: independent ranking for 79 cities, with scores, reviews and voting. Results on December 20, 2026.',
      'rankings.html', rank_main, r.en, rank_js,
      schema=[crumbs('Rankings 2026', 'rankings.html'), faq_schema(rfaq)])
 
