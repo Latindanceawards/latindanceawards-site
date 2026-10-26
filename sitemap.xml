@@ -914,4 +914,22 @@
   <url><loc>https://latindanceawards.com/pl/szkoly/diamond-dance-studio.html</loc></url>
   <url><loc>https://latindanceawards.com/pl/szkoly/like-to-dance.html</loc></url>
   <url><loc>https://latindanceawards.com/pl/szkoly/szkola-tanca-mohito.html</loc></url>
+  <url>
+    <loc>https://latindanceawards.com/pl/bachata-nowy-sacz.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://latindanceawards.com/pl/bachata-nowy-sacz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/pl/bachata-nowy-sacz.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/pl/bachata-nowy-sacz.html"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/pl/bachata-siedlce.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://latindanceawards.com/pl/bachata-siedlce.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/pl/bachata-siedlce.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/pl/bachata-siedlce.html"/>
+  </url>
+  <url><loc>https://latindanceawards.com/pl/szkoly/siedlecka-szkola-tanca-marek-glinka.html</loc></url>
+  <url><loc>https://latindanceawards.com/pl/szkoly/adelante-akademia-tanca.html</loc></url>
 </urlset>
