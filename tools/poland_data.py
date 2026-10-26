@@ -4,6 +4,8 @@
 CITIES = {
  'warszawa': ('Warszawa', 'Warsaw', 'Warszawie'), 'krakow': ('Kraków', 'Kraków', 'Krakowie'), 'wroclaw': ('Wrocław', 'Wrocław', 'Wrocławiu'),
  'poznan': ('Poznań', 'Poznań', 'Poznaniu'), 'gdansk': ('Gdańsk', 'Gdańsk', 'Gdańsku'), 'lodz': ('Łódź', 'Łódź', 'Łodzi'), 'katowice': ('Katowice', 'Katowice', 'Katowicach'),
+ 'gdynia': ('Gdynia', 'Gdynia', 'Gdyni'), 'bydgoszcz': ('Bydgoszcz', 'Bydgoszcz', 'Bydgoszczy'), 'lublin': ('Lublin', 'Lublin', 'Lublinie'),
+ 'szczecin': ('Szczecin', 'Szczecin', 'Szczecinie'), 'bialystok': ('Białystok', 'Białystok', 'Białymstoku'),
 }
 # (name, city, rating, reviews, website)
 SCHOOLS = [
@@ -38,6 +40,20 @@ SCHOOLS = [
  ('La Clave', 'katowice', 4.6, 84, 'https://www.laclave.pl'),
  ('Good Mood', 'katowice', 4.8, 172, 'http://goodmood.dance'),
  ('Mil Pasos', 'katowice', 4.8, 79, 'https://milpasoskatowice.pl'),
+ ('Dance Fusion', 'gdynia', 4.7, 235, 'https://dancefusion.com.pl'),
+ ('Paulina Turska Dance Academy', 'gdynia', 4.9, 58, 'https://turskadanceacademy.com'),
+ ('Salsa Kings', 'gdynia', 4.3, 17, 'https://salsakings.pl'),
+ ('Bailamos', 'bydgoszcz', 4.7, 67, 'https://bailamos.pl'),
+ ('Szkoła Tańca Bohema', 'bydgoszcz', 4.5, 62, 'https://www.szkolabohema.pl'),
+ ('SALSAme Dance Studio', 'lublin', 4.8, 131, 'https://salsame.pl'),
+ ('Casa de la Danza', 'lublin', 4.9, 67, 'https://casalublin.pl'),
+ ('Passa Passa Dance Studio', 'lublin', 4.9, 30, 'https://passapassa.pl'),
+ ('Abballu', 'szczecin', 4.7, 87, 'https://abballu.pl'),
+ ('Kimama', 'szczecin', 4.8, 68, 'https://kimama.pl'),
+ ('QuieroSalsa', 'szczecin', 4.9, 40, 'https://quierosalsa.pl'),
+ ('All About Dance Studio', 'szczecin', 5.0, 227, 'https://allabout-dance.pl'),
+ ('Latin Studio', 'bialystok', 4.9, 118, 'https://latinstudio.pl'),
+ ('Fabryka Tańca', 'bialystok', 4.9, 128, 'https://fabrykatanca.pl'),
 ]
 import math
 def pts(r, v):
