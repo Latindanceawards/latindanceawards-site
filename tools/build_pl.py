@@ -50,13 +50,13 @@ SHARED_PL_EN = {'pn1': 'Ranking', 'pn2': 'Cities', 'pn3': 'Method', 'pn4': 'Euro
   'pf1': "An independent project celebrating Europe's Latin dance schools. Rankings are based on public data and can't be bought.",
   'pf2': 'Rankings', 'pf3': 'Poland 2027', 'pf4': 'How we score', 'pf5': 'Contact', 'pf6': 'Bachata Edition · Poland'}
 
-def pl_page(fname, canon, title, desc, title_en, desc_en, main, en, schema):
+def pl_page(fname, canon, title, desc, title_en, desc_en, main, en, schema, js=''):
     oh, of = B.HEADER, B.FOOTER
     B.HEADER, B.FOOTER = _PLH, _PLF
     try:
         with contextlib.redirect_stdout(io.StringIO()):
             B.SHARED_EN = dict(B.SHARED_EN); B.SHARED_EN.update(SHARED_PL_EN)
-            page(fname, title, desc, title_en, desc_en, canon, main, en, '', schema=schema)
+            page(fname, title, desc, title_en, desc_en, canon, main, en, js, schema=schema)
     finally:
         B.HEADER, B.FOOTER = oh, of
     fp = os.path.join(ROOT, fname); h = open(fp, encoding='utf-8').read()
@@ -106,12 +106,65 @@ main = hero(t, ('Edycja Bachata · Polska 2027', 'Bachata Edition · Poland 2027
   (f'Niezależny ranking szkół bachaty w {NC} miastach Polski, oparty na publicznych danych. Wyniki ogłosimy wiosną 2027.', f'An independent ranking of Bachata schools in {NC} Polish cities, based on public data. Results will be published in spring 2027.'),
   [('cal', f'<b>{N} szkół</b> w {NC} miastach', f'<b>{N} schools</b> in {NC} cities'), ('check', 'Niezależny, <b>nie do kupienia</b>', 'Independent, <b>not for sale</b>'), ('clock', 'Wyniki <b>wiosną 2027</b>', 'Results <b>spring 2027</b>')],
   f'<a class="btn btn-gold" href="#ranking">{t("span", "Zobacz stan na dziś", "See the current standings")}</a><a class="btn btn-ghost" href="/bewerbung.html?lang=en">{t("span", "Zgłoś swoją szkołę", "Enter your school")}</a>')
+import rank_variant as RV
+PL_C = RV.polish_entries(P)
+TX = {k: list(v) if isinstance(v, list) else v for k, v in B.R_TEXT.items()}
+TX['cities'] = {'polska': ['Cała Polska', 'All Poland']}
+TX['cities'].update({k: [v[0], v[1]] for k, v in P.CITIES.items()})
+def _tx(k, pl, en): TX[k] = [pl, en]
+_tx('title_city', 'Najlepsze szkoły bachaty: {c}', 'Best Bachata schools in {c}')
+_tx('title_de', 'Najlepsze szkoły bachaty w Polsce', 'Best Bachata schools in Poland')
+_tx('sub_interim', 'Stan przejściowy: miejsca mogą się jeszcze zmienić do ogłoszenia wyników wiosną 2027.', 'Interim standing: places can still change until the results are published in spring 2027.')
+_tx('help_h', 'Jak działa ranking?', 'How does the ranking work?')
+_tx('help_p', 'Każda szkoła jest oceniana według tych samych publicznych kryteriów, tak samo w każdym kraju. Miejsc nie można kupić.', 'Every school is scored on the same public criteria, identical in every country. Places cannot be bought.')
+_tx('help_how', 'Jak oceniamy', 'How scoring works')
+_tx('help_add', 'Dodaj moją szkołę', 'Add my school')
+_tx('help_tips_h', 'Jak poprawić miejsce swojej szkoły', "How to improve your school's place")
+TX['help_tips'] = [[
+  'Dbaj o wizytówkę w Google i poproś uczniów o opinię (ocena w Google 25 pkt, liczba opinii 10 pkt, aktualne opinie 5 pkt)',
+  'Podaj na stronie rok założenia, zespół instruktorów i poziomy kursów (lata działalności 10 pkt)',
+  'Oferuj lekcję próbną i stałe terminy dla początkujących (oferta dla początkujących 10 pkt)',
+  'Organizuj imprezy i warsztaty, zapraszaj gościnnych instruktorów i pokazuj to w sieci (wydarzenia 10 pkt)',
+  'Regularnie prowadź Instagram (media społecznościowe 10 pkt)',
+  'Potwierdź występy na festiwalach i udział w konkursach linkiem (festiwale 15 pkt, konkursy 5 pkt)'], B.R_TEXT['help_tips'][1]]
+_tx('pts', 'punkty', 'points'); _tx('site', 'Strona', 'Website'); _tx('insta', 'Instagram', 'Instagram')
+_tx('note_h', 'Brakuje Twojej szkoły?', 'Is your school missing?')
+_tx('note_p', 'Zgłoś szkołę bezpłatnie do rankingu 2027.', 'Enter your school for the 2027 ranking for free.')
+_tx('note_btn', 'Zgłoś bezpłatnie', 'Apply for free')
+_tx('page_link', 'Strona szkoły, opinie i głosowanie', 'School page, reviews and voting')
+_tx('vote_h', 'Nagroda publiczności', 'Audience Award')
+_tx('vote_banner', 'Nagroda publiczności: otwórz szkołę i zagłosuj. Jeden głos na osobę, potwierdzony e-mailem. Nagroda jest niezależna od punktów, a wynik ogłosimy razem z rankingiem.', 'Audience Award: open a school and vote. One vote per person, confirmed by email. It is separate from the points, and the result comes with the ranking.')
+_tx('vote_btn', 'Zagłosuj na tę szkołę', 'Vote for this school')
+_tx('vote_mail', 'Twój adres e-mail', 'Your email address')
+_tx('vote_send', 'Wyślij głos', 'Send my vote')
+_tx('news_opt', 'Tak, wysyłajcie mi czasem wiadomości, wydarzenia i oferty związane z bachatą e-mailem. Wypisać się można w każdej chwili.', B.R_TEXT['news_opt'][1])
+_tx('vote_note', 'Jeden głos na osobę. Wyślemy Ci link potwierdzający. Twojego adresu e-mail używamy tylko do tego i do usuwania podwójnych głosów.', B.R_TEXT['vote_note'][1])
+_tx('vote_ok', 'Prawie gotowe: wysłaliśmy Ci e-mail. Kliknij w link, aby Twój głos się liczył. Sprawdź też folder ze spamem.', B.R_TEXT['vote_ok'][1])
+_tx('vote_err', 'To nie zadziałało. Sprawdź adres e-mail i spróbuj ponownie.', B.R_TEXT['vote_err'][1])
+_tx('vote_done', 'Na tym urządzeniu już głosowano. Dziękujemy!', B.R_TEXT['vote_done'][1])
+_tx('prelim_badge', 'Stan przejściowy · nie wynik końcowy, szkoły wciąż rywalizują', 'Interim standing · not final, schools are still competing')
+_tx('prelim_h', 'Jak powstaje stan przejściowy', 'How the interim standing is calculated')
+_tx('prelim_p', 'Na razie liczą się dwa kryteria, które mamy dla wszystkich szkół: ocena w Google (maks. 25 punktów, z korektą dla małej liczby opinii) i liczba opinii (maks. 10 punktów), razem maks. 35 punktów. Stan na październik 2026, z Map Google. Pozostałe kryteria są oznaczone jako „do potwierdzenia” i zostaną dodane, gdy szkoły się zgłoszą lub zbierzemy dane. Pełny ranking według dziewięciu kryteriów i 100 punktów ukaże się wiosną 2027. Miejsca mogą się jeszcze zmienić.', 'For now two criteria count that we have for every school: the Google rating (25 points at most, adjusted for a small number of reviews) and the number of reviews (10 points at most), 35 points at most together. Status: October 2026, from Google Maps. The other criteria are marked “to be confirmed” and are added as schools apply or we collect the data. The full ranking on nine criteria and 100 points follows in spring 2027. Positions can still change.')
+_tx('empty', 'Dla tego miasta nie ma jeszcze wyników.', 'There are no results for this city yet.')
+_PL_TBC = ['Lata nauczania', 'Oferta dla początkujących', 'Wydarzenia i gościnni instruktorzy', 'Media społecznościowe', 'Festiwale', 'Aktualne opinie', 'Udział w konkursach', 'Wygrane konkursy']
+_EN_TBC = ['Years teaching', 'Beginner offer', 'Events and guests', 'Social media', 'Festivals', 'Recent reviews', 'Competitions entered', 'Competitions won']
+_MX = ['10', '10', '10', '10', '15', '5', '5', '5']
+_QUICK = ['polska', 'warszawa', 'krakow', 'wroclaw', 'poznan', 'gdansk', 'lodz']
+pl_js = RV.make_js('polska', {}, TX, PL_C, _QUICK, 35, pl=True, extra={
+  'tbc': ([[n, m] for n, m in zip(_PL_TBC, _MX)], [[n, m] for n, m in zip(_EN_TBC, _MX)]),
+  'literals': {
+    '"Follower · Posts: "': '"Obserwujący · posty: "',
+    '"Zu bestätigen"': '"Do potwierdzenia"',
+    '"Noch ohne Punkte. Schulen bestätigen diese Angaben mit Links bei der Bewerbung."': '"Jeszcze bez punktów. Szkoły potwierdzają te dane linkami przy zgłoszeniu."',
+    '"Jetzt bestätigen"': '"Potwierdź teraz"',
+    '"Keine Stadt gefunden"': '"Nie znaleziono miasta"',
+    '["Jahre im Unterricht","Einsteigerangebot","Events und Gastlehrer","Google-Bewertung","Anzahl Bewertungen","Social Media"]': '["Lata nauczania","Oferta dla początkujących","Wydarzenia i goście","Ocena w Google","Liczba opinii","Media społecznościowe"]',
+    '"Alle "+pl.length+" Schulen anzeigen"': '"Pokaż wszystkie szkoły ("+pl.length+")"',
+  }})
+_tabs = RV.tabs_html(t, [(k, TX['cities'][k][0], TX['cities'][k][1]) for k in _QUICK])
+RANK_SECTION = RV.ranking_section(_tabs, 'Szukaj miasta …', 'Search city …', 'Miasta / Cities')
+main += RANK_SECTION
 main += f'''
-<section class="block alt" id="ranking"><div class="wrap tp" style="max-width:860px">
-  {t("h2", "Najlepsze szkoły bachaty w Polsce: stan na dziś", "The best Bachata schools in Poland: current standings")}
-  {t("p", f"To stan przejściowy, nie wynik końcowy. Pokazujemy {N} szkół, w których potwierdziliśmy zajęcia z bachaty. Punkty (maks. 35) pochodzą z ocen w Google z października 2026.", f"This is an interim standing, not the final result. We show {N} schools where we confirmed Bachata classes. Points (max 35) come from Google ratings as of October 2026.", 'class="muted"')}
-  <div class="box"><h3>{t("span", "Top 5 w Polsce", "Top 5 in Poland")}</h3>{school_list(top5, t)}</div>
-</div></section>
 {sec(t, 1, ("Bachata w polskich miastach", "Bachata in Polish cities"), '<div class="cards two" id="miasta">' + city_cards + '</div>', alt=False).replace('<section class="block"', '<section class="block" id="miasta-sec"')}
 {sec(t, 2, ("Jak oceniamy szkoły bachaty", "How we score Bachata schools"), t("p", *METHOD_PL) + t("p", 'Ranking opiera się wyłącznie na danych publicznych. Miejsca nie można kupić, a płatne wzmianki, jeśli się pojawią, będą oznaczone jako reklama i nie wpływają na punkty. Dane o szkołach zbieramy samodzielnie z Map Google i stron szkół, dlatego mogą zawierać błędy: <a href="/bewerbung.html?lang=en">zgłoś szkołę lub poprawkę</a>.', 'The ranking is based only on public data. Places cannot be bought, and paid mentions, if any, will be labelled as ads and do not affect points. We collect the school data ourselves from Google Maps and the schools\' websites, so it may contain errors: <a href="/bewerbung.html?lang=en">enter a school or send a correction</a>.'), alt=True).replace('<section class="block alt"', '<section class="block alt" id="metoda"')}
 {sec(t, 3, ("Ranking Europy i rankingi krajów", "Europe ranking and country rankings"), t("p", 'Latin Dance Awards tworzy jeden ranking szkół w całej Europie oraz osobny ranking dla każdego kraju. Polska jest drugim krajem po Niemczech. Zobacz <a href="/">przegląd Europy</a> albo <a href="/deutschland.html">ranking Niemiec</a>.', 'Latin Dance Awards builds one ranking of schools across Europe plus a separate ranking for each country. Poland is the second country after Germany. See the <a href="/">Europe overview</a> or the <a href="/rankings.html">Germany ranking</a>.'), alt=False)}
@@ -130,7 +183,7 @@ main += faq_html(t, faq)
 pl_page('pl/index.html', 'pl/', 'Najlepsze szkoły bachaty w Polsce: ranking 2027',
   f'Ranking szkół bachaty w Polsce: {N} szkół w {NC} miastach, z ocenami, punktami i metodą. Wyniki wiosną 2027. Niezależny i nie do kupienia.',
   'The best Bachata schools in Poland: 2027 ranking', f'Ranking of Bachata schools in Poland: {N} schools in {NC} cities with ratings, points and method. Results in spring 2027. Independent and not for sale.',
-  main, t.en, [crumbs('Polska', 'pl/'), faq_schema(faq)])
+  main, t.en, [crumbs('Polska', 'pl/'), faq_schema(faq)], js=pl_js)
 
 # ---------- city pages ----------
 for k, (cpl, cen, loc) in P.CITIES.items():

@@ -8,7 +8,7 @@ CITIES = {
  'szczecin': ('Szczecin', 'Szczecin', 'Szczecinie'), 'bialystok': ('Białystok', 'Białystok', 'Białymstoku'),
  'czestochowa': ('Częstochowa', 'Częstochowa', 'Częstochowie'), 'torun': ('Toruń', 'Toruń', 'Toruniu'), 'kielce': ('Kielce', 'Kielce', 'Kielcach'),
  'rzeszow': ('Rzeszów', 'Rzeszów', 'Rzeszowie'), 'radom': ('Radom', 'Radom', 'Radomiu'), 'olsztyn': ('Olsztyn', 'Olsztyn', 'Olsztynie'),
- 'opole': ('Opole', 'Opole', 'Opolu'), 'bielsko-biala': ('Bielsko-Biała', 'Bielsko-Biała', 'Bielsku-Białej'),
+ 'tarnow': ('Tarnów', 'Tarnów', 'Tarnowie'), 'opole': ('Opole', 'Opole', 'Opolu'), 'bielsko-biala': ('Bielsko-Biała', 'Bielsko-Biała', 'Bielsku-Białej'),
 }
 # (name, city, rating, reviews, website)
 SCHOOLS = [
@@ -75,6 +75,8 @@ SCHOOLS = [
  ('DANCE#LOVEit & Corazon', 'bielsko-biala', 5.0, 84, 'https://danceloveit.pl'),
  ('Salsa Bielsko', 'bielsko-biala', 5.0, 30, 'https://www.salsa.bielsko.pl'),
  ('Szkoła Tańca Cubana', 'bielsko-biala', 4.8, 80, 'https://www.cubana.bielsko.pl'),
+ ('Sun Salsa', 'tarnow', 4.9, 95, 'https://sunsalsa.pl'),
+ ('Baila Studio Tańca', 'tarnow', 5.0, 17, 'https://bailastudio.pl'),
 ]
 import math
 def pts(r, v):

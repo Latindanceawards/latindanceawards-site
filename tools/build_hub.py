@@ -6,6 +6,7 @@ with contextlib.redirect_stdout(io.StringIO()):
     import build as B
 import poland_data as P
 from build import T, page, crumbs, faq_schema, ICON, ROOT
+import rank_variant as RV
 
 def f1(x): return f'{x:.1f}'.replace('.', ',')
 def _num(x): return float(x.replace(',', '.'))
@@ -94,18 +95,27 @@ CSS = ('<style>.eu-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
  '.eu-more{margin-top:18px;text-align:center}'
  '@media(max-width:560px){.eu-list li{grid-template-columns:28px 1fr}.eu-list span{grid-column:2;grid-row:auto;text-align:left}}</style>')
 
-main = hero_html + CSS + f'''
-<section class="block alt" id="ranking"><div class="wrap tp" style="max-width:900px">
-  {t("h2", "Europa-Ranking: der Zwischenstand", "Europe ranking: the interim standing")}
-  {t("p", f"Alle {len(ALL)} Schulen aus allen Ländern in einer Liste, nach demselben Zwischenstand sortiert: gewichtete Google-Bewertung und Zahl der Bewertungen, höchstens 35 Punkte. Stand: Oktober 2026. Das ist kein Endergebnis.", f"All {len(ALL)} schools from all countries in one list, sorted by the same interim score: weighted Google rating and number of reviews, 35 points at most. Status: October 2026. This is not a final result.")}
-  <div class="eu-filter" role="group" aria-label="Filter">
-    <button type="button" data-f="all" aria-pressed="true">{t("span", f"Alle Länder ({len(ALL)})", f"All countries ({len(ALL)})")}</button>
-    <button type="button" data-f="de" aria-pressed="false">{t("span", f"Deutschland ({ND})", f"Germany ({ND})")}</button>
-    <button type="button" data-f="pl" aria-pressed="false">{t("span", f"Polen ({NP})", f"Poland ({NP})")}</button>
-  </div>
-  <ol class="eu-list" id="eu-list">{rows}</ol>
-  <p class="eu-more"><button type="button" class="btn btn-ghost" id="eu-more">{t("span", "Alle anzeigen", "Show all")}</button></p>
-</div></section>
+DE_C = RV.german_entries(); PL_C = RV.polish_entries(P)
+CANDS = dict(DE_C); CANDS.update(PL_C)
+TX = {k: list(v) if isinstance(v, list) else v for k, v in B.R_TEXT.items()}
+TX['cities'] = {'europa': ['Ganz Europa', 'All Europe'], 'de': ['Deutschland', 'Germany'], 'pl': ['Polen', 'Poland']}
+TX['cities'].update({k: v for k, v in B.R_TEXT['cities'].items() if k != 'deutschland'})
+TX['cities'].update({k: [v[0], v[1]] for k, v in P.CITIES.items()})
+TX['title_de'] = ['Beste Bachata-Schulen Europas', 'Best Bachata schools in Europe']
+TX['sub_interim'] = ['Zwischenstand: Die Platzierungen können sich noch ändern, bis die Länder ihre Ergebnisse veröffentlichen.', 'Interim standing: places can still change until each country publishes its results.']
+TX['help_p'] = ['Jede Schule wird nach denselben öffentlichen Kriterien bewertet, in jedem Land gleich. Platzierungen sind nicht käuflich.', 'Every school is scored on the same public criteria, identical in every country. Places cannot be bought.']
+TX['note_p'] = ['Melde deine Schule kostenlos an, egal in welchem Land.', 'Enter your school for free, in any country.']
+TX['vote_banner'] = ['Publikumspreis: Öffne eine Schule und stimme ab. Eine Stimme pro Person, bestätigt per E-Mail. Der Publikumspreis ist unabhängig von den Punkten, das Ergebnis kommt mit dem jeweiligen Land.', 'Audience Award: open a school and vote. One vote per person, confirmed by email. It is separate from the points, and the result comes with each country.']
+TX['prelim_p'] = ['Für den Europa-Vergleich zählen bisher in jedem Land nur die zwei Kriterien, die überall schon vorliegen: Google-Bewertung (höchstens 25 Punkte) und Anzahl der Bewertungen (höchstens 10 Punkte), zusammen höchstens 35 Punkte. Stand: Oktober 2026, aus Google Maps. Die übrigen Kriterien sind als „zu bestätigen“ markiert und fließen ein, sobald ein Land seine vollständigen Daten hat. Die Länderrankings werden nach allen neun Kriterien mit 100 Punkten bewertet: Deutschland am 20. Dezember 2026, Polen im Frühjahr 2027. Die Platzierungen können sich noch ändern.', 'For the Europe comparison, so far only the two criteria that every country already has are counted: Google rating (25 points at most) and number of reviews (10 points at most), 35 points at most together. Status: October 2026, from Google Maps. The other criteria are marked “to be confirmed” and are added as soon as a country has its full data. The country rankings are scored on all nine criteria with 100 points: Germany on December 20, 2026, Poland in spring 2027. Positions can still change.']
+TBC = ([ 'Jahre im Unterricht', 'Einsteigerangebot', 'Events und Gastlehrer', 'Social Media', 'Festivals', 'Aktuelle Bewertungen', 'Teilnahme an Wettbewerben', 'Wettbewerbe gewonnen'],
+       ['Years teaching', 'Beginner offer', 'Events and guests', 'Social media', 'Festivals', 'Recent reviews', 'Competitions entered', 'Competitions won'])
+MAXV = ['10', '10', '10', '10', '15', '5', '5', '5']
+tbc_pairs = ([[n, m] for n, m in zip(TBC[0], MAXV)], [[n, m] for n, m in zip(TBC[1], MAXV)])
+hub_js = RV.make_js('europa', {'de': list(DE_C), 'pl': list(PL_C)}, TX, CANDS, ['europa', 'de', 'pl'], 35, extra={'tbc': tbc_pairs})
+tabs = RV.tabs_html(t, [('europa', 'Ganz Europa', 'All Europe'), ('de', 'Deutschland', 'Germany'), ('pl', 'Polen', 'Poland')])
+rank_section = RV.ranking_section(tabs, 'Stadt suchen …', 'Search city …', 'Länder und Städte / Countries and cities')
+
+main = hero_html + rank_section + f'''
 <section class="block" id="laender"><div class="wrap tp" style="max-width:900px">
   {t("h2", "Rankings nach Ländern", "Rankings by country")}
   <div class="people">
@@ -123,17 +133,6 @@ main = hero_html + CSS + f'''
   ("Dein Land fehlt?", "Is your country missing?"),
   t("p", 'Wir starten weitere Länder Schritt für Schritt. Schreib uns an <a href="mailto:hello@latindanceawards.com">hello@latindanceawards.com</a>, wenn du eine Schule betreibst oder die Szene in deinem Land kennst.',
         'We are adding more countries step by step. Email <a href="mailto:hello@latindanceawards.com">hello@latindanceawards.com</a> if you run a school or know the scene in your country.'))
-
-hub_js = '''
-  (function(){
-    var list=document.getElementById("eu-list"),more=document.getElementById("eu-more"),f="all",open=false,TOP=%d;
-    function inF(li){return f==="all"||li.getAttribute("data-c")===f;}
-    function render(){var i=0,n=0;[].forEach.call(list.children,function(li){if(!inF(li)){li.hidden=true;return;}n++;i++;li.hidden=!open&&i>TOP;});more.parentNode.hidden=n<=TOP;}
-    [].forEach.call(document.querySelectorAll(".eu-filter button"),function(b){b.addEventListener("click",function(){f=b.getAttribute("data-f");[].forEach.call(document.querySelectorAll(".eu-filter button"),function(x){x.setAttribute("aria-pressed",x===b?"true":"false");});render();});});
-    more.addEventListener("click",function(){open=!open;var en=document.documentElement.lang==="en";more.firstChild.textContent=open?(en?"Show less":"Weniger anzeigen"):(en?"Show all":"Alle anzeigen");more.removeAttribute("data-i18n");render();});
-    render();
-  })();
-''' % TOPN
 
 # Europe header: same shell, nav points at the hub sections
 H0 = B.HEADER
