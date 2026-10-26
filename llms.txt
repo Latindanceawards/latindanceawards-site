@@ -16,3 +16,5 @@ Every school is scored on the same nine public factors, 100 points in total: wei
 ## Contact
 
 - Email: hello@latindanceawards.com
+
+School pages (score, reviews, audience vote): https://latindanceawards.com/schools/ (one page per school, for example https://latindanceawards.com/schools/la-mambita.html)

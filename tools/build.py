@@ -390,6 +390,9 @@ def page(fname, title_de, desc_de, title_en, desc_en, canonical, main_html, en_d
             + '\n</main>\n\n' + FOOTER + '\n\n<script>\n(function(){\n  var EN=' + json.dumps(en, ensure_ascii=False) + ';\n'
             + '  var META={en:{title:' + json.dumps(title_en, ensure_ascii=False) + ',desc:' + json.dumps(desc_en, ensure_ascii=False) + '}};\n'
             + LANG_JS + page_js + '\n  if(start==="en") setLang("en");\n})();\n</script>\n</body>\n</html>\n')
+    if '/' in fname:
+        html = re.sub(r'(href|src)="(?!https?:|/|#|mailto:|tel:|data:|javascript:)', r'\1="/', html)
+        html = re.sub(r'(href|src)=\\"(?!https?:|/|#|mailto:|tel:|data:|javascript:)', r'\1=\\"/', html)
     open(os.path.join(ROOT, fname), 'w', encoding='utf-8').write(html)
     print('wrote', fname, len(html))
 
@@ -942,6 +945,7 @@ R_TEXT = {
  'note_h': ['Deine Schule fehlt noch?', 'Is your school missing?'],
  'note_p': ['Bewirb dich bis zum 30. November kostenlos für die Awards 2026.', 'Enter for the 2026 awards for free by November 30.'],
  'note_btn': ['Kostenlos bewerben', 'Apply for free'],
+ 'page_link': ['Schulseite, Bewertungen und Abstimmung', 'School page, reviews and voting'],
  'vote_h': ['Publikumspreis', 'Audience Award'],
  'vote_banner': ['Publikumspreis: Öffne eine Schule und stimme ab. Eine Stimme pro Person, bestätigt per E-Mail. Der Publikumspreis ist unabhängig von den 100 Punkten, das Ergebnis kommt am 20. Dezember.', 'Audience Award: open a school and vote. One vote per person, confirmed by email. It is separate from the 100 points, and the result comes on December 20.'],
  'vote_btn': ['Für diese Schule abstimmen', 'Vote for this school'],
@@ -1044,6 +1048,7 @@ rank_js = r'''
   var TX = ''' + json.dumps(R_TEXT, ensure_ascii=False) + r''';
   function L(k){ return TX[k][window.LANG==="en"?1:0]; }
   function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+  function slug(n){ return n.toLowerCase().replace(/ä/g,"ae").replace(/ö/g,"oe").replace(/ü/g,"ue").replace(/ß/g,"ss").normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,""); }
   function safeUrl(u){ return /^https?:\/\//i.test(u||"") ? esc(u) : ""; }
   function num(n){ var s=(Math.round(n*10)/10).toFixed(1); return window.LANG==="en"?s:s.replace(".",","); }
 
@@ -1139,6 +1144,7 @@ rank_js = r'''
           why+='<div class="lk" style="color:var(--muted)">'+esc(en?"Not scored yet. Schools confirm these with links when they apply.":"Noch ohne Punkte. Schulen bestätigen diese Angaben mit Links bei der Bewerbung.")+' <a href="bewerbung.html">'+esc(en?"Confirm now":"Jetzt bestätigen")+' →</a></div>';
           why+='<div class="vote"><button type="button" class="btn btn-gold vbtn" data-s="'+esc(e.name)+'" data-c="'+cn(e)+'">&#9733; '+esc(L("vote_btn"))+'</button>'
             +'<form class="vform" hidden novalidate><input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px"><label>'+esc(L("vote_mail"))+'<input type="email" name="email" required autocomplete="email" inputmode="email"></label><button type="submit" class="btn btn-gold">'+esc(L("vote_send"))+'</button><small>'+esc(L("vote_note"))+'</small></form><p class="vmsg" role="status" hidden></p></div>';
+          why+='<div class="lk"><a href="schools/'+slug(e.name)+'.html"><b>'+esc(L("page_link"))+' →</b></a></div>';
           if(u) why+='<div class="lk"><a href="'+u+'" rel="noopener">'+esc(L("site"))+' →</a></div>';
           h+='<li'+(i>=10?' class="more" hidden':'')+'><details class="irk'+g+'"><summary><span class="rk">'+(i===0?CROWN+'<i class="sp a"></i><i class="sp b"></i><i class="sp c"></i><i class="sp d"></i>':'')+(i+1)+'</span><span class="who"><b>'+esc(e.name)+'</b>'
             +(c==="deutschland"?'<small>'+cn(e)+'</small>':'')+'</span><span class="score">'+num(e.pts)+'<small> / 100</small></span><span class="meter"><i style="width:'+e.pts+'%"></i></span></summary>'
@@ -1269,3 +1275,255 @@ legal('datenschutz.html', 'd', 'Datenschutzerklärung · Latin Dance Awards', 'P
  ('Deine Rechte', 'Your rights', 'Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Du kannst dich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren. Schreibe uns einfach an info@latindanceawards.com.', 'You have the right of access, rectification, erasure, restriction, data portability and objection. You may also lodge a complaint with a data protection authority. Just email info@latindanceawards.com.'),
  ('Cookies und Tracking', 'Cookies and tracking', 'Wir setzen derzeit keine Tracking- oder Werbe-Cookies ein. [Prüfen und anpassen, falls später Analyse-Tools hinzukommen.]', 'We currently do not use tracking or advertising cookies. [Review and update if analytics tools are added later.]'),
 ])
+
+
+# ======================================================================
+# SCHOOL PAGES  (schools/<slug>.html)  generated from the interim list
+# ======================================================================
+import unicodedata
+
+def slugify(name):
+    s = name.lower()
+    for a, b in (('ä', 'ae'), ('ö', 'oe'), ('ü', 'ue'), ('ß', 'ss')):
+        s = s.replace(a, b)
+    s = unicodedata.normalize('NFD', s)
+    s = ''.join(c for c in s if not unicodedata.combining(c))
+    return re.sub(r'[^a-z0-9]+', '-', s).strip('-')
+
+def parse_candidates():
+    blk = re.search(r'var CANDIDATES = \{(.*?)\n  \};', rank_js, re.S).group(1)
+    out, city = [], None
+    for line in blk.split('\n'):
+        m = re.match(r'\s*(\w+): \[\s*$', line)
+        if m: city = m.group(1); continue
+        if '{name:' not in line: continue
+        name = re.search(r'name:"([^"]+)"', line).group(1)
+        st = re.search(r'st:\[([^\]]*)\]', line)
+        sc = [float(x) for x in re.search(r'sc:\[([^\]]*)\]', line).group(1).split(',')]
+        fx = re.findall(r'"([^"]*)"', re.search(r'fx:\[([^\]]*)\]', line).group(1))
+        url = re.search(r'url:"([^"]+)"', line).group(1)
+        out.append(dict(name=name, city=city, st=re.findall(r'"([^"]+)"', st.group(1)) if st else [], sc=sc, fx=fx, url=url, pts=round(sum(sc), 1), slug=slugify(name)))
+    return out
+
+CITY_NAMES = {c[0]: (c[1], c[2]) for c in CITIES}
+CITY_NAMES.update({'berlin': ('Berlin', 'Berlin'), 'muenchen': ('München', 'Munich'), 'koeln': ('Köln', 'Cologne'), 'duesseldorf': ('Düsseldorf', 'Düsseldorf')})
+SCH = parse_candidates()
+SCH.sort(key=lambda e: (-e['pts'], e['name']))
+for i, e in enumerate(SCH): e['rank'] = i + 1
+for c in {e['city'] for e in SCH}:
+    for i, e in enumerate([x for x in SCH if x['city'] == c]): e['crank'] = i + 1
+
+SCHOOL_CSS = r'''
+.sp-hero{padding:96px 0 56px;background:radial-gradient(ellipse 55% 60% at 85% 10%,rgba(228,185,91,.10),transparent 60%),linear-gradient(180deg,var(--velvet-deep),var(--velvet))}
+.sp-crumb{font-size:14px;color:var(--muted);margin-bottom:20px}.sp-crumb a{color:var(--gold-light);text-decoration:none}
+.sp-hero .wrap{display:grid;grid-template-columns:1fr auto;gap:36px;align-items:end}
+.sp-hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5vw,64px);line-height:1.05;margin:16px 0 14px}
+.sp-hero .lede{color:var(--muted);font-size:18px;max-width:34em}
+.sp-score{text-align:center;padding:22px 30px;border-radius:24px;background:var(--card);border:1px solid rgba(228,185,91,.4)}
+.sp-score b{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(46px,7vw,76px);line-height:1;color:var(--gold-light)}
+.sp-score small{color:var(--muted);font-size:14px}
+.sp-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start}
+.sp-card{padding:30px;border-radius:24px;background:var(--card);border:1px solid var(--line)}
+.sp-card h2{font-family:var(--serif);font-weight:500;font-size:28px;margin-bottom:6px}
+.sp-card > p{color:var(--muted);margin-bottom:16px}
+.sp-row{padding:12px 0;border-top:1px solid rgba(255,255,255,.07);font-size:15px;color:var(--muted)}
+.sp-row:first-of-type{border-top:0}
+.sp-row b{color:var(--cream);font-weight:600}
+.sp-row .bar{height:5px;margin-top:8px;border-radius:5px;background:rgba(255,255,255,.07);overflow:hidden}
+.sp-row .bar i{display:block;height:100%;background:var(--gold)}
+.sp-row .chip{display:inline-block;padding:2px 10px;border-radius:999px;border:1px dashed rgba(228,185,91,.55);color:var(--gold-light);font-size:12px;font-weight:600}
+.sp-row .chip.st{border:1px solid rgba(228,185,91,.5);background:rgba(228,185,91,.16);color:#E4B95B}
+.sp-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.sp-form{display:grid;gap:12px;max-width:520px}
+.sp-form label{display:grid;gap:6px;color:var(--cream);font-size:14px}
+.sp-form input[type=email],.sp-form input[type=text],.sp-form textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(246,231,211,.35);background:rgba(255,255,255,.06);color:var(--cream);font:inherit;font-size:16px}
+.sp-form textarea{min-height:110px;resize:vertical}
+.sp-form small,.sp-msg{color:var(--muted);font-size:13px;line-height:1.5}
+.sp-msg{margin:12px 0 0;color:var(--gold-light);font-size:14.5px}
+.sp-card [hidden]{display:none!important}
+.sp-hero button.btn:not(.btn-gold),.sp-card button.btn:not(.btn-gold){background:transparent;color:var(--cream);border:1px solid rgba(246,231,211,.35)}
+.sp-hero button.btn,.sp-card button.btn{font:inherit;font-weight:600;cursor:pointer;-webkit-appearance:none;appearance:none}
+.sp-stars{display:flex;gap:6px;flex-direction:row-reverse;justify-content:flex-end}
+.sp-stars input{position:absolute;opacity:0;width:1px;height:1px}
+.sp-stars label{font-size:32px;line-height:1;color:rgba(246,231,211,.28);cursor:pointer;display:block}
+.sp-stars input:checked ~ label,.sp-stars label:hover,.sp-stars label:hover ~ label{color:var(--gold)}
+.sp-stars input:focus-visible + label{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.sp-sum{display:flex;align-items:center;gap:12px;margin:10px 0 18px;color:var(--muted)}
+.sp-sum b{font-family:var(--serif);font-size:38px;color:var(--gold-light);font-weight:500}
+.sp-rv{padding:16px 0;border-top:1px solid rgba(255,255,255,.08)}
+.sp-rv .top{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:13px}
+.sp-rv .st{color:var(--gold);letter-spacing:2px}
+.sp-rv p{margin:6px 0;color:var(--cream);font-size:15.5px;white-space:pre-line;overflow-wrap:anywhere}
+.sp-rv a{color:var(--muted);font-size:12.5px}
+.sp-two{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+@media(max-width:860px){.sp-hero .wrap,.sp-grid,.sp-two{grid-template-columns:1fr}.sp-hero{padding-top:84px}.sp-score{justify-self:start}}
+'''
+
+SCHOOL_JS = r'''
+  var SCHOOL = __SCHOOL__, EP = "__EP__", MAILTO = "hello@latindanceawards.com";
+  var S = {
+    vote_btn:["Für diese Schule abstimmen","Vote for this school"], vote_mail:["Deine E-Mail-Adresse","Your email address"], vote_send:["Stimme abschicken","Send my vote"],
+    vote_note:["Eine Stimme pro Person. Wir schicken dir einen Bestätigungslink. Deine E-Mail nutzen wir nur dafür und zum Entfernen doppelter Stimmen.","One vote per person. We email you a confirmation link. We use your email only for that and to remove duplicate votes."],
+    vote_ok:["Fast geschafft: Wir haben dir eine E-Mail geschickt. Klicke auf den Link darin, damit deine Stimme zählt. Schau auch im Spam-Ordner nach.","Almost done: we sent you an email. Click the link in it so your vote counts. Check your spam folder too."],
+    vote_done:["Du hast auf diesem Gerät schon abgestimmt. Danke!","You already voted on this device. Thank you!"],
+    err_mail:["Bitte prüfe deine E-Mail-Adresse und versuche es noch einmal.","Please check your email address and try again."],
+    rv_ok:["Fast geschafft: Wir haben dir eine E-Mail geschickt. Klicke auf den Link darin, dann erscheint deine Bewertung hier.","Almost done: we sent you an email. Click the link in it and your review will appear here."],
+    rv_err:["Bitte wähle Sterne und schreibe 10 bis 600 Zeichen, ohne Links und ohne @.","Please pick a star rating and write 10 to 600 characters, with no links and no @."],
+    none:["Noch keine Bewertungen. Sei die erste Person!","No reviews yet. Be the first!"], report:["Melden","Report"], anon:["Anonym","Anonymous"],
+    of:["Bewertungen","reviews"], one:["Bewertung","review"], fail:["Bewertungen konnten nicht geladen werden.","Reviews could not be loaded."],
+    copied:["Link kopiert","Link copied"]
+  };
+  function L(k){ return S[k][window.LANG==="en"?1:0]; }
+  function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+  var mailRe=/^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+  /* vote */
+  var vb=document.getElementById("vbtn"), vf=document.getElementById("vform"), vm=document.getElementById("vmsg");
+  try{ if(localStorage.getItem("lda-voted")){ vb.hidden=true; vm.textContent=L("vote_done"); vm.hidden=false; document.addEventListener("langchange",function(){ if(!vm.hidden&&vb.hidden&&vf.hidden) vm.textContent=L("vote_done"); }); } }catch(x){}
+  vb.addEventListener("click",function(){ vf.hidden=false; vb.hidden=true; vf.elements.email.focus(); });
+  vf.addEventListener("submit",function(ev){ ev.preventDefault(); var em=vf.elements.email.value.trim();
+    if(!mailRe.test(em)){ vm.textContent=L("err_mail"); vm.hidden=false; return; }
+    var sub=vf.querySelector("button[type=submit]"); sub.disabled=true;
+    var b=new URLSearchParams({action:"vote",school:SCHOOL.name,city:SCHOOL.city,email:em,hp:vf.elements.hp.value,language:window.LANG==="en"?"EN":"DE"});
+    fetch(EP,{method:"POST",mode:"no-cors",body:b}).then(function(){ try{localStorage.setItem("lda-voted","1");}catch(x){} vf.hidden=true; vm.textContent=L("vote_ok"); vm.hidden=false; }).catch(function(){ sub.disabled=false; vm.textContent=L("err_mail"); vm.hidden=false; });
+  });
+
+  /* reviews: list */
+  var rl=document.getElementById("rvlist"), rs=document.getElementById("rvsum");
+  function stars(n){ return "★★★★★".slice(0,n)+"☆☆☆☆☆".slice(0,5-n); }
+  function loadReviews(){
+    fetch(EP+"?action=reviews&school="+encodeURIComponent(SCHOOL.name)).then(function(r){return r.json();}).then(function(d){
+      rs.innerHTML = d.count ? '<b>'+String(d.avg).replace(".",window.LANG==="en"?".":",")+'</b><span><span class="st" style="color:var(--gold)">'+stars(Math.round(d.avg))+'</span><br>'+d.count+' '+L(d.count===1?"one":"of")+'</span>' : "";
+      rl.innerHTML = d.count ? d.items.map(function(x){ return '<div class="sp-rv"><div class="top"><span class="st">'+stars(x.r)+'</span><span>'+esc(x.n||L("anon"))+' · '+esc(x.d)+'</span></div><p>'+esc(x.t)+'</p><a href="mailto:'+MAILTO+'?subject='+encodeURIComponent("Report review: "+SCHOOL.name)+'&body='+encodeURIComponent(x.d+" / "+(x.n||"")+" / "+x.t.slice(0,60))+'">'+esc(L("report"))+'</a></div>'; }).join("") : '<p class="sp-msg" style="color:var(--muted)">'+esc(L("none"))+'</p>';
+    }).catch(function(){ rl.innerHTML='<p class="sp-msg" style="color:var(--muted)">'+esc(L("fail"))+'</p>'; });
+  }
+  loadReviews(); document.addEventListener("langchange",loadReviews);
+
+  /* reviews: submit */
+  var rf=document.getElementById("rvform"), rm=document.getElementById("rvmsg");
+  rf.addEventListener("submit",function(ev){ ev.preventDefault();
+    var rating=(rf.querySelector("input[name=rating]:checked")||{}).value, text=rf.elements.text.value.trim(), name=rf.elements.name.value.trim(), em=rf.elements.email.value.trim();
+    if(!rating||text.length<10||text.length>600||/https?:|www\.|@/i.test(text+" "+name)){ rm.textContent=L("rv_err"); rm.hidden=false; return; }
+    if(!mailRe.test(em)){ rm.textContent=L("err_mail"); rm.hidden=false; return; }
+    var sub=rf.querySelector("button[type=submit]"); sub.disabled=true;
+    var b=new URLSearchParams({action:"review",school:SCHOOL.name,city:SCHOOL.city,name:name,rating:rating,text:text,email:em,hp:rf.elements.hp.value,language:window.LANG==="en"?"EN":"DE"});
+    fetch(EP,{method:"POST",mode:"no-cors",body:b}).then(function(){ rf.hidden=true; rm.textContent=L("rv_ok"); rm.hidden=false; }).catch(function(){ sub.disabled=false; rm.textContent=L("err_mail"); rm.hidden=false; });
+  });
+
+  /* share */
+  var sh=document.getElementById("share");
+  sh.addEventListener("click",function(){ var u=location.origin+location.pathname;
+    if(navigator.share){ navigator.share({title:document.title,url:u}).catch(function(){}); }
+    else if(navigator.clipboard){ navigator.clipboard.writeText(u).then(function(){ var o=sh.textContent; sh.textContent=L("copied"); setTimeout(function(){ sh.innerHTML=o; },1600); }); } });
+'''
+
+def build_school(e):
+    s = T('s')
+    en_city = CITY_NAMES[e['city']][1]; de_city = CITY_NAMES[e['city']][0]
+    nm = e['name']
+    FAC = [('Jahre im Unterricht', 'Years teaching', 10), ('Einsteigerangebot', 'Beginner offer', 10), ('Events und Gastlehrer', 'Events and guests', 10),
+           ('Google-Bewertung', 'Google rating', 25), ('Anzahl Bewertungen', 'Number of reviews', 10), ('Social Media', 'Social media', 10)]
+    rows = ''
+    for k, (de, en, mx) in enumerate(FAC):
+        fx = e['fx'][0] if k == 3 else (e['fx'][0].split(' · ')[1] if k == 4 and ' · ' in e['fx'][0] else (e['fx'][1] if k == 5 else ''))
+        small = f' <small>({fx})</small>' if fx and fx != '–' else ''
+        pts = f"{e['sc'][k]:g}".replace('.', ',')
+        rows += f'<div class="sp-row"><b>{s("span", de, en)}</b> · {pts} / {mx}{small}<div class="bar"><i style="width:{e["sc"][k]/mx*100:.0f}%"></i></div></div>\n'
+    sty = ' '.join(f'<span class="chip st">{x}</span>' for x in e['st']) or f'<span class="chip">{s("span", "Zu bestätigen", "To be confirmed")}</span>'
+    rows += f'<div class="sp-row"><b>{s("span", "Stilvielfalt (Dominicana, Sensual, Moderna)", "Style variety (Dominicana, Sensual, Moderna)")}</b> · {sty}</div>\n'
+    for de, en in (('Festivals', 'Festivals'), ('Aktuelle Bewertungen', 'Recent reviews'), ('Teilnahme an Wettbewerben', 'Competitions entered'), ('Wettbewerbe gewonnen', 'Competitions won')):
+        rows += f'<div class="sp-row"><b>{s("span", de, en)}</b> · <span class="chip">{s("span", "Zu bestätigen", "To be confirmed")}</span></div>\n'
+    maps = 'https://www.google.com/maps/search/?api=1&query=' + re.sub(r'%20', '+', __import__('urllib.parse', fromlist=['quote']).quote(f'{nm} {de_city}'))
+    pts_s = f"{e['pts']:g}".replace('.', ',')
+    crank, rank = e['crank'], e['rank']
+    h1 = f'{nm}'
+    main = f'''
+<section class="sp-hero" aria-labelledby="sp-title">
+  <div class="wrap">
+    <div>
+      <p class="sp-crumb"><a href="/rankings.html">{s("span", "Rankings 2026", "Rankings 2026")}</a> › {de_city if True else ''}</p>
+      <span class="edition"><i></i>{s("span", "Zwischenstand · kein Endergebnis", "Interim standing · not final")}</span>
+      <h1 id="sp-title">{h1}</h1>
+      <p class="lede">{s("span", f"Bachata-Schule in {de_city}. Zwischenstand im Ranking: Platz {crank} in {de_city}, Platz {rank} in Deutschland. Die Schulen sind noch im Wettbewerb.", f"Bachata school in {en_city}. Interim ranking: place {crank} in {en_city}, place {rank} in Germany. The schools are still competing.")}</p>
+      <div class="sp-links"><button type="button" class="btn btn-ghost" id="share">{s("span", "Teilen", "Share")}</button></div>
+    </div>
+    <div class="sp-score"><b>{pts_s}</b><small>/ 100 · {s("span", "Zwischenstand", "interim")}</small></div>
+  </div>
+</section>
+
+<section class="block alt" aria-label="Details">
+  <div class="wrap sp-grid">
+    <div class="sp-card">
+      {s("h2", "So setzt sich die Punktzahl zusammen", "How the score is made up")}
+      {s("p", "Sechs von neun Kriterien sind bisher gewertet (höchstens 75 Punkte). Offene Kriterien zählen noch nicht und können Schulen bei der Bewerbung bestätigen. Datenstand: Oktober 2026 (Google, Instagram, Website der Schule).", "Six of nine factors are scored so far (75 points at most). Open factors do not count yet, and schools can confirm them when they apply. Data as of October 2026 (Google, Instagram, the school's website).")}
+      {rows}
+      <div class="sp-links"><a class="btn btn-ghost" href="{e['url']}" rel="noopener nofollow" target="_blank">{s("span", "Website der Schule →", "School website →")}</a><a class="btn btn-ghost" href="{maps}" rel="noopener nofollow" target="_blank">{s("span", "Auf Google Maps →", "On Google Maps →")}</a></div>
+    </div>
+    <div class="sp-card">
+      {s("h2", "Publikumspreis: abstimmen", "Audience Award: vote")}
+      {s("p", "Eine Stimme pro Person, bestätigt per E-Mail. Der Publikumspreis ist unabhängig von den 100 Punkten. Das Ergebnis kommt am 20. Dezember.", "One vote per person, confirmed by email. The Audience Award is separate from the 100 points. The result comes on December 20.")}
+      <button type="button" class="btn btn-gold" id="vbtn">&#9733; {s("span", "Für diese Schule abstimmen", "Vote for this school")}</button>
+      <form class="sp-form" id="vform" hidden novalidate>
+        <input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <label>{s("span", "Deine E-Mail-Adresse", "Your email address")}<input type="email" name="email" required autocomplete="email" inputmode="email"></label>
+        <button type="submit" class="btn btn-gold">{s("span", "Stimme abschicken", "Send my vote")}</button>
+        <small>{s("span", "Eine Stimme pro Person. Wir schicken dir einen Bestätigungslink. Deine E-Mail nutzen wir nur dafür und zum Entfernen doppelter Stimmen. Mehr in der <a href=\"/datenschutz.html\">Datenschutzerklärung</a>.", "One vote per person. We email you a confirmation link. We use your email only for that and to remove duplicate votes. More in the <a href=\"/datenschutz.html\">privacy policy</a>.")}</small>
+      </form>
+      <p class="sp-msg" id="vmsg" role="status" hidden></p>
+    </div>
+  </div>
+</section>
+
+<section class="block" aria-labelledby="rv-title">
+  <div class="wrap sp-two">
+    <div class="sp-card">
+      <h2 id="rv-title">{s("span", "Bewertungen", "Reviews")}</h2>
+      <div class="sp-sum" id="rvsum"></div>
+      <div id="rvlist"></div>
+    </div>
+    <div class="sp-card">
+      {s("h2", "Schreibe eine Bewertung", "Write a review")}
+      {s("p", "Warst du in dieser Schule? Erzähle kurz, wie es war. Deine Bewertung erscheint, sobald du den Link in unserer E-Mail anklickst. Bitte bleib sachlich und fair.", "Have you been to this school? Tell us briefly how it was. Your review appears once you click the link in our email. Please stay factual and fair.")}
+      <form class="sp-form" id="rvform" novalidate>
+        <input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <div role="radiogroup" aria-label="Sterne / Stars"><div class="sp-stars">
+          <input type="radio" name="rating" value="5" id="st5"><label for="st5" title="5">★</label>
+          <input type="radio" name="rating" value="4" id="st4"><label for="st4" title="4">★</label>
+          <input type="radio" name="rating" value="3" id="st3"><label for="st3" title="3">★</label>
+          <input type="radio" name="rating" value="2" id="st2"><label for="st2" title="2">★</label>
+          <input type="radio" name="rating" value="1" id="st1"><label for="st1" title="1">★</label>
+        </div></div>
+        <label>{s("span", "Dein Name (freiwillig)", "Your name (optional)")}<input type="text" name="name" maxlength="40" autocomplete="nickname"></label>
+        <label>{s("span", "Deine Bewertung (10 bis 600 Zeichen, keine Links)", "Your review (10 to 600 characters, no links)")}<textarea name="text" maxlength="600" required></textarea></label>
+        <label>{s("span", "Deine E-Mail-Adresse (wird nicht veröffentlicht)", "Your email address (not published)")}<input type="email" name="email" required autocomplete="email" inputmode="email"></label>
+        <button type="submit" class="btn btn-gold">{s("span", "Bewertung abschicken", "Submit review")}</button>
+        <small>{s("span", "Wir nutzen deine E-Mail nur zur Bestätigung. Eine Bewertung pro Person und Schule. Unpassende Bewertungen entfernen wir. Mehr in der <a href=\"/datenschutz.html\">Datenschutzerklärung</a>.", "We use your email only for confirmation. One review per person and school. We remove inappropriate reviews. More in the <a href=\"/datenschutz.html\">privacy policy</a>.")}</small>
+      </form>
+      <p class="sp-msg" id="rvmsg" role="status" hidden></p>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" aria-labelledby="own-title">
+  <div class="wrap">
+    <div class="sp-card" style="max-width:760px">
+      {s("h2", "Ist das deine Schule?", "Is this your school?").replace("<h2", '<h2 id="own-title"')}
+      {s("p", "Du kannst deine Daten ergänzen oder korrigieren, zum Beispiel Festivals, Wettbewerbe und Gründungsjahr. Wenn du nicht im Ranking stehen möchtest, schreib uns kurz, dann entfernen wir deine Schule.", "You can add or correct your data, for example festivals, competitions and founding year. If you would rather not be listed, send us a short message and we will remove your school.")}
+      <div class="sp-links"><a class="btn btn-gold" href="/bewerbung.html">{s("span", "Daten ergänzen oder korrigieren", "Add or correct my data")}</a><a class="btn btn-ghost" href="mailto:hello@latindanceawards.com?subject={__import__('urllib.parse', fromlist=['quote']).quote('Remove or correct: ' + nm)}">{s("span", "Schule entfernen lassen", "Remove my school")}</a></div>
+    </div>
+  </div>
+</section>
+'''
+    title_de = f'{nm} · Bachata {de_city} · Bewertungen'
+    desc_de = f'{nm} in {de_city}: Punkte, Platz {crank} im Zwischenstand des Bachata-Rankings, Bewertungen und Abstimmung für den Publikumspreis.'
+    title_en = f'{nm} · Bachata {en_city} · Reviews'
+    desc_en = f'{nm} in {en_city}: score, place {crank} in the interim Bachata ranking, reviews and voting for the Audience Award.'
+    js = SCHOOL_JS.replace('__SCHOOL__', json.dumps({'name': nm, 'city': de_city}, ensure_ascii=False)).replace('__EP__', re.search(r'var VOTE_ENDPOINT = "([^"]+)"', rank_js).group(1))
+    schema = [crumbs(nm, f'schools/{e["slug"]}.html'), {"@context": "https://schema.org", "@type": "LocalBusiness", "name": nm, "url": e['url'],
+              "address": {"@type": "PostalAddress", "addressLocality": de_city, "addressCountry": "DE"}}]
+    page(f'schools/{e["slug"]}.html', title_de, desc_de, title_en, desc_en, f'schools/{e["slug"]}.html', main, s.en, js, schema=schema)
+
+PAGE_CSS += SCHOOL_CSS
+os.makedirs(os.path.join(ROOT, 'schools'), exist_ok=True)
+for _e in SCH: build_school(_e)
+print('school pages:', len(SCH))
