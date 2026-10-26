@@ -1942,8 +1942,14 @@ def kit_body(s, with_select=False, opts=''):
     </div>
     <p class="kit-msg" role="status"></p>"""
 
-def kit_section(s, nm, de_city, slug):
-    return f"""<section class="block" aria-labelledby="kit-title">
+GUIDE_CITIES = {'berlin','hamburg','muenchen','koeln','frankfurt','stuttgart','duesseldorf','freiburg','dresden','nuernberg','bremen','saarbruecken','gelsenkirchen','bonn','kempten','oldenburg','essen','karlsruhe'}
+
+def kit_section(s, nm, de_city, slug, ckey=None):
+    more = ''
+    if ckey in GUIDE_CITIES:
+        more = f'''<section class="block"><div class="wrap"><div class="kit" style="padding:20px 28px">{s("p", f'Mehr Schulen, Kurse und Partys: <a href="/bachata-{ckey}.html">Bachata {de_city}: alle Schulen im Überblick</a>.', f'More schools, classes and parties: <a href="/bachata-{ckey}.html">Bachata {de_city}: all schools at a glance</a>.')}</div></div></section>
+'''
+    return more + f"""<section class="block" aria-labelledby="kit-title">
   <div class="wrap">
     <div class="kit" id="share">
       {s("h2", "Teile diese Seite und hol dir Stimmen", "Share this page and collect votes").replace("<h2", '<h2 id="kit-title"')}
@@ -2043,7 +2049,7 @@ def build_school(e):
   </div>
 </section>
 
-{kit_section(s, nm, de_city, e['slug'])}
+{kit_section(s, nm, de_city, e['slug'], e['city'])}
 <section class="block alt" aria-labelledby="own-title">
   <div class="wrap">
     <div class="sp-card" style="max-width:760px">

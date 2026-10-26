@@ -8,6 +8,21 @@ PAGES = {  # page: (main keyword, target word count from competitor research or 
     'bachata-berlin.html': ('Bachata Berlin', 900),
     'bachata-hamburg.html': ('Bachata Hamburg', 900),
     'bachata-muenchen.html': ('Bachata München', 850),
+    'bachata-koeln.html': ('Bachata Köln', 800),
+    'bachata-frankfurt.html': ('Bachata Frankfurt', 800),
+    'bachata-stuttgart.html': ('Bachata Stuttgart', 800),
+    'bachata-duesseldorf.html': ('Bachata Düsseldorf', 800),
+    'bachata-freiburg.html': ('Bachata Freiburg', 800),
+    'bachata-dresden.html': ('Bachata Dresden', 800),
+    'bachata-nuernberg.html': ('Bachata Nürnberg', 800),
+    'bachata-bremen.html': ('Bachata Bremen', 800),
+    'bachata-saarbruecken.html': ('Bachata Saarbrücken', 800),
+    'bachata-gelsenkirchen.html': ('Bachata Gelsenkirchen', 800),
+    'bachata-bonn.html': ('Bachata Bonn', 800),
+    'bachata-kempten.html': ('Bachata Kempten', 800),
+    'bachata-oldenburg.html': ('Bachata Oldenburg', 800),
+    'bachata-essen.html': ('Bachata Essen', 800),
+    'bachata-karlsruhe.html': ('Bachata Karlsruhe', 800),
 }
 sitemap = open(os.path.join(ROOT, 'sitemap.xml')).read()
 llms = open(os.path.join(ROOT, 'llms.txt')).read()
