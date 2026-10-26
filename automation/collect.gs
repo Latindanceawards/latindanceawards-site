@@ -69,7 +69,7 @@ function handleApplication_(e) {
 var VOTE_SHEET = 'Votes';
 var VOTE_HEAD = ['Submitted at', 'School', 'City', 'Email (normalized)', 'Token', 'Status', 'Confirmed at', 'Language', 'Newsletter opt-in'];
 var REVIEW_SHEET = 'Reviews';
-var REVIEW_HEAD = ['Submitted at', 'School', 'City', 'Name', 'Rating', 'Text', 'Email (normalized)', 'Token', 'Status', 'Confirmed at', 'Language'];
+var REVIEW_HEAD = ['Submitted at', 'School', 'City', 'Name', 'Rating', 'Text', 'Email (normalized)', 'Token', 'Status', 'Confirmed at', 'Language', 'Newsletter opt-in'];
 var MAX_MAILS_PER_DAY = 90;
 // Reviews appear on the website once the e-mail link is clicked (Status "Confirmed").
 // To approve each review by hand first, set this to true: only rows you change to "Approved" are shown.
