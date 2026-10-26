@@ -2,6 +2,7 @@
 import json, re, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root
 idx = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
+NAV_JS = re.search(r'<script>\n\(function\(\)\{var n=document\.querySelector\("\.nav"\).*?</script>\n', idx, re.S).group(0)
 
 HEAD_CSS = idx[idx.index('<style>') + 7: idx.index('</style>')]
 HEADER = idx[idx.index('<header class="nav">'): idx.index('</header>') + 9]
@@ -403,7 +404,7 @@ def page(fname, title_de, desc_de, title_en, desc_en, canonical, main_html, en_d
     html = (head + '<style>' + HEAD_CSS + PAGE_CSS + '</style>\n</head>\n<body>\n\n' + HEADER + '\n\n<main id="top">\n' + main_html
             + '\n</main>\n\n' + FOOTER + '\n\n<script>\n(function(){\n  var EN=' + json.dumps(en, ensure_ascii=False) + ';\n'
             + '  var META={en:{title:' + json.dumps(title_en, ensure_ascii=False) + ',desc:' + json.dumps(desc_en, ensure_ascii=False) + '}};\n'
-            + LANG_JS + page_js + '\n  if(start==="en") setLang("en");\n})();\n</script>\n</body>\n</html>\n')
+            + LANG_JS + page_js + '\n  if(start==="en") setLang("en");\n})();\n</script>\n' + NAV_JS + '</body>\n</html>\n')
     if '/' in fname:
         html = re.sub(r'(href|src)="(?!https?:|/|#|mailto:|tel:|data:|javascript:)', r'\1="/', html)
         html = re.sub(r'(href|src)=\\"(?!https?:|/|#|mailto:|tel:|data:|javascript:)', r'\1=\\"/', html)
