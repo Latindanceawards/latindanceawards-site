@@ -27,6 +27,8 @@ CITIES = {
  'trento': ('Trento', 'Trento', 'a Trento'),
  'varese': ('Varese', 'Varese', 'a Varese'),
  'pescara': ('Pescara', 'Pescara', 'a Pescara'),
+ 'salerno': ('Salerno', 'Salerno', 'a Salerno'),
+ 'treviso': ('Treviso', 'Treviso', 'a Treviso'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 SCHOOLS = [
@@ -89,6 +91,9 @@ SCHOOLS = [
  ('Latin Paradise Club', 'varese', 4.8, 166, 'https://www.latinparadise.it'),
  ('Agua Academy', 'pescara', 5.0, 77, 'https://www.aguaacademy.it'),
  ('Star Dance', 'pescara', 4.9, 63, 'https://www.stardance.org'),
+ ('Starlight Dance', 'salerno', 5.0, 10, 'https://starlightdancesalerno.it'),
+ ('JAcademy', 'treviso', 5.0, 44, 'https://jacademyasd.it'),
+ ('Over Dance', 'treviso', 4.9, 159, 'https://www.overdance.it'),
 ]
 # Scoring data not collected yet for Italy (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
