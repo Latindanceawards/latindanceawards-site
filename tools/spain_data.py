@@ -37,6 +37,12 @@ CITIES = {
  'hospitalet': ("L'Hospitalet de Llobregat", "L'Hospitalet de Llobregat", "L'Hospitalet de Llobregat"),
  'granollers': ('Granollers', 'Granollers', 'Granollers'),
  'santiago': ('Santiago de Compostela', 'Santiago de Compostela', 'Santiago de Compostela'),
+ 'sant-cugat': ('Sant Cugat del Vallès', 'Sant Cugat del Vallès', 'Sant Cugat del Vallès'),
+ 'torrent': ('Torrent', 'Torrent', 'Torrent'),
+ 'gandia': ('Gandía', 'Gandía', 'Gandía'),
+ 'reus': ('Reus', 'Reus', 'Reus'),
+ 'badajoz': ('Badajoz', 'Badajoz', 'Badajoz'),
+ 'leon': ('León', 'León', 'León'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 # (name, city, rating, reviews, website)
@@ -180,6 +186,14 @@ SCHOOLS = [
  ('Danger Dance', 'granollers', 5.0, 111, 'https://dangerdance.com'),
  ('Vladimir Cossio Clases de Baile', 'santiago', 5.0, 50, 'https://clasesdebailesantiago.com'),
  ('David y Aylin Bachata', 'santiago', 5.0, 45, 'https://davidyaylin.com'),
+ ('SCD Academy', 'sant-cugat', 4.9, 116, 'https://www.scdacademy.com'),
+ ('Art i Ball Dance Studio', 'torrent', 4.7, 54, 'https://artiball.com'),
+ ('La Clave del Cuarto', 'gandia', 4.8, 135, 'https://www.laclavedelcuarto.com'),
+ ('Gandía Baila', 'gandia', 4.9, 30, 'https://gandiabaila.es'),
+ ('Recchiadanza', 'reus', 5.0, 134, 'https://recchiadanza.com'),
+ ('Rompe Escuela de Baile', 'reus', 5.0, 31, 'https://rompeescueladebaile.com'),
+ ('Dame La Clave', 'badajoz', 5.0, 78, 'https://www.damelaclave.com'),
+ ('Escuela Muévelow', 'leon', 4.9, 107, 'https://www.escuelamuevelow.com'),
 ]
 # Scoring data not collected yet for Spain (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
