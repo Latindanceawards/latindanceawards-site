@@ -5,7 +5,7 @@ sys.path.insert(0, 'tools')
 cities, schools = json.loads(sys.argv[1]), json.loads(sys.argv[2])
 p = 'tools/nordics_data.py'; s = open(p).read()
 cl = ''.join(f" {k!r}: ({v!r}, {v!r}, {('in ' + v)!r}),\n" for k, v in cities.items() if f"'{k}':" not in s)
-s = s.replace("\n}\ndef _m(", "\n" + cl + "}\ndef _m(", 1)
+s = s.replace("\n}\nCOUNTRY = ", "\n" + cl + "}\nCOUNTRY = ", 1)
 city_name = lambda k: cities.get(k) or re.search(rf"'{k}': \('([^']+)'", s).group(1)
 rows = ''
 for n, c, r, v, u in schools:
