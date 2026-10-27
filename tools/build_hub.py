@@ -95,7 +95,7 @@ def em_rows():
 
 ALL = sorted(de_rows() + pl_rows() + es_rows() + it_rows() + pt_rows() + fr_rows() + nl_rows() + uk_rows() + be_rows() + ie_rows() + at_rows() + ch_rows() + ee_rows() + nd_rows() + em_rows(), key=lambda x: (-x['pts'], x['name']))
 ND = sum(1 for x in ALL if x['cc'] == 'de'); NP = sum(1 for x in ALL if x['cc'] == 'pl'); NS = sum(1 for x in ALL if x['cc'] == 'es'); NI = sum(1 for x in ALL if x['cc'] == 'it'); NPT = sum(1 for x in ALL if x['cc'] == 'pt'); NF = sum(1 for x in ALL if x['cc'] == 'fr'); NN = sum(1 for x in ALL if x['cc'] == 'nl'); NU = sum(1 for x in ALL if x['cc'] == 'uk'); NBE = sum(1 for x in ALL if x['cc'] == 'be'); NIE = sum(1 for x in ALL if x['cc'] == 'ie'); NAT = sum(1 for x in ALL if x['cc'] == 'at'); NCH = sum(1 for x in ALL if x['cc'] == 'ch'); NEE = sum(1 for x in ALL if x['cc'] == 'ee'); NND = sum(1 for x in ALL if x['cc'] == 'nd'); NEM = sum(1 for x in ALL if x['cc'] == 'em')
-NCD = 79; NC = len(P.CITIES); NCS = len(SP.CITIES); NCI = len(IT.CITIES); NCPT = len(PT.CITIES); NCF = len(FR.CITIES); NCN = len(NL.CITIES); NCU = len(UK.CITIES); NCBE = len(BEX.CITIES); NCIE = len(IEX.CITIES); NCAT = len(ATX.CITIES); NCCH = len(CHX.CITIES); NCEE = len(EEX.CITIES); NCND = len(NDX.CITIES); NCEM = len(EMX.CITIES)
+NCD = 121; NC = len(P.CITIES); NCS = len(SP.CITIES); NCI = len(IT.CITIES); NCPT = len(PT.CITIES); NCF = len(FR.CITIES); NCN = len(NL.CITIES); NCU = len(UK.CITIES); NCBE = len(BEX.CITIES); NCIE = len(IEX.CITIES); NCAT = len(ATX.CITIES); NCCH = len(CHX.CITIES); NCEE = len(EEX.CITIES); NCND = len(NDX.CITIES); NCEM = len(EMX.CITIES)
 TOPN = 25
 t = T('eu')
 

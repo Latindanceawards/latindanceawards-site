@@ -510,7 +510,7 @@ _ERR_PICK = ("Bitte wähle eine Antwort.", "Please choose an answer.")
 YEARS = [('2024–2026', '2024–2026', '2024–2026'), ('2021–2023', '2021–2023', '2021–2023'), ('2018–2020', '2018–2020', '2018–2020'),
          ('2015–2017', '2015–2017', '2015–2017'), ('2012–2014', '2012–2014', '2012–2014'), ('Before 2012', 'Vor 2012', 'Before 2012')]
 CITIES_O = [('Berlin', 'Berlin', 'Berlin'), ('München / Munich', 'München', 'Munich'), ('Hamburg', 'Hamburg', 'Hamburg'), ('Köln / Cologne', 'Köln', 'Cologne'),
-            ('Frankfurt', 'Frankfurt', 'Frankfurt'), ('Düsseldorf', 'Düsseldorf', 'Düsseldorf'), ('Stuttgart', 'Stuttgart', 'Stuttgart'), ('Leipzig', 'Leipzig', 'Leipzig'), ('Dortmund', 'Dortmund', 'Dortmund'), ('Essen', 'Essen', 'Essen'), ('Bremen', 'Bremen', 'Bremen'), ('Dresden', 'Dresden', 'Dresden'), ('Hannover', 'Hannover', 'Hannover'), ('Nürnberg / Nuremberg', 'Nürnberg', 'Nuremberg'), ('Duisburg', 'Duisburg', 'Duisburg'), ('Bochum', 'Bochum', 'Bochum'), ('Bielefeld', 'Bielefeld', 'Bielefeld'), ('Bonn', 'Bonn', 'Bonn'), ('Karlsruhe', 'Karlsruhe', 'Karlsruhe'), ('Mannheim', 'Mannheim', 'Mannheim'), ('Augsburg', 'Augsburg', 'Augsburg'), ('Wiesbaden', 'Wiesbaden', 'Wiesbaden'), ('Gelsenkirchen', 'Gelsenkirchen', 'Gelsenkirchen'), ('Mönchengladbach', 'Mönchengladbach', 'Mönchengladbach'), ('Braunschweig', 'Braunschweig', 'Braunschweig'), ('Aachen', 'Aachen', 'Aachen'), ('Chemnitz', 'Chemnitz', 'Chemnitz'), ('Kiel', 'Kiel', 'Kiel'), ('Freiburg', 'Freiburg', 'Freiburg'), ('Krefeld', 'Krefeld', 'Krefeld'), ('Mainz', 'Mainz', 'Mainz'), ('Oberhausen', 'Oberhausen', 'Oberhausen'), ('Kassel', 'Kassel', 'Kassel'), ('Darmstadt', 'Darmstadt', 'Darmstadt'), ('Hamm', 'Hamm', 'Hamm'), ('Saarbrücken', 'Saarbrücken', 'Saarbrücken'), ('Ludwigshafen', 'Ludwigshafen', 'Ludwigshafen'), ('Potsdam', 'Potsdam', 'Potsdam'), ('Oldenburg', 'Oldenburg', 'Oldenburg'), ('Paderborn', 'Paderborn', 'Paderborn'), ('Würzburg', 'Würzburg', 'Würzburg'), ('Heilbronn', 'Heilbronn', 'Heilbronn'), ('Göttingen', 'Göttingen', 'Göttingen'), ('Reutlingen', 'Reutlingen', 'Reutlingen'), ('Koblenz', 'Koblenz', 'Koblenz'), ('Trier', 'Trier', 'Trier'), ('Erlangen', 'Erlangen', 'Erlangen'), ('Bremerhaven', 'Bremerhaven', 'Bremerhaven'), ('Offenburg', 'Offenburg', 'Offenburg'), ('Konstanz', 'Konstanz', 'Konstanz'), ('Tübingen', 'Tübingen', 'Tübingen'), ('Ludwigsburg', 'Ludwigsburg', 'Ludwigsburg'), ('Bamberg', 'Bamberg', 'Bamberg'), ('Landshut', 'Landshut', 'Landshut'), ('Kempten', 'Kempten', 'Kempten'), ('Aschaffenburg', 'Aschaffenburg', 'Aschaffenburg'), ('Speyer', 'Speyer', 'Speyer'), ('Fulda', 'Fulda', 'Fulda'), ('Lüneburg', 'Lüneburg', 'Lüneburg'), ('Flensburg', 'Flensburg', 'Flensburg'), ('Celle', 'Celle', 'Celle'), ('Ulm', 'Ulm', 'Ulm'), ('Gera', 'Gera', 'Gera'), ('Remscheid', 'Remscheid', 'Remscheid'), ('Bottrop', 'Bottrop', 'Bottrop'), ('Witten', 'Witten', 'Witten'), ('Böblingen', 'Böblingen', 'Böblingen'), ('Friedrichshafen', 'Friedrichshafen', 'Friedrichshafen'), ('Schweinfurt', 'Schweinfurt', 'Schweinfurt'), ('Straubing', 'Straubing', 'Straubing'), ('Coburg', 'Coburg', 'Coburg'), ('Hameln', 'Hameln', 'Hameln'), ('Nürtingen', 'Nürtingen', 'Nürtingen'), ('Norderstedt', 'Norderstedt', 'Norderstedt'), ('Leonberg', 'Leonberg', 'Leonberg'), ('Ansbach', 'Ansbach', 'Ansbach'), ('Moers', 'Moers', 'Moers'), ('Heidenheim', 'Heidenheim', 'Heidenheim'), ('Minden', 'Minden', 'Minden'), ('Other', 'Andere', 'Other'), ('Other', 'Andere Stadt / anderes Land', 'Another city / country')]
+            ('Frankfurt', 'Frankfurt', 'Frankfurt'), ('Düsseldorf', 'Düsseldorf', 'Düsseldorf'), ('Stuttgart', 'Stuttgart', 'Stuttgart'), ('Leipzig', 'Leipzig', 'Leipzig'), ('Dortmund', 'Dortmund', 'Dortmund'), ('Essen', 'Essen', 'Essen'), ('Bremen', 'Bremen', 'Bremen'), ('Dresden', 'Dresden', 'Dresden'), ('Hannover', 'Hannover', 'Hannover'), ('Nürnberg / Nuremberg', 'Nürnberg', 'Nuremberg'), ('Duisburg', 'Duisburg', 'Duisburg'), ('Bochum', 'Bochum', 'Bochum'), ('Bielefeld', 'Bielefeld', 'Bielefeld'), ('Bonn', 'Bonn', 'Bonn'), ('Karlsruhe', 'Karlsruhe', 'Karlsruhe'), ('Mannheim', 'Mannheim', 'Mannheim'), ('Augsburg', 'Augsburg', 'Augsburg'), ('Wiesbaden', 'Wiesbaden', 'Wiesbaden'), ('Gelsenkirchen', 'Gelsenkirchen', 'Gelsenkirchen'), ('Mönchengladbach', 'Mönchengladbach', 'Mönchengladbach'), ('Braunschweig', 'Braunschweig', 'Braunschweig'), ('Aachen', 'Aachen', 'Aachen'), ('Chemnitz', 'Chemnitz', 'Chemnitz'), ('Kiel', 'Kiel', 'Kiel'), ('Freiburg', 'Freiburg', 'Freiburg'), ('Krefeld', 'Krefeld', 'Krefeld'), ('Mainz', 'Mainz', 'Mainz'), ('Oberhausen', 'Oberhausen', 'Oberhausen'), ('Kassel', 'Kassel', 'Kassel'), ('Darmstadt', 'Darmstadt', 'Darmstadt'), ('Hamm', 'Hamm', 'Hamm'), ('Saarbrücken', 'Saarbrücken', 'Saarbrücken'), ('Ludwigshafen', 'Ludwigshafen', 'Ludwigshafen'), ('Potsdam', 'Potsdam', 'Potsdam'), ('Oldenburg', 'Oldenburg', 'Oldenburg'), ('Paderborn', 'Paderborn', 'Paderborn'), ('Würzburg', 'Würzburg', 'Würzburg'), ('Heilbronn', 'Heilbronn', 'Heilbronn'), ('Göttingen', 'Göttingen', 'Göttingen'), ('Reutlingen', 'Reutlingen', 'Reutlingen'), ('Koblenz', 'Koblenz', 'Koblenz'), ('Trier', 'Trier', 'Trier'), ('Erlangen', 'Erlangen', 'Erlangen'), ('Bremerhaven', 'Bremerhaven', 'Bremerhaven'), ('Offenburg', 'Offenburg', 'Offenburg'), ('Konstanz', 'Konstanz', 'Konstanz'), ('Tübingen', 'Tübingen', 'Tübingen'), ('Ludwigsburg', 'Ludwigsburg', 'Ludwigsburg'), ('Bamberg', 'Bamberg', 'Bamberg'), ('Landshut', 'Landshut', 'Landshut'), ('Kempten', 'Kempten', 'Kempten'), ('Aschaffenburg', 'Aschaffenburg', 'Aschaffenburg'), ('Speyer', 'Speyer', 'Speyer'), ('Fulda', 'Fulda', 'Fulda'), ('Lüneburg', 'Lüneburg', 'Lüneburg'), ('Flensburg', 'Flensburg', 'Flensburg'), ('Celle', 'Celle', 'Celle'), ('Ulm', 'Ulm', 'Ulm'), ('Gera', 'Gera', 'Gera'), ('Remscheid', 'Remscheid', 'Remscheid'), ('Bottrop', 'Bottrop', 'Bottrop'), ('Witten', 'Witten', 'Witten'), ('Böblingen', 'Böblingen', 'Böblingen'), ('Friedrichshafen', 'Friedrichshafen', 'Friedrichshafen'), ('Schweinfurt', 'Schweinfurt', 'Schweinfurt'), ('Straubing', 'Straubing', 'Straubing'), ('Coburg', 'Coburg', 'Coburg'), ('Hameln', 'Hameln', 'Hameln'), ('Nürtingen', 'Nürtingen', 'Nürtingen'), ('Norderstedt', 'Norderstedt', 'Norderstedt'), ('Leonberg', 'Leonberg', 'Leonberg'), ('Ansbach', 'Ansbach', 'Ansbach'), ('Moers', 'Moers', 'Moers'), ('Heidenheim', 'Heidenheim', 'Heidenheim'), ('Minden', 'Minden', 'Minden'), ('Münster', 'Münster', 'Münster'), ('Magdeburg', 'Magdeburg', 'Magdeburg'), ('Rostock', 'Rostock', 'Rostock'), ('Lübeck', 'Lübeck', 'Lübeck'), ('Erfurt', 'Erfurt', 'Erfurt'), ('Mülheim an der Ruhr', 'Mülheim an der Ruhr', 'Mülheim an der Ruhr'), ('Osnabrück', 'Osnabrück', 'Osnabrück'), ('Solingen', 'Solingen', 'Solingen'), ('Leverkusen', 'Leverkusen', 'Leverkusen'), ('Neuss', 'Neuss', 'Neuss'), ('Regensburg', 'Regensburg', 'Regensburg'), ('Ingolstadt', 'Ingolstadt', 'Ingolstadt'), ('Offenbach', 'Offenbach', 'Offenbach'), ('Heidelberg', 'Heidelberg', 'Heidelberg'), ('Pforzheim', 'Pforzheim', 'Pforzheim'), ('Recklinghausen', 'Recklinghausen', 'Recklinghausen'), ('Bergisch Gladbach', 'Bergisch Gladbach', 'Bergisch Gladbach'), ('Jena', 'Jena', 'Jena'), ('Gütersloh', 'Gütersloh', 'Gütersloh'), ('Siegen', 'Siegen', 'Siegen'), ('Hildesheim', 'Hildesheim', 'Hildesheim'), ('Cottbus', 'Cottbus', 'Cottbus'), ('Zwickau', 'Zwickau', 'Zwickau'), ('Weimar', 'Weimar', 'Weimar'), ('Schwerin', 'Schwerin', 'Schwerin'), ('Passau', 'Passau', 'Passau'), ('Rosenheim', 'Rosenheim', 'Rosenheim'), ('Villingen-Schwenningen', 'Villingen-Schwenningen', 'Villingen-Schwenningen'), ('Sindelfingen', 'Sindelfingen', 'Sindelfingen'), ('Esslingen', 'Esslingen', 'Esslingen'), ('Göppingen', 'Göppingen', 'Göppingen'), ('Worms', 'Worms', 'Worms'), ('Bayreuth', 'Bayreuth', 'Bayreuth'), ('Hanau', 'Hanau', 'Hanau'), ('Iserlohn', 'Iserlohn', 'Iserlohn'), ('Ratingen', 'Ratingen', 'Ratingen'), ('Herford', 'Herford', 'Herford'), ('Lippstadt', 'Lippstadt', 'Lippstadt'), ('Neubrandenburg', 'Neubrandenburg', 'Neubrandenburg'), ('Greifswald', 'Greifswald', 'Greifswald'), ('Wilhelmshaven', 'Wilhelmshaven', 'Wilhelmshaven'), ('Emden', 'Emden', 'Emden'), ('Other', 'Andere Stadt / anderes Land', 'Another city / country')]
 # (chapter, title_de, title_en, sub_de, sub_en, body_html, optional, auto)
 WIZ = [
  (0, 'Wie heißt deine Schule?', 'What is your school called?', 'Jetzt noch ein paar Angaben zu eurer Schule.', 'Now a few details about your school.',
@@ -777,7 +777,7 @@ CITIES = [('deutschland', 'Ganz Deutschland', 'All Germany'), ('berlin', 'Berlin
           ('karlsruhe', 'Karlsruhe', 'Karlsruhe'), ('mannheim', 'Mannheim', 'Mannheim'), ('augsburg', 'Augsburg', 'Augsburg'), ('wiesbaden', 'Wiesbaden', 'Wiesbaden'),
           ('gelsenkirchen', 'Gelsenkirchen', 'Gelsenkirchen'), ('moenchengladbach', 'Mönchengladbach', 'Mönchengladbach'), ('braunschweig', 'Braunschweig', 'Braunschweig'), ('aachen', 'Aachen', 'Aachen'), ('chemnitz', 'Chemnitz', 'Chemnitz'), ('kiel', 'Kiel', 'Kiel'), ('freiburg', 'Freiburg', 'Freiburg'), ('krefeld', 'Krefeld', 'Krefeld'), ('mainz', 'Mainz', 'Mainz'), ('oberhausen', 'Oberhausen', 'Oberhausen'), ('kassel', 'Kassel', 'Kassel'), ('darmstadt', 'Darmstadt', 'Darmstadt'),
           ('hamm', 'Hamm', 'Hamm'), ('saarbruecken', 'Saarbrücken', 'Saarbrücken'), ('ludwigshafen', 'Ludwigshafen', 'Ludwigshafen'), ('potsdam', 'Potsdam', 'Potsdam'), ('oldenburg', 'Oldenburg', 'Oldenburg'), ('paderborn', 'Paderborn', 'Paderborn'), ('wuerzburg', 'Würzburg', 'Würzburg'), ('heilbronn', 'Heilbronn', 'Heilbronn'),
-          ('goettingen', 'Göttingen', 'Göttingen'), ('reutlingen', 'Reutlingen', 'Reutlingen'), ('koblenz', 'Koblenz', 'Koblenz'), ('trier', 'Trier', 'Trier'), ('erlangen', 'Erlangen', 'Erlangen'), ('bremerhaven', 'Bremerhaven', 'Bremerhaven'), ('offenburg', 'Offenburg', 'Offenburg'), ('konstanz', 'Konstanz', 'Konstanz'), ('tuebingen', 'Tübingen', 'Tübingen'), ('ludwigsburg', 'Ludwigsburg', 'Ludwigsburg'), ('bamberg', 'Bamberg', 'Bamberg'), ('landshut', 'Landshut', 'Landshut'), ('kempten', 'Kempten', 'Kempten'), ('aschaffenburg', 'Aschaffenburg', 'Aschaffenburg'), ('speyer', 'Speyer', 'Speyer'), ('fulda', 'Fulda', 'Fulda'), ('lueneburg', 'Lüneburg', 'Lüneburg'), ('flensburg', 'Flensburg', 'Flensburg'), ('celle', 'Celle', 'Celle'), ('ulm', 'Ulm', 'Ulm'), ('gera', 'Gera', 'Gera'), ('remscheid', 'Remscheid', 'Remscheid'), ('bottrop', 'Bottrop', 'Bottrop'), ('witten', 'Witten', 'Witten'), ('boeblingen', 'Böblingen', 'Böblingen'), ('friedrichshafen', 'Friedrichshafen', 'Friedrichshafen'), ('schweinfurt', 'Schweinfurt', 'Schweinfurt'), ('straubing', 'Straubing', 'Straubing'), ('coburg', 'Coburg', 'Coburg'), ('hameln', 'Hameln', 'Hameln'), ('nuertingen', 'Nürtingen', 'Nürtingen'), ('norderstedt', 'Norderstedt', 'Norderstedt'), ('leonberg', 'Leonberg', 'Leonberg'), ('ansbach', 'Ansbach', 'Ansbach'), ('moers', 'Moers', 'Moers'), ('heidenheim', 'Heidenheim', 'Heidenheim'), ('minden', 'Minden', 'Minden')]
+          ('goettingen', 'Göttingen', 'Göttingen'), ('reutlingen', 'Reutlingen', 'Reutlingen'), ('koblenz', 'Koblenz', 'Koblenz'), ('trier', 'Trier', 'Trier'), ('erlangen', 'Erlangen', 'Erlangen'), ('bremerhaven', 'Bremerhaven', 'Bremerhaven'), ('offenburg', 'Offenburg', 'Offenburg'), ('konstanz', 'Konstanz', 'Konstanz'), ('tuebingen', 'Tübingen', 'Tübingen'), ('ludwigsburg', 'Ludwigsburg', 'Ludwigsburg'), ('bamberg', 'Bamberg', 'Bamberg'), ('landshut', 'Landshut', 'Landshut'), ('kempten', 'Kempten', 'Kempten'), ('aschaffenburg', 'Aschaffenburg', 'Aschaffenburg'), ('speyer', 'Speyer', 'Speyer'), ('fulda', 'Fulda', 'Fulda'), ('lueneburg', 'Lüneburg', 'Lüneburg'), ('flensburg', 'Flensburg', 'Flensburg'), ('celle', 'Celle', 'Celle'), ('ulm', 'Ulm', 'Ulm'), ('gera', 'Gera', 'Gera'), ('remscheid', 'Remscheid', 'Remscheid'), ('bottrop', 'Bottrop', 'Bottrop'), ('witten', 'Witten', 'Witten'), ('boeblingen', 'Böblingen', 'Böblingen'), ('friedrichshafen', 'Friedrichshafen', 'Friedrichshafen'), ('schweinfurt', 'Schweinfurt', 'Schweinfurt'), ('straubing', 'Straubing', 'Straubing'), ('coburg', 'Coburg', 'Coburg'), ('hameln', 'Hameln', 'Hameln'), ('nuertingen', 'Nürtingen', 'Nürtingen'), ('norderstedt', 'Norderstedt', 'Norderstedt'), ('leonberg', 'Leonberg', 'Leonberg'), ('ansbach', 'Ansbach', 'Ansbach'), ('moers', 'Moers', 'Moers'), ('heidenheim', 'Heidenheim', 'Heidenheim'), ('minden', 'Minden', 'Minden'), ('muenster', 'Münster', 'Münster'), ('magdeburg', 'Magdeburg', 'Magdeburg'), ('rostock', 'Rostock', 'Rostock'), ('luebeck', 'Lübeck', 'Lübeck'), ('erfurt', 'Erfurt', 'Erfurt'), ('muelheim', 'Mülheim an der Ruhr', 'Mülheim an der Ruhr'), ('osnabrueck', 'Osnabrück', 'Osnabrück'), ('solingen', 'Solingen', 'Solingen'), ('leverkusen', 'Leverkusen', 'Leverkusen'), ('neuss', 'Neuss', 'Neuss'), ('regensburg', 'Regensburg', 'Regensburg'), ('ingolstadt', 'Ingolstadt', 'Ingolstadt'), ('offenbach', 'Offenbach', 'Offenbach'), ('heidelberg', 'Heidelberg', 'Heidelberg'), ('pforzheim', 'Pforzheim', 'Pforzheim'), ('recklinghausen', 'Recklinghausen', 'Recklinghausen'), ('bergischgladbach', 'Bergisch Gladbach', 'Bergisch Gladbach'), ('jena', 'Jena', 'Jena'), ('guetersloh', 'Gütersloh', 'Gütersloh'), ('siegen', 'Siegen', 'Siegen'), ('hildesheim', 'Hildesheim', 'Hildesheim'), ('cottbus', 'Cottbus', 'Cottbus'), ('zwickau', 'Zwickau', 'Zwickau'), ('weimar', 'Weimar', 'Weimar'), ('schwerin', 'Schwerin', 'Schwerin'), ('passau', 'Passau', 'Passau'), ('rosenheim', 'Rosenheim', 'Rosenheim'), ('villingen', 'Villingen-Schwenningen', 'Villingen-Schwenningen'), ('sindelfingen', 'Sindelfingen', 'Sindelfingen'), ('esslingen', 'Esslingen', 'Esslingen'), ('goeppingen', 'Göppingen', 'Göppingen'), ('worms', 'Worms', 'Worms'), ('bayreuth', 'Bayreuth', 'Bayreuth'), ('hanau', 'Hanau', 'Hanau'), ('iserlohn', 'Iserlohn', 'Iserlohn'), ('ratingen', 'Ratingen', 'Ratingen'), ('herford', 'Herford', 'Herford'), ('lippstadt', 'Lippstadt', 'Lippstadt'), ('neubrandenburg', 'Neubrandenburg', 'Neubrandenburg'), ('greifswald', 'Greifswald', 'Greifswald'), ('wilhelmshaven', 'Wilhelmshaven', 'Wilhelmshaven'), ('emden', 'Emden', 'Emden')]
 tabs_html = '\n'.join(
     f'      <button type="button" role="tab" id="tab-{slug}" aria-controls="panel" aria-selected="{"true" if i==0 else "false"}" data-city="{slug}">{r("span", de, en)}</button>'
     for i, (slug, de, en) in enumerate(CITIES) if i < 7)
@@ -785,11 +785,11 @@ tabs_html = '\n'.join(
 
 rfaq = [
  ('Wann wird das Bachata-Ranking veröffentlicht?', 'When is the Bachata ranking published?',
-  'Alle Rankings erscheinen am 20. Dezember 2026 um 19 Uhr auf dieser Seite, zuerst für die 79 Städte und gleichzeitig für ganz Deutschland.',
-  'All rankings go live on December 20, 2026 at 7 pm (CET) on this page, for the 79 cities and for Germany as a whole.'),
+  'Alle Rankings erscheinen am 20. Dezember 2026 um 19 Uhr auf dieser Seite, zuerst für die 121 Städte und gleichzeitig für ganz Deutschland.',
+  'All rankings go live on December 20, 2026 at 7 pm (CET) on this page, for the 121 cities and for Germany as a whole.'),
  ('Welche Städte sind im Ranking 2026?', 'Which cities are in the 2026 ranking?',
-  'Alle 79 deutschen Städte, von Berlin bis Minden. Weitere Städte und Länder folgen in den nächsten Ausgaben.',
-  'All 79 German cities, from Berlin to Minden. More cities and countries follow in future editions.'),
+  'Alle 121 deutschen Städte, von Berlin bis Minden. Weitere Städte und Länder folgen in den nächsten Ausgaben.',
+  'All 121 German cities, from Berlin to Minden. More cities and countries follow in future editions.'),
  ('Kann eine Schule für einen besseren Platz bezahlen?', 'Can a school pay for a better place?',
   'Nein. Plätze sind nicht käuflich. Jede Schule wird nach denselben neun Kriterien bewertet, und die Punkteaufschlüsselung ist öffentlich.',
   'No. Places cannot be bought. Every school is scored on the same nine factors, and the score breakdown is public.'),
@@ -797,8 +797,8 @@ rfaq = [
   'In den meisten Bachata-Kursen nicht. Viele Schulen lassen die Paare regelmäßig wechseln, sodass du auch allein kommen kannst. Frag am besten vorher bei der Schule nach.',
   'In most Bachata classes you don\'t. Many schools rotate partners regularly, so you can come on your own. It is best to ask the school beforehand.'),
  ('Meine Schule fehlt. Was kann ich tun?', 'My school is missing. What can I do?',
-  'Melde sie bis zum 30. November kostenlos über die <a href="bewerbung.html">Bewerbungsseite</a> an. Wir nehmen jede Bachata-Schule in den 79 Städten auf.',
-  'Enter it for free by November 30 on the <a href="bewerbung.html">application page</a>. We include every Bachata school in the 79 cities.'),
+  'Melde sie bis zum 30. November kostenlos über die <a href="bewerbung.html">Bewerbungsseite</a> an. Wir nehmen jede Bachata-Schule in den 121 Städten auf.',
+  'Enter it for free by November 30 on the <a href="bewerbung.html">application page</a>. We include every Bachata school in the 121 cities.'),
  ('Wie oft wird das Ranking aktualisiert?', 'How often is the ranking updated?',
   'Das Ranking erscheint einmal im Jahr. Korrekturen an falschen Daten prüfen wir laufend und übernehmen sie nach der Prüfung.',
   'The ranking is published once a year. We review corrections to wrong data on an ongoing basis and apply them once checked.'),
@@ -812,7 +812,7 @@ rank_main = f'''
     <div>
       <span class="edition rise d1"><i></i>{r("span", "Rankings 2026 · Deutschland", "Rankings 2026 · Germany")}</span>
       <h1 id="rk-title" class="rise d2">{r("span", "Beste Bachata-Schulen in <em class=\"foil\">Deutschland 2026</em>", "Best Bachata schools in <em class=\"foil\">Germany 2026</em>")}</h1>
-      <p class="lede rise d3">{r("span", "Die besten Bachata-Schulen in Deutschland, bewertet nach neun öffentlichen Kriterien: 79 Städte, ein nationaler Sieger. Die Ergebnisse erscheinen am 20. Dezember 2026 um 19 Uhr.", "The best Bachata schools in Germany, scored on nine public factors: 79 cities, one national winner. Results are published on December 20, 2026 at 7 pm (CET).")}</p>
+      <p class="lede rise d3">{r("span", "Die besten Bachata-Schulen in Deutschland, bewertet nach neun öffentlichen Kriterien: 121 Städte, ein nationaler Sieger. Die Ergebnisse erscheinen am 20. Dezember 2026 um 19 Uhr.", "The best Bachata schools in Germany, scored on nine public factors: 121 cities, one national winner. Results are published on December 20, 2026 at 7 pm (CET).")}</p>
       <div class="countdown rise d4" id="countdown" aria-live="off">
         <div><b data-u="d">00</b>{r("small", "Tage", "days")}</div>
         <div><b data-u="h">00</b>{r("small", "Stunden", "hours")}</div>
@@ -865,7 +865,7 @@ rank_main = f'''
 <section class="block alt" aria-labelledby="how-title">
   <div class="wrap prose">
     {r("h2", "So entsteht das Bachata-Ranking 2026", "How the 2026 Bachata ranking is made", 'id="how-title"')}
-    {r("p", "Wir recherchieren jede Bachata-Schule in ganz Deutschland (79 Städte) und bewerten sie nach denselben <strong>neun Kriterien</strong>, zusammen 100 Punkte. Die wichtigsten sind die gewichtete Google-Bewertung (25 Punkte) und Auftritte der Lehrer auf Festivals und Kongressen (15 Punkte).", "We research every Bachata school in all of Germany (79 cities) and score each one on the same <strong>nine factors</strong>, 100 points in total. The most important are the weighted Google rating (25 points) and teachers' appearances at festivals and congresses (15 points).")}
+    {r("p", "Wir recherchieren jede Bachata-Schule in ganz Deutschland (121 Städte) und bewerten sie nach denselben <strong>neun Kriterien</strong>, zusammen 100 Punkte. Die wichtigsten sind die gewichtete Google-Bewertung (25 Punkte) und Auftritte der Lehrer auf Festivals und Kongressen (15 Punkte).", "We research every Bachata school in all of Germany (121 cities) and score each one on the same <strong>nine factors</strong>, 100 points in total. The most important are the weighted Google rating (25 points) and teachers' appearances at festivals and congresses (15 points).")}
     {r("p", "Dazu kommen die Anzahl der Bewertungen, die Jahre im Unterricht, das Kursangebot für Einsteiger, eigene Events und Gastlehrer sowie Social Media mit je 10 Punkten. Aktuelle Bewertungen der letzten 12 Monate und Wettbewerbsergebnisse zählen je 5 Punkte. Alle Daten sind öffentlich und werden von Hand geprüft. Schulen, die sich bewerben, können ihre Angaben zusätzlich mit Links belegen.", "Review volume, years of teaching, the beginner offer, own events and guest teachers, and social media add 10 points each. Recent reviews from the last 12 months and competition results count 5 points each. All data is public and checked by hand. Schools that apply can also back up their information with links.")}
     {r("p", "Damit kleine Schulen eine faire Chance haben, gewichten wir Bewertungen nach ihrer Anzahl: Eine 5,0 aus vier Bewertungen schlägt keine 4,8 aus dreihundert. Die vollständige Methode findest du auf der <a href=\"deutschland.html#method\">Startseite</a>.", "To give small schools a fair chance, ratings are weighted by their number: a 5.0 from four reviews does not beat a 4.8 from three hundred. The full method is on the <a href=\"deutschland.html#method\">homepage</a>.")}
   </div>
@@ -876,8 +876,8 @@ rank_main = f'''
     {r("h2", "Die fünf Bachata Awards 2026 im Überblick", "The five Bachata Awards 2026 at a glance", 'id="awards-title"')}
     {r("p", "Neben den Ranglisten vergeben wir fünf Auszeichnungen. Jeder Gewinner erhält ein offizielles Siegel für Website, Studio und Social Media.", "Alongside the rankings we give five awards. Every winner receives an official seal for their website, studio and social media.")}
     <ul>
-      <li>{r("span", "<strong>Beste Bachata-Schule Deutschlands:</strong> die höchste Gesamtpunktzahl aller 79 Städte.", "<strong>Best Bachata School in Germany:</strong> the highest total score across all 79 cities.")}</li>
-      <li>{r("span", "<strong>Beste Schule der Stadt:</strong> die bestplatzierte Schule in ganz Deutschland (79 Städte).", "<strong>Best School of the City:</strong> the top-ranked school in all of Germany (79 cities).")}</li>
+      <li>{r("span", "<strong>Beste Bachata-Schule Deutschlands:</strong> die höchste Gesamtpunktzahl aller 121 Städte.", "<strong>Best Bachata School in Germany:</strong> the highest total score across all 121 cities.")}</li>
+      <li>{r("span", "<strong>Beste Schule der Stadt:</strong> die bestplatzierte Schule in ganz Deutschland (121 Städte).", "<strong>Best School of the City:</strong> the top-ranked school in all of Germany (121 cities).")}</li>
       <li>{r("span", "<strong>Aufsteiger des Jahres:</strong> die bestbewertete Schule, die in den letzten drei Jahren gegründet wurde.", "<strong>Rising School of the Year:</strong> the best-rated school founded in the last three years.")}</li>
       <li>{r("span", "<strong>Legacy Award:</strong> für eine Schule, die ihre lokale Bachata-Szene seit zehn Jahren oder länger prägt.", "<strong>Legacy Award:</strong> for a school that has shaped its local Bachata scene for ten years or more.")}</li>
       <li>{r("span", "<strong>Festival Stage Award:</strong> für die Schule, deren Lehrer am häufigsten auf europäischen Festivals und Kongressen unterrichten.", "<strong>Festival Stage Award:</strong> for the school whose teachers teach most often at European festivals and congresses.")}</li>
@@ -937,8 +937,8 @@ rank_main = f'''
 
 <section class="block" aria-labelledby="cities-title">
   <div class="wrap prose">
-    {r("h2", "Die 79 Städte im Ranking", "The 79 cities in the ranking", 'id="cities-title"')}
-    {r("p", "Für die erste Ausgabe haben wir 79 Städte in ganz Deutschland gewählt, von den größten bis zu mittleren Städten. Dort gibt es genug Schulen für einen fairen Vergleich, und viele Tänzer suchen hier gezielt nach einem Kurs. Weitere Städte kommen in den nächsten Ausgaben dazu.", "For the first edition we chose 79 cities across Germany, from the biggest to mid-sized ones. They have enough schools for a fair comparison, and many dancers there search specifically for a class. More cities join in future editions.")}
+    {r("h2", "Die 121 Städte im Ranking", "The 121 cities in the ranking", 'id="cities-title"')}
+    {r("p", "Für die erste Ausgabe haben wir 121 Städte in ganz Deutschland gewählt, von den größten bis zu mittleren Städten. Dort gibt es genug Schulen für einen fairen Vergleich, und viele Tänzer suchen hier gezielt nach einem Kurs. Weitere Städte kommen in den nächsten Ausgaben dazu.", "For the first edition we chose 121 cities across Germany, from the biggest to mid-sized ones. They have enough schools for a fair comparison, and many dancers there search specifically for a class. More cities join in future editions.")}
     {r("p", "Jede Stadt bekommt ein eigenes Top-10-Ranking. Die beste Schule jeder Stadt erhält den Award <strong>Beste Schule der Stadt</strong>, die höchste Punktzahl im ganzen Land den Award <strong>Beste Bachata-Schule Deutschlands</strong>.", "Every city gets its own top 10. The best school in each city receives the <strong>Best School of the City</strong> award, and the highest score in the country wins <strong>Best Bachata School in Germany</strong>.")}
     <div class="citylinks">{city_links}</div>
     {r("p", "Mehr zu den Schulen vor Ort: <a href=\"bachata-berlin.html\">Berlin</a>, <a href=\"bachata-hamburg.html\">Hamburg</a>, <a href=\"bachata-muenchen.html\">München</a>.", "More on the schools locally: <a href=\"bachata-berlin.html\">Berlin</a>, <a href=\"bachata-hamburg.html\">Hamburg</a>, <a href=\"bachata-muenchen.html\">Munich</a>.")}
@@ -1085,7 +1085,49 @@ rank_js = r'''
     ansbach: [],
     moers: [],
     heidenheim: [],
-    minden: []
+    minden: [],
+    muenster: [],
+    magdeburg: [],
+    rostock: [],
+    luebeck: [],
+    erfurt: [],
+    muelheim: [],
+    osnabrueck: [],
+    solingen: [],
+    leverkusen: [],
+    neuss: [],
+    regensburg: [],
+    ingolstadt: [],
+    offenbach: [],
+    heidelberg: [],
+    pforzheim: [],
+    recklinghausen: [],
+    bergischgladbach: [],
+    jena: [],
+    guetersloh: [],
+    siegen: [],
+    hildesheim: [],
+    cottbus: [],
+    zwickau: [],
+    weimar: [],
+    schwerin: [],
+    passau: [],
+    rosenheim: [],
+    villingen: [],
+    sindelfingen: [],
+    esslingen: [],
+    goeppingen: [],
+    worms: [],
+    bayreuth: [],
+    hanau: [],
+    iserlohn: [],
+    ratingen: [],
+    herford: [],
+    lippstadt: [],
+    neubrandenburg: [],
+    greifswald: [],
+    wilhelmshaven: [],
+    emden: []
   };
   /* PRELIMINARY LIST: schools verified on their own website. Alphabetical, no scores. Not a ranking. */
   var CANDIDATES = {
@@ -1432,6 +1474,196 @@ rank_js = r'''
     ],
     minden: [
       {name:"Tanzschule Am Ring", sc:[0, 5, 0, 12.0, 6.7, 0.0], fx:["4,2 ★ · 39","–"], url:"https://www.tanzschule-am-ring.de/"}
+    ],
+    muenster: [
+      {name:"Salsomania", sc:[0, 5, 0, 18.0, 7.6, 0.0], fx:["4,7 ★ · 64","–"], url:"https://salsomania.de/"},
+      {name:"Punto Clave", sc:[0, 5, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11","–"], url:"https://punto-clave.de/"}
+    ],
+    magdeburg: [
+      {name:"Dance CompleX Magdeburg", sc:[0, 5, 0, 17.5, 6.9, 0.0], fx:["4,7 ★ · 45","–"], url:"https://dance-complex.de/"},
+      {name:"Tanzschule Camelia's Tanzfreunde", sc:[0, 5, 0, 21.2, 7.2, 0.0], fx:["5,0 ★ · 52","–"], url:"https://camelias-tanzfreunde.de/"},
+      {name:"Tanzschule Diefert", sc:[0, 5, 0, 19.7, 8.0, 0.0], fx:["4,8 ★ · 84","–"], url:"https://tanzschule-diefert.de/"},
+      {name:"Movement Dance Academy", sc:[0, 5, 0, 18.3, 5.9, 0.0], fx:["4,9 ★ · 25","–"], url:"https://movement-academy.de/"}
+    ],
+    rostock: [
+      {name:"Tabéalo", sc:[0, 5, 0, 21.6, 7.5, 0.0], fx:["5,0 ★ · 61","–"], url:"https://www.google.com/maps/search/?api=1&query=Tabéalo+Rostock"}
+    ],
+    luebeck: [
+      {name:"ML Dance Studio", sc:[0, 5, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12","–"], url:"https://www.google.com/maps/search/?api=1&query=ML+Dance+Studio+Lübeck"}
+    ],
+    erfurt: [
+      {name:"TanzHaus Erfurt", sc:[0, 5, 0, 19.8, 7.0, 0.0], fx:["4,9 ★ · 46","–"], url:"https://tanzhaus-erfurt.de/"},
+      {name:"Tanzkonzept Erfurt", sc:[0, 5, 0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 59","–"], url:"https://tanzkonzept-erfurt.de/"},
+      {name:"The Movement Dance Studio", sc:[0, 5, 0, 16.9, 6.2, 0.0], fx:["4,7 ★ · 30","–"], url:"https://tanzkreation.de/"},
+      {name:"The Base House of Dance", sc:[0, 5, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18","–"], url:"https://thebase-erfurt.de/"},
+      {name:"Tanzschule lead & follow", sc:[0, 5, 0, 17.5, 4.9, 0.0], fx:["5,0 ★ · 14","–"], url:"https://lead-and-follow.de/"},
+      {name:"Tanzschule Traut", sc:[0, 5, 0, 16.7, 7.4, 0.0], fx:["4,6 ★ · 60","–"], url:"https://tanzschule-traut.de/"}
+    ],
+    muelheim: [
+      {name:"Tanzschule Jansen", sc:[0, 5, 0, 19.2, 6.5, 0.0], fx:["4,9 ★ · 36","–"], url:"https://altstadt-tanzschule.de/"},
+      {name:"Tanzschule dance it!", sc:[0, 5, 0, 17.8, 7.3, 0.0], fx:["4,7 ★ · 56","–"], url:"https://tanzschule-dance-it.de/"},
+      {name:"Tanzschule National Vibes", sc:[0, 5, 0, 22.1, 9.4, 0.0], fx:["4,9 ★ · 180","–"], url:"https://tanzschulenationalvibes.de/"},
+      {name:"Das Tanzhaus Mülheim", sc:[0, 5, 0, 20.5, 7.6, 0.0], fx:["4,9 ★ · 65","–"], url:"https://tanzhaus-muelheim.de/"},
+      {name:"Maresa Höhl Tanzvisionen", sc:[0, 5, 0, 17.6, 6.0, 0.0], fx:["4,8 ★ · 27","–"], url:"https://tanzvisionen-mh.de/"}
+    ],
+    osnabrueck: [
+      {name:"BailamOS Tanzstudio", sc:[0, 5, 0, 16.6, 5.2, 0.0], fx:["4,8 ★ · 17","–"], url:"https://salsa-osna.de/"},
+      {name:"Salsa y Más", sc:[0, 5, 0, 17.7, 5.0, 0.0], fx:["5,0 ★ · 15","–"], url:"https://salsa-y-mas.com/"},
+      {name:"Hull Dance & Events", sc:[0, 5, 0, 18.7, 8.7, 0.0], fx:["4,7 ★ · 124","–"], url:"https://hull.de/"},
+      {name:"Just Salsa", sc:[0, 5, 0, 19.0, 5.8, 0.0], fx:["5,0 ★ · 24","–"], url:"https://justsalsa.de/"}
+    ],
+    solingen: [
+      {name:"Tanzschule Mavius", sc:[0, 5, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 39","–"], url:"https://tanzschule-mavius.de/"},
+      {name:"TanzZentrum Kai Koch", sc:[0, 5, 0, 18.4, 6.8, 0.0], fx:["4,8 ★ · 41","–"], url:"https://tz-koch.de/"},
+      {name:"Step Up Solingen", sc:[0, 5, 0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 60","–"], url:"https://step-up-solingen.de/"},
+      {name:"Tanzschule Xperience", sc:[0, 5, 0, 19.9, 7.0, 0.0], fx:["4,9 ★ · 48","–"], url:"https://tanzschule-xperience.de/"}
+    ],
+    leverkusen: [
+      {name:"Tanzschule Kaechele", sc:[0, 5, 0, 14.3, 7.4, 0.0], fx:["4,4 ★ · 58","–"], url:"https://tanzschule-kaechele-leverkusen.de/"},
+      {name:"Time2Dance", sc:[0, 5, 0, 18.4, 5.4, 0.0], fx:["5,0 ★ · 19","–"], url:"https://time-2-dance.de/"},
+      {name:"Tanzstelle Leverkusen", sc:[0, 5, 0, 18.6, 6.9, 0.0], fx:["4,8 ★ · 45","–"], url:"https://tanzstelle-leverkusen.de/"}
+    ],
+    neuss: [
+      {name:"Tanzschule No Limits", sc:[0, 5, 0, 19.3, 6.6, 0.0], fx:["4,9 ★ · 37","–"], url:"https://dancestudio-nolimits.com/"},
+      {name:"Tanzschule Görke", sc:[0, 5, 0, 16.7, 7.4, 0.0], fx:["4,6 ★ · 60","–"], url:"https://tanzschule-goerke.de/"},
+      {name:"Tanzschule Frieling", sc:[0, 5, 0, 17.4, 5.9, 0.0], fx:["4,8 ★ · 25","–"], url:"https://tanzschulefrieling.de/"}
+    ],
+    regensburg: [
+      {name:"Terra Salsa & Bachata", sc:[0, 5, 0, 19.8, 8.2, 0.0], fx:["4,8 ★ · 91","–"], url:"https://salsa-in-regensburg.de/"}
+    ],
+    ingolstadt: [
+      {name:"Tanzschule Fischer", sc:[0, 5, 0, 19.8, 8.3, 0.0], fx:["4,8 ★ · 95","–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzschule+Fischer+Ingolstadt"},
+      {name:"Tanzstudio-Süd", sc:[0, 5, 0, 16.7, 7.5, 0.0], fx:["4,6 ★ · 62","–"], url:"https://tanzstudio-sued.de/"},
+      {name:"Tanz- und Kulturwerkstatt", sc:[0, 5, 0, 17.0, 5.0, 0.0], fx:["4,9 ★ · 15","–"], url:"https://tanzwerkstatt.com/"},
+      {name:"Studio Polanc", sc:[0, 5, 0, 18.0, 7.6, 0.0], fx:["4,7 ★ · 65","–"], url:"https://studio-polanc.de/"},
+      {name:"Dance-ING Ya Salam", sc:[0, 5, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 40","–"], url:"https://yasalam.de/"}
+    ],
+    offenbach: [
+      {name:"Tanzschule Weiss", sc:[0, 5, 0, 19.1, 9.6, 0.0], fx:["4,7 ★ · 200","–"], url:"https://tanzschule-weiss.de/"}
+    ],
+    heidelberg: [
+      {name:"Salsa Akademie Heidelberg", sc:[0, 5, 0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 59","–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+Akademie+Heidelberg+Heidelberg"},
+      {name:"TJ Dancestudio", sc:[0, 5, 0, 16.2, 4.3, 0.0], fx:["4,9 ★ · 10","–"], url:"https://tjdance.de/"}
+    ],
+    pforzheim: [
+      {name:"BÖHM Dance & Entertainment", sc:[0, 5, 0, 20.2, 8.8, 0.0], fx:["4,8 ★ · 126","–"], url:"https://boehm-dance.com/"},
+      {name:"Le Bääm Dance Studio", sc:[0, 5, 0, 20.4, 7.5, 0.0], fx:["4,9 ★ · 61","–"], url:"https://www.google.com/maps/search/?api=1&query=Le+Bääm+Dance+Studio+Pforzheim"},
+      {name:"Son Latino", sc:[0, 5, 0, 17.0, 7.9, 0.0], fx:["4,6 ★ · 78","–"], url:"https://sonlatino.de/"}
+    ],
+    recklinghausen: [
+      {name:"Tanzschule TanzREvier Pompös", sc:[0, 5, 0, 22.1, 9.5, 0.0], fx:["4,9 ★ · 190","–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzschule+TanzREvier+Pompös+Recklinghausen"},
+      {name:"Tanzhaus La Danza", sc:[0, 5, 0, 18.2, 7.8, 0.0], fx:["4,7 ★ · 75","–"], url:"https://la-danza.org/"},
+      {name:"Tanzatelier Widance", sc:[0, 5, 0, 17.3, 5.8, 0.0], fx:["4,8 ★ · 24","–"], url:"https://widance.de/"}
+    ],
+    bergischgladbach: [
+      {name:"Leyer Die Tanzschule", sc:[0, 5, 0, 22.2, 9.6, 0.0], fx:["4,9 ★ · 198","–"], url:"https://leyer.net/"},
+      {name:"Tanzschule Osetrov", sc:[0, 5, 0, 18.5, 8.3, 0.0], fx:["4,7 ★ · 98","–"], url:"https://tanzschuleosetrov.de/"},
+      {name:"Tanzzentrum Agne Krauss", sc:[0, 5, 0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 58","–"], url:"https://tanzzentrum.gl/"},
+      {name:"One8Dance Studio", sc:[0, 5, 0, 20.5, 6.7, 0.0], fx:["5,0 ★ · 40","–"], url:"https://one8dance.de/"},
+      {name:"Dance In", sc:[0, 5, 0, 17.2, 6.5, 0.0], fx:["4,7 ★ · 36","–"], url:"https://dance-in.de/"}
+    ],
+    jena: [
+      {name:"Jenaer Tanzhaus", sc:[0, 5, 0, 15.4, 5.4, 0.0], fx:["4,6 ★ · 19","–"], url:"https://www.google.com/maps/search/?api=1&query=Jenaer+Tanzhaus+Jena"}
+    ],
+    guetersloh: [
+      {name:"Santana Latin Dance", sc:[0, 5, 0, 19.1, 6.5, 0.0], fx:["4,9 ★ · 35","–"], url:"https://www.google.com/maps/search/?api=1&query=Santana+Latin+Dance+Gütersloh"}
+    ],
+    siegen: [
+      {name:"TanzstudiO Eger", sc:[0, 5, 0, 23.1, 8.8, 0.0], fx:["5,0 ★ · 129","–"], url:"https://tanzstudio-eger.de/"},
+      {name:"TanzZentrum Prescher", sc:[0, 5, 0, 17.3, 5.8, 0.0], fx:["4,8 ★ · 23","–"], url:"https://tanzzentrum-prescher.de/"},
+      {name:"Tanzschule Tuppeck", sc:[0, 5, 0, 16.4, 5.8, 0.0], fx:["4,7 ★ · 23","–"], url:"https://tanzschule-tuppeck.de/"}
+    ],
+    hildesheim: [
+      {name:"Tanzschule Bodscheller", sc:[0, 5, 0, 20.5, 9.4, 0.0], fx:["4,8 ★ · 179","–"], url:"https://bodscheller.de/"},
+      {name:"Tanzhaus Buresch", sc:[0, 5, 0, 16.2, 6.7, 0.0], fx:["4,6 ★ · 39","–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzhaus+Buresch+Hildesheim"},
+      {name:"Ars Saltandi", sc:[0, 5, 0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 55","–"], url:"https://arssaltandi.de/"},
+      {name:"Taktwerk", sc:[0, 5, 0, 16.2, 5.5, 0.0], fx:["4,7 ★ · 20","–"], url:"https://takt-werk.de/"},
+      {name:"Saltazio", sc:[0, 5, 0, 16.4, 5.8, 0.0], fx:["4,7 ★ · 23","–"], url:"https://saltazio.de/"}
+    ],
+    cottbus: [
+      {name:"Tanzschule Daniel Kara", sc:[0, 5, 0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 59","–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzschule+Daniel+Kara+Cottbus"},
+      {name:"Tanzschule Fritsche", sc:[0, 5, 0, 19.3, 6.0, 0.0], fx:["5,0 ★ · 26","–"], url:"https://tanzschule-fritsche.de/"}
+    ],
+    zwickau: [
+      {name:"MOVE Zwickau", sc:[0, 5, 0, 18.5, 6.0, 0.0], fx:["4,9 ★ · 27","–"], url:"https://move-zwickau.de/"},
+      {name:"Tanzatelier Laïa", sc:[0, 5, 0, 14.5, 5.0, 0.0], fx:["4,5 ★ · 15","–"], url:"https://tanzatelier-laia.de/"},
+      {name:"DanceFit Zwickau", sc:[0, 5, 0, 15.4, 4.6, 0.0], fx:["4,7 ★ · 12","–"], url:"https://dancefit-zwickau.de/"}
+    ],
+    weimar: [
+      {name:"Tanzwerkstatt Weimar", sc:[0, 5, 0, 16.6, 7.3, 0.0], fx:["4,6 ★ · 56","–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzwerkstatt+Weimar+Weimar"}
+    ],
+    schwerin: [
+      {name:"Tanzcenter Bandemer", sc:[0, 5, 0, 21.6, 7.5, 0.0], fx:["5,0 ★ · 62","–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzcenter+Bandemer+Schwerin"}
+    ],
+    passau: [
+      {name:"Some Simple Steps", sc:[0, 5, 0, 21.5, 7.4, 0.0], fx:["5,0 ★ · 58","–"], url:"https://tanzschule-passau.de/"},
+      {name:"Tanzschule Schwarz", sc:[0, 5, 0, 19.9, 7.0, 0.0], fx:["4,9 ★ · 48","–"], url:"https://tanzschule-schwarz.de/"},
+      {name:"Dancevolution", sc:[0, 5, 0, 18.8, 5.7, 0.0], fx:["5,0 ★ · 22","–"], url:"https://dancevolution.de/"}
+    ],
+    rosenheim: [
+      {name:"Hermann's Tanzpalast", sc:[0, 5, 0, 20.1, 7.3, 0.0], fx:["4,9 ★ · 54","–"], url:"https://www.google.com/maps/search/?api=1&query=Hermann's+Tanzpalast+Rosenheim"},
+      {name:"Die Tanzschule Rosenheim", sc:[0, 5, 0, 20.0, 7.1, 0.0], fx:["4,9 ★ · 50","–"], url:"https://www.google.com/maps/search/?api=1&query=Die+Tanzschule+Rosenheim+Rosenheim"},
+      {name:"Tanzschule Mangfalltal", sc:[0, 5, 0, 22.4, 8.1, 0.0], fx:["5,0 ★ · 88","–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzschule+Mangfalltal+Rosenheim"},
+      {name:"Tanzschule Kesmarki", sc:[0, 5, 0, 18.8, 6.3, 0.0], fx:["4,9 ★ · 31","–"], url:"https://kesmarki.de/"}
+    ],
+    villingen: [
+      {name:"Tanzschule Seidel", sc:[0, 5, 0, 20.2, 8.8, 0.0], fx:["4,8 ★ · 128","–"], url:"https://seideltanzschule.de/"}
+    ],
+    sindelfingen: [
+      {name:"Tanzfitness Sindelfingen", sc:[0, 5, 0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 58","–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzfitness+Sindelfingen+Sindelfingen"},
+      {name:"Salsa de Cuba Ignacio Cambero", sc:[0, 5, 0, 18.2, 6.5, 0.0], fx:["4,8 ★ · 36","–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+de+Cuba+Ignacio+Cambero+Sindelfingen"}
+    ],
+    esslingen: [
+      {name:"TANZ ES", sc:[0, 5, 0, 21.6, 8.7, 0.0], fx:["4,9 ★ · 124","–"], url:"https://tanzes.com/"}
+    ],
+    goeppingen: [
+      {name:"Tanzschule Bartholomay", sc:[0, 5, 0, 17.9, 7.4, 0.0], fx:["4,7 ★ · 58","–"], url:"https://ts-bartholomay.de/"},
+      {name:"Bamboleo Göppingen", sc:[0, 5, 0, 17.2, 8.4, 0.0], fx:["4,6 ★ · 103","–"], url:"https://www.google.com/maps/search/?api=1&query=Bamboleo+Göppingen+Göppingen"},
+      {name:"Schwehr Tanzschule", sc:[0, 5, 0, 15.6, 7.7, 0.0], fx:["4,5 ★ · 70","–"], url:"https://ts-schwehr.de/"}
+    ],
+    worms: [
+      {name:"Tanzschule Schmitt-Seehaus", sc:[0, 5, 0, 21.3, 8.3, 0.0], fx:["4,9 ★ · 99","–"], url:"https://schmitt-seehaus.de/"},
+      {name:"Tanzschule Prinz Carl", sc:[0, 5, 0, 23.6, 9.5, 0.0], fx:["5,0 ★ · 190","–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzschule+Prinz+Carl+Worms"},
+      {name:"Ralfs Tanzgalerie", sc:[0, 5, 0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 57","–"], url:"https://ralfstanzgalerie.de/"}
+    ],
+    bayreuth: [
+      {name:"Helmut Jahn Tanzschule", sc:[0, 5, 0, 15.3, 7.0, 0.0], fx:["4,5 ★ · 47","–"], url:"https://tanzschule-jahn.com/"},
+      {name:"DanceComplex", sc:[0, 5, 0, 16.5, 5.8, 0.0], fx:["4,7 ★ · 24","–"], url:"https://dancecomplex.de/"}
+    ],
+    hanau: [
+      {name:"Tanzschule Berné", sc:[0, 5, 0, 18.4, 8.2, 0.0], fx:["4,7 ★ · 90","–"], url:"https://tanzschule-berne.de/"}
+    ],
+    iserlohn: [
+      {name:"Tanzwelt Schauburg", sc:[0, 5, 0, 13.1, 7.0, 0.0], fx:["4,3 ★ · 48","–"], url:"https://tanzwelt-schauburg.de/"},
+      {name:"Michaels Tanztreff", sc:[0, 5, 0, 19.3, 7.7, 0.0], fx:["4,8 ★ · 68","–"], url:"https://tanztreff-iserlohn.de/"}
+    ],
+    ratingen: [
+      {name:"Tanzschule am Wall", sc:[0, 5, 0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 114","–"], url:"https://tanzschule-am-wall.de/"},
+      {name:"Tanzpalast Ratingen", sc:[0, 5, 0, 15.8, 4.5, 0.0], fx:["4,8 ★ · 11","–"], url:"https://tanzpalast-ratingen.de/"}
+    ],
+    herford: [
+      {name:"Tanzschule Roemkens", sc:[0, 5, 0, 21.1, 7.1, 0.0], fx:["5,0 ★ · 50","–"], url:"https://roemkens.de/"},
+      {name:"Salsapur", sc:[0, 5, 0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 56","–"], url:"https://salsapur.de/"},
+      {name:"Dance by Sekrin", sc:[0, 5, 0, 18.5, 5.5, 0.0], fx:["5,0 ★ · 20","–"], url:"https://www.google.com/maps/search/?api=1&query=Dance+by+Sekrin+Herford"}
+    ],
+    lippstadt: [
+      {name:"Tanzschule Stüwe-Weissenberg", sc:[0, 5, 0, 18.9, 6.3, 0.0], fx:["4,9 ★ · 32","–"], url:"https://tanzen-in-lippstadt.de/"},
+      {name:"Wanna Dance Company", sc:[0, 5, 0, 18.4, 5.4, 0.0], fx:["5,0 ★ · 19","–"], url:"https://wannadance.de/"},
+      {name:"Tanzstudio Lippstadt", sc:[0, 5, 0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 56","–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzstudio+Lippstadt+Lippstadt"}
+    ],
+    neubrandenburg: [
+      {name:"Tanzstudio Hinrich", sc:[0, 5, 0, 16.1, 4.8, 0.0], fx:["4,8 ★ · 13","–"], url:"https://passion-for-dance.de/"},
+      {name:"Dance Department", sc:[0, 5, 0, 16.1, 4.8, 0.0], fx:["4,8 ★ · 13","–"], url:"https://dance-nb.de/"}
+    ],
+    greifswald: [
+      {name:"Tanzschule D&D", sc:[0, 5, 0, 17.1, 5.6, 0.0], fx:["4,8 ★ · 21","–"], url:"https://tanzschule-hgw.de/"}
+    ],
+    wilhelmshaven: [
+      {name:"Tanzschule von Oehsen", sc:[0, 5, 0, 19.6, 8.0, 0.0], fx:["4,8 ★ · 83","–"], url:"https://tanzschule-von-oehsen.de/"}
+    ],
+    emden: [
+      {name:"Tanzschule Astrid Löschen", sc:[0, 5, 0, 18.2, 7.8, 0.0], fx:["4,7 ★ · 75","–"], url:"https://astrid-loeschen.de/"},
+      {name:"Tanzstudio Schuster", sc:[0, 5, 0, 17.4, 5.9, 0.0], fx:["4,8 ★ · 25","–"], url:"https://studio-schuster.de/"}
     ]
   };
   var VOTE_ENDPOINT = "https://script.google.com/macros/s/AKfycbzAANOuM7cA3QgqeXZXOKZEYumNFsENBZaIicJSaJluR90rTl2iw30Sk522vxIurDsg/exec";
@@ -1631,9 +1863,9 @@ rank_js = r'''
 
 page('rankings.html',
      'Beste Bachata-Schulen Deutschland 2026 · Ranking',
-     'Die besten Bachata-Schulen in Deutschland: unabhängiges Ranking für 79 Städte, mit Punkten, Bewertungen und Abstimmung. Ergebnisse am 20. Dezember 2026.',
+     'Die besten Bachata-Schulen in Deutschland: unabhängiges Ranking für 121 Städte, mit Punkten, Bewertungen und Abstimmung. Ergebnisse am 20. Dezember 2026.',
      'Best Bachata schools in Germany 2026 · Ranking',
-     'The best Bachata schools in Germany: independent ranking for 79 cities, with scores, reviews and voting. Results on December 20, 2026.',
+     'The best Bachata schools in Germany: independent ranking for 121 cities, with scores, reviews and voting. Results on December 20, 2026.',
      'rankings.html', rank_main, r.en, rank_js,
      schema=[crumbs('Rankings 2026', 'rankings.html'), faq_schema(rfaq)])
 
