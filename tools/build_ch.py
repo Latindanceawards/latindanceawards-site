@@ -26,19 +26,6 @@ _CHH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="ch/#metodo" data-i18n="sn3">Method</a></li>
         <li><a href="index.html" data-i18n="sn4">Europe</a></li>
         <li><a href="deutschland.html" data-i18n="sn5">Germany</a></li>
-        <li><a href="pl/" data-i18n="sn7">Poland</a></li>
-        <li><a href="es/" data-i18n="sn8">Spain</a></li>
-        <li><a href="it/" data-i18n="sn9">Italy</a></li>
-        <li><a href="pt/" data-i18n="sn10">Portugal</a></li>
-        <li><a href="fr/" data-i18n="sn11">France</a></li>
-        <li><a href="nl/" data-i18n="sn12">Netherlands</a></li>
-        <li><a href="uk/" data-i18n="sn13">UK</a></li>
-        <li><a href="be/" data-i18n="sn14">Belgium</a></li>
-        <li><a href="ie/" data-i18n="sn15">Ireland</a></li>
-        <li><a href="at/" data-i18n="sn16">Austria</a></li>
-        <li><a href="ee/">Eastern Europe</a></li>
-        <li><a href="nd/">Nordics</a></li>
-        <li><a href="em/">Eastern Mediterranean</a></li>
       </ul>''', _CHH, count=1, flags=re.S)
 _CHH = _CHH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">CH<')
 _CHH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="sn6">Enter a school</a>', _CHH, count=1)

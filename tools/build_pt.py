@@ -26,19 +26,6 @@ _PTH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="pt/#metodo" data-i18n="sn3">Método</a></li>
         <li><a href="index.html" data-i18n="sn4">Europa</a></li>
         <li><a href="deutschland.html" data-i18n="sn5">Alemanha</a></li>
-        <li><a href="pl/" data-i18n="sn7">Polónia</a></li>
-        <li><a href="es/" data-i18n="sn8">Espanha</a></li>
-        <li><a href="it/" data-i18n="sn9">Itália</a></li>
-        <li><a href="fr/">France</a></li>
-        <li><a href="nl/">Netherlands</a></li>
-        <li><a href="uk/">UK</a></li>
-        <li><a href="be/">Belgium</a></li>
-        <li><a href="ie/">Ireland</a></li>
-        <li><a href="at/">Austria</a></li>
-        <li><a href="ch/">Switzerland</a></li>
-        <li><a href="ee/">Eastern Europe</a></li>
-        <li><a href="nd/">Nordics</a></li>
-        <li><a href="em/">Eastern Mediterranean</a></li>
       </ul>''', _PTH, count=1, flags=re.S)
 _PTH = _PTH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">PT<')
 _PTH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="sn6">Inscrever escola</a>', _PTH, count=1)

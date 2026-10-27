@@ -26,19 +26,6 @@ _NLH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="nl/#metodo" data-i18n="sn3">Methode</a></li>
         <li><a href="index.html" data-i18n="sn4">Europa</a></li>
         <li><a href="deutschland.html" data-i18n="sn5">Duitsland</a></li>
-        <li><a href="pl/" data-i18n="sn7">Polen</a></li>
-        <li><a href="es/" data-i18n="sn8">Spanje</a></li>
-        <li><a href="it/" data-i18n="sn9">Italië</a></li>
-        <li><a href="pt/" data-i18n="sn10">Portugal</a></li>
-        <li><a href="fr/" data-i18n="sn11">Frankrijk</a></li>
-        <li><a href="uk/">UK</a></li>
-        <li><a href="be/">Belgium</a></li>
-        <li><a href="ie/">Ireland</a></li>
-        <li><a href="at/">Austria</a></li>
-        <li><a href="ch/">Switzerland</a></li>
-        <li><a href="ee/">Eastern Europe</a></li>
-        <li><a href="nd/">Nordics</a></li>
-        <li><a href="em/">Eastern Mediterranean</a></li>
       </ul>''', _NLH, count=1, flags=re.S)
 _NLH = _NLH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">NL<')
 _NLH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="sn6">School aanmelden</a>', _NLH, count=1)
