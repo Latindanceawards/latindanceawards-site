@@ -16,6 +16,10 @@ CITIES = {
  'catania': ('Catania', 'Catania', 'a Catania'),
  'brescia': ('Brescia', 'Brescia', 'a Brescia'),
  'rimini': ('Rimini', 'Rimini', 'a Rimini'),
+ 'trieste': ('Trieste', 'Trieste', 'a Trieste'),
+ 'parma': ('Parma', 'Parma', 'a Parma'),
+ 'modena': ('Modena', 'Modena', 'a Modena'),
+ 'perugia': ('Perugia', 'Perugia', 'a Perugia'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 SCHOOLS = [
@@ -57,6 +61,15 @@ SCHOOLS = [
  ('InDanza Show Academy', 'rimini', 5.0, 145, 'https://indanzashowacademy.it'),
  ('Archileo y Karen Infinita Pasion', 'rimini', 5.0, 33, 'https://www.infinitapasion.com'),
  ('Polisportiva Alos', 'rimini', 5.0, 1, 'https://tessutiaereirimini.jimdofree.com'),
+ ('ASD Aztecan Academy', 'trieste', 5.0, 204, 'https://aztecanacademy.it'),
+ ('Meta Caraibica', 'trieste', 4.9, 35, 'https://www.metacaraibica.it'),
+ ('Dance House Academy', 'trieste', 5.0, 48, 'https://dancehouseacademy.net'),
+ ('Ataca Dance Parma', 'parma', 5.0, 98, 'https://www.atacadanceparma.com'),
+ ('Latin Dance Studio', 'modena', 4.9, 12, 'https://www.latindancestudio.it'),
+ ('Anthony y Laura Bachata', 'modena', 5.0, 34, _m('Anthony y Laura Bachata', 'Modena')),
+ ('Salsamundo', 'perugia', 4.9, 42, 'https://www.salsamundo.it'),
+ ('Cubamemucho', 'perugia', 5.0, 13, 'https://www.cubamemucho.it'),
+ ('Salsa Style ASD', 'perugia', 4.7, 14, 'https://salsastyleasdperugia.it'),
 ]
 # Scoring data not collected yet for Italy (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
