@@ -48,6 +48,10 @@ CITIES = {
  'crawley': ('Crawley', 'Crawley', 'in Crawley'),
  'st-albans': ('St Albans', 'St Albans', 'in St Albans'),
  'aberystwyth': ('Aberystwyth', 'Aberystwyth', 'in Aberystwyth'),
+ 'worcester': ('Worcester', 'Worcester', 'in Worcester'),
+ 'ipswich': ('Ipswich', 'Ipswich', 'in Ipswich'),
+ 'wolverhampton': ('Wolverhampton', 'Wolverhampton', 'in Wolverhampton'),
+ 'blackpool': ('Blackpool', 'Blackpool', 'in Blackpool'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 SCHOOLS = [
@@ -166,6 +170,10 @@ SCHOOLS = [
  ('Salsa Machine Dance Company', 'st-albans', 4.5, 11, 'https://salsamachine.co.uk/'),
  ('Rumba Latina', 'st-albans', 4.9, 28, 'https://rumbalatina.co.uk/'),
  ('Aberlatin', 'aberystwyth', 5.0, 29, 'https://aberlatin.com/'),
+ ('Tumbao Latin Dance', 'worcester', 5.0, 30, 'https://tumbaoworcester.com/'),
+ ('Lait Dance Club', 'ipswich', 4.8, 26, 'https://laitdanceclub.co.uk/'),
+ ('Zig Zag Dance Factory', 'wolverhampton', 4.9, 41, 'https://zigzagdance.co.uk/'),
+ ('Wilsons Dance', 'blackpool', 5.0, 48, 'https://wilsonsdance.co.uk/'),
 ]
 # Scoring data not collected yet for the UK (years active, beginner offer, events, Instagram, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.

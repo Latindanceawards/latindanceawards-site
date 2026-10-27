@@ -125,7 +125,7 @@ Every school is scored on the same nine public factors, 100 points in total: wei
 - [Bachata Telde: las mejores escuelas de baile 2027](https://latindanceawards.com/es/bachata-telde.html)
 - [Bachata Molina de Segura: las mejores escuelas de baile 2027](https://latindanceawards.com/es/bachata-molina-de-segura.html)
 - [Bachata Elda: las mejores escuelas de baile 2027](https://latindanceawards.com/es/bachata-elda.html)
-- [Le migliori scuole di bachata d’Italia: classifica 2027](https://latindanceawards.com/it/): Classifica delle scuole di bachata in Italia: 185 scuole in 57 città, con valutazioni, punti e metodo. Risultati in primavera 2027. Indipendente e non si compra.
+- [Le migliori scuole di bachata d’Italia: classifica 2027](https://latindanceawards.com/it/): Classifica delle scuole di bachata in Italia: 200 scuole in 68 città, con valutazioni, punti e metodo. Risultati in primavera 2027. Indipendente e non si compra.
 - [Bachata Milano: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-milano.html)
 - [Bachata Roma: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-roma.html)
 - [Bachata Torino: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-torino.html)
@@ -183,6 +183,17 @@ Every school is scored on the same nine public factors, 100 points in total: wei
 - [Bachata Matera: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-matera.html)
 - [Bachata Crotone: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-crotone.html)
 - [Bachata Trapani: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-trapani.html)
+- [Bachata Ravenna: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-ravenna.html)
+- [Bachata Ferrara: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-ferrara.html)
+- [Bachata Reggio Emilia: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-reggio-emilia.html)
+- [Bachata Bergamo: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-bergamo.html)
+- [Bachata Cuneo: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-cuneo.html)
+- [Bachata Terni: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-terni.html)
+- [Bachata Cosenza: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-cosenza.html)
+- [Bachata Siracusa: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-siracusa.html)
+- [Bachata Alessandria: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-alessandria.html)
+- [Bachata Mantova: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-mantova.html)
+- [Bachata Cremona: le migliori scuole di ballo 2027](https://latindanceawards.com/it/bachata-cremona.html)
 - [As melhores escolas de bachata de Portugal: classificação 2027](https://latindanceawards.com/pt/): Classificação das escolas de bachata em Portugal: 27 escolas em 12 cidades, com avaliações, pontos e método. Resultados na primavera de 2027. Independente e não se compra.
 - [Bachata Lisboa: as melhores escolas de dança 2027](https://latindanceawards.com/pt/bachata-lisboa.html)
 - [Bachata Porto: as melhores escolas de dança 2027](https://latindanceawards.com/pt/bachata-porto.html)
@@ -196,7 +207,7 @@ Every school is scored on the same nine public factors, 100 points in total: wei
 - [Bachata Leiria: as melhores escolas de dança 2027](https://latindanceawards.com/pt/bachata-leiria.html)
 - [Bachata Sintra: as melhores escolas de dança 2027](https://latindanceawards.com/pt/bachata-sintra.html)
 - [Bachata Portimão: as melhores escolas de dança 2027](https://latindanceawards.com/pt/bachata-portimao.html)
-- [Les meilleures écoles de bachata de France : classement 2027](https://latindanceawards.com/fr/): Classement des écoles de bachata en France : 147 écoles dans 40 villes, avec notes, points et méthode. Résultats au printemps 2027. Indépendant et ne s’achète pas.
+- [Les meilleures écoles de bachata de France : classement 2027](https://latindanceawards.com/fr/): Classement des écoles de bachata en France : 154 écoles dans 45 villes, avec notes, points et méthode. Résultats au printemps 2027. Indépendant et ne s’achète pas.
 - [Bachata Paris: les meilleures écoles de danse 2027](https://latindanceawards.com/fr/bachata-paris.html)
 - [Bachata Lyon: les meilleures écoles de danse 2027](https://latindanceawards.com/fr/bachata-lyon.html)
 - [Bachata Marseille: les meilleures écoles de danse 2027](https://latindanceawards.com/fr/bachata-marseille.html)
@@ -237,6 +248,11 @@ Every school is scored on the same nine public factors, 100 points in total: wei
 - [Bachata Vannes: les meilleures écoles de danse 2027](https://latindanceawards.com/fr/bachata-vannes.html)
 - [Bachata Béziers: les meilleures écoles de danse 2027](https://latindanceawards.com/fr/bachata-beziers.html)
 - [Bachata Mérignac: les meilleures écoles de danse 2027](https://latindanceawards.com/fr/bachata-merignac.html)
+- [Bachata Rouen: les meilleures écoles de danse 2027](https://latindanceawards.com/fr/bachata-rouen.html)
+- [Bachata Saint-Étienne: les meilleures écoles de danse 2027](https://latindanceawards.com/fr/bachata-saint-etienne.html)
+- [Bachata Limoges: les meilleures écoles de danse 2027](https://latindanceawards.com/fr/bachata-limoges.html)
+- [Bachata Avignon: les meilleures écoles de danse 2027](https://latindanceawards.com/fr/bachata-avignon.html)
+- [Bachata Le Havre: les meilleures écoles de danse 2027](https://latindanceawards.com/fr/bachata-le-havre.html)
 - [De beste bachata-dansscholen van Nederland: ranglijst 2027](https://latindanceawards.com/nl/): Ranglijst van bachata-dansscholen in Nederland: 89 scholen in 29 steden, met scores, punten en methode. Resultaten in het voorjaar van 2027. Onafhankelijk en niet te koop.
 - [Bachata Amsterdam: de beste dansscholen 2027](https://latindanceawards.com/nl/bachata-amsterdam.html)
 - [Bachata Rotterdam: de beste dansscholen 2027](https://latindanceawards.com/nl/bachata-rotterdam.html)
@@ -267,7 +283,7 @@ Every school is scored on the same nine public factors, 100 points in total: wei
 - [Bachata Leeuwarden: de beste dansscholen 2027](https://latindanceawards.com/nl/bachata-leeuwarden.html)
 - [Bachata Gouda: de beste dansscholen 2027](https://latindanceawards.com/nl/bachata-gouda.html)
 - [Bachata Hilversum: de beste dansscholen 2027](https://latindanceawards.com/nl/bachata-hilversum.html)
-- [The best Bachata schools in the UK: ranking 2027](https://latindanceawards.com/uk/): Ranking of Bachata schools in the UK: 115 schools in 46 cities, with ratings, points and method. Results in spring 2027. Independent and not for sale.
+- [The best Bachata schools in the UK: ranking 2027](https://latindanceawards.com/uk/): Ranking of Bachata schools in the UK: 119 schools in 50 cities, with ratings, points and method. Results in spring 2027. Independent and not for sale.
 - [Bachata London: the best dance schools 2027](https://latindanceawards.com/uk/bachata-london.html)
 - [Bachata Manchester: the best dance schools 2027](https://latindanceawards.com/uk/bachata-manchester.html)
 - [Bachata Bristol: the best dance schools 2027](https://latindanceawards.com/uk/bachata-bristol.html)
@@ -314,6 +330,10 @@ Every school is scored on the same nine public factors, 100 points in total: wei
 - [Bachata Crawley: the best dance schools 2027](https://latindanceawards.com/uk/bachata-crawley.html)
 - [Bachata St Albans: the best dance schools 2027](https://latindanceawards.com/uk/bachata-st-albans.html)
 - [Bachata Aberystwyth: the best dance schools 2027](https://latindanceawards.com/uk/bachata-aberystwyth.html)
+- [Bachata Worcester: the best dance schools 2027](https://latindanceawards.com/uk/bachata-worcester.html)
+- [Bachata Ipswich: the best dance schools 2027](https://latindanceawards.com/uk/bachata-ipswich.html)
+- [Bachata Wolverhampton: the best dance schools 2027](https://latindanceawards.com/uk/bachata-wolverhampton.html)
+- [Bachata Blackpool: the best dance schools 2027](https://latindanceawards.com/uk/bachata-blackpool.html)
 - [The best Bachata schools in Eastern Mediterranean: ranking 2027](https://latindanceawards.com/em/): Ranking of Bachata schools in Eastern Mediterranean: 86 schools in 14 cities, with ratings, points and method. Results in spring 2027. Independent and not for sale.
 - [Bachata Istanbul: the best dance schools 2027](https://latindanceawards.com/em/bachata-istanbul.html)
 - [Bachata Ankara: the best dance schools 2027](https://latindanceawards.com/em/bachata-ankara.html)

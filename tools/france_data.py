@@ -42,6 +42,11 @@ CITIES = {
  'vannes': ('Vannes', 'Vannes', 'à Vannes'),
  'beziers': ('Béziers', 'Béziers', 'à Béziers'),
  'merignac': ('Mérignac', 'Mérignac', 'à Mérignac'),
+ 'rouen': ('Rouen', 'Rouen', 'à Rouen'),
+ 'saint-etienne': ('Saint-Étienne', 'Saint-Étienne', 'à Saint-Étienne'),
+ 'limoges': ('Limoges', 'Limoges', 'à Limoges'),
+ 'avignon': ('Avignon', 'Avignon', 'à Avignon'),
+ 'le-havre': ('Le Havre', 'Le Havre', 'à Le Havre'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 SCHOOLS = [
@@ -192,6 +197,13 @@ SCHOOLS = [
  ('Manuela salsa', 'beziers', 4.3, 12, _m('Manuela salsa', 'Béziers')),
  ('Sandrine Skiz Kizomba et danse orientale', 'beziers', 4.9, 18, _m('Sandrine Skiz Kizomba et danse orientale', 'Béziers')),
  ("L'Atelier Danse Club", 'merignac', 4.5, 506, 'https://latelierdanseclub.com/'),
+ ('La Descarga', 'rouen', 4.9, 70, 'https://ladescarga.fr/'),
+ ('Studio 7', 'saint-etienne', 5.0, 403, 'https://studio7dancecomplexe.com/'),
+ ('Temponoi', 'saint-etienne', 5.0, 16, 'https://temponoi.com/'),
+ ('Timbacaraibes', 'limoges', 4.6, 11, 'https://timbacaraibes.fr/'),
+ ('Dance Center Richard Amar', 'avignon', 4.9, 97, 'https://danse-avignon.fr/'),
+ ('Asso Le Tempo', 'avignon', 5.0, 40, 'https://assotempo.com/'),
+ ('Prevel Swing Danse Studio', 'le-havre', 5.0, 41, 'https://prevelswingdanse.fr/'),
 ]
 # Scoring data not collected yet for France (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.

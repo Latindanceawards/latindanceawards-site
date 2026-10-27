@@ -59,6 +59,17 @@ CITIES = {
  'matera': ('Matera', 'Matera', 'a Matera'),
  'crotone': ('Crotone', 'Crotone', 'a Crotone'),
  'trapani': ('Trapani', 'Trapani', 'a Trapani'),
+ 'ravenna': ('Ravenna', 'Ravenna', 'a Ravenna'),
+ 'ferrara': ('Ferrara', 'Ferrara', 'a Ferrara'),
+ 'reggio-emilia': ('Reggio Emilia', 'Reggio Emilia', 'a Reggio Emilia'),
+ 'bergamo': ('Bergamo', 'Bergamo', 'a Bergamo'),
+ 'cuneo': ('Cuneo', 'Cuneo', 'a Cuneo'),
+ 'terni': ('Terni', 'Terni', 'a Terni'),
+ 'cosenza': ('Cosenza', 'Cosenza', 'a Cosenza'),
+ 'siracusa': ('Siracusa', 'Siracusa', 'a Siracusa'),
+ 'alessandria': ('Alessandria', 'Alessandria', 'a Alessandria'),
+ 'mantova': ('Mantova', 'Mantova', 'a Mantova'),
+ 'cremona': ('Cremona', 'Cremona', 'a Cremona'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 SCHOOLS = [
@@ -247,6 +258,21 @@ SCHOOLS = [
  ('Sentimento Cubano Latin Dance Academy', 'matera', 4.9, 55, 'https://sentimentocubano.com/'),
  ('Alma Cubana', 'crotone', 5.0, 16, 'https://almacubana.it/'),
  ('Latin Dream dance school', 'trapani', 4.8, 18, _m('Latin Dream dance school', 'Trapani')),
+ ('Habanera Social Club', 'ravenna', 5.0, 14, _m('Habanera Social Club', 'Ravenna')),
+ ('Dance Planet Ravenna', 'ravenna', 4.9, 16, _m('Dance Planet Ravenna', 'Ravenna')),
+ ('Caribe Club', 'ferrara', 4.9, 137, 'https://caribeclub.it/'),
+ ('Los Rumberos', 'ferrara', 4.8, 53, 'https://losrumberos.net/'),
+ ('Dance Studio Reggio Emilia', 'reggio-emilia', 4.9, 16, 'https://dancestudioreggioemilia.it/'),
+ ('Gabri & Chiara', 'bergamo', 5.0, 18, 'https://gabriychiara.it/'),
+ ('Imperial Dance Cuneo', 'cuneo', 5.0, 102, 'https://imperial-dance.it/'),
+ ('Pachanga Terni', 'terni', 4.8, 13, 'https://lapachanga.it/'),
+ ('Dancing Club Cosenza', 'cosenza', 4.8, 62, 'https://accademiadancingclub.it/'),
+ ('Cosenza Dance Center', 'cosenza', 4.9, 55, 'https://cosenzadancecenter.it/'),
+ ('Yeswedance', 'siracusa', 5.0, 83, 'https://yeswedanceacademy.it/'),
+ ('Cuban Club Alessandria', 'alessandria', 5.0, 147, 'https://cubanclubalessandria.com/'),
+ ('Lesotica Scuola di Ballo', 'mantova', 4.9, 241, 'https://lesoticascuoladiballo.it/'),
+ ('CremonaDance&Co', 'cremona', 4.9, 21, 'https://cremonadanceco.it/'),
+ ('Balla&Snella Cremona', 'cremona', 5.0, 15, 'https://ballaesnellacremona.com/'),
 ]
 # Scoring data not collected yet for Italy (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
