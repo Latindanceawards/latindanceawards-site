@@ -31,6 +31,8 @@ CITIES = {
  'treviso': ('Treviso', 'Treviso', 'a Treviso'),
  'udine': ('Udine', 'Udine', 'a Udine'),
  'bolzano': ('Bolzano', 'Bolzano', 'a Bolzano'),
+ 'vicenza': ('Vicenza', 'Vicenza', 'a Vicenza'),
+ 'novara': ('Novara', 'Novara', 'a Novara'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 SCHOOLS = [
@@ -100,6 +102,9 @@ SCHOOLS = [
  ('Jackson Cabezas Bachata y Salsa', 'udine', 5.0, 8, _m('Jackson Cabezas Bachata y Salsa', 'Udine')),
  ("Salsa C'È & Bachata", 'bolzano', 5.0, 103, 'https://salsace.carrd.com'),
  ('Salsa Star Dance Studio', 'bolzano', 5.0, 72, 'https://www.salsastar.it'),
+ ('Gallego Dance Academy', 'vicenza', 4.9, 19, 'https://www.gallegodanceacademy.com'),
+ ('Yda e Gabry Dance Academy', 'novara', 5.0, 153, 'https://ydaegabry.it'),
+ ('Latin Soul Akademy', 'novara', 5.0, 61, 'https://www.latinsoulakademy.it'),
 ]
 # Scoring data not collected yet for Italy (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
