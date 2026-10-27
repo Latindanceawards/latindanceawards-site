@@ -36,6 +36,7 @@ _BEH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="ie/" data-i18n="sn15">Ireland</a></li>
         <li><a href="at/" data-i18n="sn16">Austria</a></li>
         <li><a href="ch/" data-i18n="sn17">Switzerland</a></li>
+        <li><a href="ee/" data-i18n="sn18">Eastern Europe</a></li>
       </ul>''', _BEH, count=1, flags=re.S)
 _BEH = _BEH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">BE<')
 _BEH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="sn6">Enter a school</a>', _BEH, count=1)
@@ -60,7 +61,7 @@ _BEF = f'''<footer>
   </div>
 </footer>'''
 
-SHARED_ES_EN = {'sn1': 'Ranking', 'sn2': 'Cities', 'sn3': 'Method', 'sn4': 'Europe', 'sn5': 'Germany', 'sn6': 'Enter a school', 'sn7': 'Poland', 'sn7': 'Poland', 'sn8': 'Spain', 'sn9': 'Italy', 'sn10': 'Portugal', 'sn11': 'France', 'sn12': 'Netherlands', 'sn13': 'UK', 'sn14': 'Belgium', 'sn15': 'Ireland', 'sn16': 'Austria', 'sn17': 'Switzerland', 
+SHARED_ES_EN = {'sn1': 'Ranking', 'sn2': 'Cities', 'sn3': 'Method', 'sn4': 'Europe', 'sn5': 'Germany', 'sn6': 'Enter a school', 'sn7': 'Poland', 'sn7': 'Poland', 'sn8': 'Spain', 'sn9': 'Italy', 'sn10': 'Portugal', 'sn11': 'France', 'sn12': 'Netherlands', 'sn13': 'UK', 'sn14': 'Belgium', 'sn15': 'Ireland', 'sn16': 'Austria', 'sn17': 'Switzerland', 'sn18': 'Eastern Europe', 
   'sf1': "An independent project celebrating Europe's Latin dance schools. Rankings are based on public data and can't be bought.",
   'sf2': 'Rankings', 'sf3': 'Belgium 2027', 'sf4': 'How we score', 'sf5': 'Contact', 'sf6': 'Bachata Edition · Belgium'}
 
