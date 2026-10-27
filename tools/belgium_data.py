@@ -44,4 +44,6 @@ SCHOOLS = [
 ]
 # Scoring data not collected yet for Belgium (years active, beginner offer, events, Instagram, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
-EXTRA = {}
+EXTRA = {
+ 'The Embassy Room': (5, 8, 7, 0, 0, []),
+}
