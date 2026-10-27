@@ -17,6 +17,12 @@ CITIES = {
  'marbella': ('Marbella', 'Marbella', 'Marbella'),
  'almeria': ('Almería', 'Almería', 'Almería'),
  'san-sebastian': ('San Sebastián', 'San Sebastián', 'San Sebastián'),
+ 'salamanca': ('Salamanca', 'Salamanca', 'Salamanca'),
+ 'logrono': ('Logroño', 'Logroño', 'Logroño'),
+ 'getafe': ('Getafe', 'Getafe', 'Getafe'),
+ 'alcala-de-henares': ('Alcalá de Henares', 'Alcalá de Henares', 'Alcalá de Henares'),
+ 'burgos': ('Burgos', 'Burgos', 'Burgos'),
+ 'jerez': ('Jerez de la Frontera', 'Jerez de la Frontera', 'Jerez de la Frontera'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 # (name, city, rating, reviews, website)
@@ -118,6 +124,19 @@ SCHOOLS = [
  ('Mundo Salsero Almería', 'almeria', 5.0, 12, 'https://mundosalseroalmeria.es'),
  ('Academia de Baile Damhsa', 'almeria', 5.0, 87, 'https://damhsa.es'),
  ('Leyre Mendoza Escuela de Baile', 'san-sebastian', 4.9, 82, 'https://www.leyremendoza.com'),
+ ('Laguez Salamanca Bachata Academy', 'salamanca', 4.9, 74, _m('Laguez Salamanca Bachata Academy', 'Salamanca')),
+ ('DG Dance Academy', 'salamanca', 5.0, 23, 'https://dgdanceacademy.es'),
+ ('Akokan Dance Studio', 'logrono', 5.0, 20, 'https://akokandancestudio.com'),
+ ('El Taller de la Danza', 'logrono', 5.0, 71, 'https://eltallerdeladanza.com'),
+ ('Disfruta Bailando', 'getafe', 4.9, 137, 'https://disfrutabailando.com'),
+ ('Bachata Alcalá de Henares New Dance Generation', 'alcala-de-henares', 5.0, 14, _m('Bachata Alcalá de Henares New Dance Generation', 'Alcalá de Henares')),
+ ('Escuela de Baile La Clave', 'alcala-de-henares', 5.0, 224, 'https://www.escueladebaileenalcala.com'),
+ ('Escuela de Baile La Malanga', 'alcala-de-henares', 4.9, 272, 'https://www.escueladebailelamalanga.com'),
+ ('Escuela de Baile Paso a Paso Alcalá de Henares', 'alcala-de-henares', 5.0, 135, 'https://escueladebaileenalcaladehenares.com'),
+ ('El Ocho Escuela de Baile', 'alcala-de-henares', 4.9, 39, 'https://www.elochoescueladebaile.es'),
+ ('Academia Kímbala', 'burgos', 4.9, 126, 'https://academiakimbala.com'),
+ ('Latinoson Jerez', 'jerez', 4.8, 78, 'https://latinoson-jerez.ueniweb.com'),
+ ('Bembé Dance Club', 'jerez', 4.8, 52, 'https://www.bembedanceclub.com'),
 ]
 # Scoring data not collected yet for Spain (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
