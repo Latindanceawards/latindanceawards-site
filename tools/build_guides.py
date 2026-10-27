@@ -602,6 +602,196 @@ fest_faq = [
 
 
 # ======================================================================
+# BACHATA TANZEN (guide) and BACHATA GRUNDSCHRITT (guide)
+# ======================================================================
+CITY_LINKS_DE = ('<a href="bachata-berlin.html">Berlin</a>, <a href="bachata-hamburg.html">Hamburg</a>, <a href="bachata-muenchen.html">München</a>, '
+                 '<a href="bachata-koeln.html">Köln</a>, <a href="bachata-frankfurt.html">Frankfurt</a> und <a href="bachata-duesseldorf.html">Düsseldorf</a>')
+CITY_LINKS_EN = ('<a href="bachata-berlin.html">Berlin</a>, <a href="bachata-hamburg.html">Hamburg</a>, <a href="bachata-muenchen.html">Munich</a>, '
+                 '<a href="bachata-koeln.html">Cologne</a>, <a href="bachata-frankfurt.html">Frankfurt</a> and <a href="bachata-duesseldorf.html">Düsseldorf</a>')
+UNESCO = '<a href="https://en.wikipedia.org/wiki/Bachata_(music)" rel="noopener">Wikipedia</a>'
+
+tanzen_sections = [
+ ('Bachata tanzen: Was ist das eigentlich?', 'Dancing Bachata: what is it, exactly?', [
+   ('p', f'Bachata tanzen heißt, zu Gitarrenmusik aus der Dominikanischen Republik einen Paartanz mit klarem Vier-Schritt-Rhythmus zu tanzen. Bachata entstand dort im 20. Jahrhundert, Musik und Tanz gehören zusammen, und die Tradition steht auf der UNESCO-Liste des immateriellen Kulturerbes ({WIKI}). Typisch für die Musik sind Gitarren, Bass, Bongos und Güira, also ein weicher, melodischer Klang, der sich gut zum Einstieg eignet.',
+         f'Dancing Bachata means dancing a couple dance with a clear four-beat rhythm to guitar music from the Dominican Republic. Bachata developed there in the 20th century, music and dance belong together, and the tradition is on the UNESCO list of intangible cultural heritage ({WIKI_EN}). The music is typically built on guitars, bass, bongos and güira, a soft, melodic sound that suits beginners well.'),
+   ('p', 'Heute wird Bachata weltweit getanzt, und in Europa hat sich daraus eine eigene Szene mit Schulen, Socials und Festivals entwickelt. Wer Bachata tanzen lernen will, findet in Deutschland in fast jeder größeren Stadt Kurse. Auf dieser Seite bekommst du den Überblick: Stile, erste Schritte, Kurssuche, Übungstipps und Fragen, die Einsteiger oft stellen.',
+         'Today Bachata is danced all over the world, and in Europe it has grown into its own scene with schools, socials and festivals. If you want to learn to dance Bachata, you will find classes in almost every larger city in Germany. This page gives you the overview: styles, first steps, finding a class, practice tips and questions beginners often ask.'),
+ ]),
+ ('Bachata tanzen lernen: Die drei Stile im Vergleich', 'Learning to dance Bachata: the three styles compared', [
+   ('p', 'Bevor du einen Kurs buchst, lohnt sich ein Blick auf die Stile. Die Schulen nennen sie unterschiedlich, aber meist begegnen dir diese drei:',
+         'Before you book a class it helps to know the styles. Schools name them differently, but you will usually meet these three:'),
+   ('h3', 'Bachata Dominicana', 'Bachata Dominicana'),
+   ('p', 'Der ursprüngliche Stil: kleine, schnelle Schritte, offene Haltung, viel Spiel mit dem Rhythmus. Wer die Musik liebt und gern mit den Füßen spielt, ist hier richtig.',
+         'The original style: small, quick steps, an open hold and lots of play with the rhythm. If you love the music and like playing with your feet, this is for you.'),
+   ('h3', 'Bachata Moderna', 'Bachata Moderna'),
+   ('p', 'Der Grundschritt wird mit Drehungen und Elementen anderer Tänze erweitert. Viele Einsteigerkurse beginnen hier, weil der Zugang leicht ist und du schnell auf Partys tanzen kannst.',
+         'The basic step is extended with turns and elements from other dances. Many beginner classes start here because it is easy to get into and you can soon dance at parties.'),
+   ('h3', 'Bachata Sensual', 'Bachata Sensual'),
+   ('p', 'In Europa entstanden: enge Verbindung, Körperwellen und fließende Drehungen. Auf vielen Socials und Festivals der Hauptstil. Er verlangt Führung und Körperspannung, die du Schritt für Schritt aufbaust.',
+         'Developed in Europe: close connection, body waves and flowing turns. The main style at many socials and festivals. It asks for lead, follow and body tension, which you build up step by step.'),
+ ]),
+ ('Bachata Anfänger: Die ersten Schritte', 'Bachata for beginners: your first steps', [
+   ('p', 'Als Anfänger brauchst du weder Vorkenntnisse noch einen Partner. Diese Grundlagen kommen in jedem Einsteigerkurs vor:',
+         'As a beginner you need neither experience nor a partner. These basics come up in every beginner class:'),
+   ('ul', [
+     ('<strong>Grundschritt:</strong> Drei Schritte zur Seite und ein Tap auf Zählzeit vier, dann zurück. Die ausführliche Anleitung steht im Ratgeber zum <a href="bachata-grundschritt.html">Bachata-Grundschritt</a>.', '<strong>Basic step:</strong> three steps to the side and a tap on count four, then back. The full walkthrough is in the guide to the <a href="bachata-grundschritt.html">Bachata basic step</a>.'),
+     ('<strong>Musik hören:</strong> Zähle beim Hören mit, 1-2-3-4, und achte auf die Betonung der Zählzeit vier. Das schult dein Timing, bevor du dich bewegst.', '<strong>Listening:</strong> count along, 1-2-3-4, and notice the accent on count four. It trains your timing before you move.'),
+     ('<strong>Haltung:</strong> Locker in den Knien, Oberkörper ruhig, Gewicht über den Fußballen. Das gilt für alle Stile.', '<strong>Posture:</strong> relaxed knees, a calm upper body, weight over the balls of your feet. This applies to all styles.'),
+     ('<strong>Verbindung:</strong> Führen und Folgen läuft über Hände und Arme, nicht über Kraft. Im Kurs wechselst du meist die Partner und lernst so schnell.', '<strong>Connection:</strong> lead and follow work through hands and arms, not force. In class you usually rotate partners and learn quickly that way.'),
+     ('<strong>Erste Drehung:</strong> Wenn der Grundschritt sitzt, kommen einfache Drehungen und der Wechsel der Seiten dazu.', '<strong>First turn:</strong> once the basic step feels natural, simple turns and side changes follow.'),
+   ]),
+ ]),
+ ('Bachata-Kurs finden: So wählst du die richtige Schule', 'Finding a Bachata class: how to choose the right school', [
+   ('p', f'Kurse gibt es in fast jeder größeren Stadt. Wir haben Übersichten für {CITY_LINKS_DE}. Darauf findest du Schulen mit Links zu ihren Websites, alphabetisch und ohne Wertung.',
+         f'Classes exist in almost every larger city. We have overviews for {CITY_LINKS_EN}. They list schools with links to their websites, alphabetical and without a rating.'),
+   ('ul', [
+     ('<strong>Probestunde:</strong> Frag nach einer Schnupperstunde, bevor du ein Paket buchst. Manche Schulen bieten sie an, andere nicht.', '<strong>Trial class:</strong> ask for a taster class before you buy a bundle. Some schools offer one, others do not.'),
+     ('<strong>Level:</strong> Starte bei den Einsteigern, auch wenn du schon andere Tänze kennst. Die Schulen nennen die Stufen unterschiedlich, frag nach.', '<strong>Level:</strong> start with beginners, even if you know other dances. Schools name their levels differently, so ask.'),
+     ('<strong>Stil:</strong> Schau, ob der Kurs Dominicana, Moderna oder Sensual unterrichtet. Der Stil lässt sich später wechseln.', '<strong>Style:</strong> check whether the class teaches Dominicana, Moderna or Sensual. You can switch styles later.'),
+     ('<strong>Lage und Termin:</strong> Ein fester Wochentag in deiner Nähe hält dich im Training. Prüfe Anfahrt und Uhrzeit ehrlich.', '<strong>Place and time:</strong> a fixed weekday close to you keeps you training. Be honest about the journey and the hour.'),
+     ('<strong>Preis:</strong> Einzelstunde, Monatsbeitrag und Block unterscheiden sich. Vergleiche zwei oder drei Preislisten, wir nennen bewusst keine Zahlen, weil sie sich ändern.', '<strong>Price:</strong> single class, monthly fee and block courses differ. Compare two or three price lists; we deliberately quote no numbers because they change.'),
+   ]),
+   ('p', 'Das offizielle Ranking der Bachata-Schulen erscheint am <strong>20. Dezember 2026</strong> auf der <a href="rankings.html">Ranking-Seite</a>. Die Methode mit allen Kriterien steht auf der <a href="deutschland.html#method">Startseite</a>. Du leitest eine Schule? <a href="bewerbung.html">Bewirb dich kostenlos bis zum 30. November</a>.',
+         'The official ranking of Bachata schools is published on <strong>December 20, 2026</strong> on the <a href="rankings.html">ranking page</a>. The method with all factors is on the <a href="deutschland.html#method">homepage</a>. Do you run a school? <a href="bewerbung.html">Apply for free by November 30</a>.'),
+ ]),
+ ('Bachata zu Hause üben: Tipps zum Dranbleiben', 'Practising Bachata at home: tips to keep going', [
+   ('p', 'Kurs und Üben gehören zusammen. Schon wenige Minuten am Tag helfen, damit sich der Grundschritt in der nächsten Stunde vertraut anfühlt.',
+         'Class and practice go together. Even a few minutes a day help the basic step feel familiar in your next class.'),
+   ('ul', [
+     ('Übe den Grundschritt vor einem Spiegel oder beim Zähneputzen, ohne Musik, dann mit Musik.', 'Practise the basic step in front of a mirror, or while brushing your teeth, first without music and then with music.'),
+     ('Höre Bachata auf dem Weg zur Arbeit und zähle die Zählzeiten mit.', 'Listen to Bachata on your way to work and count the beats.'),
+     ('Wiederhole nach dem Kurs die ein oder zwei Elemente, die dir schwerfielen, statt alles zu üben.', 'After class, repeat the one or two moves you found hard instead of practising everything.'),
+     ('Geh früh auf ein Social, auch nur für eine halbe Stunde. Tanzen mit fremden Partnern lehrt mehr als jedes Video.', 'Go to a social early, even for half an hour. Dancing with new partners teaches more than any video.'),
+   ]),
+ ]),
+ ('Bachata-Socials und Festivals: Wo du tanzen kannst', 'Bachata socials and festivals: where to dance', [
+   ('p', 'Auf einem Social tanzt du frei, ohne Unterricht, meist mit gemischter Musik. Eine Liste regelmäßiger Termine findest du auf der Seite <a href="bachata-socials.html">Bachata-Socials in Deutschland</a>. Viele Schulen laden außerdem zu eigenen Übungsabenden ein.',
+         'At a social you dance freely, without a lesson, usually to mixed music. You will find a list of regular dates on the page <a href="bachata-socials.html">Bachata socials in Germany</a>. Many schools also invite you to their own practice nights.'),
+   ('p', 'Tipp für den ersten Besuch: Komm früh, sag, dass du Anfänger bist, und frag nach einem Tanz. Die Szene ist offen, und die meisten freuen sich über neue Gesichter.',
+         'Tip for your first visit: come early, say you are a beginner and ask for a dance. The scene is open, and most people enjoy new faces.'),
+ ]),
+]
+
+tanzen_faq = [
+ ('Wie lange dauert es, Bachata tanzen zu lernen?', 'How long does it take to learn to dance Bachata?',
+  'Das hängt von dir ab. Den Grundschritt lernen die meisten in der ersten Stunde, für sicheres Führen oder Folgen auf einem Social brauchst du in der Regel mehrere Wochen regelmäßiges Training. Eine feste Zahl nennen wir bewusst nicht.',
+  'That depends on you. Most people pick up the basic step in the first class; for confident leading or following at a social you usually need several weeks of regular training. We deliberately give no fixed number.'),
+ ('Brauche ich einen Partner, um Bachata tanzen zu lernen?', 'Do I need a partner to learn Bachata?',
+  'Nein, in der Regel nicht. Viele Schulen wechseln die Partner im Kurs. Frag am besten vor der ersten Stunde nach.',
+  'No, usually not. Many schools rotate partners in class. It is best to ask before your first class.'),
+ ('Welcher Bachata-Stil ist für Anfänger am besten?', 'Which Bachata style is best for beginners?',
+  'Die meisten Einsteiger starten mit Bachata Moderna oder Sensual. Wichtig sind der Grundschritt und ein klarer Rhythmus. Der Stil lässt sich später wechseln.',
+  'Most beginners start with Bachata Moderna or Sensual. What matters is the basic step and a clear rhythm. You can switch styles later.'),
+ ('Kann ich Bachata tanzen lernen, ohne vorher zu tanzen?', 'Can I learn Bachata without any dance experience?',
+  'Ja. Einsteigerkurse setzen keine Vorkenntnisse voraus. Wichtig sind Freude an der Musik und die Bereitschaft, regelmäßig zu üben.',
+  'Yes. Beginner classes assume no experience. What matters is enjoying the music and being willing to practise regularly.'),
+ ('Wo kann ich Bachata tanzen lernen?', 'Where can I learn to dance Bachata?',
+  f'In Tanzschulen und Studios in fast jeder größeren Stadt. Übersichten findest du für {CITY_LINKS_DE}.',
+  f'In dance schools and studios in almost every larger city. You will find overviews for {CITY_LINKS_EN}.'),
+ ('Wann erscheint das Ranking der besten Bachata-Schulen?', 'When is the ranking of the best Bachata schools published?',
+  'Am 20. Dezember 2026 um 19 Uhr auf der <a href="rankings.html">Ranking-Seite</a>.',
+  'On December 20, 2026 at 7 pm (CET) on the <a href="rankings.html">ranking page</a>.'),
+]
+
+guide_page('bachata-tanzen', 'bt',
+  'Bachata tanzen lernen: Stile, Schritte, Kurse',
+  'Bachata tanzen lernen: die drei Stile, erste Schritte für Anfänger, Tipps zur Kurswahl und zum Üben. Mit Links zu Schulen in deiner Stadt.',
+  'Learn to dance Bachata: styles, steps, classes',
+  'Learn to dance Bachata: the three styles, first steps for beginners, tips for choosing a class and for practising, with links to schools in your city.',
+  'Bachata tanzen', ('Bachata tanzen · Ratgeber', 'Dancing Bachata · Guide'),
+  ('Bachata tanzen lernen: <em class="foil">Stile, Schritte, Kurse</em>', 'Learn to dance Bachata: <em class="foil">styles, steps, classes</em>'),
+  ('Bachata tanzen macht Spaß und ist leichter, als es aussieht. Hier erfährst du, welche Stile es gibt, wie die ersten Schritte gehen, woran du einen guten Kurs erkennst und wie du am besten übst.',
+   'Dancing Bachata is fun and easier than it looks. Here you learn which styles exist, how the first steps go, how to recognise a good class and how to practise best.'),
+  [('check', 'Für <b>Anfänger</b> ohne Partner', 'For <b>beginners</b> without a partner'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  tanzen_sections, tanzen_faq, sibling_group='topic')
+
+grund_sections = [
+ ('Bachata-Grundschritt: Das Wichtigste in Kürze', 'The Bachata basic step: the essentials', [
+   ('p', f'Der Bachata-Grundschritt ist die Basis für alles, was du später tanzt. Er besteht aus vier Zählzeiten: Du machst drei Schritte in eine Richtung, auf Zählzeit vier folgt ein Tap, dann geht es mit drei Schritten zurück. Bachata stammt aus der Dominikanischen Republik ({WIKI}), und dieser Rhythmus trägt Musik und Tanz bis heute.',
+         f'The Bachata basic step is the base for everything you dance later. It has four counts: you take three steps in one direction, a tap follows on count four, then three steps take you back. Bachata comes from the Dominican Republic ({WIKI_EN}), and this rhythm carries the music and the dance to this day.'),
+   ('p', 'Auf dieser Seite findest du den Grundschritt Schritt für Schritt, typische Fehler, Übungstipps und den Weg zu den ersten Figuren. Wenn du lieber im Kurs lernst, hilft dir der Ratgeber <a href="bachata-tanzen.html">Bachata tanzen lernen</a> bei der Wahl.',
+         'On this page you find the basic step one move at a time, common mistakes, practice tips and the path to your first figures. If you would rather learn in class, the guide <a href="bachata-tanzen.html">Learn to dance Bachata</a> helps you choose.'),
+ ]),
+ ('Bachata-Grundschritt Schritt für Schritt', 'The Bachata basic step, one move at a time', [
+   ('ul', [
+     ('<strong>Zählzeit 1:</strong> Tritt mit dem linken Fuß einen kleinen Schritt zur Seite.', '<strong>Count 1:</strong> take a small step to the side with your left foot.'),
+     ('<strong>Zählzeit 2:</strong> Setze den rechten Fuß neben den linken.', '<strong>Count 2:</strong> bring your right foot next to your left.'),
+     ('<strong>Zählzeit 3:</strong> Tritt wieder mit links zur Seite.', '<strong>Count 3:</strong> step to the side with your left again.'),
+     ('<strong>Zählzeit 4:</strong> Tippe mit dem rechten Fuß neben den linken und bewege dabei die Hüfte. Das Gewicht bleibt links.', '<strong>Count 4:</strong> tap your right foot next to your left and move your hip. Your weight stays on the left.'),
+     ('<strong>Zählzeit 5 bis 8:</strong> Spiegelverkehrt in die andere Richtung: rechts, links, rechts, Tap mit links.', '<strong>Counts 5 to 8:</strong> the same in mirror image to the other side: right, left, right, tap with left.'),
+   ]),
+   ('p', 'Führende und Folgende tanzen den Grundschritt gespiegelt, sodass beide gleichzeitig zur selben Seite gehen. Die Schritte bleiben klein, die Knie locker, das Gewicht liegt über den Fußballen. Je kleiner du anfängst, desto leichter wird später das Führen und Folgen.',
+         'Leaders and followers dance the basic step mirrored, so both move to the same side at the same time. Keep the steps small, the knees relaxed and your weight over the balls of your feet. The smaller you start, the easier leading and following become later.'),
+ ]),
+ ('Häufige Fehler beim Bachata-Grundschritt', 'Common mistakes in the Bachata basic step', [
+   ('ul', [
+     ('<strong>Zu große Schritte:</strong> Sie bringen dich aus dem Rhythmus. Halte sie klein.', '<strong>Steps that are too big:</strong> they throw you off the rhythm. Keep them small.'),
+     ('<strong>Steife Knie:</strong> Ohne leichte Beugung wirkt der Tap hart. Bleib locker.', '<strong>Stiff knees:</strong> without a slight bend the tap feels hard. Stay relaxed.'),
+     ('<strong>Falsche Zählzeit:</strong> Der Tap gehört auf die vier, nicht auf die eins. Zähle laut mit, bis es sitzt.', '<strong>Wrong count:</strong> the tap belongs on four, not on one. Count out loud until it sits.'),
+     ('<strong>Blick auf die Füße:</strong> Schau lieber nach vorn. Die Füße finden den Weg von allein.', '<strong>Looking at your feet:</strong> look ahead instead. Your feet find the way on their own.'),
+     ('<strong>Hektik:</strong> Langsame Musik zum Üben hilft. Erst das Tempo steigern, wenn der Ablauf sicher ist.', '<strong>Rushing:</strong> practise with slow music. Increase the tempo only when the pattern is secure.'),
+   ]),
+ ]),
+ ('Bachata Schritte üben: Vom Grundschritt zu den ersten Figuren', 'Practising Bachata steps: from the basic step to your first figures', [
+   ('p', 'Sobald der Grundschritt sicher sitzt, kommen die nächsten Bausteine dazu. Die Reihenfolge unterscheidet sich je nach Schule, aber meist siehst du diese Schritte:',
+         'Once the basic step is secure, the next building blocks follow. The order differs by school, but you will usually see these:'),
+   ('ul', [
+     ('<strong>Vorwärts und rückwärts:</strong> Derselbe Rhythmus, nur in einer anderen Richtung.', '<strong>Forward and back:</strong> the same rhythm, just in a different direction.'),
+     ('<strong>Seitenwechsel:</strong> Das Paar tauscht die Seiten, ohne den Takt zu verlieren.', '<strong>Side change:</strong> the couple swap sides without losing the beat.'),
+     ('<strong>Einfache Drehung:</strong> Die Folgende dreht sich unter dem erhobenen Arm.', '<strong>Simple turn:</strong> the follower turns under a raised arm.'),
+     ('<strong>Stilbausteine:</strong> Je nach Stil kommen Fußspiel (Dominicana), Drehfiguren (Moderna) oder Körperwellen (Sensual) dazu.', '<strong>Style building blocks:</strong> depending on the style, footwork (Dominicana), turn patterns (Moderna) or body waves (Sensual) come in.'),
+   ]),
+   ('p', 'Welcher Stil zu dir passt, erklärt der Ratgeber <a href="bachata-tanzen.html">Bachata tanzen</a>. Geübt wird am besten regelmäßig und in kurzen Einheiten, mit Musik und gern vor einem Spiegel.',
+         'Which style suits you is explained in the guide <a href="bachata-tanzen.html">Dancing Bachata</a>. Practice works best in regular, short sessions, with music and ideally in front of a mirror.'),
+ ]),
+ ('Bachata-Rhythmus und Musik: So hörst du die Zählzeiten', 'Bachata rhythm and music: how to hear the counts', [
+   ('p', 'Die Musik hilft dir mehr als jede Erklärung. Typische Bachata-Stücke werden von Gitarren, Bass, Bongos und Güira getragen, und die Güira und die Bongos geben dir einen klaren Puls zum Mitzählen. Höre ein Stück dreimal: beim ersten Mal nur zu, beim zweiten Mal klatschst du die vier Zählzeiten, beim dritten Mal trittst du den Grundschritt.',
+         'The music helps you more than any explanation. Typical Bachata tracks are carried by guitars, bass, bongos and güira, and the güira and bongos give you a clear pulse to count along with. Listen to a track three times: the first time just listen, the second time clap the four counts, the third time step the basic step.'),
+   ('p', 'Achte außerdem auf Unterschiede im Tempo. Langsamere Stücke sind ideal zum Lernen, weil du mehr Zeit für jeden Schritt hast. Schnellere Stücke kommen später, wenn der Ablauf automatisch läuft. Wer die Musik kennt, tanzt entspannter und merkt schneller, wann ein Stück zum eigenen Stil passt.',
+         'Also notice differences in tempo. Slower tracks are ideal for learning because you have more time for each step. Faster tracks come later, when the pattern runs automatically. If you know the music you dance more relaxed and notice sooner when a track suits your own style.'),
+ ]),
+ ('Bachata-Grundschritt im Kurs lernen', 'Learning the Bachata basic step in class', [
+   ('p', f'Im Einsteigerkurs lernst du den Grundschritt mit Musik, mit Korrektur und mit wechselnden Partnern. Übersichten über Schulen und Kurse findest du für {CITY_LINKS_DE}. Alle Listen sind alphabetisch und keine Wertung.',
+         f'In a beginner class you learn the basic step with music, with corrections and with rotating partners. You will find overviews of schools and classes for {CITY_LINKS_EN}. All lists are alphabetical and not a rating.'),
+   ('p', 'Das offizielle Ranking erscheint am <strong>20. Dezember 2026</strong> auf der <a href="rankings.html">Ranking-Seite</a>, die Methode steht auf der <a href="deutschland.html#method">Startseite</a>. Schulen können sich bis zum 30. November <a href="bewerbung.html">kostenlos bewerben</a>.',
+         'The official ranking is published on <strong>December 20, 2026</strong> on the <a href="rankings.html">ranking page</a>, and the method is on the <a href="deutschland.html#method">homepage</a>. Schools can <a href="bewerbung.html">apply for free</a> until November 30.'),
+ ]),
+]
+
+grund_faq = [
+ ('Wie geht der Bachata-Grundschritt?', 'How does the Bachata basic step go?',
+  'Drei Schritte zur Seite, auf Zählzeit vier ein Tap, dann drei Schritte zurück und wieder ein Tap. Die Schritte sind klein, die Knie locker.',
+  'Three steps to the side, a tap on count four, then three steps back and another tap. Keep the steps small and the knees relaxed.'),
+ ('Wie schnell kann ich den Grundschritt lernen?', 'How quickly can I learn the basic step?',
+  'Die meisten lernen den Ablauf in der ersten Stunde. Bis er sich sicher und entspannt anfühlt, hilft regelmäßiges Üben mit Musik.',
+  'Most people learn the pattern in the first class. Regular practice with music helps until it feels secure and relaxed.'),
+ ('Auf welcher Zählzeit kommt der Tap?', 'On which count does the tap come?',
+  'Auf die vier und die acht. Der Tap betont den Takt und gibt dem Tanz seinen Charakter.',
+  'On four and eight. The tap accents the beat and gives the dance its character.'),
+ ('Brauche ich einen Partner, um den Grundschritt zu üben?', 'Do I need a partner to practise the basic step?',
+  'Nein. Den Grundschritt kannst du allein üben, am besten mit Musik und vor einem Spiegel.',
+  'No. You can practise the basic step alone, ideally with music and in front of a mirror.'),
+ ('Ist der Grundschritt in allen Bachata-Stilen gleich?', 'Is the basic step the same in all Bachata styles?',
+  'Die Grundidee ist ähnlich, die Ausführung unterscheidet sich. Dominicana setzt auf Fußspiel, Moderna auf Drehungen, Sensual auf Körperwellen. Ein Kurs zeigt dir den Unterschied.',
+  'The basic idea is similar, but the execution differs. Dominicana focuses on footwork, Moderna on turns, Sensual on body waves. A class shows you the difference.'),
+ ('Wo kann ich Bachata im Kurs lernen?', 'Where can I learn Bachata in class?',
+  f'In Tanzschulen in fast jeder größeren Stadt. Übersichten gibt es für {CITY_LINKS_DE}.',
+  f'In dance schools in almost every larger city. Overviews exist for {CITY_LINKS_EN}.'),
+]
+
+guide_page('bachata-grundschritt', 'bg',
+  'Bachata Grundschritt: Anleitung für Anfänger',
+  'Bachata Grundschritt Schritt für Schritt: Zählzeiten, typische Fehler, Übungstipps und der Weg zu den ersten Figuren. Mit Links zu Kursen.',
+  'Bachata basic step: a guide for beginners',
+  'The Bachata basic step one move at a time: counts, common mistakes, practice tips and the path to your first figures, with links to classes.',
+  'Bachata Grundschritt', ('Bachata Grundschritt · Anleitung', 'Bachata basic step · Guide'),
+  ('Bachata Grundschritt: <em class="foil">Anleitung</em> für Anfänger', 'Bachata basic step: a <em class="foil">guide</em> for beginners'),
+  ('Der Bachata-Grundschritt in vier Zählzeiten: Schritt für Schritt erklärt, mit typischen Fehlern und Tipps zum Üben. So gelingt dir der Einstieg, allein zu Hause oder im Kurs.',
+   'The Bachata basic step in four counts: explained move by move, with common mistakes and practice tips. This is how you get started, alone at home or in class.'),
+  [('check', 'Für <b>Anfänger</b> ohne Partner', 'For <b>beginners</b> without a partner'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  grund_sections, grund_faq, sibling_group='topic')
+
+# ======================================================================
 # Events page: recurring Bachata socials by city + submit form
 # ======================================================================
 B.PAGE_CSS += r'''
