@@ -404,6 +404,7 @@ SCHOOLS = [
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
 # name: (years active 0/5/10, beginner offer 0/5/8/10, events 0/4/7/10, ig followers, ig posts, styles)
 EXTRA = {
+ 'Premiumdance Clases de Salsa y Bachata': (0, 8, 4, 0, 0, []),
  'Txiki Bastida Escuelas de Baile': (0, 8, 0, 0, 0, []),
  'Antilla Salsa Barcelona': (0, 8, 4, 0, 0, []),
  'Salsabachata': (10, 8, 4, 0, 0, []),

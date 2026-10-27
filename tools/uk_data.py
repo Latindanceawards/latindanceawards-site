@@ -177,4 +177,7 @@ SCHOOLS = [
 ]
 # Scoring data not collected yet for the UK (years active, beginner offer, events, Instagram, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
-EXTRA = {}
+EXTRA = {
+ 'Salsatropical Dance Company': (10, 8, 7, 0, 0, []),
+ 'Salsa Buena Cardiff': (0, 10, 7, 0, 0, []),
+}

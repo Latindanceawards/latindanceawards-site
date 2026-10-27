@@ -275,6 +275,7 @@ SCHOOLS = [
 # Scoring data not collected yet for Italy (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
 EXTRA = {
+ 'Baila Dance': (10, 0, 4, 0, 0, []),
  'Timba Tumba Dance Academy': (10, 10, 7, 0, 0, []),
  'Scuola di Ballo Sampaoli': (10, 8, 0, 0, 0, []),
 }
