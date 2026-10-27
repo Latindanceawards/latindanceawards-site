@@ -26,7 +26,6 @@ SCHOOLS = [
  ('My Dream Dance', 'istanbul', 4.9, 55, 'https://mydreamdance.com/'),
  ('Ve Dans', 'istanbul', 4.9, 170, 'https://vedans.com/'),
  ('Go Dance Istanbul', 'istanbul', 5.0, 17, 'https://godanceistanbul.com/'),
- ('Depo Dans Cafe', 'istanbul', 4.8, 173, _m('Depo Dans Cafe', 'Istanbul')),
  ('Better Up Dance', 'istanbul', 4.9, 58, 'https://betterupdance.com/'),
  ('AfroCubanos', 'istanbul', 4.5, 32, 'https://afrolatindans.com/'),
  ('Son Dance Academy', 'istanbul', 4.9, 103, 'https://sondanceacademy.com/'),

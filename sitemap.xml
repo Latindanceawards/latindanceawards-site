@@ -4755,7 +4755,6 @@
   <url><loc>https://latindanceawards.com/em/schools/my-dream-dance.html</loc></url>
   <url><loc>https://latindanceawards.com/em/schools/ve-dans.html</loc></url>
   <url><loc>https://latindanceawards.com/em/schools/go-dance-istanbul.html</loc></url>
-  <url><loc>https://latindanceawards.com/em/schools/depo-dans-cafe.html</loc></url>
   <url><loc>https://latindanceawards.com/em/schools/better-up-dance.html</loc></url>
   <url><loc>https://latindanceawards.com/em/schools/afrocubanos.html</loc></url>
   <url><loc>https://latindanceawards.com/em/schools/son-dance-academy.html</loc></url>
@@ -5300,4 +5299,88 @@
   <url><loc>https://latindanceawards.com/uk/schools/lait-dance-club.html</loc></url>
   <url><loc>https://latindanceawards.com/uk/schools/zig-zag-dance-factory.html</loc></url>
   <url><loc>https://latindanceawards.com/uk/schools/wilsons-dance.html</loc></url>
+  <url>
+    <loc>https://latindanceawards.com/be/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/be/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/be/"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/at/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/at/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/at/"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/uk/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/uk/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/uk/"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/ie/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/ie/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/ie/"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/fr/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/fr/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/fr/"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/nl/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/nl/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/nl/"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/it/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/it/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/it/"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/pt/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/pt/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/pt/"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/ch/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/ch/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/ch/"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/ee/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/ee/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/ee/"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/nd/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/nd/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/nd/"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/em/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/em/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/em/"/>
+  </url>
 </urlset>
