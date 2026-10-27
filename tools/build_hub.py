@@ -93,6 +93,7 @@ def nd_rows():
 def em_rows():
     return [dict(name=s[0], cc='em', city=EMX.CITIES[s[1]][0], r=s[2], v=s[3], pts=EM_FULL[s[0]], href=f'/em/bachata-{s[1]}.html') for s in EMX.SCHOOLS]
 
+NCTRY = 12 + len(set(EEX.COUNTRY.values())) + len(set(NDX.COUNTRY.values())) + len(set(EMX.COUNTRY.values()))
 ALL = sorted(de_rows() + pl_rows() + es_rows() + it_rows() + pt_rows() + fr_rows() + nl_rows() + uk_rows() + be_rows() + ie_rows() + at_rows() + ch_rows() + ee_rows() + nd_rows() + em_rows(), key=lambda x: (-x['pts'], x['name']))
 ND = sum(1 for x in ALL if x['cc'] == 'de'); NP = sum(1 for x in ALL if x['cc'] == 'pl'); NS = sum(1 for x in ALL if x['cc'] == 'es'); NI = sum(1 for x in ALL if x['cc'] == 'it'); NPT = sum(1 for x in ALL if x['cc'] == 'pt'); NF = sum(1 for x in ALL if x['cc'] == 'fr'); NN = sum(1 for x in ALL if x['cc'] == 'nl'); NU = sum(1 for x in ALL if x['cc'] == 'uk'); NBE = sum(1 for x in ALL if x['cc'] == 'be'); NIE = sum(1 for x in ALL if x['cc'] == 'ie'); NAT = sum(1 for x in ALL if x['cc'] == 'at'); NCH = sum(1 for x in ALL if x['cc'] == 'ch'); NEE = sum(1 for x in ALL if x['cc'] == 'ee'); NND = sum(1 for x in ALL if x['cc'] == 'nd'); NEM = sum(1 for x in ALL if x['cc'] == 'em')
 NCD = 121; NC = len(P.CITIES); NCS = len(SP.CITIES); NCI = len(IT.CITIES); NCPT = len(PT.CITIES); NCF = len(FR.CITIES); NCN = len(NL.CITIES); NCU = len(UK.CITIES); NCBE = len(BEX.CITIES); NCIE = len(IEX.CITIES); NCAT = len(ATX.CITIES); NCCH = len(CHX.CITIES); NCEE = len(EEX.CITIES); NCND = len(NDX.CITIES); NCEM = len(EMX.CITIES)
@@ -143,8 +144,8 @@ faq_html = ('<section class="block alt" id="faq"><div class="wrap"><div class="s
 
 hero_html = hero(('Europa · Bachata Awards', 'Europe · Bachata Awards'),
   ('Beste Bachata-Schulen in Europa: das Ranking', 'The best Bachata schools in Europe: the ranking'),
-  (f'Ein Ranking für ganz Europa und ein eigenes Ranking für jedes Land: {len(ALL)} Schulen in fünfzehn Ländern, unabhängig bewertet nach öffentlichen Daten.',
-   f'One ranking for all of Europe and a separate ranking for each country: {len(ALL)} schools in fifteen countries, scored independently from public data.'),
+  (f'Ein Ranking für ganz Europa und ein eigenes Ranking für jedes Land: {len(ALL)} Schulen in {NCTRY} Ländern, unabhängig bewertet nach öffentlichen Daten.',
+   f'One ranking for all of Europe and a separate ranking for each country: {len(ALL)} schools in {NCTRY} countries, scored independently from public data.'),
   [('cal', f'<b>{len(ALL)} Schulen</b> in {NCD + NC + NCS + NCI + NCPT + NCF + NCN + NCU + NCBE + NCIE + NCAT + NCCH + NCEE + NCND + NCEM} Städten', f'<b>{len(ALL)} schools</b> in {NCD + NC + NCS + NCI + NCPT + NCF + NCN + NCU + NCBE + NCIE + NCAT + NCCH + NCEE + NCND + NCEM} cities'),
    ('check', 'Unabhängig, <b>nicht käuflich</b>', 'Independent, <b>not for sale</b>'),
    ('clock', 'Deutschland <b>20. Dez</b> · Polen, Spanien, Italien, Portugal, Frankreich, Niederlande, UK, BE, IE, AT, CH, Osteuropa, Skandinavien, Mittelmeer <b>Frühjahr 2027</b>', 'Germany <b>Dec 20</b> · Poland, Spain, Italy, Portugal, France, Netherlands, UK, BE, IE, AT, CH, Eastern Europe, Nordics, Eastern Mediterranean <b>spring 2027</b>')],
@@ -243,7 +244,7 @@ B.HEADER = B.HEADER.replace('<a class="brand" href="index.html"', '<a class="bra
 B.SHARED_EN = dict(B.SHARED_EN); B.SHARED_EN.update({'en1': 'Europe ranking', 'en2': 'Countries', 'en3': 'How we score'})
 with contextlib.redirect_stdout(io.StringIO()):
     page('index.html', 'Beste Bachata-Schulen in Europa: Ranking 2026',
-         f'Bachata-Ranking für Europa: alle {len(ALL)} Schulen in einer Liste plus Ranking pro Land (15 Länder). Unabhängig und nicht käuflich.',
+         f'Bachata-Ranking für Europa: alle {len(ALL)} Schulen in einer Liste plus Ranking pro Land ({NCTRY} Länder). Unabhängig und nicht käuflich.',
          'The best Bachata schools in Europe: ranking 2026 · Latin Dance Awards',
          f'Bachata ranking for Europe: all {len(ALL)} schools in one list plus a ranking for each country, so far Germany, Poland, Spain and Italy. Independent and not for sale.',
          '', main, t.en, hub_js, schema=[crumbs('Europa', ''), faq_schema(faq)])
