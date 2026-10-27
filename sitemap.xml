@@ -1855,4 +1855,24 @@
   <url><loc>https://latindanceawards.com/it/scuole/starlight-dance.html</loc></url>
   <url><loc>https://latindanceawards.com/it/scuole/jacademy.html</loc></url>
   <url><loc>https://latindanceawards.com/it/scuole/over-dance.html</loc></url>
+  <url>
+    <loc>https://latindanceawards.com/it/bachata-udine.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://latindanceawards.com/it/bachata-udine.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/it/bachata-udine.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/it/bachata-udine.html"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/it/bachata-bolzano.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://latindanceawards.com/it/bachata-bolzano.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/it/bachata-bolzano.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/it/bachata-bolzano.html"/>
+  </url>
+  <url><loc>https://latindanceawards.com/it/scuole/federica-bachata-fusion.html</loc></url>
+  <url><loc>https://latindanceawards.com/it/scuole/jackson-cabezas-bachata-y-salsa.html</loc></url>
+  <url><loc>https://latindanceawards.com/it/scuole/salsa-c-e-bachata.html</loc></url>
+  <url><loc>https://latindanceawards.com/it/scuole/salsa-star-dance-studio.html</loc></url>
 </urlset>
