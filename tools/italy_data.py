@@ -20,6 +20,13 @@ CITIES = {
  'parma': ('Parma', 'Parma', 'a Parma'),
  'modena': ('Modena', 'Modena', 'a Modena'),
  'perugia': ('Perugia', 'Perugia', 'a Perugia'),
+ 'pisa': ('Pisa', 'Pisa', 'a Pisa'),
+ 'lecce': ('Lecce', 'Lecce', 'a Lecce'),
+ 'monza': ('Monza', 'Monza', 'a Monza'),
+ 'cagliari': ('Cagliari', 'Cagliari', 'a Cagliari'),
+ 'trento': ('Trento', 'Trento', 'a Trento'),
+ 'varese': ('Varese', 'Varese', 'a Varese'),
+ 'pescara': ('Pescara', 'Pescara', 'a Pescara'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 SCHOOLS = [
@@ -70,6 +77,18 @@ SCHOOLS = [
  ('Salsamundo', 'perugia', 4.9, 42, 'https://www.salsamundo.it'),
  ('Cubamemucho', 'perugia', 5.0, 13, 'https://www.cubamemucho.it'),
  ('Salsa Style ASD', 'perugia', 4.7, 14, 'https://salsastyleasdperugia.it'),
+ ('Corsi di Salsa e Bachata con SalsaShaker', 'pisa', 5.0, 21, _m('Corsi di Salsa e Bachata con SalsaShaker', 'Pisa')),
+ ("Pasito Pa'lante", 'pisa', 5.0, 28, 'https://www.pasitopalante.com'),
+ ('Baila Corazon', 'pisa', 5.0, 20, 'https://www.bailacorazon.it'),
+ ('Puerta del Sol Cohiba', 'lecce', 5.0, 39, 'https://www.puerta.it'),
+ ('Bailaconmigo', 'monza', 4.8, 13, 'https://bailaconmigo.it'),
+ ('Be Fusion', 'monza', 4.8, 79, 'https://www.befusion.it'),
+ ('Tres Tiempos Salsa Cubana e Bachata', 'cagliari', 5.0, 134, _m('Tres Tiempos Salsa Cubana e Bachata', 'Cagliari')),
+ ('Sabor Timbero Academy', 'trento', 5.0, 38, 'https://www.sabortimbero.com'),
+ ('Baila Trentino Dance Academy', 'trento', 4.9, 8, 'https://bailatrentinodanceacademy.it'),
+ ('Latin Paradise Club', 'varese', 4.8, 166, 'https://www.latinparadise.it'),
+ ('Agua Academy', 'pescara', 5.0, 77, 'https://www.aguaacademy.it'),
+ ('Star Dance', 'pescara', 4.9, 63, 'https://www.stardance.org'),
 ]
 # Scoring data not collected yet for Italy (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
