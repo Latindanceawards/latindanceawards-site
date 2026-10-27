@@ -17,6 +17,7 @@ import austria_data as ATX
 import switzerland_data as CHX
 import easterneurope_data as EEX
 import nordics_data as NDX
+import easternmed_data as EMX
 from build import T, page, crumbs, faq_schema, ICON, ROOT
 import rank_variant as RV
 DE_FULL = {e['name']: RV.total(e) for es in RV.german_entries().values() for e in es}
@@ -30,6 +31,7 @@ AT_FULL = {e['name']: RV.total(e) for es in RV.polish_entries(ATX, '/at/schools/
 CH_FULL = {e['name']: RV.total(e) for es in RV.polish_entries(CHX, '/ch/schools/').values() for e in es}
 EE_FULL = {e['name']: RV.total(e) for es in RV.polish_entries(EEX, '/ee/schools/').values() for e in es}
 ND_FULL = {e['name']: RV.total(e) for es in RV.polish_entries(NDX, '/nd/schools/').values() for e in es}
+EM_FULL = {e['name']: RV.total(e) for es in RV.polish_entries(EMX, '/em/schools/').values() for e in es}
 UK_FULL = {e['name']: RV.total(e) for es in RV.polish_entries(UK, '/uk/schools/').values() for e in es}
 NL_FULL = {e['name']: RV.total(e) for es in RV.polish_entries(NL, '/nl/scholen/').values() for e in es}
 FR_FULL = {e['name']: RV.total(e) for es in RV.polish_entries(FR, '/fr/ecoles/').values() for e in es}
@@ -88,9 +90,12 @@ def ee_rows():
 def nd_rows():
     return [dict(name=s[0], cc='nd', city=NDX.CITIES[s[1]][0], r=s[2], v=s[3], pts=ND_FULL[s[0]], href=f'/nd/bachata-{s[1]}.html') for s in NDX.SCHOOLS]
 
-ALL = sorted(de_rows() + pl_rows() + es_rows() + it_rows() + pt_rows() + fr_rows() + nl_rows() + uk_rows() + be_rows() + ie_rows() + at_rows() + ch_rows() + ee_rows() + nd_rows(), key=lambda x: (-x['pts'], x['name']))
-ND = sum(1 for x in ALL if x['cc'] == 'de'); NP = sum(1 for x in ALL if x['cc'] == 'pl'); NS = sum(1 for x in ALL if x['cc'] == 'es'); NI = sum(1 for x in ALL if x['cc'] == 'it'); NPT = sum(1 for x in ALL if x['cc'] == 'pt'); NF = sum(1 for x in ALL if x['cc'] == 'fr'); NN = sum(1 for x in ALL if x['cc'] == 'nl'); NU = sum(1 for x in ALL if x['cc'] == 'uk'); NBE = sum(1 for x in ALL if x['cc'] == 'be'); NIE = sum(1 for x in ALL if x['cc'] == 'ie'); NAT = sum(1 for x in ALL if x['cc'] == 'at'); NCH = sum(1 for x in ALL if x['cc'] == 'ch'); NEE = sum(1 for x in ALL if x['cc'] == 'ee'); NND = sum(1 for x in ALL if x['cc'] == 'nd')
-NCD = 79; NC = len(P.CITIES); NCS = len(SP.CITIES); NCI = len(IT.CITIES); NCPT = len(PT.CITIES); NCF = len(FR.CITIES); NCN = len(NL.CITIES); NCU = len(UK.CITIES); NCBE = len(BEX.CITIES); NCIE = len(IEX.CITIES); NCAT = len(ATX.CITIES); NCCH = len(CHX.CITIES); NCEE = len(EEX.CITIES); NCND = len(NDX.CITIES)
+def em_rows():
+    return [dict(name=s[0], cc='em', city=EMX.CITIES[s[1]][0], r=s[2], v=s[3], pts=EM_FULL[s[0]], href=f'/em/bachata-{s[1]}.html') for s in EMX.SCHOOLS]
+
+ALL = sorted(de_rows() + pl_rows() + es_rows() + it_rows() + pt_rows() + fr_rows() + nl_rows() + uk_rows() + be_rows() + ie_rows() + at_rows() + ch_rows() + ee_rows() + nd_rows() + em_rows(), key=lambda x: (-x['pts'], x['name']))
+ND = sum(1 for x in ALL if x['cc'] == 'de'); NP = sum(1 for x in ALL if x['cc'] == 'pl'); NS = sum(1 for x in ALL if x['cc'] == 'es'); NI = sum(1 for x in ALL if x['cc'] == 'it'); NPT = sum(1 for x in ALL if x['cc'] == 'pt'); NF = sum(1 for x in ALL if x['cc'] == 'fr'); NN = sum(1 for x in ALL if x['cc'] == 'nl'); NU = sum(1 for x in ALL if x['cc'] == 'uk'); NBE = sum(1 for x in ALL if x['cc'] == 'be'); NIE = sum(1 for x in ALL if x['cc'] == 'ie'); NAT = sum(1 for x in ALL if x['cc'] == 'at'); NCH = sum(1 for x in ALL if x['cc'] == 'ch'); NEE = sum(1 for x in ALL if x['cc'] == 'ee'); NND = sum(1 for x in ALL if x['cc'] == 'nd'); NEM = sum(1 for x in ALL if x['cc'] == 'em')
+NCD = 79; NC = len(P.CITIES); NCS = len(SP.CITIES); NCI = len(IT.CITIES); NCPT = len(PT.CITIES); NCF = len(FR.CITIES); NCN = len(NL.CITIES); NCU = len(UK.CITIES); NCBE = len(BEX.CITIES); NCIE = len(IEX.CITIES); NCAT = len(ATX.CITIES); NCCH = len(CHX.CITIES); NCEE = len(EEX.CITIES); NCND = len(NDX.CITIES); NCEM = len(EMX.CITIES)
 TOPN = 25
 t = T('eu')
 
@@ -129,7 +134,7 @@ faq = [
  ('Kann eine Schule für einen besseren Platz bezahlen?', 'Can a school pay for a better place?',
   'Nein. Die Rankings basieren auf öffentlichen Daten und sind nicht käuflich. Anmelden ist kostenlos.', 'No. The rankings are based on public data and cannot be bought. Applying is free.'),
  ('Wann erscheinen die Ergebnisse?', 'When are the results published?',
-  'Deutschland am 20. Dezember 2026 um 19 Uhr, Polen, Spanien, Italien, Portugal, Frankreich, die Niederlande, das Vereinigte Königreich, Belgien, Irland, Österreich, die Schweiz, Osteuropa und Skandinavien im Frühjahr 2027. Weitere Länder folgen.', 'Germany on December 20, 2026 at 7 pm, Poland, Spain, Italy, Portugal, France, the Netherlands, the UK, Belgium, Ireland, Austria, Switzerland, Eastern Europe and Nordics in spring 2027. More countries follow.'),
+  'Deutschland am 20. Dezember 2026 um 19 Uhr, Polen, Spanien, Italien, Portugal, Frankreich, die Niederlande, das Vereinigte Königreich, Belgien, Irland, Österreich, die Schweiz, Osteuropa, Skandinavien und Mittelmeer im Frühjahr 2027. Weitere Länder folgen.', 'Germany on December 20, 2026 at 7 pm, Poland, Spain, Italy, Portugal, France, the Netherlands, the UK, Belgium, Ireland, Austria, Switzerland, Eastern Europe, Nordics and Eastern Mediterranean in spring 2027. More countries follow.'),
  ('Wie kommt meine Schule ins Ranking?', 'How does my school get into the ranking?',
   'Melde sie kostenlos an. Wir nehmen jede Schule auf, die nachweislich Bachata unterrichtet, auch ohne Anmeldung.', 'Enter it for free. We include every school that demonstrably teaches Bachata, even without an application.'),
 ]
@@ -138,11 +143,11 @@ faq_html = ('<section class="block alt" id="faq"><div class="wrap"><div class="s
 
 hero_html = hero(('Europa · Bachata Awards', 'Europe · Bachata Awards'),
   ('Beste Bachata-Schulen in Europa: das Ranking', 'The best Bachata schools in Europe: the ranking'),
-  (f'Ein Ranking für ganz Europa und ein eigenes Ranking für jedes Land: {len(ALL)} Schulen in vierzehn Ländern, unabhängig bewertet nach öffentlichen Daten.',
-   f'One ranking for all of Europe and a separate ranking for each country: {len(ALL)} schools in fourteen countries, scored independently from public data.'),
-  [('cal', f'<b>{len(ALL)} Schulen</b> in {NCD + NC + NCS + NCI + NCPT + NCF + NCN + NCU + NCBE + NCIE + NCAT + NCCH + NCEE + NCND} Städten', f'<b>{len(ALL)} schools</b> in {NCD + NC + NCS + NCI + NCPT + NCF + NCN + NCU + NCBE + NCIE + NCAT + NCCH + NCEE + NCND} cities'),
+  (f'Ein Ranking für ganz Europa und ein eigenes Ranking für jedes Land: {len(ALL)} Schulen in fünfzehn Ländern, unabhängig bewertet nach öffentlichen Daten.',
+   f'One ranking for all of Europe and a separate ranking for each country: {len(ALL)} schools in fifteen countries, scored independently from public data.'),
+  [('cal', f'<b>{len(ALL)} Schulen</b> in {NCD + NC + NCS + NCI + NCPT + NCF + NCN + NCU + NCBE + NCIE + NCAT + NCCH + NCEE + NCND + NCEM} Städten', f'<b>{len(ALL)} schools</b> in {NCD + NC + NCS + NCI + NCPT + NCF + NCN + NCU + NCBE + NCIE + NCAT + NCCH + NCEE + NCND + NCEM} cities'),
    ('check', 'Unabhängig, <b>nicht käuflich</b>', 'Independent, <b>not for sale</b>'),
-   ('clock', 'Deutschland <b>20. Dez</b> · Polen, Spanien, Italien, Portugal, Frankreich, Niederlande, UK, BE, IE, AT, CH, Osteuropa, Skandinavien <b>Frühjahr 2027</b>', 'Germany <b>Dec 20</b> · Poland, Spain, Italy, Portugal, France, Netherlands, UK, BE, IE, AT, CH, Eastern Europe, Nordics <b>spring 2027</b>')],
+   ('clock', 'Deutschland <b>20. Dez</b> · Polen, Spanien, Italien, Portugal, Frankreich, Niederlande, UK, BE, IE, AT, CH, Osteuropa, Skandinavien, Mittelmeer <b>Frühjahr 2027</b>', 'Germany <b>Dec 20</b> · Poland, Spain, Italy, Portugal, France, Netherlands, UK, BE, IE, AT, CH, Eastern Europe, Nordics, Eastern Mediterranean <b>spring 2027</b>')],
   f'<a class="btn btn-gold" href="#ranking">{t("span", "Europa-Ranking ansehen", "See the Europe ranking")}</a><a class="btn btn-ghost" href="bewerbung.html">{t("span", "Schule kostenlos anmelden", "Enter a school for free")}</a>')
 
 CSS = ('<style>.eu-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}'
@@ -157,10 +162,10 @@ CSS = ('<style>.eu-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
  '.eu-more{margin-top:18px;text-align:center}'
  '@media(max-width:560px){.eu-list li{grid-template-columns:28px 1fr}.eu-list span{grid-column:2;grid-row:auto;text-align:left}}</style>')
 
-DE_C = RV.german_entries(); PL_C = RV.polish_entries(P); ES_C = RV.polish_entries(SP, '/es/escuelas/'); IT_C = RV.polish_entries(IT, '/it/scuole/'); PT_C = RV.polish_entries(PT, '/pt/escolas/'); FR_C = RV.polish_entries(FR, '/fr/ecoles/'); NL_C = RV.polish_entries(NL, '/nl/scholen/'); UK_C = RV.polish_entries(UK, '/uk/schools/'); BE_C = RV.polish_entries(BEX, '/be/schools/'); IE_C = RV.polish_entries(IEX, '/ie/schools/'); AT_C = RV.polish_entries(ATX, '/at/schools/'); CH_C = RV.polish_entries(CHX, '/ch/schools/'); EE_C = RV.polish_entries(EEX, '/ee/schools/'); ND_C = RV.polish_entries(NDX, '/nd/schools/')
+DE_C = RV.german_entries(); PL_C = RV.polish_entries(P); ES_C = RV.polish_entries(SP, '/es/escuelas/'); IT_C = RV.polish_entries(IT, '/it/scuole/'); PT_C = RV.polish_entries(PT, '/pt/escolas/'); FR_C = RV.polish_entries(FR, '/fr/ecoles/'); NL_C = RV.polish_entries(NL, '/nl/scholen/'); UK_C = RV.polish_entries(UK, '/uk/schools/'); BE_C = RV.polish_entries(BEX, '/be/schools/'); IE_C = RV.polish_entries(IEX, '/ie/schools/'); AT_C = RV.polish_entries(ATX, '/at/schools/'); CH_C = RV.polish_entries(CHX, '/ch/schools/'); EE_C = RV.polish_entries(EEX, '/ee/schools/'); ND_C = RV.polish_entries(NDX, '/nd/schools/'); EM_C = RV.polish_entries(EMX, '/em/schools/')
 CANDS = dict(DE_C); CANDS.update(PL_C); CANDS.update(ES_C); CANDS.update(IT_C); CANDS.update(PT_C)
 TX = {k: list(v) if isinstance(v, list) else v for k, v in B.R_TEXT.items()}
-TX['cities'] = {'europa': ['Ganz Europa', 'All Europe'], 'de': ['Deutschland', 'Germany'], 'pl': ['Polen', 'Poland'], 'es': ['Spanien', 'Spain'], 'it': ['Italien', 'Italy'], 'pt': ['Portugal', 'Portugal'], 'fr': ['Frankreich', 'France'], 'nl': ['Niederlande', 'Netherlands'], 'uk': ['Vereinigtes Königreich', 'United Kingdom'], 'be': ['Belgien', 'Belgium'], 'ie': ['Irland', 'Ireland'], 'at': ['Österreich', 'Austria'], 'ch': ['Schweiz', 'Switzerland'], 'ee': ['Osteuropa', 'Eastern Europe'], 'nd': ['Skandinavien', 'Nordics']}
+TX['cities'] = {'europa': ['Ganz Europa', 'All Europe'], 'de': ['Deutschland', 'Germany'], 'pl': ['Polen', 'Poland'], 'es': ['Spanien', 'Spain'], 'it': ['Italien', 'Italy'], 'pt': ['Portugal', 'Portugal'], 'fr': ['Frankreich', 'France'], 'nl': ['Niederlande', 'Netherlands'], 'uk': ['Vereinigtes Königreich', 'United Kingdom'], 'be': ['Belgien', 'Belgium'], 'ie': ['Irland', 'Ireland'], 'at': ['Österreich', 'Austria'], 'ch': ['Schweiz', 'Switzerland'], 'ee': ['Osteuropa', 'Eastern Europe'], 'nd': ['Skandinavien', 'Nordics'], 'em': ['Mittelmeer', 'Eastern Mediterranean']}
 TX['cities'].update({k: v for k, v in B.R_TEXT['cities'].items() if k != 'deutschland'})
 TX['cities'].update({k: [v[0], v[1]] for k, v in P.CITIES.items()})
 TX['cities'].update({k: [v[0], v[1]] for k, v in SP.CITIES.items()})
@@ -175,6 +180,7 @@ TX['cities'].update({k: [v[0], v[1]] for k, v in ATX.CITIES.items()})
 TX['cities'].update({k: [v[0], v[1]] for k, v in CHX.CITIES.items()})
 TX['cities'].update({k: [v[0], v[1]] for k, v in EEX.CITIES.items()})
 TX['cities'].update({k: [v[0], v[1]] for k, v in NDX.CITIES.items()})
+TX['cities'].update({k: [v[0], v[1]] for k, v in EMX.CITIES.items()})
 TX['title_de'] = ['Beste Bachata-Schulen Europas', 'Best Bachata schools in Europe']
 TX['sub_interim'] = ['Zwischenstand: Die Platzierungen können sich noch ändern, bis die Länder ihre Ergebnisse veröffentlichen.', 'Interim standing: places can still change until each country publishes its results.']
 TX['help_p'] = ['Jede Schule wird nach denselben öffentlichen Kriterien bewertet, in jedem Land gleich. Platzierungen sind nicht käuflich.', 'Every school is scored on the same public criteria, identical in every country. Places cannot be bought.']
@@ -185,8 +191,8 @@ TBC = ([ 'Festivals', 'Aktuelle Bewertungen', 'Teilnahme an Wettbewerben', 'Wett
        ['Festivals', 'Recent reviews', 'Competitions entered', 'Competitions won'])
 MAXV = ['15', '5', '5', '5']
 tbc_pairs = ([[n, m] for n, m in zip(TBC[0], MAXV)], [[n, m] for n, m in zip(TBC[1], MAXV)])
-hub_js = RV.make_js('europa', {'de': list(DE_C), 'pl': list(PL_C), 'es': list(ES_C), 'it': list(IT_C), 'pt': list(PT_C), 'fr': list(FR_C), 'nl': list(NL_C), 'uk': list(UK_C), 'be': list(BE_C), 'ie': list(IE_C), 'at': list(AT_C), 'ch': list(CH_C), 'ee': list(EE_C), 'nd': list(ND_C)}, TX, CANDS, ['europa', 'de', 'pl', 'es', 'it', 'pt', 'fr', 'nl', 'uk', 'be', 'ie', 'at', 'ch', 'ee', 'nd'], 100, extra={'tbc': tbc_pairs})
-tabs = RV.tabs_html(t, [('europa', 'Ganz Europa', 'All Europe'), ('de', 'Deutschland', 'Germany'), ('pl', 'Polen', 'Poland'), ('es', 'Spanien', 'Spain'), ('it', 'Italien', 'Italy'), ('pt', 'Portugal', 'Portugal'), ('fr', 'Frankreich', 'France'), ('nl', 'Niederlande', 'Netherlands'), ('uk', 'Vereinigtes Königreich', 'United Kingdom'), ('be', 'Belgien', 'Belgium'), ('ie', 'Irland', 'Ireland'), ('at', 'Österreich', 'Austria'), ('ch', 'Schweiz', 'Switzerland'), ('ee', 'Osteuropa', 'Eastern Europe'), ('nd', 'Skandinavien', 'Nordics')])
+hub_js = RV.make_js('europa', {'de': list(DE_C), 'pl': list(PL_C), 'es': list(ES_C), 'it': list(IT_C), 'pt': list(PT_C), 'fr': list(FR_C), 'nl': list(NL_C), 'uk': list(UK_C), 'be': list(BE_C), 'ie': list(IE_C), 'at': list(AT_C), 'ch': list(CH_C), 'ee': list(EE_C), 'nd': list(ND_C), 'em': list(EM_C)}, TX, CANDS, ['europa', 'de', 'pl', 'es', 'it', 'pt', 'fr', 'nl', 'uk', 'be', 'ie', 'at', 'ch', 'ee', 'nd', 'em'], 100, extra={'tbc': tbc_pairs})
+tabs = RV.tabs_html(t, [('europa', 'Ganz Europa', 'All Europe'), ('de', 'Deutschland', 'Germany'), ('pl', 'Polen', 'Poland'), ('es', 'Spanien', 'Spain'), ('it', 'Italien', 'Italy'), ('pt', 'Portugal', 'Portugal'), ('fr', 'Frankreich', 'France'), ('nl', 'Niederlande', 'Netherlands'), ('uk', 'Vereinigtes Königreich', 'United Kingdom'), ('be', 'Belgien', 'Belgium'), ('ie', 'Irland', 'Ireland'), ('at', 'Österreich', 'Austria'), ('ch', 'Schweiz', 'Switzerland'), ('ee', 'Osteuropa', 'Eastern Europe'), ('nd', 'Skandinavien', 'Nordics'), ('em', 'Mittelmeer', 'Eastern Mediterranean')])
 rank_section = RV.ranking_section(tabs, 'Stadt suchen …', 'Search city …', 'Länder und Städte / Countries and cities')
 
 main = hero_html + rank_section + f'''
@@ -207,6 +213,7 @@ main = hero_html + rank_section + f'''
     <div class="box"><h3>{t("span", "Schweiz", "Switzerland")}</h3><p class="muted">{t("span", f"{NCH} Schulen in {NCCH} Städten. Ergebnisse im Frühjahr 2027.", f"{NCH} schools in {NCCH} cities. Results in spring 2027.")}</p>{top3("ch")}<div class="btnrow"><a class="btn btn-gold" href="ch/">{t("span", "Land ansehen", "See the country")}</a></div></div>
     <div class="box"><h3>{t("span", "Osteuropa", "Eastern Europe")}</h3><p class="muted">{t("span", f"{NEE} Schulen in {NCEE} Städten. Ergebnisse im Frühjahr 2027.", f"{NEE} schools in {NCEE} cities. Results in spring 2027.")}</p>{top3("ee")}<div class="btnrow"><a class="btn btn-gold" href="ee/">{t("span", "Land ansehen", "See the country")}</a></div></div>
     <div class="box"><h3>{t("span", "Skandinavien", "Nordics")}</h3><p class="muted">{t("span", f"{NND} Schulen in {NCND} Städten. Ergebnisse im Frühjahr 2027.", f"{NND} schools in {NCND} cities. Results in spring 2027.")}</p>{top3("nd")}<div class="btnrow"><a class="btn btn-gold" href="nd/">{t("span", "Land ansehen", "See the country")}</a></div></div>
+    <div class="box"><h3>{t("span", "Mittelmeer", "Eastern Mediterranean")}</h3><p class="muted">{t("span", f"{NEM} Schulen in {NCEM} Städten. Ergebnisse im Frühjahr 2027.", f"{NEM} schools in {NCEM} cities. Results in spring 2027.")}</p>{top3("em")}<div class="btnrow"><a class="btn btn-gold" href="em/">{t("span", "Land ansehen", "See the country")}</a></div></div>
   </div>
 </div></section>
 ''' + sec(("So bewerten wir", "How we score"),
@@ -236,7 +243,7 @@ B.HEADER = B.HEADER.replace('<a class="brand" href="index.html"', '<a class="bra
 B.SHARED_EN = dict(B.SHARED_EN); B.SHARED_EN.update({'en1': 'Europe ranking', 'en2': 'Countries', 'en3': 'How we score'})
 with contextlib.redirect_stdout(io.StringIO()):
     page('index.html', 'Beste Bachata-Schulen in Europa: Ranking 2026',
-         f'Bachata-Ranking für Europa: alle {len(ALL)} Schulen in einer Liste plus Ranking pro Land (14 Länder). Unabhängig und nicht käuflich.',
+         f'Bachata-Ranking für Europa: alle {len(ALL)} Schulen in einer Liste plus Ranking pro Land (15 Länder). Unabhängig und nicht käuflich.',
          'The best Bachata schools in Europe: ranking 2026 · Latin Dance Awards',
          f'Bachata ranking for Europe: all {len(ALL)} schools in one list plus a ranking for each country, so far Germany, Poland, Spain and Italy. Independent and not for sale.',
          '', main, t.en, hub_js, schema=[crumbs('Europa', ''), faq_schema(faq)])
