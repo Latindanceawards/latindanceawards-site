@@ -23,7 +23,7 @@ _NLH = _NLH.replace('<a class="brand" href="index.html"', '<a class="brand" href
 _NLH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="nl/#ranking" data-i18n="sn1">Ranglijst</a></li>
         <li><a href="nl/#steden" data-i18n="sn2">Steden</a></li>
-        <li><a href="nl/#methode" data-i18n="sn3">Methode</a></li>
+        <li><a href="nl/#metodo" data-i18n="sn3">Methode</a></li>
         <li><a href="index.html" data-i18n="sn4">Europa</a></li>
         <li><a href="deutschland.html" data-i18n="sn5">Duitsland</a></li>
         <li><a href="pl/" data-i18n="sn7">Polen</a></li>
@@ -44,7 +44,7 @@ _NLF = f'''<footer>
       </div>
       <div>
         <p class="fh" data-i18n="sf2">Rankings</p>
-        <ul><li><a href="nl/#ranking" data-i18n="sf3">Nederland 2027</a></li><li><a href="nl/#methode" data-i18n="sf4">Hoe we beoordelen</a></li>{''.join(f'<li><a href="nl/bachata-{k}.html">Bachata {v[0]}</a></li>' for k, v in list(P.CITIES.items())[:4])}<li><a href="index.html" data-i18n="sn4">Europa</a></li></ul>
+        <ul><li><a href="nl/#ranking" data-i18n="sf3">Nederland 2027</a></li><li><a href="nl/#metodo" data-i18n="sf4">Hoe we beoordelen</a></li>{''.join(f'<li><a href="nl/bachata-{k}.html">Bachata {v[0]}</a></li>' for k, v in list(P.CITIES.items())[:4])}<li><a href="index.html" data-i18n="sn4">Europa</a></li></ul>
       </div>
       <div>
         <p class="fh" data-i18n="sf5">Contact</p>
