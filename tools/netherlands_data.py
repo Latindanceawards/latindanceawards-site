@@ -127,6 +127,7 @@ SCHOOLS = [
 # Scoring data not collected yet for the Netherlands (years active, beginner offer, events, Instagram, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
 EXTRA = {
+ 'Salsachun': (10, 8, 4, 0, 0, []),
  'Salsa te Gusta': (0, 8, 4, 0, 0, []),
  'Punto Cubano Salsa Amsterdam': (10, 10, 7, 0, 0, []),
 }

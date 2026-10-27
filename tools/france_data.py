@@ -204,6 +204,8 @@ SCHOOLS = [
 # Scoring data not collected yet for France (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
 EXTRA = {
+ 'Studio 7': (0, 8, 4, 0, 0, []),
+ 'Encas-Danses Studio': (0, 0, 4, 0, 0, []),
  "L'Atelier Danse Club": (0, 8, 7, 0, 0, []),
  'SalsaNueva Paris': (0, 8, 7, 0, 0, []),
  'Salsa con Elegua': (10, 10, 7, 0, 0, []),
