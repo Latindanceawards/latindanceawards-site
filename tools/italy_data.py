@@ -1,0 +1,63 @@
+# Italian Bachata schools. Collected 27 Oct 2026: Google Maps rating and review count; Bachata offering confirmed on the school's own
+# website (homepage or page title mentions Bachata) or in the Google Maps business name. Only schools with evidence of Bachata classes are included.
+# city key -> (Italian name, English name, name used after "di bachata", e.g. "a Milano")
+CITIES = {
+ 'milano': ('Milano', 'Milan', 'a Milano'),
+ 'roma': ('Roma', 'Rome', 'a Roma'),
+ 'torino': ('Torino', 'Turin', 'a Torino'),
+ 'bologna': ('Bologna', 'Bologna', 'a Bologna'),
+ 'napoli': ('Napoli', 'Naples', 'a Napoli'),
+ 'firenze': ('Firenze', 'Florence', 'a Firenze'),
+ 'genova': ('Genova', 'Genoa', 'a Genova'),
+ 'verona': ('Verona', 'Verona', 'a Verona'),
+ 'padova': ('Padova', 'Padova', 'a Padova'),
+ 'bari': ('Bari', 'Bari', 'a Bari'),
+ 'palermo': ('Palermo', 'Palermo', 'a Palermo'),
+ 'catania': ('Catania', 'Catania', 'a Catania'),
+ 'brescia': ('Brescia', 'Brescia', 'a Brescia'),
+ 'rimini': ('Rimini', 'Rimini', 'a Rimini'),
+}
+def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
+SCHOOLS = [
+ ('AKADEMIA LATINA', 'milano', 4.8, 40, 'https://akademialatina.it'),
+ ('Phoenix Studio Dance', 'milano', 4.9, 274, 'https://www.phoenixstudiodance.com'),
+ ('Social Dance Roma', 'roma', 5.0, 130, 'https://www.socialdanceroma.com'),
+ ('Havana Cultura', 'roma', 5.0, 45, 'https://www.havanacultura.it'),
+ ('RomaSalsaSchool', 'roma', 4.6, 86, 'https://www.romasalsaschool.it'),
+ ('Viva Dance Studio', 'roma', 5.0, 117, 'https://www.vivadancestudio.it'),
+ ('Latintouch Roma', 'roma', 4.8, 72, _m('Latintouch Roma', 'Roma')),
+ ('Salsadiferente', 'roma', 4.9, 11, 'https://www.salsadiferente.com'),
+ ('Salsa e Bachata con Roberto e Assia', 'roma', 5.0, 25, _m('Salsa e Bachata con Roberto e Assia', 'Roma')),
+ ('Scuola di Ballo Latino Torino Santa Rita', 'torino', 4.9, 73, 'https://www.scuoladiballotorino.it'),
+ ('Timba Tumba Dance Academy', 'torino', 5.0, 723, 'https://www.timbatumbadanceacademy.it'),
+ ('Scuola di Ballo Sampaoli', 'torino', 4.9, 645, 'https://www.scuoladiballosampaoli.com'),
+ ('Aguanilebbe Dance Studio', 'bologna', 4.9, 113, 'https://www.aguanilebbe.net'),
+ ('B Dance Studio Bologna', 'bologna', 5.0, 5, _m('B Dance Studio Bologna', 'Bologna')),
+ ('Ivano Esposito', 'napoli', 5.0, 106, 'https://www.ivano-esposito.it'),
+ ('Bachata con Sentimiento Nico y Rebs', 'napoli', 5.0, 10, 'https://nicoyrebs.netlify.app'),
+ ('Na Academy', 'napoli', 5.0, 36, _m('Na Academy', 'Napoli')),
+ ('Salsa & Bachata Academy Andrea y Rosa', 'napoli', 5.0, 51, 'https://salsabachataacademy.it'),
+ ('Bailando Salsa', 'firenze', 4.9, 157, 'https://bailandosalsa.net'),
+ ('La Salsa Cubana', 'firenze', 5.0, 21, 'https://lasalsacubana.it'),
+ ('Royal Caribe', 'firenze', 5.0, 57, 'https://www.royalcaribe.it'),
+ ('Karisma Studios', 'genova', 4.9, 19, 'https://karismastudios.it'),
+ ('Imperio Latino Dance Academy', 'verona', 5.0, 36, 'https://imperiolatino.org'),
+ ('Los Varaderos', 'verona', 5.0, 32, 'https://www.losvaraderos.it'),
+ ("M&M's Salsa", 'padova', 4.9, 92, 'https://www.mmsalsa.it'),
+ ('CubaLinda de mi Vida', 'padova', 4.9, 65, 'https://www.cubalinda.eu'),
+ ('Rueda Loca', 'padova', 4.9, 51, 'https://www.ruedaloca.it'),
+ ('STH Latin Dance Academy', 'padova', 5.0, 45, 'https://sthlatindanceacademy.it'),
+ ('Future Dance School', 'padova', 4.7, 41, 'https://www.futuredancepd.it'),
+ ('Bachata Bari', 'bari', 5.0, 2, _m('Bachata Bari', 'Bari')),
+ ('Salvo Raccardi Salsa & Bachata', 'palermo', 5.0, 155, _m('Salvo Raccardi Salsa & Bachata', 'Palermo')),
+ ('Scuola di Danza Studio D', 'palermo', 4.7, 81, 'https://www.scuoladanzastudiod.it'),
+ ('Punto Latino', 'catania', 5.0, 42, 'https://www.puntolatino.it'),
+ ('Zero in Condotta', 'brescia', 4.7, 65, 'https://www.zeroincondottaballo.it'),
+ ('Club Latino', 'rimini', 5.0, 16, 'https://www.clublatino.it'),
+ ('InDanza Show Academy', 'rimini', 5.0, 145, 'https://indanzashowacademy.it'),
+ ('Archileo y Karen Infinita Pasion', 'rimini', 5.0, 33, 'https://www.infinitapasion.com'),
+ ('Polisportiva Alos', 'rimini', 5.0, 1, 'https://tessutiaereirimini.jimdofree.com'),
+]
+# Scoring data not collected yet for Italy (years active, beginner offer, events, Instagram followers/posts, styles).
+# Anything not confirmed counts at the lowest value; schools can confirm it through the application.
+EXTRA = {}
