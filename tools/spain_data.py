@@ -403,4 +403,15 @@ SCHOOLS = [
 # Scoring data not collected yet for Spain (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
 # name: (years active 0/5/10, beginner offer 0/5/8/10, events 0/4/7/10, ig followers, ig posts, styles)
-EXTRA = {}
+EXTRA = {
+ 'Txiki Bastida Escuelas de Baile': (0, 8, 0, 0, 0, []),
+ 'Antilla Salsa Barcelona': (0, 8, 4, 0, 0, []),
+ 'Salsabachata': (10, 8, 4, 0, 0, []),
+ 'Salsabachata Sol': (10, 8, 4, 0, 0, []),
+ 'Salsabachata Avenida de América': (10, 8, 4, 0, 0, []),
+ 'Salsabachata Quevedo': (10, 8, 4, 0, 0, []),
+ 'Salsabachata Ventas': (10, 8, 4, 0, 0, []),
+ 'Seven Dance': (10, 10, 7, 0, 0, []),
+ 'Bailalé': (0, 8, 4, 0, 0, []),
+ 'Bailongu': (10, 8, 7, 0, 0, []),
+}
