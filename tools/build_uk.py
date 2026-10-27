@@ -32,6 +32,13 @@ _UKH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="pt/" data-i18n="sn10">Portugal</a></li>
         <li><a href="fr/" data-i18n="sn11">France</a></li>
         <li><a href="nl/" data-i18n="sn12">Netherlands</a></li>
+        <li><a href="be/">Belgium</a></li>
+        <li><a href="ie/">Ireland</a></li>
+        <li><a href="at/">Austria</a></li>
+        <li><a href="ch/">Switzerland</a></li>
+        <li><a href="ee/">Eastern Europe</a></li>
+        <li><a href="nd/">Nordics</a></li>
+        <li><a href="em/">Eastern Mediterranean</a></li>
       </ul>''', _UKH, count=1, flags=re.S)
 _UKH = _UKH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">UK<')
 _UKH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="sn6">Enter a school</a>', _UKH, count=1)

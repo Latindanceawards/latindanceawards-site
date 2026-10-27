@@ -37,6 +37,8 @@ _EEH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="ie/" data-i18n="sn15">Ireland</a></li>
         <li><a href="at/" data-i18n="sn16">Austria</a></li>
         <li><a href="ch/" data-i18n="sn17">Switzerland</a></li>
+        <li><a href="nd/">Nordics</a></li>
+        <li><a href="em/">Eastern Mediterranean</a></li>
       </ul>''', _EEH, count=1, flags=re.S)
 _EEH = _EEH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">EE<')
 _EEH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="sn6">Enter a school</a>', _EEH, count=1)

@@ -27,6 +27,18 @@ _ESH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="index.html" data-i18n="sn4">Europa</a></li>
         <li><a href="deutschland.html" data-i18n="sn5">Alemania</a></li>
         <li><a href="pl/" data-i18n="sn7">Polonia</a></li>
+        <li><a href="it/">Italy</a></li>
+        <li><a href="pt/">Portugal</a></li>
+        <li><a href="fr/">France</a></li>
+        <li><a href="nl/">Netherlands</a></li>
+        <li><a href="uk/">UK</a></li>
+        <li><a href="be/">Belgium</a></li>
+        <li><a href="ie/">Ireland</a></li>
+        <li><a href="at/">Austria</a></li>
+        <li><a href="ch/">Switzerland</a></li>
+        <li><a href="ee/">Eastern Europe</a></li>
+        <li><a href="nd/">Nordics</a></li>
+        <li><a href="em/">Eastern Mediterranean</a></li>
       </ul>''', _ESH, count=1, flags=re.S)
 _ESH = _ESH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">ES<')
 _ESH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="sn6">Inscribir escuela</a>', _ESH, count=1)

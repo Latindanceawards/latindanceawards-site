@@ -30,6 +30,15 @@ _FRH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="es/" data-i18n="sn8">Espagne</a></li>
         <li><a href="it/" data-i18n="sn9">Italie</a></li>
         <li><a href="pt/" data-i18n="sn10">Portugal</a></li>
+        <li><a href="nl/">Netherlands</a></li>
+        <li><a href="uk/">UK</a></li>
+        <li><a href="be/">Belgium</a></li>
+        <li><a href="ie/">Ireland</a></li>
+        <li><a href="at/">Austria</a></li>
+        <li><a href="ch/">Switzerland</a></li>
+        <li><a href="ee/">Eastern Europe</a></li>
+        <li><a href="nd/">Nordics</a></li>
+        <li><a href="em/">Eastern Mediterranean</a></li>
       </ul>''', _FRH, count=1, flags=re.S)
 _FRH = _FRH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">FR<')
 _FRH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="sn6">Inscrire une école</a>', _FRH, count=1)
