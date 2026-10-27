@@ -169,6 +169,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-karlsruhe.html"/>
   </url>
   <url>
+    <loc>https://latindanceawards.com/bachata-tanzen.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-tanzen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/bachata-tanzen.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-tanzen.html"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/bachata-grundschritt.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-grundschritt.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/bachata-grundschritt.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-grundschritt.html"/>
+  </url>
+  <url>
     <loc>https://latindanceawards.com/bachata-socials.html</loc>
     <lastmod>2026-10-26</lastmod>
     <priority>0.8</priority>
