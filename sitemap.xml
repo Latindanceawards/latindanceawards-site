@@ -1568,4 +1568,13 @@
   <url><loc>https://latindanceawards.com/es/escuelas/rompe-escuela-de-baile.html</loc></url>
   <url><loc>https://latindanceawards.com/es/escuelas/dame-la-clave.html</loc></url>
   <url><loc>https://latindanceawards.com/es/escuelas/escuela-muevelow.html</loc></url>
+  <url>
+    <loc>https://latindanceawards.com/es/bachata-sabadell.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://latindanceawards.com/es/bachata-sabadell.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/es/bachata-sabadell.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/es/bachata-sabadell.html"/>
+  </url>
+  <url><loc>https://latindanceawards.com/es/escuelas/manisero-dance-school.html</loc></url>
 </urlset>

@@ -43,6 +43,7 @@ CITIES = {
  'reus': ('Reus', 'Reus', 'Reus'),
  'badajoz': ('Badajoz', 'Badajoz', 'Badajoz'),
  'leon': ('León', 'León', 'León'),
+ 'sabadell': ('Sabadell', 'Sabadell', 'Sabadell'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 # (name, city, rating, reviews, website)
@@ -194,6 +195,7 @@ SCHOOLS = [
  ('Rompe Escuela de Baile', 'reus', 5.0, 31, 'https://rompeescueladebaile.com'),
  ('Dame La Clave', 'badajoz', 5.0, 78, 'https://www.damelaclave.com'),
  ('Escuela Muévelow', 'leon', 4.9, 107, 'https://www.escuelamuevelow.com'),
+ ('Manisero Dance School', 'sabadell', 4.6, 338, 'https://school.manisero.es'),
 ]
 # Scoring data not collected yet for Spain (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
