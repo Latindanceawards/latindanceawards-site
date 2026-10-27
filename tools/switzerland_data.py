@@ -16,6 +16,10 @@ CITIES = {
  'neuchatel': ('Neuchâtel', 'Neuchâtel', 'in Neuchâtel'),
  'aarau': ('Aarau', 'Aarau', 'in Aarau'),
  'baden': ('Baden', 'Baden', 'in Baden'),
+ 'st-gallen': ('St. Gallen', 'St. Gallen', 'in St. Gallen'),
+ 'lugano': ('Lugano', 'Lugano', 'in Lugano'),
+ 'zug': ('Zug', 'Zug', 'in Zug'),
+ 'sion': ('Sion', 'Sion', 'in Sion'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 SCHOOLS = [
@@ -73,6 +77,14 @@ SCHOOLS = [
  ('Salsabrosa GmbH', 'baden', 5.0, 50, 'https://salsabrosa.ch/'),
  ('Tanzschule Salsadom', 'baden', 4.8, 17, 'https://salsadom.ch/'),
  ('Flame Latino', 'baden', 4.9, 64, 'https://flamelatino.ch/'),
+ ('Dance Center St. Gallen', 'st-gallen', 4.3, 19, 'https://tanz-zentrum.ch/'),
+ ('Tanzschule Anliker', 'st-gallen', 4.9, 18, 'https://anliker-tanz.ch/'),
+ ('AHA Tanzschule', 'st-gallen', 4.4, 33, 'https://aha-tanzschule.ch/'),
+ ('DASA Dance Art & Sport Academy', 'lugano', 4.9, 67, 'https://dasalugano.ch/'),
+ ('Diamonds Dance Company', 'lugano', 4.8, 37, 'https://diamondsdancecompany.ch/'),
+ ('DanceMax Tanzschule', 'zug', 5.0, 16, 'https://dancemax.ch/'),
+ ('Fusion Dance Studios Zug', 'zug', 5.0, 18, 'https://zug.fusiondancestudios.ch/'),
+ ('Origami Dance', 'sion', 5.0, 51, 'https://origamidance.ch/'),
 ]
 # Scoring data not collected yet for Switzerland (years active, beginner offer, events, Instagram, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.

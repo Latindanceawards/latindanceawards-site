@@ -23,6 +23,14 @@ CITIES = {
  'delft': ('Delft', 'Delft', 'in Delft'),
  'deventer': ('Deventer', 'Deventer', 'in Deventer'),
  'amstelveen': ('Amstelveen', 'Amstelveen', 'in Amstelveen'),
+ 'almere': ('Almere', 'Almere', 'in Almere'),
+ 'zoetermeer': ('Zoetermeer', 'Zoetermeer', 'in Zoetermeer'),
+ 'alkmaar': ('Alkmaar', 'Alkmaar', 'in Alkmaar'),
+ 'helmond': ('Helmond', 'Helmond', 'in Helmond'),
+ 'emmen': ('Emmen', 'Emmen', 'in Emmen'),
+ 'leeuwarden': ('Leeuwarden', 'Leeuwarden', 'in Leeuwarden'),
+ 'gouda': ('Gouda', 'Gouda', 'in Gouda'),
+ 'hilversum': ('Hilversum', 'Hilversum', 'in Hilversum'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 SCHOOLS = [
@@ -104,6 +112,17 @@ SCHOOLS = [
  ('Salsa Viva', 'deventer', 4.3, 24, 'https://salsaviva.nl/'),
  ('Latin Breeze', 'amstelveen', 4.5, 45, 'https://latinbreeze.nl/'),
  ('Bailarico', 'amstelveen', 4.7, 45, 'https://bailarico.nl/'),
+ ('U Can Dance', 'almere', 4.9, 32, 'https://soofos.nl/'),
+ ('Salsaventura Zoetermeer', 'zoetermeer', 4.9, 39, 'https://sayahsalsa.nl/'),
+ ('Danscentrum De Bruijn Bonel', 'alkmaar', 4.9, 130, 'https://debruijnbonel.nl/'),
+ ('Dansschool Reniers', 'helmond', 4.7, 35, 'https://dansschoolreniers.nl/'),
+ ('Salsa Emmen', 'emmen', 4.7, 10, 'https://salsainemmen.nl/'),
+ ('NextDance', 'leeuwarden', 5.0, 49, 'https://nextdance.nl/'),
+ ('Danssportcentrum Saco Velt', 'leeuwarden', 4.6, 73, 'https://sacovelt.nl/'),
+ ('Dance Centre Omar Smids', 'leeuwarden', 4.8, 38, 'https://omarsmids.nl/'),
+ ('Dance Company 058', 'leeuwarden', 4.8, 64, 'https://dc058.nl/'),
+ ('Salsaventura Gouda', 'gouda', 5.0, 11, 'https://salsaventura.nl/'),
+ ('Esencia Dance Studio', 'hilversum', 4.8, 62, 'https://esencia.nl/'),
 ]
 # Scoring data not collected yet for the Netherlands (years active, beginner offer, events, Instagram, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.

@@ -11,6 +11,8 @@ CITIES = {
  'hasselt': ('Hasselt', 'Hasselt', 'in Hasselt'),
  'kortrijk': ('Kortrijk', 'Kortrijk', 'in Kortrijk'),
  'mons': ('Mons', 'Mons', 'in Mons'),
+ 'liege': ('Liège', 'Liège', 'in Liège'),
+ 'genk': ('Genk', 'Genk', 'in Genk'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 SCHOOLS = [
@@ -36,6 +38,9 @@ SCHOOLS = [
  ("Ritmo Studio's", 'hasselt', 4.7, 71, 'https://ritmostudios.be/'),
  ('Pura Vida Bachata', 'kortrijk', 5.0, 11, 'https://puravida-bachata.be/'),
  ('Asisalsa', 'mons', 4.9, 19, 'https://asisalsa.be/'),
+ ('Le Studio24', 'liege', 4.8, 25, 'https://lestudio24.com/'),
+ ('Dance4you', 'liege', 4.5, 40, 'https://dance4you.be/'),
+ ('Ritmo Latino Genk', 'genk', 4.4, 32, 'https://salsa.be/'),
 ]
 # Scoring data not collected yet for Belgium (years active, beginner offer, events, Instagram, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
