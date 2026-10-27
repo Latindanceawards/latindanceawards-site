@@ -60,6 +60,16 @@ CITIES = {
  'orihuela': ('Orihuela', 'Orihuela', 'Orihuela'),
  'estepona': ('Estepona', 'Estepona', 'Estepona'),
  'roquetas-de-mar': ('Roquetas de Mar', 'Roquetas de Mar', 'Roquetas de Mar'),
+ 'alcorcon': ('Alcorcón', 'Alcorcón', 'Alcorcón'),
+ 'parla': ('Parla', 'Parla', 'Parla'),
+ 'rivas-vaciamadrid': ('Rivas-Vaciamadrid', 'Rivas-Vaciamadrid', 'Rivas-Vaciamadrid'),
+ 'manresa': ('Manresa', 'Manresa', 'Manresa'),
+ 'vilanova-i-la-geltru': ('Vilanova i la Geltrú', 'Vilanova i la Geltrú', 'Vilanova i la Geltrú'),
+ 'castelldefels': ('Castelldefels', 'Castelldefels', 'Castelldefels'),
+ 'motril': ('Motril', 'Motril', 'Motril'),
+ 'telde': ('Telde', 'Telde', 'Telde'),
+ 'molina-de-segura': ('Molina de Segura', 'Molina de Segura', 'Molina de Segura'),
+ 'elda': ('Elda', 'Elda', 'Elda'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 # (name, city, rating, reviews, website)
@@ -335,6 +345,26 @@ SCHOOLS = [
  ('A-Mambo Almoradí', 'orihuela', 5.0, 33, 'https://academiadebaileamambo.es/'),
  ('No Solo Salsa Dance', 'estepona', 4.8, 264, 'https://nosolosalsa.es/'),
  ('Palladium Salsa', 'roquetas-de-mar', 4.8, 46, 'https://palladiumsalsa.es/'),
+ ('Where Can I Dance Salsa & Bachata Social', 'madrid', 5.0, 20, 'https://wherecanidance.es/'),
+ ('Enchufla Club de Salsa', 'madrid', 4.7, 126, _m('Enchufla Club de Salsa', 'Madrid')),
+ ('Aquí Se Baila A Lo Cubano', 'madrid', 5.0, 95, 'https://aquisebailaalocubano.es/'),
+ ('Clases de Bachata y Heels', 'madrid', 5.0, 24, 'https://beacons.ai/'),
+ ('Global Dance Academia de bailes latinos', 'granada', 4.9, 32, _m('Global Dance Academia de bailes latinos', 'Granada')),
+ ('Laguez Salamanca Salsa Academy', 'salamanca', 5.0, 52, 'https://salamancabachata.org/'),
+ ('Liados Salsa & Bachata', 'girona', 5.0, 23, _m('Liados Salsa & Bachata', 'Girona')),
+ ('Clases de baile La Clave', 'alcorcon', 5.0, 22, _m('Clases de baile La Clave', 'Alcorcón')),
+ ('Clases de bachata Alcorcón', 'alcorcon', 4.9, 16, _m('Clases de bachata Alcorcón', 'Alcorcón')),
+ ('Tablao y Tumbao', 'parla', 4.7, 58, 'https://tablaoytumbao.com/'),
+ ('Asociación Cultural Baila Conmigo', 'parla', 5.0, 31, 'https://bailaconmigoparla.es/'),
+ ('Latin Quarter Dance', 'rivas-vaciamadrid', 5.0, 147, 'https://lqdance.com/'),
+ ('Bailame Escola de Ball', 'manresa', 5.0, 70, 'https://bailame.es/'),
+ ('Bimba Dance', 'vilanova-i-la-geltru', 5.0, 48, 'https://bimbadance.com/'),
+ ('Nexus VNG', 'vilanova-i-la-geltru', 5.0, 28, 'https://nexusvng.es/'),
+ ('El Malecón de la Salsa', 'castelldefels', 5.0, 186, 'https://elmalecondelasalsa.com/'),
+ ('Campanilla Dance Latin Studio', 'motril', 4.9, 61, 'https://campanilladancelatinestudio.es/'),
+ ('Latin Dance Telde', 'telde', 5.0, 33, 'https://latindancetelde.com/'),
+ ('SalsaMania', 'molina-de-segura', 4.9, 46, 'https://salsamania.es/'),
+ ('Academia Bailas', 'elda', 4.9, 168, 'https://bailasacademy.com/'),
 ]
 # Scoring data not collected yet for Spain (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.

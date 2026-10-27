@@ -38,6 +38,10 @@ CITIES = {
  'valence': ('Valence', 'Valence', 'à Valence'),
  'troyes': ('Troyes', 'Troyes', 'à Troyes'),
  'quimper': ('Quimper', 'Quimper', 'à Quimper'),
+ 'boulogne-billancourt': ('Boulogne-Billancourt', 'Boulogne-Billancourt', 'à Boulogne-Billancourt'),
+ 'vannes': ('Vannes', 'Vannes', 'à Vannes'),
+ 'beziers': ('Béziers', 'Béziers', 'à Béziers'),
+ 'merignac': ('Mérignac', 'Mérignac', 'à Mérignac'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 SCHOOLS = [
@@ -172,6 +176,22 @@ SCHOOLS = [
  ('Loéma Bachata', 'quimper', 5.0, 21, _m('Loéma Bachata', 'Quimper')),
  ('Kemp Latino Rock', 'quimper', 4.9, 31, 'https://kempdanse.fr/'),
  ('SALSADERUE', 'quimper', 5.0, 12, 'https://salsaderue.fr/'),
+ ('Camilo Cours de Bachata', 'paris', 5.0, 37, _m('Camilo Cours de Bachata', 'Paris')),
+ ('Swing & Latino', 'toulouse', 4.7, 13, 'https://swingetlatino.jimdofree.com/'),
+ ('Salsa Flubb', 'montpellier', 5.0, 85, 'https://salsa-flubb.com/'),
+ ('AbonDanse Bachata', 'montpellier', 5.0, 35, _m('AbonDanse Bachata', 'Montpellier')),
+ ('Bachata Connection Studio', 'strasbourg', 5.0, 17, 'https://sites.google.com/'),
+ ('Qué Rico Mambo', 'rennes', 4.9, 55, 'https://quericomambo.fr/'),
+ ('Latina Way', 'aix-en-provence', 4.8, 12, 'https://latinaway.fr/'),
+ ('Mambo Salsa', 'paris', 4.5, 25, 'https://mambosalsa.fr/'),
+ ('Centre de danse Flamenco Al Andalus', 'lyon', 4.4, 14, 'https://centredanse-lyon.com/'),
+ ('Salsa Hip Tap', 'lyon', 4.7, 15, 'https://salsahiptap.com/'),
+ ('Latin Xperience Events', 'cannes', 5.0, 10, 'https://latinxperienceevents.fr/'),
+ ('Soy Cuba Salsa', 'boulogne-billancourt', 4.9, 33, 'https://soy-cuba.fr/'),
+ ('Bachata Passion 56', 'vannes', 5.0, 20, 'https://bachatapassion56.sportsregions.fr/'),
+ ('Manuela salsa', 'beziers', 4.3, 12, _m('Manuela salsa', 'Béziers')),
+ ('Sandrine Skiz Kizomba et danse orientale', 'beziers', 4.9, 18, _m('Sandrine Skiz Kizomba et danse orientale', 'Béziers')),
+ ("L'Atelier Danse Club", 'merignac', 4.5, 506, 'https://latelierdanseclub.com/'),
 ]
 # Scoring data not collected yet for France (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
