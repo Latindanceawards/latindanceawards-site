@@ -34,6 +34,9 @@ PAGES = {  # page: (main keyword, target word count from competitor research or 
     'bachata-festivals-deutschland.html': ('Bachata Festival Deutschland', 850),
     'bachata-sensual.html': ('Bachata Sensual', 850),
     'bachata-dominicana.html': ('Bachata Dominicana', 850),
+    'bachata-tanzkurs.html': ('Bachata Tanzkurs', 850),
+    'bachata-fuer-anfaenger.html': ('Bachata für Anfänger', 850),
+    'bachata-ladies-styling.html': ('Bachata Ladies Styling', 850),
 }
 sitemap = open(os.path.join(ROOT, 'sitemap.xml')).read()
 llms = open(os.path.join(ROOT, 'llms.txt')).read()
