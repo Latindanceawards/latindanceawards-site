@@ -791,6 +791,210 @@ guide_page('bachata-grundschritt', 'bg',
   [('check', 'Für <b>Anfänger</b> ohne Partner', 'For <b>beginners</b> without a partner'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
   grund_sections, grund_faq, sibling_group='topic')
 
+
+# ======================================================================
+# BACHATA FESTIVALS DEUTSCHLAND and BACHATA SENSUAL (added 2026-10-28)
+# Festival facts: only from the organisers' own websites, checked 2026-10-28.
+# ======================================================================
+FRA_FEST = '<a href="https://frankfurt-bachata-festival.de/" rel="noopener nofollow" target="_blank">Frankfurt Bachata Festival</a>'
+DUS_FEST = '<a href="https://dusseldorf.bachata-fest.com/" rel="noopener nofollow" target="_blank">Düsseldorf Bachata Fest</a>'
+
+festd_sections = [
+ ('Bachata Festival in Deutschland: Das erwartet dich', 'Bachata festival in Germany: what to expect', [
+   ('p', f'Ein Bachata Festival ist ein Wochenende nur für Bachata: Workshops am Tag, Socials und Partys am Abend, dazu Live-Auftritte und Gast-Trainer. Bachata stammt aus der Dominikanischen Republik ({WIKI}), und in Deutschland sind daraus eigene Festivals gewachsen, die Tänzer aus ganz Europa anziehen. Diese Seite zeigt dir, welche Festivals 2026 und 2027 bei den Veranstaltern angekündigt sind, und hilft dir bei der Wahl.',
+         f'A Bachata festival is a weekend devoted to Bachata alone: workshops by day, socials and parties at night, plus live acts and guest teachers. Bachata comes from the Dominican Republic ({WIKI_EN}), and in Germany it has grown its own festivals that draw dancers from all over Europe. This page shows which festivals are announced by their organisers for 2026 and 2027 and helps you choose.'),
+   ('p', 'Wichtig zur Methode: Wir nennen Daten nur, wenn wir sie auf der Website des Veranstalters gefunden haben (Stand 28. Oktober 2026). Wo die Website keinen Termin zeigt, steht er nicht hier. Termine, Orte und Preise ändern sich, bitte prüfe sie direkt beim Veranstalter.',
+         'A note on method: we only state dates that we found on the organiser\'s own website (as of October 28, 2026). Where a website shows no date, we do not list one. Dates, venues and prices change, so please check them with the organiser.'),
+ ]),
+ ('Bachata-Festivals 2026 und 2027: Termine der Veranstalter', 'Bachata festivals 2026 and 2027: organiser dates', [
+   ('p', 'Die Reihenfolge ist chronologisch und keine Wertung. Alle Angaben stammen von den Websites der Veranstalter.',
+         'The order is chronological and not a rating. All details come from the organisers\' own websites.'),
+   ('cards', [
+     {'name': 'Düsseldorf Bachata Fest 2027', 'url': 'https://dusseldorf.bachata-fest.com/',
+      'de': '<strong>8. bis 11. Januar 2027</strong> in Düsseldorf. Der Veranstalter nennt es „Germany\'s biggest bachata festival" mit Workshops, Künstlern und Socials. Künstler, Preise und genauer Veranstaltungsort standen beim letzten Check nicht auf der Seite.',
+      'en': '<strong>January 8 to 11, 2027</strong> in Düsseldorf. The organiser calls it "Germany\'s biggest bachata festival" with workshops, artists and socials. Artists, prices and the exact venue were not shown on the page at the last check.'},
+     {'name': 'Frankfurt Bachata Festival 2027', 'url': 'https://frankfurt-bachata-festival.de/',
+      'de': '<strong>22. bis 25. April 2027</strong> in Frankfurt am Main. Der Veranstalter nennt Mario Baro als Live-Act und Early-Bird-Pässe in begrenzter Zahl: Partypass, Social Pass und Fullpass, dazu einen Paar-Fullpass. Die Seite widerspricht sich bei der Dauer (drei oder vier Tage), frag also vor dem Buchen nach.',
+      'en': '<strong>April 22 to 25, 2027</strong> in Frankfurt am Main. The organiser names Mario Baro as a live act and offers limited early-bird passes: party pass, social pass and full pass, plus a couple full pass. The page is inconsistent on length (three or four days), so ask before you book.'},
+     {'name': 'Munich Bachata Fest', 'url': 'https://bachata-fest.com/',
+      'de': 'Der Veranstalter von Düsseldorf führt auf bachata-fest.com auch ein Festival in München. Einen Termin zeigte die Übersichtsseite beim letzten Check nicht, schau dort nach.',
+      'en': 'The Düsseldorf organiser also lists a festival in Munich on bachata-fest.com. The overview page showed no date at the last check, so look there.'},
+     {'name': 'Bachata Festival Stuttgart', 'url': 'https://bachatafestival-stuttgart.de/',
+      'de': 'Festival in Stuttgart mit eigener Website des Veranstalters. Wir konnten die Termine dort nicht abschließend prüfen und nennen deshalb keinen.',
+      'en': 'Festival in Stuttgart with its own organiser website. We could not fully confirm the dates there and therefore state none.'},
+   ]),
+   ('p', 'Dein Festival fehlt oder eine Angabe stimmt nicht mehr? Schreib an <a href="mailto:hello@latindanceawards.com">hello@latindanceawards.com</a> mit Name, Ort, Datum und Link zur Veranstalter-Seite. Der Eintrag ist kostenlos und nicht käuflich.',
+          'Is your festival missing or a detail out of date? Email <a href="mailto:hello@latindanceawards.com">hello@latindanceawards.com</a> with name, place, date and a link to the organiser\'s page. Listing is free and cannot be bought.'),
+ ]),
+ ('Bachata Festival Deutschland: Welches passt zu dir?', 'Bachata festival Germany: which one suits you?', [
+   ('ul', [
+     ('<strong>Dein Level:</strong> Viele Festivals bieten Workshops für Einsteiger bis Fortgeschrittene. Prüfe im Programm, ob dein Level dabei ist, bevor du buchst.', '<strong>Your level:</strong> many festivals offer workshops from beginner to advanced. Check the programme for your level before you book.'),
+     ('<strong>Dein Stil:</strong> Manche Festivals setzen auf Sensual, andere auf Dominicana oder Moderna. Der Stil-Ratgeber hilft: <a href="bachata-sensual.html">Bachata Sensual</a>, <a href="bachata-tanzen.html">Bachata tanzen</a>.', '<strong>Your style:</strong> some festivals lean towards Sensual, others towards Dominicana or Moderna. The style guides help: <a href="bachata-sensual.html">Bachata Sensual</a>, <a href="bachata-tanzen.html">Dancing Bachata</a>.'),
+     ('<strong>Dein Pass:</strong> Ein Fullpass enthält Workshops und Partys, ein Party- oder Social Pass nur die Abende. Wer vor allem tanzen will, braucht nicht immer alle Workshops.', '<strong>Your pass:</strong> a full pass covers workshops and parties, a party or social pass only the evenings. If you mainly want to dance, you do not always need every workshop.'),
+     ('<strong>Anreise:</strong> Die Festivals liegen in Großstädten mit guter Bahnanbindung. Buch das Hotel früh, besonders bei Festivals im Partyhotel.', '<strong>Travel:</strong> the festivals take place in big cities with good rail links. Book your hotel early, especially for festivals held at a party hotel.'),
+     ('<strong>Dein Budget:</strong> Preise nennen wir bewusst nur, wo der Veranstalter sie zeigt, denn Early-Bird-Preise steigen meist mit der Zeit.', '<strong>Your budget:</strong> we quote prices only where the organiser shows them, because early-bird prices usually rise over time.'),
+   ]),
+ ]),
+ ('Dein erstes Bachata-Festival: Tipps für Anfänger', 'Your first Bachata festival: tips for beginners', [
+   ('p', 'Du musst kein Profi sein. Auf Festivals tanzen Anfänger und Fortgeschrittene zusammen, und die meisten freuen sich über neue Gesichter. Mit diesen Tipps startest du entspannt:',
+         'You do not have to be a pro. At festivals beginners and advanced dancers dance together, and most people enjoy new faces. These tips help you start relaxed:'),
+   ('ul', [
+     ('Lerne vorher den <a href="bachata-grundschritt.html">Grundschritt</a> sicher, damit du auf dem Social nicht zählen musst.', 'Learn the <a href="bachata-grundschritt.html">basic step</a> well beforehand, so you do not have to count on the social floor.'),
+     ('Wähle zwei oder drei Workshops statt eines vollen Tages. Pausen sind wichtig, die Partys gehen lange.', 'Pick two or three workshops instead of a full day. Rest matters, the parties run late.'),
+     ('Sag offen, dass du Anfänger bist, und frag nach einem Tanz. Die Szene ist freundlich und höflich.', 'Say openly that you are a beginner and ask for a dance. The scene is friendly and polite.'),
+     ('Pack Wechselkleidung und bequeme Tanzschuhe ein, ein Festival bedeutet viele Stunden auf der Fläche.', 'Pack a change of clothes and comfortable dance shoes; a festival means many hours on the floor.'),
+     ('Trink genug Wasser und plane Schlaf ein. Wer am Sonntag noch tanzt, hat am Freitag nicht alles gegeben.', 'Drink enough water and plan for sleep. Whoever still dances on Sunday did not give everything on Friday.'),
+   ]),
+ ]),
+ ('Bachata lernen vor dem Festival: Kurse in deiner Stadt', 'Learning Bachata before the festival: classes in your city', [
+   ('p', f'Wer sich auf ein Festival vorbereitet, startet am besten in einem Kurs. Übersichten über Schulen mit Links zu den Websites findest du für {CITY_LINKS_DE}. Alle Listen sind alphabetisch und keine Wertung.',
+         f'The best way to prepare for a festival is a regular class. You will find overviews of schools with links to their websites for {CITY_LINKS_EN}. All lists are alphabetical and not a rating.'),
+   ('p', 'Auch auf Socials kannst du üben. Regelmäßige Termine findest du auf der Seite <a href="bachata-socials.html">Bachata-Socials in Deutschland</a>.',
+         'You can also practise at socials. Regular dates are on the page <a href="bachata-socials.html">Bachata socials in Germany</a>.'),
+ ]),
+ ('Festivals und das Ranking der Bachata-Schulen', 'Festivals and the ranking of Bachata schools', [
+   ('p', 'Auftritte der Lehrer auf Festivals und Kongressen zählen als eines von neun Kriterien im Ranking (bis zu 15 von 100 Punkten). Bezahlte Festival-Einträge haben keinen Einfluss, Plätze sind nicht käuflich. Das offizielle Ranking erscheint am <strong>20. Dezember 2026</strong> auf der <a href="rankings.html">Ranking-Seite</a>, die Methode steht auf der <a href="deutschland.html#method">Startseite</a>.',
+         'Teachers\' appearances at festivals and congresses count as one of nine factors in the ranking (up to 15 of 100 points). Paid festival listings have no influence, and places cannot be bought. The official ranking is published on <strong>December 20, 2026</strong> on the <a href="rankings.html">ranking page</a>, and the method is on the <a href="deutschland.html#method">homepage</a>.'),
+   ('p', 'Du leitest eine Schule, deren Lehrer auf Festivals unterrichten? <a href="bewerbung.html">Bewirb dich kostenlos bis zum 30. November</a> und schick uns die Links zu den Line-ups.',
+         'Do you run a school whose teachers teach at festivals? <a href="bewerbung.html">Apply for free by November 30</a> and send us the links to the line-ups.'),
+ ]),
+]
+
+festd_faq = [
+ ('Welche Bachata-Festivals gibt es in Deutschland 2027?', 'Which Bachata festivals are there in Germany in 2027?',
+  'Auf den Websites der Veranstalter sind das Düsseldorf Bachata Fest vom 8. bis 11. Januar 2027 und das Frankfurt Bachata Festival vom 22. bis 25. April 2027 angekündigt. Weitere Festivals in München und Stuttgart führen wir oben ohne Termin, bis der Veranstalter sie bestätigt.',
+  'The organisers\' websites announce the Düsseldorf Bachata Fest for January 8 to 11, 2027 and the Frankfurt Bachata Festival for April 22 to 25, 2027. We list further festivals in Munich and Stuttgart above without a date until the organiser confirms it.'),
+ ('Brauche ich Erfahrung für ein Bachata Festival?', 'Do I need experience for a Bachata festival?',
+  'Nein. Viele Festivals bieten Workshops für Einsteiger, und die Partys stehen allen offen. Prüfe im Programm, ob dein Level dabei ist.',
+  'No. Many festivals offer beginner workshops, and the parties are open to everyone. Check the programme to see whether your level is included.'),
+ ('Brauche ich einen Partner für ein Bachata Festival?', 'Do I need a partner for a Bachata festival?',
+  'In der Regel nicht. In Workshops wechseln die Partner, und auf den Socials fragst du einfach um einen Tanz. Manche Veranstalter bieten zusätzlich Paar-Pässe an.',
+  'Usually not. Partners rotate in workshops, and at socials you simply ask for a dance. Some organisers also offer couple passes.'),
+ ('Was kostet ein Bachata Festival?', 'How much does a Bachata festival cost?',
+  'Das hängt vom Pass ab. Der Veranstalter des Frankfurt Bachata Festivals zeigt Early-Bird-Pässe in begrenzter Zahl für Partys, Socials oder das volle Programm. Aktuelle Preise stehen nur auf der Website des Veranstalters, wir nennen hier keine festen Zahlen.',
+  'That depends on the pass. The Frankfurt Bachata Festival organiser shows limited early-bird passes for parties, socials or the full programme. Current prices are only on the organiser\'s website, so we quote no fixed numbers here.'),
+ ('Wie finde ich den richtigen Bachata-Stil für ein Festival?', 'How do I find the right Bachata style for a festival?',
+  'Schau ins Programm und hör dir die Gast-Trainer an. Die Stile erklären wir im Ratgeber zu <a href="bachata-sensual.html">Bachata Sensual</a> und auf der Seite <a href="bachata-tanzen.html">Bachata tanzen</a>.',
+  'Look at the programme and check the guest teachers. We explain the styles in the guide to <a href="bachata-sensual.html">Bachata Sensual</a> and on the page <a href="bachata-tanzen.html">Dancing Bachata</a>.'),
+ ('Wie kann ich mein Festival eintragen?', 'How can I list my festival?',
+  'Schreib an hello@latindanceawards.com mit Name, Ort, Datum und Link zur Veranstalter-Seite. Der Eintrag ist kostenlos.',
+  'Email hello@latindanceawards.com with name, place, date and a link to the organiser\'s page. Listing is free.'),
+ ('Können Festivals das Ranking der Schulen beeinflussen?', 'Can festivals influence the school ranking?',
+  'Nein, Plätze sind nicht käuflich. Festival-Auftritte der Lehrer zählen als ein Kriterium von neun, bezahlte Einträge haben keinen Einfluss. Das Ranking erscheint am 20. Dezember 2026.',
+  'No, places cannot be bought. Teachers\' festival appearances are one factor of nine, and paid listings have no influence. The ranking is published on December 20, 2026.'),
+]
+
+guide_page('bachata-festivals-deutschland', 'bf',
+  'Bachata Festival Deutschland 2026/2027: Termine',
+  'Bachata Festival Deutschland: Termine 2026 und 2027 laut Veranstaltern, mit Tipps zur Wahl, zum Pass und zum ersten Festival. Alle Angaben geprüft.',
+  'Bachata festival Germany 2026/2027: dates',
+  'Bachata festival Germany: 2026 and 2027 dates as announced by organisers, with tips on choosing a festival, a pass and your first festival.',
+  'Bachata-Festivals Deutschland', ('Bachata-Festivals · 2026/2027', 'Bachata festivals · 2026/2027'),
+  ('Bachata Festival Deutschland: <em class="foil">Termine</em> 2026/2027', 'Bachata festival Germany: <em class="foil">dates</em> 2026/2027'),
+  ('Bachata Festival in Deutschland: Termine 2026 und 2027 laut Veranstaltern, dazu Tipps für dein erstes Festival. Wir nennen nur Daten, die wir auf der Website des Veranstalters gefunden haben.',
+   'Bachata festival in Germany: 2026 and 2027 dates as announced by organisers, plus tips for your first festival. We only state dates we found on the organiser\'s own website.'),
+  [('cal', 'Stand <b>28. Oktober 2026</b>', 'As of <b>October 28, 2026</b>'), ('check', 'Termine <b>vom Veranstalter geprüft</b>', 'Dates <b>checked with organisers</b>')],
+  festd_sections, festd_faq, sibling_group='topic')
+
+sens_sections = [
+ ('Bachata Sensual: Was ist das?', 'Bachata Sensual: what is it?', [
+   ('p', f'Bachata Sensual ist ein Stil des Bachata-Tanzes, der in Europa bekannt wurde und heute auf vielen Socials und Festivals zu sehen ist. Bachata selbst stammt aus der Dominikanischen Republik ({WIKI}). Beim Sensual-Stil stehen Körperbewegung, kreisende Bewegungen und Wellen im Vordergrund, dazu eine enge, elastische Verbindung zwischen den Partnern.',
+         f'Bachata Sensual is a style of Bachata dancing that became known in Europe and is seen at many socials and festivals today. Bachata itself comes from the Dominican Republic ({WIKI_EN}). In Sensual the focus is on body movement, circular motion and waves, with a close, elastic connection between partners.'),
+   ('p', 'Laut dem Tanzportal <a href="https://www.salsavida.com/de/articles/the-different-styles-of-bachata-dancing/" rel="noopener nofollow" target="_blank">SalsaVida</a> wird der Stil mit Spanien und den Lehrmethoden aus Cádiz verbunden. Korke Escalona und Judith Cordero haben die unter dem Namen Bachata Sensual bekannte Methode entwickelt und so zur Verbreitung beigetragen.',
+         'According to the dance portal <a href="https://www.salsavida.com/de/articles/the-different-styles-of-bachata-dancing/" rel="noopener nofollow" target="_blank">SalsaVida</a>, the style is linked to Spain and to teaching approaches from Cádiz. Korke Escalona and Judith Cordero developed the method known as Bachata Sensual and helped spread it.'),
+   ('p', 'Auf dieser Seite erfährst du, wie sich Bachata Sensual von Dominicana und Moderna unterscheidet, was typisch ist, worauf Anfänger achten sollten und wo du den Stil lernen kannst.',
+         'On this page you learn how Bachata Sensual differs from Dominicana and Moderna, what is typical, what beginners should watch for and where you can learn the style.'),
+ ]),
+ ('Bachata Sensual, Dominicana und Moderna im Vergleich', 'Bachata Sensual, Dominicana and Moderna compared', [
+   ('h3', 'Bachata Sensual', 'Bachata Sensual'),
+   ('p', 'Weicher und fließender als der traditionelle Stil. Torso-Bewegungen, Isolationen und eine nahe Haltung prägen den Tanz. SalsaVida betont, dass erzwungene Wellen oder Dips kein gutes Sensual sind: Die Bewegung soll aus der Verbindung kommen.',
+         'Softer and more fluid than the traditional style. Torso movement, isolations and a close hold shape the dance. SalsaVida stresses that forced waves or dips are not good Sensual: the movement should come from the connection.'),
+   ('h3', 'Bachata Dominicana', 'Bachata Dominicana'),
+   ('p', 'Der Stil aus der Dominikanischen Republik: Fußarbeit, Spielfreude, Synkopen und schnelle Richtungswechsel, mit Reaktionen auf die Instrumente. Figurenketten spielen eine kleinere Rolle. Mehr dazu bald auf unserer Seite <a href="bachata-dominicana.html">Bachata Dominicana</a>.',
+         'The style from the Dominican Republic: footwork, playfulness, syncopation and quick direction changes, reacting to the instruments. Long figure chains play a smaller role. More soon on our page <a href="bachata-dominicana.html">Bachata Dominicana</a>.'),
+   ('h3', 'Bachata Moderna', 'Bachata Moderna'),
+   ('p', 'Drehmuster, Wraps und strukturierte Partnerarbeit, geprägt von Salsa und Gesellschaftstanz. Der musterorientierteste der drei Hauptstile und oft der am häufigsten unterrichtete.',
+         'Turn patterns, wraps and structured partnerwork, shaped by salsa and ballroom. The most pattern-driven of the three main styles and often the most widely taught.'),
+ ]),
+ ('Bachata Sensual lernen: So fängst du an', 'Learning Bachata Sensual: how to start', [
+   ('p', 'Sensual baut auf dem gleichen Grundschritt auf wie alle Bachata-Stile. Lerne zuerst den <a href="bachata-grundschritt.html">Bachata-Grundschritt</a> sicher, dann kommen Körperarbeit und Verbindung dazu.',
+         'Sensual builds on the same basic step as all Bachata styles. Learn the <a href="bachata-grundschritt.html">Bachata basic step</a> first, then add body work and connection.'),
+   ('ul', [
+     ('<strong>Grundschritt zuerst:</strong> Drei Schritte, Tap auf vier. Ohne sicheres Timing wirken Wellen und Drehungen unruhig.', '<strong>Basic step first:</strong> three steps, tap on four. Without secure timing, waves and turns look restless.'),
+     ('<strong>Verbindung statt Kraft:</strong> Führen und Folgen läuft über Hände, Arme und Körpermitte. Frag im Kurs nach Übungen zur Verbindung.', '<strong>Connection instead of force:</strong> lead and follow work through hands, arms and your centre. Ask in class for connection exercises.'),
+     ('<strong>Langsam üben:</strong> Körperwellen lernst du am besten in langsamer Musik, vor dem Spiegel oder allein, bevor du sie mit Partner tanzt.', '<strong>Practise slowly:</strong> you learn body waves best to slow music, in front of a mirror or alone, before you dance them with a partner.'),
+     ('<strong>Nähe nur im Einvernehmen:</strong> Nahe Haltung ist Teil des Stils, aber jeder darf Nein sagen. Sprich es an und achte auf dein Gegenüber.', '<strong>Closeness only by consent:</strong> a close hold is part of the style, but anyone may say no. Speak up and respect your partner.'),
+     ('<strong>Offen bleiben:</strong> Probiere alle Stile aus. Viele Tänzer mischen Sensual, Moderna und Dominicana.', '<strong>Stay open:</strong> try all the styles. Many dancers mix Sensual, Moderna and Dominicana.'),
+   ]),
+ ]),
+ ('Bachata-Sensual-Kurs finden: Beispiele von Schulen', 'Finding a Bachata Sensual class: school examples', [
+   ('p', 'Viele Bachata-Schulen unterrichten Sensual. Die folgenden Angaben stammen von den Websites der Schulen (Stand Oktober 2026), alphabetisch und keine Wertung. Prüfe Termine und Preise direkt dort.',
+         'Many Bachata schools teach Sensual. The following details come from the schools\' websites (as of October 2026), alphabetical and not a rating. Check dates and prices there.'),
+   ('cards', [
+     {'name': 'BachatAcademy, Berlin', 'url': 'https://www.bachatacademy.de',
+      'de': 'Studio in Friedrichshain. Die Website nennt Bachata Sensual und Conscious Bachata sowie eine kostenlose, unverbindliche Probestunde.',
+      'en': 'Studio in Friedrichshain. The website lists Bachata Sensual and Conscious Bachata and a free, no-obligation trial class.'},
+     {'name': 'La Calidad', 'url': 'https://www.lacalidad.de/dances/bachata',
+      'de': 'Die Schule beschreibt Bachata Sensual, auch Fusion oder Moderna genannt, als weicher, fließender und ausdrucksstärker als den traditionellen Stil. Kurse gibt es in den Levels 1 bis 3, laut Website sind Probestunde und ein 4-Wochen-Paket buchbar.',
+      'en': 'The school describes Bachata Sensual, also called Fusion or Moderna, as softer, more fluid and more expressive than the traditional style. Classes run in levels 1 to 3, and according to the website a trial class and a 4-week package can be booked.'},
+     {'name': 'La Mambita, Berlin', 'url': 'https://www.mambita.de/bachata',
+      'de': 'Schwerpunkt auf Bachata Sensual und Moderna, dienstags laufen vier Levels nacheinander. Drop-in ist laut Website möglich.',
+      'en': 'Focus on Bachata Sensual and Moderna, with four levels back to back on Tuesdays. According to the website drop-in is possible.'},
+   ]),
+   ('p', f'Schulen in deiner Stadt findest du hier: {CITY_LINKS_DE}. Deine Schule fehlt? Nutze die <a href="bewerbung.html">kostenlose Bewerbung</a>.',
+         f'Schools in your city: {CITY_LINKS_EN}. Is your school missing? Use the <a href="bewerbung.html">free application</a>.'),
+ ]),
+ ('Bachata Sensual auf Socials und Festivals', 'Bachata Sensual at socials and festivals', [
+   ('p', 'Sensual gehört zu den sichtbarsten Stilen auf Socials und Festivals. Auf einer Party tanzt du oft mit Menschen, die verschiedene Stile mischen, also pass deine Nähe und dein Tempo an dein Gegenüber an. Regelmäßige Termine findest du auf der Seite <a href="bachata-socials.html">Bachata-Socials in Deutschland</a>.',
+         'Sensual is among the most visible styles at socials and festivals. At a party you often dance with people who mix styles, so adapt your closeness and tempo to your partner. Regular dates are on the page <a href="bachata-socials.html">Bachata socials in Germany</a>.'),
+   ('p', 'Mehr zu den Terminen im Überblick: <a href="bachata-festivals-deutschland.html">Bachata Festival Deutschland 2026/2027</a>.',
+         'The dates at a glance: <a href="bachata-festivals-deutschland.html">Bachata festival Germany 2026/2027</a>.'),
+ ]),
+ ('Bachata Sensual und das Ranking der Schulen', 'Bachata Sensual and the school ranking', [
+   ('p', 'Im Ranking zählt kein Stil mehr als der andere. Jede Schule wird nach denselben neun öffentlichen Kriterien mit zusammen 100 Punkten bewertet, unter anderem Google-Bewertung, Einsteigerangebot, Events und Festivals. Das offizielle Ranking erscheint am <strong>20. Dezember 2026</strong> auf der <a href="rankings.html">Ranking-Seite</a>, die Methode steht auf der <a href="deutschland.html#method">Startseite</a>.',
+         'No style counts more than another in the ranking. Every school is scored on the same nine public factors, 100 points in total, including Google rating, beginner offer, events and festivals. The official ranking is published on <strong>December 20, 2026</strong> on the <a href="rankings.html">ranking page</a>, and the method is on the <a href="deutschland.html#method">homepage</a>.'),
+   ('p', 'Du leitest eine Schule? <a href="bewerbung.html">Bewirb dich kostenlos bis zum 30. November</a>.',
+         'Do you run a school? <a href="bewerbung.html">Apply for free by November 30</a>.'),
+ ]),
+]
+
+sens_faq = [
+ ('Was ist Bachata Sensual?', 'What is Bachata Sensual?',
+  'Ein Bachata-Stil mit Fokus auf Körperbewegung, Wellen und einer engen, elastischen Verbindung. Er wurde in Europa bekannt und wird mit Spanien verbunden.',
+  'A Bachata style focusing on body movement, waves and a close, elastic connection. It became known in Europe and is linked to Spain.'),
+ ('Was ist der Unterschied zwischen Bachata Sensual und Dominicana?', 'What is the difference between Bachata Sensual and Dominicana?',
+  'Dominicana setzt auf Fußarbeit, Synkopen und Spiel mit der Musik, Sensual auf Körperwellen, Isolationen und Nähe. Der Grundschritt ist in beiden die Basis.',
+  'Dominicana focuses on footwork, syncopation and playing with the music, Sensual on body waves, isolations and closeness. The basic step is the base for both.'),
+ ('Ist Bachata Sensual für Anfänger geeignet?', 'Is Bachata Sensual suitable for beginners?',
+  'Ja, wenn du den Grundschritt sicher kannst. Viele Schulen bieten Sensual schon in Einsteigerkursen an. Frag nach einer Probestunde.',
+  'Yes, once you have the basic step. Many schools offer Sensual in beginner classes. Ask for a trial class.'),
+ ('Brauche ich einen Partner für Bachata Sensual?', 'Do I need a partner for Bachata Sensual?',
+  'Nein, in der Regel nicht. In Kursen wechseln die Partner meist. Körperwellen kannst du allein üben.',
+  'No, usually not. Partners usually rotate in class. You can practise body waves alone.'),
+ ('Ist Bachata Sensual dasselbe wie Moderna?', 'Is Bachata Sensual the same as Moderna?',
+  'Nein, aber die Begriffe werden nicht überall gleich verwendet. Eine Schule nennt Sensual auch Fusion oder Moderna. Frag in der Probestunde, was im Kurs gelehrt wird.',
+  'No, but the terms are not used the same way everywhere. One school calls Sensual also Fusion or Moderna. Ask in the trial class what the course teaches.'),
+ ('Wo kann ich Bachata Sensual lernen?', 'Where can I learn Bachata Sensual?',
+  f'In vielen Tanzschulen, zum Beispiel in Berlin. Übersichten gibt es für {CITY_LINKS_DE}.',
+  f'In many dance schools, for example in Berlin. Overviews exist for {CITY_LINKS_EN}.'),
+ ('Wann erscheint das Ranking der Bachata-Schulen?', 'When is the ranking of Bachata schools published?',
+  'Am 20. Dezember 2026 um 19 Uhr auf der <a href="rankings.html">Ranking-Seite</a>.',
+  'On December 20, 2026 at 7 pm (CET) on the <a href="rankings.html">ranking page</a>.'),
+]
+
+guide_page('bachata-sensual', 'bs',
+  'Bachata Sensual: Stil, Schritte, Kurse lernen',
+  'Bachata Sensual erklärt: Unterschied zu Dominicana und Moderna, typische Merkmale, Tipps für Anfänger und Kurse bei Schulen mit Links.',
+  'Bachata Sensual: style, steps, how to learn',
+  'Bachata Sensual explained: how it differs from Dominicana and Moderna, typical features, tips for beginners and classes at schools, with links.',
+  'Bachata Sensual', ('Bachata Sensual · Ratgeber', 'Bachata Sensual · Guide'),
+  ('Bachata Sensual: <em class="foil">Stil, Schritte</em> und Kurse', 'Bachata Sensual: <em class="foil">style, steps</em> and classes'),
+  ('Bachata Sensual verbindet Körperbewegung, Wellen und eine enge Verbindung. Hier erfährst du, was den Stil ausmacht, wie er sich von Dominicana und Moderna unterscheidet und wie du ihn lernst.',
+   'Bachata Sensual combines body movement, waves and a close connection. Here you learn what defines the style, how it differs from Dominicana and Moderna and how to learn it.'),
+  [('check', 'Für <b>Anfänger</b> ohne Partner', 'For <b>beginners</b> without a partner'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  sens_sections, sens_faq, sibling_group='topic')
+
+
 # ======================================================================
 # Events page: recurring Bachata socials by city + submit form
 # ======================================================================
