@@ -33,6 +33,7 @@ PAGES = {  # page: (main keyword, target word count from competitor research or 
     'bachata-grundschritt.html': ('Bachata Grundschritt', 800),
     'bachata-festivals-deutschland.html': ('Bachata Festival Deutschland', 850),
     'bachata-sensual.html': ('Bachata Sensual', 850),
+    'bachata-dominicana.html': ('Bachata Dominicana', 850),
 }
 sitemap = open(os.path.join(ROOT, 'sitemap.xml')).read()
 llms = open(os.path.join(ROOT, 'llms.txt')).read()

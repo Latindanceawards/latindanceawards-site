@@ -995,6 +995,107 @@ guide_page('bachata-sensual', 'bs',
   sens_sections, sens_faq, sibling_group='topic')
 
 
+
+# ======================================================================
+# BACHATA DOMINICANA (added 2026-10-28)
+# ======================================================================
+SV_STYLES = '<a href="https://www.salsavida.com/de/articles/the-different-styles-of-bachata-dancing/" rel="noopener nofollow" target="_blank">SalsaVida</a>'
+SV_STYLES_EN = SV_STYLES
+dom_sections = [
+ ('Bachata Dominicana: Was ist das?', 'Bachata Dominicana: what is it?', [
+   ('p', f'Bachata Dominicana ist der ursprüngliche Stil des Bachata-Tanzes. Er stammt aus der Dominikanischen Republik ({WIKI}), wo Bachata als Gesellschaftstanz entstand. Im Mittelpunkt stehen Fußarbeit, Spielfreude und die Reaktion auf die Musik. Wer Bachata Dominicana tanzt, hört auf Gitarre, Bongos und Güira und antwortet mit den Füßen.',
+         f'Bachata Dominicana is the original style of Bachata dancing. It comes from the Dominican Republic ({WIKI_EN}), where Bachata developed as a social dance. The focus is on footwork, playfulness and reacting to the music. Dancers of Bachata Dominicana listen to guitar, bongos and güira and answer with their feet.'),
+   ('p', f'Laut dem Tanzportal {SV_STYLES} geht es im traditionellen Stil um Fußarbeit, Synkopen, schnelle Richtungswechsel und das Reagieren auf die Instrumente. Lange Figurenketten spielen eine kleinere Rolle, Drehungen und Partnerarbeit gibt es, sie stehen aber weniger im Zentrum.',
+         f'According to the dance portal {SV_STYLES_EN}, the traditional style is about footwork, syncopation, quick direction changes and reacting to the instruments. Long figure chains play a smaller role; turns and partnerwork exist but are less central.'),
+   ('p', 'Auf dieser Seite erfährst du, was Dominicana von Sensual und Moderna unterscheidet, wie du anfängst und wo du den Stil im Kurs lernst.',
+         'On this page you learn what sets Dominicana apart from Sensual and Moderna, how to start and where to learn the style in class.'),
+ ]),
+ ('Bachata Dominicana, Sensual und Moderna im Vergleich', 'Bachata Dominicana, Sensual and Moderna compared', [
+   ('h3', 'Bachata Dominicana', 'Bachata Dominicana'),
+   ('p', 'Rhythmische Fußarbeit, offene Haltung, Improvisation und Nähe zur Musik. Der Körper bleibt eher ruhig, die Füße erzählen.',
+         'Rhythmic footwork, an open hold, improvisation and closeness to the music. The body stays calmer while the feet do the talking.'),
+   ('h3', 'Bachata Sensual', 'Bachata Sensual'),
+   ('p', 'Weicher und körperbetonter, mit Wellen, Isolationen und enger Verbindung. Mehr dazu im Ratgeber <a href="bachata-sensual.html">Bachata Sensual</a>.',
+         'Softer and more body-focused, with waves, isolations and a close connection. More in the guide <a href="bachata-sensual.html">Bachata Sensual</a>.'),
+   ('h3', 'Bachata Moderna', 'Bachata Moderna'),
+   ('p', 'Drehmuster, Wraps und strukturierte Partnerarbeit, geprägt von Salsa und Gesellschaftstanz. Oft der Stil, mit dem Einsteigerkurse beginnen.',
+         'Turn patterns, wraps and structured partnerwork, shaped by salsa and ballroom. Often the style that beginner classes start with.'),
+   ('p', 'Alle drei Stile bauen auf demselben Rhythmus auf. Wer den <a href="bachata-grundschritt.html">Bachata-Grundschritt</a> sicher tanzt, kann jeden von ihnen lernen.',
+         'All three styles build on the same rhythm. If you dance the <a href="bachata-grundschritt.html">Bachata basic step</a> securely, you can learn any of them.'),
+ ]),
+ ('Bachata Dominicana lernen: So fängst du an', 'Learning Bachata Dominicana: how to start', [
+   ('ul', [
+     ('<strong>Grundschritt zuerst:</strong> Drei Schritte, Tap auf Zählzeit vier. In Dominicana wird er schneller und kleiner getanzt, deshalb zählt sauberes Timing.', '<strong>Basic step first:</strong> three steps, tap on count four. In Dominicana it is danced faster and smaller, so clean timing matters.'),
+     ('<strong>Musik hören:</strong> Achte auf Güira und Bongos und versuche, Betonungen mit den Füßen zu beantworten.', '<strong>Listen to the music:</strong> notice the güira and bongos and try to answer accents with your feet.'),
+     ('<strong>Klein anfangen:</strong> Kleine Schritte, lockere Knie, Gewicht über den Fußballen. Fußarbeit wird durch Wiederholung leicht.', '<strong>Start small:</strong> small steps, relaxed knees, weight over the balls of your feet. Footwork becomes easy through repetition.'),
+     ('<strong>Spielen statt perfekt sein:</strong> Dominicana lebt von Improvisation. Probiere kleine Variationen aus, wenn der Grundschritt sitzt.', '<strong>Play instead of being perfect:</strong> Dominicana lives on improvisation. Try small variations once the basic step sits.'),
+     ('<strong>Probestunde nutzen:</strong> Frag die Schule, ob der Kurs wirklich Dominicana lehrt. Die Begriffe werden nicht überall gleich verwendet.', '<strong>Use a trial class:</strong> ask the school whether the class really teaches Dominicana. The terms are not used the same way everywhere.'),
+   ]),
+   ('p', 'Plane für Dominicana etwas mehr Geduld ein als für Moderna. Die Füße lernen schnell, aber das Gefühl für die Musik wächst mit jeder Stunde, die du tanzt. Höre dazwischen traditionelle und moderne Stücke und achte darauf, wie sich die Betonungen verändern. So entwickelst du ein Gespür dafür, wann du ruhig bleibst und wann du spielst.',
+         'Plan for a little more patience with Dominicana than with Moderna. Your feet learn quickly, but the feel for the music grows with every hour you dance. In between, listen to traditional and modern tracks and notice how the accents change. That builds a sense of when to stay calm and when to play.'),
+ ]),
+ ('Bachata-Dominicana-Kurs finden: Beispiele', 'Finding a Bachata Dominicana class: examples', [
+   ('p', 'Dominicana wird seltener angeboten als Moderna oder Sensual, aber es gibt Kurse. Die Beispiele stammen aus öffentlichen Kurslisten (Stand Oktober 2026), alphabetisch und keine Wertung. Prüfe Termine und Preise direkt beim Anbieter.',
+         'Dominicana is offered less often than Moderna or Sensual, but classes exist. The examples come from public course listings (as of October 2026), alphabetical and not a rating. Check dates and prices with the provider.'),
+   ('cards', [
+     {'name': 'Hochschulsport Leuphana, Lüneburg', 'url': 'https://buchung.hochschulsport.leuphana.de/angebote/aktueller_zeitraum/_Bachata_Dominican.html',
+      'de': 'Der Kurs „Bachata Dominican" vermittelt laut Anbieter die authentischen Grundlagen des ursprünglichen Stils mit rhythmischer Fußarbeit, spielerischer Improvisation und Nähe zur Musik. Zielgruppe sind Anfänger und Mittelstufe, ein Partner ist nicht nötig.',
+      'en': 'According to the provider, the "Bachata Dominican" course teaches the authentic basics of the original style with rhythmic footwork, playful improvisation and closeness to the music. It is aimed at beginners and intermediate dancers, and no partner is needed.'},
+     {'name': 'Tanzstudio GLOW, Berlin-Mitte', 'url': 'https://urbansportsclub.com/de/venues/the-essence-of-bachata',
+      'de': 'Laut Eintrag bei Urban Sports Club läuft sonntags ein Kurs „Bachata Dominicana" mit einer Stunde Footwork und Bodymovement und einer Stunde Partnerwork. Er richtet sich an Tänzer mit Grundkenntnissen.',
+      'en': 'According to the Urban Sports Club listing, a "Bachata Dominicana" course runs on Sundays with one hour of footwork and body movement and one hour of partnerwork. It is aimed at dancers who know the basics.'},
+   ]),
+   ('p', f'Schulen in deiner Stadt findest du hier: {CITY_LINKS_DE}. Du bietest Dominicana an und fehlst in der Liste? Nutze die <a href="bewerbung.html">kostenlose Bewerbung</a>.',
+         f'Schools in your city: {CITY_LINKS_EN}. Do you teach Dominicana and are missing from the list? Use the <a href="bewerbung.html">free application</a>.'),
+ ]),
+ ('Bachata Dominicana auf Socials und Festivals', 'Bachata Dominicana at socials and festivals', [
+   ('p', 'Auf Socials triffst du alle Stile gemischt. Dominicana-Fans erkennen sich an kleinen, schnellen Schritten und viel Musikalität. Regelmäßige Termine findest du auf der Seite <a href="bachata-socials.html">Bachata-Socials in Deutschland</a>, die Festival-Termine laut Veranstaltern auf <a href="bachata-festivals-deutschland.html">Bachata Festival Deutschland</a>.',
+         'At socials you meet all styles mixed. Dominicana fans are recognisable by small, quick steps and a lot of musicality. Regular dates are on the page <a href="bachata-socials.html">Bachata socials in Germany</a>, and festival dates as announced by organisers are on <a href="bachata-festivals-deutschland.html">Bachata festival Germany</a>.'),
+   ('p', 'Mehr Grundlagen zum Tanzen allgemein: <a href="bachata-tanzen.html">Bachata tanzen lernen</a>.',
+         'More basics on dancing in general: <a href="bachata-tanzen.html">Learn to dance Bachata</a>.'),
+ ]),
+ ('Bachata Dominicana und das Ranking der Schulen', 'Bachata Dominicana and the school ranking', [
+   ('p', 'Im Ranking zählt kein Stil mehr als der andere. Jede Schule wird nach denselben neun öffentlichen Kriterien mit zusammen 100 Punkten bewertet, unter anderem Google-Bewertung, Einsteigerangebot, Events und Festivals. Das offizielle Ranking erscheint am <strong>20. Dezember 2026</strong> auf der <a href="rankings.html">Ranking-Seite</a>, die Methode steht auf der <a href="deutschland.html#method">Startseite</a>.',
+         'No style counts more than another in the ranking. Every school is scored on the same nine public factors, 100 points in total, including Google rating, beginner offer, events and festivals. The official ranking is published on <strong>December 20, 2026</strong> on the <a href="rankings.html">ranking page</a>, and the method is on the <a href="deutschland.html#method">homepage</a>.'),
+   ('p', 'Du leitest eine Schule? <a href="bewerbung.html">Bewirb dich kostenlos bis zum 30. November</a>.',
+         'Do you run a school? <a href="bewerbung.html">Apply for free by November 30</a>.'),
+ ]),
+]
+
+dom_faq = [
+ ('Was ist Bachata Dominicana?', 'What is Bachata Dominicana?',
+  'Der ursprüngliche Bachata-Stil aus der Dominikanischen Republik mit Fokus auf Fußarbeit, Synkopen, Improvisation und dem Reagieren auf die Musik.',
+  'The original Bachata style from the Dominican Republic, focusing on footwork, syncopation, improvisation and reacting to the music.'),
+ ('Was ist der Unterschied zwischen Dominicana und Sensual?', 'What is the difference between Dominicana and Sensual?',
+  'Dominicana setzt auf Fußarbeit und Spiel mit dem Rhythmus, Sensual auf Körperwellen, Isolationen und eine engere Verbindung. Der Grundschritt ist in beiden die Basis.',
+  'Dominicana focuses on footwork and playing with the rhythm, Sensual on body waves, isolations and a closer connection. The basic step is the base for both.'),
+ ('Ist Bachata Dominicana für Anfänger geeignet?', 'Is Bachata Dominicana suitable for beginners?',
+  'Ja, wenn du den Grundschritt lernst. Ein Hochschulsport-Kurs in Lüneburg richtet sich laut Anbieter an Anfänger und Mittelstufe. Andere Kurse setzen Grundkenntnisse voraus, lies die Beschreibung.',
+  'Yes, as you learn the basic step. A university sport course in Lüneburg is aimed at beginners and intermediate dancers according to the provider. Other courses assume basic knowledge, so read the description.'),
+ ('Brauche ich einen Partner für Bachata Dominicana?', 'Do I need a partner for Bachata Dominicana?',
+  'In der Regel nicht. Die Fußarbeit kannst du allein üben, und in Kursen wechseln die Partner meist. Der Lüneburger Kurs nennt ausdrücklich, dass kein Partner nötig ist.',
+  'Usually not. You can practise footwork alone, and partners usually rotate in class. The Lüneburg course explicitly states that no partner is needed.'),
+ ('Wo kann ich Bachata Dominicana lernen?', 'Where can I learn Bachata Dominicana?',
+  f'In einzelnen Kursen von Tanzschulen und Hochschulsport. Übersichten über Schulen gibt es für {CITY_LINKS_DE}.',
+  f'In individual courses at dance schools and university sport. Overviews of schools exist for {CITY_LINKS_EN}.'),
+ ('Wann erscheint das Ranking der Bachata-Schulen?', 'When is the ranking of Bachata schools published?',
+  'Am 20. Dezember 2026 um 19 Uhr auf der <a href="rankings.html">Ranking-Seite</a>.',
+  'On December 20, 2026 at 7 pm (CET) on the <a href="rankings.html">ranking page</a>.'),
+]
+
+guide_page('bachata-dominicana', 'bd',
+  'Bachata Dominicana: Stil, Merkmale, Kurse lernen',
+  'Bachata Dominicana erklärt: der ursprüngliche Stil aus der Dominikanischen Republik, Unterschied zu Sensual und Moderna, Tipps und Kurse.',
+  'Bachata Dominicana: style, features, how to learn',
+  'Bachata Dominicana explained: the original style from the Dominican Republic, how it differs from Sensual and Moderna, tips and classes.',
+  'Bachata Dominicana', ('Bachata Dominicana · Ratgeber', 'Bachata Dominicana · Guide'),
+  ('Bachata Dominicana: <em class="foil">Stil, Merkmale</em> und Kurse', 'Bachata Dominicana: <em class="foil">style, features</em> and classes'),
+  ('Bachata Dominicana ist der ursprüngliche Stil aus der Dominikanischen Republik mit Fußarbeit, Spielfreude und Nähe zur Musik. Hier erfährst du, was ihn ausmacht und wie du ihn lernst.',
+   'Bachata Dominicana is the original style from the Dominican Republic, with footwork, playfulness and closeness to the music. Here you learn what defines it and how to learn it.'),
+  [('check', 'Für <b>Anfänger</b> ohne Partner', 'For <b>beginners</b> without a partner'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  dom_sections, dom_faq, sibling_group='topic')
+
+
 # ======================================================================
 # Events page: recurring Bachata socials by city + submit form
 # ======================================================================
