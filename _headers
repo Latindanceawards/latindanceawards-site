@@ -10,7 +10,5 @@
 /tools/*
   X-Robots-Tag: noindex
 
-/tools/*
-  X-Robots-Tag: noindex
 /automation/*
   X-Robots-Tag: noindex
