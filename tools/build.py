@@ -388,7 +388,16 @@ def faq_schema(items):
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": re.sub(r'<[^>]+>', '', a)}}
         for q, _, a, _ in items]}
 
+def _seo_t(t, n=62):
+    while len(t) > n and ' · ' in t:
+        t = t.rsplit(' · ', 1)[0]
+    return t
+def _seo_d(d, n=158):
+    if len(d) <= n: return d
+    c = d[:n - 1].rsplit(' ', 1)[0].rstrip(' ,;:.')
+    return c + '…'
 def page(fname, title_de, desc_de, title_en, desc_en, canonical, main_html, en_dict, page_js, schema=()):
+    title_de, title_en, desc_de, desc_en = _seo_t(title_de), _seo_t(title_en), _seo_d(desc_de), _seo_d(desc_en)
     en = dict(SHARED_EN); en.update(en_dict)
     head = idx[:idx.index('<style>')]
     head = re.sub(r'<script type="application/ld\+json">.*?</script>\n', '', head, flags=re.S)
