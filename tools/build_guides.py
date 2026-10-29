@@ -28,7 +28,9 @@ TOPIC_PAGES = [('bachata-tanzen', 'Bachata tanzen lernen', 'Learn to dance Bacha
                ('bachata-dominicana', 'Bachata Dominicana', 'Bachata Dominicana'),
                ('bachata-tanzkurs', 'Bachata Tanzkurs', 'Bachata dance course'),
                ('bachata-fuer-anfaenger', 'Bachata für Anfänger', 'Bachata for beginners'),
-               ('bachata-ladies-styling', 'Bachata Ladies Styling', 'Bachata ladies styling')]
+               ('bachata-ladies-styling', 'Bachata Ladies Styling', 'Bachata ladies styling'),
+               ('bachata-moderna', 'Bachata Moderna', 'Bachata Moderna'),
+               ('bachata-party', 'Bachata Party', 'Bachata party')]
 
 SHOW_FESTIVALS = False  # set True to publish the festival listing again
 
@@ -1124,7 +1126,7 @@ _emain = f"""<section class="page-hero"><div class="wrap" style="grid-template-c
 </div></div></section>
 <section class="block"><div class="wrap tp evw">
   <label style="max-width:320px">{_te("span", "Stadt", "City")}<select id="evsel"><option value="">{_te("span", "Alle Städte", "All cities")}</option>{_ev_cityopts}</select></label>
-  <p class="muted" style="margin-top:12px">{_te("span", f"{_ev_n} Socials in fünf Städten, Stand Oktober 2026. Die Angaben stammen aus öffentlichen Veranstaltungslisten und von den Seiten der Veranstalter. Zeiten und Preise ändern sich, bitte prüfe sie vor dem Besuch. Weitere Städte folgen, sobald Veranstalter ihre Socials eintragen.", f"{_ev_n} socials in five cities, as of October 2026. Details come from public event listings and the organisers' own pages. Times and prices change, so please check before you go. More cities follow as organisers list their socials.")}</p>
+  <p class="muted" style="margin-top:12px">{_te("span", f"{_ev_n} Socials in fünf Städten, Stand Oktober 2026. Die Angaben stammen aus öffentlichen Veranstaltungslisten und von den Seiten der Veranstalter. Zeiten und Preise ändern sich, bitte prüfe sie vor dem Besuch. Weitere Städte folgen, sobald Veranstalter ihre Socials eintragen. Zum ersten Mal auf einem Social? <a href='bachata-party.html'>So läuft eine Bachata Party ab</a>.", f"{_ev_n} socials in five cities, as of October 2026. Details come from public event listings and the organisers' own pages. Times and prices change, so please check before you go. More cities follow as organisers list their socials. First time at a social? <a href='bachata-party.html'>How a Bachata party runs</a>.")}</p>
   {_ev_secs}
   <section id="evnew" hidden><h2 class="evh">{_te("span", "Neu eingetragen", "Newly listed")}</h2><div class="cards two evc" id="evnewl"></div></section>
 
@@ -1597,3 +1599,210 @@ guide_page('bachata-ladies-styling', 'bl',
    'Body waves, hips, arms and footwork variations: here you learn what ladies styling in Bachata is, how to learn it in class or at home and what to look for in shoes.'),
   [('check', 'Für <b>Folgende</b> mit Grundschritt', 'For <b>followers</b> who know the basic step'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
   lady_sections, lady_faq, sibling_group='topic')
+
+# ======================================================================
+# TWO GUIDES (added 2026-10-29): Bachata Moderna, Bachata Party (Ablauf & Etikette)
+# SERP check 2026-10-29: "bachata moderna" -> style overviews and wiki pages, no German course guide.
+# "bachata party" -> event listings; we already have bachata-socials.html, so this page targets
+# the how-it-works / etiquette / first-time angle and links to the socials listing (no cannibalisation).
+# Facts about Moderna come only from SalsaVida (via existing site text): turn patterns, wraps, structured partnerwork.
+# No prices, no invented history.
+# ======================================================================
+LINK_SOCIALS = '<a href="bachata-socials.html">Bachata-Socials in Deutschland</a>'
+LINK_SOCIALS_EN = '<a href="bachata-socials.html">Bachata socials in Germany</a>'
+LINK_FEST = '<a href="bachata-festivals-deutschland.html">Bachata-Festivals</a>'
+LINK_FEST_EN = '<a href="bachata-festivals-deutschland.html">Bachata festivals</a>'
+LINK_LADY = '<a href="bachata-ladies-styling.html">Bachata Ladies Styling</a>'
+LINK_LADY_EN = '<a href="bachata-ladies-styling.html">Bachata ladies styling</a>'
+LINK_MOD = '<a href="bachata-moderna.html">Bachata Moderna</a>'
+LINK_MOD_EN = '<a href="bachata-moderna.html">Bachata Moderna</a>'
+
+LINK_PARTY = '<a href="bachata-party.html">Bachata Party</a>'
+LINK_PARTY_EN = '<a href="bachata-party.html">Bachata party</a>'
+# ---------------------------------------------------------------- Bachata Moderna
+mod_sections = [
+ ('Bachata Moderna: Das Wichtigste in Kürze', 'Bachata Moderna: the essentials', [
+   ('p', f'Bachata Moderna ist ein Partnertanz-Stil mit Drehmustern, Wraps und klar strukturierter Partnerarbeit. Er ist von Salsa und Gesellschaftstanz geprägt und gilt als der musterorientierteste der drei Hauptstile. Die Basis bleibt der Bachata-Grundschritt aus der Dominikanischen Republik ({WIKI}).',
+         f'Bachata Moderna is a partner-dance style with turn patterns, wraps and clearly structured partnerwork. It is shaped by salsa and ballroom and is considered the most pattern-driven of the three main styles. The base remains the Bachata basic step from the Dominican Republic ({WIKI_EN}).'),
+   ('p', 'Viele Einsteigerkurse beginnen mit Moderna, weil sich Figuren Schritt für Schritt erklären lassen. Hier siehst du, was den Stil ausmacht, wie er sich von Sensual und Dominicana unterscheidet und wie du den Einstieg findest.',
+         'Many beginner classes start with Moderna because figures can be explained step by step. Here you see what defines the style, how it differs from Sensual and Dominicana and how to get started.'),
+ ]),
+ ('Was Bachata Moderna ausmacht', 'What defines Bachata Moderna', [
+   ('ul', [
+     ('<strong>Drehmuster:</strong> Die Folgende dreht sich unter dem Arm der Führenden, einfach oder mehrfach, oft in Ketten.', '<strong>Turn patterns:</strong> the follower turns under the leader\'s arm, single or multiple, often in chains.'),
+     ('<strong>Wraps:</strong> Die Arme werden um den Körper gewickelt und wieder gelöst, ein typisches Merkmal des Stils.', '<strong>Wraps:</strong> the arms are wrapped around the body and released again, a typical feature of the style.'),
+     ('<strong>Strukturierte Partnerarbeit:</strong> Figuren haben einen klaren Ablauf, den man lernen und wiederholen kann.', '<strong>Structured partnerwork:</strong> figures have a clear sequence that you can learn and repeat.'),
+     ('<strong>Offene und geschlossene Haltung:</strong> Der Tanz wechselt zwischen Abstand und Nähe, je nach Figur.', '<strong>Open and closed hold:</strong> the dance moves between distance and closeness, depending on the figure.'),
+     ('<strong>Klare Führung:</strong> Das Führen läuft über Hand und Arm, deshalb ist Verbindung wichtig.', '<strong>Clear leading:</strong> leading works through hand and arm, so connection matters.'),
+   ]),
+   ('p', 'Dass Salsa und Gesellschaftstanz den Stil geprägt haben, beschreibt SalsaVida in seinem Überblick über die Bachata-Stile. Salsa-Tänzer finden sich in Moderna deshalb oft schnell zurecht.',
+         'SalsaVida describes in its overview of Bachata styles that salsa and ballroom shaped the style. Salsa dancers therefore often find their way into Moderna quickly.'),
+ ]),
+ ('Moderna, Sensual und Dominicana im Vergleich', 'Moderna, Sensual and Dominicana compared', [
+   ('ul', [
+     ('<strong>Moderna:</strong> Drehungen, Wraps und feste Abläufe. Mehr Struktur, weniger Improvisation.', '<strong>Moderna:</strong> turns, wraps and fixed sequences. More structure, less improvisation.'),
+     ('<strong>Sensual:</strong> Weicher und fließender, mit Körperbewegung, Isolationen und enger Haltung. Mehr im Ratgeber ' + LINK_SENS + '.', '<strong>Sensual:</strong> softer and more fluid, with body movement, isolations and a close hold. More in the guide ' + LINK_SENS + '.'),
+     ('<strong>Dominicana:</strong> Fußarbeit, Spielfreude und schnelle Richtungswechsel, Figurenketten spielen eine kleinere Rolle. Mehr im Ratgeber ' + LINK_DOM + '.', '<strong>Dominicana:</strong> footwork, playfulness and quick direction changes, with figure chains playing a smaller role. More in the guide ' + LINK_DOM + '.'),
+   ]),
+   ('p', 'Die Begriffe werden nicht überall gleich verwendet. Eine Berliner Schule nennt Bachata Sensual auch Fusion oder Moderna. Frag deshalb in der Probestunde, was im Kurs gelehrt wird, statt dich nur nach dem Namen zu richten.',
+         'The terms are not used the same way everywhere. One Berlin school also calls Bachata Sensual Fusion or Moderna. So ask in the trial class what the course teaches instead of going by the name alone.'),
+ ]),
+ ('Bachata Moderna lernen: So fängst du an', 'Learning Bachata Moderna: how to start', [
+   ('ul', [
+     ('<strong>Grundschritt zuerst:</strong> Drei Schritte, Tap auf vier. Ohne sicheres Timing geraten Drehungen aus dem Takt. Der Ratgeber ' + LINK_GRUND + ' erklärt ihn.', '<strong>Basic step first:</strong> three steps, tap on four. Without secure timing, turns fall off the beat. The guide ' + LINK_GRUND_EN + ' explains it.'),
+     ('<strong>Einfache Drehung:</strong> Übe eine einzelne Drehung unter dem Arm, bevor du Ketten tanzt.', '<strong>Simple turn:</strong> practise a single turn under the arm before you dance chains.'),
+     ('<strong>Spotting:</strong> Fixiere beim Drehen einen Punkt, damit dir nicht schwindelig wird.', '<strong>Spotting:</strong> fix one point while turning so you do not get dizzy.'),
+     ('<strong>Weiche Arme:</strong> Die Führende zieht nicht, die Folgende hält nicht dagegen. Beide halten Spannung, ohne zu verkrampfen.', '<strong>Soft arms:</strong> the leader does not pull and the follower does not resist. Both keep tension without tightening up.'),
+     ('<strong>Partner wechseln:</strong> In Kursen mit Partnerwechsel übst du Führung und Verbindung mit vielen Menschen.', '<strong>Rotate partners:</strong> in classes with partner rotation you practise leading and connection with many people.'),
+   ]),
+   ('p', f'Der Einstieg ohne Vorkenntnisse ist im Ratgeber {LINK_ANF} beschrieben, die Kursformen stehen im Ratgeber {LINK_KURS}.',
+         f'Starting without experience is described in the guide {LINK_ANF_EN}, and the course formats are in the guide {LINK_KURS_EN}.'),
+ ]),
+ ('Typische Fehler in Moderna', 'Common mistakes in Moderna', [
+   ('ul', [
+     ('<strong>Zu viel Kraft:</strong> Wer die Folgende durch die Figur zieht, verliert die Musik. Führe mit kleinen, klaren Impulsen.', '<strong>Too much force:</strong> pulling the follower through a figure loses the music. Lead with small, clear signals.'),
+     ('<strong>Figuren statt Musik:</strong> Eine lange Kette passt nicht zu jedem Lied. Höre auf Pausen und Akzente.', '<strong>Figures instead of music:</strong> a long chain does not fit every song. Listen for breaks and accents.'),
+     ('<strong>Grundschritt vergessen:</strong> Zwischen den Figuren läuft der Grundschritt weiter.', '<strong>Forgetting the basic step:</strong> the basic step keeps going between figures.'),
+     ('<strong>Keine Rückmeldung:</strong> Sage deinem Partner freundlich, wenn dir ein Wrap oder eine Drehung unangenehm ist.', '<strong>No feedback:</strong> tell your partner kindly if a wrap or a turn feels uncomfortable.'),
+   ]),
+ ]),
+ ('Moderna auf Partys und Festivals', 'Moderna at parties and festivals', [
+   ('p', f'Auf Socials tanzt du Moderna mit wechselnden Partnern. Das klappt am besten mit Figuren, die du sicher kennst. Wie ein Abend abläuft, steht im Ratgeber {LINK_PARTY}. Eine Übersicht regelmäßiger Partys gibt die Seite {LINK_SOCIALS}, Workshops findest du bei den {LINK_FEST}.',
+         f'At socials you dance Moderna with rotating partners. That works best with figures you know well. How an evening runs is in the guide {LINK_PARTY_EN}. An overview of regular parties is on the page {LINK_SOCIALS_EN}, and you find workshops at the {LINK_FEST_EN}.'),
+ ]),
+ ('Moderna-Kurse in deiner Stadt finden', 'Finding Moderna classes in your city', [
+   ('p', f'Schau auf den Seiten der Schulen nach dem Stil, und frage nach einer Probestunde. Übersichten über Schulen gibt es für {CITY_LINKS_DE}. Alle Listen sind alphabetisch und keine Wertung.',
+         f'Check the schools\' pages for the style and ask for a trial class. Overviews of schools exist for {CITY_LINKS_EN}. All lists are alphabetical and not a rating.'),
+   ('p', RANK_P[0], RANK_P[1]),
+ ]),
+]
+mod_faq = [
+ ('Was ist Bachata Moderna?', 'What is Bachata Moderna?',
+  'Ein Partnertanz-Stil mit Drehmustern, Wraps und strukturierter Partnerarbeit, geprägt von Salsa und Gesellschaftstanz.',
+  'A partner-dance style with turn patterns, wraps and structured partnerwork, shaped by salsa and ballroom.'),
+ ('Was ist der Unterschied zwischen Moderna und Sensual?', 'What is the difference between Moderna and Sensual?',
+  'Moderna setzt auf Drehungen und feste Abläufe, Sensual auf weiche Körperbewegung und enge Haltung. Manche Schulen verwenden die Namen aber gleichbedeutend.',
+  'Moderna focuses on turns and fixed sequences, Sensual on soft body movement and a close hold. Some schools, however, use the names interchangeably.'),
+ ('Ist Moderna für Anfänger geeignet?', 'Is Moderna suitable for beginners?',
+  'Ja. Viele Einsteigerkurse beginnen mit Moderna, weil sich Figuren schrittweise lernen lassen. Du brauchst zuerst den Grundschritt.',
+  'Yes. Many beginner classes start with Moderna because figures can be learned step by step. You need the basic step first.'),
+ ('Brauche ich Salsa-Kenntnisse für Moderna?', 'Do I need salsa experience for Moderna?',
+  'Nein. Salsa-Tänzer finden sich aber oft schnell zurecht, weil der Stil von Salsa geprägt ist.',
+  'No. Salsa dancers often find their way quickly, though, because the style is shaped by salsa.'),
+ ('Kann ich Moderna mit Sensual und Dominicana mischen?', 'Can I mix Moderna with Sensual and Dominicana?',
+  'Ja. Viele Tänzer mischen die Stile. Der Grundschritt ist derselbe.',
+  'Yes. Many dancers mix the styles. The basic step is the same.'),
+ ('Wie vermeide ich Schwindel bei Drehungen?', 'How do I avoid dizziness when turning?',
+  'Fixiere beim Drehen einen Punkt (Spotting) und beginne mit einzelnen Drehungen.',
+  'Fix one point while turning (spotting) and start with single turns.'),
+ ('Wo finde ich Moderna-Kurse in meiner Stadt?', 'Where do I find Moderna classes in my city?',
+  f'Frage bei den Schulen nach dem Stil und einer Probestunde. Übersichten gibt es für {CITY_LINKS_DE}.',
+  f'Ask the schools about the style and a trial class. Overviews exist for {CITY_LINKS_EN}.'),
+]
+
+# ---------------------------------------------------------------- Bachata Party
+party_sections = [
+ ('Bachata Party: Das Wichtigste in Kürze', 'Bachata party: the essentials', [
+   ('p', 'Eine Bachata Party, auch Social genannt, ist ein Abend, an dem alle frei tanzen. Viele Veranstalter beginnen mit einem Kurs, danach läuft die Party. Du tanzt mit wechselnden Partnern, niemand erwartet perfekte Technik, und du musst keinen Partner mitbringen.',
+         'A Bachata party, also called a social, is an evening where everyone dances freely. Many organisers start with a class and the party follows. You dance with rotating partners, nobody expects perfect technique and you do not need to bring a partner.'),
+   ('p', f'Wo regelmäßig getanzt wird, zeigt die Seite {LINK_SOCIALS} mit Ort, Zeit und Preis nach Stadt. Hier erfährst du, wie ein Abend abläuft, was die Etikette ist und wie du dich beim ersten Mal vorbereitest.',
+         f'The page {LINK_SOCIALS_EN} shows where regular dancing happens, with place, time and price by city. Here you learn how an evening runs, what the etiquette is and how to prepare for your first time.'),
+ ]),
+ ('So läuft ein Social ab', 'How a social runs', [
+   ('p', 'Die Abläufe unterscheiden sich je nach Veranstalter. Die Berliner und Hamburger Socials auf unserer Seite zeigen typische Muster:',
+         'Formats differ by organiser. The Berlin and Hamburg socials on our page show typical patterns:'),
+   ('ul', [
+     ('<strong>Kurs vor der Party:</strong> Eine Stunde Unterricht, danach beginnt die Party. Das ist ein guter Einstieg, weil du dich warm tanzt.', '<strong>Class before the party:</strong> an hour of teaching, then the party starts. This is a good way in because you warm up.'),
+     ('<strong>Workshop mit Party:</strong> Manche Abende kombinieren einen Workshop mit dem Social.', '<strong>Workshop with party:</strong> some evenings combine a workshop with the social.'),
+     ('<strong>Offene Tanzfläche:</strong> Die Musik läuft, und jeder fordert andere auf.', '<strong>Open dance floor:</strong> the music plays and everyone asks others to dance.'),
+     ('<strong>Mehrere Stile:</strong> Viele Socials mischen Salsa, Bachata und Kizomba, andere spielen nur Bachata.', '<strong>Several styles:</strong> many socials mix salsa, bachata and kizomba, others play only bachata.'),
+   ]),
+   ('p', 'Zeiten und Preise ändern sich, prüfe sie vor dem Besuch beim Veranstalter.', 'Times and prices change, so check with the organiser before you go.'),
+ ]),
+ ('Etikette auf der Tanzfläche', 'Dance floor etiquette', [
+   ('ul', [
+     ('<strong>Auffordern ist normal:</strong> Du darfst jede Person ansprechen, Frauen und Männer. Ein freundliches Lächeln und die Frage reichen.', '<strong>Asking is normal:</strong> you may approach anyone, women and men. A friendly smile and the question are enough.'),
+     ('<strong>Nein ist ein vollständiger Satz:</strong> Wer ablehnt, muss das nicht erklären. Bedanke dich und frage jemand anderen.', '<strong>No is a complete sentence:</strong> whoever declines does not have to explain. Say thanks and ask someone else.'),
+     ('<strong>Ein Song reicht:</strong> Tanze ein Lied und bedanke dich. Mehrere Tänze mit derselben Person sind ok, wenn beide es wollen.', '<strong>One song is enough:</strong> dance one song and say thanks. Several dances with the same person are fine if both want it.'),
+     ('<strong>Nähe nur im Einvernehmen:</strong> Nahe Haltung gehört zu Sensual, aber jeder bestimmt seine Grenze. Achte auf dein Gegenüber.', '<strong>Closeness only by consent:</strong> a close hold belongs to Sensual, but everyone sets their own limit. Pay attention to your partner.'),
+     ('<strong>Raum respektieren:</strong> Tanze so, dass du andere Paare nicht anstößt, und entschuldige dich bei Kollisionen.', '<strong>Respect space:</strong> dance so that you do not bump into other couples and apologise after collisions.'),
+     ('<strong>Kein Unterricht auf der Fläche:</strong> Gib keine ungefragten Korrekturen. Frag lieber im Kurs nach.', '<strong>No teaching on the floor:</strong> do not give unasked corrections. Ask in class instead.'),
+   ]),
+ ]),
+ ('Dein erstes Mal: Vorbereitung', 'Your first time: preparation', [
+   ('ul', [
+     ('<strong>Grundschritt lernen:</strong> Ein sicherer Grundschritt reicht. Der Ratgeber ' + LINK_GRUND + ' erklärt ihn, der Ratgeber ' + LINK_ANF + ' den Einstieg.', '<strong>Learn the basic step:</strong> a secure basic step is enough. The guide ' + LINK_GRUND_EN + ' explains it, and the guide ' + LINK_ANF_EN + ' the start.'),
+     ('<strong>Früh kommen:</strong> Wenn ein Kurs vor der Party läuft, nutze ihn. Du lernst Leute kennen und tanzt dich ein.', '<strong>Come early:</strong> if a class runs before the party, use it. You meet people and warm up.'),
+     ('<strong>Allein kommen:</strong> Ein Partner ist nicht nötig. Viele Besucher kommen allein.', '<strong>Come alone:</strong> a partner is not needed. Many visitors come alone.'),
+     ('<strong>Bequem anziehen:</strong> Kleidung, in der du dich bewegen kannst, und Schuhe mit Sohlen, die gut drehen.', '<strong>Dress comfortably:</strong> clothes you can move in and shoes with soles that turn well.'),
+     ('<strong>Wasser und Pausen:</strong> Trinke genug und mache Pausen. Zuschauen ist erlaubt.', '<strong>Water and breaks:</strong> drink enough and take breaks. Watching is allowed.'),
+   ]),
+ ]),
+ ('Welchen Stil tanzt du auf der Party?', 'Which style do you dance at the party?', [
+   ('p', f'Auf den Partys treffen verschiedene Stile aufeinander. Sensual lebt von Körperbewegung und enger Haltung ({LINK_SENS}), {LINK_MOD} von Drehungen und Wraps, Dominicana von Fußspiel ({LINK_DOM}). Der Grundschritt ist derselbe, deshalb kannst du mit allen tanzen. Ein Überblick steht im Ratgeber {LINK_TANZEN}.',
+         f'Different styles meet at parties. Sensual lives on body movement and a close hold ({LINK_SENS}), {LINK_MOD_EN} on turns and wraps, Dominicana on footwork ({LINK_DOM}). The basic step is the same, so you can dance with everyone. An overview is in the guide {LINK_TANZEN_EN}.'),
+ ]),
+ ('Sicherheit und Wohlbefinden', 'Safety and wellbeing', [
+   ('ul', [
+     ('<strong>Gute Veranstalter</strong> sagen klar, dass Nein akzeptiert wird. Wenn dir etwas unangenehm ist, sprich die Veranstalter an.', '<strong>Good organisers</strong> state clearly that no is accepted. If something feels uncomfortable, speak to the organisers.'),
+     ('<strong>Heimweg planen:</strong> Kläre vorher, wie du nach Hause kommst, besonders bei Partys bis in die Nacht.', '<strong>Plan the way home:</strong> sort out in advance how you get home, especially for parties that run late into the night.'),
+     ('<strong>Getränke im Blick behalten:</strong> Lass dein Glas nicht unbeaufsichtigt.', '<strong>Keep an eye on drinks:</strong> do not leave your glass unattended.'),
+   ]),
+ ]),
+ ('Weiter tanzen: Festivals und Workshops', 'Dancing further: festivals and workshops', [
+   ('p', f'Wer mehr will, findet auf {LINK_FEST} Workshops, Partys und Tänzer aus vielen Städten. Wie du ein Festival wählst, steht auf der Seite. Wenn du lieber im Kurs übst, hilft der Ratgeber {LINK_KURS}. Für Tanzende in der Rolle der Folgenden gibt es {LINK_LADY}.',
+         f'If you want more, {LINK_FEST_EN} offer workshops, parties and dancers from many cities. The page explains how to choose a festival. If you prefer to practise in class, the guide {LINK_KURS_EN} helps. For dancers in the follower role there is {LINK_LADY_EN}.'),
+ ]),
+ ('Partys und Schulen in deiner Stadt', 'Parties and schools in your city', [
+   ('p', f'Städteseiten mit Schulen und Terminen gibt es für {CITY_LINKS_DE}. Alle Listen sind alphabetisch und keine Wertung. Veranstalter können ihren Social kostenlos eintragen.',
+         f'City pages with schools and dates exist for {CITY_LINKS_EN}. All lists are alphabetical and not a rating. Organisers can list their social for free.'),
+   ('p', RANK_P[0], RANK_P[1]),
+ ]),
+]
+party_faq = [
+ ('Was ist eine Bachata Party?', 'What is a bachata party?',
+  'Ein Abend zum freien Tanzen mit wechselnden Partnern, oft mit einem Kurs vor der Party. Man nennt ihn auch Social.',
+  'An evening of free dancing with rotating partners, often with a class before the party. It is also called a social.'),
+ ('Brauche ich einen Partner für eine Bachata Party?', 'Do I need a partner for a bachata party?',
+  'Nein. Viele Besucher kommen allein und tanzen mit wechselnden Partnern.',
+  'No. Many visitors come alone and dance with rotating partners.'),
+ ('Wie gut muss ich tanzen können?', 'How well do I need to dance?',
+  'Ein sicherer Grundschritt reicht für den Anfang. Viele Socials beginnen mit einem Kurs, der dir den Einstieg erleichtert.',
+  'A secure basic step is enough to start. Many socials begin with a class that makes it easier to get in.'),
+ ('Darf ich jemanden zum Tanzen auffordern?', 'May I ask someone to dance?',
+  'Ja, das ist normal, bei allen Geschlechtern. Wer ablehnt, muss das nicht erklären.',
+  'Yes, that is normal, across all genders. Whoever declines does not have to explain.'),
+ ('Was ziehe ich an?', 'What do I wear?',
+  'Bequeme Kleidung, in der du dich bewegen kannst, und Schuhe mit Sohlen, die gut drehen. Der Dresscode hängt vom Veranstalter ab.',
+  'Comfortable clothes you can move in and shoes with soles that turn well. The dress code depends on the organiser.'),
+ ('Was kostet ein Social?', 'What does a social cost?',
+  f'Das hängt vom Veranstalter ab. Preise für Beispiele stehen auf der Seite {LINK_SOCIALS}. Prüfe sie vor dem Besuch.',
+  f'That depends on the organiser. Example prices are on the page {LINK_SOCIALS_EN}. Check them before you go.'),
+ ('Wo finde ich Bachata Partys in meiner Stadt?', 'Where do I find bachata parties in my city?',
+  f'Die Seite {LINK_SOCIALS} listet Socials für Berlin, Hamburg, München, Köln und Frankfurt. Städteseiten gibt es für {CITY_LINKS_DE}.',
+  f'The page {LINK_SOCIALS_EN} lists socials for Berlin, Hamburg, Munich, Cologne and Frankfurt. City pages exist for {CITY_LINKS_EN}.'),
+]
+
+guide_page('bachata-moderna', 'bm',
+  'Bachata Moderna: Drehungen, Wraps, Einstieg und Kurse',
+  'Bachata Moderna erklärt: Drehmuster, Wraps und strukturierte Partnerarbeit, Unterschied zu Sensual und Dominicana, typische Fehler und wie du den Einstieg findest.',
+  'Bachata Moderna: turns, wraps, how to start',
+  'Bachata Moderna explained: turn patterns, wraps and structured partnerwork, the difference from Sensual and Dominicana, common mistakes and how to get started.',
+  'Bachata Moderna', ('Bachata Moderna · Ratgeber', 'Bachata Moderna · Guide'),
+  ('Bachata Moderna: <em class="foil">Drehungen, Wraps, Einstieg</em>', 'Bachata Moderna: <em class="foil">turns, wraps, how to start</em>'),
+  ('Drehmuster, Wraps und klare Partnerarbeit: Hier erfährst du, was Bachata Moderna ausmacht, wie sich der Stil von Sensual und Dominicana unterscheidet und wie du ihn lernst.',
+   'Turn patterns, wraps and clear partnerwork: here you learn what defines Bachata Moderna, how the style differs from Sensual and Dominicana and how to learn it.'),
+  [('check', 'Für <b>Einsteiger</b> mit Grundschritt', 'For <b>beginners</b> with the basic step'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  mod_sections, mod_faq, sibling_group='topic')
+
+guide_page('bachata-party', 'bp',
+  'Bachata Party: Ablauf, Etikette, erstes Mal',
+  'Bachata Party und Social: So läuft ein Abend ab, welche Etikette gilt und wie du dich beim ersten Mal vorbereitest. Mit Links zu Partys in deiner Stadt.',
+  'Bachata party: how it runs, etiquette, first time',
+  'Bachata party and social: how an evening runs, which etiquette applies and how to prepare for your first time. With links to parties in your city.',
+  'Bachata Party', ('Bachata Party · Ratgeber', 'Bachata party · Guide'),
+  ('Bachata Party: <em class="foil">Ablauf, Etikette, erstes Mal</em>', 'Bachata party: <em class="foil">how it runs, etiquette, first time</em>'),
+  ('Wie läuft ein Bachata-Social ab, was ist auf der Tanzfläche üblich und wie bereitest du dich vor? Alles für deinen ersten Abend, ohne Partner und ohne Vorkenntnisse.',
+   'How does a Bachata social run, what is usual on the dance floor and how do you prepare? Everything for your first evening, without a partner and without experience.'),
+  [('check', 'Auch <b>allein</b> möglich', 'Possible <b>alone</b> too'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  party_sections, party_faq, sibling_group='topic')
