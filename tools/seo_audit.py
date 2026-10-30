@@ -26,6 +26,8 @@ PAGES = {  # page: (main keyword, target word count from competitor research or 
     'bachata-gelsenkirchen.html': ('Bachata Gelsenkirchen', 800),
     'bachata-bonn.html': ('Bachata Bonn', 800),
     'bachata-kempten.html': ('Bachata Kempten', 800),
+    'bachata-kassel.html': ('Bachata Kassel', 800),
+    'bachata-hannover.html': ('Bachata Hannover', 800),
     'bachata-oldenburg.html': ('Bachata Oldenburg', 800),
     'bachata-essen.html': ('Bachata Essen', 800),
     'bachata-karlsruhe.html': ('Bachata Karlsruhe', 800),
