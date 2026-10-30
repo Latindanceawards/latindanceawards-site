@@ -2194,7 +2194,7 @@ def kit_body(s, with_select=False, opts=''):
     </div>
     <p class="kit-msg" role="status"></p>"""
 
-GUIDE_CITIES = {'berlin','hamburg','muenchen','koeln','frankfurt','stuttgart','duesseldorf','freiburg','dresden','nuernberg','bremen','saarbruecken','gelsenkirchen','bonn','kempten','oldenburg','essen','karlsruhe'}
+GUIDE_CITIES = {'berlin','hamburg','muenchen','koeln','frankfurt','stuttgart','duesseldorf','freiburg','dresden','nuernberg','bremen','saarbruecken','gelsenkirchen','bonn','kempten','oldenburg','essen','karlsruhe','leipzig'}
 
 def kit_section(s, nm, de_city, slug, ckey=None):
     more = ''

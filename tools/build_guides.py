@@ -20,7 +20,7 @@ CITY_PAGES = [('bachata-berlin', 'Berlin', 'Berlin'), ('bachata-hamburg', 'Hambu
               ('bachata-stuttgart', 'Stuttgart', 'Stuttgart'), ('bachata-freiburg', 'Freiburg', 'Freiburg'), ('bachata-bremen', 'Bremen', 'Bremen'),
               ('bachata-dresden', 'Dresden', 'Dresden'), ('bachata-nuernberg', 'Nürnberg', 'Nuremberg'), ('bachata-saarbruecken', 'Saarbrücken', 'Saarbrücken'),
               ('bachata-essen', 'Essen', 'Essen'), ('bachata-bonn', 'Bonn', 'Bonn'), ('bachata-karlsruhe', 'Karlsruhe', 'Karlsruhe'),
-              ('bachata-gelsenkirchen', 'Gelsenkirchen', 'Gelsenkirchen'), ('bachata-oldenburg', 'Oldenburg', 'Oldenburg'), ('bachata-kempten', 'Kempten', 'Kempten')]
+              ('bachata-gelsenkirchen', 'Gelsenkirchen', 'Gelsenkirchen'), ('bachata-oldenburg', 'Oldenburg', 'Oldenburg'), ('bachata-kempten', 'Kempten', 'Kempten'), ('bachata-leipzig', 'Leipzig', 'Leipzig')]
 TOPIC_PAGES = [('bachata-tanzen', 'Bachata tanzen lernen', 'Learn to dance Bachata'),
                ('bachata-festivals-deutschland', 'Bachata-Festivals 2026/2027', 'Bachata festivals 2026/2027'),
                ('bachata-grundschritt', 'Bachata-Grundschritt', 'Bachata basic step'),
@@ -464,6 +464,7 @@ def _auto_city(key, idx):
     return slug, cde, cen
 
 AUTO_CITIES = [k for k, c in sorted(((k, sum(1 for e in B.SCH if e['city'] == k)) for k in {e['city'] for e in B.SCH}), key=lambda x: -x[1]) if c >= 3 and k not in ('berlin', 'hamburg', 'muenchen')]
+if 'leipzig' not in AUTO_CITIES and any(e['city'] == 'leipzig' for e in B.SCH): AUTO_CITIES.append('leipzig')  # 2 schools, still a keyword page (bachata leipzig, 110/mo)
 for _i, _k in enumerate(AUTO_CITIES):
     _auto_city(_k, _i)
 
