@@ -7,10 +7,10 @@
 <meta name="description" content="Die unabhängigen Bachata Awards 2026: Bachata-Schulen in Deutschland, bewertet nach neun öffentlichen Kriterien. Kostenlos bewerben, Ergebnisse am 20. Dezember.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#080707">
-<link rel="canonical" href="https://latindanceawards.com/deutschland.html">
-<link rel="alternate" hreflang="de" href="https://latindanceawards.com/deutschland.html">
-<link rel="alternate" hreflang="en" href="https://latindanceawards.com/deutschland.html?lang=en">
-<link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/deutschland.html">
+<link rel="canonical" href="https://latindanceawards.com/deutschland">
+<link rel="alternate" hreflang="de" href="https://latindanceawards.com/deutschland">
+<link rel="alternate" hreflang="en" href="https://latindanceawards.com/deutschland?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/deutschland">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
@@ -19,7 +19,7 @@
 <meta property="og:locale:alternate" content="en_GB">
 <meta property="og:title" content="Bachata Awards 2026 · Latin Dance Awards Deutschland">
 <meta property="og:description" content="Die unabhängigen Bachata Awards 2026: Bachata-Schulen in Deutschland, bewertet nach neun öffentlichen Kriterien. Kostenlos bewerben, Ergebnisse am 20. Dezember.">
-<meta property="og:url" content="https://latindanceawards.com/deutschland.html">
+<meta property="og:url" content="https://latindanceawards.com/deutschland">
 <meta property="og:image" content="https://latindanceawards.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -62,7 +62,7 @@
   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
   "location": {
    "@type": "VirtualLocation",
-   "url": "https://latindanceawards.com/rankings.html"
+   "url": "https://latindanceawards.com/rankings"
   },
   "image": [
    "https://latindanceawards.com/og-image.png"
@@ -77,7 +77,7 @@
    "@type": "Offer",
    "price": "0",
    "priceCurrency": "EUR",
-   "url": "https://latindanceawards.com/rankings.html",
+   "url": "https://latindanceawards.com/rankings",
    "availability": "https://schema.org/InStock",
    "validFrom": "2026-10-24"
   }
@@ -454,15 +454,15 @@ footer{background:var(--velvet-deep);border-top:1px solid var(--line);padding:56
     </a>
     <nav aria-label="Main">
       <ul id="mnav">
-        <li><a href="index.html" data-i18n="nav_eu">Europa</a></li>
-        <li><a href="index.html#laender" data-i18n="nav_countries">Länder-Rankings</a></li>
-        <li><a href="rankings.html" data-i18n="t1">Rankings</a></li>
+        <li><a href="./" data-i18n="nav_eu">Europa</a></li>
+        <li><a href="./#laender" data-i18n="nav_countries">Länder-Rankings</a></li>
+        <li><a href="rankings" data-i18n="t1">Rankings</a></li>
         <li><a href="#why" data-i18n="t2">Warum es zählt</a></li>
         <li><a href="#categories" data-i18n="t3">Kategorien</a></li>
         <li><a href="#method" data-i18n="t4">Bewertung</a></li>
-        <li><a href="reisen.html" data-i18n="nav_trip">Tanzreise</a></li>
-        <li><a href="lehrer-djs.html" data-i18n="nav_tdj">Lehrer &amp; DJs</a></li>
-        <li><a href="bewerbung.html" data-i18n="nav_apply">Bewerben</a></li>
+        <li><a href="reisen" data-i18n="nav_trip">Tanzreise</a></li>
+        <li><a href="lehrer-djs" data-i18n="nav_tdj">Lehrer &amp; DJs</a></li>
+        <li><a href="bewerbung" data-i18n="nav_apply">Bewerben</a></li>
       </ul>
     </nav>
     <div class="nav-end">
@@ -476,7 +476,7 @@ function load(cb){if(window.google&&google.translate&&google.translate.Translate
 sel.value=((document.documentElement.lang||"de").slice(0,2)==="en")?"en":"de";var tr=false;try{tr=!!localStorage.getItem("lda-gt")&&localStorage.getItem("lda-gt")!=="orig"}catch(e){}
 sel.addEventListener("change",function(){var v=sel.value;if(v==="de"||v==="en"){var was=document.cookie.indexOf("googtrans=/")>-1&&document.cookie.indexOf("googtrans=/auto")<0;setCk("/auto/"+v);try{localStorage.removeItem("lda-gt");localStorage.setItem("lda-lang",v)}catch(e){}if(was||tr){location.reload();return}var bt=document.querySelector('.lang button[data-lang="'+v+'"]');if(bt)bt.click();return}try{localStorage.setItem("lda-gt",v)}catch(e){}if(!v)return;if(v==="orig"){setCk("/auto/"+src());try{localStorage.removeItem("lda-gt")}catch(e){}location.reload();return}setCk("/"+src()+"/"+v);load(function(){pick(v)})});
 try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){sel.value=sv;setCk("/"+src()+"/"+sv);load(function(){pick(sv)})}}catch(e){}})();</script>
-    <a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">Kostenlos bewerben</a>
+    <a class="btn btn-gold" href="bewerbung" data-i18n="t5">Kostenlos bewerben</a>
         <button type="button" class="burger" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -498,8 +498,8 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
       </h1>
       <p class="lede rise d4" data-i18n="t9">Die Bachata Awards 2026 sind unabhängige Rankings der besten Bachata-Schulen, basierend auf öffentlichen Daten: Bewertungen, Erfahrung, Festivalpräsenz und Unterrichtsangebot. Keine gekauften Stimmen, keine bezahlten Platzierungen.</p>
       <div class="ctas rise d5">
-        <a class="btn btn-gold" href="rankings.html" data-i18n="t10">Rankings ansehen und abstimmen</a>
-        <a class="btn btn-ghost" href="bewerbung.html" data-i18n="t11">Schule kostenlos anmelden</a>
+        <a class="btn btn-gold" href="rankings" data-i18n="t10">Rankings ansehen und abstimmen</a>
+        <a class="btn btn-ghost" href="bewerbung" data-i18n="t11">Schule kostenlos anmelden</a>
       </div>
       <p class="results rise d5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span data-i18n="res">Ergebnisse am <strong>20. Dezember 2026</strong></span></p>
     </div>
@@ -561,12 +561,12 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
     </div>
 
     <div class="cities">
-      <article class="city"><h3><a class="stretch" href="rankings.html#berlin">Berlin</a></h3><p class="de" data-i18n="t14">Beste Bachata-Tanzschulen in Berlin</p><span class="status" data-i18n="t20">Ergebnisse am 20. Dezember</span><div class="podium" aria-hidden="true"><b></b><b></b><b></b></div></article>
-      <article class="city"><h3><a class="stretch" href="rankings.html#muenchen">München</a></h3><p class="de" data-i18n="t15">Beste Bachata-Tanzschulen in München</p><span class="status" data-i18n="t20">Ergebnisse am 20. Dezember</span><div class="podium" aria-hidden="true"><b></b><b></b><b></b></div></article>
-      <article class="city"><h3><a class="stretch" href="rankings.html#hamburg">Hamburg</a></h3><p class="de" data-i18n="t16">Beste Bachata-Tanzschulen in Hamburg</p><span class="status" data-i18n="t20">Ergebnisse am 20. Dezember</span><div class="podium" aria-hidden="true"><b></b><b></b><b></b></div></article>
-      <article class="city"><h3><a class="stretch" href="rankings.html#koeln">Köln</a></h3><p class="de" data-i18n="t17">Beste Bachata-Tanzschulen in Köln</p><span class="status" data-i18n="t20">Ergebnisse am 20. Dezember</span><div class="podium" aria-hidden="true"><b></b><b></b><b></b></div></article>
-      <article class="city"><h3><a class="stretch" href="rankings.html#frankfurt">Frankfurt</a></h3><p class="de" data-i18n="t18">Beste Bachata-Tanzschulen in Frankfurt</p><span class="status" data-i18n="t20">Ergebnisse am 20. Dezember</span><div class="podium" aria-hidden="true"><b></b><b></b><b></b></div></article>
-      <article class="city"><h3><a class="stretch" href="rankings.html#duesseldorf">Düsseldorf</a></h3><p class="de" data-i18n="t19">Beste Bachata-Tanzschulen in Düsseldorf</p><span class="status" data-i18n="t20">Ergebnisse am 20. Dezember</span><div class="podium" aria-hidden="true"><b></b><b></b><b></b></div></article>
+      <article class="city"><h3><a class="stretch" href="rankings#berlin">Berlin</a></h3><p class="de" data-i18n="t14">Beste Bachata-Tanzschulen in Berlin</p><span class="status" data-i18n="t20">Ergebnisse am 20. Dezember</span><div class="podium" aria-hidden="true"><b></b><b></b><b></b></div></article>
+      <article class="city"><h3><a class="stretch" href="rankings#muenchen">München</a></h3><p class="de" data-i18n="t15">Beste Bachata-Tanzschulen in München</p><span class="status" data-i18n="t20">Ergebnisse am 20. Dezember</span><div class="podium" aria-hidden="true"><b></b><b></b><b></b></div></article>
+      <article class="city"><h3><a class="stretch" href="rankings#hamburg">Hamburg</a></h3><p class="de" data-i18n="t16">Beste Bachata-Tanzschulen in Hamburg</p><span class="status" data-i18n="t20">Ergebnisse am 20. Dezember</span><div class="podium" aria-hidden="true"><b></b><b></b><b></b></div></article>
+      <article class="city"><h3><a class="stretch" href="rankings#koeln">Köln</a></h3><p class="de" data-i18n="t17">Beste Bachata-Tanzschulen in Köln</p><span class="status" data-i18n="t20">Ergebnisse am 20. Dezember</span><div class="podium" aria-hidden="true"><b></b><b></b><b></b></div></article>
+      <article class="city"><h3><a class="stretch" href="rankings#frankfurt">Frankfurt</a></h3><p class="de" data-i18n="t18">Beste Bachata-Tanzschulen in Frankfurt</p><span class="status" data-i18n="t20">Ergebnisse am 20. Dezember</span><div class="podium" aria-hidden="true"><b></b><b></b><b></b></div></article>
+      <article class="city"><h3><a class="stretch" href="rankings#duesseldorf">Düsseldorf</a></h3><p class="de" data-i18n="t19">Beste Bachata-Tanzschulen in Düsseldorf</p><span class="status" data-i18n="t20">Ergebnisse am 20. Dezember</span><div class="podium" aria-hidden="true"><b></b><b></b><b></b></div></article>
     </div>
 
     <div class="sample">
@@ -742,7 +742,7 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
     <h2 id="nom-title" data-i18n="t97">Fehlt deine Schule?</h2>
     <p data-i18n="t98">Bewirb deine Bachata-Schule bis zum 30. November für die Awards 2026. Die Teilnahme ist kostenlos und die Bewerbung dauert nur fünf Minuten.</p>
     <div class="ctas">
-      <a class="btn btn-gold" href="bewerbung.html" data-i18n="t99">Jetzt kostenlos bewerben</a>
+      <a class="btn btn-gold" href="bewerbung" data-i18n="t99">Jetzt kostenlos bewerben</a>
       <a class="btn btn-ghost" href="mailto:hello@latindanceawards.com?subject=Datenkorrektur" data-i18n="t100">Korrektur senden</a>
     </div>
   </div>
@@ -763,11 +763,11 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
       </div>
       <div>
         <p class="fh">Rankings</p>
-        <ul><li><a href="rankings.html" data-i18n="t102">Deutschland 2026</a></li><li><a href="#categories" data-i18n="t103">Award-Kategorien</a></li><li><a href="#method" data-i18n="t104">Bewertung</a></li><li><a href="#faq" data-i18n="ffaq">Häufige Fragen</a></li><li><a href="bachata-berlin.html">Bachata Berlin</a></li><li><a href="bachata-hamburg.html">Bachata Hamburg</a></li><li><a href="bachata-muenchen.html">Bachata München</a></li><li><a href="index.html">Europa-Ranking</a></li><li><a href="pl/">Polska (PL)</a></li></ul>
+        <ul><li><a href="rankings" data-i18n="t102">Deutschland 2026</a></li><li><a href="#categories" data-i18n="t103">Award-Kategorien</a></li><li><a href="#method" data-i18n="t104">Bewertung</a></li><li><a href="#faq" data-i18n="ffaq">Häufige Fragen</a></li><li><a href="bachata-berlin">Bachata Berlin</a></li><li><a href="bachata-hamburg">Bachata Hamburg</a></li><li><a href="bachata-muenchen">Bachata München</a></li><li><a href="./">Europa-Ranking</a></li><li><a href="pl/">Polska (PL)</a></li></ul>
       </div>
       <div>
         <p class="fh" data-i18n="t105">Kontakt</p>
-        <ul><li><a href="bewerbung.html" data-i18n="t106">Kostenlos bewerben</a></li><li><a href="teilen.html">Teilen-Paket für Schulen</a></li><li><a href="bachata-socials.html">Bachata-Socials</a></li><li><a href="reisen.html">Tanzreise</a></li><li><a href="lehrer-djs.html">Lehrer &amp; DJs</a></li><li><a href="mailto:hello@latindanceawards.com">hello@latindanceawards.com</a></li><li><a href="https://instagram.com/" rel="noopener">Instagram</a></li></ul>
+        <ul><li><a href="bewerbung" data-i18n="t106">Kostenlos bewerben</a></li><li><a href="teilen">Teilen-Paket für Schulen</a></li><li><a href="bachata-socials">Bachata-Socials</a></li><li><a href="reisen">Tanzreise</a></li><li><a href="lehrer-djs">Lehrer &amp; DJs</a></li><li><a href="mailto:hello@latindanceawards.com">hello@latindanceawards.com</a></li><li><a href="https://instagram.com/" rel="noopener">Instagram</a></li></ul>
       </div>
     </div>
     <div class="legal"><span>© 2026 Latin Dance Awards</span><span data-i18n="t107">Bachata Edition · Deutschland</span></div>
