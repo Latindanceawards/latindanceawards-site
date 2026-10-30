@@ -1912,6 +1912,7 @@ open(p404, 'w', encoding='utf-8').write(h)
 # ======================================================================
 _dh = idx
 _dh = _dh.replace('href="https://latindanceawards.com/"', 'href="https://latindanceawards.com/deutschland.html"').replace('href="https://latindanceawards.com/?lang=en"', 'href="https://latindanceawards.com/deutschland.html?lang=en"').replace('content="https://latindanceawards.com/"', 'content="https://latindanceawards.com/deutschland.html"')
+_dh = _dh.replace('</head>', '<script type="application/ld+json">' + json.dumps(crumbs('Deutschland', 'deutschland.html'), ensure_ascii=False) + '</script>\n</head>', 1)
 open(os.path.join(ROOT, 'deutschland.html'), 'w', encoding='utf-8').write(_dh)
 print('wrote deutschland.html')
 

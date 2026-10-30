@@ -1766,7 +1766,6 @@
   <url><loc>https://latindanceawards.com/it/scuole/rueda-loca</loc></url>
   <url><loc>https://latindanceawards.com/it/scuole/sth-latin-dance-academy</loc></url>
   <url><loc>https://latindanceawards.com/it/scuole/future-dance-school</loc></url>
-  <url><loc>https://latindanceawards.com/it/scuole/bachata-bari</loc></url>
   <url><loc>https://latindanceawards.com/it/scuole/salvo-raccardi-salsa-bachata</loc></url>
   <url><loc>https://latindanceawards.com/it/scuole/scuola-di-danza-studio-d</loc></url>
   <url><loc>https://latindanceawards.com/it/scuole/punto-latino</loc></url>
@@ -1774,7 +1773,6 @@
   <url><loc>https://latindanceawards.com/it/scuole/club-latino</loc></url>
   <url><loc>https://latindanceawards.com/it/scuole/indanza-show-academy</loc></url>
   <url><loc>https://latindanceawards.com/it/scuole/archileo-y-karen-infinita-pasion</loc></url>
-  <url><loc>https://latindanceawards.com/it/scuole/polisportiva-alos</loc></url>
   <url>
     <loc>https://latindanceawards.com/it/bachata-trieste</loc>
     <lastmod>2026-10-27</lastmod>
@@ -2080,17 +2078,14 @@
   <url><loc>https://latindanceawards.com/fr/ecoles/encas-danses-studio</loc></url>
   <url><loc>https://latindanceawards.com/fr/ecoles/puntatalon-academy</loc></url>
   <url><loc>https://latindanceawards.com/fr/ecoles/republica-latina</loc></url>
-  <url><loc>https://latindanceawards.com/fr/ecoles/pulsacion-bachata</loc></url>
   <url><loc>https://latindanceawards.com/fr/ecoles/bachata-fusion-strasbourg</loc></url>
   <url><loc>https://latindanceawards.com/fr/ecoles/momoa-bachata</loc></url>
   <url><loc>https://latindanceawards.com/fr/ecoles/bachata-club-strasbourg</loc></url>
   <url><loc>https://latindanceawards.com/fr/ecoles/ritmo-loco</loc></url>
   <url><loc>https://latindanceawards.com/fr/ecoles/alma-dance</loc></url>
   <url><loc>https://latindanceawards.com/fr/ecoles/urban-latino-dance-studio</loc></url>
-  <url><loc>https://latindanceawards.com/fr/ecoles/zak-y-giusy-bachata-sensual</loc></url>
   <url><loc>https://latindanceawards.com/fr/ecoles/salsolyk-s-dance-company</loc></url>
   <url><loc>https://latindanceawards.com/fr/ecoles/bailasi-rennes</loc></url>
-  <url><loc>https://latindanceawards.com/fr/ecoles/cubanizate</loc></url>
   <url><loc>https://latindanceawards.com/fr/ecoles/kosta-danse</loc></url>
   <url><loc>https://latindanceawards.com/fr/ecoles/studio-garlisi</loc></url>
   <url>
@@ -3475,7 +3470,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/fr/bachata-merignac"/>
   </url>
   <url><loc>https://latindanceawards.com/fr/ecoles/mambo-salsa</loc></url>
-  <url><loc>https://latindanceawards.com/fr/ecoles/centre-de-danse-flamenco-al-andalus</loc></url>
   <url><loc>https://latindanceawards.com/fr/ecoles/salsa-hip-tap</loc></url>
   <url><loc>https://latindanceawards.com/fr/ecoles/latin-xperience-events</loc></url>
   <url><loc>https://latindanceawards.com/fr/ecoles/soy-cuba-salsa</loc></url>
@@ -6183,5 +6177,13 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-hannover"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/bachata-hannover?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-hannover"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/bachata-staedte-deutschland</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-staedte-deutschland"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/bachata-staedte-deutschland?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-staedte-deutschland"/>
   </url>
 </urlset>

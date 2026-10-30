@@ -31,7 +31,8 @@ TOPIC_PAGES = [('bachata-tanzen', 'Bachata tanzen lernen', 'Learn to dance Bacha
                ('bachata-fuer-anfaenger', 'Bachata für Anfänger', 'Bachata for beginners'),
                ('bachata-ladies-styling', 'Bachata Ladies Styling', 'Bachata ladies styling'),
                ('bachata-moderna', 'Bachata Moderna', 'Bachata Moderna'),
-               ('bachata-party', 'Bachata Party', 'Bachata party')]
+               ('bachata-party', 'Bachata Party', 'Bachata party'),
+               ('bachata-staedte-deutschland', 'Alle Städte und Schulen', 'All cities and schools')]
 
 SHOW_FESTIVALS = False  # set True to publish the festival listing again
 
@@ -1660,6 +1661,10 @@ mod_sections = [
    ('p', f'Der Einstieg ohne Vorkenntnisse ist im Ratgeber {LINK_ANF} beschrieben, die Kursformen stehen im Ratgeber {LINK_KURS}.',
          f'Starting without experience is described in the guide {LINK_ANF_EN}, and the course formats are in the guide {LINK_KURS_EN}.'),
  ]),
+ ('Wie eine Moderna-Stunde abläuft', 'How a Moderna class runs', [
+   ('p', 'Die Abläufe unterscheiden sich je nach Schule. Häufig beginnt die Stunde mit Aufwärmen und Grundschritt. Danach lernst du eine neue Figur in kleinen Teilen und wiederholst sie mit wechselnden Partnern. Am Ende steht oft eine kurze Kombination zur Musik. Frag in der Probestunde, wie dein Kurs aufgebaut ist.',
+         'The format differs by school. Often the class starts with a warm-up and the basic step. Then you learn a new figure in small parts and repeat it with rotating partners. At the end there is often a short combination to the music. Ask in the trial class how your course is structured.'),
+ ]),
  ('Typische Fehler in Moderna', 'Common mistakes in Moderna', [
    ('ul', [
      ('<strong>Zu viel Kraft:</strong> Wer die Folgende durch die Figur zieht, verliert die Musik. Führe mit kleinen, klaren Impulsen.', '<strong>Too much force:</strong> pulling the follower through a figure loses the music. Lead with small, clear signals.'),
@@ -1808,3 +1813,42 @@ guide_page('bachata-party', 'bp',
    'How does a Bachata social run, what is usual on the dance floor and how do you prepare? Everything for your first evening, without a partner and without experience.'),
   [('check', 'Auch <b>allein</b> möglich', 'Possible <b>alone</b> too'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
   party_sections, party_faq, sibling_group='topic')
+
+
+# ---------------------------------------------------------------- Index of all German cities and schools (crawl path to every page)
+_cities = sorted({e['city'] for e in B.SCH}, key=lambda k: B.CITY_NAMES[k][0].lower())
+idx_sections = [
+ ('Bachata-Städte in Deutschland: Überblick', 'Bachata cities in Germany: overview', [
+   ('p', f'Diese Übersicht führt zu allen Städteseiten und Schulprofilen in Deutschland: {len(_cities)} Städte und {len(B.SCH)} Schulen mit Bachata-Kursen. Die Reihenfolge ist alphabetisch und keine Wertung. Das offizielle Ranking erscheint am 20. Dezember 2026, die Methode steht auf der <a href="deutschland.html#method">Startseite</a>.',
+         f'This overview leads to all city pages and school profiles in Germany: {len(_cities)} cities and {len(B.SCH)} schools with Bachata classes. The order is alphabetical and not a rating. The official ranking is published on December 20, 2026, and the method is on the <a href="deutschland.html#method">homepage</a>.'),
+ ])]
+for _k in _cities:
+    _de, _en = B.CITY_NAMES[_k]
+    _ss = sorted([e for e in B.SCH if e['city'] == _k], key=lambda e: e['name'].lower())
+    _blocks = []
+    if exists('bachata-' + _k):
+        _blocks.append(('p', f'<a href="bachata-{_k}.html">Bachata {_de}: Schulen, Kurse und Partys</a>', f'<a href="bachata-{_k}.html">Bachata {_en}: schools, classes and parties</a>'))
+    _blocks.append(('ul', [(f'<a href="schools/{e["slug"]}.html">{e["name"]}</a>', f'<a href="schools/{e["slug"]}.html">{e["name"]}</a>') for e in _ss]))
+    idx_sections.append((f'Bachata {_de}', f'Bachata {_en}', _blocks))
+idx_faq = [
+ ('Was zeigt diese Seite?', 'What does this page show?',
+  'Sie listet alle Städte und Schulen in Deutschland, die wir erfasst haben, mit Links zu den Städteseiten und Schulprofilen.',
+  'It lists all cities and schools in Germany that we have recorded, with links to the city pages and school profiles.'),
+ ('Ist die Reihenfolge eine Wertung?', 'Is the order a rating?',
+  'Nein, die Listen sind alphabetisch. Das offizielle Ranking erscheint am 20. Dezember 2026.',
+  'No, the lists are alphabetical. The official ranking is published on December 20, 2026.'),
+ ('Meine Schule fehlt. Was tun?', 'My school is missing. What can I do?',
+  'Schulen können sich kostenlos auf der <a href="bewerbung.html">Bewerbungsseite</a> eintragen.',
+  'Schools can enter for free on the <a href="bewerbung.html">application page</a>.'),
+]
+guide_page('bachata-staedte-deutschland', 'bsd',
+  'Bachata Schulen Deutschland: Alle Städte und Schulen',
+  'Alle Städte und Bachata-Schulen in Deutschland auf einen Blick: Links zu den Städteseiten und Schulprofilen, alphabetisch und ohne Wertung.',
+  'Bachata schools Germany: all cities and schools',
+  'All cities and Bachata schools in Germany at a glance: links to the city pages and school profiles, alphabetical and without rating.',
+  'Alle Städte und Schulen', ('Bachata Schulen Deutschland · Übersicht', 'Bachata schools Germany · Overview'),
+  ('Bachata Schulen in Deutschland: <em class="foil">alle Städte</em>', 'Bachata schools in Germany: <em class="foil">all cities</em>'),
+  ('Alle Städte und Schulen mit Bachata-Kursen in Deutschland, mit Links zu den Städteseiten und Schulprofilen.',
+   'All cities and schools with Bachata classes in Germany, with links to the city pages and school profiles.'),
+  [('check', '<b>Alphabetisch</b>, keine Wertung', '<b>Alphabetical</b>, not a rating'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  idx_sections, idx_faq, sibling_group='topic')
