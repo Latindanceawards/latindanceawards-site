@@ -28,6 +28,9 @@ PAGES = {  # page: (main keyword, target word count from competitor research or 
     'bachata-kempten.html': ('Bachata Kempten', 800),
     'bachata-kassel.html': ('Bachata Kassel', 800),
     'bachata-hannover.html': ('Bachata Hannover', 800),
+    'bachata-braunschweig.html': ('Bachata Braunschweig', 800),
+    'bachata-heidelberg.html': ('Bachata Heidelberg', 800),
+    'bachata-dortmund.html': ('Bachata Dortmund', 800),
     'bachata-oldenburg.html': ('Bachata Oldenburg', 800),
     'bachata-essen.html': ('Bachata Essen', 800),
     'bachata-karlsruhe.html': ('Bachata Karlsruhe', 800),
@@ -101,4 +104,3 @@ for page, (kw, target) in PAGES.items():
     for name, w, ok, info in checks:
         print(f'  {"OK  " if ok else "FAIL"} {name:<36} {info}')
 print('\nALL PAGES >= 90' if total_ok else '\nSOME PAGES BELOW 90')
-
