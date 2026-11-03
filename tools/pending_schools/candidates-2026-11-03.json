@@ -1,0 +1,693 @@
+{
+ "fr": [
+  {
+   "name": "Cage Projets",
+   "city_key": "paris",
+   "city_name": "Paris",
+   "url": "https://www.helloasso.com/associations/cage-projets/evenements/bachata-2026-2027",
+   "evidence": "Listing \"Bachata 2026 - 2027\": \"un accès à un cours de Bachata chez Cage Projets\", Tuesdays (HelloAsso portal)"
+  },
+  {
+   "name": "Latino Caminando",
+   "city_key": "mennecy",
+   "city_name": "Mennecy",
+   "url": "https://www.helloasso.com/associations/latino-caminando",
+   "evidence": "Offers \"KIZOMBA, BACHATA, SALSA CUBAINE\", classes mainly in Mennecy (91540) (HelloAsso)"
+  },
+  {
+   "name": "La Candela",
+   "city_key": "portet-sur-garonne",
+   "city_name": "Portet-sur-Garonne",
+   "url": "https://www.helloasso.com/associations/la-candela",
+   "evidence": "\"La Candela vous propose à Portet sur Garonne (poche de Toulouse) des Cours de Bachata Sensual\" (HelloAsso)"
+  },
+  {
+   "name": "Y'A'K'DANSE'C",
+   "city_key": "niort",
+   "city_name": "Niort",
+   "url": "https://www.helloasso.com/associations/y-a-k-danse-c",
+   "evidence": "\"Bachata (2 niveaux) le mercredi à partir de 19h\" (HelloAsso)"
+  },
+  {
+   "name": "MJC Le Rond-Point",
+   "city_key": "l-aigle",
+   "city_name": "L'Aigle",
+   "url": "https://www.helloasso.com/associations/mjc-le-rond-point/adhesions/duo-salsa-et-bachata-2026-2027",
+   "evidence": "\"un cours de Salsa et un cours de Bachata par semaine\" (MJC le Rond-Point de l'Aigle, HelloAsso)"
+  },
+  {
+   "name": "Corazon Bachata Studio",
+   "city_key": "bordeaux",
+   "city_name": "Bordeaux",
+   "url": "https://www.helloasso.com/associations/corazon-bachata-studio",
+   "evidence": "Present in Bordeaux, Angoulême and Saintes; all-level classes: Dominican, modern, sensual bachata (HelloAsso)"
+  },
+  {
+   "name": "Salsa Bressuire",
+   "city_key": "bressuire",
+   "city_name": "Bressuire",
+   "url": "https://www.helloasso.com/associations/salsa-bressuire",
+   "evidence": "\"L'association propose des cours hebdomadaires de Kizomba, Semba, Salsa Cubaine, Salsa Portoricaine, Konpa et Bachata\" (HelloAsso)"
+  },
+  {
+   "name": "Julian Teran Production",
+   "city_key": "conflans-sainte-honorine",
+   "city_name": "Conflans-Sainte-Honorine",
+   "url": "https://www.helloasso.com/associations/julian-teran-production",
+   "evidence": "Course \"SALSA_BACHATA_KIZOMBA_SEMBA Saison 2026/2027\"; address Conflans Sainte Honorine 78700 (HelloAsso)"
+  },
+  {
+   "name": "Los Diablitos",
+   "city_key": "thoiry",
+   "city_name": "Thoiry",
+   "url": "https://www.helloasso.com/associations/los-diablitos",
+   "evidence": "\"cours de danses latines sur le secteur de Thoiry\"; \"Les danses proposées sont les fameuses SBK: Salsa, Bachata et Kizomba\" (HelloAsso)"
+  },
+  {
+   "name": "Studio Danse Colmar",
+   "city_key": "colmar",
+   "city_name": "Colmar",
+   "url": "https://studio-danse.fr/horaires-tarifs/",
+   "evidence": "Own schedule page lists \"Bachata, Salsa\" beginner classes; address 1 route de Strasbourg 68000 Colmar"
+  },
+  {
+   "name": "MJC Colmar",
+   "city_key": "colmar",
+   "city_name": "Colmar",
+   "url": "https://www.salsavida.com/fr/event/france/colmar/puerto-rican-salsa-and-bachata-classes-at-mjc-colmar/",
+   "evidence": "SalsaVida listing \"Cours de Salsa et Bachata Portoricains à MJC Colmar\": bachata Mondays (advanced) and Tuesdays (beginners)"
+  },
+  {
+   "name": "Yog Touch Nancy",
+   "city_key": "nancy",
+   "city_name": "Nancy",
+   "url": "https://www.yog-touch.fr/salsa-bachata/",
+   "evidence": "\"Nabil et Camille proposent des cours de Salsa et Bachata ouverts à tous, débutants compris\" (Nancy)"
+  },
+  {
+   "name": "École de danse Nadège Cayron",
+   "city_key": "rodez",
+   "city_name": "Rodez",
+   "url": "https://www.salsavida.com/fr/event/france/rodez/salsa-and-bachata-classes-at-ecole-nadege-cayron/",
+   "evidence": "SalsaVida listing: \"L'École de danse Nadège Cayron à Rodez propose des cours hebdomadaires de salsa et de bachata\""
+  },
+  {
+   "name": "Soul Dance Studio Toulouse",
+   "city_key": "toulouse",
+   "city_name": "Toulouse",
+   "url": "https://www.salsavida.com/fr/event/france/toulouse/soul-dance-studio-toulouse-weekly-salsa-bachata-classes/",
+   "evidence": "SalsaVida listing: school \"offre 4 niveaux de salsa et 3 niveaux de bachata\", Rue des Amidonniers, Toulouse"
+  },
+  {
+   "name": "Coeur 2 Danse",
+   "city_key": "montauban",
+   "city_name": "Montauban",
+   "url": "https://www.tourisme-tarnetgaronne.fr/en/offers/sbk-evening-bachata-classes-montauban-en-5997446",
+   "evidence": "Tourist-office listing \"BACHATA & SBK EVENING with Eric & Annabelle\" (Coeur 2 Danse), Thursday beginner and intermediate bachata classes"
+  },
+  {
+   "name": "Asso Boom Latino",
+   "city_key": "ploeren",
+   "city_name": "Ploeren",
+   "url": "https://www.helloasso.com/associations/asso-boom-latino/evenements/cours-de-danses-latines",
+   "evidence": "Event \"Cours de Danses Latines\" in Ploeren (56880): \"Bachata débutant → 20h30\" on Wednesdays"
+  },
+  {
+   "name": "Vibrations Corporelles et Culturelles",
+   "city_key": "limoges",
+   "city_name": "Limoges",
+   "url": "https://www.helloasso.com/associations/vibrations-corporelles-et-culturelles",
+   "evidence": "\"Nous organisons sur Limoges et ses environs des cours, des stages et des pratiques de Kizomba, UrbanKiz, Bachata et Salsa\""
+  },
+  {
+   "name": "Instant Danse",
+   "city_key": "aubagne",
+   "city_name": "Aubagne",
+   "url": "https://www.helloasso.com/associations/instant-danse",
+   "evidence": "\"Cours de Salsa, Bachata et Kizomba\"; address Avenue de Jouques, 13400 Aubagne (HelloAsso)"
+  },
+  {
+   "name": "Elegancia Dance Studio",
+   "city_key": "la-ciotat",
+   "city_name": "La Ciotat",
+   "url": "https://www.helloasso.com/associations/elegancia-dance-studio",
+   "evidence": "\"Cours intensifs de bachata et salsa\"; 2026/2027 bachata stages in La Ciotat (HelloAsso)"
+  },
+  {
+   "name": "LatinDance Academie",
+   "city_key": "pessac",
+   "city_name": "Pessac",
+   "url": "https://latindanceacademie.com",
+   "evidence": "\"LatinDance Academie propose des cours débutant et intermédiaire\" bachata; Bordeaux, Pessac, Mérignac, Talence area"
+  }
+ ],
+ "es": [
+  {
+   "name": "Al Son Cubero",
+   "city_key": "algeciras",
+   "city_name": "Algeciras",
+   "url": "https://www.salsavida.com/event/spain/andalucia/cadiz/algeciras/introduction-to-salsa-bachata-classes-at-al-son-cubero/",
+   "evidence": "Salsavida listing: \"Introduction to Bachata at 6:00 PM\""
+  },
+  {
+   "name": "Sony Lus Dance Studio",
+   "city_key": "cadiz",
+   "city_name": "Cádiz",
+   "url": "https://www.salsavida.com/es/event/spain/andalucia/cadiz/cadiz-city/weekly-salsa-bachata-classes-at-sony-lus-dance-studio/",
+   "evidence": "Salsavida listing: \"clases de salsa y bachata para todos los niveles\""
+  },
+  {
+   "name": "Shangó Dance Studio",
+   "city_key": "cadiz",
+   "city_name": "Cádiz",
+   "url": "https://www.salsavida.com/es/event/spain/andalucia/cadiz/cadiz-city/weekly-salsa-bachata-classes-at-shango-dance-studio/",
+   "evidence": "Salsavida listing: \"Clases de salsa y bachata\""
+  },
+  {
+   "name": "Al Son de Grana",
+   "city_key": "granada",
+   "city_name": "Granada",
+   "url": "https://www.salsavida.com/event/spain/andalucia/granada/salsa-and-bachata-classes-at-al-son-de-grana/",
+   "evidence": "Salsavida listing: \"offers weekly salsa and bachata classes in Granada\""
+  },
+  {
+   "name": "La Negra Salsa Ibiza",
+   "city_key": "ibiza",
+   "city_name": "Ibiza",
+   "url": "https://www.lanegrasalsa.com/es/clases-de-baile-en-ibiza",
+   "evidence": "Own site: \"Aprende a bailar Salsa y Bachata en IBIZA de la mano de Evelyn La Negra.\""
+  },
+  {
+   "name": "Magie Dance School",
+   "city_key": "lugo",
+   "city_name": "Lugo",
+   "url": "https://magiedance.com/",
+   "evidence": "Own site class menu lists \"Lady Style Salsa Bachata\" and \"Rueda Bachata\"; Salsavida: \"estilos latinos populares como salsa y bachata\""
+  },
+  {
+   "name": "Kumba SBK",
+   "city_key": "ourense",
+   "city_name": "Ourense",
+   "url": "https://www.salsavida.com/es/event/spain/galicia/ourense/salsa-casinobachata-kizomba-classes-at-kumba-sbk/",
+   "evidence": "Salsavida listing: \"clases regulares de baile latino centradas en Salsa Casino, Bachata y Kizomba\""
+  },
+  {
+   "name": "Magic Dance Academy",
+   "city_key": "valencia",
+   "city_name": "Valencia",
+   "url": "https://www.magicdance.es/horario-magic-dance/",
+   "evidence": "Own site: \"Salsa, bachata, flamenco, danza, urbano...\"; Salsavida: \"ofrece clases de Salsa y Bachata durante toda la semana\""
+  },
+  {
+   "name": "Academia Virginia Bernabeu",
+   "city_key": "zaragoza",
+   "city_name": "Zaragoza",
+   "url": "https://www.salsavida.com/es/event/spain/aragon/zaragoza/virginia-bernabeu-salsa-bachata-classes/",
+   "evidence": "Salsavida listing: \"Las clases de bachata también se ofrecen en el nivel intermedio.\""
+  },
+  {
+   "name": "Baile Zaragoza",
+   "city_key": "zaragoza",
+   "city_name": "Zaragoza",
+   "url": "https://www.bailezaragoza.com/clases-de-bachata-en-zaragoza-bachata-sensual-parejas-y-estilo-chicas/",
+   "evidence": "Salsavida listing: \"Baile Zaragoza ofrece clases de Bachata en Zaragoza\"; site page URL titled clases de bachata en Zaragoza"
+  },
+  {
+   "name": "Life Dance Studio",
+   "city_key": "albacete",
+   "city_name": "Albacete",
+   "url": "https://www.salsavida.com/es/event/spain/castilla-la-mancha/albacete/salsa-classes-at-life-dance-studio/",
+   "evidence": "Salsavida listing: \"Las clases de bachata se llevan a cabo junto con el programa de salsa\""
+  },
+  {
+   "name": "Contradanza Atarfe",
+   "city_key": "atarfe",
+   "city_name": "Atarfe",
+   "url": "https://www.goandance.com/en/school/2582/contradanza-atarfe",
+   "evidence": "go&dance listing: \"Bachata: Let yourself be carried away by the sensuality and connection of this dance.\""
+  },
+  {
+   "name": "Marcos&Candela BS",
+   "city_key": "granada",
+   "city_name": "Granada",
+   "url": "https://www.goandance.com/en/school/2594/marcos-candela-bs",
+   "evidence": "go&dance listing: \"you will learn the official Bachata Sensual technique\""
+  },
+  {
+   "name": "Muxasalsa Jerez",
+   "city_key": "jerez",
+   "city_name": "Jerez de la Frontera",
+   "url": "https://www.goandance.com/en/school/999/muxasalsa-jerez",
+   "evidence": "go&dance listing: \"Learn to dance Bachata Sensual, Salsa en Línea and Salsa Cubana at Muxasalsa Jerez\""
+  },
+  {
+   "name": "Nueva Isla Latina Escuela de Baile",
+   "city_key": "san-fernando",
+   "city_name": "San Fernando",
+   "url": "https://www.goandance.com/en/school/651/nueva-isla-latina-escuela-de-baile",
+   "evidence": "go&dance listing: \"We offer salsa classes, bachata courses and also Kizomba courses\""
+  },
+  {
+   "name": "Doble A Dance",
+   "city_key": "huelva",
+   "city_name": "Huelva",
+   "url": "https://www.goandance.com/en/school/2122/doble-a-dance-adrian-adriana",
+   "evidence": "go&dance listing: \"Classes of Salsa, Bachata, Kizomba, Afrodance, Zumba and more.\""
+  },
+  {
+   "name": "Carmen Romero Academia de Baile (Murcia)",
+   "city_key": "murcia",
+   "city_name": "Murcia",
+   "url": "https://www.goandance.com/en/school/1712/carmen-romero-academia-de-baile-murcia",
+   "evidence": "go&dance listing: classes in \"salsa and bachata\""
+  },
+  {
+   "name": "Carmen Romero Academia de Baile (Alcantarilla)",
+   "city_key": "alcantarilla",
+   "city_name": "Alcantarilla",
+   "url": "https://www.goandance.com/en/school/1713/carmen-romero-academia-de-baile-alcantarilla",
+   "evidence": "go&dance listing: \"salsa and bachata\""
+  },
+  {
+   "name": "World Dance Center",
+   "city_key": "a-coruna",
+   "city_name": "A Coruña",
+   "url": "https://www.goandance.com/en/school/975/world-dance-center",
+   "evidence": "go&dance listing: \"School specialized in Latin rhythms, Salsa, merengue, bachata, kizomba\""
+  },
+  {
+   "name": "Escuela latina de baile CubaSon",
+   "city_key": "neda",
+   "city_name": "Neda",
+   "url": "https://www.goandance.com/en/school/1688/escuela-latina-de-baile-cubason",
+   "evidence": "go&dance listing: \"specialized purely in Latin dance (Salsa, Bachata, Merengue and Cha Cha Chá)\""
+  },
+  {
+   "name": "Academia de baile Qué te mueve",
+   "city_key": "alicante",
+   "city_name": "Alicante",
+   "url": "https://www.goandance.com/en/school/1746/academia-de-baile-que-te-mueve",
+   "evidence": "go&dance listing: \"Cuban salsa, sensual bachata, and kizomba for all ages\""
+  },
+  {
+   "name": "¡Deberías Estar Bailando!",
+   "city_key": "altea",
+   "city_name": "Altea",
+   "url": "https://www.goandance.com/en/school/1250/deberias-estar-bailando",
+   "evidence": "go&dance listing: \"Learn to dance Salsa, Merengue, Bachata and Cha Cha Cha Cha\""
+  },
+  {
+   "name": "A Tiempo Escuela de Baile",
+   "city_key": "cordoba",
+   "city_name": "Córdoba",
+   "url": "https://www.goandance.com/en/school/2512/a-tiempo-escuela-de-baile",
+   "evidence": "go&dance listing: \"guide you from beginner to advanced levels in bachata, salsa, and kizomba\""
+  },
+  {
+   "name": "Almería Baila",
+   "city_key": "almeria",
+   "city_name": "Almería",
+   "url": "https://www.goandance.com/en/school/131/almeria-baila",
+   "evidence": "go&dance listing: \"classes and courses are given in Merengue, Salsa, Bachata and tango\""
+  },
+  {
+   "name": "Academia Ritmo Latino Castellón",
+   "city_key": "castellon",
+   "city_name": "Castellón de la Plana",
+   "url": "https://www.goandance.com/en/school/2261/academia-ritmo-latino",
+   "evidence": "go&dance listing: \"we offer salsa and bachata classes in Castellón de la Plana every evening\""
+  },
+  {
+   "name": "IgoryRocio",
+   "city_key": "santander",
+   "city_name": "Santander",
+   "url": "https://www.goandance.com/en/school/1413/igoryrocio",
+   "evidence": "go&dance listing: \"we specialize in sensual bachata, we teach everything related to Latin rhythms\""
+  },
+  {
+   "name": "M&D Escuela de Baile",
+   "city_key": "arrecife",
+   "city_name": "Arrecife",
+   "url": "https://www.goandance.com/en/schools/1554-m-d-escuela-de-baile",
+   "evidence": "go&dance listing: \"salsa, bachata and urban kizomba classes are taught\""
+  },
+  {
+   "name": "DANZA10",
+   "city_key": "a-coruna",
+   "city_name": "A Coruña",
+   "url": "https://www.goandance.com/en/schools/1547-danza10",
+   "evidence": "go&dance listing: \"Latin dances (salsa, bachata, cha cha cha cha, mambo...)\""
+  },
+  {
+   "name": "Sundance Academia de Baile",
+   "city_key": "talavera",
+   "city_name": "Talavera de la Reina",
+   "url": "https://www.goandance.com/en/school/1553/sundance-academia-de-baile",
+   "evidence": "go&dance listing: \"Take salsa, bachata, merengue, cha cha cha cha, ballroom dancing\""
+  },
+  {
+   "name": "Udance Academy",
+   "city_key": "villarrobledo",
+   "city_name": "Villarrobledo",
+   "url": "https://www.goandance.com/en/school/1740/udance-academy",
+   "evidence": "go&dance listing (albacete bachata page): \"training instructors in salsa, bachata, kizomba, and ballroom dancing\""
+  },
+  {
+   "name": "Escuela de Danza y Pilates Rocío",
+   "city_key": "ubeda",
+   "city_name": "Úbeda",
+   "url": "https://www.goandance.com/en/school/1618/escuela-de-danza-y-pilates-rocio",
+   "evidence": "go&dance listing (jaen bachata page): \"From classical and Spanish dance to salsa, bachata, and Pilates\""
+  }
+ ],
+ "it": [
+  {
+   "name": "Vinci Dance Academy Bonola",
+   "city_key": "milano",
+   "city_name": "Milano",
+   "url": "https://www.salsavida.com/it/event/italy/milan/weekly-classes-at-vinci-dance-academy-bonola/",
+   "evidence": "offre corsi settimanali di salsa e bachata"
+  },
+  {
+   "name": "ABC Studios Milano",
+   "city_key": "milano",
+   "city_name": "Milano",
+   "url": "https://www.salsavida.com/it/event/italy/milan/weekly-salsa-bachata-classes-at-abc-studios-milano/",
+   "evidence": "sessioni specializzate come Lady Salsa, Bachata Sensual e Latin Heels"
+  },
+  {
+   "name": "Bandits Dance Studio Milano",
+   "city_key": "milano",
+   "city_name": "Milano",
+   "url": "https://www.salsavida.com/it/event/italy/milan/salsa-bachata-classes-at-bandits-dance-studio-milano/",
+   "evidence": "corsi settimanali di salsa e bachata per tutti i livelli"
+  },
+  {
+   "name": "Dance 2Be Milano",
+   "city_key": "milano",
+   "city_name": "Milano",
+   "url": "https://www.salsavida.com/it/event/italy/milan/salsa-bachata-classes-at-dance-2be-milan/",
+   "evidence": "Lezioni di salsa e bachata; Bachata Intermedio, Bachata Fusion"
+  },
+  {
+   "name": "Studio Gem Milano",
+   "city_key": "milano",
+   "city_name": "Milano",
+   "url": "https://www.salsavida.com/it/event/italy/milan/weekly-salsa-bachata-classes-at-studio-gem-milano/",
+   "evidence": "corsi settimanali di salsa e bachata"
+  },
+  {
+   "name": "B.Music School",
+   "city_key": "bergamo",
+   "city_name": "Bergamo",
+   "url": "https://www.salsavida.com/it/event/italy/bergamo/salsa-and-bachata-classes-at-b-music-school/",
+   "evidence": "La B.Music School tiene corsi di salsa e bachata con Andrea e Stefania ogni lunedì sera"
+  },
+  {
+   "name": "Baila Conmigo Bergamo",
+   "city_key": "bergamo",
+   "city_name": "Bergamo",
+   "url": "https://www.salsavida.com/it/event/italy/bergamo/salsa-and-bachata-classes-at-baila-conmigo-bergamo/",
+   "evidence": "Lezioni di salsa e bachata"
+  },
+  {
+   "name": "Scuola di Danza On-Stage",
+   "city_key": "brescia",
+   "city_name": "Brescia",
+   "url": "https://www.salsavida.com/it/event/italy/brescia/on-stage-latino-americano-salsa-and-bachata-course/",
+   "evidence": "Corso di Salsa e Bachata Latino Americano On-Stage"
+  },
+  {
+   "name": "Brixia Dance School",
+   "city_key": "brescia",
+   "city_name": "Brescia",
+   "url": "https://www.salsavida.com/it/event/italy/brescia/brixia-dance-school-salsa-and-bachata-course/",
+   "evidence": "offre un corso settimanale di Salsa e Bachata di livello base"
+  },
+  {
+   "name": "LyF Lorenzo y Federica",
+   "city_key": "rimini",
+   "city_name": "Rimini",
+   "url": "https://www.salsavida.com/it/event/italy/rimini/salsa-and-bachata-classes-at-lyf-in-rimini/",
+   "evidence": "La Bachata Sensual richiede almeno una stagione precedente di salsa e bachata di base"
+  },
+  {
+   "name": "Max Latino Dance School",
+   "city_key": "voghera",
+   "city_name": "Voghera",
+   "url": "https://www.goandance.com/en/school/2259/max-latino",
+   "evidence": "Max Latino Dance School, home of the Futura Gym, where we offer salsa, bachata, kizomba, rueda de casino"
+  },
+  {
+   "name": "Accademia Clave Na Ma",
+   "city_key": "cosenza",
+   "city_name": "Cosenza",
+   "url": "https://www.salsavida.com/it/event/italy/cosenza/salsa-bachata-lessons-at-clave-na-ma-academy/",
+   "evidence": "Lezioni di Salsa & Bachata presso l'Accademia Clave Na Ma"
+  },
+  {
+   "name": "Baile Vital",
+   "city_key": "venezia",
+   "city_name": "Venezia",
+   "url": "https://www.salsavida.com/it/event/italy/venice/baile-vital-salsa-and-bachata-classes/",
+   "evidence": "I corsi di Bachata si tengono il martedì e il mercoledì"
+  },
+  {
+   "name": "ASSOKÈRE",
+   "city_key": "venezia",
+   "city_name": "Venezia",
+   "url": "https://www.salsavida.com/it/event/italy/venice/assokere-cuban-salsa-and-bachata-classes-2/",
+   "evidence": "Le sessioni di Bachata supportano i ballerini nello sviluppo della tecnica, del ritmo e della connessione in coppia"
+  },
+  {
+   "name": "Agua Salsa Venezia",
+   "city_key": "venezia",
+   "city_name": "Venezia",
+   "url": "https://www.salsavida.com/it/event/italy/venice/agua-salsa-venezia-weekly-classes/",
+   "evidence": "Bachata Base, Bachata Intermedio"
+  },
+  {
+   "name": "Arthur Murray Torino",
+   "city_key": "torino",
+   "city_name": "Torino",
+   "url": "https://www.salsavida.com/it/event/italy/turin/salsa-latin-dance-program-at-arthur-murray-torino/",
+   "evidence": "Lezioni di salsa e bachata"
+  },
+  {
+   "name": "Scuola di Danza Ivan e Genny",
+   "city_key": "torino",
+   "city_name": "Torino",
+   "url": "https://www.salsavida.com/it/event/italy/turin/salsa-bachata-ivan-and-genny-dance-school/",
+   "evidence": "L'insegnamento della bachata copre gli stili Sensual, Fusion e Dominicano"
+  },
+  {
+   "name": "Latin Lab",
+   "city_key": "firenze",
+   "city_name": "Firenze",
+   "url": "https://www.salsavida.com/it/event/italy/florence/salsa-bachata-weekly-courses-at-latin-lab/",
+   "evidence": "bachata tradizionale"
+  },
+  {
+   "name": "Danza Lerose",
+   "city_key": "castelfranco-emilia",
+   "city_name": "Castelfranco Emilia",
+   "url": "https://www.salsavida.com/it/event/italy/castelfranco-emilia/salsa-and-bachata-classes-at-danza-lerose/",
+   "evidence": "Il corso del martedì copre i primi passi nella salsa e bachata"
+  },
+  {
+   "name": "Polisportiva Madonnina",
+   "city_key": "modena",
+   "city_name": "Modena",
+   "url": "https://www.salsavida.com/it/event/italy/modena/corso-caraibici-salsa-cubana-bachata-polisportiva-madonnina/",
+   "evidence": "Corso Caraibici Salsa Cubana e Bachata"
+  },
+  {
+   "name": "Team Cuba",
+   "city_key": "bologna",
+   "city_name": "Bologna",
+   "url": "https://www.salsavida.com/it/event/italy/bologna/team-cuba-salsa-bachata-courses/",
+   "evidence": "corsi vivaci di salsa e bachata tutto l'anno per tutti i livelli"
+  },
+  {
+   "name": "Salsa Fantasy",
+   "city_key": "roma",
+   "city_name": "Roma",
+   "url": "https://www.salsavida.com/it/event/italy/rome/salsa-urban-dance-courses-at-salsa-fantasy/",
+   "evidence": "corsi settimanali di salsa cubana, bachata e rumba pasitos"
+  },
+  {
+   "name": "Salsa Dura Napoli",
+   "city_key": "napoli",
+   "city_name": "Napoli",
+   "url": "https://www.salsavida.com/it/event/italy/naples-italy/salsa-bachata-classes-at-salsa-dura-napoli/",
+   "evidence": "Lezioni di salsa e bachata"
+  },
+  {
+   "name": "Muevete Dance Academy",
+   "city_key": "ascoli-piceno",
+   "city_name": "Ascoli Piceno",
+   "url": "https://www.salsavida.com/it/event/italy/ascoli-piceno/salsa-and-bachata-classes-at-muevete-dance-academy/",
+   "evidence": "offre corsi di bachata per adulti il lunedì"
+  },
+  {
+   "name": "Boricua Salsa Style",
+   "city_key": "ancona",
+   "city_name": "Ancona",
+   "url": "https://www.salsavida.com/it/event/italy/ancona/boricua-salsa-style-dance-classes/",
+   "evidence": "focalizzandosi sulla salsa portoricana e sulla bachata"
+  }
+ ],
+ "pt": [
+  {
+   "name": "UDance School",
+   "city_key": "lisboa",
+   "city_name": "Lisboa",
+   "url": "https://www.udance.pt/estilos-dancas-sociais",
+   "evidence": "Page has a Bachata section: \"Conhece a Bachata e experimenta uma aula na nova escola de dança de Lisboa\""
+  },
+  {
+   "name": "Aleks & Dasha (Furiosa Dance)",
+   "city_key": "porto",
+   "city_name": "Porto",
+   "url": "https://aleksydasha.com/en#aulas",
+   "evidence": "Heading: \"Bachata, Salsa & Kizomba Classes in Porto\"; Salsa Vida listing: \"Bachata Moderna e Sensual\" at Furiosa Dance"
+  },
+  {
+   "name": "Setubailas",
+   "city_key": "setubal",
+   "city_name": "Setúbal",
+   "url": "https://www.salsavida.com/pt/event/portugal/setubal/new-salsa-bachata-and-kizomba-class-at-setubailas/",
+   "evidence": "Directory listing: \"O Setubailas lança uma nova aula semanal de danças latinas dedicada à salsa, à bachata e à kizomba\""
+  }
+ ],
+ "bg": [
+  {
+   "name": "Latin Force Dance Studio",
+   "city_key": "sofia",
+   "city_name": "Sofia",
+   "url": "https://grafik.latinforce.bg/",
+   "evidence": "Fetched site lists Бачата as a dance style with 15 groups; bachata groups among new autumn season groups."
+  },
+  {
+   "name": "PaLante Dance Club",
+   "city_key": "sofia",
+   "city_name": "Sofia",
+   "url": "https://www.palante.eu/en/groups/salsa-bachata-beginners-tuesday",
+   "evidence": "\"Every Tuesday and Thursday from 18:20, Salsa on2 & Bachata, Beginners\"; also an advanced Bachata class linked."
+  },
+  {
+   "name": "Pambos Dancing Center",
+   "city_key": "sofia",
+   "city_name": "Sofia",
+   "url": "https://pambosalsa.com/",
+   "evidence": "Site lists \"Нова група по Бачата за начинаещи в София\" and links adult Latin classes to salsa, bachata, kizomba."
+  },
+  {
+   "name": "Paletro Dance Spot",
+   "city_key": "sofia",
+   "city_name": "Sofia",
+   "url": "https://www.salsavida.com/event/bulgaria/sofia/salsa-bachata-classes-at-paletro-dance-spot/",
+   "evidence": "Directory page (SalsaVida): \"Dominican Bachata on Tuesdays and Thursdays with Ramón Brito\"; studio's own timetable page did not render styles."
+  },
+  {
+   "name": "Dance Station Sofia",
+   "city_key": "sofia",
+   "city_name": "Sofia",
+   "url": "https://www.salsavida.com/event/bulgaria/sofia/salsa-bachata-classes-at-dance-station-sofia/",
+   "evidence": "Directory page (SalsaVida): \"Dance Station Bulgaria offers summer salsa and bachata classes every weekday at their Sofia location\"."
+  },
+  {
+   "name": "Salsa Diva",
+   "city_key": "sofia",
+   "city_name": "Sofia",
+   "url": "https://www.salsavida.com/event/bulgaria/sofia/salsa-la-style-bachata-classes-at-salsa-diva/",
+   "evidence": "Directory page (SalsaVida): \"Salsa Diva offers weekly salsa LA style and bachata classes for all levels\"; studio site did not load."
+  },
+  {
+   "name": "Art Center Alejandro",
+   "city_key": "plovdiv",
+   "city_name": "Plovdiv",
+   "url": "https://www.salsavida.com/event/bulgaria/plovdiv/salsa-bachata-classes-at-art-center-alejandro/",
+   "evidence": "Directory page (SalsaVida): \"Art Center Alejandro in Plovdiv offers weekly salsa and bachata classes for adults.\"; studio price page did not mention bachata."
+  }
+ ],
+ "ua": [
+  {
+   "name": "Casa Latina Zaporizhzhia",
+   "city_key": "zaporizhzhia",
+   "city_name": "Zaporizhzhia",
+   "url": "https://www.salsavida.com/event/ukraine/zaporizhzhia/salsa-and-bachata-classes-at-casa-latina-zaporizhzhia/",
+   "evidence": "SalsaVida listing: learn \"salsa, bachata, kizomba and lady style\" (title: Salsa and Bachata Classes at Casa Latina Zaporizhzhia); own site casalatina.com.ua blocked fetch by robots"
+  },
+  {
+   "name": "Salsa Club Odessa",
+   "city_key": "odesa",
+   "city_name": "Odesa",
+   "url": "https://www.salsavida.com/event/ukraine/odesa/salsa-bachata-kizomba-classes-at-salsa-club-odessa/",
+   "evidence": "SalsaVida listing: club \"offers a range of Latin dance classes including salsa, bachata, kizomba, and cha-cha-cha.\" (own site is Instagram only)"
+  },
+  {
+   "name": "Baila con el corazon",
+   "city_key": "odesa",
+   "city_name": "Odesa",
+   "url": "https://top20.ua/ru/od/sport-krasota/shkolyi-tantsev/baila-con-el-corazon-salsa-shkola.html",
+   "evidence": "top20.ua directory page: description lists \"Бачату\" among offerings alongside salsa; no closure notice; no own website listed"
+  },
+  {
+   "name": "Social Dance Club Ternopil",
+   "city_key": "ternopil",
+   "city_name": "Ternopil",
+   "url": "https://www.salsavida.com/event/ukraine/ternopil/salsa-bachata-beginner-classes-at-social-dance-club-ternopil/",
+   "evidence": "SalsaVida listing: \"Salsa & Bachata Beginner Classes\", organizer \"opening a new beginner group for salsa and bachata\""
+  },
+  {
+   "name": "La Vida Dance School",
+   "city_key": "poltava",
+   "city_name": "Poltava",
+   "url": "https://www.salsavida.com/event/ukraine/poltava/bachata-salsa-classes-at-la-vida-dance-school-poltava/",
+   "evidence": "SalsaVida listing: \"La Vida Dance School in Poltava offers bachata and salsa classes for all levels.\""
+  },
+  {
+   "name": "Me Gusta Dance Studio",
+   "city_key": "chernivtsi",
+   "city_name": "Chernivtsi",
+   "url": "https://megustacv.com/",
+   "evidence": "Own site fetched: \"Ми спеціалізуємося на бачаті та сальсі.\" Schedule lists a bachata group; private partner and ladies' style bachata"
+  },
+  {
+   "name": "Latin Dance Studio ValenSia",
+   "city_key": "zhytomyr",
+   "city_name": "Zhytomyr",
+   "url": "https://www.salsavida.com/event/ukraine/zhytomyr/salsa-and-bachata-classes-at-latin-dance-studio-valensia-zhytomyr/",
+   "evidence": "SalsaVida listing: \"offers engaging salsa and bachata classes for both children and adults.\""
+  },
+  {
+   "name": "Latin Motion",
+   "city_key": "kharkiv",
+   "city_name": "Kharkiv",
+   "url": "https://www.salsavida.com/event/ukraine/kharkiv/salsa-and-bachata-classes-at-latin-motion-kharkiv/",
+   "evidence": "SalsaVida listing: \"The studio offers group classes in salsa, bachata, and reggaeton\"; own site latinmotion.com.ua blocked fetch by robots"
+  },
+  {
+   "name": "Flame Dance Studio",
+   "city_key": "cherkasy",
+   "city_name": "Cherkasy",
+   "url": "https://www.salsavida.com/event/ukraine/cherkasy/latin-dance-at-flame-dance-studio/",
+   "evidence": "SalsaVida listing: studio \"offers an empowering and elegant class for women who want to refine their bachata movement\"; category Class Bachata"
+  },
+  {
+   "name": "Salsa Club Lutsk",
+   "city_key": "lutsk",
+   "city_name": "Lutsk",
+   "url": "https://www.salsavida.com/event/ukraine/lutsk/salsa-bachata-classes-and-latin-parties-at-salsa-club-lutsk/",
+   "evidence": "SalsaVida listing: \"Salsa Club Lutsk offers weekly Salsa and Bachata classes and lively Latin parties in the heart of Lutsk.\""
+  },
+  {
+   "name": "DePo Dance Family",
+   "city_key": "kyiv",
+   "city_name": "Kyiv",
+   "url": "https://www.salsavida.com/event/ukraine/kyiv/salsa-classes-at-depo-dance-family-kyiv/",
+   "evidence": "SalsaVida listing: studio offers \"dedicated body movement and bachata sessions.\""
+  }
+ ]
+}
