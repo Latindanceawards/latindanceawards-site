@@ -52,49 +52,49 @@ def de_rows():
     return out
 
 def pl_rows():
-    return [dict(name=s[0], cc='pl', city=P.CITIES[s[1]][0], r=s[2], v=s[3], pts=PL_FULL[s[0]], href=f'/pl/bachata-{s[1]}.html') for s in P.SCHOOLS]
+    return [dict(name=s[0], cc='pl', city=P.CITIES[s[1]][0], r=s[2], v=s[3], un=(s[2] is None), pts=PL_FULL[s[0]], href=f'/pl/bachata-{s[1]}.html') for s in P.SCHOOLS]
 
 def es_rows():
-    return [dict(name=s[0], cc='es', city=SP.CITIES[s[1]][0], r=s[2], v=s[3], pts=ES_FULL[s[0]], href=f'/es/bachata-{s[1]}.html') for s in SP.SCHOOLS]
+    return [dict(name=s[0], cc='es', city=SP.CITIES[s[1]][0], r=s[2], v=s[3], un=(s[2] is None), pts=ES_FULL[s[0]], href=f'/es/bachata-{s[1]}.html') for s in SP.SCHOOLS]
 
 def it_rows():
-    return [dict(name=s[0], cc='it', city=IT.CITIES[s[1]][0], r=s[2], v=s[3], pts=IT_FULL[s[0]], href=f'/it/bachata-{s[1]}.html') for s in IT.SCHOOLS]
+    return [dict(name=s[0], cc='it', city=IT.CITIES[s[1]][0], r=s[2], v=s[3], un=(s[2] is None), pts=IT_FULL[s[0]], href=f'/it/bachata-{s[1]}.html') for s in IT.SCHOOLS]
 
 def pt_rows():
-    return [dict(name=s[0], cc='pt', city=PT.CITIES[s[1]][0], r=s[2], v=s[3], pts=PT_FULL[s[0]], href=f'/pt/bachata-{s[1]}.html') for s in PT.SCHOOLS]
+    return [dict(name=s[0], cc='pt', city=PT.CITIES[s[1]][0], r=s[2], v=s[3], un=(s[2] is None), pts=PT_FULL[s[0]], href=f'/pt/bachata-{s[1]}.html') for s in PT.SCHOOLS]
 
 def fr_rows():
-    return [dict(name=s[0], cc='fr', city=FR.CITIES[s[1]][0], r=s[2], v=s[3], pts=FR_FULL[s[0]], href=f'/fr/bachata-{s[1]}.html') for s in FR.SCHOOLS]
+    return [dict(name=s[0], cc='fr', city=FR.CITIES[s[1]][0], r=s[2], v=s[3], un=(s[2] is None), pts=FR_FULL[s[0]], href=f'/fr/bachata-{s[1]}.html') for s in FR.SCHOOLS]
 
 def nl_rows():
-    return [dict(name=s[0], cc='nl', city=NL.CITIES[s[1]][0], r=s[2], v=s[3], pts=NL_FULL[s[0]], href=f'/nl/bachata-{s[1]}.html') for s in NL.SCHOOLS]
+    return [dict(name=s[0], cc='nl', city=NL.CITIES[s[1]][0], r=s[2], v=s[3], un=(s[2] is None), pts=NL_FULL[s[0]], href=f'/nl/bachata-{s[1]}.html') for s in NL.SCHOOLS]
 
 def uk_rows():
-    return [dict(name=s[0], cc='uk', city=UK.CITIES[s[1]][0], r=s[2], v=s[3], pts=UK_FULL[s[0]], href=f'/uk/bachata-{s[1]}.html') for s in UK.SCHOOLS]
+    return [dict(name=s[0], cc='uk', city=UK.CITIES[s[1]][0], r=s[2], v=s[3], un=(s[2] is None), pts=UK_FULL[s[0]], href=f'/uk/bachata-{s[1]}.html') for s in UK.SCHOOLS]
 
 def be_rows():
-    return [dict(name=s[0], cc='be', city=BEX.CITIES[s[1]][0], r=s[2], v=s[3], pts=BE_FULL[s[0]], href=f'/be/bachata-{s[1]}.html') for s in BEX.SCHOOLS]
+    return [dict(name=s[0], cc='be', city=BEX.CITIES[s[1]][0], r=s[2], v=s[3], un=(s[2] is None), pts=BE_FULL[s[0]], href=f'/be/bachata-{s[1]}.html') for s in BEX.SCHOOLS]
 
 def ie_rows():
-    return [dict(name=s[0], cc='ie', city=IEX.CITIES[s[1]][0], r=s[2], v=s[3], pts=IE_FULL[s[0]], href=f'/ie/bachata-{s[1]}.html') for s in IEX.SCHOOLS]
+    return [dict(name=s[0], cc='ie', city=IEX.CITIES[s[1]][0], r=s[2], v=s[3], un=(s[2] is None), pts=IE_FULL[s[0]], href=f'/ie/bachata-{s[1]}.html') for s in IEX.SCHOOLS]
 
 def at_rows():
-    return [dict(name=s[0], cc='at', city=ATX.CITIES[s[1]][0], r=s[2], v=s[3], pts=AT_FULL[s[0]], href=f'/at/bachata-{s[1]}.html') for s in ATX.SCHOOLS]
+    return [dict(name=s[0], cc='at', city=ATX.CITIES[s[1]][0], r=s[2], v=s[3], un=(s[2] is None), pts=AT_FULL[s[0]], href=f'/at/bachata-{s[1]}.html') for s in ATX.SCHOOLS]
 
 def ch_rows():
-    return [dict(name=s[0], cc='ch', city=CHX.CITIES[s[1]][0], r=s[2], v=s[3], pts=CH_FULL[s[0]], href=f'/ch/bachata-{s[1]}.html') for s in CHX.SCHOOLS]
+    return [dict(name=s[0], cc='ch', city=CHX.CITIES[s[1]][0], r=s[2], v=s[3], un=(s[2] is None), pts=CH_FULL[s[0]], href=f'/ch/bachata-{s[1]}.html') for s in CHX.SCHOOLS]
 
 def ee_rows():
-    return [dict(name=s[0], cc='ee', city=EEX.CITIES[s[1]][0], r=s[2], v=s[3], pts=EE_FULL[s[0]], href=f'/ee/bachata-{s[1]}.html') for s in EEX.SCHOOLS]
+    return [dict(name=s[0], cc='ee', city=EEX.CITIES[s[1]][0], r=s[2], v=s[3], un=(s[2] is None), pts=EE_FULL[s[0]], href=f'/ee/bachata-{s[1]}.html') for s in EEX.SCHOOLS]
 
 def nd_rows():
-    return [dict(name=s[0], cc='nd', city=NDX.CITIES[s[1]][0], r=s[2], v=s[3], pts=ND_FULL[s[0]], href=f'/nd/bachata-{s[1]}.html') for s in NDX.SCHOOLS]
+    return [dict(name=s[0], cc='nd', city=NDX.CITIES[s[1]][0], r=s[2], v=s[3], un=(s[2] is None), pts=ND_FULL[s[0]], href=f'/nd/bachata-{s[1]}.html') for s in NDX.SCHOOLS]
 
 def em_rows():
-    return [dict(name=s[0], cc='em', city=EMX.CITIES[s[1]][0], r=s[2], v=s[3], pts=EM_FULL[s[0]], href=f'/em/bachata-{s[1]}.html') for s in EMX.SCHOOLS]
+    return [dict(name=s[0], cc='em', city=EMX.CITIES[s[1]][0], r=s[2], v=s[3], un=(s[2] is None), pts=EM_FULL[s[0]], href=f'/em/bachata-{s[1]}.html') for s in EMX.SCHOOLS]
 
 NCTRY = 12 + len(set(EEX.COUNTRY.values())) + len(set(NDX.COUNTRY.values())) + len(set(EMX.COUNTRY.values()))
-ALL = sorted(de_rows() + pl_rows() + es_rows() + it_rows() + pt_rows() + fr_rows() + nl_rows() + uk_rows() + be_rows() + ie_rows() + at_rows() + ch_rows() + ee_rows() + nd_rows() + em_rows(), key=lambda x: (-x['pts'], x['name']))
+ALL = sorted(de_rows() + pl_rows() + es_rows() + it_rows() + pt_rows() + fr_rows() + nl_rows() + uk_rows() + be_rows() + ie_rows() + at_rows() + ch_rows() + ee_rows() + nd_rows() + em_rows(), key=lambda x: (bool(x.get('un')), -x['pts'], x['name']))
 ND = sum(1 for x in ALL if x['cc'] == 'de'); NP = sum(1 for x in ALL if x['cc'] == 'pl'); NS = sum(1 for x in ALL if x['cc'] == 'es'); NI = sum(1 for x in ALL if x['cc'] == 'it'); NPT = sum(1 for x in ALL if x['cc'] == 'pt'); NF = sum(1 for x in ALL if x['cc'] == 'fr'); NN = sum(1 for x in ALL if x['cc'] == 'nl'); NU = sum(1 for x in ALL if x['cc'] == 'uk'); NBE = sum(1 for x in ALL if x['cc'] == 'be'); NIE = sum(1 for x in ALL if x['cc'] == 'ie'); NAT = sum(1 for x in ALL if x['cc'] == 'at'); NCH = sum(1 for x in ALL if x['cc'] == 'ch'); NEE = sum(1 for x in ALL if x['cc'] == 'ee'); NND = sum(1 for x in ALL if x['cc'] == 'nd'); NEM = sum(1 for x in ALL if x['cc'] == 'em')
 NCD = 121; NC = len(P.CITIES); NCS = len(SP.CITIES); NCI = len(IT.CITIES); NCPT = len(PT.CITIES); NCF = len(FR.CITIES); NCN = len(NL.CITIES); NCU = len(UK.CITIES); NCBE = len(BEX.CITIES); NCIE = len(IEX.CITIES); NCAT = len(ATX.CITIES); NCCH = len(CHX.CITIES); NCEE = len(EEX.CITIES); NCND = len(NDX.CITIES); NCEM = len(EMX.CITIES)
 TOPN = 25
@@ -119,8 +119,8 @@ def sec(h2, body, alt=True, sid=''):
 def row(i, x):
     flag = x['cc'].upper()
     hid = ' class="more" hidden' if i > TOPN else ''
-    return (f'<li data-c="{x["cc"]}"{hid}><b>{i}</b><a href="{x["href"]}">{x["name"]}</a>'
-            f'<em>{x["city"]} · {flag}</em><span>' + (f'{f1(x["pts"])} / 100 · {f1(x["r"])} ★ ({x["v"]})' if x['r'] else 'keine Google-Bewertung') + '</span></li>')
+    return (f'<li data-c="{x["cc"]}"{hid}><b>{"–" if x.get("un") else i}</b><a href="{x["href"]}">{x["name"]}</a>'
+            f'<em>{x["city"]} · {flag}</em><span>' + (t('span', 'Endergebnis noch nicht verfügbar', 'Final score not yet available') if x.get('un') else (f'{f1(x["pts"])} / 100 · {f1(x["r"])} ★ ({x["v"]})' if x['r'] else 'keine Google-Bewertung')) + '</span></li>')
 
 def top3(cc):
     xs = [x for x in ALL if x['cc'] == cc][:3]

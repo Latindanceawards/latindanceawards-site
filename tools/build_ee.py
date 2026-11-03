@@ -13,7 +13,7 @@ os.makedirs(os.path.join(ROOT, 'ee'), exist_ok=True)
 
 def f1(x): return f'{x:.1f}'.replace('.', ',')
 def f1en(x): return f'{x:.1f}'
-ranked = sorted(P.SCHOOLS, key=lambda s: (-FULL[s[0]], s[0]))
+ranked = sorted(P.SCHOOLS, key=lambda s: (s[2] is None, -FULL[s[0]], s[0]))
 _TOP = [FULL[ranked[0][0]]]
 def by_city(k): return [s for s in ranked if s[1] == k]
 
@@ -72,7 +72,7 @@ def ee_page(fname, canon, title, desc, title_en, desc_en, main, en, schema, js='
 def school_list(ss, t, start=1):
     lis = []
     for i, s in enumerate(ss, start):
-        lis.append(f'<li><b>{i}</b><a href="{s[4]}" rel="nofollow noopener" target="_blank">{s[0]}</a><span>{f1(FULL[s[0]])} pts · {f1(s[2])} ★ ({s[3]})</span></li>')
+        lis.append(f'<li><b>{"–" if s[2] is None else i}</b><a href="{s[4]}" rel="nofollow noopener" target="_blank">{s[0]}</a><span>' + (t("span", RV.UN["EE"][0], RV.UN["EE"][1]) if s[2] is None else f'{f1(FULL[s[0]])} pts · {f1(s[2])} ★ ({s[3]})') + '</span></li>')
     return '<ol class="top">' + ''.join(lis) + '</ol>'
 
 def hero(t, edition, h1, lede, facts, ctas, seal='badge-bachata-easterneurope-2027.svg', alt='Bachata Awards Eastern Europe 2027 seal'):
@@ -189,7 +189,7 @@ ee_page('ee/index.html', 'ee/', 'The best Bachata schools in Eastern Europe: ran
 for k, (cpl, cen, loc) in P.CITIES.items():
     ss = by_city(k); n = len(ss); t = T('cc' + k[:2])
     ranks = {s[0]: ranked.index(s) + 1 for s in ss}
-    cards = ''.join(f'<article><h3>{s[0]}</h3>{t("p", f"Google rating: {f1(s[2])} ★ ({s[3]} reviews). Rank {ranks[s[0]]} in Eastern Europe.", f"Google rating: {f1en(s[2])} ★ ({s[3]} reviews). Rank {ranks[s[0]]} in Eastern Europe.")}<a href="{s[4]}" rel="nofollow noopener" target="_blank">{t("span", "School website", "School website")} →</a></article>' for s in ss)
+    cards = ''.join(f'<article><h3>{s[0]}</h3>{(t("p", RV.UN["EE"][0], RV.UN["EE"][1]) if s[2] is None else t("p", f"Google rating: {f1(s[2])} ★ ({s[3]} reviews). Rank {ranks[s[0]]} in Eastern Europe.", f"Google rating: {f1en(s[2])} ★ ({s[3]} reviews). Rank {ranks[s[0]]} in Eastern Europe."))}<a href="{s[4]}" rel="nofollow noopener" target="_blank">{t("span", "School website", "School website")} →</a></article>' for s in ss)
     main = hero(t, (f'Bachata {cpl} · 2027', f'Bachata {cen} · 2027'),
       (f'Bachata {cpl}: the best dance schools 2027', f'Bachata {cen}: the best dance schools 2027'),
       (f'Bachata schools {loc}: {n} venues with confirmed classes, with Google ratings and interim ranking points. Results in spring 2027.', f'Bachata schools in {cen}: {n} places with confirmed classes, with Google ratings and interim ranking points. Results in spring 2027.'),
@@ -209,7 +209,7 @@ for k, (cpl, cen, loc) in P.CITIES.items():
    ('<strong>Style:</strong> Dominican, modern and sensual Bachata each have their own character. Check which style the school teaches.', '<strong>Style:</strong> Dominicana, moderna and sensual bachata differ in character. Check which style the school teaches.')]) + '</ul>', alt=True)}
 {sec(t, 3, ("Eastern Europe, Europe and Germany rankings", "Eastern Europe, Europe and Germany rankings"), t("p", 'See the <a href="/ee/">ranking for all of Eastern Europe</a>, the <a href="/">Europe overview</a> or the <a href="/deutschland.html">Germany ranking</a>. Do you run a school ' + loc + '? <a href="/bewerbung.html?lang=en">Enter it for free</a>.', f'See the <a href="/ee/">Eastern Europe ranking</a>, the <a href="/">Europe overview</a> or the <a href="/rankings.html">Germany ranking</a>. Do you run a school in {cen}? <a href="/bewerbung.html?lang=en">Enter it for free</a>.'), alt=False)}
 '''
-    top = ss[0]
+    top = next((x for x in ss if x[2] is not None), ('', '', 0.0, 0, ''))
     faq = [
      (f'Where can I learn Bachata {loc}?', f'Where can I learn Bachata in {cen}?', f'You can learn Bachata {loc} at {", ".join(s[0] for s in ss[:3])} and other schools. The full list is above.', f'In {cen} Bachata is taught by {", ".join(s[0] for s in ss[:3])} and others. The full list is above.'),
      (f'What is the best Bachata school {loc}?', f'What is the best Bachata school in {cen}?', f'Right now, according to our data, {top[0]} is in front ({f1(top[2])} ★, {top[3]} reviews). This is an interim standing, not the final ranking.', f'As of today, by Google ratings, {top[0]} leads ({f1en(top[2])} ★, {top[3]} reviews). This is an interim standing, not the final ranking.'),
@@ -217,6 +217,7 @@ for k, (cpl, cen, loc) in P.CITIES.items():
      ('Which Bachata style should I start with?', 'Which Bachata style should I start with?', 'Most beginners start with modern or sensual Bachata. The basic step and the rhythm matter most; you can switch styles later.', 'Most beginners start with moderna or sensual. What matters is the basic step and the rhythm, and you can change style later.'),
      ('When is the full ranking published?', 'When is the full ranking published?', 'In spring 2027. Until then we show an interim standing based on Google ratings.', 'In spring 2027. Until then we show an interim standing based on Google ratings.'),
     ]
+    if top[0] == '': faq = [q for i, q in enumerate(faq) if i != 1]  # no rated school here yet
     main += faq_html(t, faq)
     ee_page(f'ee/bachata-{k}.html', f'ee/bachata-{k}.html', f'Bachata {cpl}: the best dance schools 2027',
       f'Bachata {cpl}: {n} schools with Google ratings and points from the 2027 ranking. Choose a Bachata class {loc} and see the interim standing.',

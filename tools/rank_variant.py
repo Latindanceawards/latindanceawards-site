@@ -11,6 +11,7 @@ with contextlib.redirect_stdout(io.StringIO()):
 
 def parts(r, v):
     """Google points (max 25) and review-volume points (max 10); same formulas as the German ranking."""
+    if r is None: return 0.0, 0.0
     b = (v * r + 25 * 4.32) / (v + 25)
     return round(max(0.0, 25 - 17.2 * (5 - b)), 1), round(10 * min(1.0, math.log(1 + v) / math.log(251)), 1)
 
@@ -45,6 +46,9 @@ def polish_entries(P, base='/pl/szkoly/'):
         g, rv = parts(r, v)
         y, b, ev, f, po, st = P.EXTRA.get(name, (0, 0, 0, 0, 0, []))
         fxs = f'{f:,}'.replace(',', '.') + ' · ' + f'{po:,}'.replace(',', '.') if f else '–'
+        if r is None:  # no Google rating collected yet: listed in the ranking, but without points or place
+            out.setdefault(city, []).append(dict(name=name, sc=[0, 0, 0, 0, 0, 0], fx=['–', '–'], url=url, st=[], np=1, un=1, pg=base + pl_slug(name) + '.html'))
+            continue
         out.setdefault(city, []).append(dict(name=name, sc=[y, b, ev, g, rv, social(f, po)], fx=[fx_str(r, v), fxs], url=url, st=st, np=1, pg=base + pl_slug(name) + '.html'))
     return out
 
@@ -54,7 +58,7 @@ def cand_js(cands):
     lines = []
     for city, es in cands.items():
         items = ',\n'.join('      ' + json.dumps(e, ensure_ascii=False, separators=(', ', ':')).replace('{"name":', '{name:', 1)
-                           .replace(', "sc":', ', sc:').replace(', "fx":', ', fx:').replace(', "url":', ', url:').replace(', "st":', ', st:').replace(', "np":', ', np:').replace(', "pg":', ', pg:')
+                           .replace(', "sc":', ', sc:').replace(', "fx":', ', fx:').replace(', "url":', ', url:').replace(', "st":', ', st:').replace(', "np":', ', np:').replace(', "un":', ', un:').replace(', "pg":', ', pg:')
                            for e in es)
         lines.append(f'    {json.dumps(city)}: [\n{items}\n    ]')
     return '{\n' + ',\n'.join(lines) + '\n  }'
@@ -63,13 +67,25 @@ def sub1(js, old, new, n=1):
     assert js.count(old) >= 1, 'missing: ' + old[:80]
     return js.replace(old, new) if n == 0 else js.replace(old, new, n)
 
+# Texts for schools that have no Google rating yet: (final score label local, EN, long note local, EN)
+UN = {
+ 'ES': ('Puntuación final aún no disponible', 'Final score not yet available', 'Todavía no hemos recogido la valoración de Google de esta escuela. Las escuelas pueden confirmar sus datos con la inscripción gratuita.', 'We have not collected a Google rating for this school yet. Schools can confirm their data with the free application.'),
+ 'FR': ('Note finale pas encore disponible', 'Final score not yet available', 'Nous n’avons pas encore relevé la note Google de cette école. Les écoles peuvent confirmer leurs données avec l’inscription gratuite.', 'We have not collected a Google rating for this school yet. Schools can confirm their data with the free application.'),
+ 'IT': ('Punteggio finale non ancora disponibile', 'Final score not yet available', 'Non abbiamo ancora rilevato la valutazione Google di questa scuola. Le scuole possono confermare i propri dati con l’iscrizione gratuita.', 'We have not collected a Google rating for this school yet. Schools can confirm their data with the free application.'),
+ 'PT': ('Pontuação final ainda não disponível', 'Final score not yet available', 'Ainda não recolhemos a avaliação Google desta escola. As escolas podem confirmar os seus dados com a inscrição gratuita.', 'We have not collected a Google rating for this school yet. Schools can confirm their data with the free application.'),
+ 'EE': ('Final score not yet available', 'Final score not yet available', 'We have not collected a Google rating for this school yet. Schools can confirm their data with the free application.', 'We have not collected a Google rating for this school yet. Schools can confirm their data with the free application.'),
+ 'HUB': ('Endergebnis noch nicht verfügbar', 'Final score not yet available', 'Für diese Schule haben wir noch keine Google-Bewertung erfasst. Schulen können ihre Daten mit der kostenlosen Bewerbung bestätigen.', 'We have not collected a Google rating for this school yet. Schools can confirm their data with the free application.'),
+}
+UN_DEFAULT = UN['EE']
+
 def make_js(scope, groups, tx, cands, quick, scale, pl=False, extra=None, code='PL'):
     js = B.rank_js
     js = re.sub(r'var RESULTS = \{.*?\n  \};', 'var RESULTS = {};', js, count=1, flags=re.S)
     js = re.sub(r'var CANDIDATES = \{.*?\n  \};', lambda m: 'var CANDIDATES = ' + cand_js(cands) + ';', js, count=1, flags=re.S)
     js = re.sub(r'var TX = \{[^\n]*\};\n', lambda m: 'var TX = ' + json.dumps(tx, ensure_ascii=False) + ';\n', js, count=1)
     js = sub1(js, 'new Date("2026-12-20T19:00:00+01:00")', 'new Date("2099-01-01T00:00:00+00:00")')
-    helpers = ('var SCOPE=' + json.dumps(scope) + ', GROUPS=' + json.dumps(groups) + ', SCALE=' + str(scale) + ';\n'
+    _un = UN['HUB'] if scope == 'europa' else UN.get(code, UN_DEFAULT)
+    helpers = ('var UNFINAL=' + json.dumps(list(_un[:2]), ensure_ascii=False) + ', UNMSG=' + json.dumps(list(_un[2:]), ensure_ascii=False) + ';\n  ' + 'var SCOPE=' + json.dumps(scope) + ', GROUPS=' + json.dumps(groups) + ', SCALE=' + str(scale) + ';\n'
                '  function inScope(c,k){ if(c===SCOPE) return true; var g=GROUPS[c]; return g?g.indexOf(k)>-1:c===k; }\n'
                '  function isCountry(c){ return c===SCOPE||!!GROUPS[c]; }\n  ')
     js = sub1(js, 'var PUBLISH_DATE', helpers + 'var PUBLISH_DATE')
@@ -90,6 +106,16 @@ def make_js(scope, groups, tx, cands, quick, scale, pl=False, extra=None, code='
                   '<small> / \'+SCALE+\'</small></span><span class="meter"><i style="width:\'+(e.pts/SCALE*100)+\'%"></i>')
         js = sub1(js, 'FAC.forEach(function(f,k){ var fx=', 'FAC.forEach(function(f,k){ if(k<3||k===5) return; var fx=')
         js = re.sub(r"why\+='<div class=\"tbc\"><b>'\+esc\(en\?\"Style variety[^\n]*\n", '', js, count=1)
+    # schools without a Google rating: listed after the ranked ones, no place, no points
+    js = sub1(js, 'pl.sort(function(a,b){ return (b.pts-a.pts)||a.name.localeCompare(b.name); });',
+              'pl.sort(function(a,b){ return ((a.un?1:0)-(b.un?1:0))||(b.pts-a.pts)||a.name.localeCompare(b.name); });')
+    js = sub1(js, 'g=i<3?" g"+(i+1):"", why="";', 'g=(i<3&&!e.un)?" g"+(i+1):"", why="";')
+    js = sub1(js, "why+='<div class=\"vote\"><button type=\"button\"",
+              "if(e.un){ why='<div class=\"lk\" style=\"color:var(--muted)\">'+esc(en?UNMSG[1]:UNMSG[0])+' <a href=\"bewerbung.html\">'+esc(en?\"Confirm now\":\"Jetzt bestätigen\")+' →</a></div>'; }\n          why+='<div class=\"vote\"><button type=\"button\"")
+    js = sub1(js, "(i===0?CROWN+", "(i===0&&!e.un?CROWN+")
+    js = sub1(js, "+(i+1)+'</span><span class=\"who\">", "+(e.un?\"–\":(i+1))+'</span><span class=\"who\">")
+    js = sub1(js, "'</span><span class=\"score\">'+num(e.pts)+'<small> / 100</small></span><span class=\"meter\"><i style=\"width:'+e.pts+'%\"></i></span></summary>'",
+              "'</span>'+(e.un?'<span class=\"score na\"><small>'+esc(en?UNFINAL[1]:UNFINAL[0])+'</small></span><span class=\"meter\"></span>':'<span class=\"score\">'+num(e.pts)+'<small> / 100</small></span><span class=\"meter\"><i style=\"width:'+e.pts+'%\"></i></span>')+'</summary>'")
     # schools without an own page here link to their website
     js = sub1(js, '<b><a href="schools/\'+slug(e.name)+\'.html">',
               '<b><a href="\'+(e.np?e.pg:"schools/"+slug(e.name)+".html")+\'">')

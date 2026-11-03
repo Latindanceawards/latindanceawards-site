@@ -70,6 +70,10 @@ CITIES = {
  'alessandria': ('Alessandria', 'Alessandria', 'a Alessandria'),
  'mantova': ('Mantova', 'Mantova', 'a Mantova'),
  'cremona': ('Cremona', 'Cremona', 'a Cremona'),
+ 'voghera': ('Voghera', 'Voghera', 'a Voghera'),
+ 'venezia': ('Venezia', 'Venezia', 'a Venezia'),
+ 'castelfranco-emilia': ('Castelfranco Emilia', 'Castelfranco Emilia', 'a Castelfranco Emilia'),
+ 'ascoli-piceno': ('Ascoli Piceno', 'Ascoli Piceno', 'a Ascoli Piceno'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 SCHOOLS = [
@@ -271,6 +275,31 @@ SCHOOLS = [
  ('Lesotica Scuola di Ballo', 'mantova', 4.9, 241, 'https://lesoticascuoladiballo.it/'),
  ('CremonaDance&Co', 'cremona', 4.9, 21, 'https://cremonadanceco.it/'),
  ('Balla&Snella Cremona', 'cremona', 5.0, 15, 'https://ballaesnellacremona.com/'),
+ ('Vinci Dance Academy Bonola', 'milano', None, None, 'https://www.salsavida.com/it/event/italy/milan/weekly-classes-at-vinci-dance-academy-bonola/'),
+ ('ABC Studios Milano', 'milano', None, None, 'https://www.salsavida.com/it/event/italy/milan/weekly-salsa-bachata-classes-at-abc-studios-milano/'),
+ ('Bandits Dance Studio Milano', 'milano', None, None, 'https://www.salsavida.com/it/event/italy/milan/salsa-bachata-classes-at-bandits-dance-studio-milano/'),
+ ('Dance 2Be Milano', 'milano', None, None, 'https://www.salsavida.com/it/event/italy/milan/salsa-bachata-classes-at-dance-2be-milan/'),
+ ('Studio Gem Milano', 'milano', None, None, 'https://www.salsavida.com/it/event/italy/milan/weekly-salsa-bachata-classes-at-studio-gem-milano/'),
+ ('B.Music School', 'bergamo', None, None, 'https://www.salsavida.com/it/event/italy/bergamo/salsa-and-bachata-classes-at-b-music-school/'),
+ ('Baila Conmigo Bergamo', 'bergamo', None, None, 'https://www.salsavida.com/it/event/italy/bergamo/salsa-and-bachata-classes-at-baila-conmigo-bergamo/'),
+ ('Scuola di Danza On-Stage', 'brescia', None, None, 'https://www.salsavida.com/it/event/italy/brescia/on-stage-latino-americano-salsa-and-bachata-course/'),
+ ('Brixia Dance School', 'brescia', None, None, 'https://www.salsavida.com/it/event/italy/brescia/brixia-dance-school-salsa-and-bachata-course/'),
+ ('LyF Lorenzo y Federica', 'rimini', None, None, 'https://www.salsavida.com/it/event/italy/rimini/salsa-and-bachata-classes-at-lyf-in-rimini/'),
+ ('Max Latino Dance School', 'voghera', None, None, 'https://www.goandance.com/en/school/2259/max-latino'),
+ ('Accademia Clave Na Ma', 'cosenza', None, None, 'https://www.salsavida.com/it/event/italy/cosenza/salsa-bachata-lessons-at-clave-na-ma-academy/'),
+ ('Baile Vital', 'venezia', None, None, 'https://www.salsavida.com/it/event/italy/venice/baile-vital-salsa-and-bachata-classes/'),
+ ('ASSOKÈRE', 'venezia', None, None, 'https://www.salsavida.com/it/event/italy/venice/assokere-cuban-salsa-and-bachata-classes-2/'),
+ ('Agua Salsa Venezia', 'venezia', None, None, 'https://www.salsavida.com/it/event/italy/venice/agua-salsa-venezia-weekly-classes/'),
+ ('Arthur Murray Torino', 'torino', None, None, 'https://www.salsavida.com/it/event/italy/turin/salsa-latin-dance-program-at-arthur-murray-torino/'),
+ ('Scuola di Danza Ivan e Genny', 'torino', None, None, 'https://www.salsavida.com/it/event/italy/turin/salsa-bachata-ivan-and-genny-dance-school/'),
+ ('Latin Lab', 'firenze', None, None, 'https://www.salsavida.com/it/event/italy/florence/salsa-bachata-weekly-courses-at-latin-lab/'),
+ ('Danza Lerose', 'castelfranco-emilia', None, None, 'https://www.salsavida.com/it/event/italy/castelfranco-emilia/salsa-and-bachata-classes-at-danza-lerose/'),
+ ('Polisportiva Madonnina', 'modena', None, None, 'https://www.salsavida.com/it/event/italy/modena/corso-caraibici-salsa-cubana-bachata-polisportiva-madonnina/'),
+ ('Team Cuba', 'bologna', None, None, 'https://www.salsavida.com/it/event/italy/bologna/team-cuba-salsa-bachata-courses/'),
+ ('Salsa Fantasy', 'roma', None, None, 'https://www.salsavida.com/it/event/italy/rome/salsa-urban-dance-courses-at-salsa-fantasy/'),
+ ('Salsa Dura Napoli', 'napoli', None, None, 'https://www.salsavida.com/it/event/italy/naples-italy/salsa-bachata-classes-at-salsa-dura-napoli/'),
+ ('Muevete Dance Academy', 'ascoli-piceno', None, None, 'https://www.salsavida.com/it/event/italy/ascoli-piceno/salsa-and-bachata-classes-at-muevete-dance-academy/'),
+ ('Boricua Salsa Style', 'ancona', None, None, 'https://www.salsavida.com/it/event/italy/ancona/boricua-salsa-style-dance-classes/'),
 ]
 # Scoring data not collected yet for Italy (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.

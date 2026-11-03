@@ -14,6 +14,7 @@ CITIES = {
  'leiria': ('Leiria', 'Leiria', 'em Leiria'),
  'sintra': ('Sintra', 'Sintra', 'em Sintra'),
  'portimao': ('Portimão', 'Portimão', 'em Portimão'),
+ 'setubal': ('Setúbal', 'Setúbal', 'em Setúbal'),
 }
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 SCHOOLS = [
@@ -44,6 +45,9 @@ SCHOOLS = [
  ('Soul Dance', 'sintra', 4.8, 47, 'https://souldancestudio.pt/'),
  ('Dance Factory Studios', 'sintra', 4.6, 177, 'https://dancefactory.com.pt/'),
  ('Dança Mais', 'portimao', 5.0, 70, _m('Dança Mais', 'Portimão')),
+ ('UDance School', 'lisboa', None, None, 'https://www.udance.pt/estilos-dancas-sociais'),
+ ('Aleks & Dasha (Furiosa Dance)', 'porto', None, None, 'https://aleksydasha.com/en#aulas'),
+ ('Setubailas', 'setubal', None, None, 'https://www.salsavida.com/pt/event/portugal/setubal/new-salsa-bachata-and-kizomba-class-at-setubailas/'),
 ]
 # Scoring data not collected yet for Portugal (years active, beginner offer, events, Instagram followers/posts, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.

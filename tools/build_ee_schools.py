@@ -40,19 +40,20 @@ FAC = [('Years teaching', 'Years teaching', 10), ('Beginner offer', 'Beginner of
 TBD = t("span", "To be confirmed", "To be confirmed")
 
 entries = [(e, c) for c, es in RV.polish_entries(P, BASE).items() for e in es]
-entries.sort(key=lambda x: (-RV.total(x[0]), x[0]['name']))
+entries.sort(key=lambda x: (x[0].get('un', 0), -RV.total(x[0]), x[0]['name']))
 by_city = {}
 for e, c in entries: by_city.setdefault(c, []).append(e['name'])
 
 def build(rank, e, ck):
     nm = e['name']; cpl, cen = P.CITIES[ck][0], P.CITIES[ck][1]
-    slug = RV.pl_slug(nm); pts = RV.total(e); crank = by_city[ck].index(nm) + 1
+    slug = RV.pl_slug(nm); pts = RV.total(e); crank = by_city[ck].index(nm) + 1; un = bool(e.get('un'))
     f1 = lambda x: f'{x:.1f}'.replace('.', ',')
     rows = ''
-    for k, (pl, en, mx) in enumerate(FAC):
+    for k, (pl, en, mx) in (enumerate(FAC) if not un else []):
         fx = e['fx'][0] if k == 3 else (e['fx'][0].split(' · ')[1] if k == 4 else (e['fx'][1] if k == 5 else ''))
         small = f' <small>({fx})</small>' if fx and fx != '–' else ''
         rows += f'<div class="sp-row"><b>{t("span", pl, en)}</b> · {f"{e['sc'][k]:g}".replace('.', ',')} / {mx}{small}<div class="bar"><i style="width:{e["sc"][k]/mx*100:.0f}%"></i></div></div>\n'
+    if un: rows += f'<div class="sp-row">{t("span", RV.UN["EE"][2], RV.UN["EE"][3])}</div>\n'
     sty = ' '.join(f'<span class="chip st">{x}</span>' for x in e['st']) or f'<span class="chip">{TBD}</span>'
     rows += f'<div class="sp-row"><b>{t("span", "Styles (Dominican, sensual, modern)", "Styles (Dominicana, Sensual, Moderna)")}</b> · {sty}</div>\n'
     for pl, en in (('Festivals', 'Festivals'), ('Recent reviews', 'Recent reviews'), ('Competitions entered', 'Competitions entered'), ('Competitions won', 'Competitions won')):
@@ -67,10 +68,10 @@ def build(rank, e, ck):
       <p class="sp-crumb"><a href="/ee/">{t("span", "Eastern Europe ranking 2027", "Eastern Europe ranking 2027")}</a> › <a href="/ee/bachata-{ck}.html">{cpl}</a></p>
       <span class="edition"><i></i>{t("span", "Interim standing · not final", "Interim standing · not final")}</span>
       <h1 id="sp-title">{nm}</h1>
-      <p class="lede">{t("span", f"Bachata school in {cpl}. Interim standing: place {crank} in the city ({cpl}), place {rank} in Eastern Europe. Schools are still competing.", f"Bachata school in {cen}. Interim ranking: place {crank} in {cen}, place {rank} in Eastern Europe. Schools are still competing.")}</p>
+      <p class="lede">{(t("span", 'Bachata school in {city}. Final score not yet available: we have not collected its Google rating yet.'.format(city=cpl), 'Bachata school in {city}. Final score not yet available: we have not collected its Google rating yet.'.format(city=cen)) if un else t("span", f"Bachata school in {cpl}. Interim standing: place {crank} in the city ({cpl}), place {rank} in Eastern Europe. Schools are still competing.", f"Bachata school in {cen}. Interim ranking: place {crank} in {cen}, place {rank} in Eastern Europe. Schools are still competing."))}</p>
       <div class="sp-links"><button type="button" class="btn btn-ghost" id="share">{t("span", "Share", "Share")}</button></div>
     </div>
-    <div class="sp-score"><b>{f1(pts)}</b><small>/ 100 · {t("span", "interim", "interim")}</small></div>
+    <div class="sp-score">{('<b>–</b><small>' + t("span", RV.UN["EE"][0], RV.UN["EE"][1]) + '</small>' if un else f'<b>{f1(pts)}</b><small>/ 100 · {t("span", "interim", "interim")}</small>')}</div>
   </div>
 </section>
 
@@ -141,8 +142,8 @@ def build(rank, e, ck):
     fn = f'ee/schools/{slug}.html'
     schema = [crumbs(nm, fn), {"@context": "https://schema.org", "@type": "LocalBusiness", "name": nm, "url": site if 'google.com/maps' not in site else maps,
               "address": {"@type": "PostalAddress", "addressLocality": cpl, "addressCountry": P.COUNTRY.get(ck, "")}}]
-    BE.ee_page(fn, fn, f'{nm} · Bachata {cpl} · reviews and rating', f'{nm} in {cpl}: points, place {crank} in the interim Bachata ranking, reviews and a vote for the Audience Award.',
-               f'{nm} · Bachata {cen} · Reviews', f'{nm} in {cen}: score, place {crank} in the interim Bachata ranking, reviews and voting for the Audience Award.',
+    BE.ee_page(fn, fn, f'{nm} · Bachata {cpl} · reviews and rating', ('{nm} in {city}: Bachata school. Final score not yet available; reviews and a vote for the Audience Award.'.format(nm=nm, city=cpl) if un else f'{nm} in {cpl}: points, place {crank} in the interim Bachata ranking, reviews and a vote for the Audience Award.'),
+               f'{nm} · Bachata {cen} · Reviews', ('{nm} in {city}: Bachata school. Final score not yet available; reviews and voting for the Audience Award.'.format(nm=nm, city=cen) if un else f'{nm} in {cen}: score, place {crank} in the interim Bachata ranking, reviews and voting for the Audience Award.'),
                main, t.en, schema, js=school_js(nm, cpl))
     return fn
 

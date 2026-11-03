@@ -21,8 +21,3 @@ python3 tools/build_en.py                                 # static English pages
 python3 tools/seo_audit.py                                # per-page score + site-wide checks
 ```
 `build_en.py` turns the English text of each German-site page (root pages and `schools/`) into a real page under `/en/`, so search engines can index it. The old `?lang=en` URLs redirect to `/en/` in the browser. Other country folders (`at/`, `es/`, ...) still use the on-page language switch.
-
-## Schools without a Google rating
-`tools/pending_schools/candidates-*.json` holds schools found by research that have no rating yet. `python3 tools/build_unrated.py`
-turns them into `bachata-schools-not-yet-rated.html` (not scored, not ranked). When ratings arrive, import the rated ones with
-`tools/add_<cc>.py` and add their names to `tools/pending_schools/imported.json` so they leave the unrated page.

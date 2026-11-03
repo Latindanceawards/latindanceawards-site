@@ -61,8 +61,16 @@ CITIES = {
  'osijek': ('Osijek', 'Osijek', 'in Osijek'),
  'pula': ('Pula', 'Pula', 'in Pula'),
  'maribor': ('Maribor', 'Maribor', 'in Maribor'),
+ 'zaporizhzhia': ('Zaporizhzhia', 'Zaporizhzhia', 'in Zaporizhzhia'),
+ 'odesa': ('Odesa', 'Odesa', 'in Odesa'),
+ 'ternopil': ('Ternopil', 'Ternopil', 'in Ternopil'),
+ 'poltava': ('Poltava', 'Poltava', 'in Poltava'),
+ 'chernivtsi': ('Chernivtsi', 'Chernivtsi', 'in Chernivtsi'),
+ 'zhytomyr': ('Zhytomyr', 'Zhytomyr', 'in Zhytomyr'),
+ 'cherkasy': ('Cherkasy', 'Cherkasy', 'in Cherkasy'),
+ 'lutsk': ('Lutsk', 'Lutsk', 'in Lutsk'),
 }
-COUNTRY = {'budapest': 'HU', 'bucharest': 'RO', 'cluj-napoca': 'RO', 'timisoara': 'RO', 'iasi': 'RO', 'brasov': 'RO', 'oradea': 'RO', 'prague': 'CZ', 'brno': 'CZ', 'liberec': 'CZ', 'bratislava': 'SK', 'athens': 'GR', 'thessaloniki': 'GR', 'patras': 'GR', 'zagreb': 'HR', 'split': 'HR', 'rijeka': 'HR', 'belgrade': 'RS', 'novi-sad': 'RS', 'ljubljana': 'SI', 'sofia': 'BG', 'plovdiv': 'BG', 'varna': 'BG', 'vilnius': 'LT', 'kaunas': 'LT', 'riga': 'LV', 'tallinn': 'EE', 'tartu': 'EE', 'kyiv': 'UA', 'lviv': 'UA', 'kharkiv': 'UA', 'dnipro': 'UA', 'chisinau': 'MD', 'tbilisi': 'GE', 'yerevan': 'AM', 'tirana': 'AL', 'banja-luka': 'BA', 'podgorica': 'ME', 'ostrava': 'CZ', 'plzen': 'CZ', 'olomouc': 'CZ', 'hradec-kralove': 'CZ', 'ceske-budejovice': 'CZ', 'banska-bystrica': 'SK', 'nitra': 'SK', 'debrecen': 'HU', 'szeged': 'HU', 'pecs': 'HU', 'gyor': 'HU', 'sibiu': 'RO', 'craiova': 'RO', 'galati': 'RO', 'ploiesti': 'RO', 'burgas': 'BG', 'stara-zagora': 'BG', 'nis': 'RS', 'osijek': 'HR', 'pula': 'HR', 'maribor': 'SI'}
+COUNTRY = {'budapest': 'HU', 'bucharest': 'RO', 'cluj-napoca': 'RO', 'timisoara': 'RO', 'iasi': 'RO', 'brasov': 'RO', 'oradea': 'RO', 'prague': 'CZ', 'brno': 'CZ', 'liberec': 'CZ', 'bratislava': 'SK', 'athens': 'GR', 'thessaloniki': 'GR', 'patras': 'GR', 'zagreb': 'HR', 'split': 'HR', 'rijeka': 'HR', 'belgrade': 'RS', 'novi-sad': 'RS', 'ljubljana': 'SI', 'sofia': 'BG', 'plovdiv': 'BG', 'varna': 'BG', 'vilnius': 'LT', 'kaunas': 'LT', 'riga': 'LV', 'tallinn': 'EE', 'tartu': 'EE', 'kyiv': 'UA', 'lviv': 'UA', 'kharkiv': 'UA', 'dnipro': 'UA', 'chisinau': 'MD', 'tbilisi': 'GE', 'yerevan': 'AM', 'tirana': 'AL', 'banja-luka': 'BA', 'podgorica': 'ME', 'ostrava': 'CZ', 'plzen': 'CZ', 'olomouc': 'CZ', 'hradec-kralove': 'CZ', 'ceske-budejovice': 'CZ', 'banska-bystrica': 'SK', 'nitra': 'SK', 'debrecen': 'HU', 'szeged': 'HU', 'pecs': 'HU', 'gyor': 'HU', 'sibiu': 'RO', 'craiova': 'RO', 'galati': 'RO', 'ploiesti': 'RO', 'burgas': 'BG', 'stara-zagora': 'BG', 'nis': 'RS', 'osijek': 'HR', 'pula': 'HR', 'maribor': 'SI', 'zaporizhzhia': 'UA', 'odesa': 'UA', 'ternopil': 'UA', 'poltava': 'UA', 'chernivtsi': 'UA', 'zhytomyr': 'UA', 'cherkasy': 'UA', 'lutsk': 'UA'}
 def _m(n, c): return 'https://www.google.com/maps/search/?api=1&query=' + (n + ' ' + c).replace(' ', '+')
 SCHOOLS = [
  ('Bachata Sensual - Hungary', 'budapest', 4.9, 90, 'https://bachatasensual.hu/'),
@@ -232,6 +240,24 @@ SCHOOLS = [
  ('Salsero', 'maribor', 5.0, 109, 'https://salsero.si/'),
  ('Plesni klub Zapleši si', 'maribor', 4.9, 28, 'https://zaplesi.si/'),
  ('Plesna šola VIBE', 'maribor', 5.0, 13, 'https://plesnasola.si/'),
+ ('Latin Force Dance Studio', 'sofia', None, None, 'https://grafik.latinforce.bg/'),
+ ('PaLante Dance Club', 'sofia', None, None, 'https://www.palante.eu/en/groups/salsa-bachata-beginners-tuesday'),
+ ('Pambos Dancing Center', 'sofia', None, None, 'https://pambosalsa.com/'),
+ ('Paletro Dance Spot', 'sofia', None, None, 'https://www.salsavida.com/event/bulgaria/sofia/salsa-bachata-classes-at-paletro-dance-spot/'),
+ ('Dance Station Sofia', 'sofia', None, None, 'https://www.salsavida.com/event/bulgaria/sofia/salsa-bachata-classes-at-dance-station-sofia/'),
+ ('Salsa Diva', 'sofia', None, None, 'https://www.salsavida.com/event/bulgaria/sofia/salsa-la-style-bachata-classes-at-salsa-diva/'),
+ ('Art Center Alejandro', 'plovdiv', None, None, 'https://www.salsavida.com/event/bulgaria/plovdiv/salsa-bachata-classes-at-art-center-alejandro/'),
+ ('Casa Latina Zaporizhzhia', 'zaporizhzhia', None, None, 'https://www.salsavida.com/event/ukraine/zaporizhzhia/salsa-and-bachata-classes-at-casa-latina-zaporizhzhia/'),
+ ('Salsa Club Odessa', 'odesa', None, None, 'https://www.salsavida.com/event/ukraine/odesa/salsa-bachata-kizomba-classes-at-salsa-club-odessa/'),
+ ('Baila con el corazon', 'odesa', None, None, 'https://top20.ua/ru/od/sport-krasota/shkolyi-tantsev/baila-con-el-corazon-salsa-shkola.html'),
+ ('Social Dance Club Ternopil', 'ternopil', None, None, 'https://www.salsavida.com/event/ukraine/ternopil/salsa-bachata-beginner-classes-at-social-dance-club-ternopil/'),
+ ('La Vida Dance School', 'poltava', None, None, 'https://www.salsavida.com/event/ukraine/poltava/bachata-salsa-classes-at-la-vida-dance-school-poltava/'),
+ ('Me Gusta Dance Studio', 'chernivtsi', None, None, 'https://megustacv.com/'),
+ ('Latin Dance Studio ValenSia', 'zhytomyr', None, None, 'https://www.salsavida.com/event/ukraine/zhytomyr/salsa-and-bachata-classes-at-latin-dance-studio-valensia-zhytomyr/'),
+ ('Latin Motion', 'kharkiv', None, None, 'https://www.salsavida.com/event/ukraine/kharkiv/salsa-and-bachata-classes-at-latin-motion-kharkiv/'),
+ ('Flame Dance Studio', 'cherkasy', None, None, 'https://www.salsavida.com/event/ukraine/cherkasy/latin-dance-at-flame-dance-studio/'),
+ ('Salsa Club Lutsk', 'lutsk', None, None, 'https://www.salsavida.com/event/ukraine/lutsk/salsa-bachata-classes-and-latin-parties-at-salsa-club-lutsk/'),
+ ('DePo Dance Family', 'kyiv', None, None, 'https://www.salsavida.com/event/ukraine/kyiv/salsa-classes-at-depo-dance-family-kyiv/'),
 ]
 # Scoring data not collected yet (years active, beginner offer, events, Instagram, styles).
 # Anything not confirmed counts at the lowest value; schools can confirm it through the application.
