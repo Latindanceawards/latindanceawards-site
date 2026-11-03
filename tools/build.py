@@ -1919,14 +1919,15 @@ print('wrote deutschland.html')
 # ======================================================================
 # LEGAL PAGES (drafts: noindex, not linked until operator details are filled in)
 # ======================================================================
-def legal(fname, tid, title_de, title_en, h_de, h_en, blocks):
+def legal(fname, tid, title_de, title_en, h_de, h_en, blocks, draft=True):
     L = T(tid)
     body = ''.join(
         f'<h2>{L("span", hd, he)}</h2><p>{L("span", bd, be)}</p>' for hd, he, bd, be in blocks)
+    draft_note = ('<p class="lede">' + L("span", "ENTWURF: Die Felder in [eckigen Klammern] müssen vor der Veröffentlichung ausgefüllt werden.", "DRAFT: fields in [square brackets] must be filled in before publishing.") + '</p>') if draft else ''
     main = f'''
 <section class="page-hero" aria-labelledby="{tid}-t"><div class="wrap"><div>
   <h1 id="{tid}-t">{L("span", h_de, h_en)}</h1>
-  <p class="lede">{L("span", "ENTWURF: Die Felder in [eckigen Klammern] müssen vor der Veröffentlichung ausgefüllt werden.", "DRAFT: fields in [square brackets] must be filled in before publishing.")}</p>
+  {draft_note}
 </div></div></section>
 <section class="section"><div class="wrap" style="max-width:760px;line-height:1.7">{body}</div></section>
 '''
@@ -1938,16 +1939,15 @@ def legal(fname, tid, title_de, title_en, h_de, h_en, blocks):
 
 legal('impressum.html', 'i', 'Impressum · Latin Dance Awards', 'Legal notice · Latin Dance Awards', 'Impressum', 'Legal notice', [
  ('Angaben gemäß § 5 DDG', 'Information pursuant to § 5 DDG',
-  '[Vor- und Nachname bzw. Firma und Rechtsform] · [Straße und Hausnummer] · [PLZ und Ort] · [Land]',
-  '[Full name or company and legal form] · [Street and number] · [Postcode and city] · [Country]'),
+  'Mateus Alves · Schwarzenbacher Str. 48 · 81549 München · Deutschland',
+  'Mateus Alves · Schwarzenbacher Str. 48 · 81549 Munich · Germany'),
  ('Kontakt', 'Contact', 'E-Mail: info@latindanceawards.com', 'Email: info@latindanceawards.com'),
- ('Umsatzsteuer-ID', 'VAT ID', '[Umsatzsteuer-Identifikationsnummer, falls vorhanden]', '[VAT identification number, if any]'),
- ('Verantwortlich für den Inhalt', 'Responsible for content', '[Name und Anschrift wie oben]', '[Name and address as above]'),
+ ('Verantwortlich für den Inhalt', 'Responsible for content', 'Mateus Alves, Anschrift wie oben', 'Mateus Alves, address as above'),
  ('Unabhängigkeit', 'Independence', 'Latin Dance Awards ist ein unabhängiges Ranking. Die Platzierung kann nicht gekauft werden. Alle Bewertungen beruhen auf öffentlich zugänglichen Angaben.', 'Latin Dance Awards is an independent ranking. Places cannot be bought. All scores are based on publicly available information.'),
-])
+], draft=False)
 
 legal('datenschutz.html', 'd', 'Datenschutzerklärung · Latin Dance Awards', 'Privacy policy · Latin Dance Awards', 'Datenschutzerklärung', 'Privacy policy', [
- ('Verantwortlicher', 'Controller', '[Name und Anschrift wie im Impressum] · E-Mail: info@latindanceawards.com', '[Name and address as in the legal notice] · Email: info@latindanceawards.com'),
+ ('Verantwortlicher', 'Controller', 'Mateus Alves · Schwarzenbacher Str. 48 · 81549 München · Deutschland · E-Mail: info@latindanceawards.com', 'Mateus Alves · Schwarzenbacher Str. 48 · 81549 Munich · Germany · Email: info@latindanceawards.com'),
  ('Hosting', 'Hosting', 'Diese Website wird bei Cloudflare, Inc. gehostet. Dabei werden technisch notwendige Daten (z. B. IP-Adresse, Zeitpunkt, aufgerufene Seite) in Server-Logs verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (sicherer und stabiler Betrieb).', 'This website is hosted by Cloudflare, Inc. Technically necessary data (e.g. IP address, time, page requested) is processed in server logs. Legal basis: Art. 6(1)(f) GDPR (secure and stable operation).'),
  ('Bewerbungsformular', 'Application form', 'Wenn du dich bewirbst, speichern wir deine Angaben (Schulname, Stadt, Ansprechpartner, E-Mail, Angaben zu Kursen, Events und Links) in einer Google-Tabelle (Google Sheets / Apps Script, Google Ireland Ltd.). Wir nutzen sie ausschließlich, um deine Bewerbung zu prüfen und dich zu kontaktieren. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b und f DSGVO. Wir löschen die Daten spätestens 12 Monate nach Ende der Awards-Edition, sofern keine gesetzliche Pflicht entgegensteht.', 'When you apply, we store your details (school name, city, contact person, email, information on classes, events and links) in a Google spreadsheet (Google Sheets / Apps Script, Google Ireland Ltd.). We use them only to review your application and contact you. Legal basis: Art. 6(1)(b) and (f) GDPR. We delete the data at the latest 12 months after the end of the awards edition unless a legal duty requires otherwise.'),
  ('Publikumspreis (Abstimmung)', 'Audience Award (voting)', 'Wenn du beim Publikumspreis abstimmst, speichern wir deine E-Mail-Adresse, die gewählte Schule und den Zeitpunkt in einer Google-Tabelle (Google Sheets / Apps Script, Google Ireland Ltd.) und senden dir einen Bestätigungslink per E-Mail. Wir nutzen die Daten nur, um pro Person eine Stimme zu zählen und doppelte oder missbräuchliche Stimmen zu entfernen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a und f DSGVO. Die Daten werden nach Abschluss der Auswertung gelöscht. [Löschfrist prüfen.]', 'When you vote in the Audience Award, we store your email address, the chosen school and the time in a Google spreadsheet (Google Sheets / Apps Script, Google Ireland Ltd.) and email you a confirmation link. We use the data only to count one vote per person and to remove duplicate or abusive votes. Legal basis: Art. 6(1)(a) and (f) GDPR. The data is deleted after the results are evaluated. [Review retention period.]'),
