@@ -106,3 +106,62 @@ for page, (kw, target) in PAGES.items():
     for name, w, ok, info in checks:
         print(f'  {"OK  " if ok else "FAIL"} {name:<36} {info}')
 print('\nALL PAGES >= 90' if total_ok else '\nSOME PAGES BELOW 90')
+
+# ---------- Site-wide checks: duplicates, broken internal links, orphans, page weight ----------
+import collections, urllib.parse
+SKIP = ('tools', 'automation', '.git', 'node_modules')
+files = []
+for d, dirs, fs in os.walk(ROOT):
+    if os.path.relpath(d, ROOT).split(os.sep)[0] in SKIP: continue
+    for f in fs:
+        if f.endswith('.html') and f != 'google4c8a12ba6ad82dd8.html':
+            files.append(os.path.relpath(os.path.join(d, f), ROOT))
+
+def url_to_file(href, src):
+    """Resolve an internal href (as written) to a repo file, or None if external/ignored."""
+    href = href.split('#')[0].split('?')[0]
+    if not href or re.match(r'^(https?:|mailto:|tel:|javascript:|data:)', href):
+        if href.startswith('https://latindanceawards.com/'): href = href[len('https://latindanceawards.com/'):]
+        else: return None
+    base = '' if href.startswith('/') else os.path.dirname(src)
+    p = os.path.normpath(os.path.join(base, href.lstrip('/')))
+    if p in ('.', ''): return 'index.html'
+    for c in (p, p + '.html', os.path.join(p, 'index.html')):
+        if os.path.isfile(os.path.join(ROOT, c)): return c
+    return False  # internal but missing
+
+titles = collections.defaultdict(list); descs = collections.defaultdict(list)
+inbound = collections.defaultdict(set); broken = []; heavy = []
+for f in files:
+    s = open(os.path.join(ROOT, f), encoding='utf-8').read()
+    m = re.search(r'<title>(.*?)</title>', s); t = H.unescape(m.group(1)).strip() if m else ''
+    m = re.search(r'<meta name="description" content="([^"]*)"', s); dsc = H.unescape(m.group(1)).strip() if m else ''
+    if f != '404.html':  # duplicates only count within the same language tree (DE vs /en/)
+        grp = 'en' if f.startswith('en' + os.sep) else 'de'
+        titles[(grp, t)].append(f); descs[(grp, dsc)].append(f)
+    if len(s.encode('utf-8')) > 250_000: heavy.append((f, len(s.encode('utf-8')) // 1000))
+    body = re.sub(r'<script[^>]*>.*?</script>', '', s, flags=re.S)
+    for h in set(re.findall(r'<a\b[^>]*?\bhref="([^"]+)"', body)):
+        r = url_to_file(h, f)
+        if r is None: continue
+        if r is False: broken.append((f, h))
+        elif r != f: inbound[r].add(f)
+
+dup_t = {k[1]: v for k, v in titles.items() if len(v) > 1 and k[1]}
+dup_d = {k[1]: v for k, v in descs.items() if len(v) > 1 and k[1]}
+orphans = [f for f in files if f not in ('404.html', 'index.html', 'en/impressum.html') and not inbound.get(f)]
+print('\n=== SITE-WIDE CHECKS ===')
+print(f'Pages scanned: {len(files)}')
+def show(label, items, fmt):
+    print(f'{"OK  " if not items else "FAIL"} {label}: {len(items)}')
+    for i in list(items)[:15]: print('       ' + fmt(i))
+    if len(items) > 15: print(f'       ... and {len(items) - 15} more')
+show('Duplicate titles', dup_t, lambda k: f'"{k[:60]}" -> {", ".join(dup_t[k][:4])}')
+show('Duplicate meta descriptions', dup_d, lambda k: f'"{k[:50]}..." -> {", ".join(dup_d[k][:4])}')
+show('Broken internal links', broken, lambda b: f'{b[0]} -> {b[1]}')
+show('Orphan pages (no inbound link)', orphans, lambda o: o)
+show('Pages over 250 KB (warning only: heavy inline CSS/JS)', heavy, lambda h: f'{h[0]} ({h[1]} KB)')
+sitemap_missing = [f for f in files if f not in ('404.html',) and 'latindanceawards.com/' + (re.sub(r'(^|/)index\.html$', r'\1', f)[:-5] if f.endswith('.html') and not f.endswith('index.html') else re.sub(r'index\.html$', '', f)) not in sitemap and not f.endswith('index.html') and f != 'index.html' and f not in ('datenschutz.html', 'impressum.html', 'teilen.html', 'en/datenschutz.html', 'en/impressum.html', 'en/teilen.html')]  # legal/utility pages are intentionally unlisted
+show('Pages missing from sitemap.xml (non-index)', sitemap_missing, lambda o: o)
+SITE_OK = not (dup_t or dup_d or broken)
+print('\nSITE-WIDE: ' + ('PASS (no duplicates or broken links)' if SITE_OK else 'ISSUES FOUND'))

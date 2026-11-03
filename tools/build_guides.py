@@ -467,7 +467,7 @@ def _auto_city(key, idx):
     city_guide(slug, f'cg{idx}', cde, cen, key, (intro_de, intro_en), cards, note, party, faq_extra)
     return slug, cde, cen
 
-AUTO_CITIES = [k for k, c in sorted(((k, sum(1 for e in B.SCH if e['city'] == k)) for k in {e['city'] for e in B.SCH}), key=lambda x: -x[1]) if (c >= 3 or k in ('kassel', 'hannover', 'braunschweig', 'heidelberg', 'dortmund')) and k not in ('berlin', 'hamburg', 'muenchen')]
+AUTO_CITIES = [k for k, c in sorted(((k, sum(1 for e in B.SCH if e['city'] == k)) for k in {e['city'] for e in B.SCH}), key=lambda x: (-x[1], x[0])) if (c >= 3 or k in ('kassel', 'hannover', 'braunschweig', 'heidelberg', 'dortmund')) and k not in ('berlin', 'hamburg', 'muenchen')]
 if 'leipzig' not in AUTO_CITIES and any(e['city'] == 'leipzig' for e in B.SCH): AUTO_CITIES.append('leipzig')  # 2 schools, still a keyword page (bachata leipzig, 110/mo)
 for _i, _k in enumerate(AUTO_CITIES):
     _auto_city(_k, _i)

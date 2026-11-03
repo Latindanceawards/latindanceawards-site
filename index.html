@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#080707">
 <link rel="canonical" href="https://latindanceawards.com/">
 <link rel="alternate" hreflang="de" href="https://latindanceawards.com/">
-<link rel="alternate" hreflang="en" href="https://latindanceawards.com/?lang=en">
+<link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/">
 <link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -958,9 +958,8 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
     try{ localStorage.setItem("lda-lang",l); }catch(e){}
     document.dispatchEvent(new CustomEvent("langchange",{detail:l}));
   }
-  document.querySelectorAll(".lang button").forEach(function(b){ b.addEventListener("click",function(){ setLang(b.dataset.lang); }); });
-  var start="de";
-  try{ var q=new URLSearchParams(location.search).get("lang"); if(q==="en"||q==="de") start=q; else if(localStorage.getItem("lda-lang")) start=localStorage.getItem("lda-lang"); }catch(e){}
+  document.querySelectorAll(".lang button").forEach(function(b){ b.addEventListener("click",function(){ if(b.dataset.lang==="en"){ location.href="/en/"; } else setLang(b.dataset.lang); }); });
+  var start="de"; try{ if(new URLSearchParams(location.search).get("lang")==="en"){ location.replace("/en/"+location.hash); return; } }catch(e){}
   META.de={title:document.title, desc:document.querySelector('meta[name="description"]').content};
 
   /* =====================================================================

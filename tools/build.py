@@ -411,7 +411,7 @@ def page(fname, title_de, desc_de, title_en, desc_en, canonical, main_html, en_d
     head = head.replace('href="https://latindanceawards.com/?lang=en"', f'href="https://latindanceawards.com/{canonical}?lang=en"')
     head = head.replace('content="https://latindanceawards.com/"', f'content="https://latindanceawards.com/{canonical}"')
     html = (head + '<style>' + HEAD_CSS + PAGE_CSS + '</style>\n</head>\n<body>\n\n' + HEADER + '\n\n<main id="top">\n' + main_html
-            + '\n</main>\n\n' + FOOTER + '\n\n<script>\n(function(){\n  var EN=' + json.dumps(en, ensure_ascii=False) + ';\n'
+            + '\n</main>\n\n' + FOOTER + '\n\n<script>\n(function(){\n  var EN=' + json.dumps(en, ensure_ascii=False, sort_keys=True) + ';\n'
             + '  var META={en:{title:' + json.dumps(title_en, ensure_ascii=False) + ',desc:' + json.dumps(desc_en, ensure_ascii=False) + '}};\n'
             + LANG_JS + page_js + '\n  if(start==="en") setLang("en");\n})();\n</script>\n' + NAV_JS + '</body>\n</html>\n')
     if '/' in fname:

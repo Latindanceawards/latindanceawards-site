@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#080707">
 <link rel="canonical" href="https://latindanceawards.com/deutschland">
 <link rel="alternate" hreflang="de" href="https://latindanceawards.com/deutschland">
-<link rel="alternate" hreflang="en" href="https://latindanceawards.com/deutschland?lang=en">
+<link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/deutschland">
 <link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/deutschland">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -793,9 +793,8 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
     document.querySelectorAll(".lang button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.lang===l ? "true":"false"); });
     try{ localStorage.setItem("lda-lang",l); }catch(e){}
   }
-  document.querySelectorAll(".lang button").forEach(function(b){ b.addEventListener("click",function(){ setLang(b.dataset.lang); }); });
-  var start="de";
-  try{ var q=new URLSearchParams(location.search).get("lang"); if(q==="en"||q==="de") start=q; else if(localStorage.getItem("lda-lang")) start=localStorage.getItem("lda-lang"); }catch(e){}
+  document.querySelectorAll(".lang button").forEach(function(b){ b.addEventListener("click",function(){ if(b.dataset.lang==="en"){ location.href="/en/deutschland"; } else setLang(b.dataset.lang); }); });
+  var start="de"; try{ if(new URLSearchParams(location.search).get("lang")==="en"){ location.replace("/en/deutschland"+location.hash); return; } }catch(e){}
   if(start==="en") setLang("en");
 
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
