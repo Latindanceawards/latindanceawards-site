@@ -30,6 +30,8 @@ TOPIC_PAGES = [('bachata-tanzen', 'Bachata tanzen lernen', 'Learn to dance Bacha
                ('bachata-musik', 'Bachata Musik', 'Bachata music'),
                ('bachata-tanzschule', 'Bachata Tanzschule', 'Bachata dance school'),
                ('bachata-tanzkurs', 'Bachata Tanzkurs', 'Bachata dance course'),
+               ('bachata-salsa-unterschied', 'Salsa und Bachata', 'Salsa and Bachata'),
+               ('bachata-schritte', 'Bachata Schritte', 'Bachata steps'),
                ('bachata-fuer-anfaenger', 'Bachata für Anfänger', 'Bachata for beginners'),
                ('bachata-ladies-styling', 'Bachata Ladies Styling', 'Bachata ladies styling'),
                ('bachata-moderna', 'Bachata Moderna', 'Bachata Moderna'),
@@ -2029,3 +2031,179 @@ guide_page('bachata-tanzschule', 'bts',
    'A Bachata dance school suits you when style, level and atmosphere fit. Here you learn what to look for and where to find schools in your city.'),
   [('check', 'Für <b>Anfänger</b> ohne Partner', 'For <b>beginners</b> without a partner'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
   ts_sections, ts_faq, sibling_group='topic')
+
+
+# ======================================================================
+# SALSA UND BACHATA and BACHATA SCHRITTE (added 2026-11-04)
+# Facts: de.wikipedia.org (Bachata, Salsa (Tanz)), checked 2026-11-04. No school claims.
+# ======================================================================
+SALSA_WIKI = '<a href="https://de.wikipedia.org/wiki/Salsa_(Tanz)" rel="noopener">Wikipedia</a>'
+
+vs_sections = [
+ ('Salsa und Bachata: Das sind die wichtigsten Unterschiede', 'Salsa and Bachata: the main differences', [
+   ('p', f'Salsa und Bachata sind beide Paartänze aus der Karibik, und viele Tanzschulen bieten sie nebeneinander an. Trotzdem sind sie verschieden: Salsa tanzt du in einem Achter-Muster mit Pausen, Bachata in einem Vierer-Muster mit Tap. Bachata stammt aus der Dominikanischen Republik ({WIKI}), Salsa ist ein lateinamerikanischer Gesellschaftstanz mit afrokaribischen und europäischen Wurzeln ({SALSA_WIKI}). Auf dieser Seite vergleichen wir beide Tänze für Einsteiger und zeigen, womit du am besten startest.',
+          f'Salsa and Bachata are both couple dances from the Caribbean, and many dance schools offer them side by side. Still, they differ: Salsa runs in an eight-count pattern with pauses, Bachata in a four-count pattern with a tap. Bachata comes from the Dominican Republic ({WIKI_EN}), while Salsa is a Latin American social dance with Afro-Caribbean and European roots ({SALSA_WIKI}). On this page we compare both dances for beginners and show you which one to start with.'),
+   ('p', 'Kurz gesagt: Wer einen ruhigen, durchgehenden Schritt mit klarem Tap mag, fühlt sich bei Bachata schnell zu Hause. Wer lieber ein Muster mit Pausen und Drehungen lernt, findet bei Salsa einen guten Einstieg. Beides lässt sich später kombinieren.',
+         'In short: if you like a steady, continuous step with a clear tap, you will feel at home in Bachata quickly. If you prefer a pattern with pauses and turns, Salsa is a good way in. You can combine both later.'),
+ ]),
+ ('Herkunft und Geschichte im Vergleich', 'Origin and history compared', [
+   ('p', 'Bachata entstand Anfang der 1960er-Jahre in der Dominikanischen Republik. Zuerst war sie romantische Gitarrenmusik in der Tradition des Bolero und wurde weniger getanzt. Mit der Zeit nahm die Musik Einflüsse des Merengue auf, die Tempi stiegen, und Bachata wurde Tanzmusik. 2019 nahm die UNESCO Bachata in die Liste des immateriellen Kulturerbes auf.',
+         'Bachata emerged in the early 1960s in the Dominican Republic. At first it was romantic guitar music in the tradition of the bolero and was danced less often. Over time the music took on influences from merengue, tempos rose, and Bachata became dance music. In 2019 UNESCO added Bachata to its list of intangible cultural heritage.'),
+   ('p', 'Salsa hat ihre Wurzeln in Rumba, Danzón, Mambo, Son und Latin Jazz. Nach dem Zweiten Weltkrieg brachten Auswanderer aus Kuba, Puerto Rico, Kolumbien und Venezuela diese Traditionen nach New York. Nach Deutschland kam Salsa Anfang der 1980er-Jahre. Salsa ist also die ältere Tanzfamilie, Bachata als eigener Tanz die jüngere, und in Europa hat sie sich in den letzten Jahren stark verbreitet.',
+         'Salsa has its roots in rumba, danzón, mambo, son and Latin jazz. After the Second World War, emigrants from Cuba, Puerto Rico, Colombia and Venezuela brought these traditions to New York. Salsa reached Germany in the early 1980s. So Salsa is the older dance family and Bachata the younger dance in its own right, and in Europe it has spread strongly in recent years.'),
+ ]),
+ ('Musik und Rhythmus: Salsa gegen Bachata', 'Music and rhythm: Salsa versus Bachata', [
+   ('p', 'Beide Musikrichtungen stehen im 4/4-Takt, klingen aber unterschiedlich. Bachata nutzt traditionell zwei akustische Gitarren, dazu Bongos, Bass und Güira. Das Tempo liegt etwa zwischen 100 und 160 Schlägen pro Minute. Salsa lebt von den Schlaginstrumenten, der Clave und der betonten vierten Zählzeit, auf der beim Tanzen die Pause liegt.',
+         'Both kinds of music are in 4/4 time but sound different. Bachata traditionally uses two acoustic guitars plus bongos, bass and güira. The tempo is roughly between 100 and 160 beats per minute. Salsa lives on its percussion, the clave and the accented fourth beat, where the pause falls when you dance.'),
+   ('p', 'Zum Reinhören hilft unser Ratgeber <a href="bachata-musik.html">Bachata Musik</a>. Wenn du Bachata und Salsa auf einer Party hörst, achte auf die Gitarre: Sie führt Bachata, während bei Salsa Bläser und Percussion den Ton angeben.',
+         'To listen in, our guide <a href="bachata-musik.html">Bachata music</a> helps. When you hear Bachata and Salsa at the same party, listen for the guitar: it leads Bachata, while in Salsa brass and percussion set the tone.'),
+ ]),
+ ('Grundschritt: Acht Zählzeiten gegen vier', 'Basic step: eight counts versus four', [
+   ('p', 'Der Salsa-Grundschritt dauert zwei Takte, also zählst du bis acht: 1, 2, 3, Pause, 5, 6, 7, Pause. Es wird also nur auf drei von vier Schlägen gestiegen, auf der vierten Zählzeit ruht der Fuß. Je nach Stil wechselt die Richtung auf der 1 („on 1“) oder auf der 2 („on 2“).',
+         'The Salsa basic step lasts two bars, so you count to eight: 1, 2, 3, pause, 5, 6, 7, pause. You step on only three of four beats, and your foot rests on the fourth count. Depending on the style the direction changes on 1 ("on 1") or on 2 ("on 2").'),
+   ('p', 'Beim Bachata-Grundschritt machst du auf 1, 2 und 3 je einen Schritt, auf der 4 folgt ein Tap mit Hüftbewegung. Die Bewegung kommt aus den Knien und der Hüfte. Eine genaue Anleitung steht im Ratgeber <a href="bachata-grundschritt.html">Bachata Grundschritt</a>. Weil Bachata nicht standardisiert ist, tanzen Schulen und Stile den Schritt leicht unterschiedlich.',
+         'In the Bachata basic step you take one step each on 1, 2 and 3, and on 4 comes a tap with a hip movement. The movement comes from the knees and hips. A full walkthrough is in the guide <a href="bachata-grundschritt.html">Bachata basic step</a>. Because Bachata is not standardised, schools and styles dance the step slightly differently.'),
+ ]),
+ ('Haltung, Nähe und Stil: Wie fühlen sich die Tänze an?', 'Hold, closeness and style: how do the dances feel?', [
+   ('p', 'Bachata wird meist eng und hüftbetont getanzt. Die europäische Variante hält etwas mehr Abstand und enthält Figuren. Neuere Stile wie <a href="bachata-sensual.html">Bachata Sensual</a> ergänzen Körperwellen und Oberkörperbewegungen, und <a href="bachata-dominicana.html">Bachata Dominicana</a> bleibt näher am ursprünglichen Stil. Eine Übersicht der Stile findest du im Ratgeber <a href="bachata-tanzen.html">Bachata tanzen</a>.',
+         'Bachata is usually danced close and hip-focused. The European version keeps a little more distance and includes figures. Newer styles such as <a href="bachata-sensual.html">Bachata Sensual</a> add body waves and upper-body movement, and <a href="bachata-dominicana.html">Bachata Dominicana</a> stays closer to the original style. An overview of the styles is in the guide <a href="bachata-tanzen.html">Dancing Bachata</a>.'),
+   ('p', 'Salsa wird je nach Stil mit mehr Drehungen und Wechseln der Position getanzt. Welche Tanzweise dir besser gefällt, merkst du am schnellsten in einer Probestunde.',
+         'Depending on the style, Salsa is danced with more turns and changes of position. The quickest way to find out which you prefer is a trial class.'),
+ ]),
+ ('Salsa oder Bachata zuerst lernen?', 'Learn Salsa or Bachata first?', [
+   ('ul', [
+     ('<strong>Du magst klare, gleichmäßige Schritte:</strong> Starte mit Bachata. Der Vierer-Rhythmus mit dem Tap ist leicht zu zählen.', '<strong>You like clear, even steps:</strong> start with Bachata. The four-count rhythm with the tap is easy to count.'),
+     ('<strong>Du magst Muster mit Pausen und Drehungen:</strong> Salsa kann besser passen. Der Achter-Rhythmus braucht etwas mehr Konzentration.', '<strong>You like patterns with pauses and turns:</strong> Salsa may suit you better. The eight-count rhythm needs a bit more concentration.'),
+     ('<strong>Du weißt es noch nicht:</strong> Besuche je eine Probestunde. Viele Schulen bieten beides an, siehe unsere <a href="bachata-staedte-deutschland.html">Übersicht der Städte und Schulen</a>.', '<strong>You do not know yet:</strong> take one trial class of each. Many schools offer both, see our <a href="bachata-staedte-deutschland.html">overview of cities and schools</a>.'),
+     ('<strong>Du hast keinen Partner:</strong> Das ist bei beiden Tänzen normal, in den meisten Kursen wechseln die Partner.', '<strong>You have no partner:</strong> that is normal for both dances, in most classes partners rotate.'),
+   ]),
+   ('p', 'Die Schritte unterscheiden sich, aber das Grundprinzip bleibt gleich: Du hörst auf die Musik, hältst Kontakt zum Partner und tanzt auf dem Rhythmus. Wer eines der beiden Tänze kann, lernt den anderen meist schneller. Im Ratgeber <a href="bachata-tanzkurs.html">Bachata Tanzkurs</a> steht, worauf du bei der Kurswahl achtest.',
+         'The steps differ, but the basic principle stays the same: you listen to the music, keep contact with your partner and dance on the rhythm. Whoever knows one of the two dances usually learns the other faster. The guide <a href="bachata-tanzkurs.html">Bachata dance course</a> explains what to look for when choosing a class.'),
+ ]),
+ ('Salsa und Bachata Kurse in deiner Stadt', 'Salsa and Bachata classes in your city', [
+   ('p', f'Für Bachata gibt es Übersichten mit Links zu den Websites der Schulen für {CITY_LINKS_DE}. Die Listen sind alphabetisch und keine Wertung. Ob eine Schule auch Salsa anbietet, steht auf ihrer eigenen Website, bitte prüfe es dort.',
+         f'For Bachata we have overviews with links to schools\' websites for {CITY_LINKS_EN}. The lists are alphabetical and not a rating. Whether a school also offers Salsa is stated on its own website, so please check there.'),
+   ('p', 'Das offizielle Ranking der Bachata-Schulen erscheint am <strong>20. Dezember 2026</strong> auf der <a href="rankings.html">Ranking-Seite</a>. Die Methode steht auf der <a href="index.html#method">Startseite</a>. Du leitest eine Schule? <a href="bewerbung.html">Bewirb dich kostenlos bis zum 30. November</a>.',
+         'The official ranking of Bachata schools is published on <strong>December 20, 2026</strong> on the <a href="rankings.html">ranking page</a>. The method is explained on the <a href="index.html#method">home page</a>. Do you run a school? <a href="bewerbung.html">Apply for free by November 30</a>.'),
+ ]),
+]
+
+vs_faq = [
+ ('Was ist der Unterschied zwischen Salsa und Bachata?', 'What is the difference between Salsa and Bachata?',
+  'Salsa wird in einem Achter-Muster mit Pausen auf der 4 und der 8 getanzt, Bachata in einem Vierer-Muster mit einem Tap auf der 4. Auch Herkunft und Musik unterscheiden sich: Bachata kommt aus der Dominikanischen Republik und lebt von der Gitarre.',
+  'Salsa is danced in an eight-count pattern with pauses on 4 and 8, Bachata in a four-count pattern with a tap on 4. Origin and music differ too: Bachata comes from the Dominican Republic and is driven by the guitar.'),
+ ('Ist Bachata leichter als Salsa?', 'Is Bachata easier than Salsa?',
+  'Viele Einsteiger finden den Bachata-Grundschritt leichter zu zählen, weil er nur vier Zählzeiten hat. Ob dir einer der beiden Tänze leichter fällt, hängt aber von dir ab. Eine Probestunde zeigt es am schnellsten.',
+  'Many beginners find the Bachata basic step easier to count because it has only four counts. Which of the two dances comes easier depends on you, though. A trial class shows it fastest.'),
+ ('Kann ich Salsa und Bachata gleichzeitig lernen?', 'Can I learn Salsa and Bachata at the same time?',
+  'Ja. Viele Schulen bieten beide Tänze an, und die Grundprinzipien sind ähnlich. Plane am Anfang aber genug Übungszeit ein, damit sich die Schritte nicht vermischen.',
+  'Yes. Many schools offer both dances and the basic principles are similar. At the start, plan enough practice time so the steps do not blur together.'),
+ ('Brauche ich einen Partner für Salsa oder Bachata?', 'Do I need a partner for Salsa or Bachata?',
+  'In der Regel nicht. In den meisten Kursen wechseln die Partner. Frag vor der Probestunde nach.',
+  'Usually not. In most classes partners rotate. Ask before the trial class.'),
+ ('Woher kommt Bachata?', 'Where does Bachata come from?',
+  'Aus der Dominikanischen Republik. Sie entstand Anfang der 1960er-Jahre und steht seit 2019 auf der UNESCO-Liste des immateriellen Kulturerbes.',
+  'From the Dominican Republic. It emerged in the early 1960s and has been on UNESCO\'s list of intangible cultural heritage since 2019.'),
+ ('Wann erscheint das Ranking der Bachata-Schulen?', 'When is the ranking of Bachata schools published?',
+  'Am 20. Dezember 2026 um 19 Uhr auf der <a href="rankings.html">Ranking-Seite</a>.',
+  'On December 20, 2026 at 7 pm (CET) on the <a href="rankings.html">ranking page</a>.'),
+]
+
+guide_page('bachata-salsa-unterschied', 'bsu',
+  'Salsa und Bachata: Unterschiede, Musik und Schritte',
+  'Salsa und Bachata im Vergleich: Herkunft, Musik, Grundschritt mit Zählzeiten und die Frage, womit Anfänger starten. Mit Links zu Kursen in deiner Stadt.',
+  'Salsa and Bachata: differences, music and steps',
+  'Salsa and Bachata compared: origin, music, the basic step with counts and which to start with as a beginner. With links to classes in your city.',
+  'Salsa und Bachata', ('Salsa und Bachata · Vergleich', 'Salsa and Bachata · Comparison'),
+  ('Salsa und Bachata: <em class="foil">Unterschiede</em> im Überblick', 'Salsa and Bachata: the <em class="foil">differences</em> at a glance'),
+  ('Salsa und Bachata im Vergleich: Herkunft, Musik, Grundschritt und die Frage, womit du als Anfänger startest. Verständlich erklärt, mit Links zu Kursen.',
+   'Salsa and Bachata compared: origin, music, basic step and which to start with as a beginner. Clearly explained, with links to classes.'),
+  [('check', 'Für <b>Anfänger</b> ohne Partner', 'For <b>beginners</b> without a partner'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  vs_sections, vs_faq, sibling_group='topic')
+
+schr_sections = [
+ ('Bachata Schritte: Das lernst du als Erstes', 'Bachata steps: what you learn first', [
+   ('p', f'Bachata Schritte sind die Bausteine, aus denen du später ganze Tänze zusammensetzt. Bachata stammt aus der Dominikanischen Republik ({WIKI}), ist nicht standardisiert und kennt deshalb viele Varianten. In Einsteigerkursen lernst du trotzdem fast überall dieselben Grundbausteine: den Seitwärtsschritt mit Tap, den Wechsel von Vor und Zurück, die Hüftbewegung und erste Drehungen. Diese Seite erklärt sie in der Reihenfolge, in der du sie üben solltest.',
+          f'Bachata steps are the building blocks you later put together into whole dances. Bachata comes from the Dominican Republic ({WIKI_EN}), is not standardised and therefore has many variations. Still, in beginner classes you learn almost everywhere the same basic building blocks: the side step with a tap, the switch between forward and back, the hip movement and first turns. This page explains them in the order you should practise them.'),
+   ('p', 'Die genaue Anleitung zum ersten Schritt steht im Ratgeber <a href="bachata-grundschritt.html">Bachata Grundschritt</a>. Hier geht es um den Weg danach.',
+         'The exact walkthrough of the first step is in the guide <a href="bachata-grundschritt.html">Bachata basic step</a>. Here we cover the path after it.'),
+ ]),
+ ('Rhythmus und Zählzeiten: Die Grundlage aller Schritte', 'Rhythm and counts: the basis of every step', [
+   ('p', 'Bachata steht im 4/4-Takt, das Tempo liegt etwa zwischen 100 und 160 Schlägen pro Minute. Du zählst 1, 2, 3, 4 und machst auf den ersten drei Zählzeiten je einen Schritt. Auf der 4 folgt ein Tap, bei dem die Hüfte mitgeht. Wer diesen Takt im Ohr hat, kann jeden weiteren Schritt darauf aufbauen.',
+         'Bachata is in 4/4 time and the tempo is roughly between 100 and 160 beats per minute. You count 1, 2, 3, 4 and take one step on each of the first three counts. On 4 comes a tap with the hip moving along. Once you have this beat in your ears, you can build every further step on it.'),
+   ('p', 'Zum Üben hilft Musik mit klarem Gitarrenmotiv. Mehr dazu im Ratgeber <a href="bachata-musik.html">Bachata Musik</a>. Beginne mit einem langsamen Lied und steigere das Tempo erst, wenn der Tap sicher sitzt.',
+         'Music with a clear guitar motif helps for practice. More in the guide <a href="bachata-musik.html">Bachata music</a>. Start with a slow song and raise the tempo only when the tap sits securely.'),
+ ]),
+ ('Die wichtigsten Bachata Schritte für Anfänger', 'The most important Bachata steps for beginners', [
+   ('ul', [
+     ('<strong>Seitwärts-Grundschritt:</strong> Drei kleine Schritte zur Seite und ein Tap. Das ist die Basis, alle anderen Schritte bauen darauf auf.', '<strong>Side basic step:</strong> three small steps to the side and a tap. This is the base, all other steps build on it.'),
+     ('<strong>Vor und zurück:</strong> Derselbe Rhythmus, aber nach vorn und hinten statt zur Seite. Er trainiert die Führung der Partner.', '<strong>Forward and back:</strong> the same rhythm, but forward and backward instead of sideways. It trains the lead and follow between partners.'),
+     ('<strong>Hüftbewegung auf der 4:</strong> Beim Tap zieht eine Hüfte leicht nach oben. Die Bewegung kommt aus den Knien, nicht aus dem Oberkörper.', '<strong>Hip movement on 4:</strong> at the tap one hip lifts slightly. The movement comes from the knees, not the upper body.'),
+     ('<strong>Gewichtswechsel:</strong> Du verlagerst das Gewicht bewusst von einem Fuß auf den anderen. Er macht den Schritt weich und gibt dem Partner ein klares Signal.', '<strong>Weight change:</strong> you shift your weight deliberately from one foot to the other. It makes the step smooth and gives your partner a clear signal.'),
+     ('<strong>Erste Drehungen:</strong> Die Folgende dreht sich unter dem Arm, während die Führende den Grundschritt weitertanzt. Das ist der erste Schritt zur Figur.', '<strong>First turns:</strong> the follower turns under the arm while the leader keeps dancing the basic step. This is the first step towards a figure.'),
+   ]),
+   ('p', 'Welche Bausteine genau in welchem Kurs dran sind, unterscheidet sich je nach Schule und Stil. Frag in der Probestunde nach dem Lehrplan.',
+         'Which building blocks exactly come up in which class differs by school and style. Ask about the curriculum in the trial class.'),
+ ]),
+ ('Bachata Schritte je nach Stil', 'Bachata steps by style', [
+   ('h3', 'Bachata Dominicana', 'Bachata Dominicana'),
+   ('p', 'Der ursprüngliche Stil mit ausgeprägter Fußarbeit und enger Haltung. Die Schritte sind schnell und spielerisch. Mehr im Ratgeber <a href="bachata-dominicana.html">Bachata Dominicana</a>.',
+         'The original style with pronounced footwork and a close hold. The steps are quick and playful. More in the guide <a href="bachata-dominicana.html">Bachata Dominicana</a>.'),
+   ('h3', 'Bachata Moderna', 'Bachata Moderna'),
+   ('p', 'Grundschritt plus Drehungen und Elemente anderer Tänze. Viele Einsteigerkurse beginnen hier. Siehe <a href="bachata-moderna.html">Bachata Moderna</a>.',
+         'Basic step plus turns and elements from other dances. Many beginner classes start here. See <a href="bachata-moderna.html">Bachata Moderna</a>.'),
+   ('h3', 'Bachata Sensual', 'Bachata Sensual'),
+   ('p', 'Ein neuerer Stil aus den 2010er-Jahren mit Körperwellen und Oberkörperbewegungen, zum Teil aus dem Zouk übernommen. Siehe <a href="bachata-sensual.html">Bachata Sensual</a>.',
+         'A newer style from the 2010s with body waves and upper-body movements, partly borrowed from zouk. See <a href="bachata-sensual.html">Bachata Sensual</a>.'),
+ ]),
+ ('Vom Schritt zur Figur: So übst du', 'From step to figure: how to practise', [
+   ('ul', [
+     ('<strong>Täglich fünf Minuten:</strong> Kurze, regelmäßige Einheiten bringen mehr als eine lange Stunde pro Woche.', '<strong>Five minutes a day:</strong> short, regular sessions beat one long hour a week.'),
+     ('<strong>Laut mitzählen:</strong> Zähle 1, 2, 3, 4, bis der Tap automatisch kommt.', '<strong>Count out loud:</strong> count 1, 2, 3, 4 until the tap comes automatically.'),
+     ('<strong>Klein anfangen:</strong> Kleine Schritte und lockere Knie lassen sich später leichter in Figuren einbauen.', '<strong>Start small:</strong> small steps and relaxed knees are easier to build into figures later.'),
+     ('<strong>Im Spiegel prüfen:</strong> Achte darauf, dass Gewicht und Hüfte zum Takt passen.', '<strong>Check in the mirror:</strong> make sure your weight and hip match the beat.'),
+     ('<strong>Mit Partner üben:</strong> Erst im Kurs oder auf einem Social merkst du, wie Führen und Folgen die Schritte verändern. Termine siehst du bei den <a href="bachata-socials.html">Bachata-Socials</a>.', '<strong>Practise with a partner:</strong> only in class or at a social do you notice how leading and following change the steps. Dates are on the <a href="bachata-socials.html">Bachata socials</a> page.'),
+   ]),
+ ]),
+ ('Bachata Schritte im Kurs lernen', 'Learning Bachata steps in class', [
+   ('p', 'Videos helfen beim Einstieg, aber im Kurs bekommst du Korrektur und lernst das Führen und Folgen. Wie du einen Kurs wählst, steht im Ratgeber <a href="bachata-fuer-anfaenger.html">Bachata für Anfänger</a> und bei <a href="bachata-tanzkurs.html">Bachata Tanzkurs</a>.',
+         'Videos help you get started, but in class you receive corrections and learn leading and following. How to choose a class is covered in the guide <a href="bachata-fuer-anfaenger.html">Bachata for beginners</a> and at <a href="bachata-tanzkurs.html">Bachata dance course</a>.'),
+   ('p', f'Schulen mit Links zu ihren Websites findest du für {CITY_LINKS_DE}. Die Listen sind alphabetisch und keine Wertung. Das offizielle Ranking erscheint am <strong>20. Dezember 2026</strong> auf der <a href="rankings.html">Ranking-Seite</a>, die Methode steht auf der <a href="index.html#method">Startseite</a>.',
+         f'Schools with links to their websites are listed for {CITY_LINKS_EN}. The lists are alphabetical and not a rating. The official ranking is published on <strong>December 20, 2026</strong> on the <a href="rankings.html">ranking page</a>, and the method is on the <a href="index.html#method">home page</a>.'),
+   ('p', 'Du leitest eine Schule? <a href="bewerbung.html">Bewirb dich kostenlos bis zum 30. November</a>.',
+         'Do you run a school? <a href="bewerbung.html">Apply for free by November 30</a>.'),
+ ]),
+]
+
+schr_faq = [
+ ('Welche Bachata Schritte lernt man als Erstes?', 'Which Bachata steps do you learn first?',
+  'Zuerst den Grundschritt mit drei Schritten und einem Tap auf der 4, dann Vor und Zurück, die Hüftbewegung und erste Drehungen.',
+  'First the basic step with three steps and a tap on 4, then forward and back, the hip movement and first turns.'),
+ ('Wie viele Bachata Schritte gibt es?', 'How many Bachata steps are there?',
+  'Eine feste Zahl gibt es nicht, denn Bachata ist nicht standardisiert. Es gibt viele Varianten und Bewegungsfolgen, je nach Stil und Schule.',
+  'There is no fixed number, because Bachata is not standardised. There are many variations and sequences, depending on style and school.'),
+ ('Kann ich Bachata Schritte zu Hause lernen?', 'Can I learn Bachata steps at home?',
+  'Den Grundschritt ja, mit Musik und einem Spiegel. Führen und Folgen lernst du aber erst mit Partner, am besten im Kurs.',
+  'The basic step yes, with music and a mirror. You only learn leading and following with a partner, ideally in class.'),
+ ('Wie schnell ist Bachata?', 'How fast is Bachata?',
+  'Das Tempo liegt etwa zwischen 100 und 160 Schlägen pro Minute im 4/4-Takt. Anfänger üben am besten zu langsameren Liedern.',
+  'The tempo is roughly between 100 and 160 beats per minute in 4/4 time. Beginners practise best to slower songs.'),
+ ('Unterscheiden sich die Schritte je nach Stil?', 'Do the steps differ by style?',
+  'Ja. Dominicana betont die Fußarbeit, Moderna ergänzt Drehungen, Sensual Körperwellen. Der Grundrhythmus bleibt gleich.',
+  'Yes. Dominicana stresses footwork, Moderna adds turns, Sensual adds body waves. The basic rhythm stays the same.'),
+ ('Wann erscheint das Ranking der Bachata-Schulen?', 'When is the ranking of Bachata schools published?',
+  'Am 20. Dezember 2026 um 19 Uhr auf der <a href="rankings.html">Ranking-Seite</a>.',
+  'On December 20, 2026 at 7 pm (CET) on the <a href="rankings.html">ranking page</a>.'),
+]
+
+guide_page('bachata-schritte', 'bsc',
+  'Bachata Schritte: Die wichtigsten Grundschritte lernen',
+  'Bachata Schritte für Anfänger: Rhythmus, Zählzeiten, Seitwärtsschritt, Hüfte und erste Drehungen, dazu Übungstipps und Links zu Kursen in deiner Stadt.',
+  'Bachata steps: learn the most important basics',
+  'Bachata steps for beginners: rhythm, counts, side step, hip movement and first turns, plus practice tips and links to classes in your city.',
+  'Bachata Schritte', ('Bachata Schritte · Ratgeber', 'Bachata steps · Guide'),
+  ('Bachata Schritte: <em class="foil">Grundbausteine</em> für Anfänger', 'Bachata steps: <em class="foil">building blocks</em> for beginners'),
+  ('Bachata Schritte für Anfänger: Rhythmus, Zählzeiten, Seitwärtsschritt, Hüftbewegung und erste Drehungen, in der Reihenfolge, in der du sie übst.',
+   'Bachata steps for beginners: rhythm, counts, side step, hip movement and first turns, in the order you should practise them.'),
+  [('check', 'Für <b>Anfänger</b> ohne Partner', 'For <b>beginners</b> without a partner'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  schr_sections, schr_faq, sibling_group='topic')
