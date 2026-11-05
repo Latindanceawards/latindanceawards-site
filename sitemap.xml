@@ -9674,6 +9674,38 @@
   <url><loc>https://latindanceawards.com/ee/schools/flame-dance-studio</loc></url>
   <url><loc>https://latindanceawards.com/ee/schools/salsa-club-lutsk</loc></url>
   <url><loc>https://latindanceawards.com/ee/schools/depo-dance-family</loc></url>
+  <url>
+    <loc>https://latindanceawards.com/bachata-salsa-unterschied</loc>
+    <lastmod>2026-11-04</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-salsa-unterschied"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-salsa-unterschied"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-salsa-unterschied"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/bachata-schritte</loc>
+    <lastmod>2026-11-04</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-schritte"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-schritte"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-schritte"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/bachata-lernen</loc>
+    <lastmod>2026-11-05</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-lernen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-lernen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-lernen"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/bachata-workshop</loc>
+    <lastmod>2026-11-05</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-workshop"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-workshop"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-workshop"/>
+  </url>
 
   <url>
     <loc>https://latindanceawards.com/en/</loc>
@@ -10692,14 +10724,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-tanzschule"/>
   </url>
   <url>
-    <loc>https://latindanceawards.com/bachata-salsa-unterschied</loc>
-    <lastmod>2026-11-04</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-salsa-unterschied"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-salsa-unterschied"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-salsa-unterschied"/>
-  </url>
-  <url>
     <loc>https://latindanceawards.com/en/bachata-salsa-unterschied</loc>
     <lastmod>2026-11-04</lastmod>
     <priority>0.8</priority>
@@ -10708,7 +10732,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-salsa-unterschied"/>
   </url>
   <url>
-    <loc>https://latindanceawards.com/bachata-schritte</loc>
+    <loc>https://latindanceawards.com/en/bachata-schritte</loc>
     <lastmod>2026-11-04</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-schritte"/>
@@ -10716,11 +10740,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-schritte"/>
   </url>
   <url>
-    <loc>https://latindanceawards.com/en/bachata-schritte</loc>
-    <lastmod>2026-11-04</lastmod>
+    <loc>https://latindanceawards.com/en/bachata-lernen</loc>
+    <lastmod>2026-11-05</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-schritte"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-schritte"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-schritte"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-lernen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-lernen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-lernen"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/en/bachata-workshop</loc>
+    <lastmod>2026-11-05</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-workshop"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-workshop"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-workshop"/>
   </url>
 </urlset>

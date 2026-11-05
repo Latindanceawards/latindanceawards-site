@@ -32,6 +32,8 @@ TOPIC_PAGES = [('bachata-tanzen', 'Bachata tanzen lernen', 'Learn to dance Bacha
                ('bachata-tanzkurs', 'Bachata Tanzkurs', 'Bachata dance course'),
                ('bachata-salsa-unterschied', 'Salsa und Bachata', 'Salsa and Bachata'),
                ('bachata-schritte', 'Bachata Schritte', 'Bachata steps'),
+               ('bachata-lernen', 'Bachata lernen', 'Learn Bachata'),
+               ('bachata-workshop', 'Bachata Workshop', 'Bachata workshop'),
                ('bachata-fuer-anfaenger', 'Bachata für Anfänger', 'Bachata for beginners'),
                ('bachata-ladies-styling', 'Bachata Ladies Styling', 'Bachata ladies styling'),
                ('bachata-moderna', 'Bachata Moderna', 'Bachata Moderna'),
@@ -2207,3 +2209,175 @@ guide_page('bachata-schritte', 'bsc',
    'Bachata steps for beginners: rhythm, counts, side step, hip movement and first turns, in the order you should practise them.'),
   [('check', 'Für <b>Anfänger</b> ohne Partner', 'For <b>beginners</b> without a partner'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
   schr_sections, schr_faq, sibling_group='topic')
+
+# ---------- Bachata lernen ----------
+lern_sections = [
+ ('Bachata lernen: Die vier Wege im Überblick', 'Learning Bachata: the four routes at a glance', [
+   ('p', f'Bachata lernen kannst du auf mehreren Wegen, und die meisten Tänzer kombinieren sie. Der Tanz stammt aus der Dominikanischen Republik ({WIKI}) und wird heute in vielen Stilen getanzt. Für den Einstieg brauchst du keine Vorkenntnisse und keinen festen Partner. Die vier häufigsten Wege sind der Kurs in einer Tanzschule, Workshops, Videos zum Selbststudium und das Ausprobieren auf einer Party. Jeder Weg hat andere Stärken, und diese Seite hilft dir bei der Wahl.',
+          f'You can learn Bachata in several ways, and most dancers combine them. The dance comes from the Dominican Republic ({WIKI_EN}) and is danced in many styles today. To start you need no prior experience and no fixed partner. The four most common routes are a class at a dance school, workshops, videos for self-study and trying it out at a party. Each route has different strengths, and this page helps you choose.'),
+ ]),
+ ('Bachata lernen im Kurs', 'Learning Bachata in a class', [
+   ('p', 'Ein Kurs ist für die meisten Anfänger der sicherste Start. Du bekommst Korrektur von einer Lehrkraft, lernst Führen und Folgen mit wechselnden Partnern und hast einen festen Termin, der dich bei der Stange hält. Worauf du bei der Wahl achtest, steht im Ratgeber <a href="bachata-tanzkurs.html">Bachata Tanzkurs</a> und bei <a href="bachata-tanzschule.html">Bachata Tanzschule</a>. Viele Schulen bieten eine Probestunde an, frag vorher nach.',
+         'For most beginners a class is the safest start. You get corrections from a teacher, learn leading and following with changing partners and have a fixed date that keeps you going. What to look for when choosing is in the guide <a href="bachata-tanzkurs.html">Bachata dance course</a> and at <a href="bachata-tanzschule.html">Bachata dance school</a>. Many schools offer a trial class, so ask beforehand.'),
+ ]),
+ ('Bachata lernen mit Workshops und Videos', 'Learning Bachata with workshops and videos', [
+   ('p', 'Workshops dauern meist einen Abend oder ein Wochenende und vertiefen ein Thema, zum Beispiel Drehungen oder Musikalität. Sie ersetzen den Kurs nicht, ergänzen ihn aber gut. Mehr dazu auf der Seite <a href="bachata-workshop.html">Bachata Workshop</a>. Videos eignen sich zum Wiederholen und für den Grundschritt, ersetzen aber nicht die Rückmeldung einer Lehrkraft und das Gefühl für den Partner.',
+         'Workshops usually last an evening or a weekend and deepen one topic, for example turns or musicality. They do not replace a class but complement it well. More on the page <a href="bachata-workshop.html">Bachata workshop</a>. Videos suit repetition and the basic step, but do not replace a teacher’s feedback and the feel for your partner.'),
+ ]),
+ ('Bachata lernen: Das übst du zuerst', 'Learning Bachata: what to practise first', [
+   ('ul', [
+     ('<strong>Rhythmus hören:</strong> Bachata steht im 4/4-Takt. Zähle 1, 2, 3, 4 und lerne, den Tap auf der 4 zu erkennen. Hilfreich ist der Ratgeber <a href="bachata-musik.html">Bachata Musik</a>.', '<strong>Hear the rhythm:</strong> Bachata is in 4/4 time. Count 1, 2, 3, 4 and learn to recognise the tap on 4. The guide <a href="bachata-musik.html">Bachata music</a> helps.'),
+     ('<strong>Grundschritt:</strong> Drei Schritte und ein Tap. Die Anleitung steht im Ratgeber <a href="bachata-grundschritt.html">Bachata Grundschritt</a>.', '<strong>Basic step:</strong> three steps and a tap. The walkthrough is in the guide <a href="bachata-grundschritt.html">Bachata basic step</a>.'),
+     ('<strong>Weitere Bausteine:</strong> Vor und zurück, Hüftbewegung und erste Drehungen findest du unter <a href="bachata-schritte.html">Bachata Schritte</a>.', '<strong>More building blocks:</strong> forward and back, hip movement and first turns are covered under <a href="bachata-schritte.html">Bachata steps</a>.'),
+     ('<strong>Stil wählen:</strong> Dominicana, Moderna und Sensual fühlen sich verschieden an. Probiere sie aus, bevor du dich festlegst.', '<strong>Choose a style:</strong> Dominicana, Moderna and Sensual feel different. Try them before you commit.'),
+   ]),
+ ]),
+ ('Bachata lernen ohne Partner', 'Learning Bachata without a partner', [
+   ('p', 'Du musst nicht mit einem Partner kommen. In den meisten Kursen wechseln die Paare durch, und alleine zu starten ist üblich. Wer mehr Sicherheit sucht, liest vorher den Ratgeber <a href="bachata-fuer-anfaenger.html">Bachata für Anfänger</a>. Für den Einstieg in die Tanzkultur lohnt sich auch ein Blick auf die <a href="bachata-party.html">Bachata Party</a> und die Termine der <a href="bachata-socials.html">Bachata-Socials</a>.',
+         'You do not need to bring a partner. In most classes the couples rotate, and starting alone is common. If you want more confidence, read the guide <a href="bachata-fuer-anfaenger.html">Bachata for beginners</a> first. To get into the dance culture, take a look at the <a href="bachata-party.html">Bachata party</a> and the dates on the <a href="bachata-socials.html">Bachata socials</a> page.'),
+ ]),
+ ('Häufige Fehler beim Bachata lernen', 'Common mistakes when learning Bachata', [
+   ('p', 'Viele Anfänger machen zu große Schritte, halten die Knie durchgedrückt oder zählen nicht mit. Das macht den Tanz hektisch und anstrengend. Kleine Schritte, weiche Knie und ein ruhiger Blick zum Partner helfen. Ein weiterer Klassiker ist, zu früh Figuren lernen zu wollen. Wer den Grundschritt sicher beherrscht, lernt Figuren später deutlich schneller.',
+         'Many beginners take steps that are too big, keep their knees locked or do not count along. This makes the dance hectic and tiring. Small steps, soft knees and a calm look at your partner help. Another classic is wanting to learn figures too early. If you master the basic step securely, you learn figures much faster later.'),
+   ('p', 'Auch die Musik wird oft unterschätzt. Wer Bachata regelmäßig hört, findet den Takt schneller und tanzt entspannter. Der Ratgeber <a href="bachata-tanzen.html">Bachata tanzen</a> fasst den Einstieg noch einmal zusammen, und die Unterschiede zur Salsa erklärt die Seite <a href="bachata-salsa-unterschied.html">Salsa und Bachata</a>.',
+         'Music is also often underestimated. If you listen to Bachata regularly, you find the beat faster and dance more relaxed. The guide <a href="bachata-tanzen.html">Bachata dancing</a> sums up the start once more, and the page <a href="bachata-salsa-unterschied.html">Salsa and Bachata</a> explains the differences from salsa.'),
+ ]),
+ ('Was du zum Bachata lernen mitbringst', 'What to bring when learning Bachata', [
+   ('p', 'Für den ersten Kurs reichen bequeme Kleidung und Schuhe, in denen du dich auf dem Boden drehen kannst. Straßenschuhe mit rutschiger oder sehr rauer Sohle sind ungeeignet. Manche Schulen empfehlen Tanzschuhe, aber für die ersten Stunden ist das keine Pflicht. Bring etwas zu trinken mit und plane Zeit ein, um in Ruhe anzukommen.',
+         'For the first class, comfortable clothes and shoes you can turn in on the floor are enough. Street shoes with a slippery or very rough sole are unsuitable. Some schools recommend dance shoes, but for the first lessons this is not mandatory. Bring something to drink and allow time to arrive calmly.'),
+ ]),
+ ('So bleibst du dran', 'How to keep going', [
+   ('ul', [
+     ('<strong>Regelmäßig statt lang:</strong> Kurze Übungseinheiten mehrmals pro Woche bringen mehr als eine lange.', '<strong>Regular rather than long:</strong> short practice sessions several times a week beat one long one.'),
+     ('<strong>Ein Ziel setzen:</strong> Zum Beispiel der erste Besuch einer Party oder eines Festivals, siehe <a href="bachata-festivals-deutschland.html">Bachata-Festivals</a>.', '<strong>Set a goal:</strong> for example your first party or festival, see <a href="bachata-festivals-deutschland.html">Bachata festivals</a>.'),
+     ('<strong>Geduld haben:</strong> Wie schnell du vorankommst, hängt von Übung, Kurs und Vorerfahrung ab. Vergleiche dich nicht mit anderen.', '<strong>Be patient:</strong> how fast you progress depends on practice, class and prior experience. Do not compare yourself with others.'),
+   ]),
+ ]),
+ ('Schulen zum Bachata lernen finden', 'Finding schools to learn Bachata', [
+   ('p', f'Schulen mit Links zu ihren Websites findest du für {CITY_LINKS_DE}. Die Listen sind alphabetisch und keine Wertung. Das offizielle Ranking erscheint am <strong>20. Dezember 2026</strong> auf der <a href="rankings.html">Ranking-Seite</a>, die Methode steht auf der <a href="index.html#method">Startseite</a>.',
+         f'Schools with links to their websites are listed for {CITY_LINKS_EN}. The lists are alphabetical and not a rating. The official ranking is published on <strong>December 20, 2026</strong> on the <a href="rankings.html">ranking page</a>, and the method is on the <a href="index.html#method">home page</a>.'),
+   ('p', 'Du leitest eine Schule? <a href="bewerbung.html">Bewirb dich kostenlos bis zum 30. November</a>.',
+         'Do you run a school? <a href="bewerbung.html">Apply for free by November 30</a>.'),
+ ]),
+]
+lern_faq = [
+ ('Wie kann ich Bachata lernen?', 'How can I learn Bachata?',
+  'Am besten im Kurs einer Tanzschule, ergänzt durch Workshops, Videos zum Wiederholen und Besuche auf Partys. Ein fester Partner ist nicht nötig.',
+  'Best in a class at a dance school, complemented by workshops, videos for repetition and visits to parties. A fixed partner is not needed.'),
+ ('Kann man Bachata alleine lernen?', 'Can you learn Bachata alone?',
+  'Den Grundschritt ja, mit Musik und einem Spiegel. Führen und Folgen lernst du aber nur mit Partner, am besten im Kurs.',
+  'The basic step yes, with music and a mirror. You only learn leading and following with a partner, ideally in class.'),
+ ('Wie lange dauert es, Bachata zu lernen?', 'How long does it take to learn Bachata?',
+  'Das hängt von Übung, Kurs und Vorerfahrung ab. Eine feste Dauer gibt es nicht. Frag in der Probestunde nach dem Lehrplan.',
+  'It depends on practice, class and prior experience. There is no fixed duration. Ask about the curriculum in the trial class.'),
+ ('Ist Bachata leicht zu lernen?', 'Is Bachata easy to learn?',
+  'Der Grundschritt gilt als einfach, weil er nur drei Schritte und einen Tap hat. Schwieriger werden Führen, Folgen und Musikalität.',
+  'The basic step is considered easy because it has only three steps and a tap. Leading, following and musicality are harder.'),
+ ('Brauche ich Vorkenntnisse zum Bachata lernen?', 'Do I need prior experience to learn Bachata?',
+  'Nein. Anfängerkurse setzen keine Vorkenntnisse voraus. Siehe <a href="bachata-fuer-anfaenger.html">Bachata für Anfänger</a>.',
+  'No. Beginner classes assume no prior experience. See <a href="bachata-fuer-anfaenger.html">Bachata for beginners</a>.'),
+ ('Wann erscheint das Ranking der Bachata-Schulen?', 'When is the ranking of Bachata schools published?',
+  'Am 20. Dezember 2026 um 19 Uhr auf der <a href="rankings.html">Ranking-Seite</a>.',
+  'On December 20, 2026 at 7 pm (CET) on the <a href="rankings.html">ranking page</a>.'),
+]
+guide_page('bachata-lernen', 'bln',
+  'Bachata lernen: So startest du als Anfänger',
+  'Bachata lernen als Anfänger: Kurs, Workshop oder Video? Die vier Wege im Vergleich, was du zuerst übst und wie du ohne Partner startest. Mit Links zu Schulen.',
+  'Learn Bachata: how to start as a beginner',
+  'Learn Bachata as a beginner: class, workshop or video? The four routes compared, what to practise first and how to start without a partner. With links to schools.',
+  'Bachata lernen', ('Bachata lernen · Ratgeber', 'Learn Bachata · Guide'),
+  ('Bachata lernen: Der <em class="foil">Einstieg</em> für Anfänger', 'Learn Bachata: the <em class="foil">start</em> for beginners'),
+  ('Bachata lernen als Anfänger: Kurs, Workshop oder Video? Die vier Wege im Vergleich, mit Übungstipps und Hinweisen, wie du ohne Partner startest.',
+   'Learn Bachata as a beginner: class, workshop or video? The four routes compared, with practice tips and advice on starting without a partner.'),
+  [('check', 'Für <b>Anfänger</b> ohne Partner', 'For <b>beginners</b> without a partner'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  lern_sections, lern_faq, sibling_group='topic')
+
+# ---------- Bachata Workshop ----------
+ws_sections = [
+ ('Bachata Workshop: Was ist das?', 'Bachata workshop: what is it?', [
+   ('p', f'Ein Bachata Workshop ist eine kurze, konzentrierte Unterrichtseinheit zu einem bestimmten Thema. Anders als ein laufender Kurs dauert er meist einen Abend, einen Tag oder ein Wochenende. Bachata stammt aus der Dominikanischen Republik ({WIKI}) und hat viele Stile, deshalb gibt es Workshops zu Dominicana, Moderna, Sensual und zu Querschnittsthemen wie Musikalität oder Partnerarbeit.',
+          f'A Bachata workshop is a short, focused teaching session on one topic. Unlike an ongoing class it usually lasts an evening, a day or a weekend. Bachata comes from the Dominican Republic ({WIKI_EN}) and has many styles, so there are workshops on Dominicana, Moderna, Sensual and on cross-cutting topics such as musicality or partner work.'),
+ ]),
+ ('Bachata Workshop oder Kurs?', 'Bachata workshop or class?', [
+   ('ul', [
+     ('<strong>Kurs:</strong> Regelmäßiger Termin über mehrere Wochen, baut Schritt für Schritt auf. Gut für den Einstieg, siehe <a href="bachata-tanzkurs.html">Bachata Tanzkurs</a>.', '<strong>Class:</strong> regular date over several weeks, builds up step by step. Good for starting, see <a href="bachata-tanzkurs.html">Bachata dance course</a>.'),
+     ('<strong>Workshop:</strong> Ein Thema in kurzer Zeit. Gut zum Vertiefen oder Ausprobieren eines Stils.', '<strong>Workshop:</strong> one topic in a short time. Good for deepening or trying out a style.'),
+   ]),
+   ('p', 'Wer noch nie getanzt hat, startet meist besser mit einem Kurs. Ein Workshop für Einsteiger ist aber möglich, wenn er so ausgeschrieben ist. Mehr im Ratgeber <a href="bachata-lernen.html">Bachata lernen</a>.',
+         'If you have never danced, you usually do better starting with a class. A beginner workshop is possible, though, if it is advertised as such. More in the guide <a href="bachata-lernen.html">Learn Bachata</a>.'),
+ ]),
+ ('Formate: Wo finden Bachata Workshops statt?', 'Formats: where do Bachata workshops take place?', [
+   ('ul', [
+     ('<strong>In der Tanzschule:</strong> Viele Schulen bieten Workshops mit eigenen oder Gastlehrern an. Die Termine stehen auf den Websites der Schulen.', '<strong>At the dance school:</strong> many schools offer workshops with their own or guest teachers. The dates are on the schools’ websites.'),
+     ('<strong>Auf Festivals:</strong> Festivals bestehen aus Workshops am Tag und Partys am Abend. Siehe <a href="bachata-festivals-deutschland.html">Bachata-Festivals in Deutschland</a>.', '<strong>At festivals:</strong> festivals consist of workshops by day and parties in the evening. See <a href="bachata-festivals-deutschland.html">Bachata festivals in Germany</a>.'),
+     ('<strong>Intensiv-Wochenenden:</strong> Mehrere Einheiten an einem Wochenende, oft mit einem Schwerpunkt wie Drehungen oder Sensual.', '<strong>Intensive weekends:</strong> several sessions on one weekend, often with a focus such as turns or Sensual.'),
+     ('<strong>Universitäts- und Vereinsangebote:</strong> Manche Hochschulsportprogramme führen gelegentlich Bachata-Workshops.', '<strong>University and club offers:</strong> some university sports programmes occasionally run Bachata workshops.'),
+   ]),
+ ]),
+ ('Themen und Stile bei Bachata Workshops', 'Topics and styles at Bachata workshops', [
+   ('p', 'Typische Themen sind Grundschritt und Drehungen, Musikalität, Körperbewegung und Partnerarbeit. Stilworkshops behandeln <a href="bachata-dominicana.html">Bachata Dominicana</a>, <a href="bachata-moderna.html">Bachata Moderna</a> oder <a href="bachata-sensual.html">Bachata Sensual</a>. Für Tänzerinnen gibt es zusätzlich Angebote zu <a href="bachata-ladies-styling.html">Ladies Styling</a>.',
+         'Typical topics are the basic step and turns, musicality, body movement and partner work. Style workshops cover <a href="bachata-dominicana.html">Bachata Dominicana</a>, <a href="bachata-moderna.html">Bachata Moderna</a> or <a href="bachata-sensual.html">Bachata Sensual</a>. For women dancers there are also offers on <a href="bachata-ladies-styling.html">ladies styling</a>.'),
+ ]),
+ ('Bachata Workshop auf Festivals und Kongressen', 'Bachata workshops at festivals and congresses', [
+   ('p', 'Auf Festivals laufen mehrere Workshops parallel, meist nach Level getrennt. Du wählst vorab aus, welche Einheiten du besuchst, und tanzt abends auf den Partys. Das ist eine gute Gelegenheit, mehrere Lehrkräfte und Stile kennenzulernen. Eine Übersicht über Festivals steht auf der Seite <a href="bachata-festivals-deutschland.html">Bachata-Festivals 2026/2027</a>. Prüfe Termine, Programm und Preise immer auf der Website des Veranstalters.',
+         'At festivals several workshops run in parallel, usually separated by level. You choose in advance which sessions to attend and dance at the parties in the evening. This is a good opportunity to get to know several teachers and styles. An overview of festivals is on the page <a href="bachata-festivals-deutschland.html">Bachata festivals 2026/2027</a>. Always check dates, programme and prices on the organiser’s website.'),
+ ]),
+ ('Bachata Workshop für Einsteiger', 'Bachata workshops for beginners', [
+   ('p', 'Einsteiger-Workshops erklären den Grundschritt, das Zählen und erste Drehungen und eignen sich zum Reinschnuppern. Wenn du danach dranbleiben willst, ist ein regelmäßiger Kurs der nächste Schritt. Die Ratgeber <a href="bachata-fuer-anfaenger.html">Bachata für Anfänger</a> und <a href="bachata-schritte.html">Bachata Schritte</a> bereiten dich gut vor.',
+         'Beginner workshops explain the basic step, counting and first turns and are good for a first taste. If you want to keep going afterwards, a regular class is the next step. The guides <a href="bachata-fuer-anfaenger.html">Bachata for beginners</a> and <a href="bachata-schritte.html">Bachata steps</a> prepare you well.'),
+   ('p', 'Auch wer schon tanzt, profitiert: Ein Workshop zeigt dir neue Perspektiven und hilft, Gewohnheiten zu hinterfragen. Gerade bei Stilen wie Sensual lohnt sich der Blick von außen, weil die Körpertechnik schwer allein zu überprüfen ist.',
+         'Those who already dance also benefit: a workshop shows you new perspectives and helps you question habits. Especially for styles like Sensual an outside view is worthwhile, because body technique is hard to check alone.'),
+ ]),
+ ('Fragen vor der Anmeldung', 'Questions before signing up', [
+   ('ul', [
+     ('<strong>Für welches Level?</strong> Anfänger, Fortgeschrittene oder offen für alle.', '<strong>Which level?</strong> Beginner, intermediate or open to all.'),
+     ('<strong>Mit oder ohne Partner?</strong> Bei manchen Workshops wird gewechselt, bei anderen ist ein Partner nötig.', '<strong>With or without a partner?</strong> Some workshops rotate partners, others require one.'),
+     ('<strong>Wer unterrichtet?</strong> Informiere dich über Lehrkräfte und deren Stil auf den Websites der Veranstalter.', '<strong>Who teaches?</strong> Find out about the teachers and their style on the organisers’ websites.'),
+     ('<strong>Was kostet es?</strong> Preise und Dauer stehen beim Veranstalter. Wir nennen hier bewusst keine Zahlen, weil sie sich ändern.', '<strong>What does it cost?</strong> Prices and duration are with the organiser. We deliberately give no figures here because they change.'),
+   ]),
+ ]),
+ ('So holst du das Meiste aus einem Workshop', 'How to get the most from a workshop', [
+   ('ul', [
+     ('<strong>Vorher den Grundschritt üben:</strong> Dann bleibt Zeit fürs Neue. Siehe <a href="bachata-grundschritt.html">Bachata Grundschritt</a>.', '<strong>Practise the basic step beforehand:</strong> then there is time for the new material. See <a href="bachata-grundschritt.html">Bachata basic step</a>.'),
+     ('<strong>Nachher wiederholen:</strong> Übe das Gelernte in den Tagen danach, solange es frisch ist.', '<strong>Repeat afterwards:</strong> practise what you learned in the days after, while it is fresh.'),
+     ('<strong>Auf einer Party anwenden:</strong> Termine siehst du bei den <a href="bachata-socials.html">Bachata-Socials</a>.', '<strong>Use it at a party:</strong> dates are on the <a href="bachata-socials.html">Bachata socials</a> page.'),
+   ]),
+ ]),
+ ('Schulen mit Workshops finden', 'Finding schools with workshops', [
+   ('p', f'Schulen mit Links zu ihren Websites findest du für {CITY_LINKS_DE}. Die Listen sind alphabetisch und keine Wertung. Aktuelle Workshop-Termine findest du dort bei den Schulen selbst. Das offizielle Ranking erscheint am <strong>20. Dezember 2026</strong> auf der <a href="rankings.html">Ranking-Seite</a>, die Methode steht auf der <a href="index.html#method">Startseite</a>.',
+         f'Schools with links to their websites are listed for {CITY_LINKS_EN}. The lists are alphabetical and not a rating. Current workshop dates are on the schools’ own sites. The official ranking is published on <strong>December 20, 2026</strong> on the <a href="rankings.html">ranking page</a>, and the method is on the <a href="index.html#method">home page</a>.'),
+   ('p', 'Du leitest eine Schule? <a href="bewerbung.html">Bewirb dich kostenlos bis zum 30. November</a>.',
+         'Do you run a school? <a href="bewerbung.html">Apply for free by November 30</a>.'),
+ ]),
+]
+ws_faq = [
+ ('Was ist ein Bachata Workshop?', 'What is a Bachata workshop?',
+  'Eine kurze Unterrichtseinheit zu einem Thema, meist an einem Abend oder Wochenende, im Gegensatz zu einem laufenden Kurs.',
+  'A short teaching session on one topic, usually on an evening or weekend, as opposed to an ongoing class.'),
+ ('Wo finde ich Bachata Workshops?', 'Where do I find Bachata workshops?',
+  'Bei Tanzschulen, auf Festivals und bei Intensiv-Wochenenden. Aktuelle Termine stehen auf den Websites der Veranstalter.',
+  'At dance schools, at festivals and at intensive weekends. Current dates are on the organisers’ websites.'),
+ ('Ist ein Workshop für Anfänger geeignet?', 'Is a workshop suitable for beginners?',
+  'Ja, wenn er als Anfänger- oder offener Workshop ausgeschrieben ist. Für den ersten Einstieg ist meist ein Kurs besser.',
+  'Yes, if it is advertised as a beginner or open workshop. For the very first start a class is usually better.'),
+ ('Brauche ich einen Partner für einen Bachata Workshop?', 'Do I need a partner for a Bachata workshop?',
+  'Das hängt vom Workshop ab. Oft wird gewechselt. Die Ausschreibung nennt es meist, sonst frag beim Veranstalter nach.',
+  'It depends on the workshop. Partners are often rotated. The listing usually says, otherwise ask the organiser.'),
+ ('Was kostet ein Bachata Workshop?', 'How much does a Bachata workshop cost?',
+  'Das legt der Veranstalter fest und es ändert sich. Aktuelle Preise stehen auf den Websites der Schulen und Festivals.',
+  'The organiser sets it and it changes. Current prices are on the schools’ and festivals’ websites.'),
+ ('Wann erscheint das Ranking der Bachata-Schulen?', 'When is the ranking of Bachata schools published?',
+  'Am 20. Dezember 2026 um 19 Uhr auf der <a href="rankings.html">Ranking-Seite</a>.',
+  'On December 20, 2026 at 7 pm (CET) on the <a href="rankings.html">ranking page</a>.'),
+]
+guide_page('bachata-workshop', 'bws',
+  'Bachata Workshop: Formate, Themen und Tipps',
+  'Bachata Workshop finden und wählen: Unterschied zum Kurs, Formate von Tanzschule bis Festival, Themen und Fragen vor der Anmeldung. Mit Links zu Schulen.',
+  'Bachata workshop: formats, topics and tips',
+  'Find and choose a Bachata workshop: difference from a class, formats from dance school to festival, topics and questions before signing up. With links to schools.',
+  'Bachata Workshop', ('Bachata Workshop · Ratgeber', 'Bachata workshop · Guide'),
+  ('Bachata Workshop: <em class="foil">Formate</em> und Themen', 'Bachata workshop: <em class="foil">formats</em> and topics'),
+  ('Bachata Workshop finden und wählen: Unterschied zum Kurs, Formate von Tanzschule bis Festival, Themen und die richtigen Fragen vor der Anmeldung.',
+   'Find and choose a Bachata workshop: difference from a class, formats from dance school to festival, topics and the right questions before signing up.'),
+  [('check', 'Für <b>Einsteiger</b> und Fortgeschrittene', 'For <b>beginners</b> and advanced dancers'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  ws_sections, ws_faq, sibling_group='topic')
