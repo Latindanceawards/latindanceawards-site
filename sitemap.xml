@@ -6211,6 +6211,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-dortmund"/>
   </url>
   <url>
+    <loc>https://latindanceawards.com/bachata-kiel</loc>
+    <lastmod>2026-11-06</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-kiel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-kiel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-kiel"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/bachata-bochum</loc>
+    <lastmod>2026-11-06</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-bochum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-bochum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-bochum"/>
+  </url>
+  <url>
     <loc>https://latindanceawards.com/bachata-musik</loc>
     <lastmod>2026-11-03</lastmod>
     <priority>0.8</priority>
@@ -10706,6 +10722,22 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-dortmund"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-dortmund"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-dortmund"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/en/bachata-kiel</loc>
+    <lastmod>2026-11-06</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-kiel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-kiel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-kiel"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/en/bachata-bochum</loc>
+    <lastmod>2026-11-06</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-bochum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-bochum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-bochum"/>
   </url>
   <url>
     <loc>https://latindanceawards.com/en/bachata-musik</loc>
