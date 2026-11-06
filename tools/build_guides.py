@@ -38,6 +38,9 @@ TOPIC_PAGES = [('bachata-tanzen', 'Bachata tanzen lernen', 'Learn to dance Bacha
                ('bachata-ladies-styling', 'Bachata Ladies Styling', 'Bachata ladies styling'),
                ('bachata-moderna', 'Bachata Moderna', 'Bachata Moderna'),
                ('bachata-party', 'Bachata Party', 'Bachata party'),
+               ('bachata-kurs-in-der-naehe', 'Bachata Kurs in der Nähe', 'Bachata class near you'),
+               ('bachata-solo', 'Bachata Solo', 'Bachata solo'),
+               ('bachata-hochzeitstanz', 'Bachata Hochzeitstanz', 'Bachata wedding dance'),
                ('bachata-staedte-deutschland', 'Alle Städte und Schulen', 'All cities and schools')]
 
 SHOW_FESTIVALS = False  # set True to publish the festival listing again
@@ -2381,3 +2384,226 @@ guide_page('bachata-workshop', 'bws',
    'Find and choose a Bachata workshop: difference from a class, formats from dance school to festival, topics and the right questions before signing up.'),
   [('check', 'Für <b>Einsteiger</b> und Fortgeschrittene', 'For <b>beginners</b> and advanced dancers'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
   ws_sections, ws_faq, sibling_group='topic')
+
+# ---- Support pages (Nov 2026): Kurs in der Nähe, Solo, Hochzeitstanz ----
+def _closing(what_de, what_en):
+    return ('Schulen in deiner Stadt finden', 'Finding schools in your city', [
+        ('p', f'Schulen mit Links zu ihren Websites findest du für {CITY_LINKS_DE}. Die Listen sind alphabetisch und keine Wertung. {what_de} Das offizielle Ranking erscheint am <strong>20. Dezember 2026</strong> auf der <a href="rankings.html">Ranking-Seite</a>, die Methode steht auf der <a href="deutschland.html#method">Startseite</a>. Eine Übersicht aller Städte gibt es unter <a href="bachata-staedte-deutschland.html">Alle Städte und Schulen</a>.',
+              f'Schools with links to their websites are listed for {CITY_LINKS_EN}. The lists are alphabetical and not a rating. {what_en} The official ranking is published on <strong>December 20, 2026</strong> on the <a href="rankings.html">ranking page</a>, and the method is on the <a href="deutschland.html#method">homepage</a>. An overview of all cities is on <a href="bachata-staedte-deutschland.html">All cities and schools</a>.'),
+        ('p', 'Du leitest eine Schule? <a href="bewerbung.html">Bewirb dich kostenlos bis zum 30. November</a>.',
+              'Do you run a school? <a href="bewerbung.html">Apply for free by November 30</a>.'),
+    ])
+_rank_faq = ('Wann erscheint das Ranking der Bachata-Schulen?', 'When is the ranking of Bachata schools published?',
+  'Am 20. Dezember 2026 um 19 Uhr auf der <a href="rankings.html">Ranking-Seite</a>.',
+  'On December 20, 2026 at 7 pm (CET) on the <a href="rankings.html">ranking page</a>.')
+
+kin_sections = [
+ ('Bachata Kurs in der Nähe finden: So gehst du vor', 'Finding a Bachata class near you: how to proceed', [
+   ('p', 'Wer „Bachata Kurs in der Nähe“ sucht, will meist drei Dinge wissen: Gibt es einen Kurs in meiner Stadt, passt der Termin und ist er für mich geeignet? Eine Karte mit Treffern beantwortet nur die erste Frage. Die anderen beiden klärst du am besten auf den Websites der Schulen, und dafür brauchst du eine kurze Liste statt hundert Treffer.',
+         'Anyone searching for “Bachata class near me” usually wants three things: is there a class in my city, does the time fit and is it suitable for me? A map of results only answers the first question. You settle the other two best on the schools’ websites, and for that you need a short list instead of a hundred results.'),
+   ('p', 'Auf Latin Dance Awards sind die Schulen nach Städten geordnet, mit Link zur jeweiligen Website. Starte bei deiner Stadt, öffne zwei oder drei Schulen und vergleiche dort Kursplan, Level und Probestunde. Eine Übersicht aller Städte findest du unter <a href="bachata-staedte-deutschland.html">Alle Städte und Schulen</a>.',
+         'On Latin Dance Awards the schools are sorted by city, with a link to each website. Start with your city, open two or three schools and compare timetable, level and trial lesson there. An overview of all cities is on <a href="bachata-staedte-deutschland.html">All cities and schools</a>.'),
+ ]),
+ ('Schritt für Schritt zum passenden Kurs', 'Step by step to the right class', [
+   ('ul', [
+     ('<strong>1. Stadt und Anfahrt festlegen:</strong> Ein Kurs, den du in 20 Minuten erreichst, besuchst du eher regelmäßig als einen, der eine Stunde entfernt ist.', '<strong>1. Fix city and travel:</strong> you are more likely to attend a class regularly if you can reach it in 20 minutes than one an hour away.'),
+     ('<strong>2. Level prüfen:</strong> Suche nach „Anfänger“, „Level 1“ oder „Grundkurs“. Wenn du schon tanzt, achte auf „Mittelstufe“ oder „Level 2“. Mehr dazu unter <a href="bachata-fuer-anfaenger.html">Bachata für Anfänger</a>.', '<strong>2. Check the level:</strong> look for “beginner”, “level 1” or “basic class”. If you already dance, look for “intermediate” or “level 2”. More on <a href="bachata-fuer-anfaenger.html">Bachata for beginners</a>.'),
+     ('<strong>3. Stil klären:</strong> Bachata hat mehrere Stile, die Kurse unterscheiden sich spürbar. Siehe <a href="bachata-sensual.html">Bachata Sensual</a>, <a href="bachata-moderna.html">Bachata Moderna</a> und <a href="bachata-dominicana.html">Bachata Dominicana</a>.', '<strong>3. Clarify the style:</strong> Bachata has several styles and classes differ noticeably. See <a href="bachata-sensual.html">Bachata Sensual</a>, <a href="bachata-moderna.html">Bachata Moderna</a> and <a href="bachata-dominicana.html">Bachata Dominicana</a>.'),
+     ('<strong>4. Termin und Format:</strong> Läuft der Kurs fortlaufend, oder startet ein neuer Block? Für Einsteiger ist ein Blockstart oft angenehmer, weil alle gleichzeitig beginnen.', '<strong>4. Date and format:</strong> does the class run continuously, or does a new block start? For beginners a block start is often more comfortable because everyone begins at the same time.'),
+     ('<strong>5. Probestunde fragen:</strong> Viele Schulen bieten eine Schnupperstunde an. Ob und zu welchen Bedingungen, steht auf der Website der Schule.', '<strong>5. Ask about a trial lesson:</strong> many schools offer a taster lesson. Whether and on what terms is on the school’s website.'),
+   ]),
+ ]),
+ ('Woran du einen guten Kurs erkennst', 'How to recognise a good class', [
+   ('p', 'Ein guter Einsteigerkurs erklärt den Grundschritt langsam, zählt laut mit und lässt dich schon in der ersten Stunde zur Musik tanzen. Du solltest den Wechsel zwischen Führen und Folgen ausprobieren dürfen, und die Gruppe sollte so groß sein, dass die Lehrkraft Fehler noch sieht. Was ein Kurs vermitteln sollte, steht auch im Ratgeber <a href="bachata-tanzkurs.html">Bachata Tanzkurs</a>.',
+         'A good beginner class explains the basic step slowly, counts out loud and lets you dance to the music in the very first lesson. You should be allowed to try both leading and following, and the group should be small enough for the teacher to still see mistakes. What a class should teach is also covered in the guide <a href="bachata-tanzkurs.html">Bachata dance class</a>.'),
+   ('p', 'Ein Kurs ist nicht automatisch besser, weil er mehr Bewertungen hat. Eine Liste aller Kurse einer Stadt sagt noch nichts über die Qualität. Genau deshalb bewerten wir Schulen mit einer offenen Methode, deren Ergebnis am 20. Dezember 2026 erscheint.',
+         'A class is not automatically better because it has more reviews. A list of all classes in a city says nothing about quality. That is exactly why we assess schools with an open method, and the result is published on December 20, 2026.'),
+ ]),
+ ('Kurs ohne Partner: Geht das?', 'Class without a partner: does it work?', [
+   ('p', 'Ja. In den meisten Bachata-Kursen für Einsteiger wird gewechselt, du brauchst also keinen festen Partner. Schreibe der Schule vorher kurz, wenn du allein kommst, dann kann sie auf das Verhältnis in der Gruppe achten. Wer lieber erst allein übt, findet Ideen auf der Seite <a href="bachata-solo.html">Bachata Solo</a>.',
+         'Yes. In most Bachata classes for beginners partners are rotated, so you do not need a fixed partner. Send the school a short note beforehand if you come alone, so it can keep an eye on the balance in the group. If you prefer to practise alone first, you will find ideas on the page <a href="bachata-solo.html">Bachata solo</a>.'),
+ ]),
+ ('Alternativen zum klassischen Kurs', 'Alternatives to a regular class', [
+   ('ul', [
+     ('<strong>Workshop:</strong> Ein Thema an einem Abend oder Wochenende, siehe <a href="bachata-workshop.html">Bachata Workshop</a>.', '<strong>Workshop:</strong> one topic on an evening or weekend, see <a href="bachata-workshop.html">Bachata workshop</a>.'),
+     ('<strong>Hochschulsport:</strong> Viele Universitäten und Hochschulen führen Bachata im Sportprogramm. Das gilt meist nur für Studierende, die Anmeldung läuft über das Hochschulsport-Portal.', '<strong>University sport:</strong> many universities and colleges include Bachata in their sports programme. This usually applies to students only, and registration goes through the university sport portal.'),
+     ('<strong>Social mit Einführung:</strong> Manche Partys beginnen mit einer kurzen Einführungsstunde. Termine siehe <a href="bachata-socials.html">Bachata-Socials</a> und <a href="bachata-party.html">Bachata Party</a>.', '<strong>Social with an introduction:</strong> some parties start with a short introductory lesson. Dates are on <a href="bachata-socials.html">Bachata socials</a> and <a href="bachata-party.html">Bachata party</a>.'),
+   ]),
+ ]),
+ ('Was du zum ersten Kurs mitbringst', 'What to bring to your first class', [
+   ('ul', [
+     ('Bequeme Kleidung und Schuhe, mit denen du dich auf dem Boden drehen kannst.', 'Comfortable clothes and shoes in which you can turn on the floor.'),
+     ('Etwas zu trinken und ein Handtuch.', 'Something to drink and a towel.'),
+     ('Etwas Zeit vorher, um die Schule zu finden und anzukommen.', 'A little time beforehand to find the school and arrive.'),
+     ('Den Grundschritt kannst du vorher anschauen, siehe <a href="bachata-grundschritt.html">Bachata Grundschritt</a>. Nötig ist das nicht.', 'You can look at the basic step beforehand, see <a href="bachata-grundschritt.html">Bachata basic step</a>. It is not required.'),
+   ]),
+ ]),
+ _closing('Aktuelle Kurszeiten stehen bei den Schulen selbst.', 'Current class times are on the schools’ own sites.'),
+]
+kin_faq = [
+ ('Wie finde ich einen Bachata Kurs in meiner Nähe?', 'How do I find a Bachata class near me?',
+  'Wähle deine Stadt auf Latin Dance Awards, öffne zwei bis drei Schulen und vergleiche Kursplan, Level und Probestunde auf deren Websites.',
+  'Pick your city on Latin Dance Awards, open two to three schools and compare timetable, level and trial lesson on their websites.'),
+ ('Gibt es Bachata Kurse für Anfänger ohne Vorkenntnisse?', 'Are there Bachata classes for beginners without experience?',
+  'Ja, die meisten Schulen bieten einen Anfänger- oder Grundkurs an. Suche nach „Level 1“, „Anfänger“ oder „Grundkurs“.',
+  'Yes, most schools offer a beginner or basic class. Look for “level 1”, “beginner” or “basic class”.'),
+ ('Brauche ich einen Partner für einen Bachata Kurs?', 'Do I need a partner for a Bachata class?',
+  'In den meisten Einsteigerkursen nicht, es wird gewechselt. Im Zweifel frag die Schule.',
+  'In most beginner classes you do not, partners are rotated. If in doubt, ask the school.'),
+ ('Kann ich vorher eine Probestunde machen?', 'Can I try a lesson first?',
+  'Viele Schulen bieten das an. Ob und zu welchen Bedingungen, steht auf der Website der Schule.',
+  'Many schools offer this. Whether and on what terms is on the school’s website.'),
+ ('Was kostet ein Bachata Kurs?', 'How much does a Bachata class cost?',
+  'Das legt jede Schule selbst fest und es ändert sich. Aktuelle Preise stehen auf der Website der Schule. Wir nennen hier bewusst keine Zahlen.',
+  'Each school sets this itself and it changes. Current prices are on the school’s website. We deliberately give no figures here.'),
+ _rank_faq,
+]
+guide_page('bachata-kurs-in-der-naehe', 'bkn',
+  'Bachata Kurs in der Nähe: So findest du den richtigen',
+  'Bachata Kurs in der Nähe finden: Schritt für Schritt zum passenden Kurs, woran du einen guten Kurs erkennst, Kurs ohne Partner und Alternativen. Mit Links zu Schulen.',
+  'Bachata class near you: how to find the right one',
+  'Find a Bachata class near you: step by step to the right class, how to recognise a good one, classes without a partner and alternatives. With links to schools.',
+  'Bachata Kurs in der Nähe', ('Bachata Kurs in der Nähe · Ratgeber', 'Bachata class near you · Guide'),
+  ('Bachata Kurs <em class="foil">in der Nähe</em> finden', 'Find a Bachata class <em class="foil">near you</em>'),
+  ('So findest du einen Bachata Kurs in deiner Stadt: Level, Stil, Termin und Probestunde in fünf Schritten, plus Links zu Schulen nach Städten.',
+   'How to find a Bachata class in your city: level, style, date and trial lesson in five steps, plus links to schools by city.'),
+  [('check', 'Für <b>Einsteiger</b> ohne Partner', 'For <b>beginners</b> without a partner'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  kin_sections, kin_faq, sibling_group='topic')
+
+solo_sections = [
+ ('Bachata Solo: Was ist das?', 'Bachata solo: what is it?', [
+   ('p', 'Bachata ist ein Paartanz, aber du kannst vieles davon allein üben und manche Kurse sind ausdrücklich ohne Partner. „Bachata Solo“ meint deshalb zwei Dinge: Üben für dich zu Hause und Kurse, in denen jede Person für sich tanzt, zum Beispiel mit Fokus auf Grundschritt, Körperbewegung und Musikalität. In solchen Kursen wird meist kein Partner gebraucht und nicht gewechselt.',
+         'Bachata is a partner dance, but you can practise much of it alone, and some classes are explicitly without a partner. “Bachata solo” therefore means two things: practising for yourself at home and classes in which each person dances alone, for example with a focus on basic step, body movement and musicality. In such classes you usually do not need a partner and do not rotate.'),
+   ('p', 'Solo ersetzt den Paartanz nicht, bereitet ihn aber gut vor. Wer sicher im Grundschritt und im Rhythmus ist, kommt im Paarkurs schneller mit. Mehr zum Einstieg im Ratgeber <a href="bachata-tanzen.html">Bachata tanzen lernen</a>.',
+         'Solo does not replace partner dancing, but it prepares for it well. If you are secure in the basic step and rhythm, you keep up faster in a partner class. More on getting started in the guide <a href="bachata-tanzen.html">Learn to dance Bachata</a>.'),
+ ]),
+ ('Was du allein üben kannst', 'What you can practise alone', [
+   ('ul', [
+     ('<strong>Grundschritt:</strong> Drei Schritte, ein Tap, und zurück. Zähle laut mit, siehe <a href="bachata-grundschritt.html">Bachata Grundschritt</a>.', '<strong>Basic step:</strong> three steps, a tap, and back. Count out loud, see <a href="bachata-grundschritt.html">Bachata basic step</a>.'),
+     ('<strong>Rhythmus und Zählzeiten:</strong> Höre Bachata-Songs und finde die Betonung auf der vierten Zählzeit. Lieder zum Üben nennt <a href="bachata-musik.html">Bachata Musik</a>.', '<strong>Rhythm and counts:</strong> listen to Bachata songs and find the emphasis on count four. Songs to practise with are on <a href="bachata-musik.html">Bachata music</a>.'),
+     ('<strong>Hüftbewegung:</strong> Die seitliche Hüftbewegung im Schritt kannst du vor dem Spiegel prüfen.', '<strong>Hip movement:</strong> you can check the sideways hip movement in the step in front of a mirror.'),
+     ('<strong>Drehungen:</strong> Einfache Eigendrehungen übst du ohne Partner und merkst, ob du ruhig auf dem Standbein bleibst.', '<strong>Turns:</strong> simple solo turns can be practised without a partner and you notice whether you stay steady on the standing leg.'),
+     ('<strong>Arm- und Körperarbeit:</strong> Besonders im Sensual-Stil, siehe <a href="bachata-sensual.html">Bachata Sensual</a>, und im Ladies Styling, siehe <a href="bachata-ladies-styling.html">Bachata Ladies Styling</a>.', '<strong>Arm and body work:</strong> especially in the Sensual style, see <a href="bachata-sensual.html">Bachata Sensual</a>, and in ladies styling, see <a href="bachata-ladies-styling.html">Bachata ladies styling</a>.'),
+   ]),
+ ]),
+ ('Ein einfacher Übungsplan für zu Hause', 'A simple practice plan for home', [
+   ('p', 'Kurze Einheiten sind besser als eine lange. Fünfzehn bis zwanzig Minuten reichen, wenn du konzentriert übst:',
+         'Short sessions are better than one long one. Fifteen to twenty minutes are enough if you practise with focus:'),
+   ('ul', [
+     ('Erst aufwärmen: Fußgelenke, Knie und Hüfte lockern.', 'Warm up first: loosen ankles, knees and hips.'),
+     ('Grundschritt ohne Musik zählen, dann mit Musik.', 'Count the basic step without music, then with music.'),
+     ('Ein Element pro Einheit: Hüfte, Eigendrehung oder Gewichtsverlagerung.', 'One element per session: hips, solo turn or weight transfer.'),
+     ('Zum Schluss frei zur Musik tanzen, ohne zu bewerten.', 'Finish by dancing freely to the music without judging.'),
+   ]),
+ ]),
+ ('Kurse ohne Partner finden', 'Finding classes without a partner', [
+   ('p', 'Wenn eine Schule einen Solo-, Styling- oder Einzelkurs anbietet, steht das auf ihrer Website. Frage sonst nach, ob du in einem normalen Anfängerkurs ohne Partner mitmachen kannst, denn dort wird meist gewechselt. Wie du Kurse in deiner Stadt findest, steht auf der Seite <a href="bachata-kurs-in-der-naehe.html">Bachata Kurs in der Nähe</a>.',
+         'If a school offers a solo, styling or individual class, it says so on its website. Otherwise ask whether you can join a regular beginner class without a partner, because partners are usually rotated there. How to find classes in your city is on the page <a href="bachata-kurs-in-der-naehe.html">Bachata class near you</a>.'),
+   ('p', 'Auch Hochschulsport-Programme und Vereine haben gelegentlich Solo-Angebote. Ob es sie gibt, entscheidet der jeweilige Anbieter.',
+         'University sport programmes and clubs occasionally have solo offers, too. Whether they exist is up to the respective provider.'),
+ ]),
+ ('Solo üben und dann zur Party', 'Practise solo, then go to a party', [
+   ('p', 'Wer allein geübt hat, wirkt auf der Tanzfläche meist entspannter. Auf Partys wird oft getanzt, ohne dass du einen Partner mitbringen musst. Termine stehen unter <a href="bachata-socials.html">Bachata-Socials</a>, Tipps zum Verhalten unter <a href="bachata-party.html">Bachata Party</a>.',
+         'If you have practised alone, you usually look more relaxed on the dance floor. At parties you often dance without having to bring a partner. Dates are on <a href="bachata-socials.html">Bachata socials</a>, tips on behaviour on <a href="bachata-party.html">Bachata party</a>.'),
+ ]),
+ _closing('Ob eine Schule Solo-Angebote hat, steht auf ihrer eigenen Website.', 'Whether a school has solo offers is on its own website.'),
+]
+solo_faq = [
+ ('Kann man Bachata alleine tanzen?', 'Can you dance Bachata alone?',
+  'Ja, Grundschritt, Rhythmus, Hüftbewegung und Eigendrehungen lassen sich allein üben. Der Paartanz selbst braucht natürlich einen Partner.',
+  'Yes, the basic step, rhythm, hip movement and solo turns can be practised alone. The partner dance itself of course needs a partner.'),
+ ('Gibt es Bachata Solo Kurse?', 'Are there Bachata solo classes?',
+  'Manche Schulen bieten sie an, meist mit Fokus auf Grundschritt, Körperbewegung oder Styling. Ob es sie gibt, steht auf der Website der Schule.',
+  'Some schools offer them, usually with a focus on basic step, body movement or styling. Whether they exist is on the school’s website.'),
+ ('Wie lerne ich Bachata zu Hause?', 'How do I learn Bachata at home?',
+  'Mit kurzen Übungseinheiten: Grundschritt zählen, zur Musik tanzen und pro Einheit ein Element üben. Siehe auch <a href="bachata-grundschritt.html">Bachata Grundschritt</a>.',
+  'With short practice sessions: count the basic step, dance to the music and practise one element per session. See also <a href="bachata-grundschritt.html">Bachata basic step</a>.'),
+ ('Brauche ich einen Partner, um Bachata zu lernen?', 'Do I need a partner to learn Bachata?',
+  'Nein. In den meisten Einsteigerkursen wird gewechselt. Im Zweifel frag die Schule.',
+  'No. In most beginner classes partners are rotated. If in doubt, ask the school.'),
+ _rank_faq,
+]
+guide_page('bachata-solo', 'bso',
+  'Bachata Solo: Allein üben und Kurse ohne Partner',
+  'Bachata solo tanzen: was du allein üben kannst, ein Übungsplan für zu Hause, Kurse ohne Partner und der Weg zur Party. Mit Links zu Schulen.',
+  'Bachata solo: practise alone and classes without a partner',
+  'Bachata solo: what you can practise alone, a practice plan for home, classes without a partner and the way to the party. With links to schools.',
+  'Bachata Solo', ('Bachata Solo · Ratgeber', 'Bachata solo · Guide'),
+  ('Bachata Solo: <em class="foil">allein üben</em>, ohne Partner lernen', 'Bachata solo: <em class="foil">practise alone</em>, learn without a partner'),
+  ('Bachata ist ein Paartanz, doch vieles lässt sich allein üben. Hier steht, was, wie und wo, plus ein einfacher Plan für zu Hause.',
+   'Bachata is a partner dance, but much of it can be practised alone. Here is what, how and where, plus a simple plan for home.'),
+  [('check', 'Auch <b>ohne Partner</b>', 'Also <b>without a partner</b>'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  solo_sections, solo_faq, sibling_group='topic')
+
+hz_sections = [
+ ('Bachata als Hochzeitstanz: Passt das?', 'Bachata as a wedding dance: does it fit?', [
+   ('p', 'Ein Hochzeitstanz muss nicht der klassische Walzer sein. Viele Paare wählen einen Tanz, der zu ihnen passt, und Bachata ist dafür beliebt: Der Takt ist ruhig, der Schritt ist schnell gelernt und die Bewegung ist nah und persönlich. Gerade weil der Grundschritt so einfach ist, können auch Paare ohne Tanzerfahrung in wenigen Wochen eine kleine Choreografie lernen.',
+         'A wedding dance does not have to be the classic waltz. Many couples choose a dance that suits them, and Bachata is popular for this: the beat is calm, the step is learned quickly and the movement is close and personal. Precisely because the basic step is so simple, even couples without dance experience can learn a small choreography in a few weeks.'),
+   ('p', 'Wie schnell das geht, hängt von euch ab, von der Übungszeit und vom Lehrer. Wir versprechen hier keine feste Zahl an Stunden. Fragt die Schule, wie sie einen Hochzeitstanz plant.',
+         'How fast it goes depends on you, on practice time and on the teacher. We do not promise a fixed number of lessons here. Ask the school how it plans a wedding dance.'),
+ ]),
+ ('Welcher Bachata-Stil für die Hochzeit?', 'Which Bachata style for the wedding?', [
+   ('ul', [
+     ('<strong>Bachata Dominicana:</strong> Der ursprüngliche Stil mit schnellem Fußwerk und lebendiger Stimmung. Siehe <a href="bachata-dominicana.html">Bachata Dominicana</a>.', '<strong>Bachata Dominicana:</strong> the original style with quick footwork and a lively mood. See <a href="bachata-dominicana.html">Bachata Dominicana</a>.'),
+     ('<strong>Bachata Moderna:</strong> Mehr Drehungen und Figuren, oft auf Pop-Bachata. Siehe <a href="bachata-moderna.html">Bachata Moderna</a>.', '<strong>Bachata Moderna:</strong> more turns and figures, often to pop Bachata. See <a href="bachata-moderna.html">Bachata Moderna</a>.'),
+     ('<strong>Bachata Sensual:</strong> Enge Verbindung und weiche Körperbewegung, eher romantisch. Siehe <a href="bachata-sensual.html">Bachata Sensual</a>.', '<strong>Bachata Sensual:</strong> close connection and soft body movement, rather romantic. See <a href="bachata-sensual.html">Bachata Sensual</a>.'),
+   ]),
+   ('p', 'Für einen Hochzeitstanz ist weniger oft mehr. Eine ruhige Moderna- oder Sensual-Variante mit wenigen sauberen Elementen wirkt meist besser als viele schnelle Figuren. Das ist eine Empfehlung, keine Regel.',
+         'For a wedding dance less is often more. A calm Moderna or Sensual variant with a few clean elements usually looks better than many fast figures. This is a suggestion, not a rule.'),
+ ]),
+ ('Das Lied wählen', 'Choosing the song', [
+   ('p', 'Wählt ein Lied, das ihr beide mögt und das sich gut zählen lässt. Bachata-Lieder haben einen klaren Takt, aber nicht jedes Lied passt für eine Choreografie. Lehrkräfte können beim Zuschneiden der Länge helfen: Viele Paare tanzen nicht das ganze Lied, sondern etwa zwei Minuten. Mehr zur Musik findet ihr auf der Seite <a href="bachata-musik.html">Bachata Musik</a>.',
+         'Choose a song you both like and that is easy to count. Bachata songs have a clear beat, but not every song suits a choreography. Teachers can help trim the length: many couples do not dance the whole song but about two minutes. You will find more on the music on the page <a href="bachata-musik.html">Bachata music</a>.'),
+ ]),
+ ('So bereitet ihr euch vor', 'How to prepare', [
+   ('ul', [
+     ('<strong>Früh anfangen:</strong> Plant genug Zeit ein, damit ihr ohne Druck üben könnt. Fragt bei der Schule, wann ihr starten solltet.', '<strong>Start early:</strong> allow enough time so you can practise without pressure. Ask the school when you should start.'),
+     ('<strong>Grundschritt sichern:</strong> Beginnt mit dem Grundschritt, siehe <a href="bachata-grundschritt.html">Bachata Grundschritt</a>, und baut erst dann Drehungen auf.', '<strong>Secure the basic step:</strong> begin with the basic step, see <a href="bachata-grundschritt.html">Bachata basic step</a>, and add turns only then.'),
+     ('<strong>Im Outfit üben:</strong> Probiert Schuhe und Kleidung vor dem Tag aus, besonders Absätze und lange Röcke.', '<strong>Practise in the outfit:</strong> try shoes and clothing before the day, especially heels and long skirts.'),
+     ('<strong>Auf dem Boden proben:</strong> Fragt, ob ihr auf einem ähnlichen Boden wie am Hochzeitstag üben könnt.', '<strong>Rehearse on the floor:</strong> ask whether you can practise on a floor similar to the wedding venue.'),
+     ('<strong>Einen Plan B haben:</strong> Wenn ihr nervös seid, einigt euch auf eine kurze Version, die ihr sicher beherrscht.', '<strong>Have a plan B:</strong> if you are nervous, agree on a short version you master securely.'),
+   ]),
+ ]),
+ ('Privatstunden, Gruppenkurs oder Paarkurs?', 'Private lessons, group class or couples class?', [
+   ('p', 'Für einen Hochzeitstanz entscheiden sich viele Paare für Privatstunden, weil die Choreografie dann genau auf Lied und Können zugeschnitten wird. Ein Gruppenkurs ist dagegen eine gute Basis, wenn ihr erst einmal ein Gefühl für den Tanz bekommen wollt. Ob eine Schule Hochzeitstanz-Kurse anbietet und wie sie ablaufen, steht auf der Website der Schule. Eine Einführung in Kurse findet ihr unter <a href="bachata-tanzkurs.html">Bachata Tanzkurs</a> und <a href="bachata-kurs-in-der-naehe.html">Bachata Kurs in der Nähe</a>.',
+         'Many couples choose private lessons for a wedding dance because the choreography is then tailored exactly to the song and ability. A group class, on the other hand, is a good base if you first want to get a feel for the dance. Whether a school offers wedding dance classes and how they work is on the school’s website. You will find an introduction to classes at <a href="bachata-tanzkurs.html">Bachata dance class</a> and <a href="bachata-kurs-in-der-naehe.html">Bachata class near you</a>.'),
+ ]),
+ ('Fragen an die Tanzschule', 'Questions for the dance school', [
+   ('ul', [
+     ('Bietet die Schule Hochzeitstanz an, und in welchem Format?', 'Does the school offer wedding dance, and in what format?'),
+     ('Wie läuft die Planung: Liedwahl, Aufbau, Proben?', 'How does planning work: song choice, structure, rehearsals?'),
+     ('Kann die Choreografie an unser Niveau angepasst werden?', 'Can the choreography be adapted to our level?'),
+     ('Was kostet es und was ist enthalten? Preise nennen wir hier bewusst nicht, weil sie sich ändern.', 'What does it cost and what is included? We deliberately give no prices here because they change.'),
+   ]),
+ ]),
+ _closing('Ob eine Schule Hochzeitstanz anbietet, steht auf ihrer eigenen Website.', 'Whether a school offers wedding dance is on its own website.'),
+]
+hz_faq = [
+ ('Kann man Bachata als Hochzeitstanz tanzen?', 'Can you dance Bachata as a wedding dance?',
+  'Ja. Der Grundschritt ist einfach, der Takt ruhig. Viele Paare wählen eine kurze Choreografie mit wenigen Elementen.',
+  'Yes. The basic step is simple and the beat calm. Many couples choose a short choreography with a few elements.'),
+ ('Wie früh sollten wir mit dem Hochzeitstanz anfangen?', 'How early should we start the wedding dance?',
+  'Das hängt von euch und der Schule ab. Plant genug Zeit ein und fragt die Schule nach ihrer Empfehlung.',
+  'That depends on you and the school. Allow enough time and ask the school for its recommendation.'),
+ ('Welcher Stil eignet sich am besten?', 'Which style suits best?',
+  'Das ist Geschmackssache. Ruhige Moderna- oder Sensual-Varianten mit wenigen sauberen Elementen wirken oft gut, Dominicana ist lebendiger.',
+  'That is a matter of taste. Calm Moderna or Sensual variants with a few clean elements often look good, Dominicana is livelier.'),
+ ('Brauchen wir Tanzerfahrung?', 'Do we need dance experience?',
+  'Nein. Der Bachata-Grundschritt ist leicht zu lernen. Eine Lehrkraft passt die Choreografie an euer Niveau an.',
+  'No. The Bachata basic step is easy to learn. A teacher adapts the choreography to your level.'),
+ ('Was kostet ein Hochzeitstanz-Kurs?', 'How much does a wedding dance course cost?',
+  'Das legt jede Schule selbst fest und es ändert sich. Fragt direkt bei der Schule nach.',
+  'Each school sets this itself and it changes. Ask the school directly.'),
+ _rank_faq,
+]
+guide_page('bachata-hochzeitstanz', 'bhz',
+  'Bachata Hochzeitstanz: Stil, Lied und Vorbereitung',
+  'Bachata als Hochzeitstanz: Passt das, welcher Stil, Liedwahl, Vorbereitung, Privatstunden oder Kurs und Fragen an die Tanzschule. Mit Links zu Schulen.',
+  'Bachata wedding dance: style, song and preparation',
+  'Bachata as a wedding dance: does it fit, which style, choosing the song, preparation, private lessons or class and questions for the dance school. With links to schools.',
+  'Bachata Hochzeitstanz', ('Bachata Hochzeitstanz · Ratgeber', 'Bachata wedding dance · Guide'),
+  ('Bachata <em class="foil">Hochzeitstanz</em>: Stil, Lied, Vorbereitung', 'Bachata <em class="foil">wedding dance</em>: style, song, preparation'),
+  ('Ihr wollt zu eurer Hochzeit Bachata tanzen? Hier steht, welcher Stil passt, wie ihr das Lied wählt und wie ihr euch vorbereitet.',
+   'Want to dance Bachata at your wedding? Here is which style fits, how to choose the song and how to prepare.'),
+  [('check', 'Auch ohne <b>Tanzerfahrung</b>', 'Also without <b>dance experience</b>'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  hz_sections, hz_faq, sibling_group='topic')
