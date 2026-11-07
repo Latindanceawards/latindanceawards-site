@@ -41,6 +41,8 @@ TOPIC_PAGES = [('bachata-tanzen', 'Bachata tanzen lernen', 'Learn to dance Bacha
                ('bachata-kurs-in-der-naehe', 'Bachata Kurs in der Nähe', 'Bachata class near you'),
                ('bachata-solo', 'Bachata Solo', 'Bachata solo'),
                ('bachata-hochzeitstanz', 'Bachata Hochzeitstanz', 'Bachata wedding dance'),
+               ('bachata-kurs-berlin', 'Bachata Kurs Berlin', 'Bachata class Berlin'),
+               ('bachata-tanzschule-berlin', 'Bachata Tanzschule Berlin', 'Bachata dance school Berlin'),
                ('bachata-staedte-deutschland', 'Alle Städte und Schulen', 'All cities and schools')]
 
 SHOW_FESTIVALS = False  # set True to publish the festival listing again
@@ -206,6 +208,8 @@ berlin_sections = [
    ]),
    ('p', 'Die Preise unterscheiden sich je nach Schule und Modell (Einzelstunde, Monatsbeitrag, Workshop). Wir nennen hier bewusst keine festen Zahlen, weil sie sich ändern. Vergleiche am besten zwei oder drei Preislisten.',
           'Prices differ by school and model (single class, monthly fee, workshop). We deliberately do not quote fixed numbers here because they change. It is best to compare two or three price lists.'),
+   ('p', 'Mehr Details zu Formaten und Anbietern findest du auf <a href="bachata-kurs-berlin.html">Bachata Kurs Berlin</a>, einen Vergleich der Schulen auf <a href="bachata-tanzschule-berlin.html">Bachata Tanzschule Berlin</a>.',
+          'You will find more on formats and providers at <a href="bachata-kurs-berlin.html">Bachata class Berlin</a>, and a comparison of schools at <a href="bachata-tanzschule-berlin.html">Bachata dance school Berlin</a>.'),
  ]),
  ('Bachata lernen in Berlin: Welcher Stil passt zu dir?', 'Learning Bachata in Berlin: which style suits you?', [
    ('h3', 'Bachata Dominicana', 'Bachata Dominicana'),
@@ -2607,3 +2611,173 @@ guide_page('bachata-hochzeitstanz', 'bhz',
    'Want to dance Bachata at your wedding? Here is which style fits, how to choose the song and how to prepare.'),
   [('check', 'Auch ohne <b>Tanzerfahrung</b>', 'Also without <b>dance experience</b>'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
   hz_sections, hz_faq, sibling_group='topic')
+
+# ---- Berlin support pages (Nov 2026): strengthen the biggest city cluster ----
+def _berlin_cards(extra_de=None):
+    return ('cards', [
+     {'name': 'BachatAcademy', 'url': 'https://www.bachatacademy.de',
+      'de': 'Studio in der Samariterstraße 34 in Friedrichshain. Auf der Website steht eine kostenlose, unverbindliche Probestunde, du brauchst weder Erfahrung noch Partner. Die Partner wechseln im Kurs regelmäßig. Genannt sind zwölf Lehrer sowie Bachata Sensual und Conscious Bachata.',
+      'en': 'Studio at Samariterstraße 34 in Friedrichshain. The website lists a free, no-obligation trial class, and you need neither experience nor a partner. Partners rotate in class. It names twelve teachers plus Bachata Sensual and Conscious Bachata.'},
+     {'name': 'Cumbancha', 'url': 'https://www.cumbancha.de',
+      'de': 'Berliner Tanzschule mit Bachata-Kursen im Programm.',
+      'en': 'Berlin dance school with Bachata classes in its programme.'},
+     {'name': 'HAVANNA Berlin', 'url': 'https://www.havanna-berlin.de/dance-lesson',
+      'de': 'Tanzschule mit Latin-Programm, auf der Website gibt es eine eigene Seite zu den Tanzkursen.',
+      'en': 'Dance school with a Latin programme, with a dedicated page for dance classes on its website.'},
+     {'name': 'La Mambita', 'url': 'https://www.mambita.de/bachata',
+      'de': 'Studio in Schöneberg, mit S-Bahn und U-Bahn gut erreichbar. Schwerpunkt Bachata Sensual und Moderna mit kurzen Ausflügen in Dominicana. Dienstags laufen vier Levels nacheinander, Drop-in ist möglich und Urban Sports Club wird akzeptiert.',
+      'en': 'Studio in Schöneberg, easy to reach by S-Bahn and U-Bahn. Focus on Bachata Sensual and Moderna with short excursions into Dominicana. On Tuesdays four levels run back to back, drop-in is possible and Urban Sports Club is accepted.'},
+     {'name': 'Traumtänzer', 'url': 'https://www.traumtaenzer.de',
+      'de': 'Tanzschule, die bei der Suche nach einem Bachata-Kurs in Berlin auftaucht.',
+      'en': 'Dance school that appears when searching for a Bachata class in Berlin.'},
+     {'name': 'Zapatissimo', 'url': 'https://www.zapatissimo.de/bachata-kurse-berlin',
+      'de': 'Tanzschule mit eigener Seite für Bachata-Kurse in Berlin, unter anderem mit Bootcamp-Angeboten.',
+      'en': 'Dance school with its own page for Bachata classes in Berlin, including bootcamp formats.'},
+    ])
+
+_BERLIN_APPLY = ('p', 'Deine Schule fehlt oder die Angaben stimmen nicht mehr? Schreib uns über die <a href="bewerbung.html">kostenlose Bewerbung</a>, wir ergänzen und korrigieren.',
+                      'Is your school missing, or are the details out of date? Send us the <a href="bewerbung.html">free application</a> and we will add or correct it.')
+_BERLIN_SCORE = ('So bewerten wir die Berliner Schulen', 'How we score the Berlin schools', [
+   ('p', 'Das Berliner Ranking erscheint am <strong>20. Dezember 2026</strong> auf der <a href="rankings.html#berlin">Ranking-Seite</a>. Jede Schule wird nach denselben neun öffentlichen Kriterien mit zusammen 100 Punkten bewertet, unter anderem Google-Bewertung, Festivals, Jahre aktiv, Kursangebot für Einsteiger, Events und Social Media. Plätze sind nicht käuflich, die Methode steht auf der <a href="index.html#method">Startseite</a>. Die Gesamtübersicht für die Stadt findest du auf <a href="bachata-berlin.html">Bachata Berlin</a>.',
+         'The Berlin ranking is published on <strong>December 20, 2026</strong> on the <a href="rankings.html#berlin">ranking page</a>. Every school is scored on the same nine public factors, 100 points in total, including Google rating, festivals, years active, beginner offer, events and social media. Places cannot be bought, and the method is on the <a href="index.html#method">homepage</a>. The full overview for the city is on <a href="bachata-berlin.html">Bachata Berlin</a>.'),
+   ('p', 'Du leitest eine Schule in Berlin? <a href="bewerbung.html">Bewirb dich bis zum 30. November</a> kostenlos.',
+         'Do you run a school in Berlin? <a href="bewerbung.html">Apply for free by November 30</a>.'),
+])
+
+bkb_sections = [
+ ('Bachata-Kurs in Berlin: Das Angebot im Überblick', 'Bachata class in Berlin: the offer at a glance', [
+   ('p', 'Wer in Berlin einen Bachata-Kurs sucht, findet Angebote in fast allen Teilen der Stadt: Studios mit eigenem Schwerpunkt auf Bachata, klassische Tanzschulen mit Latin-Programm und Anbieter mit Workshops oder Bootcamps. Die Stadt ist groß, deshalb entscheidet am Ende oft nicht der beste Lehrer, sondern der Kurs, den du wirklich regelmäßig erreichst.',
+         'If you are looking for a Bachata class in Berlin, you will find offers in almost every part of the city: studios that focus on Bachata, classic dance schools with a Latin programme and providers with workshops or bootcamps. The city is big, so in the end it is often not the best teacher that decides but the class you can actually reach regularly.'),
+   ('p', 'Diese Seite hilft dir, einen Kurs auszuwählen. Eine Übersicht über die Berliner Szene mit Stilen und Partys steht auf <a href="bachata-berlin.html">Bachata Berlin</a>, allgemeine Tipps zur Kurswahl unter <a href="bachata-tanzkurs.html">Bachata Tanzkurs</a>.',
+         'This page helps you choose a class. An overview of the Berlin scene with styles and parties is on <a href="bachata-berlin.html">Bachata Berlin</a>, and general tips on choosing a class are on <a href="bachata-tanzkurs.html">Bachata dance course</a>.'),
+ ]),
+ ('Bachata-Kurse in Berlin: Anbieter von A bis Z', 'Bachata classes in Berlin: providers from A to Z', [
+   ('p', 'Die Liste ist alphabetisch und keine Wertung, das offizielle Ranking erscheint am 20. Dezember 2026. Die Angaben beruhen auf den Websites der Anbieter (Stand Oktober 2026). Kurszeiten, Preise und Gruppen ändern sich, bitte prüfe sie direkt dort.',
+         'The list is alphabetical and not a rating, the official ranking is published on December 20, 2026. The details are based on the providers’ own websites (as of October 2026). Class times, prices and groups change, so please check them there.'),
+   _berlin_cards(), _BERLIN_APPLY,
+ ]),
+ ('Kursformate: Wochenkurs, Drop-in, Workshop und Bootcamp', 'Class formats: weekly class, drop-in, workshop and bootcamp', [
+   ('ul', [
+     ('<strong>Wochenkurs:</strong> Jede Woche derselbe Termin mit derselben Gruppe. Das ist der beste Weg, wenn du den Grundschritt sicher lernen willst, siehe <a href="bachata-grundschritt.html">Bachata Grundschritt</a>.', '<strong>Weekly class:</strong> the same slot every week with the same group. This is the best way if you want to learn the basic step securely, see <a href="bachata-grundschritt.html">Bachata basic step</a>.'),
+     ('<strong>Drop-in:</strong> Du buchst einzelne Stunden. Das passt, wenn dein Kalender wechselt. La Mambita nennt auf der Website Drop-in und akzeptiert Urban Sports Club.', '<strong>Drop-in:</strong> you book single classes. This suits a changing calendar. La Mambita lists drop-in on its website and accepts Urban Sports Club.'),
+     ('<strong>Workshop:</strong> Ein Thema an einem Termin, etwa Drehungen oder Styling. Mehr dazu unter <a href="bachata-workshop.html">Bachata Workshop</a>.', '<strong>Workshop:</strong> one topic on one date, such as turns or styling. More on <a href="bachata-workshop.html">Bachata workshop</a>.'),
+     ('<strong>Bootcamp:</strong> Intensive Einheiten über mehrere Stunden. Zapatissimo nennt Bootcamp-Angebote auf der Seite zu den Bachata-Kursen in Berlin.', '<strong>Bootcamp:</strong> intensive sessions over several hours. Zapatissimo lists bootcamp formats on its page for Bachata classes in Berlin.'),
+   ]),
+ ]),
+ ('Welches Level und welcher Stil passt zu dir?', 'Which level and which style suit you?', [
+   ('p', 'Starte als Einsteiger im ersten Level, auch wenn du schon anderes getanzt hast. Der Bachata-Grundschritt mit dem Tap auf Zählzeit vier ist die Basis für alles Weitere, und Einsteigerkurse sind der leichteste Weg, die Musik zu verstehen. Mehr dazu auf <a href="bachata-fuer-anfaenger.html">Bachata für Anfänger</a>.',
+         'Start in the first level as a beginner, even if you have danced other things. The Bachata basic step with the tap on count four is the base for everything else, and beginner classes are the easiest way to understand the music. More on <a href="bachata-fuer-anfaenger.html">Bachata for beginners</a>.'),
+   ('p', 'Beim Stil gilt: Moderna ist leicht zugänglich, Sensual bringt Körperarbeit und enge Verbindung, Dominicana mehr Fußarbeit und Spiel mit dem Rhythmus. Die Unterschiede erklären <a href="bachata-moderna.html">Bachata Moderna</a>, <a href="bachata-sensual.html">Bachata Sensual</a> und <a href="bachata-dominicana.html">Bachata Dominicana</a>.',
+         'On style: Moderna is easy to get into, Sensual brings body work and a close connection, Dominicana more footwork and play with the rhythm. The differences are explained on <a href="bachata-moderna.html">Bachata Moderna</a>, <a href="bachata-sensual.html">Bachata Sensual</a> and <a href="bachata-dominicana.html">Bachata Dominicana</a>.'),
+ ]),
+ ('Lage und Anfahrt: Kurs in deinem Kiez wählen', 'Location and commute: choose a class in your neighbourhood', [
+   ('p', 'In Berlin sind Wege lang, und ein Kurs, den du nur nach einer Stunde Fahrt erreichst, fällt schnell aus. Prüfe deshalb vor der Anmeldung die Anbindung. La Mambita liegt zum Beispiel in Schöneberg und ist laut eigener Website gut mit S-Bahn und U-Bahn erreichbar, BachatAcademy hat sein Studio in Friedrichshain.',
+         'In Berlin distances are long, and a class that takes an hour to reach is quickly skipped. So check the connections before you sign up. La Mambita, for example, is in Schöneberg and, according to its own website, easy to reach by S-Bahn and U-Bahn, while BachatAcademy has its studio in Friedrichshain.'),
+ ]),
+ ('Fragen, die du vor der Anmeldung stellen solltest', 'Questions to ask before you sign up', [
+   ('ul', [
+     ('Gibt es eine Probestunde und was kostet sie?', 'Is there a trial class and what does it cost?'),
+     ('Wechseln die Partner im Kurs, und muss ich jemanden mitbringen?', 'Do partners rotate in class, and do I have to bring someone?'),
+     ('Wie groß sind die Gruppen und wie viele Levels gibt es?', 'How big are the groups and how many levels are there?'),
+     ('Wie lange läuft ein Block und wie kann ich kündigen oder pausieren?', 'How long does a block run and how can I cancel or pause?'),
+     ('Gibt es Socials oder Übungsabende, auf denen ich das Gelernte anwende?', 'Are there socials or practice nights where I can use what I have learnt?'),
+   ]),
+   ('p', 'Preise nennen wir bewusst nicht, weil sie sich ändern. Vergleiche am besten zwei oder drei Preislisten. Zu den Partys in der Stadt siehe <a href="bachata-party-berlin.html">Bachata Party Berlin</a>.',
+         'We deliberately do not quote prices because they change. It is best to compare two or three price lists. For parties in the city see <a href="bachata-party-berlin.html">Bachata party Berlin</a>.'),
+ ]),
+ _BERLIN_SCORE,
+]
+bkb_faq = [
+ ('Wo finde ich einen Bachata-Kurs in Berlin?', 'Where do I find a Bachata class in Berlin?',
+  'Bei Studios und Tanzschulen in der ganzen Stadt, zum Beispiel BachatAcademy in Friedrichshain und La Mambita in Schöneberg. Oben steht eine alphabetische Liste mit Links.',
+  'At studios and dance schools across the city, for example BachatAcademy in Friedrichshain and La Mambita in Schöneberg. An alphabetical list with links is above.'),
+ ('Gibt es Bachata-Kurse für Anfänger in Berlin?', 'Are there Bachata classes for beginners in Berlin?',
+  'Ja, die meisten Anbieter haben Einsteigerlevels. La Mambita nennt auf der Website vier Levels nacheinander am Dienstag, vom Einstieg bis zur Fortgeschrittenen-Stufe.',
+  'Yes, most providers have beginner levels. La Mambita lists four levels back to back on Tuesdays on its website, from beginner to advanced.'),
+ ('Gibt es eine kostenlose Probestunde in Berlin?', 'Is there a free trial class in Berlin?',
+  'BachatAcademy nennt auf der Website eine kostenlose, unverbindliche Probestunde. Bei anderen Anbietern prüfe die Website, Angebote ändern sich.',
+  'BachatAcademy lists a free, no-obligation trial class on its website. For other providers check the website, as offers change.'),
+ ('Brauche ich einen Partner für einen Bachata-Kurs?', 'Do I need a partner for a Bachata class?',
+  'In der Regel nicht. Bei BachatAcademy wechseln die Partner laut Website regelmäßig. Frag bei anderen Schulen vorher nach.',
+  'Usually not. At BachatAcademy partners rotate regularly according to the website. Ask other schools beforehand.'),
+ ('Kann ich mit Urban Sports Club Bachata tanzen?', 'Can I dance Bachata with Urban Sports Club?',
+  'La Mambita nennt auf der Website, dass Urban Sports Club akzeptiert wird. Ob andere Anbieter teilnehmen, steht auf deren Websites.',
+  'La Mambita states on its website that Urban Sports Club is accepted. Whether other providers take part is on their websites.'),
+ ('Wann erscheint das Ranking der Bachata-Schulen in Berlin?', 'When is the ranking of Bachata schools in Berlin published?',
+  'Am 20. Dezember 2026 um 19 Uhr auf der <a href="rankings.html#berlin">Ranking-Seite</a>.',
+  'On December 20, 2026 at 7 pm (CET) on the <a href="rankings.html#berlin">ranking page</a>.'),
+]
+guide_page('bachata-kurs-berlin', 'bkb',
+  'Bachata Kurs Berlin: Anbieter, Formate und Tipps',
+  'Bachata Kurs Berlin finden: Anbieter von A bis Z, Kursformate wie Drop-in und Bootcamp, Level, Stil, Anfahrt und Fragen vor der Anmeldung. Mit Links zu Schulen.',
+  'Bachata class Berlin: providers, formats and tips',
+  'Find a Bachata class in Berlin: providers from A to Z, class formats such as drop-in and bootcamp, level, style, commute and questions before signing up. With links to schools.',
+  'Bachata Kurs Berlin', ('Bachata Kurs Berlin · Ratgeber', 'Bachata class Berlin · Guide'),
+  ('Bachata Kurs Berlin: <em class="foil">Anbieter</em> und Tipps', 'Bachata class Berlin: <em class="foil">providers</em> and tips'),
+  ('Bachata Kurs Berlin finden: Anbieter von A bis Z, Kursformate, Level und Stil, Anfahrt und die Fragen, die du vor der Anmeldung stellen solltest.',
+   'Find a Bachata class in Berlin: providers from A to Z, class formats, level and style, commute and the questions to ask before you sign up.'),
+  [('check', 'Für <b>Einsteiger</b> ohne Partner', 'For <b>beginners</b> without a partner'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  bkb_sections, bkb_faq, ranking_anchor='berlin', sibling_group='city')
+
+btb_sections = [
+ ('Bachata Tanzschule Berlin: Was dich erwartet', 'Bachata dance school Berlin: what to expect', [
+   ('p', 'Eine Bachata Tanzschule in Berlin kann ein spezialisiertes Bachata-Studio sein oder eine klassische Tanzschule, die Bachata neben Salsa und anderen Tänzen anbietet. Beides hat Vorteile: Spezialisierte Studios bieten oft mehr Levels und Stile, Tanzschulen mit breitem Programm haben meist feste Strukturen und mehrere Tanzarten unter einem Dach.',
+         'A Bachata dance school in Berlin can be a specialised Bachata studio or a classic dance school that offers Bachata alongside Salsa and other dances. Both have advantages: specialised studios often offer more levels and styles, while schools with a broad programme usually have fixed structures and several dances under one roof.'),
+   ('p', 'Diese Seite hilft dir bei der Auswahl. Allgemeine Kriterien stehen auf <a href="bachata-tanzschule.html">Bachata Tanzschule</a>, die Übersicht der Stadt auf <a href="bachata-berlin.html">Bachata Berlin</a>.',
+         'This page helps you choose. General criteria are on <a href="bachata-tanzschule.html">Bachata dance school</a>, and the overview of the city is on <a href="bachata-berlin.html">Bachata Berlin</a>.'),
+ ]),
+ ('Tanzschulen in Berlin mit Bachata im Programm', 'Dance schools in Berlin with Bachata in their programme', [
+   ('p', 'Die Liste ist alphabetisch und keine Wertung, das offizielle Ranking erscheint am 20. Dezember 2026. Die Angaben beruhen auf den Websites der Schulen (Stand Oktober 2026), bitte prüfe Angebote und Preise direkt dort.',
+         'The list is alphabetical and not a rating, the official ranking is published on December 20, 2026. The details are based on the schools’ own websites (as of October 2026), so please check offers and prices there.'),
+   _berlin_cards(), _BERLIN_APPLY,
+ ]),
+ ('Woran du eine gute Tanzschule erkennst', 'How to recognise a good dance school', [
+   ('ul', [
+     ('<strong>Transparente Infos:</strong> Kurszeiten, Level und Probestunde stehen klar auf der Website.', '<strong>Transparent information:</strong> class times, levels and trial class are clearly on the website.'),
+     ('<strong>Lehrer:</strong> Die Website nennt, wer unterrichtet. BachatAcademy führt zum Beispiel zwölf Lehrer namentlich auf.', '<strong>Teachers:</strong> the website says who teaches. BachatAcademy, for example, lists twelve teachers.'),
+     ('<strong>Einsteigerangebot:</strong> Ein eigener Anfängerkurs mit wechselnden Partnern macht den Einstieg leicht.', '<strong>Beginner offer:</strong> a dedicated beginner class with rotating partners makes starting easy.'),
+     ('<strong>Events:</strong> Socials und Übungsabende helfen, das Gelernte anzuwenden.', '<strong>Events:</strong> socials and practice nights help you use what you have learnt.'),
+     ('<strong>Flexibilität:</strong> Drop-in oder Urban Sports Club können sinnvoll sein, wenn dein Alltag wechselt.', '<strong>Flexibility:</strong> drop-in or Urban Sports Club can make sense if your daily routine changes.'),
+   ]),
+ ]),
+ ('Tanzschule oder Studio: Der Unterschied im Alltag', 'Dance school or studio: the difference in practice', [
+   ('p', 'Eine große Tanzschule bietet meist mehrere Tanzarten, feste Kursblöcke und Räume für Feiern. Ein Studio mit Bachata-Schwerpunkt, wie La Mambita mit Sensual und Moderna, geht tiefer in die Stile und lässt oft mehr Raum für Einzelstunden. Welche Form besser ist, hängt von dir ab: Willst du nur Bachata lernen oder auch Salsa und andere Tänze? Den Unterschied der beiden Tänze erklärt <a href="bachata-salsa-unterschied.html">Salsa und Bachata</a>.',
+         'A large dance school usually offers several dances, fixed class blocks and rooms for celebrations. A studio with a Bachata focus, such as La Mambita with Sensual and Moderna, goes deeper into the styles and often leaves more room for single classes. Which form is better depends on you: do you only want to learn Bachata or also Salsa and other dances? The difference between the two dances is explained on <a href="bachata-salsa-unterschied.html">Salsa and Bachata</a>.'),
+ ]),
+ ('Probestunde und Einstieg', 'Trial class and getting started', [
+   ('p', 'Nutze eine Probestunde, bevor du dich bindest. Achte darauf, ob dir die Gruppe, der Lehrer und der Raum zusagen. BachatAcademy nennt auf der Website eine kostenlose, unverbindliche Probestunde, ohne dass du Erfahrung oder Partner brauchst. Wie du Kurse in deiner Nähe findest, steht unter <a href="bachata-kurs-in-der-naehe.html">Bachata Kurs in der Nähe</a>, konkrete Berliner Kurse unter <a href="bachata-kurs-berlin.html">Bachata Kurs Berlin</a>.',
+         'Use a trial class before you commit. Check whether you like the group, the teacher and the room. BachatAcademy lists a free, no-obligation trial class on its website, with no experience or partner needed. How to find classes near you is on <a href="bachata-kurs-in-der-naehe.html">Bachata class near you</a>, and specific Berlin classes on <a href="bachata-kurs-berlin.html">Bachata class Berlin</a>.'),
+ ]),
+ _BERLIN_SCORE,
+]
+btb_faq = [
+ ('Welche Tanzschulen in Berlin bieten Bachata an?', 'Which dance schools in Berlin offer Bachata?',
+  'Zum Beispiel BachatAcademy, Cumbancha, HAVANNA Berlin, La Mambita, Traumtänzer und Zapatissimo. Die Liste oben ist alphabetisch und keine Wertung.',
+  'For example BachatAcademy, Cumbancha, HAVANNA Berlin, La Mambita, Traumtänzer and Zapatissimo. The list above is alphabetical and not a rating.'),
+ ('Was ist die beste Bachata Tanzschule in Berlin?', 'What is the best Bachata dance school in Berlin?',
+  'Das hängt von Level, Stil und Lage ab. Ein Ranking nach neun öffentlichen Kriterien erscheint am 20. Dezember 2026 auf der <a href="rankings.html#berlin">Ranking-Seite</a>.',
+  'That depends on level, style and location. A ranking based on nine public factors is published on December 20, 2026 on the <a href="rankings.html#berlin">ranking page</a>.'),
+ ('Gibt es eine kostenlose Probestunde?', 'Is there a free trial class?',
+  'BachatAcademy nennt auf der Website eine kostenlose, unverbindliche Probestunde. Bei anderen Schulen prüfe die Website.',
+  'BachatAcademy lists a free, no-obligation trial class on its website. For other schools check the website.'),
+ ('Brauche ich Vorkenntnisse?', 'Do I need previous experience?',
+  'Nein, die meisten Schulen bieten Einsteigerkurse. Bei BachatAcademy brauchst du laut Website weder Erfahrung noch Partner.',
+  'No, most schools offer beginner classes. At BachatAcademy you need neither experience nor a partner according to the website.'),
+ ('Was kostet eine Tanzschule in Berlin?', 'What does a dance school in Berlin cost?',
+  'Das legt jede Schule selbst fest und es ändert sich. Wir nennen bewusst keine Zahlen, die aktuellen Preise stehen auf den Websites.',
+  'Each school sets this itself and it changes. We deliberately give no figures, current prices are on the websites.'),
+ ('Wann erscheint das Ranking der Bachata-Schulen in Berlin?', 'When is the ranking of Bachata schools in Berlin published?',
+  'Am 20. Dezember 2026 um 19 Uhr auf der <a href="rankings.html#berlin">Ranking-Seite</a>.',
+  'On December 20, 2026 at 7 pm (CET) on the <a href="rankings.html#berlin">ranking page</a>.'),
+]
+guide_page('bachata-tanzschule-berlin', 'btb',
+  'Bachata Tanzschule Berlin: Auswahl und Vergleich',
+  'Bachata Tanzschule Berlin: Schulen von A bis Z, woran du eine gute Tanzschule erkennst, Studio oder Tanzschule und die Probestunde. Mit Links zu den Websites.',
+  'Bachata dance school Berlin: choosing and comparing',
+  'Bachata dance school in Berlin: schools from A to Z, how to recognise a good school, studio or dance school and the trial class. With links to the websites.',
+  'Bachata Tanzschule Berlin', ('Bachata Tanzschule Berlin · Ratgeber', 'Bachata dance school Berlin · Guide'),
+  ('Bachata Tanzschule Berlin: <em class="foil">Auswahl</em> und Vergleich', 'Bachata dance school Berlin: <em class="foil">choosing</em> and comparing'),
+  ('Bachata Tanzschule Berlin finden: Schulen von A bis Z, Kriterien für eine gute Schule, Studio oder Tanzschule und der Einstieg mit Probestunde.',
+   'Find a Bachata dance school in Berlin: schools from A to Z, criteria for a good school, studio or dance school and getting started with a trial class.'),
+  [('check', 'Für <b>Einsteiger</b> ohne Partner', 'For <b>beginners</b> without a partner'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  btb_sections, btb_faq, ranking_anchor='berlin', sibling_group='city')
