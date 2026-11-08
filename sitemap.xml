@@ -144,14 +144,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-kempten"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-kempten"/>
   </url>
-  <url>
-    <loc>https://latindanceawards.com/bachata-leipzig</loc>
-    <lastmod>2026-10-30</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-leipzig"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-leipzig"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-leipzig"/>
-  </url>
+  
   <url>
     <loc>https://latindanceawards.com/bachata-oldenburg</loc>
     <lastmod>2026-10-26</lastmod>
@@ -6162,22 +6155,8 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-party"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-party"/>
   </url>
-  <url>
-    <loc>https://latindanceawards.com/bachata-kassel</loc>
-    <lastmod>2026-10-30</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-kassel"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-kassel"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-kassel"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/bachata-hannover</loc>
-    <lastmod>2026-10-30</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-hannover"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-hannover"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-hannover"/>
-  </url>
+  
+  
   <url>
     <loc>https://latindanceawards.com/bachata-staedte-deutschland</loc>
     <lastmod>2026-10-30</lastmod>
@@ -6186,62 +6165,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-staedte-deutschland"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-staedte-deutschland"/>
   </url>
-  <url>
-    <loc>https://latindanceawards.com/bachata-braunschweig</loc>
-    <lastmod>2026-11-02</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-braunschweig"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-braunschweig"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-braunschweig"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/bachata-heidelberg</loc>
-    <lastmod>2026-11-02</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-heidelberg"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-heidelberg"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-heidelberg"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/bachata-dortmund</loc>
-    <lastmod>2026-11-02</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-dortmund"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-dortmund"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-dortmund"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/bachata-kiel</loc>
-    <lastmod>2026-11-06</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-kiel"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-kiel"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-kiel"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/bachata-bochum</loc>
-    <lastmod>2026-11-06</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-bochum"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-bochum"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-bochum"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/bachata-regensburg</loc>
-    <lastmod>2026-11-08</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-regensburg"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-regensburg"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-regensburg"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/bachata-mannheim</loc>
-    <lastmod>2026-11-08</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-mannheim"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-mannheim"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-mannheim"/>
-  </url>
+  
+  
+  
+  
+  
+  
+  
   <url>
     <loc>https://latindanceawards.com/bachata-kurs-in-der-naehe</loc>
     <lastmod>2026-11-06</lastmod>
@@ -6282,30 +6212,9 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-hochzeitstanz"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-hochzeitstanz"/>
   </url>
-  <url>
-    <loc>https://latindanceawards.com/bachata-wuerzburg</loc>
-    <lastmod>2026-11-07</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-wuerzburg"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-wuerzburg"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-wuerzburg"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/bachata-muenster</loc>
-    <lastmod>2026-11-07</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-muenster"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-muenster"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-muenster"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/bachata-augsburg</loc>
-    <lastmod>2026-11-07</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-augsburg"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-augsburg"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-augsburg"/>
-  </url>
+  
+  
+  
   <url>
     <loc>https://latindanceawards.com/bachata-kurs-berlin</loc>
     <lastmod>2026-11-07</lastmod>
@@ -9964,14 +9873,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-kempten"/>
   </url>
   <url>
-    <loc>https://latindanceawards.com/en/bachata-leipzig</loc>
-    <lastmod>2026-10-30</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-leipzig"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-leipzig"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-leipzig"/>
-  </url>
-  <url>
     <loc>https://latindanceawards.com/en/bachata-oldenburg</loc>
     <lastmod>2026-10-26</lastmod>
     <priority>0.8</priority>
@@ -10772,84 +10673,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-party"/>
   </url>
   <url>
-    <loc>https://latindanceawards.com/en/bachata-kassel</loc>
-    <lastmod>2026-10-30</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-kassel"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-kassel"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-kassel"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/en/bachata-hannover</loc>
-    <lastmod>2026-10-30</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-hannover"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-hannover"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-hannover"/>
-  </url>
-  <url>
     <loc>https://latindanceawards.com/en/bachata-staedte-deutschland</loc>
     <lastmod>2026-10-30</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-staedte-deutschland"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-staedte-deutschland"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-staedte-deutschland"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/en/bachata-braunschweig</loc>
-    <lastmod>2026-11-02</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-braunschweig"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-braunschweig"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-braunschweig"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/en/bachata-heidelberg</loc>
-    <lastmod>2026-11-02</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-heidelberg"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-heidelberg"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-heidelberg"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/en/bachata-dortmund</loc>
-    <lastmod>2026-11-02</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-dortmund"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-dortmund"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-dortmund"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/en/bachata-kiel</loc>
-    <lastmod>2026-11-06</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-kiel"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-kiel"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-kiel"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/en/bachata-bochum</loc>
-    <lastmod>2026-11-06</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-bochum"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-bochum"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-bochum"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/en/bachata-regensburg</loc>
-    <lastmod>2026-11-08</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-regensburg"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-regensburg"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-regensburg"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/en/bachata-mannheim</loc>
-    <lastmod>2026-11-08</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-mannheim"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-mannheim"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-mannheim"/>
   </url>
   <url>
     <loc>https://latindanceawards.com/en/bachata-kurs-in-der-naehe</loc>
@@ -10890,30 +10719,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-hochzeitstanz"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-hochzeitstanz"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-hochzeitstanz"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/en/bachata-wuerzburg</loc>
-    <lastmod>2026-11-07</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-wuerzburg"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-wuerzburg"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-wuerzburg"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/en/bachata-muenster</loc>
-    <lastmod>2026-11-07</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-muenster"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-muenster"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-muenster"/>
-  </url>
-  <url>
-    <loc>https://latindanceawards.com/en/bachata-augsburg</loc>
-    <lastmod>2026-11-07</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-augsburg"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-augsburg"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-augsburg"/>
   </url>
   <url>
     <loc>https://latindanceawards.com/en/bachata-kurs-berlin</loc>

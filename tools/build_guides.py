@@ -1,6 +1,6 @@
 # Builds the keyword landing pages (city guides, topic guides). Run: python3 tools/build_guides.py
 # Reuses tools/build.py (head, CSS, header, footer, helpers). Running this also rebuilds the base pages.
-import os, sys, urllib.parse
+import os, sys, re, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build as B
 from build import T, page, crumbs, faq_schema, ICON, ROOT
@@ -1147,6 +1147,14 @@ _emain = f"""<section class="page-hero"><div class="wrap" style="grid-template-c
   <p class="muted" style="margin-top:12px">{_te("span", f"{_ev_n} Socials in fünf Städten, Stand Oktober 2026. Die Angaben stammen aus öffentlichen Veranstaltungslisten und von den Seiten der Veranstalter. Zeiten und Preise ändern sich, bitte prüfe sie vor dem Besuch. Weitere Städte folgen, sobald Veranstalter ihre Socials eintragen. Zum ersten Mal auf einem Social? <a href='bachata-party.html'>So läuft eine Bachata Party ab</a>.", f"{_ev_n} socials in five cities, as of October 2026. Details come from public event listings and the organisers' own pages. Times and prices change, so please check before you go. More cities follow as organisers list their socials. First time at a social? <a href='bachata-party.html'>How a Bachata party runs</a>.")}</p>
   {_ev_secs}
   <section id="evnew" hidden><h2 class="evh">{_te("span", "Neu eingetragen", "Newly listed")}</h2><div class="cards two evc" id="evnewl"></div></section>
+
+  <div class="prose" id="lesen" style="margin:34px 0">
+    {_te("h2", "So liest du diese Liste", "How to read this list")}
+    {_te("p", "<b>Kurs vor der Party.</b> Steht bei einem Eintrag eine Kurszeit vor der Party, lohnt sich der frühe Start: Im kurzen Workshop lernst du die Figuren des Abends und tanzt dich ein, bevor die Fläche voll wird. Als Einsteiger kommst du am besten zu diesen Terminen.", "<b>Class before the party.</b> If an entry lists a class time before the party, arrive for it. The short workshop teaches the moves of the night and lets you warm up before the floor fills. Beginners are best off at these dates.")}
+    {_te("p", "<b>Monatlich oder wöchentlich.</b> „Jeden Freitag“ heißt jede Woche, „jeden 2. Samstag im Monat“ nur einmal im Monat. Feiertage, Ferien und Sonderveranstaltungen können einen Termin verschieben. Bestätige deshalb jeden Abend kurz beim Veranstalter, den du über den Link „Veranstalter“ erreichst.", "<b>Monthly or weekly.</b> “Every Friday” means every week, “every 2nd Saturday of the month” only once a month. Public holidays, school breaks and special events can move a date, so confirm each night with the organiser through the “Veranstalter” link.")}
+    {_te("p", "<b>Preis und Getränke.</b> Manche Socials nennen einen Eintritt inklusive Workshop, andere einen Getränkegutschein. Das steht dann bei der Angabe. Fehlt ein Preis, hat der Veranstalter keinen veröffentlicht, und wir schreiben keinen dazu.", "<b>Price and drinks.</b> Some socials list an entry that includes the workshop, others a drink voucher. It says so in the entry. If no price is shown, the organiser has not published one, and we do not add one.")}
+    {_te("p", "<b>Stand der Angaben.</b> Die Liste wurde im Oktober 2026 aus öffentlichen Quellen zusammengestellt und nicht bei jedem Veranstalter einzeln bestätigt. Sie ist eine Orientierung, kein Fahrplan. Siehst du einen Fehler oder fehlt ein Social? Mit dem Formular unten oder per E-Mail korrigieren wir ihn.", "<b>Status of the data.</b> The list was compiled from public sources in October 2026 and not confirmed with every organiser individually. It is a guide, not a timetable. If you see a mistake or a social is missing, tell us with the form below or by email and we will correct it.")}
+  </div>
 
   <div class="box" id="eintragen"><h3>{_te("span", "Social kostenlos eintragen", "List your social for free")}</h3>
     <form id="evform" novalidate style="display:grid;gap:14px">
@@ -3010,3 +3018,14 @@ guide_page('salsa-tanzen', 'sal',
    'Salsa comes from the Caribbean and became a household term in New York. Here is where it comes from, which styles exist and how to start.'),
   [('check', 'Für <b>Einsteiger</b>', 'For <b>beginners</b>'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
   sal_sections, sal_faq, sibling_group='topic')
+
+# --- Thin-content tiering: city pages with at most 2 listed schools are mostly template text.
+# They stay online and linked from the cities index, but are set to noindex until the 20 Dec ranking gives real data.
+_NOINDEX_MAX_SCHOOLS = 2
+for _k in {e['city'] for e in B.SCH}:
+    if sum(1 for e in B.SCH if e['city'] == _k) <= _NOINDEX_MAX_SCHOOLS:
+        _p = os.path.join(ROOT, f'bachata-{_k}.html')
+        if os.path.exists(_p):
+            _h = open(_p, encoding='utf-8').read()
+            _h2 = re.sub(r'<meta name="robots" content="[^"]*">', '<meta name="robots" content="noindex,follow">', _h, count=1)
+            if _h2 != _h: open(_p, 'w', encoding='utf-8').write(_h2)

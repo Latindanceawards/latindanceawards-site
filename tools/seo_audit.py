@@ -136,7 +136,7 @@ for page, (kw, target) in PAGES.items():
         ('Authority outbound link (noopener)', 3, len(outbound) >= 1, f'{len(outbound)}'),
         ('All images have alt text', 3, not bad_imgs, f'{len(bad_imgs)} missing'),
         ('Word count vs target', 5, target == 0 or len(words) >= target, f'{len(words)} words (target {target})'),
-        ('In sitemap.xml and llms.txt', 4, f'<loc>{url}</loc>' in sitemap and url in llms, ''),
+        ('In sitemap.xml and llms.txt', 4, ('noindex' in head) or (f'<loc>{url}</loc>' in sitemap and url in llms), ''),
     ]
     score = sum(w for _, w, ok, _ in checks if ok); maxs = sum(w for _, w, _, _ in checks)
     pct = round(score / maxs * 100)
@@ -201,6 +201,7 @@ show('Broken internal links', broken, lambda b: f'{b[0]} -> {b[1]}')
 show('Orphan pages (no inbound link)', orphans, lambda o: o)
 show('Pages over 250 KB (warning only: heavy inline CSS/JS)', heavy, lambda h: f'{h[0]} ({h[1]} KB)')
 sitemap_missing = [f for f in files if f not in ('404.html',) and 'latindanceawards.com/' + (re.sub(r'(^|/)index\.html$', r'\1', f)[:-5] if f.endswith('.html') and not f.endswith('index.html') else re.sub(r'index\.html$', '', f)) not in sitemap and not f.endswith('index.html') and f != 'index.html' and f not in ('datenschutz.html', 'impressum.html', 'teilen.html', 'en/datenschutz.html', 'en/impressum.html', 'en/teilen.html')]  # legal/utility pages are intentionally unlisted
+sitemap_missing = [f for f in sitemap_missing if 'content="noindex' not in open(f, encoding='utf-8').read(3000)]  # noindex pages are intentionally unlisted
 show('Pages missing from sitemap.xml (non-index)', sitemap_missing, lambda o: o)
 SITE_OK = not (dup_t or dup_d or broken)
 print('\nSITE-WIDE: ' + ('PASS (no duplicates or broken links)' if SITE_OK else 'ISSUES FOUND'))

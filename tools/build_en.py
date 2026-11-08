@@ -203,6 +203,9 @@ def main():
         rel = loc[len(HOST):]
         tgt = resolve(rel or './', 'index.html') if loc.startswith(HOST) else None
         if tgt not in PAGESET or tgt in skipped: return blk
+        try:
+            if 'content="noindex' in open(os.path.join(ROOT, tgt), encoding='utf-8').read(3000): return ''
+        except OSError: pass
         blk = re.sub(r'(hreflang="en" href=")[^"]*(")', r'\g<1>%s\g<2>' % en_url(tgt), blk)
         enb = blk.replace('<loc>%s</loc>' % loc, '<loc>%s</loc>' % en_url(tgt), 1)
         blocks.append(enb)
