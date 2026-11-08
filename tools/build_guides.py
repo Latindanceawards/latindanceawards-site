@@ -40,6 +40,8 @@ TOPIC_PAGES = [('bachata-tanzen', 'Bachata tanzen lernen', 'Learn to dance Bacha
                ('bachata-party', 'Bachata Party', 'Bachata party'),
                ('bachata-kurs-in-der-naehe', 'Bachata Kurs in der Nähe', 'Bachata class near you'),
                ('bachata-solo', 'Bachata Solo', 'Bachata solo'),
+               ('bachata-was-ist-das', 'Was ist Bachata', 'What is Bachata'),
+               ('salsa-tanzen', 'Salsa tanzen', 'Dancing Salsa'),
                ('bachata-hochzeitstanz', 'Bachata Hochzeitstanz', 'Bachata wedding dance'),
                ('bachata-kurs-berlin', 'Bachata Kurs Berlin', 'Bachata class Berlin'),
                ('bachata-tanzschule-berlin', 'Bachata Tanzschule Berlin', 'Bachata dance school Berlin'),
@@ -2781,3 +2783,152 @@ guide_page('bachata-tanzschule-berlin', 'btb',
    'Find a Bachata dance school in Berlin: schools from A to Z, criteria for a good school, studio or dance school and getting started with a trial class.'),
   [('check', 'Für <b>Einsteiger</b> ohne Partner', 'For <b>beginners</b> without a partner'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
   btb_sections, btb_faq, ranking_anchor='berlin', sibling_group='city')
+
+# ---- Basics pages (Nov 2026): Was ist Bachata, Salsa tanzen ----
+_WP_B = '<a href="https://en.wikipedia.org/wiki/Bachata_(dance)" rel="noopener nofollow" target="_blank">Wikipedia</a>'
+_WP_S = '<a href="https://en.wikipedia.org/wiki/Salsa_dance" rel="noopener nofollow" target="_blank">Wikipedia</a>'
+
+was_sections = [
+ ('Was ist Bachata?', 'What is Bachata?', [
+   ('p', 'Bachata ist zugleich eine Musikrichtung und ein Paartanz aus der Dominikanischen Republik. Die Musik wird von Gitarren getragen, der Tanz wird zu zweit getanzt und besteht im Kern aus einem einfachen Grundschritt mit vier Zählzeiten. Heute wird Bachata in vielen Ländern getanzt, auch in Deutschland, wo es Kurse, Partys und Festivals gibt.',
+         'Bachata is both a style of music and a partner dance from the Dominican Republic. The music is carried by guitars, the dance is done in pairs and at its core is a simple basic step with four counts. Today Bachata is danced in many countries, including Germany, where there are classes, parties and festivals.'),
+   ('p', 'Auf dieser Seite findest du einen Überblick: Wo Bachata herkommt, wie sich Musik und Tanz entwickelt haben, welche Stile es gibt und wie du als Einsteiger anfängst. Zu jedem Punkt führen wir dich zu den ausführlichen Ratgebern.',
+         'This page gives an overview: where Bachata comes from, how the music and the dance developed, which styles exist and how you get started as a beginner. For each point we link you to the detailed guides.'),
+ ]),
+ ('Woher kommt Bachata?', 'Where does Bachata come from?', [
+   ('p', f'Nach {_WP_B} entstand der Tanz in der Dominikanischen Republik in den 1960er-Jahren. Die Musik begann als romantische Gitarrenmusik in der Tradition des Bolero und war zunächst weniger Tanzmusik. Später nahm sie Elemente des Merengue auf, das Tempo stieg und Bachata wurde zunehmend zum Tanzen gespielt.',
+         f'According to {_WP_B}, the dance was created in the Dominican Republic in the 1960s. The music began as romantic guitar music in the tradition of the bolero and was at first less dance music. Later it took on elements of merengue, the tempo rose and Bachata was increasingly played for dancing.'),
+   ('p', 'In den 1970er- und 1980er-Jahren galt Bachata als Musik der unteren Schichten und lief kaum im Radio. Um 1990 änderte sich das, vor allem durch Juan Luis Guerra, der 1992 mit „Bachata Rosa“ einen Grammy gewann. 2019 nahm die UNESCO „Music and dance of Dominican Bachata“ in die Liste des immateriellen Kulturerbes der Menschheit auf. Mehr zur Musik steht im Ratgeber <a href="bachata-musik.html">Bachata Musik</a>.',
+         'In the 1970s and 1980s Bachata was regarded as music of the lower classes and hardly played on the radio. Around 1990 that changed, above all through Juan Luis Guerra, who won a Grammy in 1992 with “Bachata Rosa”. In 2019 UNESCO added “Music and dance of Dominican Bachata” to the Representative List of the Intangible Cultural Heritage of Humanity. More on the music is in the guide <a href="bachata-musik.html">Bachata music</a>.'),
+ ]),
+ ('Wie sieht der Tanz aus?', 'What does the dance look like?', [
+   ('p', f'Der ursprüngliche Tanz wurde laut {_WP_B} in geschlossener Haltung getanzt, ähnlich wie der Bolero, oft in enger Umarmung. Der Grundschritt bewegt sich in einem kleinen Quadrat. Heute wird oft zu schnellerer Musik getanzt, mit mehr Fußarbeit, einfachen Drehungen und einem Wechsel zwischen geschlossener und offener Haltung.',
+         f'According to {_WP_B}, the original dance was done in closed position, similar to the bolero, often in a close embrace. The basic step moves within a small square. Today people often dance to faster music, with more footwork, simple turns and a change between closed and open position.'),
+   ('p', 'Der Grundschritt besteht aus drei Schritten in eine Richtung und einem Tap auf Zählzeit vier, danach geht es in die Gegenrichtung. Wie das genau aussieht, steht auf der Seite <a href="bachata-grundschritt.html">Bachata Grundschritt</a>.',
+         'The basic step consists of three steps in one direction and a tap on count four, then you go back in the other direction. Exactly how that looks is on the page <a href="bachata-grundschritt.html">Bachata basic step</a>.'),
+ ]),
+ ('Die Stile der Bachata', 'The styles of Bachata', [
+   ('ul', [
+     ('<strong>Bachata Dominicana:</strong> Der ursprüngliche Stil aus der Dominikanischen Republik mit lebendigem Fußwerk. Siehe <a href="bachata-dominicana.html">Bachata Dominicana</a>.', '<strong>Bachata Dominicana:</strong> the original style from the Dominican Republic with lively footwork. See <a href="bachata-dominicana.html">Bachata Dominicana</a>.'),
+     (f'<strong>Bachata Moderna:</strong> Laut {_WP_B} vor allem in New York von der Diaspora und von Salsa-Tänzern entwickelt, mit mehr Drehungen und Figuren. Siehe <a href="bachata-moderna.html">Bachata Moderna</a>.', f'<strong>Bachata Moderna:</strong> according to {_WP_B} developed especially in New York by the diaspora and by salsa dancers, with more turns and figures. See <a href="bachata-moderna.html">Bachata Moderna</a>.'),
+     ('<strong>Bachata Sensual:</strong> In Spanien entstanden, verbunden mit Korke Escalona und Judith Cordero, mit enger Verbindung und weicher Körperbewegung. Siehe <a href="bachata-sensual.html">Bachata Sensual</a>.', '<strong>Bachata Sensual:</strong> created in Spain, associated with Korke Escalona and Judith Cordero, with a close connection and soft body movement. See <a href="bachata-sensual.html">Bachata Sensual</a>.'),
+   ]),
+   ('p', 'Welcher Stil zu dir passt, hängt vom Geschmack ab. Einsteiger lernen meist erst den Grundschritt und entscheiden später, welchen Stil sie vertiefen.',
+         'Which style suits you depends on taste. Beginners usually learn the basic step first and decide later which style to deepen.'),
+ ]),
+ ('Bachata in Deutschland', 'Bachata in Germany', [
+   ('p', 'In Deutschland wurde Bachata durch Lieder wie „Obsesión“ von Aventura bekannt, das im September 2004 Platz 1 der Media-Control-Singlecharts erreichte. Inzwischen gibt es in vielen Städten Kurse, regelmäßige Partys und Festivals. Termine findest du unter <a href="bachata-socials.html">Bachata-Socials</a> und <a href="bachata-festivals-deutschland.html">Bachata-Festivals</a>.',
+         'In Germany Bachata became known through songs such as “Obsesión” by Aventura, which reached number 1 in the Media Control singles chart in September 2004. Meanwhile there are classes, regular parties and festivals in many cities. You will find dates under <a href="bachata-socials.html">Bachata socials</a> and <a href="bachata-festivals-deutschland.html">Bachata festivals</a>.'),
+ ]),
+ ('Bachata und Salsa: Was ist der Unterschied?', 'Bachata and Salsa: what is the difference?', [
+   ('p', 'Beide Tänze kommen aus der Karibik, haben aber verschiedene Wurzeln, Musik und Schritte. Bachata ist ein 4er-Rhythmus mit Gitarre, Salsa lebt von Percussion und Bläsern. Alle Unterschiede im Überblick stehen im Ratgeber <a href="bachata-salsa-unterschied.html">Salsa und Bachata</a>, die Grundlagen zu Salsa auf der Seite <a href="salsa-tanzen.html">Salsa tanzen</a>.',
+         'Both dances come from the Caribbean, but have different roots, music and steps. Bachata is a four-count rhythm with guitar, Salsa lives on percussion and brass. All differences at a glance are in the guide <a href="bachata-salsa-unterschied.html">Salsa and Bachata</a>, the basics of Salsa on the page <a href="salsa-tanzen.html">Dancing Salsa</a>.'),
+ ]),
+ ('Bachata lernen: So fängst du an', 'Learning Bachata: how to start', [
+   ('ul', [
+     ('<strong>Grundschritt üben:</strong> Er ist leicht und die Basis für alles. Siehe <a href="bachata-grundschritt.html">Bachata Grundschritt</a>.', '<strong>Practise the basic step:</strong> it is easy and the base for everything. See <a href="bachata-grundschritt.html">Bachata basic step</a>.'),
+     ('<strong>Einen Kurs finden:</strong> Siehe <a href="bachata-kurs-in-der-naehe.html">Bachata Kurs in der Nähe</a> und <a href="bachata-fuer-anfaenger.html">Bachata für Anfänger</a>.', '<strong>Find a class:</strong> see <a href="bachata-kurs-in-der-naehe.html">Bachata class near you</a> and <a href="bachata-fuer-anfaenger.html">Bachata for beginners</a>.'),
+     ('<strong>Zur Party gehen:</strong> Tanzen lernt man beim Tanzen. Tipps unter <a href="bachata-party.html">Bachata Party</a>.', '<strong>Go to a party:</strong> you learn dancing by dancing. Tips on <a href="bachata-party.html">Bachata party</a>.'),
+   ]),
+   ('p', 'Einen vollständigen Einstieg gibt der Ratgeber <a href="bachata-tanzen.html">Bachata tanzen lernen</a>.',
+         'A complete introduction is in the guide <a href="bachata-tanzen.html">Learn to dance Bachata</a>.'),
+ ]),
+ _closing('Wer Bachata in der eigenen Stadt lernen will, findet dort die Schulen.', 'If you want to learn Bachata in your own city, you will find the schools there.'),
+]
+was_faq = [
+ ('Was ist Bachata?', 'What is Bachata?',
+  'Bachata ist eine Musikrichtung und ein Paartanz aus der Dominikanischen Republik. Die Musik wird von Gitarren getragen, der Grundschritt hat vier Zählzeiten.',
+  'Bachata is a style of music and a partner dance from the Dominican Republic. The music is carried by guitars and the basic step has four counts.'),
+ ('Woher kommt Bachata?', 'Where does Bachata come from?',
+  'Aus der Dominikanischen Republik. Nach Wikipedia entstand der Tanz in den 1960er-Jahren.',
+  'From the Dominican Republic. According to Wikipedia the dance was created in the 1960s.'),
+ ('Welche Bachata-Stile gibt es?', 'Which Bachata styles are there?',
+  'Die drei bekanntesten sind Dominicana, Moderna und Sensual. Dazu kommen Mischformen.',
+  'The three best known are Dominicana, Moderna and Sensual. There are also fusion forms.'),
+ ('Ist Bachata schwer zu lernen?', 'Is Bachata hard to learn?',
+  'Der Grundschritt ist leicht. Wie schnell du vorankommst, hängt von deiner Übung ab. Ein Anfängerkurs ist ein guter Start.',
+  'The basic step is easy. How fast you progress depends on your practice. A beginner class is a good start.'),
+ ('Was ist der Unterschied zwischen Bachata und Salsa?', 'What is the difference between Bachata and Salsa?',
+  'Andere Wurzeln, andere Musik, anderer Grundschritt. Details im Ratgeber <a href="bachata-salsa-unterschied.html">Salsa und Bachata</a>.',
+  'Different roots, different music, different basic step. Details in the guide <a href="bachata-salsa-unterschied.html">Salsa and Bachata</a>.'),
+ _rank_faq,
+]
+guide_page('bachata-was-ist-das', 'bwi',
+  'Was ist Bachata? Herkunft, Geschichte und Stile',
+  'Was ist Bachata? Herkunft aus der Dominikanischen Republik, Geschichte von Musik und Tanz, die Stile Dominicana, Moderna und Sensual und wie du anfängst.',
+  'What is Bachata? Origin, history and styles',
+  'What is Bachata? Origin in the Dominican Republic, history of the music and the dance, the styles Dominicana, Moderna and Sensual and how to start.',
+  'Was ist Bachata', ('Was ist Bachata · Ratgeber', 'What is Bachata · Guide'),
+  ('Was ist Bachata? <em class="foil">Herkunft</em>, Geschichte, Stile', 'What is Bachata? <em class="foil">Origin</em>, history, styles'),
+  ('Bachata ist Musik und Paartanz aus der Dominikanischen Republik. Hier erfährst du, woher sie kommt, wie sie sich entwickelt hat und welche Stile es gibt.',
+   'Bachata is music and a partner dance from the Dominican Republic. Here you learn where it comes from, how it developed and which styles exist.'),
+  [('check', 'Für <b>Einsteiger</b> und Neugierige', 'For <b>beginners</b> and the curious'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  was_sections, was_faq, sibling_group='topic')
+
+sal_sections = [
+ ('Was ist Salsa?', 'What is Salsa?', [
+   ('p', 'Salsa ist ein Paartanz und eine Musikrichtung mit Wurzeln in der Karibik. Getanzt wird zu schneller, rhythmisch dichter Musik, meist mit Percussion und Bläsern. Der Tanz ist in vielen Ländern verbreitet, auch in Deutschland, wo viele Tanzschulen Salsa-Kurse anbieten. Auf Latin Dance Awards steht Salsa neben Bachata, weil viele Tänzer beide lernen.',
+         'Salsa is a partner dance and a style of music with roots in the Caribbean. It is danced to fast, rhythmically dense music, usually with percussion and brass. The dance is widespread in many countries, including Germany, where many dance schools offer Salsa classes. On Latin Dance Awards Salsa sits next to Bachata because many dancers learn both.'),
+ ]),
+ ('Woher kommt Salsa?', 'Where does Salsa come from?', [
+   ('p', f'Nach {_WP_S} hat sich Salsa aus afro-kubanischen und karibischen Gesellschaftstänzen entwickelt, darunter Son cubano, Danzón, Mambo, Cha-Cha-Chá und Rumba. Der Begriff „Salsa“ wurde in den 1960er- und 1970er-Jahren in New York als Bezeichnung für die dort entstandene afro-karibische Tanzmusik bekannt. Als Förderer nennt Wikipedia unter anderem Johnny Pacheco, Fania Records und die Fania All-Stars.',
+         f'According to {_WP_S}, Salsa developed from Afro-Cuban and Caribbean social dances, including son cubano, danzón, mambo, cha-cha-chá and rumba. The term “salsa” became known in New York in the 1960s and 1970s as a label for the Afro-Caribbean dance music created there. Wikipedia names Johnny Pacheco, Fania Records and the Fania All-Stars among its promoters.'),
+   ('p', 'Nach Deutschland kam Salsa Anfang der 1980er-Jahre. Salsa ist damit die ältere Tanzfamilie, Bachata als eigener Tanz die jüngere. Den Vergleich findest du im Ratgeber <a href="bachata-salsa-unterschied.html">Salsa und Bachata</a>.',
+         'Salsa came to Germany in the early 1980s. Salsa is thus the older dance family, Bachata as its own dance the younger one. You will find the comparison in the guide <a href="bachata-salsa-unterschied.html">Salsa and Bachata</a>.'),
+ ]),
+ ('Die wichtigsten Salsa-Stile', 'The main Salsa styles', [
+   ('ul', [
+     (f'<strong>Kubanisch (Casino):</strong> Ein Kreistanz, bei dem die Tanzenden umeinander herum tanzen. Laut {_WP_S} geht der Name auf die „Casinos Deportivos“ zurück. Aus Havanna stammt auch Rueda de Casino aus den 1950er-Jahren.', f'<strong>Cuban (Casino):</strong> a circular dance in which the dancers move around each other. According to {_WP_S} the name goes back to the “Casinos Deportivos”. Rueda de Casino, from the 1950s, also comes from Havana.'),
+     ('<strong>Los Angeles (On 1):</strong> Linear, auf einer „Linie“ getanzt, mit dem Break auf der ersten Zählzeit.', '<strong>Los Angeles (On 1):</strong> linear, danced on a “slot”, with the break on the first beat.'),
+     ('<strong>New York (On 2):</strong> Ebenfalls linear, aber auf der zweiten Zählzeit getanzt, mit starkem Gewicht auf Solo-Passagen („Shines“).', '<strong>New York (On 2):</strong> also linear, but danced on the second beat, with strong emphasis on solo passages (“shines”).'),
+     ('<strong>Kolumbianisch (Cali):</strong> Ein Kreisstil mit schneller Fußarbeit. Cali gilt als „Hauptstadt der Salsa“.', '<strong>Colombian (Cali):</strong> a circular style with fast footwork. Cali is known as the “capital of salsa”.'),
+   ]),
+   ('p', 'In vielen Tanzschulen wird ein Stil unterrichtet, den die Schule auf ihrer Website nennt. Frage vor der Anmeldung, welcher Stil im Kurs gelehrt wird.',
+         'Many dance schools teach one style, which the school names on its website. Ask which style the class teaches before you sign up.'),
+ ]),
+ ('Der Grundschritt: Drei Schritte auf vier Zählzeiten', 'The basic step: three steps on four beats', [
+   ('p', f'Das Grundmuster ist laut {_WP_S} drei Schritte auf vier Zählzeiten. Auf die vierte Zählzeit fällt beim Tanzen die Pause, das Muster läuft über acht Zählzeiten. Das Tempo liegt nach Wikipedia meist zwischen 160 und 220 Schlägen pro Minute. Bachata dagegen hat einen Grundschritt über vier Zählzeiten mit einem Tap auf der vierten, siehe <a href="bachata-grundschritt.html">Bachata Grundschritt</a>.',
+         f'According to {_WP_S}, the basic pattern is three steps on four beats. The pause falls on the fourth beat when dancing and the pattern runs over eight counts. According to Wikipedia the tempo is mostly between 160 and 220 beats per minute. Bachata, on the other hand, has a basic step over four counts with a tap on the fourth, see <a href="bachata-grundschritt.html">Bachata basic step</a>.'),
+ ]),
+ ('Salsa oder Bachata zuerst lernen?', 'Learn Salsa or Bachata first?', [
+   ('p', 'Beides geht. Salsa hat mehr Figuren und ein schnelleres Tempo. Bachata hat einen einfachen Grundschritt und ein ruhigeres Tempo. Wer zuerst Bachata lernt, hat meist einen leichteren Einstieg in den Paartanz, wer mit Salsa beginnt, lernt früh viel Drehtechnik. Es gibt hier kein Richtig und Falsch. Eine ausführliche Gegenüberstellung steht im Ratgeber <a href="bachata-salsa-unterschied.html">Salsa und Bachata</a>.',
+         'Both work. Salsa has more figures and a faster tempo. Bachata has a simple basic step and a calmer tempo. If you learn Bachata first you usually have an easier start into partner dancing, if you start with Salsa you learn a lot of turn technique early. There is no right and wrong here. A detailed comparison is in the guide <a href="bachata-salsa-unterschied.html">Salsa and Bachata</a>.'),
+ ]),
+ ('Salsa lernen: So fängst du an', 'Learning Salsa: how to start', [
+   ('ul', [
+     ('<strong>Stil wählen:</strong> Kubanisch, On 1, On 2 oder Cali. Frage bei der Schule nach.', '<strong>Choose a style:</strong> Cuban, On 1, On 2 or Cali. Ask the school.'),
+     ('<strong>Anfängerkurs besuchen:</strong> Ein Grundkurs lehrt Grundschritt, Zählen und erste Drehungen. Wie du einen Kurs findest, steht unter <a href="bachata-kurs-in-der-naehe.html">Bachata Kurs in der Nähe</a>, das Vorgehen gilt ähnlich für Salsa.', '<strong>Attend a beginner class:</strong> a basic class teaches the basic step, counting and first turns. How to find a class is described under <a href="bachata-kurs-in-der-naehe.html">Bachata class near you</a>, the procedure is similar for Salsa.'),
+     ('<strong>Musik hören:</strong> Wer den Rhythmus kennt, tanzt entspannter. Zum Vergleich hilft <a href="bachata-musik.html">Bachata Musik</a>.', '<strong>Listen to the music:</strong> if you know the rhythm you dance more relaxed. For comparison, <a href="bachata-musik.html">Bachata music</a> helps.'),
+   ]),
+ ]),
+ _closing('Viele Schulen unterrichten neben Bachata auch Salsa, das steht bei den Schulen selbst.', 'Many schools teach Salsa in addition to Bachata, which is stated on the schools’ own sites.'),
+]
+sal_faq = [
+ ('Was ist Salsa?', 'What is Salsa?',
+  'Ein Paartanz und eine Musikrichtung mit Wurzeln in der Karibik, getanzt zu schneller Musik mit Percussion und Bläsern.',
+  'A partner dance and a style of music with roots in the Caribbean, danced to fast music with percussion and brass.'),
+ ('Woher kommt Salsa?', 'Where does Salsa come from?',
+  'Salsa entwickelte sich aus afro-kubanischen und karibischen Tänzen. Der Begriff wurde in den 1960er- und 1970er-Jahren in New York bekannt.',
+  'Salsa developed from Afro-Cuban and Caribbean dances. The term became known in New York in the 1960s and 1970s.'),
+ ('Was sind die wichtigsten Salsa-Stile?', 'What are the main Salsa styles?',
+  'Kubanisch (Casino), Los Angeles (On 1), New York (On 2) und Kolumbianisch (Cali).',
+  'Cuban (Casino), Los Angeles (On 1), New York (On 2) and Colombian (Cali).'),
+ ('Ist Salsa schwerer als Bachata?', 'Is Salsa harder than Bachata?',
+  'Das ist Ansichtssache. Salsa hat mehr Figuren und ein schnelleres Tempo, Bachata einen einfacheren Grundschritt.',
+  'That is a matter of opinion. Salsa has more figures and a faster tempo, Bachata a simpler basic step.'),
+ ('Kann ich Salsa und Bachata zusammen lernen?', 'Can I learn Salsa and Bachata together?',
+  'Ja, viele Tänzer lernen beide. Frage deine Schule nach Kursen für beide Tänze.',
+  'Yes, many dancers learn both. Ask your school about classes for both dances.'),
+ _rank_faq,
+]
+guide_page('salsa-tanzen', 'sal',
+  'Salsa tanzen: Herkunft, Stile und Einstieg',
+  'Salsa tanzen: Was ist Salsa, woher kommt sie, die Stile Kubanisch, On 1, On 2 und Cali, der Grundschritt und wie du anfängst. Mit Vergleich zu Bachata.',
+  'Dancing Salsa: origin, styles and how to start',
+  'Dancing Salsa: what Salsa is, where it comes from, the Cuban, On 1, On 2 and Cali styles, the basic step and how to start. With a comparison to Bachata.',
+  'Salsa tanzen', ('Salsa tanzen · Ratgeber', 'Dancing Salsa · Guide'),
+  ('Salsa tanzen: <em class="foil">Herkunft</em>, Stile, Einstieg', 'Dancing Salsa: <em class="foil">origin</em>, styles, how to start'),
+  ('Salsa kommt aus der Karibik und wurde in New York zum Begriff. Hier steht, woher sie kommt, welche Stile es gibt und wie du anfängst.',
+   'Salsa comes from the Caribbean and became a household term in New York. Here is where it comes from, which styles exist and how to start.'),
+  [('check', 'Für <b>Einsteiger</b>', 'For <b>beginners</b>'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  sal_sections, sal_faq, sibling_group='topic')
