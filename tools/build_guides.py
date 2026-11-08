@@ -2787,6 +2787,9 @@ guide_page('bachata-tanzschule-berlin', 'btb',
 # ---- Basics pages (Nov 2026): Was ist Bachata, Salsa tanzen ----
 _WP_B = '<a href="https://en.wikipedia.org/wiki/Bachata_(dance)" rel="noopener nofollow" target="_blank">Wikipedia</a>'
 _WP_S = '<a href="https://en.wikipedia.org/wiki/Salsa_dance" rel="noopener nofollow" target="_blank">Wikipedia</a>'
+_SVH = '<a href="https://www.salsavida.com/de/articles/history-of-bachata-dance-music/" rel="noopener nofollow" target="_blank">Salsa Vida</a>'
+_CONV = '<a href="https://theconversation.com/how-bachata-rose-from-dominican-republics-brothels-and-shantytowns-to-become-a-global-sensation-260886" rel="noopener nofollow" target="_blank">The Conversation</a>'
+_SVS = '<a href="https://www.salsavida.com/de/salsa-dance/" rel="noopener nofollow" target="_blank">Salsa Vida</a>'
 
 was_sections = [
  ('Was ist Bachata?', 'What is Bachata?', [
@@ -2800,6 +2803,35 @@ was_sections = [
          f'According to {_WP_B}, the dance was created in the Dominican Republic in the 1960s. The music began as romantic guitar music in the tradition of the bolero and was at first less dance music. Later it took on elements of merengue, the tempo rose and Bachata was increasingly played for dancing.'),
    ('p', 'In den 1970er- und 1980er-Jahren galt Bachata als Musik der unteren Schichten und lief kaum im Radio. Um 1990 änderte sich das, vor allem durch Juan Luis Guerra, der 1992 mit „Bachata Rosa“ einen Grammy gewann. 2019 nahm die UNESCO „Music and dance of Dominican Bachata“ in die Liste des immateriellen Kulturerbes der Menschheit auf. Mehr zur Musik steht im Ratgeber <a href="bachata-musik.html">Bachata Musik</a>.',
          'In the 1970s and 1980s Bachata was regarded as music of the lower classes and hardly played on the radio. Around 1990 that changed, above all through Juan Luis Guerra, who won a Grammy in 1992 with “Bachata Rosa”. In 2019 UNESCO added “Music and dance of Dominican Bachata” to the Representative List of the Intangible Cultural Heritage of Humanity. More on the music is in the guide <a href="bachata-musik.html">Bachata music</a>.'),
+ ]),
+ ('Die Anfänge: Ein Wort für „Fest“ und die erste Aufnahme', 'The beginnings: a word for “party” and the first recording', [
+   ('p', f'Bevor „Bachata“ eine Musikrichtung bezeichnete, stand das Wort nach {_SVH} meist für ein Fest oder eine zwanglose Zusammenkunft. Als erste Bachata-Aufnahmen gelten Lieder von José Manuel Calderón aus dem Jahr 1962. Die Musik entstand auf dem Land und in den Armenvierteln von Santo Domingo und wurde stark von Bolero und Son geprägt, später auch vom Merengue.',
+         f'Before “bachata” named a style of music, the word usually stood for a party or an informal gathering, according to {_SVH}. Songs by José Manuel Calderón from 1962 are regarded as the first Bachata recordings. The music grew up in the countryside and in the shantytowns of Santo Domingo and was strongly shaped by bolero and son, later also by merengue.'),
+   ('p', f'Der Radiosender Radio Guarachita, geleitet von Radhamés Aracena, spielte diese Musik fast ausschließlich und trug laut {_CONV} und {_SVH} entscheidend zu ihrer Verbreitung bei.',
+         f'The radio station Radio Guarachita, run by Radhamés Aracena, played this music almost exclusively and, according to {_CONV} and {_SVH}, contributed decisively to its spread.'),
+ ]),
+ ('Stigma und „música de amargue“', 'Stigma and “música de amargue”', [
+   ('p', f'Bachata war lange die Musik der armen, ländlichen Migranten. Die städtische Mittel- und Oberschicht sah auf sie herab, und laut {_CONV} wurde sie mit Bordellen und dem Leben der Unterschicht verbunden. Merengue hatte in der dominikanischen Kultur ein deutlich höheres Ansehen.',
+         f'Bachata was long the music of poor, rural migrants. The urban middle and upper class looked down on it and, according to {_CONV}, it was associated with brothels and lower-class life. Merengue had a much higher standing in Dominican culture.'),
+   ('p', 'Mitte der 1980er-Jahre prägten die Künstler Luis Segura und Leonardo Paniagua den Begriff „música de amargue“, die Musik der romantischen Bitterkeit. Er beschreibt die oft wehmütigen, von Liebeskummer geprägten Texte und wurde zu einem festen Gefühl der Bachata, ähnlich dem Blues.',
+         'In the mid-1980s the artists Luis Segura and Leonardo Paniagua coined the term “música de amargue”, music of romantic bitterness. It describes the often wistful lyrics full of heartbreak and became a lasting feeling of Bachata, similar to the blues.'),
+ ]),
+ ('Eine kurze Zeitleiste der Bachata', 'A short timeline of Bachata', [
+   ('ul', [
+     ('<strong>1962:</strong> Erste Aufnahmen, die als Bachata gelten (José Manuel Calderón).', '<strong>1962:</strong> first recordings regarded as Bachata (José Manuel Calderón).'),
+     ('<strong>1960er-Jahre:</strong> Radio Guarachita bringt die Gitarrenmusik zu einem breiteren Publikum.', '<strong>1960s:</strong> Radio Guarachita brings the guitar music to a wider audience.'),
+     ('<strong>Mitte der 1980er:</strong> Der Begriff „música de amargue“ entsteht.', '<strong>Mid-1980s:</strong> the term “música de amargue” is coined.'),
+     ('<strong>1990:</strong> Juan Luis Guerras Album „Bachata Rosa“ macht die Musik romantischer und bringt sie zu einem internationalen Publikum. 1992 folgt der Grammy.', '<strong>1990:</strong> Juan Luis Guerra’s album “Bachata Rosa” makes the music more romantic and brings it to an international audience. The Grammy follows in 1992.'),
+     ('<strong>2002:</strong> Aventura aus der Bronx hat mit „Obsesión“ einen internationalen Hit, 2004 steht das Lied in Deutschland auf Platz 1 der Charts.', '<strong>2002:</strong> Aventura from the Bronx have an international hit with “Obsesión”, in 2004 the song is number 1 in the German charts.'),
+     ('<strong>2000er:</strong> Lehrer außerhalb der Dominikanischen Republik entwickeln Bachata Moderna und Bachata Sensual.', '<strong>2000s:</strong> teachers outside the Dominican Republic develop Bachata Moderna and Bachata Sensual.'),
+     ('<strong>2019:</strong> Die UNESCO nimmt Musik und Tanz der dominikanischen Bachata in die Liste des immateriellen Kulturerbes auf.', '<strong>2019:</strong> UNESCO adds the music and dance of Dominican Bachata to the list of intangible cultural heritage.'),
+   ]),
+ ]),
+ ('So entwickelte sich der Tanz', 'How the dance developed', [
+   ('p', f'Der Tanz entstand laut {_SVH} sozial auf Partys, in Bars und bei Familienfeiern, nicht im Tanzstudio. Er stützte sich vor allem auf den Paartanz des Bolero. Auf Salsa-Festivals und Kongressen wurde Bachata in den 1990er- und 2000er-Jahren oft wie Merengue oder Cumbia behandelt, als Gesellschaftstanz neben dem Hauptprogramm.',
+         f'According to {_SVH}, the dance grew socially at parties, in bars and at family celebrations, not in the dance studio. It drew mostly on the couple dancing of the bolero. At Salsa festivals and congresses in the 1990s and 2000s Bachata was often treated like merengue or cumbia, as a social dance alongside the main programme.'),
+   ('p', 'Als Lehrer außerhalb der Dominikanischen Republik begannen, Bachata systematisch zu unterrichten, kamen Drehungen und Partnerarbeit aus dem Salsa hinzu: Bachata Moderna. In Spanien entwickelten Korke und Judith in Cádiz Bachata Sensual, mit Körperwellen, Isolationen und einem weicheren Look, der laut Salsa Vida zum Teil vom Zouk beeinflusst ist. Seit den frühen 2010er-Jahren gibt es Bachata-Kategorien bei großen Tanzwettbewerben.',
+         'When teachers outside the Dominican Republic began to teach Bachata systematically, turns and partner work from Salsa were added: Bachata Moderna. In Spain Korke and Judith developed Bachata Sensual in Cádiz, with body waves, isolations and a softer look which, according to Salsa Vida, is partly influenced by zouk. Since the early 2010s there have been Bachata categories at major dance competitions.'),
  ]),
  ('Wie sieht der Tanz aus?', 'What does the dance look like?', [
    ('p', f'Der ursprüngliche Tanz wurde laut {_WP_B} in geschlossener Haltung getanzt, ähnlich wie der Bolero, oft in enger Umarmung. Der Grundschritt bewegt sich in einem kleinen Quadrat. Heute wird oft zu schnellerer Musik getanzt, mit mehr Fußarbeit, einfachen Drehungen und einem Wechsel zwischen geschlossener und offener Haltung.',
@@ -2842,6 +2874,15 @@ was_faq = [
  ('Woher kommt Bachata?', 'Where does Bachata come from?',
   'Aus der Dominikanischen Republik. Nach Wikipedia entstand der Tanz in den 1960er-Jahren.',
   'From the Dominican Republic. According to Wikipedia the dance was created in the 1960s.'),
+ ('Was bedeutet das Wort Bachata?', 'What does the word Bachata mean?',
+  'Ursprünglich bezeichnete es meist ein Fest oder eine zwanglose Zusammenkunft. Später wurde es zum Namen der Musikrichtung.',
+  'Originally it usually meant a party or an informal gathering. Later it became the name of the style of music.'),
+ ('Wann entstand Bachata?', 'When did Bachata begin?',
+  'Als erste Bachata-Aufnahmen gelten Lieder von 1962. Der Tanz entwickelte sich in den folgenden Jahrzehnten auf Partys und im Familienkreis.',
+  'Songs from 1962 are regarded as the first Bachata recordings. The dance developed in the following decades at parties and in family circles.'),
+ ('Wer machte Bachata international bekannt?', 'Who made Bachata known internationally?',
+  'Juan Luis Guerra mit „Bachata Rosa“ (1990) und später Aventura mit „Obsesión“, dazu Romeo Santos als Solokünstler.',
+  'Juan Luis Guerra with “Bachata Rosa” (1990) and later Aventura with “Obsesión”, plus Romeo Santos as a solo artist.'),
  ('Welche Bachata-Stile gibt es?', 'Which Bachata styles are there?',
   'Die drei bekanntesten sind Dominicana, Moderna und Sensual. Dazu kommen Mischformen.',
   'The three best known are Dominicana, Moderna and Sensual. There are also fusion forms.'),
@@ -2876,12 +2917,27 @@ sal_sections = [
    ('p', 'Nach Deutschland kam Salsa Anfang der 1980er-Jahre. Salsa ist damit die ältere Tanzfamilie, Bachata als eigener Tanz die jüngere. Den Vergleich findest du im Ratgeber <a href="bachata-salsa-unterschied.html">Salsa und Bachata</a>.',
          'Salsa came to Germany in the early 1980s. Salsa is thus the older dance family, Bachata as its own dance the younger one. You will find the comparison in the guide <a href="bachata-salsa-unterschied.html">Salsa and Bachata</a>.'),
  ]),
+ ('Eine kurze Zeitleiste der Salsa', 'A short timeline of Salsa', [
+   ('ul', [
+     ('<strong>Ab 1892:</strong> Der Son cubano entwickelt sich im Osten Kubas und erreicht Santiago de Cuba.', '<strong>From 1892:</strong> the son cubano develops in eastern Cuba and reaches Santiago de Cuba.'),
+     ('<strong>1947:</strong> Der Mambo kommt nach New York, der Palladium Ballroom wird zum wichtigen Ort für Mambo-Tänzer.', '<strong>1947:</strong> the mambo arrives in New York and the Palladium Ballroom becomes an important venue for mambo dancers.'),
+     ('<strong>1964:</strong> Fania Records wird in New York gegründet und macht „Salsa“ zum Oberbegriff für diese Musik.', '<strong>1964:</strong> Fania Records is founded in New York and makes “salsa” the umbrella term for this music.'),
+     ('<strong>1973:</strong> Die Fania All Stars spielen im Yankee Stadium und bringen Salsa in den Mainstream.', '<strong>1973:</strong> the Fania All Stars play Yankee Stadium and bring Salsa into the mainstream.'),
+     ('<strong>1980er:</strong> Der New-York-Stil wird systematisiert, Eddie Torres verbreitet das Tanzen „on 2“.', '<strong>1980s:</strong> the New York style is systematised, Eddie Torres spreads dancing “on 2”.'),
+     ('<strong>1990er:</strong> Der Los-Angeles-Stil (On 1), geprägt von den Vazquez Brothers, verbreitet sich weltweit.', '<strong>1990s:</strong> the Los Angeles style (On 1), shaped by the Vazquez Brothers, spreads worldwide.'),
+     ('<strong>1997:</strong> In Puerto Rico findet der erste Salsa-Kongress statt, mehrtägig mit Workshops und Partys.', '<strong>1997:</strong> the first Salsa congress takes place in Puerto Rico, lasting several days with workshops and parties.'),
+   ]),
+   ('p', f'Die Daten stützen sich auf {_SVS} und {_WP_S}. In der Fachliteratur gibt es teils abweichende Angaben, die Zeitleiste ist deshalb eine grobe Orientierung.',
+         f'The dates are based on {_SVS} and {_WP_S}. The literature sometimes gives differing figures, so the timeline is a rough guide.'),
+ ]),
  ('Die wichtigsten Salsa-Stile', 'The main Salsa styles', [
    ('ul', [
      (f'<strong>Kubanisch (Casino):</strong> Ein Kreistanz, bei dem die Tanzenden umeinander herum tanzen. Laut {_WP_S} geht der Name auf die „Casinos Deportivos“ zurück. Aus Havanna stammt auch Rueda de Casino aus den 1950er-Jahren.', f'<strong>Cuban (Casino):</strong> a circular dance in which the dancers move around each other. According to {_WP_S} the name goes back to the “Casinos Deportivos”. Rueda de Casino, from the 1950s, also comes from Havana.'),
      ('<strong>Los Angeles (On 1):</strong> Linear, auf einer „Linie“ getanzt, mit dem Break auf der ersten Zählzeit.', '<strong>Los Angeles (On 1):</strong> linear, danced on a “slot”, with the break on the first beat.'),
      ('<strong>New York (On 2):</strong> Ebenfalls linear, aber auf der zweiten Zählzeit getanzt, mit starkem Gewicht auf Solo-Passagen („Shines“).', '<strong>New York (On 2):</strong> also linear, but danced on the second beat, with strong emphasis on solo passages (“shines”).'),
      ('<strong>Kolumbianisch (Cali):</strong> Ein Kreisstil mit schneller Fußarbeit. Cali gilt als „Hauptstadt der Salsa“.', '<strong>Colombian (Cali):</strong> a circular style with fast footwork. Cali is known as the “capital of salsa”.'),
+     ('<strong>Casino Rueda:</strong> Ein Gruppentanz, bei dem mehrere Paare im Kreis tanzen und Figuren angesagt werden. Er wurde in den 1950er-Jahren in Havanna entwickelt.', '<strong>Casino Rueda:</strong> a group dance in which several couples dance in a circle and figures are called. It was developed in Havana in the 1950s.'),
+     ('<strong>Salsa Choke:</strong> Ein kolumbianischer Stil, der solo oder in der Gruppe getanzt wird.', '<strong>Salsa Choke:</strong> a Colombian style danced solo or in a group.'),
    ]),
    ('p', 'In vielen Tanzschulen wird ein Stil unterrichtet, den die Schule auf ihrer Website nennt. Frage vor der Anmeldung, welcher Stil im Kurs gelehrt wird.',
          'Many dance schools teach one style, which the school names on its website. Ask which style the class teaches before you sign up.'),
@@ -2893,6 +2949,22 @@ sal_sections = [
  ('Salsa oder Bachata zuerst lernen?', 'Learn Salsa or Bachata first?', [
    ('p', 'Beides geht. Salsa hat mehr Figuren und ein schnelleres Tempo. Bachata hat einen einfachen Grundschritt und ein ruhigeres Tempo. Wer zuerst Bachata lernt, hat meist einen leichteren Einstieg in den Paartanz, wer mit Salsa beginnt, lernt früh viel Drehtechnik. Es gibt hier kein Richtig und Falsch. Eine ausführliche Gegenüberstellung steht im Ratgeber <a href="bachata-salsa-unterschied.html">Salsa und Bachata</a>.',
          'Both work. Salsa has more figures and a faster tempo. Bachata has a simple basic step and a calmer tempo. If you learn Bachata first you usually have an easier start into partner dancing, if you start with Salsa you learn a lot of turn technique early. There is no right and wrong here. A detailed comparison is in the guide <a href="bachata-salsa-unterschied.html">Salsa and Bachata</a>.'),
+ ]),
+ ('Zählen: On 1 und On 2', 'Counting: On 1 and On 2', [
+   ('p', f'Salsa wird im 4/4-Takt in Achterphrasen gezählt: 1–2–3, Pause, 5–6–7, Pause. Getreten wird auf 1, 2, 3, 5, 6 und 7, die Zählzeiten 4 und 8 bleiben leer. Nach {_SVS} liegt der Unterschied zwischen On 1 und On 2 darin, wo der Break fällt: bei On 1 auf den Zählzeiten 1 und 5, bei On 2 auf 2 und 6.',
+         f'Salsa is counted in eight-beat phrases in 4/4 time: 1–2–3, pause, 5–6–7, pause. You step on 1, 2, 3, 5, 6 and 7, counts 4 and 8 stay empty. According to {_SVS} the difference between On 1 and On 2 is where the break falls: on counts 1 and 5 for On 1, on 2 and 6 for On 2.'),
+   ('p', 'Als Zeitgeber helfen die Clave und der Tumbao der Conga. Wer sie erst einmal heraushört, findet den Takt auch in schnellen Stücken.',
+         'The clave and the conga tumbao help as timing anchors. Once you can pick them out, you find the beat even in fast pieces.'),
+ ]),
+ ('Technik und Partnerarbeit für den Anfang', 'Technique and partner work for the start', [
+   ('ul', [
+     ('<strong>Haltung:</strong> Nach Salsa Vida helfen ein leicht nach vorn geneigter Oberkörper, lockere Knie und das Gewicht auf den Fußballen.', '<strong>Posture:</strong> according to Salsa Vida a slightly forward-leaning upper body, relaxed knees and weight on the balls of the feet help.'),
+     ('<strong>Arme:</strong> Sie schwingen natürlich mit und müssen nicht gesetzt werden.', '<strong>Arms:</strong> they swing naturally and do not have to be posed.'),
+     ('<strong>Partnerarbeit:</strong> Am Anfang stehen offene und geschlossene Haltung, der Cross-Body-Lead und einfache Drehungen.', '<strong>Partner work:</strong> at the start come open and closed position, the cross-body lead and simple turns.'),
+     ('<strong>Tempo drosseln:</strong> Beim Üben hilft es, Lieder zu verlangsamen, bis die Schritte sitzen.', '<strong>Slow it down:</strong> when practising it helps to slow songs down until the steps are secure.'),
+   ]),
+   ('p', 'Die Grundlagen lernst du in wenigen Stunden, bis zur Sicherheit dauert es deutlich länger. Ein Anfängerkurs gibt dir dafür eine Struktur.',
+         'You can learn the basics in a few hours, but it takes considerably longer to become secure. A beginner class gives you a structure for that.'),
  ]),
  ('Salsa lernen: So fängst du an', 'Learning Salsa: how to start', [
    ('ul', [
@@ -2913,6 +2985,12 @@ sal_faq = [
  ('Was sind die wichtigsten Salsa-Stile?', 'What are the main Salsa styles?',
   'Kubanisch (Casino), Los Angeles (On 1), New York (On 2) und Kolumbianisch (Cali).',
   'Cuban (Casino), Los Angeles (On 1), New York (On 2) and Colombian (Cali).'),
+ ('Was ist der Unterschied zwischen On 1 und On 2?', 'What is the difference between On 1 and On 2?',
+  'Es geht darum, wo der Break fällt: bei On 1 auf den Zählzeiten 1 und 5, bei On 2 auf 2 und 6.',
+  'It is about where the break falls: on counts 1 and 5 for On 1, on 2 and 6 for On 2.'),
+ ('Wie zählt man Salsa?', 'How do you count Salsa?',
+  'In Achterphrasen: 1–2–3, Pause, 5–6–7, Pause. Getreten wird auf 1, 2, 3, 5, 6 und 7.',
+  'In eight-beat phrases: 1–2–3, pause, 5–6–7, pause. You step on 1, 2, 3, 5, 6 and 7.'),
  ('Ist Salsa schwerer als Bachata?', 'Is Salsa harder than Bachata?',
   'Das ist Ansichtssache. Salsa hat mehr Figuren und ein schnelleres Tempo, Bachata einen einfacheren Grundschritt.',
   'That is a matter of opinion. Salsa has more figures and a faster tempo, Bachata a simpler basic step.'),
