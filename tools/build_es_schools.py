@@ -129,6 +129,7 @@ def build(rank, e, ck):
   </div>
 </section>
 
+{ {'valencia': ('clases-de-bachata-valencia', 'Clases de bachata en Valencia', 'Bachata classes in Valencia'), 'sevilla': ('clases-de-bachata-sevilla', 'Clases de bachata en Sevilla y Dos Hermanas', 'Bachata classes in Seville and Dos Hermanas'), 'dos-hermanas': ('clases-de-bachata-sevilla', 'Clases de bachata en Sevilla y Dos Hermanas', 'Bachata classes in Seville and Dos Hermanas')}.get(ck) and '<section class="block"><div class="wrap">' + t('p', 'Guía: <a href="/es/' + {'valencia': 'clases-de-bachata-valencia', 'sevilla': 'clases-de-bachata-sevilla', 'dos-hermanas': 'clases-de-bachata-sevilla'}[ck] + '">' + {'valencia': 'Clases de bachata en Valencia', 'sevilla': 'Clases de bachata en Sevilla y Dos Hermanas', 'dos-hermanas': 'Clases de bachata en Sevilla y Dos Hermanas'}[ck] + '</a>: niveles, grupos y precios publicados por las escuelas.', 'Guide: <a href="/es/' + {'valencia': 'clases-de-bachata-valencia', 'sevilla': 'clases-de-bachata-sevilla', 'dos-hermanas': 'clases-de-bachata-sevilla'}[ck] + '">' + {'valencia': 'Bachata classes in Valencia', 'sevilla': 'Bachata classes in Seville and Dos Hermanas', 'dos-hermanas': 'Bachata classes in Seville and Dos Hermanas'}[ck] + '</a>: levels, groups and prices published by the schools.') + '</div></section>' or '' }
 <section class="block alt" aria-labelledby="own-title">
   <div class="wrap">
     <div class="sp-card" style="max-width:760px">

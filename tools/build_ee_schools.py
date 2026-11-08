@@ -129,6 +129,7 @@ def build(rank, e, ck):
   </div>
 </section>
 
+{ (ck == 'sofia') and '<section class="block"><div class="wrap">' + t('p', 'Guide: <a href="/ee/bachata-classes-sofia">Bachata classes in Sofia</a>: beginner groups, locations and prices published by the schools.', 'Guide: <a href="/ee/bachata-classes-sofia">Bachata classes in Sofia</a>: beginner groups, locations and prices published by the schools.') + '</div></section>' or '' }
 <section class="block alt" aria-labelledby="own-title">
   <div class="wrap">
     <div class="sp-card" style="max-width:760px">

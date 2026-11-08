@@ -218,6 +218,8 @@ for k, (cpl, cen, loc) in P.CITIES.items():
      ('When is the full ranking published?', 'When is the full ranking published?', 'In spring 2027. Until then we show an interim standing based on Google ratings.', 'In spring 2027. Until then we show an interim standing based on Google ratings.'),
     ]
     if top[0] == '': faq = [q for i, q in enumerate(faq) if i != 1]  # no rated school here yet
+    if k == 'sofia':
+        main += sec(t, 4, ('Class guide', 'Class guide'), t("p", 'Locations, beginner groups and prices published by the schools: <a href="/ee/bachata-classes-sofia">Bachata classes in Sofia: schools, groups and prices</a>.', 'Locations, beginner groups and prices published by the schools: <a href="/ee/bachata-classes-sofia">Bachata classes in Sofia: schools, groups and prices</a>.'), alt=False)
     main += faq_html(t, faq)
     ee_page(f'ee/bachata-{k}.html', f'ee/bachata-{k}.html', f'Bachata {cpl}: the best dance schools 2027',
       f'Bachata {cpl}: {n} schools with Google ratings and points from the 2027 ranking. Choose a Bachata class {loc} and see the interim standing.',

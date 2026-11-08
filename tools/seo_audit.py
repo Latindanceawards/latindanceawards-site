@@ -54,6 +54,9 @@ PAGES = {  # page: (main keyword, target word count from competitor research or 
     'bachata-worms.html': ('Bachata Worms', 800),
     'bachata-zwickau.html': ('Bachata Zwickau', 800),
     'bachata-socials.html': ('Bachata Socials', 0),
+    'es/clases-de-bachata-valencia.html': ('Clases de bachata Valencia', 800),
+    'es/clases-de-bachata-sevilla.html': ('Clases de bachata Sevilla', 800),
+    'ee/bachata-classes-sofia.html': ('Bachata classes Sofia', 700),
     'bachata-regensburg.html': ('Bachata Regensburg', 800),
     'bachata-mannheim.html': ('Bachata Mannheim', 800),
     'bachata-wuerzburg.html': ('Bachata Würzburg', 800),
@@ -114,12 +117,12 @@ for page, (kw, target) in PAGES.items():
     schema = ' '.join(re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S))
     imgs = re.findall(r'<img[^>]*>', body)
     bad_imgs = [i for i in imgs if not re.search(r'alt="[^"]+"', i)]
-    internal = set(re.findall(r'href="((?:/|)(?:index|rankings|bewerbung|bachata-[a-z]+)(?:\.html)?[^"]*)"', s))
+    internal = set(re.findall(r'href="((?:/|)(?:es/|ee/)?(?:index|rankings|bewerbung|bachata-[a-z]+)(?:\.html)?[^"]*)"', s))
     outbound = re.findall(r'<a [^>]*href="https://(?!latindanceawards\.com)[^"]+"[^>]*rel="noopener"', s)
     url = 'https://latindanceawards.com/' + ('' if page == 'index.html' else page[:-5])  # clean URL: Cloudflare redirects .html -> extensionless
     checks = [
         ('Title 30-60 chars', 8, 30 <= len(H.unescape(title)) <= 60, f'{len(H.unescape(title))} chars'),
-        ('Keyword at start of title', 8, norm(title).startswith(' '.join(toks(kw))[:12]) or toks(kw)[0] in norm(title).split()[:2], title),
+        ('Keyword at start of title', 8, norm(title).startswith(norm(kw)[:12]) or norm(title).startswith(' '.join(toks(kw))[:12]) or toks(kw)[0] in norm(title).split()[:2], title),
         ('Meta description 120-160', 7, 120 <= len(H.unescape(desc)) <= 160, f'{len(H.unescape(desc))} chars'),
         ('Keyword in meta description', 4, has_kw(desc, kw), ''),
         ('Exactly one H1', 6, len(h1s) == 1, f'{len(h1s)}'),
@@ -130,7 +133,7 @@ for page, (kw, target) in PAGES.items():
         ('FAQ + FAQPage schema', 7, '"FAQPage"' in schema and '<details' in body, ''),
         ('BreadcrumbList (subpages)', 4, page == 'index.html' or '"BreadcrumbList"' in schema, ''),
         ('Canonical', 4, f'<link rel="canonical" href="{url}">' in head, ''),
-        ('hreflang de/en/x-default', 4, all(f'hreflang="{l}"' in head for l in ('de', 'en', 'x-default')), ''),
+        ('hreflang de/en/x-default', 4, all(f'hreflang="{l}"' in head for l in (('de', 'en', 'x-default') if not page.startswith(('es/', 'ee/')) else ('en', 'x-default'))), ''),
         ('Open Graph title/desc/image', 4, all(f'og:{k}' in head for k in ('title', 'description', 'image')), ''),
         ('2+ internal links to other pages', 4, len({re.sub(r'(\.html)?([#?].*)?$', '', x).lstrip('/') for x in internal} - {page[:-5], page}) >= 2, f'{len(internal)}'),
         ('Authority outbound link (noopener)', 3, len(outbound) >= 1, f'{len(outbound)}'),
