@@ -20,7 +20,7 @@ CITY_PAGES = [('bachata-berlin', 'Berlin', 'Berlin'), ('bachata-hamburg', 'Hambu
               ('bachata-stuttgart', 'Stuttgart', 'Stuttgart'), ('bachata-freiburg', 'Freiburg', 'Freiburg'), ('bachata-bremen', 'Bremen', 'Bremen'),
               ('bachata-dresden', 'Dresden', 'Dresden'), ('bachata-nuernberg', 'Nürnberg', 'Nuremberg'), ('bachata-saarbruecken', 'Saarbrücken', 'Saarbrücken'),
               ('bachata-essen', 'Essen', 'Essen'), ('bachata-bonn', 'Bonn', 'Bonn'), ('bachata-karlsruhe', 'Karlsruhe', 'Karlsruhe'),
-              ('bachata-kassel', 'Kassel', 'Kassel'), ('bachata-hannover', 'Hannover', 'Hannover'), ('bachata-braunschweig', 'Braunschweig', 'Braunschweig'), ('bachata-heidelberg', 'Heidelberg', 'Heidelberg'), ('bachata-dortmund', 'Dortmund', 'Dortmund'), ('bachata-kiel', 'Kiel', 'Kiel'), ('bachata-bochum', 'Bochum', 'Bochum'), ('bachata-wuerzburg', 'Würzburg', 'Würzburg'), ('bachata-muenster', 'Münster', 'Münster'), ('bachata-augsburg', 'Augsburg', 'Augsburg'),
+              ('bachata-kassel', 'Kassel', 'Kassel'), ('bachata-hannover', 'Hannover', 'Hannover'), ('bachata-braunschweig', 'Braunschweig', 'Braunschweig'), ('bachata-heidelberg', 'Heidelberg', 'Heidelberg'), ('bachata-dortmund', 'Dortmund', 'Dortmund'), ('bachata-kiel', 'Kiel', 'Kiel'), ('bachata-bochum', 'Bochum', 'Bochum'), ('bachata-regensburg', 'Regensburg', 'Regensburg'), ('bachata-mannheim', 'Mannheim', 'Mannheim'), ('bachata-wuerzburg', 'Würzburg', 'Würzburg'), ('bachata-muenster', 'Münster', 'Münster'), ('bachata-augsburg', 'Augsburg', 'Augsburg'),
               ('bachata-gelsenkirchen', 'Gelsenkirchen', 'Gelsenkirchen'), ('bachata-oldenburg', 'Oldenburg', 'Oldenburg'), ('bachata-kempten', 'Kempten', 'Kempten'), ('bachata-leipzig', 'Leipzig', 'Leipzig')]
 TOPIC_PAGES = [('bachata-tanzen', 'Bachata tanzen lernen', 'Learn to dance Bachata'),
                ('bachata-festivals-deutschland', 'Bachata-Festivals 2026/2027', 'Bachata festivals 2026/2027'),
@@ -452,23 +452,23 @@ def _auto_city(key, idx):
     top = max(rated, key=lambda x: (_num(x[1][0]), x[1][1])) if rated else None
     most = max(rated, key=lambda x: x[1][1]) if rated else None
     names = [e['name'] for e in sch]
-    nl_de = ', '.join(names[:-1]) + ' und ' + names[-1]
-    nl_en = ', '.join(names[:-1]) + ' and ' + names[-1]
+    nl_de = (', '.join(names[:-1]) + ' und ' + names[-1]) if len(names) > 1 else names[0]
+    nl_en = (', '.join(names[:-1]) + ' and ' + names[-1]) if len(names) > 1 else names[0]
     intro_de = f'In {cde} haben wir {n} Anbieter mit Bachata-Kursen erfasst: {nl_de}.'
-    intro_en = f'In {cen} we have listed {n} providers with Bachata classes: {nl_en}.'
+    intro_en = f'In {cen} we have listed {n} {'provider' if n == 1 else 'providers'} with Bachata classes: {nl_en}.'
     if top:
         intro_de += f' Die beste Google-Bewertung unter ihnen hat {top[0]["name"]} mit {top[1][0]} Sternen bei {top[1][1]} Bewertungen (Stand Oktober 2026).'
         intro_en += f' The best Google rating among them belongs to {top[0]["name"]} with {top[1][0].replace(",", ".")} stars from {top[1][1]} reviews (as of October 2026).'
     if most and most[0] is not (top[0] if top else None):
         intro_de += f' Die meisten Bewertungen sammelt {most[0]["name"]} mit {most[1][1]}.'
         intro_en += f' {most[0]["name"]} has the most reviews with {most[1][1]}.'
-    note = (f'Die Liste umfasst {n} Schulen in {cde}. Weitere Anbieter nehmen wir nach der Bewerbung auf.',
-            f'The list covers {n} schools in {cde}. We add further providers after they apply.')
+    note = (f'Die Liste umfasst {n} Schulen in {cde}. Weitere Anbieter nehmen wir nach der Bewerbung auf.' if n > 1 else f'Die Liste umfasst bisher eine Schule in {cde}. Weitere Anbieter nehmen wir nach der Bewerbung auf.',
+            f'The list covers {n} schools in {cde}. We add further providers after they apply.' if n > 1 else f'The list covers one school in {cde} so far. We add further providers after they apply.')
     party = (f'Socials und Übungsabende laufen in {cde} meist über die Schulen selbst, zum Beispiel bei {nl_de}. Die aktuellen Termine stehen auf deren Websites und in den Social-Media-Kanälen. Größere Veranstaltungen findest du zusätzlich in den <a href="{SV}" rel="noopener" target="_blank">Veranstaltungslisten von Salsa Vida</a>.',
              f'Socials and practice nights in {cen} mostly run through the schools themselves, for example at {nl_en}. Current dates are on their websites and social media channels. You can also find larger events in the <a href="{SV}" rel="noopener" target="_blank">Salsa Vida event listings</a>.')
     faq_extra = [
       (f'In {cde} listen wir {n} Anbieter mit Bachata-Kursen: {nl_de}. Die Auswahl bildet den Stand vom Oktober 2026 ab. Das Ranking mit Punkten erscheint am 20. Dezember 2026.',
-       f'In {cen} we list {n} providers with Bachata classes: {nl_en}. The selection reflects the state in October 2026. The ranking with scores is published on December 20, 2026.'),
+       f'In {cen} we list {n} {'provider' if n == 1 else 'providers'} with Bachata classes: {nl_en}. The selection reflects the state in October 2026. The ranking with scores is published on December 20, 2026.'),
       ('Das entscheidet jede Schule selbst. Frag vor der Anmeldung nach einer Probestunde oder einem Einsteigertermin, die Kontaktdaten stehen auf der jeweiligen Website.',
        'Each school decides this itself. Ask for a trial class or a beginner date before you sign up; the contact details are on each school\'s website.'),
       (f'Frag bei den Schulen in {cde} nach Socials und Übungsabenden und schau in die Veranstaltungslisten von Salsa Vida. Dort stehen auch Festivals in der Region.',
@@ -478,7 +478,7 @@ def _auto_city(key, idx):
     city_guide(slug, f'cg{idx}', cde, cen, key, (intro_de, intro_en), cards, note, party, faq_extra)
     return slug, cde, cen
 
-AUTO_CITIES = [k for k, c in sorted(((k, sum(1 for e in B.SCH if e['city'] == k)) for k in {e['city'] for e in B.SCH}), key=lambda x: (-x[1], x[0])) if (c >= 3 or k in ('kassel', 'hannover', 'braunschweig', 'heidelberg', 'dortmund', 'kiel', 'bochum', 'wuerzburg', 'muenster', 'augsburg')) and k not in ('berlin', 'hamburg', 'muenchen')]
+AUTO_CITIES = [k for k, c in sorted(((k, sum(1 for e in B.SCH if e['city'] == k)) for k in {e['city'] for e in B.SCH}), key=lambda x: (-x[1], x[0])) if (c >= 3 or k in ('kassel', 'hannover', 'braunschweig', 'heidelberg', 'dortmund', 'kiel', 'bochum', 'wuerzburg', 'muenster', 'augsburg', 'regensburg', 'mannheim')) and k not in ('berlin', 'hamburg', 'muenchen')]
 if 'leipzig' not in AUTO_CITIES and any(e['city'] == 'leipzig' for e in B.SCH): AUTO_CITIES.append('leipzig')  # 2 schools, still a keyword page (bachata leipzig, 110/mo)
 for _i, _k in enumerate(AUTO_CITIES):
     _auto_city(_k, _i)

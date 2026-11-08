@@ -6227,6 +6227,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-bochum"/>
   </url>
   <url>
+    <loc>https://latindanceawards.com/bachata-regensburg</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-regensburg"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-regensburg"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-regensburg"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/bachata-mannheim</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-mannheim"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-mannheim"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-mannheim"/>
+  </url>
+  <url>
     <loc>https://latindanceawards.com/bachata-kurs-in-der-naehe</loc>
     <lastmod>2026-11-06</lastmod>
     <priority>0.8</priority>
@@ -10802,6 +10818,22 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-bochum"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-bochum"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-bochum"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/en/bachata-regensburg</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-regensburg"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-regensburg"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-regensburg"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/en/bachata-mannheim</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-mannheim"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-mannheim"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-mannheim"/>
   </url>
   <url>
     <loc>https://latindanceawards.com/en/bachata-kurs-in-der-naehe</loc>
