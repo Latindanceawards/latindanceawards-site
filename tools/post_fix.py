@@ -124,3 +124,20 @@ for f in glob.glob(os.path.join(ROOT, 'en', '**', '*.html'), recursive=True):
         s = s.replace('</footer>', LANGLINK % (href, hl, hl, label) + '</footer>', 1)
         open(path, 'w', encoding='utf-8').write(s); ln += 1
 print('language links added:', ln)
+
+# 8. short school-page meta descriptions (< 120 chars): add one neutral, true clause (page shows rating + reviews)
+TAIL = {'en': ' Google rating and review data included.', 'fr': ' Note Google et avis inclus.', 'nl': ' Inclusief Google-score en reviews.'}
+dn = 0
+for f in glob.glob(os.path.join(ROOT, '*', 'schools', '*.html')) + glob.glob(os.path.join(ROOT, '*', 'ecoles', '*.html')) + glob.glob(os.path.join(ROOT, '*', 'scholen', '*.html')):
+    rel = os.path.relpath(f, ROOT)
+    s = open(f, encoding='utf-8').read()
+    if 'content="noindex' in s[:3000]: continue
+    m = re.search(r'<meta name="description" content="([^"]*)"', s)
+    if not m or len(m.group(1)) >= 120: continue
+    lang = 'fr' if rel.startswith('fr/') else 'nl' if rel.startswith('nl/') else 'en'
+    new = m.group(1) + TAIL[lang]
+    if len(new) > 158: continue
+    for pat in (r'(<meta name="description" content=")[^"]*(")', r'(<meta property="og:description" content=")[^"]*(")', r'(<meta name="twitter:description" content=")[^"]*(")'):
+        s = re.sub(pat, lambda mm: mm.group(1) + new + mm.group(2), s, count=1)
+    open(f, 'w', encoding='utf-8').write(s); dn += 1
+print('meta descriptions extended:', dn)
