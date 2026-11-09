@@ -179,6 +179,7 @@ faq = [
  ('Come iscrivo la mia scuola?', 'How do I enter my school?', 'Usa il <a href="/bewerbung.html?lang=en">modulo di iscrizione gratuito</a> (in inglese). Iscrivendoti puoi confermare i tuoi dati e ottenere il punteggio completo.', 'Use the <a href="/bewerbung.html?lang=en">free application form</a> (in English). Applying lets you confirm your details and receive the full score.'),
  ('Quali città copre la classifica?', 'Which cities does the ranking cover?', f'Per cominciare: {", ".join(v[0] for v in P.CITIES.values())}. Aggiungeremo altre città man mano che si iscrivono le scuole.', f'To start with: {", ".join(v[1] for v in P.CITIES.values())}. We will add more cities as schools apply.'),
 ]
+main += sec(t, 9, ('Imparare la bachata', 'Learn Bachata'), t("p", 'Guida: <a href="/it/corsi-di-bachata">Corsi di bachata in Italia: città, livelli e prezzi</a>. Come funzionano livelli, lezioni di prova e durata dei corsi, secondo i siti delle scuole.', 'Guide: <a href="/it/corsi-di-bachata">Bachata classes in Italy: cities, levels and prices</a>. How levels, trial lessons and course length work, according to the schools\' own websites.'), alt=False)
 main += faq_html(t, faq)
 it_page('it/index.html', 'it/', 'Le migliori scuole di bachata d’Italia: classifica 2027',
   f'Classifica delle scuole di bachata in Italia: {N} scuole in {NC} città, con valutazioni, punti e metodo. Risultati in primavera 2027. Indipendente e non si compra.',

@@ -880,3 +880,5 @@ School pages (score, reviews, audience vote): https://latindanceawards.com/schoo
 - [Bachata classes Sofia: schools, groups and prices](https://latindanceawards.com/ee/bachata-classes-sofia): Guide to Bachata classes in Sofia incl. Pambos Dancing Center
 - [Clases de bachata en España: ciudades, niveles y precios](https://latindanceawards.com/es/clases-de-bachata): Guide to Bachata classes in Spain from the schools' own websites
 - [Cours de bachata en France : écoles, niveaux et tarifs](https://latindanceawards.com/fr/cours-de-bachata): Guide to Bachata classes in France from the schools' own websites
+- [Bachata classes in the UK: cities, prices and how to choose](https://latindanceawards.com/uk/bachata-classes): Guide to Bachata classes in the UK from the schools' own websites
+- [Corsi di bachata in Italia: città, livelli e prezzi](https://latindanceawards.com/it/corsi-di-bachata): Guide to Bachata classes in Italy from the schools' own websites

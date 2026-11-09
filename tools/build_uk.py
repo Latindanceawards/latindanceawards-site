@@ -179,6 +179,7 @@ faq = [
  ('How do I enter my school?', 'How do I enter my school?', 'Use the <a href="/bewerbung.html?lang=en">free application form</a>. By applying you can confirm your data and get the full score.', 'Use the <a href="/bewerbung.html?lang=en">free application form</a> (in English). Applying lets you confirm your details and receive the full score.'),
  ('Which cities does the ranking cover?', 'Which cities does the ranking cover?', f'To start with: {", ".join(v[0] for v in P.CITIES.values())}. We add more cities as schools apply.', f'To start with: {", ".join(v[1] for v in P.CITIES.values())}. We will add more cities as schools apply.'),
 ]
+main += sec(t, 9, ('Learn Bachata', 'Learn Bachata'), t("p", 'Guide: <a href="/uk/bachata-classes">Bachata classes in the UK: cities, prices and how to choose</a>. How levels, trial classes and prices work, according to the schools\' own websites.', 'Guide: <a href="/uk/bachata-classes">Bachata classes in the UK: cities, prices and how to choose</a>. How levels, trial classes and prices work, according to the schools\' own websites.'), alt=False)
 main += faq_html(t, faq)
 uk_page('uk/index.html', 'uk/', 'The best Bachata schools in the UK: ranking 2027',
   f'Ranking of Bachata schools in the UK: {N} schools in {NC} cities, with ratings, points and method. Results in spring 2027. Independent and not for sale.',

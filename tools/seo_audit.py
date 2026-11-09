@@ -59,6 +59,8 @@ PAGES = {  # page: (main keyword, target word count from competitor research or 
     'ee/bachata-classes-sofia.html': ('Bachata classes Sofia', 700),
     'es/clases-de-bachata.html': ('Clases de bachata', 1000),
     'fr/cours-de-bachata.html': ('Cours de bachata', 1000),
+    'uk/bachata-classes.html': ('Bachata classes', 1000),
+    'it/corsi-di-bachata.html': ('Corsi di bachata', 1000),
     'bachata-regensburg.html': ('Bachata Regensburg', 800),
     'bachata-mannheim.html': ('Bachata Mannheim', 800),
     'bachata-wuerzburg.html': ('Bachata Würzburg', 800),
@@ -119,7 +121,7 @@ for page, (kw, target) in PAGES.items():
     schema = ' '.join(re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S))
     imgs = re.findall(r'<img[^>]*>', body)
     bad_imgs = [i for i in imgs if not re.search(r'alt="[^"]+"', i)]
-    internal = set(re.findall(r'href="((?:/|)(?:es/|ee/|fr/)?(?:index|rankings|bewerbung|bachata-[a-z]+)(?:\.html)?[^"]*)"', s))
+    internal = set(re.findall(r'href="((?:/|)(?:es/|ee/|fr/|uk/|it/)?(?:index|rankings|bewerbung|bachata-[a-z]+)(?:\.html)?[^"]*)"', s))
     outbound = re.findall(r'<a [^>]*href="https://(?!latindanceawards\.com)[^"]+"[^>]*rel="noopener"', s)
     url = 'https://latindanceawards.com/' + ('' if page == 'index.html' else page[:-5])  # clean URL: Cloudflare redirects .html -> extensionless
     checks = [
@@ -135,7 +137,7 @@ for page, (kw, target) in PAGES.items():
         ('FAQ + FAQPage schema', 7, '"FAQPage"' in schema and '<details' in body, ''),
         ('BreadcrumbList (subpages)', 4, page == 'index.html' or '"BreadcrumbList"' in schema, ''),
         ('Canonical', 4, f'<link rel="canonical" href="{url}">' in head, ''),
-        ('hreflang de/en/x-default', 4, all(f'hreflang="{l}"' in head for l in (('de', 'en', 'x-default') if not page.startswith(('es/', 'ee/', 'fr/')) else ('en', 'x-default'))), ''),
+        ('hreflang de/en/x-default', 4, all(f'hreflang="{l}"' in head for l in (('de', 'en', 'x-default') if not page.startswith(('es/', 'ee/', 'fr/', 'uk/', 'it/')) else ('en', 'x-default'))), ''),
         ('Open Graph title/desc/image', 4, all(f'og:{k}' in head for k in ('title', 'description', 'image')), ''),
         ('2+ internal links to other pages', 4, len({re.sub(r'(\.html)?([#?].*)?$', '', x).lstrip('/') for x in internal} - {page[:-5], page}) >= 2, f'{len(internal)}'),
         ('Authority outbound link (noopener)', 3, len(outbound) >= 1, f'{len(outbound)}'),
