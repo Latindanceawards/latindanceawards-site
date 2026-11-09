@@ -18,6 +18,8 @@ Cloudflare Pages redirects `/x.html` to `/x` and `/dir/index.html` to `/dir/`. A
 python3 tools/build.py && python3 tools/build_guides.py   # German pages
 python3 tools/clean_urls.py                               # extensionless URLs
 python3 tools/build_en.py                                 # static English pages in /en/, hreflang, sitemap entries
+python3 tools/post_fix.py                                # drop pseudo-hreflang, dedupe sitemap, thin-page noindex, titles, language links
+python3 tools/prune_en.py                                # shrink inline EN dictionary (run last, after post_fix)
 python3 tools/seo_audit.py                                # per-page score + site-wide checks
 ```
 `build_en.py` turns the English text of each German-site page (root pages and `schools/`) into a real page under `/en/`, so search engines can index it. The old `?lang=en` URLs redirect to `/en/` in the browser. Other country folders (`at/`, `es/`, ...) still use the on-page language switch.

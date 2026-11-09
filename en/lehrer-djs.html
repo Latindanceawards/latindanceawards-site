@@ -775,7 +775,7 @@ button.btn.showall{background:transparent;-webkit-appearance:none;appearance:non
 .tp .consent{display:flex!important;gap:10px;align-items:flex-start;font-size:13px;line-height:1.45}
 .tp .consent input{margin-top:3px;accent-color:#e4b95b}
 @media (max-width:700px){.tp .row2,.tp .people,.tp .filters{grid-template-columns:1fr}}
-</style>
+.tp .box h2{font-family:var(--serif);font-weight:500;font-size:22px;margin-bottom:10px}</style>
 </head>
 <body>
 
@@ -835,11 +835,11 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
   <p class="muted" id="pnone" hidden><span data-i18n="tp10">No profiles yet. Create the first one!</span></p>
   <p class="muted" id="perr" hidden><span data-i18n="tp11">Profiles could not be loaded.</span></p>
 
-  <div class="box" id="verify"><h3><span data-i18n="tp12">Verified for €5 a month</span></h3>
+  <div class="box" id="verify"><h2><span data-i18n="tp12">Verified for €5 a month</span></h2>
     <p class="muted" data-i18n="tp13">We check that you are the person behind the profile and that your social media links are yours. Your profile then shows the check mark &#10003; Verified. Cancel any time. Verification changes nothing about the school ranking, and profiles are sorted alphabetically, not by payment.</p>
     <div class="btnrow"><a class="btn btn-gold" href="mailto:hello@latindanceawards.com?subject=Profil%20verifizieren"><span data-i18n="tp14">Verify my profile</span></a></div></div>
 
-  <div class="box" id="anmelden"><h3><span data-i18n="tp15">Create your profile for free</span></h3>
+  <div class="box" id="anmelden"><h2><span data-i18n="tp15">Create your profile for free</span></h2>
     <form id="pform" novalidate style="display:grid;gap:14px">
       <input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
       <div class="row2"><label><span data-i18n="tp16">Name or stage name</span><input type="text" name="name" maxlength="60" required></label>
@@ -881,6 +881,7 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
     </div>
     <div class="legal"><span>© 2026 Latin Dance Awards</span><span data-i18n="t107">Bachata Edition · Germany</span><span><a href="/en/impressum" data-i18n="leg_imp">Legal notice</a> · <a href="/en/datenschutz" data-i18n="leg_priv">Privacy policy</a></span></div>
   </div>
+<p class="xlang" style="text-align:center;margin:0;padding:0 16px 24px;font-size:.9em;opacity:.8"><a href="/lehrer-djs" hreflang="de" lang="de">Deutsche Version</a></p>
 </footer>
 
 <script>

@@ -1,14 +1,16 @@
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
 /*.svg
   Cache-Control: public, max-age=604800
 /*.png
   Cache-Control: public, max-age=604800
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
 /automation/*
   X-Robots-Tag: noindex
 /tools/*
-  X-Robots-Tag: noindex
-
-/automation/*
   X-Robots-Tag: noindex
