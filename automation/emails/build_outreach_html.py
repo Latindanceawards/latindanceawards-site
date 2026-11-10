@@ -72,6 +72,23 @@ NEW = {
  'el': dict(subj='{n}: διεκδικεί θέση ανάμεσα στις καλύτερες σχολές μπατσάτα της Ευρώπης', intro='Το να βρίσκεστε σε μια κατάταξη με τις καλύτερες σχολές μπατσάτα της Ευρώπης είναι κάτι ξεχωριστό, και η σχολή {n} ({c}) είναι ήδη εκεί. Πάνω από 15.000 άτομα επισκέπτονται τον ιστότοπό μας κάθε μήνα και πολλά ψάχνουν μέρος για να χορέψουν.',
    ph='Πακέτα από 5 € τον μήνα', pp='Γίνετε ορατοί σε πάνω από 15.000 επισκέπτες τον μήνα: αιτήματα για δοκιμαστικό μάθημα, φωτογραφίες και βίντεο, συνδέσμους στα social σας για να σας ακολουθούν και το σήμα επαληθευμένης σχολής. Με το Spotlight προβάλλουμε τη σχολή σας στην κορυφή της πόλης σας.',
    fp='Δεν είστε έτοιμοι για πακέτο; Επιβεβαιώστε δωρεάν τα στοιχεία σας: περισσότεροι πόντοι σημαίνουν καλύτερη θέση και μεγαλύτερη προβολή.')}
+# Search Console proof (real numbers, last 3 months): clicks 15,448, impressions 842K
+PROOF = {'de':('15.448','Klicks','842K','Impressionen','Google Search Console, letzte 3 Monate'),
+ 'en':('15,448','Clicks','842K','Impressions','Google Search Console, last 3 months'),
+ 'es':('15.448','Clics','842K','Impresiones','Google Search Console, últimos 3 meses'),
+ 'fr':('15 448','Clics','842K','Impressions','Google Search Console, 3 derniers mois'),
+ 'it':('15.448','Clic','842K','Impressioni','Google Search Console, ultimi 3 mesi'),
+ 'pt':('15 448','Cliques','842K','Impressões','Google Search Console, últimos 3 meses'),
+ 'pl':('15 448','Kliknięcia','842K','Wyświetlenia','Google Search Console, ostatnie 3 miesiące'),
+ 'nl':('15.448','Klikken','842K','Vertoningen','Google Search Console, laatste 3 maanden'),
+ 'tr':('15.448','Tıklama','842K','Gösterim','Google Search Console, son 3 ay'),
+ 'ro':('15.448','Clicuri','842K','Afișări','Google Search Console, ultimele 3 luni'),
+ 'el':('15.448','Κλικ','842K','Εμφανίσεις','Google Search Console, τελευταίοι 3 μήνες')}
+def proof(l):
+    a,al,b,bl,cap=PROOF[l]
+    def tile(n,lab,col): return f'<td width="49%" bgcolor="{col}" style="background:{col};border-radius:14px;padding:16px 18px"><div style="font:500 13px Inter,Helvetica,Arial,sans-serif;color:#ffffff">{lab}</div><div style="font:500 34px/1.15 Inter,Helvetica,Arial,sans-serif;color:#ffffff;margin-top:4px">{n}</div></td>'
+    return ('<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:6px 0 0"><tr>'+tile(a,al,'#1a73e8')+'<td width="2%" style="font-size:0;line-height:0">&nbsp;</td>'+tile(b,bl,'#6a2db8')+'</tr></table>'
+            f'<p style="margin:8px 0 22px;font:12px/1.5 {SANS};color:#b9aa98">{cap}</p>')
 def paras(l):
     sub, body, sig, foot = T[l]
     ps = [p for p in body.split('\n\n')]
@@ -89,7 +106,7 @@ def render(l, name='{{School}}', city='{{City}}', rank='{{Rank}}', link='{{Profi
     hi_txt = greeting if greeting is not None else re.sub(r' \{\{[^}]+\}\}([,:])', r'\1', hi)
     sig_h = sig.replace('\n', '<br>')
     foot_h = re.sub(r'(https://\S+)', r'<a href="\1" style="color:#E4B95B">\1</a>', foot)
-    card = (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:22px 0"><tr><td bgcolor="#1b1612" style="background:#1b1612;;border:1.5px solid #8a7440;border-radius:18px;padding:18px 20px">'
+    card = (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 22px"><tr><td bgcolor="#1b1612" style="background:#1b1612;;border:1.5px solid #8a7440;border-radius:18px;padding:18px 20px">'
       f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td width="96" valign="middle"><img src="{ASSET}seal.png" width="84" height="84" alt="" style="display:block;border:0"></td>'
       f'<td valign="middle"><div style="font:600 13px {SANS};color:#F8E2A6">#{rank} {scope}</div><div style="font:500 22px/1.2 {SERIF};color:#F6E7D3;margin-top:3px">{name}</div><div style="font:14px/1.5 {SANS};color:#b9aa98;margin-top:2px">{city}</div></td></tr></table>'
       f'<div style="margin-top:12px"><a href="{link}" style="font:600 14px {SANS};color:#F8E2A6;text-decoration:underline">{prof}</a></div></td></tr></table>')
@@ -105,6 +122,7 @@ def render(l, name='{{School}}', city='{{City}}', rank='{{Rank}}', link='{{Profi
 <tr><td bgcolor="#131011" style="background:#131011;;border:1.5px solid #8a7440;border-radius:24px;padding:34px 30px">
 <p style="margin:0 0 14px;font:500 22px/1.25 {SERIF};color:#F8E2A6">{hi_txt}</p>
 {P(intro)}
+{proof(l)}
 {card}
 <p style="margin:0 0 6px;font:500 32px/1.15 {SERIF};color:#F8E2A6">{NEW[l]['ph']}</p>
 {P(NEW[l]['pp'])}
