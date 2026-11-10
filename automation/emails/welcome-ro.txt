@@ -1,0 +1,29 @@
+Subject: Bun venit la Latin Dance Awards: ce urmează
+
+Bună {{Prenume}},
+
+îți mulțumim că ai ales planul {{Plan}} pentru {{Numele școlii}}. Ne bucurăm foarte mult că școala ta este alături de noi.
+
+De ce avem nevoie de la tine
+Răspunde pur și simplu la acest e-mail, de preferat cu toate informațiile deodată. Dacă lipsește ceva, completăm mai târziu.
+- Fotografii: până la 6, de preferat de înaltă calitate (siglă și fotografii de la cursuri).
+- Videoclipuri: până la 3 linkuri, de exemplu de pe YouTube sau Instagram.
+- Orarul și prețurile: așa cum vrei să fie afișate.
+- Lecție de probă: numărul tău de WhatsApp sau adresa de e-mail pentru rezervări.
+- Rețele sociale: linkuri către Instagram, Facebook, TikTok și site-ul tău.
+- Profesori (opțional): nume și fotografie.
+- Evenimentele tale (opțional): nume, dată, loc și link.
+
+Pentru ca doar proprietarii să poată modifica datele, răspunde de pe adresa de e-mail a școlii sau spune-ne contul de Instagram al școlii.
+
+Ce urmează
+Configurăm totul manual și te anunțăm imediat ce profilul tău este publicat. De obicei durează cel mult câteva zile.
+
+Poți anula oricând: linkul pentru gestionarea abonamentului se află în chitanța de la Stripe.
+
+Cu drag
+Mateus
+Latin Dance Awards
+
+Latin Dance Awards · clasament independent al școlilor de dans latino din Europa
+latindanceawards.com

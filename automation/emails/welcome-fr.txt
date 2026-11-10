@@ -1,0 +1,29 @@
+Subject: Bienvenue chez Latin Dance Awards : la suite
+
+Bonjour {{Prénom}},
+
+merci d’avoir choisi la formule {{Formule}} pour {{Nom de l’école}}. Nous sommes ravis de vous compter parmi nous.
+
+Ce dont nous avons besoin
+Répondez simplement à cet e-mail, de préférence avec tout en une fois. S’il manque quelque chose, nous l’ajouterons plus tard.
+- Photos : jusqu’à 6, de préférence en haute qualité (logo et photos des cours).
+- Vidéos : jusqu’à 3 liens, par exemple YouTube ou Instagram.
+- Horaires et tarifs : tels que vous souhaitez les afficher.
+- Cours d’essai : votre numéro WhatsApp ou votre e-mail pour les réservations.
+- Réseaux sociaux : liens vers Instagram, Facebook, TikTok et votre site.
+- Professeurs (facultatif) : nom et photo.
+- Vos propres événements (facultatif) : nom, date, lieu et lien.
+
+Pour que seuls les responsables puissent modifier les données, répondez depuis l’adresse e-mail de votre école ou indiquez-nous le compte Instagram de l’école.
+
+La suite
+Nous mettons tout en place à la main et vous prévenons dès que votre profil est en ligne. Cela prend en général quelques jours au maximum.
+
+Vous pouvez résilier à tout moment : le lien pour gérer votre abonnement se trouve dans le reçu Stripe.
+
+Cordialement
+Mateus
+Latin Dance Awards
+
+Latin Dance Awards · classement indépendant des écoles de danses latines en Europe
+latindanceawards.com

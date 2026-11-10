@@ -1,0 +1,29 @@
+Subject: Benvenuto in Latin Dance Awards: cosa succede ora
+
+Ciao {{Nome}},
+
+grazie per aver attivato il piano {{Piano}} per {{Nome della scuola}}. Siamo felici di avere la tua scuola con noi.
+
+Cosa ci serve da te
+Rispondi semplicemente a questa e-mail, possibilmente con tutto insieme. Se manca qualcosa, lo aggiungiamo più avanti.
+- Foto: fino a 6, meglio in alta qualità (logo e foto delle lezioni).
+- Video: fino a 3 link, ad esempio da YouTube o Instagram.
+- Orari e prezzi: come vuoi che vengano mostrati.
+- Lezione di prova: il tuo numero WhatsApp o il tuo indirizzo e-mail per le prenotazioni.
+- Social media: link a Instagram, Facebook, TikTok e al tuo sito.
+- Insegnanti (facoltativo): nome e foto.
+- I tuoi eventi (facoltativo): nome, data, luogo e link.
+
+Perché solo i titolari possano modificare i dati, rispondi dall’indirizzo e-mail della tua scuola oppure indicaci l’account Instagram della scuola.
+
+Cosa succede ora
+Configuriamo tutto a mano e ti avvisiamo appena il tuo profilo è online. Di solito bastano al massimo pochi giorni.
+
+Puoi disdire in qualsiasi momento: il link per gestire l’abbonamento si trova nella ricevuta di Stripe.
+
+Cordiali saluti
+Mateus
+Latin Dance Awards
+
+Latin Dance Awards · classifica indipendente delle scuole di ballo latino in Europa
+latindanceawards.com

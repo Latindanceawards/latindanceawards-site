@@ -1,0 +1,29 @@
+Subject: Welkom bij Latin Dance Awards: dit gebeurt er nu
+
+Hallo {{Voornaam}},
+
+bedankt dat {{Naam van de school}} nu het pakket {{Pakket}} heeft. We zijn blij dat jouw school erbij is.
+
+Dit hebben we van je nodig
+Antwoord gewoon op deze e-mail, het liefst met alles in één keer. Ontbreekt er iets, dan vullen we dat later aan.
+- Foto’s: maximaal 6, bij voorkeur in hoge kwaliteit (logo en foto’s van de lessen).
+- Video’s: maximaal 3 links, bijvoorbeeld van YouTube of Instagram.
+- Lestijden en prijzen: zoals je ze wilt laten zien.
+- Proefles: je WhatsApp-nummer of e-mailadres voor reserveringen.
+- Social media: links naar Instagram, Facebook, TikTok en je website.
+- Docenten (optioneel): naam en foto.
+- Eigen evenementen (optioneel): naam, datum, plaats en link.
+
+Zodat alleen eigenaren gegevens kunnen wijzigen, antwoord je vanaf het e-mailadres van je school of geef je ons het Instagram-account van de school door.
+
+Hoe het verdergaat
+We richten alles met de hand in en laten het je weten zodra je profiel online staat. Dat duurt meestal hooguit een paar dagen.
+
+Je kunt altijd opzeggen: de link om je abonnement te beheren staat in je Stripe-ontvangstbewijs.
+
+Met vriendelijke groet
+Mateus
+Latin Dance Awards
+
+Latin Dance Awards · onafhankelijke ranglijst van Latin-dansscholen in Europa
+latindanceawards.com
