@@ -7,6 +7,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PSEUDO = re.compile(r'[ \t]*<link rel="alternate" hreflang="en" href="[^"]*\?lang=en">\n?')
 n = 0
 for f in glob.glob(os.path.join(ROOT, '**', '*.html'), recursive=True):
+    if os.path.relpath(f, ROOT).startswith(('tools/', 'automation/')): continue   # never touch template sources
     s = open(f, encoding='utf-8').read()
     t = PSEUDO.sub('', s)
     if t != s: open(f, 'w', encoding='utf-8').write(t); n += 1
@@ -37,7 +38,7 @@ if t != s: open(p, 'w', encoding='utf-8').write(t); print('404 fixed')
 #    near-duplicates of their school pages -> noindex,follow, out of sitemap.xml and llms.txt
 DIRS = {'es':'escuelas','fr':'ecoles','it':'scuole','uk':'schools','pl':'szkoly','nl':'scholen','pt':'escolas',
         'at':'schools','ch':'schools','be':'schools','ie':'schools','ee':'schools','em':'schools','nd':'schools'}
-KEEP = {'es/clases-de-bachata-valencia.html','es/clases-de-bachata-sevilla.html','ee/bachata-classes-sofia.html','es/bachata-valencia.html','es/bachata-sevilla.html','es/bachata-dos-hermanas.html','ee/bachata-sofia.html'}
+KEEP = {'es/clases-de-bachata-valencia.html','es/clases-de-bachata-sevilla.html','ee/bachata-classes-sofia.html','es/clases-de-bachata-madrid.html','es/clases-de-bachata-barcelona.html','uk/bachata-classes-london.html','fr/cours-de-bachata-paris.html','es/bachata-valencia.html','es/bachata-sevilla.html','es/bachata-dos-hermanas.html','ee/bachata-sofia.html'}
 thin = []
 for c, d in DIRS.items():
     for f in sorted(glob.glob(os.path.join(ROOT, c, '*.html'))):

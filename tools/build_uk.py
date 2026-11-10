@@ -218,6 +218,8 @@ for k, (cpl, cen, loc) in P.CITIES.items():
      ('Which Bachata style should I start with?', 'Which Bachata style should I start with?', 'Most beginners start with modern or sensual Bachata. The basic step and the rhythm matter most; you can switch styles later.', 'Most beginners start with moderna or sensual. What matters is the basic step and the rhythm, and you can change style later.'),
      ('When is the full ranking published?', 'When is the full ranking published?', 'In spring 2027. Until then we show an interim standing based on Google ratings.', 'In spring 2027. Until then we show an interim standing based on Google ratings.'),
     ]
+    if k == 'london':
+        main += sec(t, 4, ('Class guide', 'Class guide'), t("p", 'Venues, prices and levels as the schools publish them: <a href="/uk/bachata-classes-london">Bachata classes in London: schools, prices and venues</a>.', 'Venues, prices and levels as the schools publish them: <a href="/uk/bachata-classes-london">Bachata classes in London: schools, prices and venues</a>.'), alt=False)
     main += faq_html(t, faq)
     uk_page(f'uk/bachata-{k}.html', f'uk/bachata-{k}.html', f'Bachata {cpl}: the best dance schools 2027',
       f'Bachata {cpl}: {n} schools with Google ratings and points from the 2027 ranking. Choose a Bachata class {loc} and see the interim standing.',

@@ -219,6 +219,8 @@ for k, (cpl, cen, loc) in P.CITIES.items():
      ('Quand le classement complet est-il publié ?', 'When is the full ranking published?', 'Au printemps 2027. D’ici là, nous affichons un classement provisoire basé sur les notes Google.', 'In spring 2027. Until then we show an interim standing based on Google ratings.'),
     ]
     if top[0] == '': faq = [q for i, q in enumerate(faq) if i != 1]  # no rated school here yet
+    if k == 'paris':
+        main += sec(t, 4, ('Guide des cours', 'Class guide'), t("p", 'Adresses, niveaux et tarifs tels que les écoles les publient : <a href="/fr/cours-de-bachata-paris">Cours de bachata à Paris : écoles, niveaux et tarifs</a>.', 'Addresses, levels and prices as the schools publish them: <a href="/fr/cours-de-bachata-paris">Bachata classes in Paris: schools, levels and prices</a>.'), alt=False)
     main += faq_html(t, faq)
     fr_page(f'fr/bachata-{k}.html', f'fr/bachata-{k}.html', f'Bachata {cpl} : les meilleures écoles de danse 2027',
       f'Bachata {cpl} : {n} écoles avec notes Google et points du classement 2027. Choisissez un cours de bachata {loc} et consultez le classement provisoire.',

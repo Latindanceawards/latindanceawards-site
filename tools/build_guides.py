@@ -3019,6 +3019,110 @@ guide_page('salsa-tanzen', 'sal',
   [('check', 'Für <b>Einsteiger</b>', 'For <b>beginners</b>'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
   sal_sections, sal_faq, sibling_group='topic')
 
+# ======================================================================
+# BACHATA KURS WIEN  (support page for /at/bachata-vienna; keyword "bachata kurs wien", 210/mo, SD 8)
+# Facts come from the schools' own websites (read 10 Nov 2026) and our Austria data. Nothing is invented.
+# ======================================================================
+import austria_data as _AT
+_wv = [s for s in _AT.SCHOOLS if s[1] == 'vienna']
+_wv_top = sorted(_wv, key=lambda s: (-(s[2] or 0), -s[3]))[:4]
+_wv_top_de = ', '.join(f'{s[0]} ({f"{s[2]:.1f}".replace(".", ",")} ★, {s[3]} Bewertungen)' for s in _wv_top)
+_wv_top_en = ', '.join(f'{s[0]} ({s[2]:.1f} ★, {s[3]} reviews)' for s in _wv_top)
+def _wl(u, n): return f'<a href="{u}" rel="noopener" target="_blank">{n}</a>'
+wien_sections = [
+ ('Bachata Kurse in Wien im Überblick', 'Bachata classes in Vienna at a glance', [
+   ('p', f'In unserer Liste stehen {len(_wv)} Schulen und Studios mit Bachata in Wien. Die höchsten Google-Bewertungen haben derzeit {_wv_top_de} (Stand Oktober 2026). Das ist kein Ranking: Die Zahlen sind ein Zwischenstand, das offizielle Ergebnis folgt im Frühjahr 2027.',
+         f'Our list has {len(_wv)} schools and studios teaching Bachata in Vienna. The highest Google ratings right now belong to {_wv_top_en} (October 2026). This is not a ranking: the figures are an interim standing, and the official result follows in spring 2027.'),
+   ('p', 'Die vollständige Liste mit Punkten und Links zu jeder Schule steht auf der Seite <a href="/at/bachata-vienna">Bachata Vienna: the best dance schools 2027</a> (auf Englisch). Hier geht es darum, wie die Kurse aufgebaut sind, was die Schulen öffentlich zu Level, Preis und Terminen schreiben und was du vor der Anmeldung fragen solltest.',
+         'The full list with points and links to every school is on the page <a href="/at/bachata-vienna">Bachata Vienna: the best dance schools 2027</a> (in English). Here we look at how classes are built, what the schools publish about level, price and dates, and what to ask before you sign up.'),
+ ]),
+ ('Vier Wiener Schulen im Detail', 'Four Viennese schools in detail', [
+   ('p', 'Wir haben im November 2026 die Websites mehrerer Schulen gelesen. Das steht dort, so wie es dort steht. Termine ändern sich jedes Semester, bitte bestätige sie bei der Schule.',
+         'In November 2026 we read the websites of several schools. This is what they say, as stated. Dates change every term, so please confirm them with the school.'),
+   ('h3', _wl('https://www.salsavienna.at/', 'Salsa Vienna') + ' (Wallgasse, 1060 Wien)', _wl('https://www.salsavienna.at/', 'Salsa Vienna') + ' (Wallgasse, 1060 Vienna)'),
+   ('ul', [
+     ('Die Kurse finden laut Website derzeit im „Günter“ (Restaurant, Bar &amp; more) in der Wallgasse im 6. Bezirk statt.', 'According to its website the courses currently take place at “Günter” (restaurant, bar &amp; more) in Wallgasse in the 6th district.'),
+     ('Bachata gibt es in drei Leveln: Bachata 1 ohne Vorkenntnisse, Bachata 2 mit Vorkenntnissen und Bachata 3, das auf beiden aufbaut. Genannt werden Bachata 1 am Dienstag 19:30–20:30 und Bachata 2 am Dienstag 20:30–21:30 (Start 3.11.2026).', 'Bachata is offered at three levels: Bachata 1 without experience, Bachata 2 with experience and Bachata 3, which builds on both. Listed are Bachata 1 on Tuesday 19:30–20:30 and Bachata 2 on Tuesday 20:30–21:30 (start 3 November 2026).'),
+     ('Ein Bachata-Kurs besteht aus vier Abenden zu je 60 Minuten, einmal pro Woche am selben Wochentag. Der Preis: 60 € pro Person, mit gültigem Studentenausweis 48 €. Privatstunden gibt es auf Anfrage.', 'A Bachata course is four evenings of 60 minutes, once a week on the same weekday. The price: €60 per person, €48 with a valid student ID. Private lessons are available on request.'),
+     ('Ob man für die Bachata-Kurse einen Partner braucht, steht auf der Seite nicht. Beim Kurs „Salsa Cali Paartanz“ ist es ein Paarkurs, „Salsa Cali Footwork“ wird solo getanzt.', 'The page does not say whether a partner is needed for the Bachata courses. “Salsa Cali Paartanz” is a couples course, “Salsa Cali Footwork” is danced solo.'),
+   ]),
+   ('h3', _wl('https://www.lentodance.at/', 'Lento Dance Studio') + ' (Traungasse 14, 1030 Wien)', _wl('https://www.lentodance.at/', 'Lento Dance Studio') + ' (Traungasse 14, 1030 Vienna)'),
+   ('ul', [
+     ('Die Website nennt Salsa, Bachata (Sensual und Traditional), Heels und Kizomba und schreibt „all levels welcome (Beginner to Advanced)“ sowie „no dance partner required“.', 'The website lists salsa, Bachata (Sensual and Traditional), heels and kizomba and says “all levels welcome (Beginner to Advanced)” and “no dance partner required”.'),
+     ('Anfängerkurse stehen täglich um 18:00 Uhr im Programm. Die Seite mischt allerdings ältere und neuere Beiträge, deshalb lohnt sich eine Nachfrage per E-Mail (info@lentodance.at).', 'Beginner classes are listed every day at 18:00. The page mixes older and newer posts, though, so it is worth asking by email (info@lentodance.at).'),
+     ('Bezahlt wird pro Kurs oder mit einem 30-Tage-Pass. Preise für Bachata nennt die Seite nicht; für Kizomba steht 12 € pro Stunde, 8 € für Studierende und 49 € für 30 Tage.', 'You pay per class or with a 30-day pass. The page gives no Bachata prices; for kizomba it says €12 per hour, €8 for students and €49 for 30 days.'),
+     ('Mittwochs findet ein Social von 21:00 bis 24:00 Uhr in der Lento Party Hall (Zaunergasse 4) statt. Der Eintritt kostet 7 € und ist im Monatspass enthalten.', 'On Wednesdays there is a social from 21:00 to 24:00 at the Lento Party Hall (Zaunergasse 4). Entry is €7 and included in the monthly pass.'),
+   ]),
+   ('h3', _wl('https://salsahouse.at/', 'SalsaHouse') + ' (Märzstraße 105, 1150 Wien)', _wl('https://salsahouse.at/', 'SalsaHouse') + ' (Märzstraße 105, 1150 Vienna)'),
+   ('ul', [
+     ('Neben Bachata unterrichtet SalsaHouse Salsa, Rueda de Casino, Kizomba und Son Moderno. Einsteiger beginnen laut Website in „Basic 1“-Kursen, die regelmäßig wiederholt werden.', 'Besides Bachata, SalsaHouse teaches salsa, Rueda de Casino, kizomba and Son Moderno. According to its website beginners start in “Basic 1” courses, which are repeated regularly.'),
+     ('Die weiteren Level heißen Improver, Intermediate, Advanced und Perfecting. Das richtige Level klärt die Schule in einem persönlichen Gespräch. Eigene Bachata-Level nennt die Seite nicht.', 'The further levels are Improver, Intermediate, Advanced and Perfecting. The school settles the right level in a personal conversation. The page does not name separate Bachata levels.'),
+     ('Der Wochenplan ist ein Bild, die Preise stehen auf einer eigenen Seite. Wir können hier deshalb keine Zeiten oder Beträge zitieren.', 'The weekly timetable is an image and the prices are on a separate page, so we cannot quote times or amounts here.'),
+   ]),
+   ('h3', _wl('https://www.tumbao.at/', 'Tumbao Dance Studio') + ' (Margaretenstraße 26, 1040 Wien)', _wl('https://www.tumbao.at/', 'Tumbao Dance Studio') + ' (Margaretenstraße 26, 1040 Vienna)'),
+   ('ul', [
+     ('Genannt werden Bachata Dominicana, Bachata Sensual und Bachata Lady Styling, dazu viele weitere Stile. Die Kurse sind laut Website für „Anfänger bis Profi“.', 'Listed are Bachata Dominicana, Bachata Sensual and Bachata Lady Styling, plus many other styles. The courses are for “beginners to pros”, according to the website.'),
+     ('Kartenpakete (10er- und 50er-Block) lassen sich online kaufen; Preise nennt die Startseite nicht. Der Kursplan steht unter tumbao.at/Tanzkurse, das Studio gibt Montag bis Freitag 17:00–21:00 als Öffnungszeit an.', 'Class packs (10 and 50 classes) can be bought online; the home page gives no prices. The timetable is at tumbao.at/Tanzkurse, and the studio lists Monday to Friday 17:00–21:00 as opening hours.'),
+   ]),
+ ]),
+ ('Preise und Probestunde: Was veröffentlicht ist', 'Prices and trial class: what is published', [
+   ('p', 'Nach der Lektüre fällt vor allem auf, was fehlt. Das haben wir gefunden:', 'After reading the sites, what stands out most is what is missing. This is what we found:'),
+   ('ul', [
+     ('<strong>Salsa Vienna:</strong> 60 € für vier Bachata-Abende (48 € mit Studentenausweis), also 15 € pro Abend (12 € mit Studentenausweis).', '<strong>Salsa Vienna:</strong> €60 for four Bachata evenings (€48 with a student ID), which is €15 per evening (€12 with a student ID).'),
+     ('<strong>Lento Dance Studio:</strong> Einzelkurs oder 30-Tage-Pass, Bachata-Preise nicht genannt; Social 7 €.', '<strong>Lento Dance Studio:</strong> single class or 30-day pass, Bachata prices not stated; social €7.'),
+     ('<strong>Tumbao:</strong> 10er- und 50er-Block, keine Beträge auf der Startseite.', '<strong>Tumbao:</strong> 10 and 50-class packs, no amounts on the home page.'),
+     ('<strong>SalsaHouse:</strong> Preise auf einer separaten Seite.', '<strong>SalsaHouse:</strong> prices on a separate page.'),
+   ]),
+   ('p', 'Eine Probestunde nennt keine der vier Seiten, die wir gelesen haben. Frag deshalb nach, bevor du einen Block kaufst: Gibt es eine Probestunde, und wird sie angerechnet?', 'None of the four pages we read mentions a trial class. So ask before you buy a pack: is there a trial class, and is it credited?'),
+ ]),
+ ('Welches Level passt, wenn du bei null beginnst?', 'Which level fits if you start from zero?', [
+   ('p', 'Wähle den Einsteigerkurs, auch wenn du schon einen anderen Tanz kannst. Bei Salsa Vienna ist das Bachata 1, bei SalsaHouse „Basic 1“, bei Lento Dance die täglichen Anfängerklassen. Der Grundschritt der Bachata steht auf der Seite <a href="bachata-grundschritt.html">Bachata Grundschritt</a>, einen allgemeinen Einstieg bietet <a href="bachata-fuer-anfaenger.html">Bachata für Anfänger</a>.',
+         'Pick the beginner class even if you already know another dance. At Salsa Vienna that is Bachata 1, at SalsaHouse “Basic 1”, at Lento Dance the daily beginner classes. The basic step is explained on <a href="bachata-grundschritt.html">Bachata basic step</a>, and <a href="bachata-fuer-anfaenger.html">Bachata for beginners</a> gives a general introduction.'),
+   ('p', 'Einen Partner brauchst du in den meisten Gruppenkursen nicht, weil die Partner wechseln. Lento Dance schreibt das ausdrücklich. Welcher Stil zu dir passt, erklären die Seiten <a href="bachata-sensual.html">Bachata Sensual</a> und <a href="bachata-dominicana.html">Bachata Dominicana</a>; allgemeine Hinweise zur Kurswahl stehen unter <a href="bachata-tanzkurs.html">Bachata Tanzkurs</a>.',
+         'You do not need a partner in most group classes because partners rotate. Lento Dance says so explicitly. Which style suits you is explained on <a href="bachata-sensual.html">Bachata Sensual</a> and <a href="bachata-dominicana.html">Bachata Dominicana</a>; general tips on choosing a class are at <a href="bachata-tanzkurs.html">Bachata dance course</a>.'),
+ ]),
+ ('Was du vor der Anmeldung fragen solltest', 'What to ask before you sign up', [
+   ('ul', [
+     ('<strong>Welches Level?</strong> Frag, ob es eigene Bachata-Level gibt oder ob Bachata in gemischten Gruppen läuft. Salsa Vienna trennt Bachata 1 bis 3, SalsaHouse nennt keine eigenen Bachata-Level.', '<strong>Which level?</strong> Ask whether there are separate Bachata levels or mixed groups. Salsa Vienna separates Bachata 1 to 3, SalsaHouse does not name separate Bachata levels.'),
+     ('<strong>Wie viele Abende?</strong> Ein Kurs bei Salsa Vienna hat vier Abende; bei Kartenpaketen (Tumbao) zählt, wie lange die Karte gültig ist.', '<strong>How many evenings?</strong> A course at Salsa Vienna has four evenings; for class packs (Tumbao) what matters is how long the card is valid.'),
+     ('<strong>Wo genau?</strong> Salsa Vienna wechselt den Kursort, andere Schulen haben mehrere Räume. Prüfe Adresse und Bezirk vor dem ersten Abend.', '<strong>Where exactly?</strong> Salsa Vienna changes its venue, other schools have several rooms. Check the address and district before the first evening.'),
+     ('<strong>Social danach?</strong> Lento Dance veranstaltet mittwochs ein Social. Wie so ein Abend abläuft, steht bei <a href="bachata-party.html">Bachata Party</a> und <a href="bachata-socials.html">Bachata-Socials</a>.', '<strong>A social afterwards?</strong> Lento Dance holds a social on Wednesdays. What such an evening is like is explained at <a href="bachata-party.html">Bachata party</a> and <a href="bachata-socials.html">Bachata socials</a>.'),
+   ]),
+ ]),
+ ('So haben wir diese Seite erstellt', 'How we prepared this page', [
+   ('p', f'Wir haben im November 2026 die Websites von Salsa Vienna, Lento Dance Studio, SalsaHouse und Tumbao Dance Studio gelesen und nutzen die Google-Bewertungen unserer Liste von Oktober 2026. Die übrigen {len(_wv) - 4} Wiener Schulen sind auf der <a href="/at/bachata-vienna">Städteseite</a> verlinkt; ihre Angebote haben wir hier nicht ausgewertet. Preise und Termine ändern sich, bitte prüfe sie direkt bei der Schule. Die Seite ist unabhängig: Plätze lassen sich nicht kaufen.',
+         f'In November 2026 we read the websites of Salsa Vienna, Lento Dance Studio, SalsaHouse and Tumbao Dance Studio, and we use the Google ratings from our October 2026 list. The other {len(_wv) - 4} Viennese schools are linked on the <a href="/at/bachata-vienna">city page</a>; we did not evaluate their offers here. Prices and dates change, so please check them with the school. The page is independent: places cannot be bought.'),
+ ]),
+]
+wien_faq = [
+ ('Wo kann ich in Wien Bachata lernen?', 'Where can I learn Bachata in Vienna?',
+  f'In unserer Liste stehen {len(_wv)} Schulen mit Bachata in Wien, darunter Lento Dance Studio, Salsa Vienna, SalsaHouse und Tumbao Dance Studio. Die vollständige Liste steht auf unserer Seite Bachata Vienna.',
+  f'Our list has {len(_wv)} schools with Bachata in Vienna, including Lento Dance Studio, Salsa Vienna, SalsaHouse and Tumbao Dance Studio. The full list is on our Bachata Vienna page.'),
+ ('Was kostet ein Bachata Kurs in Wien?', 'How much does a Bachata class in Vienna cost?',
+  'Das hängt von der Schule ab, und viele nennen ihre Preise nicht auf der Startseite. Salsa Vienna veröffentlicht 60 € für vier Bachata-Abende zu je 60 Minuten (48 € mit Studentenausweis). Frag bei jeder Schule nach dem Preis und danach, was er enthält.',
+  'It depends on the school, and many do not state prices on the home page. Salsa Vienna publishes €60 for four Bachata evenings of 60 minutes (€48 with a student ID). Ask each school for the price and what it includes.'),
+ ('Brauche ich einen Partner für einen Bachata Kurs?', 'Do I need a partner for a Bachata class?',
+  'Meist nicht. Lento Dance Studio schreibt „no dance partner required“, und in den meisten Gruppen wechseln die Partner. Bei Salsa Vienna ist das für die Bachata-Kurse nicht angegeben; frag vorher nach.',
+  'Usually not. Lento Dance Studio writes “no dance partner required”, and in most groups partners rotate. Salsa Vienna does not say for its Bachata courses, so ask beforehand.'),
+ ('Gibt es eine kostenlose Probestunde?', 'Is there a free trial class?',
+  'Auf den vier Seiten, die wir gelesen haben, steht keine. Das heißt nicht, dass es keine gibt: Schreib die Schule an und frag, ob ein Probetermin möglich ist und ob er angerechnet wird.',
+  'None is mentioned on the four pages we read. That does not mean there is none: write to the school and ask whether a trial is possible and credited.'),
+ ('Welche ist die beste Bachata Schule in Wien?', 'What is the best Bachata school in Vienna?',
+  f'Nach unseren vorläufigen Daten vom Oktober 2026 führen die Google-Bewertungen Lento Dance Studio, Salsa &amp; Latin Studio Julion, Salsa Vienna und Vienna Salsa Studio an (jeweils 5,0 ★). Das ist nicht das Endergebnis, das im Frühjahr 2027 folgt.',
+  'By our interim data from October 2026, the Google ratings are led by Lento Dance Studio, Salsa &amp; Latin Studio Julion, Salsa Vienna and Vienna Salsa Studio (5.0 ★ each). This is not the final result, which follows in spring 2027.'),
+]
+guide_page('bachata-kurs-wien', 'bkw',
+  'Bachata Kurs Wien: Schulen, Level und Preise',
+  'Bachata Kurs in Wien: Level, Preise und Termine laut Websites von Lento Dance, SalsaHouse, Tumbao und Salsa Vienna und was du vor der Anmeldung fragst.',
+  'Bachata class Vienna: schools, levels and prices',
+  'Bachata class in Vienna: levels, prices and dates according to the websites of Lento Dance, SalsaHouse, Tumbao and Salsa Vienna, and what to ask before you sign up.',
+  'Bachata Kurs Wien', ('Bachata Kurs Wien · Ratgeber', 'Bachata class Vienna · Guide'),
+  ('Bachata Kurs Wien: <em class="foil">Schulen</em>, Level und Preise', 'Bachata class Vienna: <em class="foil">schools</em>, levels and prices'),
+  ('Was Wiener Schulen zu Level, Preisen und Terminen veröffentlichen und was du vor der Anmeldung fragen solltest. Mit Daten von den Websites der Schulen.',
+   'What Viennese schools publish about level, prices and dates, and what to ask before you sign up. Based on the schools’ own websites.'),
+  [('check', 'Websites gelesen im <b>November 2026</b>', 'Websites read in <b>November 2026</b>'), ('cal', f'<b>{len(_wv)} Schulen</b> in Wien', f'<b>{len(_wv)} schools</b> in Vienna')],
+  wien_sections, wien_faq)
+
 # --- Thin-content tiering: city pages with at most 2 listed schools are mostly template text.
 # They stay online and linked from the cities index, but are set to noindex until the 20 Dec ranking gives real data.
 _NOINDEX_MAX_SCHOOLS = 2

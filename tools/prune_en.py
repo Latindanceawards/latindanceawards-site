@@ -5,7 +5,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RE_EN = re.compile(r'var EN=(\{.*?\});\n', re.S)
 saved = n = 0
 for f in glob.glob(os.path.join(ROOT, '**', '*.html'), recursive=True):
-    if '/.git/' in f: continue
+    if '/.git/' in f or os.path.relpath(f, ROOT).startswith(('tools/', 'automation/')): continue
     s = open(f, encoding='utf-8').read()
     m = RE_EN.search(s)
     if not m: continue

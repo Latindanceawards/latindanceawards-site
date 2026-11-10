@@ -221,7 +221,9 @@ for k, (cpl, cen, loc) in P.CITIES.items():
     if top[0] == '': faq = [q for i, q in enumerate(faq) if i != 1]  # no rated school here yet
     _SUP = {'valencia': ('clases-de-bachata-valencia', 'Clases de bachata en Valencia: escuelas, niveles y cómo elegir', 'Bachata classes in Valencia: schools, levels and how to choose'),
             'sevilla': ('clases-de-bachata-sevilla', 'Clases de bachata en Sevilla y Dos Hermanas: escuelas y cómo elegir', 'Bachata classes in Seville and Dos Hermanas: schools and how to choose'),
-            'dos-hermanas': ('clases-de-bachata-sevilla', 'Clases de bachata en Sevilla y Dos Hermanas: escuelas y cómo elegir', 'Bachata classes in Seville and Dos Hermanas: schools and how to choose')}
+            'dos-hermanas': ('clases-de-bachata-sevilla', 'Clases de bachata en Sevilla y Dos Hermanas: escuelas y cómo elegir', 'Bachata classes in Seville and Dos Hermanas: schools and how to choose'),
+            'madrid': ('clases-de-bachata-madrid', 'Clases de bachata en Madrid: escuelas, clases de prueba y cómo elegir', 'Bachata classes in Madrid: schools, trial classes and how to choose'),
+            'barcelona': ('clases-de-bachata-barcelona', 'Clases de bachata en Barcelona: escuelas, precios y cómo elegir', 'Bachata classes in Barcelona: schools, prices and how to choose')}
     if k in _SUP:
         main += sec(t, 4, ('Guía de clases', 'Class guide'), t("p", f'Direcciones, grupos y precios publicados por las escuelas: <a href="/es/{_SUP[k][0]}">{_SUP[k][1]}</a>.', f'Addresses, groups and prices published by the schools: <a href="/es/{_SUP[k][0]}">{_SUP[k][2]}</a>.'), alt=False)
     main += faq_html(t, faq)

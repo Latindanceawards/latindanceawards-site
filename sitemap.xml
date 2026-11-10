@@ -3935,6 +3935,42 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/it/corsi-di-bachata"/>
   </url>
   <url>
+    <loc>https://latindanceawards.com/es/clases-de-bachata-madrid</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://latindanceawards.com/es/clases-de-bachata-madrid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/es/clases-de-bachata-madrid"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/es/clases-de-bachata-barcelona</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://latindanceawards.com/es/clases-de-bachata-barcelona"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/es/clases-de-bachata-barcelona"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/uk/bachata-classes-london</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://latindanceawards.com/uk/bachata-classes-london"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/uk/bachata-classes-london"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/fr/cours-de-bachata-paris</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://latindanceawards.com/fr/cours-de-bachata-paris"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/fr/cours-de-bachata-paris"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/bachata-kurs-wien</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-kurs-wien"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-kurs-wien"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-kurs-wien"/>
+  </url>
+  <url>
     <loc>https://latindanceawards.com/en/</loc>
     <lastmod>2026-10-24</lastmod>
     <priority>1.0</priority>
@@ -4989,5 +5025,13 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-workshop"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-workshop"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-workshop"/>
+  </url>
+  <url>
+    <loc>https://latindanceawards.com/en/bachata-kurs-wien</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://latindanceawards.com/bachata-kurs-wien"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/bachata-kurs-wien"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/bachata-kurs-wien"/>
   </url>
 </urlset>
