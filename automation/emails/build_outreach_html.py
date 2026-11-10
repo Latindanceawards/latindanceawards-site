@@ -127,6 +127,42 @@ CP = {
 }
 # A/B alternative subject (pattern: quick personal question)
 SUBJ_B = {'de': 'Kurze Frage zu {n}', 'en': 'Quick question about {n}', 'es': 'Una pregunta rápida sobre {n}', 'fr': 'Une petite question sur {n}', 'it': 'Una domanda veloce su {n}', 'pt': 'Uma pergunta rápida sobre {n}', 'pl': 'Szybkie pytanie o {n}', 'nl': 'Korte vraag over {n}', 'tr': '{n} hakkında kısa bir soru', 'ro': 'O întrebare rapidă despre {n}', 'el': 'Μια γρήγορη ερώτηση για τη σχολή {n}'}
+# HUMAN voice (v3): first person, one real question, no marketing words. Keys: intro q ctx opt sig
+HUM = {
+ 'de': dict(intro='Ich bin Mateus und betreibe Latin Dance Awards, ein Ranking der Bachata-Schulen in Europa. Ich habe {n} ({c}) aufgenommen, und die Schule tritt schon gegen einige der besten Schulen Europas an.',
+  q='Kannst du mir bei ein paar Angaben helfen? Gründungsjahr, Anfängerkurse und Events habe ich online nicht gefunden. Jede Angabe, die du bestätigst, bringt deiner Schule mehr Punkte und einen besseren Platz.',
+  ctx='Zur Einordnung: So viel Traffic bekommt die Seite über Google:', opt='Wenn du lieber nicht gelistet sein möchtest, antworte einfach kurz, dann nehme ich die Schule raus.', sig='Danke dir,\nMateus\nLatin Dance Awards'),
+ 'en': dict(intro='I’m Mateus and I run Latin Dance Awards, a ranking of Bachata schools in Europe. I added {n} ({c}) to it, and it is already competing with some of the best schools in Europe.',
+  q='Could you help me with a few details? I couldn’t find your founding year, whether you offer beginner classes, or any events online. Each one you confirm gives your school more points and moves it up the ranking.',
+  ctx='For context, this is the traffic the site gets from Google:', opt='If you’d rather not be listed, just reply and I’ll take your school off.', sig='Thanks,\nMateus\nLatin Dance Awards'),
+ 'es': dict(intro='Soy Mateus y llevo Latin Dance Awards, un ranking de escuelas de bachata en Europa. He añadido {n} ({c}) y ya compite con algunas de las mejores escuelas de Europa.',
+  q='¿Me ayudas con unos datos? No he encontrado online el año de fundación, si hay clases para principiantes ni los eventos. Cada dato que confirmes da más puntos a tu escuela y la sube en el ranking.',
+  ctx='Para que te hagas una idea, este es el tráfico que recibe la web desde Google:', opt='Si prefieres no aparecer, respóndeme a este correo y quito tu escuela.', sig='Gracias,\nMateus\nLatin Dance Awards'),
+ 'fr': dict(intro='Je suis Mateus, je gère Latin Dance Awards, un classement des écoles de bachata en Europe. J’y ai ajouté {n} ({c}), qui concourt déjà avec certaines des meilleures écoles d’Europe.',
+  q='Pourriez-vous m’aider avec quelques informations ? Je n’ai pas trouvé en ligne l’année de création, les cours pour débutants ni les événements. Chaque information que vous confirmez rapporte des points à votre école et la fait monter dans le classement.',
+  ctx='Pour situer, voici le trafic que le site reçoit depuis Google :', opt='Si vous préférez ne pas figurer dans le classement, répondez simplement à ce message et je retire votre école.', sig='Merci,\nMateus\nLatin Dance Awards'),
+ 'it': dict(intro='Sono Mateus e gestisco Latin Dance Awards, una classifica delle scuole di bachata in Europa. Ho aggiunto {n} ({c}) e già è in gara con alcune delle migliori scuole d’Europa.',
+  q='Mi dai una mano con qualche dato? Online non ho trovato l’anno di fondazione, i corsi per principianti né gli eventi. Ogni dato che confermi dà più punti alla tua scuola e la fa salire in classifica.',
+  ctx='Giusto per darti un’idea, questo è il traffico che il sito riceve da Google:', opt='Se preferisci non comparire, rispondi a questa email e tolgo la tua scuola.', sig='Grazie,\nMateus\nLatin Dance Awards'),
+ 'pt': dict(intro='Sou o Mateus e giro o Latin Dance Awards, um ranking de escolas de bachata na Europa. Acrescentei a {n} ({c}) e ela já compete com algumas das melhores escolas da Europa.',
+  q='Pode ajudar-me com alguns dados? Não encontrei online o ano de fundação, se há aulas para principiantes nem os eventos. Cada dado que confirmar dá mais pontos à sua escola e faz com que suba no ranking.',
+  ctx='Só para ter uma ideia, este é o tráfego que o site recebe do Google:', opt='Se preferir não aparecer, basta responder a este e-mail e eu retiro a sua escola.', sig='Obrigado,\nMateus\nLatin Dance Awards'),
+ 'pl': dict(intro='Jestem Mateus i prowadzę Latin Dance Awards, ranking szkół bachaty w Europie. Dodałem do niego {n} ({c}), a szkoła już rywalizuje z jednymi z najlepszych w Europie.',
+  q='Czy pomożesz mi w kilku informacjach? Nie znalazłem w internecie roku założenia, kursów dla początkujących ani wydarzeń. Każda potwierdzona informacja daje Twojej szkole więcej punktów i podnosi ją w rankingu.',
+  ctx='Dla kontekstu: tyle ruchu strona dostaje z Google:', opt='Jeśli wolisz nie być w rankingu, odpisz na tego maila, a usunę szkołę.', sig='Dzięki,\nMateus\nLatin Dance Awards'),
+ 'nl': dict(intro='Ik ben Mateus en beheer Latin Dance Awards, een ranglijst van bachata-scholen in Europa. Ik heb {n} ({c}) toegevoegd en de school strijdt al mee met een paar van de beste scholen van Europa.',
+  q='Kun je me helpen met een paar gegevens? Het oprichtingsjaar, beginnerslessen en evenementen kon ik online niet vinden. Elk gegeven dat je bevestigt levert je school meer punten op en brengt je hoger in de ranglijst.',
+  ctx='Ter indicatie: dit is het verkeer dat de site via Google krijgt:', opt='Wil je liever niet in de lijst staan? Stuur gewoon een reply, dan haal ik je school eruit.', sig='Bedankt,\nMateus\nLatin Dance Awards'),
+ 'tr': dict(intro='Ben Mateus, Latin Dance Awards’ı yönetiyorum; Avrupa’daki bachata okullarının sıralaması. {n} ({c}) okulunu ekledim ve Avrupa’nın en iyi okullarından bazılarıyla zaten yarışıyor.',
+  q='Birkaç bilgi konusunda yardımcı olur musunuz? Kuruluş yılını, yeni başlayanlara yönelik dersleri ve etkinlikleri internette bulamadım. Doğruladığınız her bilgi okulunuza puan kazandırır ve sıralamada yükseltir.',
+  ctx='Fikir vermesi için, sitenin Google’dan aldığı trafik şu:', opt='Listede yer almak istemezseniz bu e-postayı yanıtlamanız yeterli, okulunuzu kaldırırım.', sig='Teşekkürler,\nMateus\nLatin Dance Awards'),
+ 'ro': dict(intro='Sunt Mateus și administrez Latin Dance Awards, un clasament al școlilor de bachata din Europa. Am adăugat {n} ({c}), iar școala concurează deja cu unele dintre cele mai bune din Europa.',
+  q='Mă poți ajuta cu câteva informații? Nu am găsit online anul înființării, cursurile pentru începători și evenimentele. Fiecare informație pe care o confirmi aduce școlii tale mai multe puncte și o urcă în clasament.',
+  ctx='Ca să-ți faci o idee, acesta este traficul pe care îl primește site-ul de la Google:', opt='Dacă preferi să nu apari în clasament, răspunde la acest e-mail și îți scot școala.', sig='Mulțumesc,\nMateus\nLatin Dance Awards'),
+ 'el': dict(intro='Είμαι ο Mateus και διαχειρίζομαι το Latin Dance Awards, μια κατάταξη σχολών μπατσάτα στην Ευρώπη. Πρόσθεσα τη σχολή {n} ({c}) και ήδη διεκδικεί θέση ανάμεσα στις καλύτερες της Ευρώπης.',
+  q='Μπορείτε να με βοηθήσετε με μερικά στοιχεία; Δεν βρήκα στο διαδίκτυο το έτος ίδρυσης, τα μαθήματα για αρχάριους και τις εκδηλώσεις. Κάθε στοιχείο που επιβεβαιώνετε δίνει περισσότερους πόντους στη σχολή σας και την ανεβάζει στην κατάταξη.',
+  ctx='Για να έχετε μια ιδέα, αυτή είναι η επισκεψιμότητα που παίρνει ο ιστότοπος από την Google:', opt='Αν προτιμάτε να μην εμφανίζεστε, απαντήστε σε αυτό το μήνυμα και θα αφαιρέσω τη σχολή.', sig='Ευχαριστώ,\nMateus\nLatin Dance Awards'),
+}
 def paras(l):
     sub, body, sig, foot = T[l]
     ps = [p for p in body.split('\n\n')]
@@ -140,9 +176,9 @@ def render(l, name='{{School}}', city='{{City}}', rank='{{Rank}}', link='{{Profi
     free, plans, prof, scope = LAB[l]
     hi, optout = ps[0], ps[4]
     data = NEW[l]['fp']
-    intro = CP[l]['intro'].replace('{n}', name).replace('{c}', city)
+    intro = HUM[l]['intro'].replace('{n}', name).replace('{c}', city)
     hi_txt = greeting if greeting is not None else re.sub(r' \{\{[^}]+\}\}([,:])', r'\1', hi)
-    sig_h = sig.replace('\n', '<br>')
+    sig_h = HUM[l]['sig'].replace('\n', '<br>')
     foot_h = re.sub(r'(https://\S+)', r'<a href="\1" style="color:#E4B95B">\1</a>', foot)
     card = (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 22px"><tr><td bgcolor="#1b1612" style="background:#1b1612;;border:1.5px solid #8a7440;border-radius:18px;padding:18px 20px">'
       f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td width="96" valign="middle"><img src="{ASSET}seal.png" width="84" height="84" alt="" style="display:block;border:0"></td>'
@@ -160,12 +196,12 @@ def render(l, name='{{School}}', city='{{City}}', rank='{{Rank}}', link='{{Profi
 <tr><td style="padding:6px 4px 0">
 <p style="margin:0 0 14px;font:500 22px/1.25 {SERIF};color:#F8E2A6">{hi_txt}</p>
 {P(intro)}
+{P(HUM[l]['q'])}
+{P(HUM[l]['ctx'])}
 {proof(l)}
 {card}
-{P(CP[l]['mid'])}
-<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 12px"><tr>{btn(CP[l]['btn'], 'https://latindanceawards.com/bewerbung', True)}</tr></table>
-<p style="margin:0 0 26px;font:14px/1.6 {SANS};color:#b9aa98">{CP[l]['note']}</p>
-{P(optout, '#b9aa98', 14)}
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 26px"><tr>{btn(CP[l]['btn'], 'https://latindanceawards.com/bewerbung', True)}</tr></table>
+{P(HUM[l]['opt'], '#b9aa98', 14)}
 <p style="margin:22px 0 0;font:16px/1.6 {SANS};color:#F6E7D3">{sig_h}</p>
 </td></tr>
 <tr><td align="center" style="padding:22px 10px 0;font:12px/1.6 {SANS};color:#8a7d6c">{foot_h}</td></tr>
