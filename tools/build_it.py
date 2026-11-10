@@ -179,7 +179,7 @@ faq = [
  ('Come iscrivo la mia scuola?', 'How do I enter my school?', 'Usa il <a href="/bewerbung.html?lang=en">modulo di iscrizione gratuito</a> (in inglese). Iscrivendoti puoi confermare i tuoi dati e ottenere il punteggio completo.', 'Use the <a href="/bewerbung.html?lang=en">free application form</a> (in English). Applying lets you confirm your details and receive the full score.'),
  ('Quali città copre la classifica?', 'Which cities does the ranking cover?', f'Per cominciare: {", ".join(v[0] for v in P.CITIES.values())}. Aggiungeremo altre città man mano che si iscrivono le scuole.', f'To start with: {", ".join(v[1] for v in P.CITIES.values())}. We will add more cities as schools apply.'),
 ]
-main += sec(t, 9, ('Imparare la bachata', 'Learn Bachata'), t("p", 'Guida: <a href="/it/corsi-di-bachata">Corsi di bachata in Italia: città, livelli e prezzi</a>. Come funzionano livelli, lezioni di prova e durata dei corsi, secondo i siti delle scuole.', 'Guide: <a href="/it/corsi-di-bachata">Bachata classes in Italy: cities, levels and prices</a>. How levels, trial lessons and course length work, according to the schools\' own websites.'), alt=False)
+main += sec(t, 9, ('Imparare la bachata', 'Learn Bachata'), t("p", 'Guida: <a href="/it/corsi-di-bachata">Corsi di bachata in Italia: città, livelli e prezzi</a>. Come funzionano livelli, lezioni di prova e durata dei corsi, secondo i siti delle scuole.', 'Guide: <a href="/it/corsi-di-bachata">Bachata classes in Italy: cities, levels and prices</a>. How levels, trial lessons and course length work, according to the schools\' own websites.') + t("p", 'Per iniziare da zero: <a href="/it/bachata-per-principianti">Bachata per principianti</a>. Livelli, partner e lezioni di prova secondo i siti delle scuole.', 'To start from zero: <a href="/it/bachata-per-principianti">Bachata for beginners</a>. Levels, partners and trial lessons according to the schools\' own websites.'), alt=False)
 main += faq_html(t, faq)
 it_page('it/index.html', 'it/', 'Le migliori scuole di bachata d’Italia: classifica 2027',
   f'Classifica delle scuole di bachata in Italia: {N} scuole in {NC} città, con valutazioni, punti e metodo. Risultati in primavera 2027. Indipendente e non si compra.',
@@ -219,6 +219,8 @@ for k, (cpl, cen, loc) in P.CITIES.items():
      ('Quando viene pubblicata la classifica completa?', 'When is the full ranking published?', 'In primavera 2027. Fino ad allora mostriamo una classifica provvisoria basata sulle valutazioni Google.', 'In spring 2027. Until then we show an interim standing based on Google ratings.'),
     ]
     if top[0] == '': faq = [q for i, q in enumerate(faq) if i != 1]  # no rated school here yet
+    if k == 'milano':
+        main += sec(t, 4, ('Guida ai corsi', 'Class guide'), t("p", 'Sedi, livelli e prova gratuita pubblicati dalle scuole: <a href="/it/corsi-di-bachata-milano">Corsi di bachata a Milano: scuole, livelli e come scegliere</a>.', 'Venues, levels and free trials published by the schools: <a href="/it/corsi-di-bachata-milano">Bachata classes in Milan: schools, levels and how to choose</a>.'), alt=False)
     main += faq_html(t, faq)
     it_page(f'it/bachata-{k}.html', f'it/bachata-{k}.html', f'Bachata {cpl}: le migliori scuole di ballo 2027',
       f'Bachata {cpl}: {n} scuole con valutazioni Google e punti della classifica 2027. Scegli un corso di bachata {loc} e consulta la classifica provvisoria.',

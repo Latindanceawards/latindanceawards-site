@@ -183,6 +183,7 @@ faq = [
  ('Jak zgłosić swoją szkołę?', 'How do I enter my school?', 'Użyj <a href="/bewerbung.html?lang=en">bezpłatnego formularza zgłoszeniowego</a> (po angielsku). Dzięki zgłoszeniu potwierdzisz swoje dane i otrzymasz pełną punktację.', 'Use the <a href="/bewerbung.html?lang=en">free application form</a> (in English). Applying lets you confirm your details and receive the full score.'),
  ('W jakich miastach jest ranking?', 'Which cities does the ranking cover?', f'Na start: {", ".join(v[0] for v in P.CITIES.values())}. Kolejne miasta dodamy po zgłoszeniach szkół.', f'To start with: {", ".join(v[1] for v in P.CITIES.values())}. We will add more cities as schools apply.'),
 ]
+main += sec(t, 9, ('Dla początkujących', 'For beginners'), t("p", 'Poradnik: <a href="/pl/bachata-dla-poczatkujacych">Bachata dla początkujących</a>. Poziomy, partner i lekcja próbna według stron szkół.', 'Guide: <a href="/pl/bachata-dla-poczatkujacych">Bachata for beginners</a>. Levels, partners and the trial lesson according to the schools\' own websites.'), alt=False)
 main += faq_html(t, faq)
 pl_page('pl/index.html', 'pl/', 'Najlepsze szkoły bachaty w Polsce: ranking 2027',
   f'Ranking szkół bachaty w Polsce: {N} szkół w {NC} miastach, z ocenami, punktami i metodą. Wyniki wiosną 2027. Niezależny i nie do kupienia.',
