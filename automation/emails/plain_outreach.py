@@ -78,6 +78,18 @@ def render(lang, n, c):
     return t['subj'].format(n=n), '\n\n'.join(parts) + '\n\n' + t['bye'] + '\n' + SIG
 
 
+def render_html(lang, n, c):
+    """Same text as render(), but with generous spacing between paragraphs.
+    Plain look (no colours, no images): system font, 24px gap between paragraphs."""
+    import html as _h
+    t = T[lang]
+    ps = [t['hi']] + [x.format(n=n, c=c) for x in t['body']]
+    box = 'margin:0 0 24px;font:15px/1.6 Arial,Helvetica,sans-serif'
+    out = ''.join('<p style="%s">%s</p>' % (box, _h.escape(x)) for x in ps)
+    out += '<p style="%s">%s<br>%s</p>' % (box, _h.escape(t['bye']), 'Mateus<br>Latin Dance Awards')
+    return t['subj'].format(n=n, c=c), out
+
+
 if __name__ == '__main__':
     for l in T:
         s, b = render(l, 'Example School', 'Berlin')
