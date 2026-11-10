@@ -233,7 +233,7 @@ sponsor_html = ('<section class="spon" aria-label="Top-Schulen / Top schools"><d
   + '<div class="spon-dots" role="tablist" aria-label="Länder / Countries">' + ''.join(f'<button type="button" aria-label="{i + 1}"></button>' for i in range(len(_sl))) + '</div>'
   + '<div class="spon-nav"><button type="button" class="spon-prev" aria-label="Zurück / Previous">&#8249;</button><span class="spon-ct"></span><button type="button" class="spon-next" aria-label="Weiter / Next">&#8250;</button></div>'
   + '</div></div></section>'
-  + '<style>.spon{padding:18px 0 44px}.spon-box{max-width:760px;margin:0 auto}'
+  + '<style>.spon{padding:40px 0 0;background:var(--velvet)}#ranking{padding-top:44px}.spon-box{max-width:760px;margin:0 auto}'
   '.spon-stage{display:grid;border-radius:22px;border:1.5px solid rgba(228,185,91,.55);background:linear-gradient(170deg,rgba(228,185,91,.16),var(--card) 65%);overflow:hidden;position:relative}'
   '.spon-slide{grid-area:1/1;display:grid;grid-template-columns:56px minmax(0,1fr) auto;align-items:center;gap:8px 18px;padding:24px 26px 22px;color:inherit;text-decoration:none;opacity:0;transform:translateX(28px);visibility:hidden;transition:opacity .7s ease,transform .7s ease,visibility 0s .7s}'
   '.spon-slide.on{opacity:1;transform:none;visibility:visible;transition:opacity .7s ease,transform .7s ease,visibility 0s}'
