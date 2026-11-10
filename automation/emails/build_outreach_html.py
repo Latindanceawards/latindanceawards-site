@@ -89,6 +89,42 @@ def proof(l):
     def tile(n,lab,col): return f'<td width="49%" bgcolor="{col}" style="background:{col};border-radius:14px;padding:16px 18px"><div style="font:500 13px Inter,Helvetica,Arial,sans-serif;color:#ffffff">{lab}</div><div style="font:500 34px/1.15 Inter,Helvetica,Arial,sans-serif;color:#ffffff;margin-top:4px">{n}</div></td>'
     return ('<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:6px 0 0"><tr>'+tile(a,al,'#1a73e8')+'<td width="2%" style="font-size:0;line-height:0">&nbsp;</td>'+tile(b,bl,'#6a2db8')+'</tr></table>'
             f'<p style="margin:8px 0 22px;font:12px/1.5 {SANS};color:#b9aa98">{cap}</p>')
+# NON-SALES copy: competing in the ranking; add details to earn more points. No plans/prices.
+CP = {
+ 'de': dict(intro='Deine Schule {n} ({c}) tritt in unserem unabhängigen Ranking gegen die besten Bachata-Schulen Europas an. Dabei zu sein ist schon etwas, worauf man stolz sein kann.',
+  mid='Die Platzierung beruht auf öffentlichen Daten, zum Beispiel Google-Bewertungen. Bei vielen Schulen konnten wir Angaben wie das Gründungsjahr, Anfängerkurse oder Events nicht finden. Jede Angabe, die du ergänzt, bringt deiner Schule mehr Punkte und einen besseren Platz.',
+  note='Das ist kostenlos.', btn='Daten meiner Schule ergänzen'),
+ 'en': dict(intro='Your school {n} ({c}) is competing with the best Bachata schools in Europe in our independent ranking. Being in it is already something to be proud of.',
+  mid='The position is based on public data, such as Google reviews. For many schools we could not find details like the founding year, beginner classes or events. Every detail you add earns your school more points and a higher place.',
+  note='It is free.', btn='Add my school’s details'),
+ 'es': dict(intro='Tu escuela {n} ({c}) compite con las mejores escuelas de bachata de Europa en nuestro ranking independiente. Estar en él ya es algo de lo que sentirse orgulloso.',
+  mid='La posición se basa en datos públicos, como las reseñas de Google. De muchas escuelas no hemos podido encontrar datos como el año de fundación, las clases para principiantes o los eventos. Cada dato que añadas da más puntos a tu escuela y un mejor puesto.',
+  note='Es gratis.', btn='Añadir los datos de mi escuela'),
+ 'fr': dict(intro='Votre école {n} ({c}) concourt avec les meilleures écoles de bachata d’Europe dans notre classement indépendant. En faire partie est déjà une fierté.',
+  mid='La place repose sur des données publiques, comme les avis Google. Pour beaucoup d’écoles, nous n’avons pas trouvé d’informations comme l’année de création, les cours pour débutants ou les événements. Chaque information que vous ajoutez rapporte plus de points à votre école et une meilleure place.',
+  note='C’est gratuit.', btn='Ajouter les infos de mon école'),
+ 'it': dict(intro='La tua scuola {n} ({c}) è in gara con le migliori scuole di bachata d’Europa nella nostra classifica indipendente. Esserci è già motivo di orgoglio.',
+  mid='La posizione si basa su dati pubblici, come le recensioni di Google. Di molte scuole non abbiamo trovato informazioni come l’anno di fondazione, i corsi per principianti o gli eventi. Ogni dato che aggiungi dà più punti alla tua scuola e un posto migliore.',
+  note='È gratuito.', btn='Aggiungi i dati della mia scuola'),
+ 'pt': dict(intro='A sua escola {n} ({c}) está a competir com as melhores escolas de bachata da Europa no nosso ranking independente. Estar nele já é motivo de orgulho.',
+  mid='A posição baseia-se em dados públicos, como as avaliações do Google. De muitas escolas não encontrámos informações como o ano de fundação, as aulas para principiantes ou os eventos. Cada dado que acrescentar dá mais pontos à sua escola e uma posição melhor.',
+  note='É gratuito.', btn='Adicionar os dados da minha escola'),
+ 'pl': dict(intro='Twoja szkoła {n} ({c}) rywalizuje z najlepszymi szkołami bachaty w Europie w naszym niezależnym rankingu. Samo bycie w nim jest powodem do dumy.',
+  mid='Pozycja opiera się na publicznych danych, takich jak opinie w Google. W przypadku wielu szkół nie znaleźliśmy informacji, takich jak rok założenia, kursy dla początkujących czy wydarzenia. Każda informacja, którą dodasz, daje Twojej szkole więcej punktów i wyższe miejsce.',
+  note='To bezpłatne.', btn='Dodaj dane mojej szkoły'),
+ 'nl': dict(intro='Jouw school {n} ({c}) strijdt in onze onafhankelijke ranglijst mee met de beste bachata-scholen van Europa. Erin staan is al iets om trots op te zijn.',
+  mid='De plaats is gebaseerd op openbare gegevens, zoals Google-recensies. Van veel scholen konden we gegevens als het oprichtingsjaar, beginnerslessen of evenementen niet vinden. Elk gegeven dat je toevoegt levert je school meer punten en een hogere plaats op.',
+  note='Het is gratis.', btn='Gegevens van mijn school toevoegen'),
+ 'tr': dict(intro='Okulunuz {n} ({c}), bağımsız sıralamamızda Avrupa’nın en iyi bachata okullarıyla yarışıyor. Bu sıralamada yer almak başlı başına gurur verici.',
+  mid='Sıralama, Google yorumları gibi herkese açık verilere dayanıyor. Birçok okul için kuruluş yılı, yeni başlayanlara yönelik dersler veya etkinlikler gibi bilgileri bulamadık. Eklediğiniz her bilgi okulunuza daha fazla puan ve daha iyi bir sıra kazandırır.',
+  note='Ücretsizdir.', btn='Okulumun bilgilerini ekle'),
+ 'ro': dict(intro='Școala ta {n} ({c}) concurează cu cele mai bune școli de bachata din Europa în clasamentul nostru independent. Faptul că ești în el este deja un motiv de mândrie.',
+  mid='Poziția se bazează pe date publice, cum ar fi recenziile Google. Pentru multe școli nu am găsit informații precum anul înființării, cursurile pentru începători sau evenimentele. Fiecare informație pe care o adaugi aduce școlii tale mai multe puncte și un loc mai bun.',
+  note='Este gratuit.', btn='Adaugă datele școlii mele'),
+ 'el': dict(intro='Η σχολή σας {n} ({c}) διεκδικεί θέση ανάμεσα στις καλύτερες σχολές μπατσάτα της Ευρώπης στην ανεξάρτητη κατάταξή μας. Και μόνο η συμμετοχή είναι λόγος υπερηφάνειας.',
+  mid='Η θέση βασίζεται σε δημόσια δεδομένα, όπως οι κριτικές της Google. Για πολλές σχολές δεν βρήκαμε στοιχεία όπως το έτος ίδρυσης, τα μαθήματα για αρχάριους ή οι εκδηλώσεις. Κάθε στοιχείο που προσθέτετε δίνει στη σχολή σας περισσότερους πόντους και καλύτερη θέση.',
+  note='Είναι δωρεάν.', btn='Προσθήκη στοιχείων της σχολής μου'),
+}
 def paras(l):
     sub, body, sig, foot = T[l]
     ps = [p for p in body.split('\n\n')]
@@ -102,7 +138,7 @@ def render(l, name='{{School}}', city='{{City}}', rank='{{Rank}}', link='{{Profi
     free, plans, prof, scope = LAB[l]
     hi, optout = ps[0], ps[4]
     data = NEW[l]['fp']
-    intro = NEW[l]['intro'].replace('{n}', name).replace('{c}', city)
+    intro = CP[l]['intro'].replace('{n}', name).replace('{c}', city)
     hi_txt = greeting if greeting is not None else re.sub(r' \{\{[^}]+\}\}([,:])', r'\1', hi)
     sig_h = sig.replace('\n', '<br>')
     foot_h = re.sub(r'(https://\S+)', r'<a href="\1" style="color:#E4B95B">\1</a>', foot)
@@ -124,11 +160,9 @@ def render(l, name='{{School}}', city='{{City}}', rank='{{Rank}}', link='{{Profi
 {P(intro)}
 {proof(l)}
 {card}
-<p style="margin:0 0 6px;font:500 32px/1.15 {SERIF};color:#F8E2A6">{NEW[l]['ph']}</p>
-{P(NEW[l]['pp'])}
-<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 26px"><tr>{btn(plans, 'https://latindanceawards.com/preise', True)}</tr></table>
-{P(data)}
-<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 26px"><tr>{btn(free, 'https://latindanceawards.com/bewerbung', False)}</tr></table>
+{P(CP[l]['mid'])}
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 12px"><tr>{btn(CP[l]['btn'], 'https://latindanceawards.com/bewerbung', True)}</tr></table>
+<p style="margin:0 0 26px;font:14px/1.6 {SANS};color:#b9aa98">{CP[l]['note']}</p>
 {P(optout, '#b9aa98', 14)}
 <p style="margin:22px 0 0;font:16px/1.6 {SANS};color:#F6E7D3">{sig_h}</p>
 </td></tr>
