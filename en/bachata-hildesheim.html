@@ -998,7 +998,7 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
     </div>
     <div class="legal"><span>© 2026 Latin Dance Awards</span><span data-i18n="t107">Bachata Edition · Germany</span><span><a href="/en/impressum" data-i18n="leg_imp">Legal notice</a> · <a href="/en/datenschutz" data-i18n="leg_priv">Privacy policy</a></span></div>
   </div>
-<p class="xlang" style="text-align:center;margin:0;padding:0 16px 24px;font-size:.9em;opacity:.8"><a href="/bachata-hildesheim" hreflang="de" lang="de">Deutsche Version</a></p>
+<p class="xlang" style="text-align:center;margin:0;padding:0 16px 24px;font-size:.9em;opacity:.8"><a href="/en/bachata-hildesheim" hreflang="en" lang="en">English version</a></p>
 </footer>
 
 <script>
@@ -1019,8 +1019,8 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
     try{ localStorage.setItem("lda-lang",l); }catch(e){}
     document.dispatchEvent(new CustomEvent("langchange",{detail:l}));
   }
-  document.querySelectorAll(".lang button").forEach(function(b){ b.addEventListener("click",function(){ if(b.dataset.lang==="de"){ location.href="/bachata-hildesheim"; } else setLang(b.dataset.lang); }); });
-  var start="en";
+  document.querySelectorAll(".lang button").forEach(function(b){ b.addEventListener("click",function(){ if(b.dataset.lang==="en"){ location.href="/en/bachata-hildesheim"; } else setLang(b.dataset.lang); }); });
+  var start="de"; try{ if(new URLSearchParams(location.search).get("lang")==="en"){ location.replace("/en/bachata-hildesheim"+location.hash); return; } }catch(e){}
   META.de={title:document.title, desc:document.querySelector('meta[name="description"]').content};
 
   if(start==="en") setLang("en");

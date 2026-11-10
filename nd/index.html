@@ -1021,6 +1021,7 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
     ]
   };
   var VOTE_ENDPOINT = "https://script.google.com/macros/s/AKfycbzAANOuM7cA3QgqeXZXOKZEYumNFsENBZaIicJSaJluR90rTl2iw30Sk522vxIurDsg/exec";
+  var UNFINAL=["Final score not yet available", "Final score not yet available"], UNMSG=["We have not collected a Google rating for this school yet. Schools can confirm their data with the free application.", "We have not collected a Google rating for this school yet. Schools can confirm their data with the free application."];
   var SCOPE="nd", GROUPS={}, SCALE=100;
   function inScope(c,k){ if(c===SCOPE) return true; var g=GROUPS[c]; return g?g.indexOf(k)>-1:c===k; }
   function isCountry(c){ return c===SCOPE||!!GROUPS[c]; }
@@ -1107,7 +1108,7 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
       var pl=[];
       Object.keys(CANDIDATES).forEach(function(k){ if(inScope(c,k)) CANDIDATES[k].forEach(function(e){ pl.push(Object.assign({city:k},e)); }); });
       pl.forEach(function(e){ e.pts=Math.round(e.sc.reduce(function(x,y){return x+y;},0)*10)/10; });
-      pl.sort(function(a,b){ return (b.pts-a.pts)||a.name.localeCompare(b.name); });
+      pl.sort(function(a,b){ return ((a.un?1:0)-(b.un?1:0))||(b.pts-a.pts)||a.name.localeCompare(b.name); });
       if(pl.length){
         var en=window.LANG==="en", cn=function(e){return esc(TX.cities[e.city][en?1:0]);};
         var FAC=en?["Years teaching","Beginner offer","Events and guests","Google rating","Number of reviews","Social media"]:["Years teaching","Beginner offer","Events and guests","Google rating","Number of reviews","Social media"];
@@ -1115,7 +1116,7 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
         var MAX=[10,10,10,25,10,10], NYC=en?"Not counted yet: festivals (15), recent reviews (5), competitions (5)":"Noch nicht gewertet: Festivals (15), aktuelle Bewertungen (5), Wettbewerbe (5)";
         h+='<div class="prelim"><span class="prelim-badge">'+esc(L("prelim_badge"))+'</span><p class="votebanner"><b>&#9733; '+esc(L("vote_h"))+'</b> · '+esc(L("vote_banner"))+'</p><ol class="ilist">';
         pl.forEach(function(e,i){
-          var u=safeUrl(e.url), g=i<3?" g"+(i+1):"", why="";
+          var u=safeUrl(e.url), g=(i<3&&!e.un)?" g"+(i+1):"", why="";
           FAC.forEach(function(f,k){ var fx=(k===3?e.fx[0]:(k===4?e.fx[0].split(" · ")[1]:(k===5?e.fx[1]:"")));
             why+='<div><b>'+esc(f)+'</b> · '+num(e.sc[k])+' / '+MAX[k]+(fx&&fx!=="–"?' <small>('+esc(k===5?(en?"followers · posts: ":"Followers · posts: ")+fx:fx)+')</small>':'')+'<div class="bar"><i style="width:'+(e.sc[k]/MAX[k]*100)+'%"></i></div></div>'; });
           var sty=e.st&&e.st.length?e.st.map(function(x){return '<span class="chip st">'+esc(x)+'</span>';}).join(" "):'<span class="chip">'+esc(en?"To be confirmed":"To be confirmed")+'</span>';
@@ -1123,12 +1124,13 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
           var TBC=en?[["Festivals", "15"], ["Recent reviews", "5"], ["Competitions entered", "5"], ["Competitions won", "5"]]:[["Festivals", "15"], ["Recent reviews", "5"], ["Competitions entered", "5"], ["Competitions won", "5"]];
           TBC.forEach(function(x){ why+='<div class="tbc"><b>'+esc(x[0])+'</b> · <span class="chip">'+esc(en?"To be confirmed":"To be confirmed")+'</span><div class="bar dash"></div></div>'; });
           why+='<div class="lk" style="color:var(--muted)">'+esc(en?"Not scored yet. Schools confirm these with links when they apply.":"No points yet. Schools confirm this data with links when they apply.")+' <a href="/bewerbung">'+esc(en?"Confirm now":"Confirm now")+' →</a></div>';
+          if(e.un){ why='<div class="lk" style="color:var(--muted)">'+esc(en?UNMSG[1]:UNMSG[0])+' <a href="/bewerbung">'+esc(en?"Confirm now":"Confirm now")+' →</a></div>'; }
           why+='<div class="vote"><button type="button" class="btn btn-gold vbtn" data-s="'+esc(e.name)+'" data-c="'+cn(e)+'">&#9733; '+esc(L("vote_btn"))+'</button>'
             +'<form class="vform" hidden novalidate><input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px"><label>'+esc(L("vote_mail"))+'<input type="email" name="email" required autocomplete="email" inputmode="email"></label><label class="newsopt"><input type="checkbox" name="news" value="1"> <span>'+esc(L("news_opt"))+'</span></label><button type="submit" class="btn btn-gold">'+esc(L("vote_send"))+'</button><small>'+esc(L("vote_note"))+'</small></form><p class="vmsg" role="status" hidden></p></div>';
           why+='<div class="lk"><a href="'+(e.np?e.pg:'schools/'+slug(e.name)+'.html')+'"><b>'+esc(L("page_link"))+' →</b></a></div>';
           if(u) why+='<div class="lk"><a href="'+u+'" rel="noopener">'+esc(L("site"))+' →</a></div>';
-          h+='<li'+(i>=10?' class="more" hidden':'')+'><details class="irk'+g+'"><summary><span class="rk">'+(i===0?CROWN+'<i class="sp a"></i><i class="sp b"></i><i class="sp c"></i><i class="sp d"></i>':'')+(i+1)+'</span><span class="who"><b><a href="'+(e.np?e.pg:"schools/"+slug(e.name)+".html")+'">'+esc(e.name)+'</a></b>'
-            +(isCountry(c)?'<small>'+cn(e)+'</small>':'')+'</span><span class="score">'+num(e.pts)+'<small> / 100</small></span><span class="meter"><i style="width:'+e.pts+'%"></i></span></summary>'
+          h+='<li'+(i>=10?' class="more" hidden':'')+'><details class="irk'+g+'"><summary><span class="rk">'+(i===0&&!e.un?CROWN+'<i class="sp a"></i><i class="sp b"></i><i class="sp c"></i><i class="sp d"></i>':'')+(e.un?"–":(i+1))+'</span><span class="who"><b><a href="'+(e.np?e.pg:"schools/"+slug(e.name)+".html")+'">'+esc(e.name)+'</a></b>'
+            +(isCountry(c)?'<small>'+cn(e)+'</small>':'')+'</span>'+(e.un?'<span class="score na"><small>'+esc(en?UNFINAL[1]:UNFINAL[0])+'</small></span><span class="meter"></span>':'<span class="score">'+num(e.pts)+'<small> / 100</small></span><span class="meter"><i style="width:'+e.pts+'%"></i></span>')+'</summary>'
             +'<div class="iwhy">'+why+'</div></details></li>';
         });
         h+='</ol>';
