@@ -193,9 +193,69 @@ MAXV = ['15', '5', '5', '5']
 tbc_pairs = ([[n, m] for n, m in zip(TBC[0], MAXV)], [[n, m] for n, m in zip(TBC[1], MAXV)])
 hub_js = RV.make_js('europa', {'de': list(DE_C), 'pl': list(PL_C), 'es': list(ES_C), 'it': list(IT_C), 'pt': list(PT_C), 'fr': list(FR_C), 'nl': list(NL_C), 'uk': list(UK_C), 'be': list(BE_C), 'ie': list(IE_C), 'at': list(AT_C), 'ch': list(CH_C), 'ee': list(EE_C), 'nd': list(ND_C), 'em': list(EM_C)}, TX, CANDS, ['europa', 'de', 'pl', 'es', 'it', 'pt', 'fr', 'nl', 'uk', 'be', 'ie', 'at', 'ch', 'ee', 'nd', 'em'], 100, extra={'tbc': tbc_pairs})
 tabs = RV.tabs_html(t, [('europa', 'Ganz Europa', 'All Europe'), ('de', 'Deutschland', 'Germany'), ('pl', 'Polen', 'Poland'), ('es', 'Spanien', 'Spain'), ('it', 'Italien', 'Italy'), ('pt', 'Portugal', 'Portugal'), ('fr', 'Frankreich', 'France'), ('nl', 'Niederlande', 'Netherlands'), ('uk', 'Vereinigtes Königreich', 'United Kingdom'), ('be', 'Belgien', 'Belgium'), ('ie', 'Irland', 'Ireland'), ('at', 'Österreich', 'Austria'), ('ch', 'Schweiz', 'Switzerland'), ('ee', 'Osteuropa', 'Eastern Europe'), ('nd', 'Skandinavien', 'Nordics'), ('em', 'Mittelmeer', 'Eastern Mediterranean')])
+_ITEMS = [('europa', 'Ganz Europa', 'All Europe'), ('de', 'Deutschland', 'Germany'), ('pl', 'Polen', 'Poland'), ('es', 'Spanien', 'Spain'), ('it', 'Italien', 'Italy'), ('pt', 'Portugal', 'Portugal'), ('fr', 'Frankreich', 'France'), ('nl', 'Niederlande', 'Netherlands'), ('uk', 'Vereinigtes Königreich', 'United Kingdom'), ('be', 'Belgien', 'Belgium'), ('ie', 'Irland', 'Ireland'), ('at', 'Österreich', 'Austria'), ('ch', 'Schweiz', 'Switzerland'), ('ee', 'Osteuropa', 'Eastern Europe'), ('nd', 'Skandinavien', 'Nordics'), ('em', 'Mittelmeer', 'Eastern Mediterranean')]
+def _opt(k, de, en):
+    key = re.search(r'data-i18n="([^"]+)"', t("span", de, en)).group(1)
+    return f'<option value="{k}" data-i18n="{key}">{de}</option>'
+_phk = re.search(r'data-i18n="([^"]+)"', t("span", "Land wählen …", "Choose country …")).group(1)
+tabs = tabs + ('\n      <select id="ctrypick" class="ctrypick" aria-label="Land / Country"><option value="" disabled data-i18n="' + _phk + '">Land wählen …</option>' + ''.join(_opt(k, de, en) for k, de, en in _ITEMS) + '</select>')
+
 rank_section = RV.ranking_section(tabs, 'Stadt suchen …', 'Search city …', 'Länder und Städte / Countries and cities')
 
-main = hero_html + rank_section + f'''
+rank_section += ('<style>.tabs button{display:none}.tabs{align-items:center}'
+  '.ctrypick{font:inherit;font-size:15px;font-weight:600;color:var(--cream);flex:1 1 230px;max-width:330px;padding:12px 42px 12px 20px;border-radius:999px;border:1px solid var(--line);cursor:pointer;appearance:none;-webkit-appearance:none;'
+  'background:var(--card) url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'14\' height=\'14\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23b9ad98\' stroke-width=\'2.4\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'M6 9l6 6 6-6\'/%3E%3C/svg%3E") no-repeat right 18px center}'
+  '.ctrypick:hover,.ctrypick:focus{border-color:rgba(228,185,91,.55)}.ctrypick option{background:#1a1514;color:#F6E7D3}'
+  '@media(max-width:560px){.ctrypick,.citypick{flex:1 1 100%;max-width:none}}</style>'
+  '<script>(function(){var s=document.getElementById("ctrypick"),tb=document.querySelector(".tabs");if(!s||!tb)return;'
+  's.addEventListener("change",function(){if(!s.value)return;var b=document.getElementById("tab-"+s.value);if(b)b.click()});'
+  'function sync(){var a=tb.querySelector("button[aria-selected=true]");s.value=a?a.dataset.city:""}'
+  'new MutationObserver(sync).observe(tb,{subtree:true,attributes:true,attributeFilter:["aria-selected"]});document.addEventListener("langchange",sync);sync()})();</script>')
+
+
+
+SPON_NAMES = [('de', 'Deutschland', 'Germany'), ('pl', 'Polen', 'Poland'), ('es', 'Spanien', 'Spain'), ('it', 'Italien', 'Italy'), ('pt', 'Portugal', 'Portugal'), ('fr', 'Frankreich', 'France'), ('nl', 'Niederlande', 'Netherlands'), ('uk', 'Vereinigtes Königreich', 'United Kingdom'), ('be', 'Belgien', 'Belgium'), ('ie', 'Irland', 'Ireland'), ('at', 'Österreich', 'Austria'), ('ch', 'Schweiz', 'Switzerland'), ('ee', 'Osteuropa', 'Eastern Europe'), ('nd', 'Skandinavien', 'Nordics'), ('em', 'Mittelmeer', 'Eastern Mediterranean')]
+def _spon_slides():
+    out = []
+    for cc, nde, nen in SPON_NAMES:
+        xs = [x for x in ALL if x['cc'] == cc and not x.get('un') and x['pts']]
+        if not xs: continue
+        x = max(xs, key=lambda y: y['pts'])
+        out.append(f'<a class="spon-slide" href="{x["href"]}" aria-hidden="true" tabindex="-1">'
+                   f'<span class="spon-rk">1</span>'
+                   f'<span class="spon-who"><small>{t("span", "Platz 1 in " + nde, "No. 1 in " + nen)}</small><b>{x["name"]}</b><em>{x["city"]}</em></span>'
+                   f'<span class="spon-sc">{f1(x["pts"])}<small> / 100</small></span>'
+                   f'<span class="spon-bar"><i style="width:{min(100, x["pts"]):.0f}%"></i></span></a>')
+    return out
+_sl = _spon_slides()
+sponsor_html = ('<section class="spon" aria-label="Top-Schulen / Top schools"><div class="wrap"><div class="spon-box">'
+  + '<div class="spon-stage">' + ''.join(_sl) + '</div>'
+  + '<div class="spon-dots" role="tablist" aria-label="Länder / Countries">' + ''.join(f'<button type="button" aria-label="{i + 1}"></button>' for i in range(len(_sl))) + '</div>'
+  + '</div></div></section>'
+  + '<style>.spon{padding:34px 0 0}.spon-box{max-width:760px;margin:0 auto}'
+  '.spon-stage{display:grid;border-radius:22px;border:1.5px solid rgba(228,185,91,.55);background:linear-gradient(170deg,rgba(228,185,91,.16),var(--card) 65%);overflow:hidden;position:relative}'
+  '.spon-slide{grid-area:1/1;display:grid;grid-template-columns:56px minmax(0,1fr) auto;align-items:center;gap:8px 18px;padding:24px 26px 22px;color:inherit;text-decoration:none;opacity:0;transform:translateX(28px);visibility:hidden;transition:opacity .7s ease,transform .7s ease,visibility 0s .7s}'
+  '.spon-slide.on{opacity:1;transform:none;visibility:visible;transition:opacity .7s ease,transform .7s ease,visibility 0s}'
+  '.spon-slide.out{opacity:0;transform:translateX(-28px);visibility:visible}'
+  '.spon-rk{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:24px;color:#131011;background:var(--foil)}'
+  '.spon-who{min-width:0;display:block}.spon-who small{display:block;color:var(--gold-light);font-size:13px;font-weight:600;margin-bottom:3px}'
+  '.spon-who b{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(21px,3vw,28px);line-height:1.15;color:var(--cream)}'
+  '.spon-who em{display:block;font-style:normal;color:var(--muted);font-size:14px;margin-top:3px}'
+  '.spon-sc{font-family:var(--serif);font-size:clamp(28px,4vw,38px);line-height:1;color:var(--gold-light);white-space:nowrap}.spon-sc small{font-family:var(--sans);font-size:13px;color:var(--muted)}'
+  '.spon-bar{grid-column:1/-1;display:block;height:5px;border-radius:5px;background:rgba(255,255,255,.07);overflow:hidden}.spon-bar i{display:block;height:100%;background:var(--foil);border-radius:5px}'
+  '.spon-dots{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:14px}'
+  '.spon-dots button{width:9px;height:9px;padding:0;border-radius:50%;border:0;background:rgba(246,231,211,.25);cursor:pointer;transition:background .3s,transform .3s}'
+  '.spon-dots button.on{background:var(--gold);transform:scale(1.3)}'
+  '@media(max-width:560px){.spon-slide{grid-template-columns:44px minmax(0,1fr);padding:20px 18px}.spon-rk{width:44px;height:44px;font-size:20px}.spon-sc{grid-column:2}}'
+  '@media(prefers-reduced-motion:reduce){.spon-slide,.spon-slide.on,.spon-slide.out{transition:none}}</style>'
+  + '<script>(function(){var st=document.querySelector(".spon-stage");if(!st)return;var sl=[].slice.call(st.querySelectorAll(".spon-slide")),ds=[].slice.call(document.querySelectorAll(".spon-dots button")),i=0,tm=null,reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;'
+  'function show(n){var old=sl[i];if(n===i&&old.classList.contains("on"))return;old.classList.remove("on");old.classList.add("out");old.setAttribute("aria-hidden","true");old.tabIndex=-1;setTimeout(function(){old.classList.remove("out")},700);i=(n+sl.length)%sl.length;sl[i].classList.add("on");sl[i].removeAttribute("aria-hidden");sl[i].tabIndex=0;ds.forEach(function(d,k){d.classList.toggle("on",k===i)})}'
+  'function play(){if(reduce||tm)return;tm=setInterval(function(){show(i+1)},4500)}function stop(){clearInterval(tm);tm=null}'
+  'ds.forEach(function(d,k){d.addEventListener("click",function(){stop();show(k);play()})});'
+  'st.addEventListener("mouseenter",stop);st.addEventListener("mouseleave",play);st.addEventListener("focusin",stop);st.addEventListener("focusout",play);'
+  'sl[0].classList.add("on");sl[0].removeAttribute("aria-hidden");sl[0].tabIndex=0;ds[0]&&ds[0].classList.add("on");play()})();</script>')
+
+main = hero_html + sponsor_html + rank_section + f'''
 <section class="block" id="laender"><div class="wrap tp" style="max-width:900px">
   {t("h2", "Rankings nach Ländern", "Rankings by country")}
   <div class="people">
