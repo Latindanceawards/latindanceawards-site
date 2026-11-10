@@ -72,7 +72,7 @@ def ie_page(fname, canon, title, desc, title_en, desc_en, main, en, schema, js='
 def school_list(ss, t, start=1):
     lis = []
     for i, s in enumerate(ss, start):
-        lis.append(f'<li><b>{i}</b><a href="{s[4]}" rel="nofollow noopener" target="_blank">{s[0]}</a><span>{f1(FULL[s[0]])} pts · {f1(s[2])} ★ ({s[3]})</span></li>')
+        lis.append(f'<li><b>{i}</b>{s[0]}<span>{f1(FULL[s[0]])} pts · {f1(s[2])} ★ ({s[3]})</span></li>')
     return '<ol class="top">' + ''.join(lis) + '</ol>'
 
 def hero(t, edition, h1, lede, facts, ctas, seal='badge-bachata-ireland-2027.svg', alt='Bachata Awards Ireland 2027 seal'):
@@ -189,7 +189,7 @@ ie_page('ie/index.html', 'ie/', 'The best Bachata schools in Ireland: ranking 20
 for k, (cpl, cen, loc) in P.CITIES.items():
     ss = by_city(k); n = len(ss); t = T('ic' + k[:2])
     ranks = {s[0]: ranked.index(s) + 1 for s in ss}
-    cards = ''.join(f'<article><h3>{s[0]}</h3>{t("p", f"Google rating: {f1(s[2])} ★ ({s[3]} reviews). Rank {ranks[s[0]]} in Ireland.", f"Google rating: {f1en(s[2])} ★ ({s[3]} reviews). Rank {ranks[s[0]]} in Ireland.")}<a href="{s[4]}" rel="nofollow noopener" target="_blank">{t("span", "School website", "School website")} →</a></article>' for s in ss)
+    cards = ''.join(f'<article><h3>{s[0]}</h3>{t("p", f"Google rating: {f1(s[2])} ★ ({s[3]} reviews). Rank {ranks[s[0]]} in Ireland.", f"Google rating: {f1en(s[2])} ★ ({s[3]} reviews). Rank {ranks[s[0]]} in Ireland.")}</article>' for s in ss)
     main = hero(t, (f'Bachata {cpl} · 2027', f'Bachata {cen} · 2027'),
       (f'Bachata {cpl}: the best dance schools 2027', f'Bachata {cen}: the best dance schools 2027'),
       (f'Bachata schools {loc}: {n} venues with confirmed classes, with Google ratings and interim ranking points. Results in spring 2027.', f'Bachata schools in {cen}: {n} places with confirmed classes, with Google ratings and interim ranking points. Results in spring 2027.'),

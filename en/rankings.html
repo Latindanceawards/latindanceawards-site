@@ -8,9 +8,9 @@
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#080707">
 <link rel="canonical" href="https://latindanceawards.com/en/rankings">
-<link rel="alternate" hreflang="de" href="https://latindanceawards.com/rankings.html">
+<link rel="alternate" hreflang="de" href="https://latindanceawards.com/rankings">
 <link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/rankings">
-<link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/rankings.html">
+<link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/rankings">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
@@ -1696,7 +1696,7 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
       return '<div class="pod p'+pos+'"><div class="medal-n">'+pos+'</div><span class="blur" style="width:70%"></span><span class="blur" style="width:40%"></span><span class="lock">'+LOCK+esc(L("locked"))+'</span></div>';
     }
     var name=esc(e.name), u=safeUrl(e.url);
-    return '<div class="pod p'+pos+'"><div class="medal-n">'+pos+'</div><h3>'+(u?'<a href="/'+u+'" rel="noopener">'+name+'</a>':name)+'</h3>'
+    return '<div class="pod p'+pos+'"><div class="medal-n">'+pos+'</div><h3>'+name+'</h3>'
       +(current==="deutschland"?'<div class="sc">'+esc(TX.cities[e.city][window.LANG==="en"?1:0])+'</div>':'')
       +'<div class="sc"><b>'+num(total(e))+'</b> '+esc(L("pts"))+'</div></div>';
   }
@@ -1725,7 +1725,6 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
             bd+='<div><b>'+esc(f[window.LANG==="en"?2:1])+'</b> · '+num(s[k])+' / '+f[0]+'<div class="bar"><i style="width:'+Math.min(100,s[k]/f[0]*100)+'%"></i></div></div>';
           });
           var links='';
-          if(safeUrl(e.url)) links+='<a href="/'+safeUrl(e.url)+'" rel="noopener">'+esc(L("site"))+'</a>';
           if(safeUrl(e.instagram)) links+='<a href="/'+safeUrl(e.instagram)+'" rel="noopener">'+esc(L("insta"))+'</a>';
           h+='<li><details class="rrow"><summary><span class="pos">'+(i+1)+'</span><span class="nm">'+esc(e.name)
             +(c==="deutschland"?'<small>'+esc(TX.cities[e.city][window.LANG==="en"?1:0])+'</small>':'')+'</span><span class="pts">'+num(total(e))+'</span></summary>'
@@ -1756,9 +1755,8 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
           why+='<div class="lk" style="color:var(--muted)">'+esc(en?"Not scored yet. Schools confirm these with links when they apply.":"Noch ohne Punkte. Schulen bestätigen diese Angaben mit Links bei der Bewerbung.")+' <a href="/en/bewerbung">'+esc(en?"Confirm now":"Jetzt bestätigen")+' →</a></div>';
           why+='<div class="vote"><button type="button" class="btn btn-gold vbtn" data-s="'+esc(e.name)+'" data-c="'+cn(e)+'">&#9733; '+esc(L("vote_btn"))+'</button>'
             +'<form class="vform" hidden novalidate><input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px"><label>'+esc(L("vote_mail"))+'<input type="email" name="email" required autocomplete="email" inputmode="email"></label><label class="newsopt"><input type="checkbox" name="news" value="1"> <span>'+esc(L("news_opt"))+'</span></label><button type="submit" class="btn btn-gold">'+esc(L("vote_send"))+'</button><small>'+esc(L("vote_note"))+'</small></form><p class="vmsg" role="status" hidden></p></div>';
-          why+='<div class="lk"><a href="/schools/'+slug(e.name)+'.html"><b>'+esc(L("page_link"))+' →</b></a></div>';
-          if(u) why+='<div class="lk"><a href="/'+u+'" rel="noopener">'+esc(L("site"))+' →</a></div>';
-          h+='<li'+(i>=10?' class="more" hidden':'')+'><details class="irk'+g+'"><summary><span class="rk">'+(i===0?CROWN+'<i class="sp a"></i><i class="sp b"></i><i class="sp c"></i><i class="sp d"></i>':'')+(i+1)+'</span><span class="who"><b><a href="/schools/'+slug(e.name)+'.html">'+esc(e.name)+'</a></b>'
+          why+='<div class="lk"><a href="/schools/'+slug(e.name)+'"><b>'+esc(L("page_link"))+' →</b></a></div>';
+          h+='<li'+(i>=10?' class="more" hidden':'')+'><details class="irk'+g+'"><summary><span class="rk">'+(i===0?CROWN+'<i class="sp a"></i><i class="sp b"></i><i class="sp c"></i><i class="sp d"></i>':'')+(i+1)+'</span><span class="who"><b><a href="/schools/'+slug(e.name)+'">'+esc(e.name)+'</a></b>'
             +(c==="deutschland"?'<small>'+cn(e)+'</small>':'')+'</span><span class="score">'+num(e.pts)+'<small> / 100</small></span><span class="meter"><i style="width:'+e.pts+'%"></i></span></summary>'
             +'<div class="iwhy">'+why+'</div></details></li>';
         });

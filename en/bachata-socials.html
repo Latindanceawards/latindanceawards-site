@@ -893,7 +893,7 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
     </div>
     <div class="legal"><span>© 2026 Latin Dance Awards</span><span data-i18n="t107">Bachata Edition · Germany</span><span><a href="/en/impressum" data-i18n="leg_imp">Legal notice</a> · <a href="/en/datenschutz" data-i18n="leg_priv">Privacy policy</a></span></div>
   </div>
-<p class="xlang" style="text-align:center;margin:0;padding:0 16px 24px;font-size:.9em;opacity:.8"><a href="/en/bachata-socials" hreflang="en" lang="en">English version</a></p>
+<p class="xlang" style="text-align:center;margin:0;padding:0 16px 24px;font-size:.9em;opacity:.8"><a href="/bachata-socials" hreflang="de" lang="de">Deutsche Version</a></p>
 </footer>
 
 <script>
@@ -914,7 +914,7 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
     try{ localStorage.setItem("lda-lang",l); }catch(e){}
     document.dispatchEvent(new CustomEvent("langchange",{detail:l}));
   }
-  document.querySelectorAll(".lang button").forEach(function(b){ b.addEventListener("click",function(){ if(b.dataset.lang==="en"){ location.href="/en/bachata-socials"; } else setLang(b.dataset.lang); }); });
+  document.querySelectorAll(".lang button").forEach(function(b){ b.addEventListener("click",function(){ if(b.dataset.lang==="de"){ location.href="/bachata-socials"; } else setLang(b.dataset.lang); }); });
   var start="en";
   META.de={title:document.title, desc:document.querySelector('meta[name="description"]').content};
 

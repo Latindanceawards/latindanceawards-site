@@ -8,9 +8,9 @@
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#080707">
 <link rel="canonical" href="https://latindanceawards.com/en/reisen">
-<link rel="alternate" hreflang="de" href="https://latindanceawards.com/reisen.html">
+<link rel="alternate" hreflang="de" href="https://latindanceawards.com/reisen">
 <link rel="alternate" hreflang="en" href="https://latindanceawards.com/en/reisen">
-<link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/reisen.html">
+<link rel="alternate" hreflang="x-default" href="https://latindanceawards.com/reisen">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
@@ -901,7 +901,7 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
     document.getElementById("tt1").textContent=L("t")+nm;
     var ol=document.getElementById("ttop"); ol.innerHTML="";
     if(!d.top.length) ol.innerHTML="<li>"+esc(L("nos"))+"</li>";
-    d.top.forEach(function(x,i){ ol.innerHTML+='<li><b>'+(i+1)+'</b><a href="/schools/'+esc(x[1])+'.html">'+esc(x[0])+'</a><span>'+String(x[2]).replace(".",en?".":",")+' '+esc(L("pts"))+'</span></li>'; });
+    d.top.forEach(function(x,i){ ol.innerHTML+='<li><b>'+(i+1)+'</b><a href="/schools/'+esc(x[1])+'">'+esc(x[0])+'</a><span>'+String(x[2]).replace(".",en?".":",")+' '+esc(L("pts"))+'</span></li>'; });
     document.getElementById("tguide").href=d.guide?("bachata-"+k+".html"):("rankings.html#"+k);
     var wa=document.getElementById("twa");
     if(d.wa&&/^https:\/\/chat\.whatsapp\.com\//.test(d.wa)) wa.innerHTML='<p class="muted">'+esc(L("wa"))+'</p><div class="btnrow"><a class="btn btn-gold" target="_blank" rel="noopener" href="/'+esc(d.wa)+'">'+esc(L("wab"))+'</a></div>';

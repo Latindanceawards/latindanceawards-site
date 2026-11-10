@@ -72,7 +72,7 @@ def es_page(fname, canon, title, desc, title_en, desc_en, main, en, schema, js='
 def school_list(ss, t, start=1):
     lis = []
     for i, s in enumerate(ss, start):
-        lis.append(f'<li><b>{"–" if s[2] is None else i}</b><a href="{s[4]}" rel="nofollow noopener" target="_blank">{s[0]}</a><span>' + (t("span", RV.UN["ES"][0], RV.UN["ES"][1]) if s[2] is None else f'{f1(FULL[s[0]])} pts · {f1(s[2])} ★ ({s[3]})') + '</span></li>')
+        lis.append(f'<li><b>{"–" if s[2] is None else i}</b>{s[0]}<span>' + (t("span", RV.UN["ES"][0], RV.UN["ES"][1]) if s[2] is None else f'{f1(FULL[s[0]])} pts · {f1(s[2])} ★ ({s[3]})') + '</span></li>')
     return '<ol class="top">' + ''.join(lis) + '</ol>'
 
 def hero(t, edition, h1, lede, facts, ctas, seal='badge-bachata-spain-2027.svg', alt='Sello Bachata Awards España 2027'):
@@ -190,7 +190,7 @@ es_page('es/index.html', 'es/', 'Las mejores escuelas de bachata de España: ran
 for k, (cpl, cen, loc) in P.CITIES.items():
     ss = by_city(k); n = len(ss); t = T('ec' + k[:2])
     ranks = {s[0]: ranked.index(s) + 1 for s in ss}
-    cards = ''.join(f'<article><h3>{s[0]}</h3>{(t("p", RV.UN["ES"][0], RV.UN["ES"][1]) if s[2] is None else t("p", f"Valoración en Google: {f1(s[2])} ★ ({s[3]} reseñas). Puesto {ranks[s[0]]} en España.", f"Google rating: {f1en(s[2])} ★ ({s[3]} reviews). Rank {ranks[s[0]]} in Spain."))}<a href="{s[4]}" rel="nofollow noopener" target="_blank">{t("span", "Web de la escuela", "School website")} →</a></article>' for s in ss)
+    cards = ''.join(f'<article><h3>{s[0]}</h3>{(t("p", RV.UN["ES"][0], RV.UN["ES"][1]) if s[2] is None else t("p", f"Valoración en Google: {f1(s[2])} ★ ({s[3]} reseñas). Puesto {ranks[s[0]]} en España.", f"Google rating: {f1en(s[2])} ★ ({s[3]} reviews). Rank {ranks[s[0]]} in Spain."))}</article>' for s in ss)
     main = hero(t, (f'Bachata {cpl} · 2027', f'Bachata {cen} · 2027'),
       (f'Bachata {cpl}: las mejores escuelas de baile 2027', f'Bachata {cen}: the best dance schools 2027'),
       (f'Escuelas de bachata en {loc}: {n} lugares con clases confirmadas, con valoraciones de Google y puntos de la clasificación provisional. Resultados en primavera de 2027.', f'Bachata schools in {cen}: {n} places with confirmed classes, with Google ratings and interim ranking points. Results in spring 2027.'),

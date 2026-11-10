@@ -60,7 +60,7 @@ def build(rank, e, ck):
         rows += f'<div class="sp-row"><b>{t("span", pl, en)}</b> · <span class="chip">{TBD}</span></div>\n'
     maps = 'https://www.google.com/maps/search/?api=1&query=' + urllib.parse.quote(f'{nm} {cpl}').replace('%20', '+')
     site = e['url']
-    sitebtn = '' if 'google.com/maps' in site else f'<a class="btn btn-ghost" href="{site}" rel="noopener nofollow" target="_blank">{t("span", "Sito della scuola →", "School website →")}</a>'
+    sitebtn = ''
     main = f'''
 <section class="sp-hero" aria-labelledby="sp-title">
   <div class="wrap">
@@ -140,7 +140,7 @@ def build(rank, e, ck):
 </section>
 '''
     fn = f'it/scuole/{slug}.html'
-    schema = [crumbs(nm, fn), {"@context": "https://schema.org", "@type": "LocalBusiness", "name": nm, "url": site if 'google.com/maps' not in site else maps,
+    schema = [crumbs(nm, fn), {"@context": "https://schema.org", "@type": "LocalBusiness", "name": nm, "url": maps,
               "address": {"@type": "PostalAddress", "addressLocality": cpl, "addressCountry": "IT"}}]
     BE.it_page(fn, fn, f'{nm} · Bachata {cpl} · recensioni e valutazione', ('{nm} a {city}: scuola di bachata. Punteggio finale non ancora disponibile; recensioni e voto per il Premio del pubblico.'.format(nm=nm, city=cpl) if un else f'{nm} a {cpl}: punti, posizione {crank} nella classifica provvisoria di bachata, recensioni e voto per il Premio del pubblico.'),
                f'{nm} · Bachata {cen} · Reviews', ('{nm} in {city}: Bachata school. Final score not yet available; reviews and voting for the Audience Award.'.format(nm=nm, city=cen) if un else f'{nm} in {cen}: score, place {crank} in the interim Bachata ranking, reviews and voting for the Audience Award.'),

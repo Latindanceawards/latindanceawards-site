@@ -61,7 +61,7 @@ def render_blocks(t, blocks):
         elif b[0] == 'cards':
             out.append('    <div class="cards two">' + ''.join(
                 f'<article>{t("h3", c["name"], c["name"])}{t("p", c["de"], c["en"])}'
-                + (f'<a href="{c["url"]}" rel="noopener" target="_blank">{c["name"]} →</a>' if c.get('url') else '') + '</article>'
+                 + '</article>'
                 for c in b[1]) + '</div>')
         elif b[0] == 'raw': out.append(b[1])
         elif b[0] == 'ev': out.append(ev_block(t, b[1]))
