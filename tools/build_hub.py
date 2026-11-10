@@ -295,6 +295,17 @@ main = hero_html + sponsor_html + rank_section + f'''
   t("p", 'Wir starten weitere Länder Schritt für Schritt. Schreib uns an <a href="mailto:hello@latindanceawards.com">hello@latindanceawards.com</a>, wenn du eine Schule betreibst oder die Szene in deinem Land kennst.',
         'We are adding more countries step by step. Email <a href="mailto:hello@latindanceawards.com">hello@latindanceawards.com</a> if you run a school or know the scene in your country.'))
 
+# home: only 3 countries visible in "Rankings nach Ländern"; the rest behind a "see more" button
+_a = main.index('<div class="people">', main.index('id="laender"'))
+_b = main.index('\n  </div>\n</div></section>', _a)
+_parts = main[_a:_b].split('<div class="box">')
+_seg2 = _parts[0] + ''.join(('<div class="box more-c" hidden>' if i >= 3 else '<div class="box">') + x for i, x in enumerate(_parts[1:]))
+_btn = ('<div class="btnrow" style="justify-content:center;margin-top:18px"><button type="button" class="btn btn-ghost" id="morec" aria-expanded="false">'
+        + t("span", "Mehr Länder ansehen", "See more countries") + '</button></div>'
+        '<script>(function(){var b=document.getElementById("morec");if(!b)return;b.addEventListener("click",function(){document.querySelectorAll(".more-c").forEach(function(e){e.hidden=false});b.parentNode.hidden=true})})();</script>')
+main = main[:_a] + _seg2 + '\n  </div>' + _btn + main[_b + len('\n  </div>'):]
+
+
 # Europe header: same shell, nav points at the hub sections
 H0 = B.HEADER
 _a = H0.index('<ul id="mnav">'); _b = H0.index('</ul>', _a) + 5

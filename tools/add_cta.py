@@ -17,25 +17,28 @@ CSS = ('<style>.cta{padding:8px 0 56px}.cta-box{max-width:980px;margin:0 auto;pa
  '.cta p:not(.cta-n){margin:0;max-width:40em;color:var(--muted,#b9aa98);font-size:16px;line-height:1.55}'
  '.cta-b{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}.cta-b .btn{min-height:50px}'
  '.cta-m{font-size:14px;color:var(--gold-light,#F8E2A6)}.cta-m a{color:inherit;text-decoration:underline;text-underline-offset:3px}'
+ '.cta-l{list-style:none;margin:0;padding:0;display:grid;gap:10px;text-align:left;max-width:30em}.cta-l li{position:relative;padding-left:30px;color:var(--cream,#F6E7D3);font-size:16px;line-height:1.45}.cta-l li:before{content:"\\2713";position:absolute;left:0;top:0;color:var(--gold,#E4B95B);font-weight:700}'
  '@media(max-width:560px){.cta-b{width:100%}.cta-b .btn{width:100%}}</style>')
 def block(slug):
-    ref = ('?client_reference_id=' + slug) if slug else ''
-    de = dict(n='15.000+', s='Besucher pro Monat', h='Deine Schule ist hier schon gelistet. Mach daraus neue Schüler.',
-      p='Jeden Monat suchen über 15.000 Tanzbegeisterte auf unserer Seite nach einer Schule. Mit einem Plan bekommt deine Schule Probestunden-Anfragen, Fotos, Videos und das Häkchen „geprüft“ – mit Spotlight steht sie ganz oben in deiner Stadt.',
-      b1='Pro: 5 € / Monat', b2='Spotlight: 20 € / Monat', m='Jederzeit kündbar · <a href="/preise">Alle Vorteile ansehen</a>')
-    en = dict(n='15,000+', s='visitors per month', h='Your school is already listed here. Turn it into new students.',
-      p='Every month over 15,000 dance fans use our site to find a school. With a plan your school gets trial-class requests, photos, videos and the verified check mark – with Spotlight it sits at the very top of your city.',
-      b1='Pro: €5 / month', b2='Spotlight: €20 / month', m='Cancel anytime · <a href="/preise">See everything included</a>')
     import json
+    ref = ('?school=' + slug) if slug else ''
+    de = dict(n='15.000+', s='Besucher pro Monat', h='Deine Schule ist hier schon gelistet. Mach daraus neue Schüler.',
+      l1='Anfragen für Probestunden direkt per WhatsApp oder E-Mail', l2='Fotos, Videos und das Häkchen „geprüft“',
+      l3='Ganz oben in deiner Stadt (mit Spotlight)', l4='Ab 2027 neue Stimmen im Ranking sammeln',
+      b='Pläne ansehen · ab 5 €', m='Jederzeit kündbar · <a href="/preise">Alle Vorteile ansehen</a>')
+    en = dict(n='15,000+', s='visitors per month', h='Your school is already listed here. Turn it into new students.',
+      l1='Trial-class requests straight to your WhatsApp or e-mail', l2='Photos, videos and the verified check mark',
+      l3='Top of your city (with Spotlight)', l4='Collect new votes in the ranking from 2027',
+      b='See plans · from €5', m='Cancel anytime · <a href="/preise">See everything included</a>')
     d = json.dumps({'de': de, 'en': en}, ensure_ascii=False).replace('</', '<\\/')
     return (MARK + CSS + '<section class="cta" aria-label="Pläne / Plans"><div class="wrap"><div class="cta-box">'
-      '<p class="cta-n"><span data-c="n"></span><small data-c="s"></small></p><h2 data-c="h"></h2><p data-c="p"></p>'
-      '<div class="cta-b"><a class="btn btn-gold" rel="noopener" href="%s%s" data-c="b1"></a>'
-      '<a class="btn btn-ghost" rel="noopener" href="%s%s" data-c="b2"></a></div><div class="cta-m" data-c="m"></div></div></div></section>'
+      '<p class="cta-n"><span data-c="n"></span><small data-c="s"></small></p><h2 data-c="h"></h2>'
+      '<ul class="cta-l"><li data-c="l1"></li><li data-c="l2"></li><li data-c="l3"></li><li data-c="l4"></li></ul>'
+      '<div class="cta-b"><a class="btn btn-gold" href="/preise" data-c="b"></a></div><div class="cta-m" data-c="m"></div></div></div></section>'
       '<script>(function(){var T=%s,r=document.currentScript.previousElementSibling;'
       'function f(){var l=/^de/i.test(document.documentElement.lang||"de")?"de":"en";r.querySelectorAll("[data-c]").forEach(function(e){e.innerHTML=T[l][e.dataset.c]})}'
       'f();new MutationObserver(f).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]})})();</script>'
-      % (PRO, ref, SPOT, ref, d))
+      % d)
 OWN_MARK = '<!--lda-own-->'
 OWN_CSS = ('<style>.own{padding:18px 0 0}.own-box{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;'
  'padding:18px 24px;border-radius:18px;border:1.5px solid rgba(228,185,91,.55);background:linear-gradient(100deg,rgba(228,185,91,.18),var(--card,#161214) 70%)}'
