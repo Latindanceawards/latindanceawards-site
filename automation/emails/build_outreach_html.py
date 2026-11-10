@@ -87,14 +87,7 @@ PROOF = {'de':('15.448','Klicks insgesamt','842K','Impressionen insgesamt','Date
 GF = "'Google Sans',Roboto,Arial,sans-serif"
 def proof(l):
     a,al,b,bl,cap=PROOF[l]
-    def tile(n,lab,col):
-        chk = f'<span style="display:inline-block;width:14px;height:14px;line-height:14px;border:1.5px solid #ffffff;border-radius:3px;text-align:center;font:700 11px {GF};color:#ffffff;vertical-align:middle">&#10003;</span>'
-        q = f'<span style="display:inline-block;width:18px;height:18px;line-height:18px;border:1.5px solid #ffffff;border-radius:50%;text-align:center;font:500 11px {GF};color:#ffffff">?</span>'
-        return (f'<td width="50%" valign="top" bgcolor="{col}" style="background:{col};padding:16px 16px 14px">'
-                f'<div style="font:500 14px/1.3 {GF};color:#ffffff">{chk}&nbsp;&nbsp;{lab}</div>'
-                f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px"><tr><td valign="bottom" style="font:400 34px/1.1 {GF};color:#ffffff">{n}</td><td align="right" valign="bottom">{q}</td></tr></table></td>')
-    return ('<table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="margin:6px 0 0;background:#ffffff;border-radius:8px"><tr><td style="padding:0;border-radius:8px;overflow:hidden">'
-            '<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>'+tile(a,al,'#4285f4')+tile(b,bl,'#5e35b1')+'</tr></table></td></tr></table>'
+    return (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:6px 0 0"><tr><td><img src="{ASSET}gsc-tiles.png" width="507" alt="Google Search Console: {al} {a}, {bl} {b}" style="display:block;border:0;width:100%;max-width:507px;height:auto;border-radius:8px"></td></tr></table>'
             f'<p style="margin:8px 0 22px;font:12px/1.5 {SANS};color:#b9aa98">{cap}</p>')
 # NON-SALES copy: competing in the ranking; add details to earn more points. No plans/prices.
 CP = {
