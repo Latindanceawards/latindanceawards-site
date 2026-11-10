@@ -36,6 +36,42 @@ PRICE = {
  'tr': ('Ayda 5 €’dan başlayan planlar', 'Deneme dersi düğmesi, fotoğraflar, videolar ve doğrulanmış okul işareti. İstediğiniz zaman iptal edin.'),
  'ro': ('Planuri de la 5 € pe lună', 'Buton pentru lecția de probă, fotografii, videoclipuri și semnul de școală verificată. Anulezi oricând.'),
  'el': ('Πακέτα από 5 € τον μήνα', 'Κουμπί δοκιμαστικού μαθήματος, φωτογραφίες, βίντεο και σήμα επαληθευμένης σχολής. Ακύρωση οποιαδήποτε στιγμή.')}
+# Stronger copy: being ranked among Europe's best is a big deal; visibility, advertising, followers; 15,000+ monthly visitors.
+# {n} = school, {c} = city.  Keys: subj, intro, ph (price headline), pp (price paragraph), fp (free paragraph)
+NEW = {
+ 'de': dict(subj='{n} im Wettbewerb um Europas beste Bachata-Schulen', intro='In einem Ranking der besten Bachata-Schulen Europas zu stehen, ist etwas Besonderes, und {n} ({c}) ist schon dabei. Über 15.000 Menschen besuchen unsere Seite jeden Monat, viele davon auf der Suche nach einem Ort zum Tanzen.',
+   ph='Pläne ab 5 € im Monat', pp='Werde von über 15.000 Besuchern im Monat gesehen: Anfragen für Probestunden, Fotos und Videos, Links zu deinen Social-Media-Profilen, damit dir Leute folgen, und das Häkchen „geprüft“. Mit Spotlight bewerben wir deine Schule ganz oben in deiner Stadt.',
+   fp='Noch nicht bereit für einen Plan? Bestätige deine Daten kostenlos: Mehr Punkte bedeuten einen besseren Platz und mehr Sichtbarkeit.'),
+ 'en': dict(subj='{n} is competing with Europe’s best Bachata schools', intro='Being in a ranking of Europe’s best Bachata schools is something special, and {n} ({c}) is already in it. More than 15,000 people visit our site every month, and many come to find a place to dance.',
+   ph='Plans from €5 a month', pp='Get seen by 15,000+ visitors a month: trial-class requests, photos and videos, links to your social profiles so people follow you, and the verified check mark. With Spotlight, we advertise your school at the top of your city.',
+   fp='Not ready for a plan? Confirm your details for free: more points mean a higher place and more visibility.'),
+ 'es': dict(subj='{n} compite entre las mejores escuelas de bachata de Europa', intro='Estar en un ranking de las mejores escuelas de bachata de Europa es algo especial, y {n} ({c}) ya está en él. Más de 15.000 personas visitan nuestra web cada mes, y muchas buscan un sitio donde bailar.',
+   ph='Planes desde 5 € al mes', pp='Consigue que te vean más de 15.000 visitantes al mes: solicitudes de clase de prueba, fotos y vídeos, enlaces a tus redes para que la gente te siga y el sello de escuela verificada. Con Spotlight anunciamos tu escuela en lo más alto de tu ciudad.',
+   fp='¿Todavía no quieres un plan? Confirma tus datos gratis: más puntos significan mejor puesto y más visibilidad.'),
+ 'fr': dict(subj='{n} concourt parmi les meilleures écoles de bachata d’Europe', intro='Figurer dans un classement des meilleures écoles de bachata d’Europe est une belle reconnaissance, et {n} ({c}) en fait déjà partie. Plus de 15 000 personnes visitent notre site chaque mois, et beaucoup cherchent un endroit où danser.',
+   ph='Formules à partir de 5 € par mois', pp='Soyez vu par plus de 15 000 visiteurs par mois : demandes de cours d’essai, photos et vidéos, liens vers vos réseaux pour que l’on vous suive, et badge « école vérifiée ». Avec Spotlight, nous mettons votre école en avant tout en haut de votre ville.',
+   fp='Pas encore prêt pour une formule ? Confirmez vos infos gratuitement : plus de points, c’est une meilleure place et plus de visibilité.'),
+ 'it': dict(subj='{n} è in gara tra le migliori scuole di bachata d’Europa', intro='Essere in una classifica delle migliori scuole di bachata d’Europa è qualcosa di speciale, e {n} ({c}) ci è già. Più di 15.000 persone visitano il nostro sito ogni mese, e molte cercano un posto dove ballare.',
+   ph='Piani da 5 € al mese', pp='Fatti vedere da oltre 15.000 visitatori al mese: richieste di lezione di prova, foto e video, link ai tuoi social perché ti seguano e il segno di scuola verificata. Con Spotlight pubblicizziamo la tua scuola in cima alla tua città.',
+   fp='Non sei ancora pronto per un piano? Conferma i tuoi dati gratis: più punti significano un posto migliore e più visibilità.'),
+ 'pt': dict(subj='{n} está a competir entre as melhores escolas de bachata da Europa', intro='Estar num ranking das melhores escolas de bachata da Europa é algo especial, e a {n} ({c}) já faz parte dele. Mais de 15 000 pessoas visitam o nosso site todos os meses, e muitas procuram um sítio para dançar.',
+   ph='Planos desde 5 € por mês', pp='Seja visto por mais de 15 000 visitantes por mês: pedidos de aula experimental, fotografias e vídeos, ligações às suas redes sociais para que o sigam e o selo de escola verificada. Com o Spotlight, anunciamos a sua escola no topo da sua cidade.',
+   fp='Ainda não está pronto para um plano? Confirme os seus dados gratuitamente: mais pontos significam melhor posição e mais visibilidade.'),
+ 'pl': dict(subj='{n} rywalizuje wśród najlepszych szkół bachaty w Europie', intro='Bycie w rankingu najlepszych szkół bachaty w Europie to coś wyjątkowego, a {n} ({c}) już w nim jest. Ponad 15 000 osób odwiedza naszą stronę co miesiąc, a wiele z nich szuka miejsca do tańca.',
+   ph='Plany od 5 € miesięcznie', pp='Zdobądź uwagę ponad 15 000 odwiedzających miesięcznie: zapytania o zajęcia próbne, zdjęcia i filmy, linki do Twoich social mediów, by ludzie Cię obserwowali, oraz znacznik zweryfikowanej szkoły. Z planem Spotlight reklamujemy Twoją szkołę na samej górze Twojego miasta.',
+   fp='Jeszcze nie jesteś gotowy na plan? Potwierdź dane za darmo: więcej punktów to wyższe miejsce i większa widoczność.'),
+ 'nl': dict(subj='{n} strijdt mee tussen de beste bachata-scholen van Europa', intro='In een ranglijst van de beste bachata-scholen van Europa staan is iets bijzonders, en {n} ({c}) staat er al in. Meer dan 15.000 mensen bezoeken onze site elke maand, en velen zoeken een plek om te dansen.',
+   ph='Pakketten vanaf € 5 per maand', pp='Word gezien door meer dan 15.000 bezoekers per maand: aanvragen voor proeflessen, foto’s en video’s, links naar je socials zodat mensen je volgen en het vinkje voor gecontroleerde school. Met Spotlight adverteren we je school bovenaan in jouw stad.',
+   fp='Nog niet klaar voor een pakket? Bevestig je gegevens gratis: meer punten betekenen een hogere plaats en meer zichtbaarheid.'),
+ 'tr': dict(subj='{n}, Avrupa’nın en iyi bachata okulları arasında yarışıyor', intro='Avrupa’nın en iyi bachata okullarının sıralamasında yer almak özel bir şey ve {n} ({c}) zaten bu sıralamada. Sitemizi her ay 15.000’den fazla kişi ziyaret ediyor ve birçoğu dans edecek bir yer arıyor.',
+   ph='Ayda 5 €’dan başlayan planlar', pp='Ayda 15.000’den fazla ziyaretçi tarafından görülün: deneme dersi talepleri, fotoğraflar ve videolar, insanların sizi takip etmesi için sosyal medya bağlantıları ve doğrulanmış okul işareti. Spotlight ile okulunuzu şehrinizin en üstünde tanıtıyoruz.',
+   fp='Henüz bir plan için hazır değil misiniz? Bilgilerinizi ücretsiz doğrulayın: daha fazla puan, daha iyi sıra ve daha fazla görünürlük demektir.'),
+ 'ro': dict(subj='{n} concurează printre cele mai bune școli de bachata din Europa', intro='Să fii într-un clasament al celor mai bune școli de bachata din Europa este ceva special, iar {n} ({c}) este deja în el. Peste 15.000 de oameni vizitează site-ul nostru în fiecare lună, iar mulți caută un loc unde să danseze.',
+   ph='Planuri de la 5 € pe lună', pp='Fii văzut de peste 15.000 de vizitatori pe lună: cereri pentru lecția de probă, fotografii și videoclipuri, linkuri către rețelele tale sociale ca oamenii să te urmărească și semnul de școală verificată. Cu Spotlight îți promovăm școala în topul orașului tău.',
+   fp='Nu ești încă gata pentru un plan? Confirmă-ți datele gratuit: mai multe puncte înseamnă un loc mai bun și mai multă vizibilitate.'),
+ 'el': dict(subj='{n}: διεκδικεί θέση ανάμεσα στις καλύτερες σχολές μπατσάτα της Ευρώπης', intro='Το να βρίσκεστε σε μια κατάταξη με τις καλύτερες σχολές μπατσάτα της Ευρώπης είναι κάτι ξεχωριστό, και η σχολή {n} ({c}) είναι ήδη εκεί. Πάνω από 15.000 άτομα επισκέπτονται τον ιστότοπό μας κάθε μήνα και πολλά ψάχνουν μέρος για να χορέψουν.',
+   ph='Πακέτα από 5 € τον μήνα', pp='Γίνετε ορατοί σε πάνω από 15.000 επισκέπτες τον μήνα: αιτήματα για δοκιμαστικό μάθημα, φωτογραφίες και βίντεο, συνδέσμους στα social σας για να σας ακολουθούν και το σήμα επαληθευμένης σχολής. Με το Spotlight προβάλλουμε τη σχολή σας στην κορυφή της πόλης σας.',
+   fp='Δεν είστε έτοιμοι για πακέτο; Επιβεβαιώστε δωρεάν τα στοιχεία σας: περισσότεροι πόντοι σημαίνουν καλύτερη θέση και μεγαλύτερη προβολή.')}
 def paras(l):
     sub, body, sig, foot = T[l]
     ps = [p for p in body.split('\n\n')]
@@ -47,16 +83,9 @@ def paras(l):
 def render(l, name='{{School}}', city='{{City}}', rank='{{Rank}}', link='{{Profile link}}', greeting=None):
     sub, ps, sig, foot = paras(l)
     free, plans, prof, scope = LAB[l]
-    hi, intro, data, paid, optout = ps[0], ps[1], ps[2].rstrip(':') + '.', ps[3].rstrip(':') + '.', ps[4]
-    # intro: drop the profile-link placeholder line, keep the sentence
-    intro = re.sub(r'\n?\{\{[^}]*\}\}\s*$', '', intro).rstrip(':').rstrip() + '.'
-    intro = re.sub(r'\{\{(?:Schulname|School name|Nombre de la escuela|Nom de l’école|Nome della scuola|Nome da escola|Nazwa szkoły|Naam van de school|Okul adı|Numele școlii|Όνομα σχολής)\}\}', name, intro)
-    intro = re.sub(r'\{\{(?:Stadt|City|Ciudad|Ville|Città|Cidade|Miasto|Stad|Şehir|Oraș|Πόλη)\}\}', city, intro)
-    # rank phrase is shown on the card instead of inside the sentence
-    intro = re.sub(r',? ?(?:auf Platz|at position|en el puesto|à la place|al posto|na posição|na miejscu|op plaats|sırada yer alıyor|pe locul|στη θέση) ?\{\{[^}]*\}\}[^.]*', '', intro)
-    intro = re.sub(r'\{\{(?:Platz|Rank|Puesto|Place|Posizione|Posição|Miejsce|Plaats|Sıra|Loc|Θέση)\}\}\.?\s*sırada yer alıyor', '', intro)
-    if l == 'tr': intro = intro.replace('zaten.', 'zaten yer alıyor.')
-    intro = intro.replace('  ', ' ').replace(' .', '.').replace('..', '.')
+    hi, optout = ps[0], ps[4]
+    data = NEW[l]['fp']
+    intro = NEW[l]['intro'].replace('{n}', name).replace('{c}', city)
     hi_txt = greeting if greeting is not None else re.sub(r' \{\{[^}]+\}\}([,:])', r'\1', hi)
     sig_h = sig.replace('\n', '<br>')
     foot_h = re.sub(r'(https://\S+)', r'<a href="\1" style="color:#E4B95B">\1</a>', foot)
@@ -77,8 +106,8 @@ def render(l, name='{{School}}', city='{{City}}', rank='{{Rank}}', link='{{Profi
 <p style="margin:0 0 14px;font:500 22px/1.25 {SERIF};color:#F8E2A6">{hi_txt}</p>
 {P(intro)}
 {card}
-<p style="margin:0 0 6px;font:500 32px/1.15 {SERIF};color:#F8E2A6">{PRICE[l][0]}</p>
-{P(PRICE[l][1])}
+<p style="margin:0 0 6px;font:500 32px/1.15 {SERIF};color:#F8E2A6">{NEW[l]['ph']}</p>
+{P(NEW[l]['pp'])}
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 26px"><tr>{btn(plans, 'https://latindanceawards.com/preise', True)}</tr></table>
 {P(data)}
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 26px"><tr>{btn(free, 'https://latindanceawards.com/bewerbung', False)}</tr></table>
