@@ -72,22 +72,29 @@ NEW = {
  'el': dict(subj='{n}: διεκδικεί θέση ανάμεσα στις καλύτερες σχολές μπατσάτα της Ευρώπης', intro='Το να βρίσκεστε σε μια κατάταξη με τις καλύτερες σχολές μπατσάτα της Ευρώπης είναι κάτι ξεχωριστό, και η σχολή {n} ({c}) είναι ήδη εκεί. Πάνω από 15.000 άτομα επισκέπτονται τον ιστότοπό μας κάθε μήνα και πολλά ψάχνουν μέρος για να χορέψουν.',
    ph='Πακέτα από 5 € τον μήνα', pp='Γίνετε ορατοί σε πάνω από 15.000 επισκέπτες τον μήνα: αιτήματα για δοκιμαστικό μάθημα, φωτογραφίες και βίντεο, συνδέσμους στα social σας για να σας ακολουθούν και το σήμα επαληθευμένης σχολής. Με το Spotlight προβάλλουμε τη σχολή σας στην κορυφή της πόλης σας.',
    fp='Δεν είστε έτοιμοι για πακέτο; Επιβεβαιώστε δωρεάν τα στοιχεία σας: περισσότεροι πόντοι σημαίνουν καλύτερη θέση και μεγαλύτερη προβολή.')}
-# Search Console proof (real numbers, last 3 months): clicks 15,448, impressions 842K
-PROOF = {'de':('15.448','Klicks','842K','Impressionen','Google Search Console, letzte 3 Monate'),
- 'en':('15,448','Clicks','842K','Impressions','Google Search Console, last 3 months'),
- 'es':('15.448','Clics','842K','Impresiones','Google Search Console, últimos 3 meses'),
- 'fr':('15 448','Clics','842K','Impressions','Google Search Console, 3 derniers mois'),
- 'it':('15.448','Clic','842K','Impressioni','Google Search Console, ultimi 3 mesi'),
- 'pt':('15 448','Cliques','842K','Impressões','Google Search Console, últimos 3 meses'),
- 'pl':('15 448','Kliknięcia','842K','Wyświetlenia','Google Search Console, ostatnie 3 miesiące'),
- 'nl':('15.448','Klikken','842K','Vertoningen','Google Search Console, laatste 3 maanden'),
- 'tr':('15.448','Tıklama','842K','Gösterim','Google Search Console, son 3 ay'),
- 'ro':('15.448','Clicuri','842K','Afișări','Google Search Console, ultimele 3 luni'),
- 'el':('15.448','Κλικ','842K','Εμφανίσεις','Google Search Console, τελευταίοι 3 μήνες')}
+# Search Console proof, styled like Google Search Console (real numbers, last 3 months: 15,448 clicks, 842K impressions)
+PROOF = {'de':('15.448','Klicks insgesamt','842K','Impressionen insgesamt','Daten von Google Search Console, letzte 3 Monate'),
+ 'en':('15,448','Total clicks','842K','Total impressions','Data from Google Search Console, last 3 months'),
+ 'es':('15.448','Clics totales','842K','Impresiones totales','Datos de Google Search Console, últimos 3 meses'),
+ 'fr':('15 448','Total des clics','842K','Total des impressions','Données de Google Search Console, 3 derniers mois'),
+ 'it':('15.448','Clic totali','842K','Impressioni totali','Dati di Google Search Console, ultimi 3 mesi'),
+ 'pt':('15 448','Total de cliques','842K','Total de impressões','Dados do Google Search Console, últimos 3 meses'),
+ 'pl':('15 448','Łączna liczba kliknięć','842K','Łączna liczba wyświetleń','Dane z Google Search Console, ostatnie 3 miesiące'),
+ 'nl':('15.448','Totaal aantal klikken','842K','Totaal aantal vertoningen','Gegevens van Google Search Console, laatste 3 maanden'),
+ 'tr':('15.448','Toplam tıklama','842K','Toplam gösterim','Google Search Console verileri, son 3 ay'),
+ 'ro':('15.448','Total clicuri','842K','Total afișări','Date din Google Search Console, ultimele 3 luni'),
+ 'el':('15.448','Σύνολο κλικ','842K','Σύνολο εμφανίσεων','Δεδομένα από το Google Search Console, τελευταίοι 3 μήνες')}
+GF = "'Google Sans',Roboto,Arial,sans-serif"
 def proof(l):
     a,al,b,bl,cap=PROOF[l]
-    def tile(n,lab,col): return f'<td width="49%" bgcolor="{col}" style="background:{col};border-radius:14px;padding:16px 18px"><div style="font:500 13px Inter,Helvetica,Arial,sans-serif;color:#ffffff">{lab}</div><div style="font:500 34px/1.15 Inter,Helvetica,Arial,sans-serif;color:#ffffff;margin-top:4px">{n}</div></td>'
-    return ('<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:6px 0 0"><tr>'+tile(a,al,'#1a73e8')+'<td width="2%" style="font-size:0;line-height:0">&nbsp;</td>'+tile(b,bl,'#6a2db8')+'</tr></table>'
+    def tile(n,lab,col):
+        chk = f'<span style="display:inline-block;width:14px;height:14px;line-height:14px;border:1.5px solid #ffffff;border-radius:3px;text-align:center;font:700 11px {GF};color:#ffffff;vertical-align:middle">&#10003;</span>'
+        q = f'<span style="display:inline-block;width:18px;height:18px;line-height:18px;border:1.5px solid #ffffff;border-radius:50%;text-align:center;font:500 11px {GF};color:#ffffff">?</span>'
+        return (f'<td width="50%" valign="top" bgcolor="{col}" style="background:{col};padding:16px 16px 14px">'
+                f'<div style="font:500 14px/1.3 {GF};color:#ffffff">{chk}&nbsp;&nbsp;{lab}</div>'
+                f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px"><tr><td valign="bottom" style="font:400 34px/1.1 {GF};color:#ffffff">{n}</td><td align="right" valign="bottom">{q}</td></tr></table></td>')
+    return ('<table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="margin:6px 0 0;background:#ffffff;border-radius:8px"><tr><td style="padding:0;border-radius:8px;overflow:hidden">'
+            '<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>'+tile(a,al,'#4285f4')+tile(b,bl,'#5e35b1')+'</tr></table></td></tr></table>'
             f'<p style="margin:8px 0 22px;font:12px/1.5 {SANS};color:#b9aa98">{cap}</p>')
 # NON-SALES copy: competing in the ranking; add details to earn more points. No plans/prices.
 CP = {
