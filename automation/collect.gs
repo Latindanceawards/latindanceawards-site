@@ -35,6 +35,7 @@ function doPost(e) {
   if (a === 'review') return handleReview_(e.parameter);
   if (a === 'profile') return handleProfile_(e.parameter);
   if (a === 'event') return handleEvent_(e.parameter);
+  if (a === 'lead') return handleLead_(e.parameter);
   return handleApplication_(e);
 }
 
@@ -246,6 +247,22 @@ function handleProfile_(p) {
     sh.appendRow([new Date(), safe_(name), role, safe_(String(p.city || '').substring(0, 40)), safe_(String(p.school || '').substring(0, 80)), safe_(String(p.styles || '').substring(0, 60)), safe_(bio),
       url_(p.instagram, 'www.instagram.com'), url_(p.tiktok, 'www.tiktok.com'), url_(p.youtube), url_(p.music), url_(p.website), email, p.language === 'EN' ? 'EN' : 'DE', 'Pending', '', '']);
     try { MailApp.sendEmail(Session.getEffectiveUser().getEmail(), 'New profile to review: ' + name, name + ' (' + role + ', ' + p.city + ') submitted a profile. Open the Profiles sheet and set Status to Approved to publish.'); } catch (x) {}
+    return ContentService.createTextOutput('ok');
+  } finally { lock.releaseLock(); }
+}
+var LEAD_SHEET = 'Leads';
+var LEAD_HEAD = ['Submitted at', 'Plan', 'Name', 'E-Mail', 'School', 'City', 'Language', 'Consent', 'Status'];
+/** Paid-plan lead captured before the visitor is sent to Stripe. Fields are prefixed lead_ so an old deployment ignores them. */
+function handleLead_(p) {
+  if (p.hp) return ContentService.createTextOutput('ok');
+  var email = normEmail_(p.lead_email), name = String(p.lead_name || '').trim().substring(0, 80), school = String(p.lead_school || '').trim().substring(0, 100);
+  if (!email || !name || !school) return ContentService.createTextOutput('invalid');
+  var plan = ['Pro', 'Spotlight'].indexOf(p.lead_plan) >= 0 ? p.lead_plan : 'Pro';
+  var lock = LockService.getScriptLock(); lock.waitLock(20000);
+  try {
+    var sh = sheet_(LEAD_SHEET, LEAD_HEAD);
+    sh.appendRow([new Date(), plan, safe_(name), email, safe_(school), safe_(String(p.lead_city || '').substring(0, 60)), String(p.lead_lang || '').substring(0, 5), p.lead_consent === '1' ? 'Yes' : 'No', 'Went to checkout']);
+    try { MailApp.sendEmail(Session.getEffectiveUser().getEmail(), 'New lead: ' + plan + ' · ' + school, name + ' <' + email + '> · ' + school + ' (' + p.lead_city + ') opened the ' + plan + ' checkout. Open the Leads sheet; if a Stripe payment follows, set Status to Paid.'); } catch (x) {}
     return ContentService.createTextOutput('ok');
   } finally { lock.releaseLock(); }
 }
