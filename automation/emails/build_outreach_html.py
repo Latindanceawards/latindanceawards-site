@@ -89,20 +89,20 @@ def render(l, name='{{School}}', city='{{City}}', rank='{{Rank}}', link='{{Profi
     hi_txt = greeting if greeting is not None else re.sub(r' \{\{[^}]+\}\}([,:])', r'\1', hi)
     sig_h = sig.replace('\n', '<br>')
     foot_h = re.sub(r'(https://\S+)', r'<a href="\1" style="color:#E4B95B">\1</a>', foot)
-    card = (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:22px 0"><tr><td bgcolor="#1b1612" style="background:#1b1612;background-image:radial-gradient(120% 140% at 0 0,rgba(228,185,91,.20),#1b1612 62%);border:1.5px solid #8a7440;border-radius:18px;padding:18px 20px">'
+    card = (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:22px 0"><tr><td bgcolor="#1b1612" style="background:#1b1612;;border:1.5px solid #8a7440;border-radius:18px;padding:18px 20px">'
       f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td width="96" valign="middle"><img src="{ASSET}seal.png" width="84" height="84" alt="" style="display:block;border:0"></td>'
       f'<td valign="middle"><div style="font:600 13px {SANS};color:#F8E2A6">#{rank} {scope}</div><div style="font:500 22px/1.2 {SERIF};color:#F6E7D3;margin-top:3px">{name}</div><div style="font:14px/1.5 {SANS};color:#b9aa98;margin-top:2px">{city}</div></td></tr></table>'
       f'<div style="margin-top:12px"><a href="{link}" style="font:600 14px {SANS};color:#F8E2A6;text-decoration:underline">{prof}</a></div></td></tr></table>')
     def btn(label, href, gold):
-        if gold: return f'<td bgcolor="#E4B95B" style="background:#E4B95B;background-image:{FOIL};border-radius:999px"><a href="{href}" style="display:inline-block;padding:15px 28px;font:700 15px {SANS};color:#131011;text-decoration:none">{label}</a></td>'
+        if gold: return f'<td bgcolor="#E4B95B" style="background:#E4B95B;border-radius:999px"><a href="{href}" style="display:inline-block;padding:15px 28px;font:700 15px {SANS};color:#131011;text-decoration:none">{label}</a></td>'
         return f'<td style="border:1px solid #8a7440;border-radius:999px"><a href="{href}" style="display:inline-block;padding:13px 24px;font:700 15px {SANS};color:#F6E7D3;text-decoration:none">{label}</a></td>'
     P = lambda t, c='#F6E7D3', sz=16: f'<p style="margin:0 0 16px;font:{sz}px/1.6 {SANS};color:{c}">{t}</p>'
     return f'''<!doctype html><html lang="{l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><style>{FONTCSS}</style><title>{sub}</title></head>
 <body style="margin:0;padding:0;background:#080707">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#080707"><tr><td align="center" style="padding:28px 14px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#080707" style="background:#080707"><tr><td align="center" bgcolor="#080707" style="background:#080707;padding:28px 14px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%">
 <tr><td align="center" style="padding:0 0 18px"><a href="https://latindanceawards.com"><img src="{ASSET}email-header.png" width="300" height="75" alt="Latin Dance Awards" style="display:block;border:0;font:600 22px {SERIF};color:#F6E7D3"></a></td></tr>
-<tr><td bgcolor="#131011" style="background:#131011;background-image:radial-gradient(90% 70% at 85% 0,rgba(228,185,91,.14),#131011 60%);border:1.5px solid #8a7440;border-radius:24px;padding:34px 30px">
+<tr><td bgcolor="#131011" style="background:#131011;;border:1.5px solid #8a7440;border-radius:24px;padding:34px 30px">
 <p style="margin:0 0 14px;font:500 22px/1.25 {SERIF};color:#F8E2A6">{hi_txt}</p>
 {P(intro)}
 {card}
