@@ -927,7 +927,12 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
 <main id="top">
 <section class="page-hero"><div class="wrap" style="grid-template-columns:1fr"><div>
   <h1 data-i18n="dk1">Danke! Deine Zahlung ist angekommen.</h1>
-  <p class="lede" data-i18n="dk2">Wir schreiben dir bald per E-Mail und richten dein Profil mit dir ein. Antworte einfach auf diese E-Mail, wenn du etwas ändern möchtest.</p>
+  <p class="lede" data-i18n="dk2">Wir schreiben dir innerhalb von 24 Stunden per E-Mail und richten dein Profil mit dir ein.</p>
+  <style>.dk-steps li{position:relative;padding-left:34px;color:var(--cream);font-size:16px;line-height:1.5}.dk-steps{counter-reset:s}.dk-steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--foil);color:#131011;font-weight:700;font-size:13px}</style><ol class="dk-steps" style="margin:26px 0 0;padding:0;list-style:none;display:grid;gap:12px;max-width:34em">
+    <li data-i18n="dk4">Prüfe dein Postfach, auch den Spam-Ordner. Die E-Mail kommt von hello@latindanceawards.com.</li>
+    <li data-i18n="dk5">Schick uns Fotos, Videos, Links und Zeiten deiner Schule. Antworte einfach auf unsere E-Mail.</li>
+    <li data-i18n="dk6">Wir schalten dein Profil frei und sagen dir Bescheid.</li>
+  </ol>
   <p style="margin-top:28px"><a class="btn btn-gold" href="./" data-i18n="dk3">Zur Startseite</a></p>
 </div></div></section>
 </main>
@@ -958,7 +963,7 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
 
 <script>
 (function(){
-  var EN={"ffaq": "FAQ", "leg_imp": "Legal notice", "leg_priv": "Privacy policy", "nav_apply": "Apply", "nav_eu": "Europe", "nav_tdj": "Teachers &amp; DJs", "nav_trip": "Dance trip", "t1": "Rankings", "t101": "An independent project celebrating Europe's Latin dance schools. Rankings are based on public data and can't be bought.", "t102": "Germany 2026", "t103": "Award categories", "t104": "How we rank", "t105": "Get in touch", "t106": "Apply for free", "t107": "Bachata Edition · Germany", "t2": "Why it matters", "t3": "Categories", "t4": "How we rank", "t5": "Apply for free", "dk1": "Thank you! Your payment has arrived.", "dk2": "We will email you soon and set up your profile with you. Just reply to that email if you want to change anything.", "dk3": "Back to the home page"};
+  var EN={"dk6": "We will switch your profile on and let you know.", "dk5": "Send us your school’s photos, videos, links and class times. Just reply to our email.", "dk4": "Check your inbox, including the spam folder. The email comes from hello@latindanceawards.com.", "ffaq": "FAQ", "leg_imp": "Legal notice", "leg_priv": "Privacy policy", "nav_apply": "Apply", "nav_eu": "Europe", "nav_tdj": "Teachers &amp; DJs", "nav_trip": "Dance trip", "t1": "Rankings", "t101": "An independent project celebrating Europe's Latin dance schools. Rankings are based on public data and can't be bought.", "t102": "Germany 2026", "t103": "Award categories", "t104": "How we rank", "t105": "Get in touch", "t106": "Apply for free", "t107": "Bachata Edition · Germany", "t2": "Why it matters", "t3": "Categories", "t4": "How we rank", "t5": "Apply for free", "dk1": "Thank you! Your payment has arrived.", "dk2": "We will email you within 24 hours and set up your profile with you.", "dk3": "Back to the home page"};
   var META={en:{title:"Thank you · Latin Dance Awards",desc:"Thank you for your payment."}};
 
   var DE={}, nodes=document.querySelectorAll("[data-i18n]");

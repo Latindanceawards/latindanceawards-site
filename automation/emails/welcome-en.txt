@@ -1,0 +1,29 @@
+Subject: Welcome to Latin Dance Awards: what happens next
+
+Hi {{First name}},
+
+thank you for putting {{School name}} on the {{Plan}} plan. We are really happy to have your school with us.
+
+What we need from you
+Just reply to this email, ideally with everything at once. If something is missing, we can add it later.
+- Photos: up to 6, high quality if possible (logo and photos from class).
+- Videos: up to 3 links, for example from YouTube or Instagram.
+- Class times and prices: the way you want them shown.
+- Trial class: your WhatsApp number or email address for bookings.
+- Social media: links to Instagram, Facebook, TikTok and your website.
+- Teachers (optional): name and photo.
+- Your own events (optional): name, date, place and link.
+
+So that only owners can change the data, please reply from your school’s email address or tell us the school’s Instagram account.
+
+What happens next
+We set everything up by hand and will let you know as soon as your profile is live. This usually takes a few days at most.
+
+You can cancel at any time: the link to manage your subscription is in your Stripe receipt.
+
+Warm regards
+Mateus
+Latin Dance Awards
+
+Latin Dance Awards · independent ranking of Latin dance schools in Europe
+latindanceawards.com
