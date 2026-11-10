@@ -1,0 +1,21 @@
+Subject: {{Numele școlii}} în clasamentul de bachata: verifică și completează datele
+
+Bună {{Prenume}},
+
+Sunt Mateus de la Latin Dance Awards, un clasament independent al școlilor de dans latino din Europa. Școala ta {{Numele școlii}} ({{Oraș}}) este deja în clasamentul nostru, pe locul {{Loc}}:
+{{Link profil}}
+
+Poziția se bazează pe date publice (de exemplu, recenziile de pe Google). Dacă ne confirmi date pe care nu le-am găsit, precum anul înființării, cursurile pentru începători sau evenimentele, școala ta primește mai multe puncte. Este gratuit:
+https://latindanceawards.com/bewerbung
+
+Dacă vrei mai mult, există planuri plătite opționale de la 5 € pe lună (de exemplu, buton pentru lecția de probă, fotografii, videoclipuri și semnul de școală verificată). Toate detaliile:
+https://latindanceawards.com/preise
+
+Dacă preferi să nu apari în clasament, răspunde la acest e-mail și îți eliminăm școala.
+
+Cu drag
+Mateus
+Latin Dance Awards
+
+--
+Latin Dance Awards · latindanceawards.com · Informații legale: https://latindanceawards.com/impressum

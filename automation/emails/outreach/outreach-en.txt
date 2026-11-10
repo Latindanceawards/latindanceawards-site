@@ -1,0 +1,21 @@
+Subject: {{School name}} in the Bachata ranking: check and add your details
+
+Hi {{First name}},
+
+I’m Mateus from Latin Dance Awards, an independent ranking of Latin dance schools in Europe. Your school {{School name}} ({{City}}) is already in our ranking, at position {{Rank}}:
+{{Profile link}}
+
+The position is based on public data (for example Google reviews). If you confirm details we could not find, such as the founding year, beginner classes or events, your school earns more points. This is free:
+https://latindanceawards.com/bewerbung
+
+If you want more, there are optional paid plans from €5 a month (for example a trial-class button, photos, videos and the verified check mark). Everything is here:
+https://latindanceawards.com/preise
+
+If you would rather not be in the ranking, just reply to this email and we will remove your school.
+
+Warm regards
+Mateus
+Latin Dance Awards
+
+--
+Latin Dance Awards · latindanceawards.com · Legal notice: https://latindanceawards.com/impressum

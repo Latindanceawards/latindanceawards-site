@@ -1,0 +1,21 @@
+Subject: {{Okul adı}} bachata sıralamasında: bilgilerinizi kontrol edin ve tamamlayın
+
+Merhaba {{Ad}},
+
+Ben Mateus, Avrupa’daki Latin dans okulları için bağımsız bir sıralama olan Latin Dance Awards’tan yazıyorum. {{Okul adı}} ({{Şehir}}) okulunuz sıralamamızda zaten {{Sıra}}. sırada yer alıyor:
+{{Profil bağlantısı}}
+
+Sıralama, herkese açık verilere (örneğin Google yorumlarına) dayanıyor. Bulamadığımız bilgileri, örneğin kuruluş yılını, yeni başlayanlar için dersleri veya etkinlikleri doğrularsanız okulunuz daha fazla puan alır. Bu ücretsizdir:
+https://latindanceawards.com/bewerbung
+
+Daha fazlasını isterseniz ayda 5 €’dan başlayan isteğe bağlı ücretli planlar var (örneğin deneme dersi düğmesi, fotoğraflar, videolar ve doğrulanmış okul işareti). Tüm ayrıntılar:
+https://latindanceawards.com/preise
+
+Sıralamada yer almak istemezseniz bu e-postayı yanıtlamanız yeterli, okulunuzu kaldırırız.
+
+Saygılarımızla
+Mateus
+Latin Dance Awards
+
+--
+Latin Dance Awards · latindanceawards.com · Yasal bilgiler: https://latindanceawards.com/impressum

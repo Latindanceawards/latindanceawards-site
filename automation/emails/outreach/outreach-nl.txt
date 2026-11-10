@@ -1,0 +1,21 @@
+Subject: {{Naam van de school}} in de bachata-ranglijst: controleer en vul je gegevens aan
+
+Hallo {{Voornaam}},
+
+Ik ben Mateus van Latin Dance Awards, een onafhankelijke ranglijst van Latin-dansscholen in Europa. Jouw school {{Naam van de school}} ({{Stad}}) staat al in onze ranglijst, op plaats {{Plaats}}:
+{{Profiellink}}
+
+De positie is gebaseerd op openbare gegevens (bijvoorbeeld Google-recensies). Als je gegevens bevestigt die we niet konden vinden, zoals het oprichtingsjaar, lessen voor beginners of evenementen, krijgt je school meer punten. Dat is gratis:
+https://latindanceawards.com/bewerbung
+
+Wil je meer, dan zijn er optionele betaalde pakketten vanaf € 5 per maand (bijvoorbeeld een proefles-knop, foto’s, video’s en het vinkje voor gecontroleerde school). Alles hier:
+https://latindanceawards.com/preise
+
+Wil je liever niet in de ranglijst staan, antwoord dan op deze e-mail en we verwijderen je school.
+
+Met vriendelijke groet
+Mateus
+Latin Dance Awards
+
+--
+Latin Dance Awards · latindanceawards.com · Juridische informatie: https://latindanceawards.com/impressum

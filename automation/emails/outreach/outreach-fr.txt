@@ -1,0 +1,21 @@
+Subject: {{Nom de l’école}} dans le classement bachata : vérifiez et complétez vos infos
+
+Bonjour {{Prénom}},
+
+Je suis Mateus, de Latin Dance Awards, un classement indépendant des écoles de danses latines en Europe. Votre école {{Nom de l’école}} ({{Ville}}) figure déjà dans notre classement, à la place {{Place}} :
+{{Lien du profil}}
+
+La position repose sur des données publiques (par exemple les avis Google). Si vous nous confirmez des informations introuvables, comme l’année de création, les cours pour débutants ou les événements, votre école gagne des points. C’est gratuit :
+https://latindanceawards.com/bewerbung
+
+Si vous voulez aller plus loin, il existe des formules payantes facultatives à partir de 5 € par mois (par exemple un bouton de cours d’essai, des photos, des vidéos et le badge « école vérifiée »). Tout est ici :
+https://latindanceawards.com/preise
+
+Si vous préférez ne pas figurer dans le classement, répondez simplement à cet e-mail et nous retirerons votre école.
+
+Cordialement
+Mateus
+Latin Dance Awards
+
+--
+Latin Dance Awards · latindanceawards.com · Mentions légales : https://latindanceawards.com/impressum
