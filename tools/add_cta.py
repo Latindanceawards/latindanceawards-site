@@ -36,6 +36,19 @@ def block(slug):
       'function f(){var l=/^de/i.test(document.documentElement.lang||"de")?"de":"en";r.querySelectorAll("[data-c]").forEach(function(e){e.innerHTML=T[l][e.dataset.c]})}'
       'f();new MutationObserver(f).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]})})();</script>'
       % (PRO, ref, SPOT, ref, d))
+OWN_MARK = '<!--lda-own-->'
+OWN_CSS = ('<style>.own{padding:18px 0 0}.own-box{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;'
+ 'padding:18px 24px;border-radius:18px;border:1.5px solid rgba(228,185,91,.55);background:linear-gradient(100deg,rgba(228,185,91,.18),var(--card,#161214) 70%)}'
+ '.own-t{margin:0;flex:1 1 320px;color:var(--muted,#b9aa98);font-size:15px;line-height:1.5}.own-t b{display:block;font-family:var(--serif,Georgia,serif);font-weight:500;'
+ 'font-size:clamp(19px,2.6vw,24px);color:var(--cream,#F6E7D3);margin-bottom:2px}@media(max-width:560px){.own .btn{width:100%}}</style>')
+def own():
+    import json
+    T = {'de': {'h': 'Gehört dir diese Schule?', 'p': 'Schick uns deine Infos. Mit bestätigten Daten bekommt sie mehr Punkte und steigt im Ranking.', 'b': 'Infos senden und höher platziert werden'},
+         'en': {'h': 'Do you own this school?', 'p': 'Send us your information. Confirmed details earn more points and move it up the ranking.', 'b': 'Send information and rank higher'}}
+    return (OWN_MARK + OWN_CSS + '<section class="own" aria-label="Own"><div class="wrap"><div class="own-box"><p class="own-t"><b data-c="h"></b><span data-c="p"></span></p>'
+      '<a class="btn btn-gold" href="/bewerbung" data-c="b"></a></div></div></section>'
+      '<script>(function(){var T=%s,r=document.currentScript.previousElementSibling;function f(){var l=/^de/i.test(document.documentElement.lang||"de")?"de":"en";'
+      'r.querySelectorAll("[data-c]").forEach(function(e){e.innerHTML=T[l][e.dataset.c]})}f();new MutationObserver(f).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]})})();</script>' % json.dumps(T, ensure_ascii=False))
 files = [(h, None) for h in HOMES]
 for d in SCHOOL_DIRS:
     for f in glob.glob(os.path.join(ROOT, d, '*.html')): files.append((os.path.relpath(f, ROOT), os.path.basename(f)[:-5]))
@@ -44,7 +57,12 @@ for rel, slug in files:
     p = os.path.join(ROOT, rel)
     if not os.path.exists(p): continue
     s = open(p, encoding='utf-8').read()
-    if MARK in s or '</main>' not in s: continue
-    i = s.rindex('</main>')
-    open(p, 'w', encoding='utf-8').write(s[:i] + block(slug) + '\n' + s[i:]); n += 1
+    if '</main>' not in s: continue
+    t = s
+    if MARK not in t:
+        i = t.rindex('</main>'); t = t[:i] + block(slug) + '\n' + t[i:]
+    if slug and OWN_MARK not in t and '<section class="sp-hero"' in t:
+        j = t.index('</section>', t.index('<section class="sp-hero"')) + len('</section>')
+        t = t[:j] + '\n' + own() + t[j:]
+    if t != s: open(p, 'w', encoding='utf-8').write(t); n += 1
 print('cta added on', n, 'pages')
