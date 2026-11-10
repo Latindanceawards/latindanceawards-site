@@ -114,7 +114,7 @@ def rewrite_links(s, src):
 
 # ---------- script patches ----------
 CLICK = 'b.addEventListener("click",function(){ setLang(b.dataset.lang); });'
-START_RE = re.compile(r'var start="de";\s*try\{ var q=new URLSearchParams\(location\.search\)\.get\("lang"\);.*?\}catch\(e\)\{\}', re.S)
+START_RE = re.compile(r'var start="de";\s*try\{ (?:var q=new URLSearchParams\(location\.search\)\.get\("lang"\);.*?|if\(new URLSearchParams\(location\.search\)\.get\("lang"\)==="en"\)\{ location\.replace\("[^"]*"\+location\.hash\); return; \} )\}catch\(e\)\{\}', re.S)
 
 def patch_de_script(s, p):
     s = s.replace(CLICK, 'b.addEventListener("click",function(){ if(b.dataset.lang==="en"){ location.href="%s"; } else setLang(b.dataset.lang); });' % en_path(p))

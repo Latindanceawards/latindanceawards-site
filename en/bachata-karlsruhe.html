@@ -1020,7 +1020,7 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
     document.dispatchEvent(new CustomEvent("langchange",{detail:l}));
   }
   document.querySelectorAll(".lang button").forEach(function(b){ b.addEventListener("click",function(){ if(b.dataset.lang==="en"){ location.href="/en/bachata-karlsruhe"; } else setLang(b.dataset.lang); }); });
-  var start="de"; try{ if(new URLSearchParams(location.search).get("lang")==="en"){ location.replace("/en/bachata-karlsruhe"+location.hash); return; } }catch(e){}
+  var start="en";
   META.de={title:document.title, desc:document.querySelector('meta[name="description"]').content};
 
   if(start==="en") setLang("en");

@@ -144,11 +144,10 @@ faq_html = ('<section class="block alt" id="faq"><div class="wrap"><div class="s
 
 hero_html = hero(('Europa · Bachata Awards', 'Europe · Bachata Awards'),
   ('Beste Bachata-Schulen in Europa: das Ranking', 'The best Bachata schools in Europe: the ranking'),
-  (f'Ein Ranking für ganz Europa und ein eigenes Ranking für jedes Land: {len(ALL)} Schulen in {NCTRY} Ländern, unabhängig bewertet nach öffentlichen Daten.',
-   f'One ranking for all of Europe and a separate ranking for each country: {len(ALL)} schools in {NCTRY} countries, scored independently from public data.'),
-  [('cal', f'<b>{len(ALL)} Schulen</b> in {NCD + NC + NCS + NCI + NCPT + NCF + NCN + NCU + NCBE + NCIE + NCAT + NCCH + NCEE + NCND + NCEM} Städten', f'<b>{len(ALL)} schools</b> in {NCD + NC + NCS + NCI + NCPT + NCF + NCN + NCU + NCBE + NCIE + NCAT + NCCH + NCEE + NCND + NCEM} cities'),
-   ('check', 'Unabhängig, <b>nicht käuflich</b>', 'Independent, <b>not for sale</b>'),
-   ('clock', 'Deutschland <b>20. Dez</b> · Polen, Spanien, Italien, Portugal, Frankreich, Niederlande, UK, BE, IE, AT, CH, Osteuropa, Skandinavien, Mittelmeer <b>Frühjahr 2027</b>', 'Germany <b>Dec 20</b> · Poland, Spain, Italy, Portugal, France, Netherlands, UK, BE, IE, AT, CH, Eastern Europe, Nordics, Eastern Mediterranean <b>spring 2027</b>')],
+  (f'Ein Ranking für ganz Europa und eins für jedes Land, unabhängig bewertet nach öffentlichen Daten.',
+   f'One ranking for all of Europe and one for each country, scored independently from public data.'),
+  [('cal', f'<b>{len(ALL)} Schulen</b> in {NCTRY} Ländern', f'<b>{len(ALL)} schools</b> in {NCTRY} countries'),
+   ('clock', 'Deutschland <b>20. Dez</b> · alle anderen Länder <b>Frühjahr 2027</b>', 'Germany <b>Dec 20</b> · all other countries <b>spring 2027</b>')],
   f'<a class="btn btn-gold" href="#ranking">{t("span", "Europa-Ranking ansehen", "See the Europe ranking")}</a><a class="btn btn-ghost" href="bewerbung.html">{t("span", "Schule kostenlos anmelden", "Enter a school for free")}</a>')
 
 CSS = ('<style>.eu-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}'
