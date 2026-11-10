@@ -155,7 +155,7 @@ def render(l, name='{{School}}', city='{{City}}', rank='{{Rank}}', link='{{Profi
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#080707" style="background:#080707"><tr><td align="center" bgcolor="#080707" style="background:#080707;padding:28px 14px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%">
 <tr><td align="center" style="padding:0 0 18px"><a href="https://latindanceawards.com"><img src="{ASSET}email-header.png" width="300" height="75" alt="Latin Dance Awards" style="display:block;border:0;font:600 22px {SERIF};color:#F6E7D3"></a></td></tr>
-<tr><td bgcolor="#131011" style="background:#131011;;border:1.5px solid #8a7440;border-radius:24px;padding:34px 30px">
+<tr><td style="padding:6px 4px 0">
 <p style="margin:0 0 14px;font:500 22px/1.25 {SERIF};color:#F8E2A6">{hi_txt}</p>
 {P(intro)}
 {proof(l)}
