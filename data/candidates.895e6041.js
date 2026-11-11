@@ -1,0 +1,3047 @@
+window.__CAND={
+    "frankfurt": [
+      {name:"Alma Dance Frankfurt", sc:[10.0, 10.0, 10.0, 23.4, 9.1, 9.5], fx:["5,0 ★ · 155", "4.123 · 490"], url:"https://alma-dance-frankfurt.de/", st:["Sensual", "Dominicana"]},
+      {name:"Tanzschule Monika Bauer", sc:[8.0, 7.0, 8.0, 17.3, 8.8, 8.4], fx:["4,6 ★ · 126", "1.694 · 307"], url:"https://www.monika-bauer.de/", st:[]},
+      {name:"LaCalidad Dance Center", sc:[0.0, 10.0, 5.0, 22.2, 9.6, 9.8], fx:["4,9 ★ · 205", "5.958 · 1.017"], url:"https://www.lacalidad.de/", st:[]},
+      {name:"Salsa Auténtica", sc:[7.0, 5.0, 5.0, 22.1, 8.1, 8.0], fx:["4,9 ★ · 90", "1.726 · 142"], url:"http://www.salsa-autentica.de/", st:[]},
+      {name:"DNA Dance Studios", sc:[0.0, 10.0, 4.0, 22.4, 8.1, 9.1], fx:["5,0 ★ · 87", "3.379 · 346"], url:"https://www.dna-dance.com/", st:[]},
+      {name:"Movida Dance Academy", sc:[0.0, 8.0, 8.0, 23.9, 10.0, 0.0], fx:["4,9 ★ · 478", "–"], url:"https://www.bachata-frankfurt.de/", st:["Dominicana"]},
+      {name:"Momento Cubano", sc:[10.0, 10.0, 2.0, 19.8, 6.2, 0.0], fx:["5,0 ★ · 31", "–"], url:"https://momentocubano.com/", st:[]},
+      {name:"Tanzschule Conexión", sc:[0.0, 5.0, 9.0, 21.4, 9.4, 0.0], fx:["4,5 ★ · 188", "–"], url:"http://www.conexion.de/", st:[]},
+      {name:"Tanzstudio Andres", sc:[0.0, 5.0, 0.0, 19.0, 5.8, 0.0], fx:["5,0 ★ · 24", "–"], url:"https://tanzmitandres.de/", st:[]},
+      {name:"FluxDance", sc:[1.0, 8.0, 9.0, 0.0, 0.0, 6.5], fx:["–", "612 · 32"], url:"https://www.fluxdance.de/", st:[]}
+    ],
+    "hamburg": [
+      {name:"Hamburg Dance Academy", sc:[10.0, 10.0, 9.0, 22.4, 10.0, 7.6], fx:["4,9 ★ · 254", "609 · 257"], url:"https://hamburg-dance-academy.de/", st:[]},
+      {name:"Tanzschule die2", sc:[10.0, 8.0, 6.0, 21.6, 8.8, 7.3], fx:["4,9 ★ · 128", "1.054 · 82"], url:"https://tanzschuledie2.de/", st:[]},
+      {name:"A Bailar Hamburg", sc:[0.0, 10.0, 9.0, 18.4, 7.9, 9.3], fx:["4,7 ★ · 77", "4.363 · 532"], url:"https://www.abailar-hamburg.de/", st:["Dominicana"]},
+      {name:"Mi Pasión Dance School", sc:[0.0, 3.0, 9.0, 22.2, 7.9, 9.6], fx:["5,0 ★ · 80", "4.592 · 1.209"], url:"http://mipasiondanceschool.com/", st:[]},
+      {name:"Bachata Hamburg", sc:[0.0, 10.0, 6.0, 19.7, 6.2, 8.7], fx:["5,0 ★ · 30", "2.566 · 259"], url:"https://www.bachata-hamburg.de/", st:["Sensual"]},
+      {name:"ICB Studios", sc:[0.0, 7.0, 7.0, 20.0, 6.4, 8.2], fx:["5,0 ★ · 33", "2.579 · 116"], url:"https://icbstudios.com/", st:["Sensual"]},
+      {name:"AH-DanceCompany", sc:[0.0, 10.0, 3.0, 20.1, 6.5, 8.2], fx:["5,0 ★ · 35", "1.435 · 272"], url:"https://ahdancecompany.de/", st:["Sensual"]},
+      {name:"SalsaHH", sc:[10.0, 7.0, 7.0, 16.1, 6.2, 0.0], fx:["4,6 ★ · 30", "–"], url:"http://www.salsahh.de/", st:[]},
+      {name:"BachataSalsaHamburg", sc:[0.0, 10.0, 0.0, 19.6, 6.1, 9.6], fx:["5,0 ★ · 29", "11.000 · 316"], url:"https://www.bachatasalsahamburg.de/", st:[]},
+      {name:"BellasArtes Latin DanceSchool", sc:[0.0, 8.0, 3.0, 21.6, 7.7, 5.0], fx:["4,9 ★ · 72", "344 · 9"], url:"https://salsahamburg.info/", st:[]}
+    ],
+    "berlin": [
+      {name:"Cumbancha Tanzschule", sc:[10.0, 10.0, 4.0, 23.9, 9.9, 9.7], fx:["5,0 ★ · 243", "5.739 · 1.483"], url:"https://www.cumbancha.de/", st:[]},
+      {name:"TanzSuite", sc:[10.0, 10.0, 10.0, 20.9, 8.0, 6.6], fx:["4,9 ★ · 82", "393 · 82"], url:"https://www.tanzsuite.de/", st:[]},
+      {name:"La Mambita", sc:[10.0, 8.0, 7.0, 22.4, 10.0, 7.9], fx:["4,9 ★ · 252", "1.642 · 138"], url:"https://www.mambita.de/", st:[]},
+      {name:"Tanzschule Traumtänzer", sc:[10.0, 10.0, 10.0, 16.1, 9.7, 8.9], fx:["4,5 ★ · 212", "1.470 · 864"], url:"https://www.traumtaenzer.de/", st:[]},
+      {name:"MAXIXE Tanzschule", sc:[10.0, 8.0, 7.0, 21.2, 8.3, 0.0], fx:["4,9 ★ · 97", "–"], url:"https://www.maxixe.de/", st:[]},
+      {name:"Elite Dance Studio", sc:[10.0, 8.0, 8.0, 20.7, 7.7, 0.0], fx:["4,9 ★ · 71", "–"], url:"https://www.elitedancestudio.de/", st:[]},
+      {name:"Zapatissimo", sc:[0.0, 8.0, 7.0, 20.9, 9.9, 7.8], fx:["4,8 ★ · 234", "2.583 · 48"], url:"https://www.zapatissimo.de/", st:["Sensual"]},
+      {name:"BachatAcademy", sc:[0.0, 10.0, 7.0, 19.9, 6.3, 8.6], fx:["5,0 ★ · 32", "2.857 · 238"], url:"https://www.bachatacademy.de/", st:[]},
+      {name:"Bailaconsol", sc:[0.0, 7.0, 4.0, 22.4, 8.1, 8.0], fx:["5,0 ★ · 87", "2.660 · 106"], url:"http://www.bailaconsol.com/", st:["Sensual"]},
+      {name:"Dolce Vita Dance Studio", sc:[0.0, 8.0, 4.0, 22.0, 9.3, 0.0], fx:["4,9 ★ · 168", "–"], url:"https://www.dolce-vita-dance.com/", st:[]},
+      {name:"Artdance Tanzstudio", sc:[0.0, 5.0, 0.0, 19.6, 8.0, 0.0], fx:["4,8 ★ · 81", "–"], url:"https://www.artdance-tanzstudio.de/", st:["Moderna"]},
+      {name:"MiSalsa", sc:[0.0, 8.0, 3.0, 11.3, 6.1, 0.0], fx:["4,1 ★ · 28", "–"], url:"https://misalsa.de/", st:[]},
+      {name:"Tumba'o Danzas", sc:[0.0, 0.0, 3.0, 13.8, 1.3, 5.8], fx:["5,0 ★ · 1", "186 · 54"], url:"https://tumbao-danzas.de/", st:[]}
+    ],
+    "ulm": [
+      {name:"Ritmo Latino Tanzschule", sc:[10.0, 8.0, 10.0, 21.9, 9.1, 8.3], fx:["4,9 ★ · 154", "1.590 · 291"], url:"https://www.ritmolatino.de/", st:[]}
+    ],
+    "saarbruecken": [
+      {name:"Cubaila", sc:[8.0, 7.0, 10.0, 22.9, 8.6, 9.3], fx:["5,0 ★ · 116", "3.623 · 551"], url:"https://www.cubaila.de/", st:[]},
+      {name:"Bachatasaar", sc:[0.0, 10.0, 9.0, 22.9, 8.6, 8.3], fx:["5,0 ★ · 116", "1.512 · 284"], url:"https://bachatasaar.de/", st:["Sensual"]},
+      {name:"Belinda Brandl Tanzschule", sc:[10.0, 8.0, 5.0, 17.3, 5.8, 6.9], fx:["4,8 ★ · 23", "425 · 123"], url:"https://www.salsa-dancing.de/", st:[]},
+      {name:"Salsa con Corazón Saarbrücken", sc:[0.0, 7.0, 3.0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://salsa-con-corazon-sb.com/", st:[]}
+    ],
+    "gelsenkirchen": [
+      {name:"Tanz bei Schwarz", sc:[8.0, 10.0, 3.0, 23.9, 10.0, 9.8], fx:["5,0 ★ · 245", "9.119 · 438"], url:"https://www.tanz-bei-schwarz.de/", st:[]},
+      {name:"Tanzpott", sc:[0.0, 10.0, 3.0, 15.7, 5.9, 0.0], fx:["4,6 ★ · 25", "–"], url:"https://tanzpott.de/", st:[]},
+      {name:"Isabel Kulessa Bachata", sc:[0.0, 0.0, 0.0, 17.5, 4.9, 9.8], fx:["5,0 ★ · 14", "2.955 · 1.628"], url:"https://isabel-kulessa.de/", st:[]}
+    ],
+    "bonn": [
+      {name:"bonn tanzt", sc:[10.0, 10.0, 6.0, 20.1, 8.7, 9.6], fx:["4,8 ★ · 120", "4.100 · 777"], url:"https://www.bonntanzt.de/", st:[]},
+      {name:"Tanzschule Max7", sc:[0.0, 7.0, 7.0, 21.9, 9.2, 8.5], fx:["4,9 ★ · 156", "3.215 · 183"], url:"https://www.max7.de/", st:[]},
+      {name:"YOUnited Dance", sc:[0.0, 8.0, 6.0, 21.2, 7.2, 7.1], fx:["5,0 ★ · 51", "955 · 69"], url:"https://www.younited.dance/", st:[]}
+    ],
+    "freiburg": [
+      {name:"AYA Latin Dance Academy", sc:[8.0, 10.0, 6.0, 22.6, 8.3, 9.4], fx:["5,0 ★ · 96", "6.570 · 361"], url:"https://aya-dance.de/", st:[]},
+      {name:"Salsa con Pasión", sc:[8.0, 10.0, 6.0, 21.7, 8.9, 8.9], fx:["4,9 ★ · 135", "2.542 · 408"], url:"https://www.salsa-con-pasion.de/", st:["Sensual", "Dominicana", "Moderna"]},
+      {name:"Gregorio Dance School", sc:[0.0, 8.0, 3.0, 19.8, 6.3, 7.8], fx:["5,0 ★ · 31", "1.184 · 167"], url:"https://gregoriodance.com/", st:[]},
+      {name:"Timbalaye", sc:[0.0, 5.0, 8.0, 18.2, 6.6, 0.0], fx:["4,8 ★ · 37", "–"], url:"https://salsa-freiburg.de/", st:[]},
+      {name:"Saltango", sc:[0.0, 7.0, 3.0, 19.7, 6.2, 0.0], fx:["5,0 ★ · 30", "–"], url:"https://www.kizomba-freiburg.com/", st:[]}
+    ],
+    "wuerzburg": [
+      {name:"DanceEncore", sc:[8.0, 10.0, 6.0, 21.3, 8.4, 10.0], fx:["4,9 ★ · 103", "9.861 · 1.079"], url:"https://danceencore.de/", st:["Sensual", "Moderna"]},
+      {name:"Bailamos Würzburg", sc:[0.0, 8.0, 9.0, 19.1, 6.5, 0.0], fx:["4,9 ★ · 35", "–"], url:"https://www.bailamos-wuerzburg.de/", st:[]}
+    ],
+    "stuttgart": [
+      {name:"Salsa Company Stuttgart", sc:[10.0, 7.0, 10.0, 17.5, 9.2, 10.0], fx:["4,6 ★ · 160", "23.000 · 545"], url:"https://www.salsa-company.de/", st:[]},
+      {name:"víaDanza Salsa-Tanzschule", sc:[10.0, 0.0, 5.0, 17.4, 6.8, 8.6], fx:["4,7 ★ · 42", "2.104 · 314"], url:"https://www.viadanza-tanzschule.de/", st:[]},
+      {name:"el pasito", sc:[10.0, 7.0, 8.0, 17.7, 5.0, 0.0], fx:["5,0 ★ · 15", "–"], url:"https://www.elpasito.de/", st:[]},
+      {name:"Alma Latina", sc:[0.0, 10.0, 5.0, 21.5, 7.4, 0.0], fx:["5,0 ★ · 59", "–"], url:"https://www.almalatina.de/", st:["Sensual", "Dominicana"]},
+      {name:"Tanzfitness Stuttgart", sc:[0.0, 8.0, 0.0, 20.3, 7.4, 6.8], fx:["4,9 ★ · 58", "595 · 68"], url:"https://www.tanzfitness-stuttgart.de/", st:[]},
+      {name:"Tanzschule Clavisol", sc:[0.0, 7.0, 6.0, 19.0, 5.8, 0.0], fx:["5,0 ★ · 24", "–"], url:"https://clavisol.com/", st:[]},
+      {name:"Esencia Latina Dance Company", sc:[0.0, 8.0, 0.0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://esencialatinadancecompany.com/", st:[]}
+    ],
+    "muenchen": [
+      {name:"Salsa Y Corazon", sc:[10.0, 7.0, 8.0, 21.4, 8.4, 8.3], fx:["4,9 ★ · 103", "2.000 · 254"], url:"https://www.salsa-y-corazon.de/", st:[]},
+      {name:"Tanzhaus Emotion", sc:[10.0, 8.0, 6.0, 21.9, 9.2, 7.5], fx:["4,9 ★ · 158", "959 · 128"], url:"https://www.tanzhausemotion.de/", st:["Sensual"]},
+      {name:"Salsea Dance Academy", sc:[0.0, 10.0, 10.0, 21.2, 8.2, 8.8], fx:["4,9 ★ · 94", "4.395 · 175"], url:"https://salsea.de/", st:[]},
+      {name:"Salsa OnStage", sc:[0.0, 7.0, 9.0, 22.5, 8.2, 9.8], fx:["5,0 ★ · 93", "7.070 · 606"], url:"http://www.salsa-onstage.de/", st:["Dominicana"]},
+      {name:"Salsa Club Munich", sc:[5.0, 7.0, 5.0, 19.9, 8.2, 9.6], fx:["4,8 ★ · 90", "8.876 · 427"], url:"http://www.salsaclub-munich.de/", st:[]},
+      {name:"Dance With George", sc:[0.0, 7.0, 8.0, 20.8, 9.7, 9.0], fx:["4,8 ★ · 211", "2.706 · 656"], url:"https://www.dancewithgeorge.com/", st:[]},
+      {name:"KULT Tanzschule", sc:[0.0, 10.0, 7.0, 18.8, 8.9, 9.8], fx:["4,7 ★ · 139", "5.176 · 906"], url:"https://www.kult-tanzschule.de/", st:[]},
+      {name:"Salsamás Munich", sc:[10.0, 8.0, 6.0, 21.0, 7.0, 0.0], fx:["5,0 ★ · 48", "–"], url:"https://www.salsamas.de/", st:[]},
+      {name:"Lazarte Dance Academy", sc:[0.0, 10.0, 6.0, 21.5, 7.3, 6.0], fx:["5,0 ★ · 58", "404 · 31"], url:"https://www.lazartedanceacademy.de/", st:[]},
+      {name:"Mike Dance", sc:[0.0, 6.0, 9.0, 20.2, 6.7, 7.9], fx:["4,9 ★ · 40", "763 · 211"], url:"https://mike-dance.de/", st:[]},
+      {name:"Salsa Tanzen Munich", sc:[0.0, 10.0, 5.0, 18.5, 6.0, 6.9], fx:["4,9 ★ · 27", "761 · 61"], url:"https://salsatanzenmunich.com/", st:["Sensual"]},
+      {name:"Casa Ritmo Dance Academy", sc:[0.0, 8.0, 8.0, 17.5, 4.9, 5.8], fx:["5,0 ★ · 14", "436 · 20"], url:"https://casaritmo.de/", st:["Sensual"]},
+      {name:"Dance Munich", sc:[0.0, 8.0, 3.0, 0.0, 0.0, 0.0], fx:["–", "–"], url:"https://dancemunich.de/", st:[]}
+    ],
+    "koeln": [
+      {name:"Bachata Mastery Köln", sc:[0.0, 10.0, 9.0, 24.2, 10.0, 9.3], fx:["5,0 ★ · 327", "5.100 · 493"], url:"https://www.bachatakoeln.de/bachata-kurse-koeln", st:["Sensual"]},
+      {name:"Tanzraum Köln", sc:[0.0, 10.0, 4.0, 23.1, 9.4, 10.0], fx:["4,9 ★ · 180", "13.000 · 1.001"], url:"https://tanzschule-tanzraum.de/", st:["Sensual", "Dominicana"]},
+      {name:"Bailando Köln", sc:[0.0, 8.0, 8.0, 23.5, 9.3, 7.4], fx:["5,0 ★ · 172", "1.715 · 63"], url:"https://bailando-koeln.de/", st:["Dominicana", "Sensual", "Moderna"]},
+      {name:"Baila Colonia", sc:[0.0, 8.0, 8.0, 23.7, 9.5, 6.1], fx:["5,0 ★ · 198", "205 · 52"], url:"https://baila-tanzen-lernen.de/", st:["Dominicana", "Moderna"]},
+      {name:"Salsa in Köln", sc:[0.0, 8.0, 5.0, 21.3, 7.2, 8.8], fx:["5,0 ★ · 53", "2.316 · 334"], url:"https://www.salsainkoeln.de/", st:[]},
+      {name:"Salsa Köln", sc:[0.0, 5.0, 9.0, 21.1, 7.0, 7.8], fx:["5,0 ★ · 49", "3.312 · 73"], url:"http://salsakoeln.de/", st:[]},
+      {name:"Tanzen Lernen In Köln", sc:[0.0, 7.0, 7.0, 21.1, 7.3, 6.1], fx:["4,9 ★ · 57", "302 · 40"], url:"https://salsaundbachatalerneninkoeln.de/", st:[]},
+      {name:"La Danza Tanzzentrum", sc:[0.0, 5.0, 5.0, 15.1, 8.1, 9.9], fx:["4,4 ★ · 87", "7.376 · 980"], url:"https://la-danza.de/", st:["Sensual", "Dominicana"]},
+      {name:"DanSazón Tanzschule", sc:[0.0, 3.0, 4.0, 21.4, 7.6, 7.0], fx:["4,9 ★ · 66", "811 · 66"], url:"http://www.dansazon.de/", st:["Sensual", "Dominicana"]},
+      {name:"LatinSalsa", sc:[0.0, 10.0, 6.0, 17.9, 6.2, 0.0], fx:["4,8 ★ · 30", "–"], url:"https://latinsalsa.de/", st:[]}
+    ],
+    "oldenburg": [
+      {name:"Bailando Oldenburg", sc:[7.0, 10.0, 5.0, 22.9, 8.6, 8.6], fx:["5,0 ★ · 112", "1.756 · 420"], url:"https://www.bailando-oldenburg.de/", st:[]},
+      {name:"Bachataraum", sc:[0.0, 7.0, 8.0, 23.2, 9.0, 7.7], fx:["5,0 ★ · 141", "1.798 · 95"], url:"https://www.bachataraum.de/", st:["Sensual"]},
+      {name:"Salsa y Sabor", sc:[0.0, 8.0, 7.0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 44", "–"], url:"https://www.salsaysabor.de/", st:["Sensual"]}
+    ],
+    "fulda": [
+      {name:"Tanzschule MoTaBa", sc:[10.0, 10.0, 7.0, 20.8, 7.8, 6.4], fx:["4,9 ★ · 74", "577 · 35"], url:"https://www.motaba.org/", st:[]},
+      {name:"Latin Dance Community Fulda", sc:[0.0, 10.0, 7.0, 20.1, 7.3, 6.9], fx:["4,9 ★ · 54", "987 · 45"], url:"https://salsa-fd.de/", st:[]}
+    ],
+    "ludwigsburg": [
+      {name:"MiSalsa Ludwigsburg", sc:[5.0, 10.0, 7.0, 20.9, 7.9, 8.8], fx:["4,9 ★ · 78", "2.058 · 484"], url:"https://www.misalsa-lb.de/", st:[]},
+      {name:"Salsa Company Ludwigsburg", sc:[10.0, 8.0, 10.0, 15.0, 6.3, 7.1], fx:["4,5 ★ · 32", "968 · 62"], url:"https://salsa-company-ludwigsburg.de/", st:[]}
+    ],
+    "koblenz": [
+      {name:"Tanzstudio CHANGA!", sc:[7.0, 10.0, 9.0, 16.4, 6.9, 9.7], fx:["4,6 ★ · 45", "11.000 · 289"], url:"https://www.changa.de/", st:["Dominicana"]}
+    ],
+    "konstanz": [
+      {name:"Tanzwerk Konstanz", sc:[10.0, 10.0, 4.0, 18.2, 7.9, 8.2], fx:["4,7 ★ · 76", "15.000 · 20"], url:"https://www.tanzwerk.dance/", st:[]},
+      {name:"flamemotions", sc:[0.0, 5.0, 4.0, 17.3, 4.8, 0.0], fx:["5,0 ★ · 13", "–"], url:"https://www.flamemotions.com/", st:[]}
+    ],
+    "remscheid": [
+      {name:"Tanzraum Remscheid", sc:[5.0, 10.0, 4.0, 22.5, 8.2, 8.0], fx:["5,0 ★ · 90", "1.470 · 200"], url:"https://www.tanzraum-rs.de/", st:[]}
+    ],
+    "hannover": [
+      {name:"Salsa del Alma", sc:[0.0, 10.0, 6.0, 22.0, 9.3, 10.0], fx:["4,9 ★ · 171", "7.730 · 1.015"], url:"https://www.salsa-del-alma.de/", st:["Sensual"]},
+      {name:"You Dance Latin Art Studio", sc:[7.0, 8.0, 9.0, 16.7, 7.4, 0.0], fx:["4,6 ★ · 59", "–"], url:"https://www.u-dance.de/", st:[]}
+    ],
+    "moenchengladbach": [
+      {name:"La Mirella", sc:[0.0, 7.0, 9.0, 22.2, 9.6, 8.7], fx:["4,9 ★ · 201", "1.470 · 602"], url:"https://www.la-mirella.de/", st:[]}
+    ],
+    "celle": [
+      {name:"TanzHaus Celle", sc:[10.0, 10.0, 4.0, 18.2, 6.6, 7.6], fx:["4,8 ★ · 37", "1.468 · 104"], url:"https://www.tanzhaus-celle.de/", st:[]}
+    ],
+    "tuebingen": [
+      {name:"Tanzschule Salsamara", sc:[10.0, 10.0, 10.0, 18.1, 7.7, 0.0], fx:["4,7 ★ · 68", "–"], url:"https://salsa-mara-tuebingen.de/", st:[]}
+    ],
+    "erlangen": [
+      {name:"Gillet Rupprecht Die Tanzschule", sc:[0.0, 7.0, 8.0, 22.3, 9.8, 8.6], fx:["4,9 ★ · 224", "2.172 · 334"], url:"https://www.rupprecht-gillet.de/", st:[]},
+      {name:"Salsa Tanzstudio Erlangen", sc:[0.0, 8.0, 7.0, 18.6, 6.1, 0.0], fx:["4,9 ★ · 28", "–"], url:"https://salsa-erlangen.dance/", st:["Sensual", "Moderna"]}
+    ],
+    "karlsruhe": [
+      {name:"Havanna Star", sc:[0.0, 10.0, 8.0, 19.8, 8.3, 9.2], fx:["4,8 ★ · 95", "3.727 · 498"], url:"https://www.havannastar.de/", st:[]},
+      {name:"Tanzstudio Palladium", sc:[0.0, 8.0, 8.0, 17.9, 6.3, 8.1], fx:["4,8 ★ · 32", "859 · 394"], url:"https://www.palladium-karlsruhe.de/", st:[]},
+      {name:"Caricia Tanzschule", sc:[10.0, 0.0, 6.0, 15.0, 4.9, 6.2], fx:["4,6 ★ · 14", "273 · 63"], url:"https://www.caricia.de/", st:[]}
+    ],
+    "braunschweig": [
+      {name:"BAYRA Dance Academy", sc:[7.0, 10.0, 8.0, 17.8, 6.2, 6.0], fx:["4,8 ★ · 30", "464 · 27"], url:"https://bayra.dance/", st:[]},
+      {name:"Bailando Braunschweig", sc:[0.0, 10.0, 3.0, 23.4, 9.2, 8.9], fx:["5,0 ★ · 158", "3.619 · 285"], url:"https://www.bailando-bs.de/", st:[]}
+    ],
+    "duesseldorf": [
+      {name:"Salsa 'n' Fun", sc:[0.0, 10.0, 8.0, 19.8, 8.0, 8.2], fx:["4,8 ★ · 84", "1.935 · 195"], url:"http://www.salsanfun.de/", st:[]},
+      {name:"La Cati Dance", sc:[0.0, 5.0, 5.0, 23.5, 9.3, 8.9], fx:["5,0 ★ · 165", "1.843 · 1.073"], url:"https://www.lacatidance.de/", st:[]},
+      {name:"Anima Dance Community", sc:[0.0, 10.0, 5.0, 18.4, 6.6, 7.7], fx:["4,8 ★ · 38", "2.420 · 38"], url:"https://anima-dance.de/", st:[]},
+      {name:"Salsa Flow", sc:[0.0, 8.0, 8.0, 17.7, 5.0, 7.7], fx:["5,0 ★ · 15", "567 · 338"], url:"https://salsa-flow.de/", st:[]},
+      {name:"Salsa Cubana Düsseldorf", sc:[0.0, 8.0, 6.0, 17.0, 5.0, 7.4], fx:["4,9 ★ · 15", "1.368 · 70"], url:"https://www.salsa-cubana-duesseldorf.de/", st:[]},
+      {name:"Salsa-Teaching", sc:[0.0, 7.0, 3.0, 19.9, 6.5, 6.8], fx:["4,9 ★ · 35", "1.192 · 42"], url:"http://www.salsa-teaching.de/", st:[]}
+    ],
+    "speyer": [
+      {name:"Salsa Tanzschule Habaneando", sc:[0.0, 8.0, 7.0, 21.3, 8.3, 9.2], fx:["4,9 ★ · 99", "4.848 · 419"], url:"https://habaneando.com/", st:[]}
+    ],
+    "aachen": [
+      {name:"Dance Fusion Aachen", sc:[0.0, 10.0, 3.0, 21.7, 8.9, 10.0], fx:["4,9 ★ · 132", "7.890 · 1.343"], url:"https://www.dancefusionaachen.de/", st:[]}
+    ],
+    "heilbronn": [
+      {name:"Salsa Company Heilbronn", sc:[10.0, 7.0, 5.0, 16.7, 7.4, 7.5], fx:["4,6 ★ · 59", "1.366 · 97"], url:"https://salsa-tanzschule-heilbronn.de/", st:["Sensual"]}
+    ],
+    "krefeld": [
+      {name:"LaTinas Dancestudio", sc:[1.0, 10.0, 3.0, 22.9, 8.5, 7.6], fx:["5,0 ★ · 111", "714 · 206"], url:"https://www.latinas-dancestudio.de/", st:[]}
+    ],
+    "ludwigshafen": [
+      {name:"Habaneando", sc:[0.0, 8.0, 6.0, 21.3, 8.3, 9.3], fx:["4,9 ★ · 99", "4.848 · 419"], url:"https://habaneando.com/", st:[]}
+    ],
+    "dresden": [
+      {name:"Kubáname", sc:[0.0, 8.0, 7.0, 20.4, 7.5, 10.0], fx:["4,9 ★ · 63", "11.000 · 955"], url:"https://kubana.me/", st:[]},
+      {name:"BachaDDa", sc:[7.0, 8.0, 3.0, 16.1, 4.8, 7.6], fx:["4,8 ★ · 13", "1.217 · 129"], url:"https://www.bachadda.de/", st:["Sensual", "Moderna"]},
+      {name:"Elementio Tanzstudio", sc:[0.0, 10.0, 7.0, 17.1, 4.6, 7.4], fx:["5,0 ★ · 12", "784 · 149"], url:"https://www.elementio.de/", st:[]},
+      {name:"Bailamor Dresden", sc:[0.0, 8.0, 6.0, 13.1, 7.2, 9.4], fx:["4,3 ★ · 52", "3.942 · 611"], url:"https://www.bailamor.de/", st:["Sensual"]}
+    ],
+    "flensburg": [
+      {name:"Demis Salsa Cubana", sc:[10.0, 5.0, 4.0, 19.0, 5.8, 8.2], fx:["5,0 ★ · 24", "839 · 518"], url:"https://www.demis-salsa-cubana.de/", st:[]}
+    ],
+    "nuernberg": [
+      {name:"Dance Cube Nürnberg", sc:[0.0, 10.0, 6.0, 19.0, 7.3, 8.7], fx:["4,8 ★ · 57", "2.509 · 300"], url:"https://dance-cube-nuernberg.de/", st:[]},
+      {name:"CubaDanza Tanzschule", sc:[0.0, 8.0, 6.0, 21.0, 7.0, 7.5], fx:["5,0 ★ · 48", "553 · 264"], url:"https://www.cubadanza.de/", st:[]},
+      {name:"Latin Groove Tanzschule", sc:[3.0, 8.0, 5.0, 22.5, 10.0, 0.0], fx:["4,9 ★ · 282", "–"], url:"https://www.latin-groove.de/", st:[]},
+      {name:"Tanzschule WILFEGO", sc:[0.0, 8.0, 7.0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 118", "–"], url:"https://www.wilfego.de/", st:["Sensual"]}
+    ],
+    "dortmund": [
+      {name:"La Klave", sc:[0.0, 7.0, 6.0, 20.8, 7.8, 9.3], fx:["4,9 ★ · 74", "3.195 · 687"], url:"https://www.laklave.de/", st:[]},
+      {name:"Tanzen in Dortmund", sc:[0.0, 5.0, 8.0, 18.3, 6.7, 8.9], fx:["4,8 ★ · 39", "2.135 · 507"], url:"https://tanzen-dortmund.de/", st:[]}
+    ],
+    "kassel": [
+      {name:"Latin Dance Community Kassel", sc:[6.0, 8.0, 0.0, 21.6, 7.5, 7.8], fx:["5,0 ★ · 62", "2.755 · 67"], url:"https://salsa-ks.de/", st:["Sensual"]},
+      {name:"Baila Tanzschule Kassel", sc:[0.0, 10.0, 7.0, 17.2, 5.7, 8.1], fx:["4,8 ★ · 22", "1.620 · 193"], url:"https://www.salsa-tanzschule-kassel.de/", st:[]}
+    ],
+    "mannheim": [
+      {name:"Chantal Miller Academy", sc:[0.0, 10.0, 5.0, 19.6, 7.9, 8.3], fx:["4,8 ★ · 79", "1.983 · 221"], url:"https://www.chantal-miller.academy/", st:[]}
+    ],
+    "essen": [
+      {name:"Salsational Dance Academy", sc:[8.0, 9.0, 5.0, 20.8, 7.8, 0.0], fx:["4,9 ★ · 74", "–"], url:"https://www.kizomba-essen.de/", st:["Sensual", "Dominicana"]},
+      {name:"Tanz Galerie Essen", sc:[0.0, 10.0, 5.0, 20.4, 7.5, 7.6], fx:["4,9 ★ · 62", "1.237 · 117"], url:"https://tanzgalerie-essen.de/", st:[]},
+      {name:"Pedro's Cuba Lounge", sc:[8.0, 3.0, 8.0, 13.1, 7.6, 0.0], fx:["4,3 ★ · 67", "–"], url:"https://pedros-cuba-lounge.de/", st:[]}
+    ],
+    "oberhausen": [
+      {name:"Tanz-Bianca", sc:[3.0, 3.0, 7.0, 22.4, 8.1, 7.0], fx:["5,0 ★ · 89", "627 · 90"], url:"https://www.tanz-bianca.de/", st:[]}
+    ],
+    "bremen": [
+      {name:"Tanzarena Bremen", sc:[0.0, 10.0, 7.0, 15.7, 8.0, 9.6], fx:["4,5 ★ · 80", "3.779 · 913"], url:"https://www.tanzarena.de/", st:[]},
+      {name:"Casa Cultural Bremen", sc:[0.0, 10.0, 5.0, 16.0, 9.3, 9.6], fx:["4,5 ★ · 173", "2.893 · 1.111"], url:"https://www.casa-cultural.de/", st:[]},
+      {name:"Tanz-Fluss Tanzstudio", sc:[0.0, 10.0, 3.0, 17.9, 7.4, 7.9], fx:["4,7 ★ · 58", "1.261 · 193"], url:"https://www.tanz-fluss.de/", st:["Sensual", "Moderna"]},
+      {name:"Bachata LAB Bremen", sc:[0.0, 0.0, 0.0, 18.6, 5.6, 0.0], fx:["5,0 ★ · 21", "–"], url:"https://bachatalab.de/", st:[]}
+    ],
+    "wiesbaden": [
+      {name:"Tanzschule Hohmann", sc:[10.0, 3.0, 7.0, 14.4, 8.0, 7.8], fx:["4,4 ★ · 81", "851 · 257"], url:"https://www.tanzschule-hohmann.com/", st:[]}
+    ],
+    "kempten": [
+      {name:"Tanzschule TANZLATION", sc:[0.0, 10.0, 4.0, 20.5, 7.6, 8.1], fx:["4,9 ★ · 64", "3.266 · 102"], url:"https://www.tanzlation.de/", st:[]},
+      {name:"J&J Dance Tanzschule", sc:[0.0, 10.0, 2.0, 17.0, 6.3, 8.9], fx:["4,7 ★ · 32", "1.622 · 786"], url:"https://jj-dance.com/", st:[]},
+      {name:"Tanzzentrum Allgäu", sc:[0.0, 5.0, 0.0, 17.6, 7.1, 0.0], fx:["4,7 ★ · 49", "–"], url:"https://merengue.de/", st:[]}
+    ],
+    "leipzig": [
+      {name:"Fuego Latino Leipzig", sc:[10.0, 5.0, 0.0, 18.8, 6.3, 8.3], fx:["4,9 ★ · 31", "860 · 598"], url:"https://www.fuego-latino.de/", st:["Sensual"]},
+      {name:"Känguru Salsa", sc:[0.0, 5.0, 0.0, 18.9, 5.8, 7.9], fx:["5,0 ★ · 23", "722 · 343"], url:"https://www.kangurusalsa.com/", st:[]}
+    ],
+    "kiel": [
+      {name:"Salsa am Meer", sc:[6.0, 7.0, 6.0, 15.2, 5.1, 8.2], fx:["4,6 ★ · 16", "931 · 419"], url:"https://www.salsa-am-meer.de/", st:["Moderna"]},
+      {name:"Tanzschule Hand zu Hand", sc:[0.0, 8.0, 0.0, 20.4, 6.6, 0.0], fx:["5,0 ★ · 38", "–"], url:"https://handzuhand-kiel.de/", st:[]}
+    ],
+    "bochum": [
+      {name:"Karina's World Dance Training", sc:[10.0, 7.0, 4.0, 19.9, 6.3, 0.0], fx:["5,0 ★ · 32", "–"], url:"https://karinasworlddancetraining.com/", st:[]},
+      {name:"Salsa Flavors", sc:[0.0, 8.0, 3.0, 17.9, 5.1, 6.0], fx:["5,0 ★ · 16", "662 · 17"], url:"https://salsaflavors.de/", st:[]}
+    ],
+    "boeblingen": [
+      {name:"Salsa Company Böblingen", sc:[10.0, 8.0, 10.0, 12.0, 7.0, 0.0], fx:["4,2 ★ · 46", "–"], url:"https://www.tanzschule-boeblingen.de/", st:[]}
+    ],
+    "aschaffenburg": [
+      {name:"Tanzstudio La Pasion", sc:[0.0, 10.0, 7.0, 21.3, 8.3, 0.0], fx:["4,9 ★ · 99", "–"], url:"https://tanzstudio-lapasion.de/", st:[]}
+    ],
+    "bremerhaven": [
+      {name:"Salsa Loca", sc:[8.0, 5.0, 6.0, 16.6, 4.3, 5.7], fx:["5,0 ★ · 10", "267 · 30"], url:"https://www.salsa-loca-bremerhaven.de/", st:[]}
+    ],
+    "trier": [
+      {name:"Tanzschule DANCE in Trier", sc:[0.0, 10.0, 6.0, 21.0, 7.0, 0.0], fx:["5,0 ★ · 48", "–"], url:"https://www.dance-in-trier.de/", st:[]},
+      {name:"Salsa y Sol Trier", sc:[0.0, 8.0, 5.0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://www.salsaysol.de/", st:["Sensual"]}
+    ],
+    "potsdam": [
+      {name:"Bachata Academy Potsdam", sc:[0.0, 10.0, 6.0, 20.9, 7.0, 0.0], fx:["5,0 ★ · 46", "–"], url:"https://bachatacademy-potsdam.de/", st:[]}
+    ],
+    "augsburg": [
+      {name:"Cuban Salsa Power", sc:[0.0, 8.0, 8.0, 19.7, 8.1, 0.0], fx:["4,8 ★ · 85", "–"], url:"https://www.emilito.de/", st:["Sensual"]}
+    ],
+    "friedrichshafen": [
+      {name:"Love to Dance! Studio", sc:[0.0, 10.0, 10.0, 17.0, 5.5, 0.0], fx:["4,8 ★ · 20", "–"], url:"https://www.love-to-dance.de/", st:[]}
+    ],
+    "mainz": [
+      {name:"Salsa Deli", sc:[0.0, 8.0, 3.0, 21.8, 9.0, 0.0], fx:["4,9 ★ · 142", "–"], url:"https://salsa-deli.com/", st:["Sensual"]}
+    ],
+    "offenburg": [
+      {name:"LaNi-Dance", sc:[0.0, 8.0, 4.0, 18.4, 5.4, 5.4], fx:["5,0 ★ · 19", "190 · 21"], url:"https://www.lani-dance.de/", st:[]}
+    ],
+    "bottrop": [
+      {name:"Cantina di Danza", sc:[0.0, 10.0, 0.0, 18.6, 5.6, 6.6], fx:["5,0 ★ · 21", "504 · 55"], url:"https://cantinadidanza.de/", st:[]}
+    ],
+    "hameln": [
+      {name:"Tanzschule FÜR SIE", sc:[0.0, 5.0, 7.0, 19.9, 8.3, 0.0], fx:["4,8 ★ · 98", "–"], url:"https://www.tsfuersie.de/", st:[]}
+    ],
+    "landshut": [
+      {name:"Tanzschule Tanzparadies", sc:[0.0, 8.0, 4.0, 21.0, 7.1, 0.0], fx:["5,0 ★ · 49", "–"], url:"https://tanzpa.de/", st:[]},
+      {name:"Tanz-Länd", sc:[0.0, 5.0, 4.0, 17.9, 6.3, 0.0], fx:["4,8 ★ · 32", "–"], url:"https://tanz-laend.de/", st:[]}
+    ],
+    "duisburg": [
+      {name:"Salsa con Corazón Duisburg", sc:[0.0, 8.0, 0.0, 22.7, 8.4, 0.0], fx:["5,0 ★ · 103", "–"], url:"https://www.salsacon-corazon.de/", st:["Sensual", "Moderna"]}
+    ],
+    "ansbach": [
+      {name:"Tanzschule Springer", sc:[0.0, 5.0, 4.0, 20.4, 9.2, 0.0], fx:["4,8 ★ · 156", "–"], url:"https://www.tanzschule-springer.de/", st:[]}
+    ],
+    "worms": [
+      {name:"Tanzschule Prinz Carl", sc:[0.0, 5.0, 0.0, 23.6, 9.5, 0.0], fx:["5,0 ★ · 190", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzschule+Prinz+Carl+Worms", st:[]},
+      {name:"Tanzschule Schmitt-Seehaus", sc:[0.0, 5.0, 0.0, 21.3, 8.3, 0.0], fx:["4,9 ★ · 99", "–"], url:"https://schmitt-seehaus.de/", st:[]},
+      {name:"Ralfs Tanzgalerie", sc:[0.0, 5.0, 0.0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 57", "–"], url:"https://ralfstanzgalerie.de/", st:[]}
+    ],
+    "schweinfurt": [
+      {name:"Tanzschule Pelzer", sc:[0.0, 8.0, 4.0, 17.2, 8.4, 0.0], fx:["4,6 ★ · 101", "–"], url:"https://tanzen-bei-pelzer.de/", st:[]},
+      {name:"Tanz an!", sc:[0.0, 5.0, 4.0, 18.1, 6.4, 0.0], fx:["4,8 ★ · 34", "–"], url:"https://www.tanzan.de/", st:[]}
+    ],
+    "norderstedt": [
+      {name:"TanzCentrum Die 3", sc:[10.0, 5.0, 0.0, 15.2, 6.8, 0.0], fx:["4,5 ★ · 42", "–"], url:"https://www.tanzen-in-norderstedt.de/", st:[]}
+    ],
+    "siegen": [
+      {name:"TanzstudiO Eger", sc:[0.0, 5.0, 0.0, 23.1, 8.8, 0.0], fx:["5,0 ★ · 129", "–"], url:"https://tanzstudio-eger.de/", st:[]},
+      {name:"TanzZentrum Prescher", sc:[0.0, 5.0, 0.0, 17.3, 5.8, 0.0], fx:["4,8 ★ · 23", "–"], url:"https://tanzzentrum-prescher.de/", st:[]},
+      {name:"Tanzschule Tuppeck", sc:[0.0, 5.0, 0.0, 16.4, 5.8, 0.0], fx:["4,7 ★ · 23", "–"], url:"https://tanzschule-tuppeck.de/", st:[]}
+    ],
+    "bergischgladbach": [
+      {name:"Leyer Die Tanzschule", sc:[0.0, 5.0, 0.0, 22.2, 9.6, 0.0], fx:["4,9 ★ · 198", "–"], url:"https://leyer.net/", st:[]},
+      {name:"Tanzzentrum Agne Krauss", sc:[0.0, 5.0, 0.0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 58", "–"], url:"https://tanzzentrum.gl/", st:[]},
+      {name:"One8Dance Studio", sc:[0.0, 5.0, 0.0, 20.5, 6.7, 0.0], fx:["5,0 ★ · 40", "–"], url:"https://one8dance.de/", st:[]},
+      {name:"Tanzschule Osetrov", sc:[0.0, 5.0, 0.0, 18.5, 8.3, 0.0], fx:["4,7 ★ · 98", "–"], url:"https://tanzschuleosetrov.de/", st:[]},
+      {name:"Dance In", sc:[0.0, 5.0, 0.0, 17.2, 6.5, 0.0], fx:["4,7 ★ · 36", "–"], url:"https://dance-in.de/", st:[]}
+    ],
+    "witten": [
+      {name:"Tanzschule mit Marc", sc:[0.0, 5.0, 4.0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 60", "–"], url:"https://tanzschulemitmarc.de/", st:[]}
+    ],
+    "recklinghausen": [
+      {name:"Tanzschule TanzREvier Pompös", sc:[0.0, 5.0, 0.0, 22.1, 9.5, 0.0], fx:["4,9 ★ · 190", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzschule+TanzREvier+Pompös+Recklinghausen", st:[]},
+      {name:"Tanzhaus La Danza", sc:[0.0, 5.0, 0.0, 18.2, 7.8, 0.0], fx:["4,7 ★ · 75", "–"], url:"https://la-danza.org/", st:[]},
+      {name:"Tanzatelier Widance", sc:[0.0, 5.0, 0.0, 17.3, 5.8, 0.0], fx:["4,8 ★ · 24", "–"], url:"https://widance.de/", st:[]}
+    ],
+    "chemnitz": [
+      {name:"Tanzstudio Chemnitz", sc:[0.0, 5.0, 5.0, 20.1, 6.5, 0.0], fx:["5,0 ★ · 35", "–"], url:"https://www.tanzstudio-chemnitz.de/", st:[]}
+    ],
+    "reutlingen": [
+      {name:"Luna Latina Tanzpalast", sc:[0.0, 7.0, 6.0, 17.1, 6.4, 0.0], fx:["4,7 ★ · 34", "–"], url:"https://www.el-padre-de-la-salsa.de/", st:[]}
+    ],
+    "muelheim": [
+      {name:"Tanzschule National Vibes", sc:[0.0, 5.0, 0.0, 22.1, 9.4, 0.0], fx:["4,9 ★ · 180", "–"], url:"https://tanzschulenationalvibes.de/", st:[]},
+      {name:"Das Tanzhaus Mülheim", sc:[0.0, 5.0, 0.0, 20.5, 7.6, 0.0], fx:["4,9 ★ · 65", "–"], url:"https://tanzhaus-muelheim.de/", st:[]},
+      {name:"Tanzschule Jansen", sc:[0.0, 5.0, 0.0, 19.2, 6.5, 0.0], fx:["4,9 ★ · 36", "–"], url:"https://altstadt-tanzschule.de/", st:[]},
+      {name:"Tanzschule dance it!", sc:[0.0, 5.0, 0.0, 17.8, 7.3, 0.0], fx:["4,7 ★ · 56", "–"], url:"https://tanzschule-dance-it.de/", st:[]},
+      {name:"Maresa Höhl Tanzvisionen", sc:[0.0, 5.0, 0.0, 17.6, 6.0, 0.0], fx:["4,8 ★ · 27", "–"], url:"https://tanzvisionen-mh.de/", st:[]}
+    ],
+    "bielefeld": [
+      {name:"Tanzstudio Schrittweise", sc:[0.0, 8.0, 6.0, 17.2, 5.1, 0.0], fx:["4,9 ★ · 16", "–"], url:"https://www.tanzstudio-schrittweise.de/", st:["Sensual"]}
+    ],
+    "hamm": [
+      {name:"Annelieses Tanzschule", sc:[0.0, 8.0, 5.0, 17.3, 5.8, 0.0], fx:["4,8 ★ · 24", "–"], url:"https://annelieses-tanzschule.de/", st:[]}
+    ],
+    "rosenheim": [
+      {name:"Tanzschule Mangfalltal", sc:[0.0, 5.0, 0.0, 22.4, 8.1, 0.0], fx:["5,0 ★ · 88", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzschule+Mangfalltal+Rosenheim", st:[]},
+      {name:"Hermann's Tanzpalast", sc:[0.0, 5.0, 0.0, 20.1, 7.3, 0.0], fx:["4,9 ★ · 54", "–"], url:"https://www.google.com/maps/search/?api=1&query=Hermann's+Tanzpalast+Rosenheim", st:[]},
+      {name:"Die Tanzschule Rosenheim", sc:[0.0, 5.0, 0.0, 20.0, 7.1, 0.0], fx:["4,9 ★ · 50", "–"], url:"https://www.google.com/maps/search/?api=1&query=Die+Tanzschule+Rosenheim+Rosenheim", st:[]},
+      {name:"Tanzschule Kesmarki", sc:[0.0, 5.0, 0.0, 18.8, 6.3, 0.0], fx:["4,9 ★ · 31", "–"], url:"https://kesmarki.de/", st:[]}
+    ],
+    "moers": [
+      {name:"Tanzschule Helfer", sc:[0.0, 5.0, 4.0, 19.6, 6.8, 0.0], fx:["4,9 ★ · 43", "–"], url:"https://www.tshelfer.de/", st:[]}
+    ],
+    "esslingen": [
+      {name:"TANZ ES", sc:[0.0, 5.0, 0.0, 21.6, 8.7, 0.0], fx:["4,9 ★ · 124", "–"], url:"https://tanzes.com/", st:[]}
+    ],
+    "ratingen": [
+      {name:"Tanzschule am Wall", sc:[0.0, 5.0, 0.0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 114", "–"], url:"https://tanzschule-am-wall.de/", st:[]},
+      {name:"Tanzpalast Ratingen", sc:[0.0, 5.0, 0.0, 15.8, 4.5, 0.0], fx:["4,8 ★ · 11", "–"], url:"https://tanzpalast-ratingen.de/", st:[]}
+    ],
+    "lueneburg": [
+      {name:"ConFlow Latin Dance Studio", sc:[0.0, 8.0, 4.0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://conflow-lueneburg.de/", st:[]}
+    ],
+    "hildesheim": [
+      {name:"Tanzschule Bodscheller", sc:[0.0, 5.0, 0.0, 20.5, 9.4, 0.0], fx:["4,8 ★ · 179", "–"], url:"https://bodscheller.de/", st:[]},
+      {name:"Ars Saltandi", sc:[0.0, 5.0, 0.0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 55", "–"], url:"https://arssaltandi.de/", st:[]},
+      {name:"Tanzhaus Buresch", sc:[0.0, 5.0, 0.0, 16.2, 6.7, 0.0], fx:["4,6 ★ · 39", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzhaus+Buresch+Hildesheim", st:[]},
+      {name:"Saltazio", sc:[0.0, 5.0, 0.0, 16.4, 5.8, 0.0], fx:["4,7 ★ · 23", "–"], url:"https://saltazio.de/", st:[]},
+      {name:"Taktwerk", sc:[0.0, 5.0, 0.0, 16.2, 5.5, 0.0], fx:["4,7 ★ · 20", "–"], url:"https://takt-werk.de/", st:[]}
+    ],
+    "rostock": [
+      {name:"Tabéalo", sc:[0.0, 5.0, 0.0, 21.6, 7.5, 0.0], fx:["5,0 ★ · 61", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tabéalo+Rostock", st:[]}
+    ],
+    "schwerin": [
+      {name:"Tanzcenter Bandemer", sc:[0.0, 5.0, 0.0, 21.6, 7.5, 0.0], fx:["5,0 ★ · 62", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzcenter+Bandemer+Schwerin", st:[]}
+    ],
+    "pforzheim": [
+      {name:"BÖHM Dance & Entertainment", sc:[0.0, 5.0, 0.0, 20.2, 8.8, 0.0], fx:["4,8 ★ · 126", "–"], url:"https://boehm-dance.com/", st:[]},
+      {name:"Le Bääm Dance Studio", sc:[0.0, 5.0, 0.0, 20.4, 7.5, 0.0], fx:["4,9 ★ · 61", "–"], url:"https://www.google.com/maps/search/?api=1&query=Le+Bääm+Dance+Studio+Pforzheim", st:[]},
+      {name:"Son Latino", sc:[0.0, 5.0, 0.0, 17.0, 7.9, 0.0], fx:["4,6 ★ · 78", "–"], url:"https://sonlatino.de/", st:[]}
+    ],
+    "villingen": [
+      {name:"Tanzschule Seidel", sc:[0.0, 5.0, 0.0, 20.2, 8.8, 0.0], fx:["4,8 ★ · 128", "–"], url:"https://seideltanzschule.de/", st:[]}
+    ],
+    "passau": [
+      {name:"Some Simple Steps", sc:[0.0, 5.0, 0.0, 21.5, 7.4, 0.0], fx:["5,0 ★ · 58", "–"], url:"https://tanzschule-passau.de/", st:[]},
+      {name:"Tanzschule Schwarz", sc:[0.0, 5.0, 0.0, 19.9, 7.0, 0.0], fx:["4,9 ★ · 48", "–"], url:"https://tanzschule-schwarz.de/", st:[]},
+      {name:"Dancevolution", sc:[0.0, 5.0, 0.0, 18.8, 5.7, 0.0], fx:["5,0 ★ · 22", "–"], url:"https://dancevolution.de/", st:[]}
+    ],
+    "offenbach": [
+      {name:"Tanzschule Weiss", sc:[0.0, 5.0, 0.0, 19.1, 9.6, 0.0], fx:["4,7 ★ · 200", "–"], url:"https://tanzschule-weiss.de/", st:[]}
+    ],
+    "leonberg": [
+      {name:"Tanzschule Danceworld", sc:[0.0, 5.0, 7.0, 15.1, 6.5, 0.0], fx:["4,5 ★ · 36", "–"], url:"https://www.tanzschule-danceworld.de/", st:[]}
+    ],
+    "heidenheim": [
+      {name:"Tanzhaus Heidenheim", sc:[0.0, 5.0, 4.0, 18.1, 6.4, 0.0], fx:["4,8 ★ · 34", "–"], url:"https://tanzen-heidenheim.de/", st:[]}
+    ],
+    "magdeburg": [
+      {name:"Tanzschule Camelia's Tanzfreunde", sc:[0.0, 5.0, 0.0, 21.2, 7.2, 0.0], fx:["5,0 ★ · 52", "–"], url:"https://camelias-tanzfreunde.de/", st:[]},
+      {name:"Tanzschule Diefert", sc:[0.0, 5.0, 0.0, 19.7, 8.0, 0.0], fx:["4,8 ★ · 84", "–"], url:"https://tanzschule-diefert.de/", st:[]},
+      {name:"Dance CompleX Magdeburg", sc:[0.0, 5.0, 0.0, 17.5, 6.9, 0.0], fx:["4,7 ★ · 45", "–"], url:"https://dance-complex.de/", st:[]},
+      {name:"Movement Dance Academy", sc:[0.0, 5.0, 0.0, 18.3, 5.9, 0.0], fx:["4,9 ★ · 25", "–"], url:"https://movement-academy.de/", st:[]}
+    ],
+    "herford": [
+      {name:"Tanzschule Roemkens", sc:[0.0, 5.0, 0.0, 21.1, 7.1, 0.0], fx:["5,0 ★ · 50", "–"], url:"https://roemkens.de/", st:[]},
+      {name:"Salsapur", sc:[0.0, 5.0, 0.0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 56", "–"], url:"https://salsapur.de/", st:[]},
+      {name:"Dance by Sekrin", sc:[0.0, 5.0, 0.0, 18.5, 5.5, 0.0], fx:["5,0 ★ · 20", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dance+by+Sekrin+Herford", st:[]}
+    ],
+    "ingolstadt": [
+      {name:"Tanzschule Fischer", sc:[0.0, 5.0, 0.0, 19.8, 8.3, 0.0], fx:["4,8 ★ · 95", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzschule+Fischer+Ingolstadt", st:[]},
+      {name:"Dance-ING Ya Salam", sc:[0.0, 5.0, 0.0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 40", "–"], url:"https://yasalam.de/", st:[]},
+      {name:"Studio Polanc", sc:[0.0, 5.0, 0.0, 18.0, 7.6, 0.0], fx:["4,7 ★ · 65", "–"], url:"https://studio-polanc.de/", st:[]},
+      {name:"Tanzstudio-Süd", sc:[0.0, 5.0, 0.0, 16.7, 7.5, 0.0], fx:["4,6 ★ · 62", "–"], url:"https://tanzstudio-sued.de/", st:[]},
+      {name:"Tanz- und Kulturwerkstatt", sc:[0.0, 5.0, 0.0, 17.0, 5.0, 0.0], fx:["4,9 ★ · 15", "–"], url:"https://tanzwerkstatt.com/", st:[]}
+    ],
+    "darmstadt": [
+      {name:"Salon Latino", sc:[0.0, 0.0, 5.0, 18.9, 9.1, 0.0], fx:["4,7 ★ · 151", "–"], url:"https://www.salon-latino.de/", st:[]},
+      {name:"BachaDa", sc:[0.0, 0.0, 0.0, 17.5, 4.9, 0.0], fx:["5,0 ★ · 14", "–"], url:"https://www.bachada.de/", st:[]}
+    ],
+    "regensburg": [
+      {name:"Terra Salsa & Bachata", sc:[0.0, 5.0, 0.0, 19.8, 8.2, 0.0], fx:["4,8 ★ · 91", "–"], url:"https://salsa-in-regensburg.de/", st:[]}
+    ],
+    "nuertingen": [
+      {name:"Excelencia 4 Ever Dance", sc:[0.0, 8.0, 0.0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://tanzstudio-excelencia.de/", st:[]}
+    ],
+    "heidelberg": [
+      {name:"Salsa Akademie Heidelberg", sc:[0.0, 5.0, 0.0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 59", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+Akademie+Heidelberg+Heidelberg", st:[]},
+      {name:"TJ Dancestudio", sc:[0.0, 5.0, 0.0, 16.2, 4.3, 0.0], fx:["4,9 ★ · 10", "–"], url:"https://tjdance.de/", st:[]}
+    ],
+    "solingen": [
+      {name:"Step Up Solingen", sc:[0.0, 5.0, 0.0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 60", "–"], url:"https://step-up-solingen.de/", st:[]},
+      {name:"Tanzschule Xperience", sc:[0.0, 5.0, 0.0, 19.9, 7.0, 0.0], fx:["4,9 ★ · 48", "–"], url:"https://tanzschule-xperience.de/", st:[]},
+      {name:"Tanzschule Mavius", sc:[0.0, 5.0, 0.0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 39", "–"], url:"https://tanzschule-mavius.de/", st:[]},
+      {name:"TanzZentrum Kai Koch", sc:[0.0, 5.0, 0.0, 18.4, 6.8, 0.0], fx:["4,8 ★ · 41", "–"], url:"https://tz-koch.de/", st:[]}
+    ],
+    "sindelfingen": [
+      {name:"Tanzfitness Sindelfingen", sc:[0.0, 5.0, 0.0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 58", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzfitness+Sindelfingen+Sindelfingen", st:[]},
+      {name:"Salsa de Cuba Ignacio Cambero", sc:[0.0, 5.0, 0.0, 18.2, 6.5, 0.0], fx:["4,8 ★ · 36", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+de+Cuba+Ignacio+Cambero+Sindelfingen", st:[]}
+    ],
+    "erfurt": [
+      {name:"Tanzkonzept Erfurt", sc:[0.0, 5.0, 0.0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 59", "–"], url:"https://tanzkonzept-erfurt.de/", st:[]},
+      {name:"TanzHaus Erfurt", sc:[0.0, 5.0, 0.0, 19.8, 7.0, 0.0], fx:["4,9 ★ · 46", "–"], url:"https://tanzhaus-erfurt.de/", st:[]},
+      {name:"Tanzschule Traut", sc:[0.0, 5.0, 0.0, 16.7, 7.4, 0.0], fx:["4,6 ★ · 60", "–"], url:"https://tanzschule-traut.de/", st:[]},
+      {name:"The Base House of Dance", sc:[0.0, 5.0, 0.0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://thebase-erfurt.de/", st:[]},
+      {name:"The Movement Dance Studio", sc:[0.0, 5.0, 0.0, 16.9, 6.2, 0.0], fx:["4,7 ★ · 30", "–"], url:"https://tanzkreation.de/", st:[]},
+      {name:"Tanzschule lead & follow", sc:[0.0, 5.0, 0.0, 17.5, 4.9, 0.0], fx:["5,0 ★ · 14", "–"], url:"https://lead-and-follow.de/", st:[]}
+    ],
+    "cottbus": [
+      {name:"Tanzschule Daniel Kara", sc:[0.0, 5.0, 0.0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 59", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzschule+Daniel+Kara+Cottbus", st:[]},
+      {name:"Tanzschule Fritsche", sc:[0.0, 5.0, 0.0, 19.3, 6.0, 0.0], fx:["5,0 ★ · 26", "–"], url:"https://tanzschule-fritsche.de/", st:[]}
+    ],
+    "wilhelmshaven": [
+      {name:"Tanzschule von Oehsen", sc:[0.0, 5.0, 0.0, 19.6, 8.0, 0.0], fx:["4,8 ★ · 83", "–"], url:"https://tanzschule-von-oehsen.de/", st:[]}
+    ],
+    "lippstadt": [
+      {name:"Tanzstudio Lippstadt", sc:[0.0, 5.0, 0.0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 56", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzstudio+Lippstadt+Lippstadt", st:[]},
+      {name:"Tanzschule Stüwe-Weissenberg", sc:[0.0, 5.0, 0.0, 18.9, 6.3, 0.0], fx:["4,9 ★ · 32", "–"], url:"https://tanzen-in-lippstadt.de/", st:[]},
+      {name:"Wanna Dance Company", sc:[0.0, 5.0, 0.0, 18.4, 5.4, 0.0], fx:["5,0 ★ · 19", "–"], url:"https://wannadance.de/", st:[]}
+    ],
+    "osnabrueck": [
+      {name:"Hull Dance & Events", sc:[0.0, 5.0, 0.0, 18.7, 8.7, 0.0], fx:["4,7 ★ · 124", "–"], url:"https://hull.de/", st:[]},
+      {name:"Just Salsa", sc:[0.0, 5.0, 0.0, 19.0, 5.8, 0.0], fx:["5,0 ★ · 24", "–"], url:"https://justsalsa.de/", st:[]},
+      {name:"Salsa y Más", sc:[0.0, 5.0, 0.0, 17.7, 5.0, 0.0], fx:["5,0 ★ · 15", "–"], url:"https://salsa-y-mas.com/", st:[]},
+      {name:"BailamOS Tanzstudio", sc:[0.0, 5.0, 0.0, 16.6, 5.2, 0.0], fx:["4,8 ★ · 17", "–"], url:"https://salsa-osna.de/", st:[]}
+    ],
+    "straubing": [
+      {name:"SALSA Straubing", sc:[0.0, 8.0, 7.0, 14.6, 2.5, 0.0], fx:["5,0 ★ · 3", "–"], url:"https://salsa-straubing.de/", st:[]}
+    ],
+    "iserlohn": [
+      {name:"Michaels Tanztreff", sc:[0.0, 5.0, 0.0, 19.3, 7.7, 0.0], fx:["4,8 ★ · 68", "–"], url:"https://tanztreff-iserlohn.de/", st:[]},
+      {name:"Tanzwelt Schauburg", sc:[0.0, 5.0, 0.0, 13.1, 7.0, 0.0], fx:["4,3 ★ · 48", "–"], url:"https://tanzwelt-schauburg.de/", st:[]}
+    ],
+    "goettingen": [
+      {name:"Bachatisimo", sc:[0.0, 8.0, 3.0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://www.bachatisimo.com/", st:["Dominicana"]},
+      {name:"Baila Salsa Göttingen", sc:[0.0, 8.0, 5.0, 0.0, 0.0, 0.0], fx:["–", "–"], url:"https://www.tanzboot.de/", st:[]}
+    ],
+    "paderborn": [
+      {name:"Spax Danceacademy", sc:[0.0, 5.0, 6.0, 16.1, 4.8, 0.0], fx:["4,8 ★ · 13", "–"], url:"https://www.spax-danceacademy.de/", st:["Sensual"]}
+    ],
+    "hanau": [
+      {name:"Tanzschule Berné", sc:[0.0, 5.0, 0.0, 18.4, 8.2, 0.0], fx:["4,7 ★ · 90", "–"], url:"https://tanzschule-berne.de/", st:[]}
+    ],
+    "emden": [
+      {name:"Tanzschule Astrid Löschen", sc:[0.0, 5.0, 0.0, 18.2, 7.8, 0.0], fx:["4,7 ★ · 75", "–"], url:"https://astrid-loeschen.de/", st:[]},
+      {name:"Tanzstudio Schuster", sc:[0.0, 5.0, 0.0, 17.4, 5.9, 0.0], fx:["4,8 ★ · 25", "–"], url:"https://studio-schuster.de/", st:[]}
+    ],
+    "neuss": [
+      {name:"Tanzschule No Limits", sc:[0.0, 5.0, 0.0, 19.3, 6.6, 0.0], fx:["4,9 ★ · 37", "–"], url:"https://dancestudio-nolimits.com/", st:[]},
+      {name:"Tanzschule Görke", sc:[0.0, 5.0, 0.0, 16.7, 7.4, 0.0], fx:["4,6 ★ · 60", "–"], url:"https://tanzschule-goerke.de/", st:[]},
+      {name:"Tanzschule Frieling", sc:[0.0, 5.0, 0.0, 17.4, 5.9, 0.0], fx:["4,8 ★ · 25", "–"], url:"https://tanzschulefrieling.de/", st:[]}
+    ],
+    "goeppingen": [
+      {name:"Bamboleo Göppingen", sc:[0.0, 5.0, 0.0, 17.2, 8.4, 0.0], fx:["4,6 ★ · 103", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bamboleo+Göppingen+Göppingen", st:[]},
+      {name:"Tanzschule Bartholomay", sc:[0.0, 5.0, 0.0, 17.9, 7.4, 0.0], fx:["4,7 ★ · 58", "–"], url:"https://ts-bartholomay.de/", st:[]},
+      {name:"Schwehr Tanzschule", sc:[0.0, 5.0, 0.0, 15.6, 7.7, 0.0], fx:["4,5 ★ · 70", "–"], url:"https://ts-schwehr.de/", st:[]}
+    ],
+    "muenster": [
+      {name:"Salsomania", sc:[0.0, 5.0, 0.0, 18.0, 7.6, 0.0], fx:["4,7 ★ · 64", "–"], url:"https://salsomania.de/", st:[]},
+      {name:"Punto Clave", sc:[0.0, 5.0, 0.0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://punto-clave.de/", st:[]}
+    ],
+    "guetersloh": [
+      {name:"Santana Latin Dance", sc:[0.0, 5.0, 0.0, 19.1, 6.5, 0.0], fx:["4,9 ★ · 35", "–"], url:"https://www.google.com/maps/search/?api=1&query=Santana+Latin+Dance+Gütersloh", st:[]}
+    ],
+    "leverkusen": [
+      {name:"Tanzstelle Leverkusen", sc:[0.0, 5.0, 0.0, 18.6, 6.9, 0.0], fx:["4,8 ★ · 45", "–"], url:"https://tanzstelle-leverkusen.de/", st:[]},
+      {name:"Time2Dance", sc:[0.0, 5.0, 0.0, 18.4, 5.4, 0.0], fx:["5,0 ★ · 19", "–"], url:"https://time-2-dance.de/", st:[]},
+      {name:"Tanzschule Kaechele", sc:[0.0, 5.0, 0.0, 14.3, 7.4, 0.0], fx:["4,4 ★ · 58", "–"], url:"https://tanzschule-kaechele-leverkusen.de/", st:[]}
+    ],
+    "bamberg": [
+      {name:"Salsa Samstag Bamberg", sc:[0.0, 5.0, 4.0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://www.salsasamstag-bamberg.de/", st:[]}
+    ],
+    "zwickau": [
+      {name:"MOVE Zwickau", sc:[0.0, 5.0, 0.0, 18.5, 6.0, 0.0], fx:["4,9 ★ · 27", "–"], url:"https://move-zwickau.de/", st:[]},
+      {name:"DanceFit Zwickau", sc:[0.0, 5.0, 0.0, 15.4, 4.6, 0.0], fx:["4,7 ★ · 12", "–"], url:"https://dancefit-zwickau.de/", st:[]},
+      {name:"Tanzatelier Laïa", sc:[0.0, 5.0, 0.0, 14.5, 5.0, 0.0], fx:["4,5 ★ · 15", "–"], url:"https://tanzatelier-laia.de/", st:[]}
+    ],
+    "weimar": [
+      {name:"Tanzwerkstatt Weimar", sc:[0.0, 5.0, 0.0, 16.6, 7.3, 0.0], fx:["4,6 ★ · 56", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tanzwerkstatt+Weimar+Weimar", st:[]}
+    ],
+    "coburg": [
+      {name:"TANZTRAUM Tanzlounge", sc:[0.0, 5.0, 0.0, 16.9, 6.2, 0.0], fx:["4,7 ★ · 30", "–"], url:"https://tanz-traum.de/", st:[]}
+    ],
+    "greifswald": [
+      {name:"Tanzschule D&D", sc:[0.0, 5.0, 0.0, 17.1, 5.6, 0.0], fx:["4,8 ★ · 21", "–"], url:"https://tanzschule-hgw.de/", st:[]}
+    ],
+    "bayreuth": [
+      {name:"DanceComplex", sc:[0.0, 5.0, 0.0, 16.5, 5.8, 0.0], fx:["4,7 ★ · 24", "–"], url:"https://dancecomplex.de/", st:[]},
+      {name:"Helmut Jahn Tanzschule", sc:[0.0, 5.0, 0.0, 15.3, 7.0, 0.0], fx:["4,5 ★ · 47", "–"], url:"https://tanzschule-jahn.com/", st:[]}
+    ],
+    "luebeck": [
+      {name:"ML Dance Studio", sc:[0.0, 5.0, 0.0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://www.google.com/maps/search/?api=1&query=ML+Dance+Studio+Lübeck", st:[]}
+    ],
+    "neubrandenburg": [
+      {name:"Dance Department", sc:[0.0, 5.0, 0.0, 16.1, 4.8, 0.0], fx:["4,8 ★ · 13", "–"], url:"https://dance-nb.de/", st:[]},
+      {name:"Tanzstudio Hinrich", sc:[0.0, 5.0, 0.0, 16.1, 4.8, 0.0], fx:["4,8 ★ · 13", "–"], url:"https://passion-for-dance.de/", st:[]}
+    ],
+    "jena": [
+      {name:"Jenaer Tanzhaus", sc:[0.0, 5.0, 0.0, 15.4, 5.4, 0.0], fx:["4,6 ★ · 19", "–"], url:"https://www.google.com/maps/search/?api=1&query=Jenaer+Tanzhaus+Jena", st:[]}
+    ],
+    "minden": [
+      {name:"Tanzschule Am Ring", sc:[0.0, 5.0, 0.0, 12.0, 6.7, 0.0], fx:["4,2 ★ · 39", "–"], url:"https://www.tanzschule-am-ring.de/", st:[]}
+    ],
+    "gera": [
+      {name:"Salsa Picante Gera", sc:[0.0, 10.0, 7.0, 0.0, 0.0, 0.0], fx:["–", "–"], url:"https://tanzeningera.de/", st:[]}
+    ],
+    "warszawa": [
+      {name:"Salsa Libre", sc:[0, 0, 0, 19.4, 10.0, 0.0], fx:["4,7 ★ · 312", "–"], url:"https://salsalibre.pl", st:[], np:1, pg:"/pl/szkoly/salsa-libre.html"},
+      {name:"The Cuban Place", sc:[0, 0, 0, 17.2, 8.6, 0.0], fx:["4,6 ★ · 113", "–"], url:"https://thecubanplace.pl", st:[], np:1, pg:"/pl/szkoly/the-cuban-place.html"},
+      {name:"ABRA Studio", sc:[0, 0, 0, 20.9, 10.0, 0.0], fx:["4,8 ★ · 273", "–"], url:"https://www.abra-studio.pl", st:[], np:1, pg:"/pl/szkoly/abra-studio.html"},
+      {name:"Warsaw Salsa Club", sc:[0, 0, 0, 21.3, 8.4, 0.0], fx:["4,9 ★ · 100", "–"], url:"http://warsawsalsaclub.pl", st:[], np:1, pg:"/pl/szkoly/warsaw-salsa-club.html"},
+      {name:"Dos Mundos", sc:[0, 0, 0, 17.8, 10.0, 0.0], fx:["4,6 ★ · 396", "–"], url:"https://www.akademiatanca.com.pl/dos-mundos", st:[], np:1, pg:"/pl/szkoly/dos-mundos.html"},
+      {name:"Salsa Passion", sc:[0, 0, 0, 20.4, 7.5, 0.0], fx:["4,9 ★ · 61", "–"], url:"https://www.salsapassion.eu", st:[], np:1, pg:"/pl/szkoly/salsa-passion.html"},
+      {name:"Szkoła Tańców Karaibskich SHO", sc:[0, 5, 4, 20.8, 10.0, 10.0], fx:["4,8 ★ · 247", "6.196 · 2.951"], url:"https://sho.pl", st:[], np:1, pg:"/pl/szkoly/szkola-tancow-karaibskich-sho.html"},
+      {name:"Prowadzimy w Tańcu", sc:[0, 0, 0, 21.6, 7.5, 0.0], fx:["5,0 ★ · 61", "–"], url:"https://prowadzimywtancu.pl", st:[], np:1, pg:"/pl/szkoly/prowadzimy-w-tancu.html"},
+      {name:"Studio Tańca Spin", sc:[0, 0, 0, 18.5, 6.0, 0.0], fx:["4,9 ★ · 27", "–"], url:"https://studiotanca.eu", st:[], np:1, pg:"/pl/szkoly/studio-tanca-spin.html"},
+      {name:"Szkoła Tańca Oye!", sc:[0, 0, 0, 20.2, 8.8, 0.0], fx:["4,8 ★ · 129", "–"], url:"https://szkolatancaoye.pl", st:[], np:1, pg:"/pl/szkoly/szkola-tanca-oye.html"},
+      {name:"Studio Tańca Prodance", sc:[0, 0, 0, 18.7, 6.2, 0.0], fx:["4,9 ★ · 30", "–"], url:"https://studiotanca.net", st:[], np:1, pg:"/pl/szkoly/studio-tanca-prodance.html"},
+      {name:"Akademia Tańca Tu Się Tańczy", sc:[0, 0, 0, 18.1, 7.7, 0.0], fx:["4,7 ★ · 71", "–"], url:"https://tusietanczy.pl", st:[], np:1, pg:"/pl/szkoly/akademia-tanca-tu-sie-tanczy.html"},
+      {name:"Arthur Murray Dance Studio Warsaw", sc:[0, 0, 0, 20.9, 8.0, 0.0], fx:["4,9 ★ · 80", "–"], url:"https://arthurmurraypoland.pl", st:[], np:1, pg:"/pl/szkoly/arthur-murray-dance-studio-warsaw.html"}
+    ],
+    "krakow": [
+      {name:"LOFToDANCE", sc:[0, 0, 0, 21.1, 10.0, 0.0], fx:["4,8 ★ · 396", "–"], url:"https://loftodance.pl", st:["Sensual"], np:1, pg:"/pl/szkoly/loftodance.html"},
+      {name:"BachataDance.pl", sc:[5, 8, 4, 20.6, 6.8, 0.0], fx:["5,0 ★ · 42", "–"], url:"https://bachatadance.pl", st:["Sensual", "Dominicana", "Moderna"], np:1, pg:"/pl/szkoly/bachatadance-pl.html"},
+      {name:"KrakowBachata.pl", sc:[0, 10, 0, 20.7, 6.8, 7.6], fx:["5,0 ★ · 43", "1.799 · 76"], url:"https://krakowbachata.pl", st:[], np:1, pg:"/pl/szkoly/krakowbachata-pl.html"},
+      {name:"Forum Tańca", sc:[0, 0, 0, 19.0, 9.3, 10.0], fx:["4,7 ★ · 169", "9.242 · 750"], url:"https://forumtanca.pl", st:[], np:1, pg:"/pl/szkoly/forum-tanca.html"},
+      {name:"Krambo Dance", sc:[0, 0, 0, 20.7, 7.7, 0.0], fx:["4,9 ★ · 71", "–"], url:"https://www.krambo.pl", st:[], np:1, pg:"/pl/szkoly/krambo-dance.html"},
+      {name:"Salsa House Kraków", sc:[0, 8, 0, 20.0, 8.5, 9.3], fx:["4,8 ★ · 107", "2.738 · 867"], url:"https://salsahousekrakow.pl", st:[], np:1, pg:"/pl/szkoly/salsa-house-krakow.html"},
+      {name:"Sabrosa Dance Studio", sc:[0, 0, 0, 20.3, 8.9, 0.0], fx:["4,8 ★ · 137", "–"], url:"https://salsasabrosa.pl", st:[], np:1, pg:"/pl/szkoly/sabrosa-dance-studio.html"},
+      {name:"AT Szkoła Tańca", sc:[0, 0, 0, 16.0, 9.1, 0.0], fx:["4,5 ★ · 150", "–"], url:"https://naukatanca.com", st:[], np:1, pg:"/pl/szkoly/at-szkola-tanca.html"},
+      {name:"Wild Dance Academy", sc:[0, 0, 0, 19.3, 10.0, 0.0], fx:["4,7 ★ · 275", "–"], url:"https://wild-dance.pl", st:[], np:1, pg:"/pl/szkoly/wild-dance-academy.html"},
+      {name:"VivaClub Salsa", sc:[0, 0, 0, 20.0, 6.4, 0.0], fx:["5,0 ★ · 33", "–"], url:"https://vivasalsa.pl", st:[], np:1, pg:"/pl/szkoly/vivaclub-salsa.html"}
+    ],
+    "wroclaw": [
+      {name:"La Rosa Negra", sc:[0, 0, 4, 19.4, 10.0, 10.0], fx:["4,7 ★ · 317", "6.179 · 1.528"], url:"https://www.larosanegra.wroclaw.pl", st:[], np:1, pg:"/pl/szkoly/la-rosa-negra.html"},
+      {name:"Dance Fever", sc:[0, 0, 0, 20.4, 9.0, 0.0], fx:["4,8 ★ · 146", "–"], url:"https://www.salsafever.pl", st:[], np:1, pg:"/pl/szkoly/dance-fever.html"},
+      {name:"Tropical Dance Studios", sc:[0, 0, 0, 19.6, 6.8, 0.0], fx:["4,9 ★ · 42", "–"], url:"https://www.tropical-dance.pl", st:[], np:1, pg:"/pl/szkoly/tropical-dance-studios.html"},
+      {name:"No Limits", sc:[10, 5, 0, 16.3, 10.0, 10.0], fx:["4,5 ★ · 494", "9.073 · 1.199"], url:"https://www.nolimits.art.pl", st:["Sensual"], np:1, pg:"/pl/szkoly/no-limits.html"},
+      {name:"Dance Flow", sc:[10, 0, 0, 21.0, 10.0, 0.0], fx:["4,8 ★ · 340", "–"], url:"https://www.danceflow.pl", st:[], np:1, pg:"/pl/szkoly/dance-flow.html"},
+      {name:"Dance Move Lab", sc:[0, 0, 0, 20.9, 7.0, 0.0], fx:["5,0 ★ · 46", "–"], url:"https://dancemovelab.pl", st:[], np:1, pg:"/pl/szkoly/dance-move-lab.html"},
+      {name:"Studio Tańca Al-Mara", sc:[0, 0, 0, 22.0, 9.3, 0.0], fx:["4,9 ★ · 166", "–"], url:"https://al-mara.pl", st:[], np:1, pg:"/pl/szkoly/studio-tanca-al-mara.html"},
+      {name:"Akademia Tańca Esens", sc:[0, 0, 0, 17.4, 9.0, 0.0], fx:["4,6 ★ · 143", "–"], url:"https://esens.com.pl", st:[], np:1, pg:"/pl/szkoly/akademia-tanca-esens.html"},
+      {name:"Wrocławska Akademia Tańca", sc:[0, 0, 0, 22.5, 8.2, 0.0], fx:["5,0 ★ · 92", "–"], url:"https://akademia-taniec.pl", st:[], np:1, pg:"/pl/szkoly/wroclawska-akademia-tanca.html"}
+    ],
+    "poznan": [
+      {name:"Art Dance", sc:[0, 5, 0, 24.1, 10.0, 7.3], fx:["5,0 ★ · 307", "1.186 · 79"], url:"https://art-dance.com.pl", st:["Sensual", "Dominicana"], np:1, pg:"/pl/szkoly/art-dance.html"},
+      {name:"Salsa Siempre", sc:[10, 5, 4, 18.9, 9.0, 9.6], fx:["4,7 ★ · 147", "3.453 · 1.139"], url:"https://salsasiempre.pl", st:["Sensual"], np:1, pg:"/pl/szkoly/salsa-siempre.html"},
+      {name:"Bailando Poznań", sc:[0, 5, 0, 13.0, 9.4, 7.4], fx:["4,3 ★ · 184", "766 · 153"], url:"https://bailandopoznan.pl", st:[], np:1, pg:"/pl/szkoly/bailando-poznan.html"},
+      {name:"Art of Move", sc:[0, 8, 7, 20.3, 8.9, 9.7], fx:["4,8 ★ · 133", "6.047 · 785"], url:"https://artofmove.pl", st:[], np:1, pg:"/pl/szkoly/art-of-move.html"}
+    ],
+    "gdansk": [
+      {name:"So!Salsa", sc:[0, 5, 10, 17.8, 10.0, 10.0], fx:["4,6 ★ · 364", "8.002 · 1.667"], url:"https://sosalsa.pl", st:[], np:1, pg:"/pl/szkoly/so-salsa.html"},
+      {name:"Dance Atelier", sc:[0, 5, 0, 20.5, 9.3, 9.8], fx:["4,8 ★ · 167", "3.744 · 1.379"], url:"https://danceatelier.pl", st:[], np:1, pg:"/pl/szkoly/dance-atelier.html"},
+      {name:"Akademia Tańca Paulina Rompczyk", sc:[0, 0, 0, 20.8, 7.9, 0.0], fx:["4,9 ★ · 77", "–"], url:"https://paulinarompczyk.pl", st:[], np:1, pg:"/pl/szkoly/akademia-tanca-paulina-rompczyk.html"},
+      {name:"Salsa Club", sc:[0, 0, 0, 16.6, 6.0, 0.0], fx:["4,7 ★ · 26", "–"], url:"https://salsaclub.pl", st:[], np:1, pg:"/pl/szkoly/salsa-club.html"}
+    ],
+    "lodz": [
+      {name:"Latin Dance Academy", sc:[0, 5, 0, 22.2, 9.7, 9.7], fx:["4,9 ★ · 207", "6.014 · 693"], url:"https://latinacademy.pl", st:[], np:1, pg:"/pl/szkoly/latin-dance-academy.html"},
+      {name:"TONdance", sc:[0, 5, 0, 22.2, 9.6, 0.0], fx:["4,9 ★ · 196", "–"], url:"https://www.tondance.pl", st:[], np:1, pg:"/pl/szkoly/tondance.html"},
+      {name:"Urban Dance Zone", sc:[0, 5, 0, 17.8, 10.0, 0.0], fx:["4,6 ★ · 339", "–"], url:"http://urbandance.pl", st:[], np:1, pg:"/pl/szkoly/urban-dance-zone.html"},
+      {name:"Bachata Master Studio", sc:[0, 0, 0, 19.4, 6.7, 6.7], fx:["4,9 ★ · 39", "410 · 90"], url:"https://www.bachatamasterstudio.pl", st:[], np:1, pg:"/pl/szkoly/bachata-master-studio.html"}
+    ],
+    "katowice": [
+      {name:"La Clave", sc:[0, 0, 0, 17.0, 8.0, 0.0], fx:["4,6 ★ · 84", "–"], url:"https://www.laclave.pl", st:[], np:1, pg:"/pl/szkoly/la-clave.html"},
+      {name:"Good Mood", sc:[10, 0, 0, 20.5, 9.3, 8.2], fx:["4,8 ★ · 172", "1.648 · 236"], url:"http://goodmood.dance", st:[], np:1, pg:"/pl/szkoly/good-mood.html"},
+      {name:"Mil Pasos", sc:[0, 0, 0, 19.6, 7.9, 0.0], fx:["4,8 ★ · 79", "–"], url:"https://milpasoskatowice.pl", st:[], np:1, pg:"/pl/szkoly/mil-pasos.html"},
+      {name:"Śląska Szkoła Tańca Dariusz Kurzej", sc:[0, 0, 0, 20.6, 7.6, 0.0], fx:["4,9 ★ · 67", "–"], url:"https://tanca.com.pl/szkola-tanca-katowice/", st:[], np:1, pg:"/pl/szkoly/slaska-szkola-tanca-dariusz-kurzej.html"},
+      {name:"Taneczna Kompania", sc:[0, 0, 0, 18.4, 8.1, 0.0], fx:["4,7 ★ · 85", "–"], url:"https://tanecznakompania.pl", st:[], np:1, pg:"/pl/szkoly/taneczna-kompania.html"}
+    ],
+    "gdynia": [
+      {name:"Dance Fusion", sc:[0, 5, 0, 19.2, 9.9, 9.3], fx:["4,7 ★ · 235", "3.141 · 789"], url:"https://dancefusion.com.pl", st:[], np:1, pg:"/pl/szkoly/dance-fusion.html"},
+      {name:"Paulina Turska Dance Academy", sc:[0, 0, 0, 20.3, 7.4, 7.0], fx:["4,9 ★ · 58", "872 · 60"], url:"https://turskadanceacademy.com", st:[], np:1, pg:"/pl/szkoly/paulina-turska-dance-academy.html"},
+      {name:"Salsa Kings", sc:[0, 0, 0, 13.2, 5.2, 0.0], fx:["4,3 ★ · 17", "–"], url:"https://salsakings.pl", st:[], np:1, pg:"/pl/szkoly/salsa-kings.html"}
+    ],
+    "bydgoszcz": [
+      {name:"Bailamos", sc:[0, 10, 0, 18.1, 7.6, 9.1], fx:["4,7 ★ · 67", "2.268 · 730"], url:"https://bailamos.pl", st:[], np:1, pg:"/pl/szkoly/bailamos.html"},
+      {name:"Szkoła Tańca Bohema", sc:[0, 5, 0, 15.5, 7.5, 0.0], fx:["4,5 ★ · 62", "–"], url:"https://www.szkolabohema.pl", st:[], np:1, pg:"/pl/szkoly/szkola-tanca-bohema.html"}
+    ],
+    "lublin": [
+      {name:"SALSAme Dance Studio", sc:[0, 5, 0, 20.2, 8.8, 9.5], fx:["4,8 ★ · 131", "2.753 · 1.232"], url:"https://salsame.pl", st:["Dominicana"], np:1, pg:"/pl/szkoly/salsame-dance-studio.html"},
+      {name:"Casa de la Danza", sc:[0, 5, 0, 20.6, 7.6, 9.4], fx:["4,9 ★ · 67", "3.453 · 785"], url:"https://casalublin.pl", st:[], np:1, pg:"/pl/szkoly/casa-de-la-danza.html"},
+      {name:"Passa Passa Dance Studio", sc:[0, 0, 0, 18.7, 6.2, 0.0], fx:["4,9 ★ · 30", "–"], url:"https://passapassa.pl", st:[], np:1, pg:"/pl/szkoly/passa-passa-dance-studio.html"}
+    ],
+    "szczecin": [
+      {name:"Abballu", sc:[0, 5, 0, 18.4, 8.1, 9.6], fx:["4,7 ★ · 87", "3.522 · 1.083"], url:"https://abballu.pl", st:[], np:1, pg:"/pl/szkoly/abballu.html"},
+      {name:"Kimama", sc:[0, 8, 7, 19.3, 7.7, 0.0], fx:["4,8 ★ · 68", "–"], url:"https://kimama.pl", st:["Sensual"], np:1, pg:"/pl/szkoly/kimama.html"},
+      {name:"QuieroSalsa", sc:[0, 8, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 40", "–"], url:"https://quierosalsa.pl", st:[], np:1, pg:"/pl/szkoly/quierosalsa.html"},
+      {name:"All About Dance Studio", sc:[0, 8, 0, 23.8, 9.8, 0.0], fx:["5,0 ★ · 227", "–"], url:"https://allabout-dance.pl", st:[], np:1, pg:"/pl/szkoly/all-about-dance-studio.html"},
+      {name:"Studio Tańca Anna Kowalska", sc:[0, 0, 0, 21.7, 8.9, 0.0], fx:["4,9 ★ · 138", "–"], url:"https://annakowalska.pl", st:[], np:1, pg:"/pl/szkoly/studio-tanca-anna-kowalska.html"},
+      {name:"Szkoła Tańca Gryf", sc:[0, 0, 0, 23.5, 9.3, 0.0], fx:["5,0 ★ · 173", "–"], url:"https://taniec-szczecin.pl", st:[], np:1, pg:"/pl/szkoly/szkola-tanca-gryf.html"}
+    ],
+    "bialystok": [
+      {name:"Latin Studio", sc:[0, 5, 0, 21.5, 8.6, 9.0], fx:["4,9 ★ · 118", "1.695 · 901"], url:"https://latinstudio.pl", st:["Sensual"], np:1, pg:"/pl/szkoly/latin-studio.html"},
+      {name:"Fabryka Tańca", sc:[0, 0, 0, 21.6, 8.8, 0.0], fx:["4,9 ★ · 128", "–"], url:"https://fabrykatanca.pl", st:[], np:1, pg:"/pl/szkoly/fabryka-tanca.html"}
+    ],
+    "czestochowa": [
+      {name:"Snake Dance", sc:[0, 0, 0, 19.9, 8.4, 0.0], fx:["4,8 ★ · 103", "–"], url:"https://www.snake-dance.pl", st:[], np:1, pg:"/pl/szkoly/snake-dance.html"},
+      {name:"CZĘSTOTAŃCZ", sc:[0, 8, 10, 22.7, 8.4, 0.0], fx:["5,0 ★ · 103", "–"], url:"https://czestotancz.pl", st:[], np:1, pg:"/pl/szkoly/czestotancz.html"}
+    ],
+    "torun": [
+      {name:"Studio Tańca Fantom", sc:[0, 5, 0, 19.9, 8.4, 8.6], fx:["4,8 ★ · 103", "1.044 · 736"], url:"https://fantom.torun.pl", st:[], np:1, pg:"/pl/szkoly/studio-tanca-fantom.html"},
+      {name:"Jagielski Dance Project", sc:[0, 8, 0, 17.5, 9.4, 10.0], fx:["4,6 ★ · 183", "5.917 · 1.259"], url:"https://dancepro.pl", st:[], np:1, pg:"/pl/szkoly/jagielski-dance-project.html"}
+    ],
+    "kielce": [
+      {name:"Candela Studio Tańca", sc:[0, 5, 0, 20.1, 8.6, 9.1], fx:["4,8 ★ · 113", "1.590 · 1.096"], url:"https://candelakielce.pl", st:[], np:1, pg:"/pl/szkoly/candela-studio-tanca.html"}
+    ],
+    "rzeszow": [
+      {name:"Karrie & Kamil", sc:[0, 8, 0, 20.4, 6.7, 0.0], fx:["5,0 ★ · 39", "–"], url:"https://karriekamil.com", st:[], np:1, pg:"/pl/szkoly/karrie-kamil.html"},
+      {name:"LEMON Salsa", sc:[0, 0, 0, 21.1, 8.2, 0.0], fx:["4,9 ★ · 91", "–"], url:"https://www.google.com/maps/search/LEMON+Salsa+Rzeszów", st:[], np:1, pg:"/pl/szkoly/lemon-salsa.html"},
+      {name:"Shantel Szkoła Tańca", sc:[0, 0, 0, 21.8, 9.0, 0.0], fx:["4,9 ★ · 147", "–"], url:"https://www.google.com/maps/search/Shantel+Szkoła+Tańca+Rzeszów", st:[], np:1, pg:"/pl/szkoly/shantel-szkola-tanca.html"}
+    ],
+    "radom": [
+      {name:"Studio Tańca Rejdance", sc:[0, 5, 0, 21.4, 8.5, 0.0], fx:["4,9 ★ · 111", "–"], url:"https://strejdance.pl", st:[], np:1, pg:"/pl/szkoly/studio-tanca-rejdance.html"},
+      {name:"Rockstep", sc:[0, 0, 0, 17.1, 8.1, 0.0], fx:["4,6 ★ · 89", "–"], url:"https://www.rockstep.pl", st:[], np:1, pg:"/pl/szkoly/rockstep.html"}
+    ],
+    "olsztyn": [
+      {name:"Przemienieccy", sc:[0, 0, 0, 16.4, 7.0, 0.0], fx:["4,6 ★ · 47", "–"], url:"https://przemienieccy.pl", st:[], np:1, pg:"/pl/szkoly/przemienieccy.html"}
+    ],
+    "opole": [
+      {name:"Salsa Fuerte", sc:[0, 0, 0, 23.1, 8.8, 0.0], fx:["5,0 ★ · 125", "–"], url:"https://salsafuerte.pl", st:[], np:1, pg:"/pl/szkoly/salsa-fuerte.html"},
+      {name:"Royal Dance Center", sc:[0, 0, 0, 15.2, 6.6, 0.0], fx:["4,5 ★ · 37", "–"], url:"https://www.royaldance.pl", st:[], np:1, pg:"/pl/szkoly/royal-dance-center.html"}
+    ],
+    "bielsko-biala": [
+      {name:"Szkoła Tańca Libere", sc:[0, 0, 0, 21.8, 9.0, 0.0], fx:["4,9 ★ · 143", "–"], url:"https://www.taniec-bielsko.pl", st:[], np:1, pg:"/pl/szkoly/szkola-tanca-libere.html"},
+      {name:"AllDance", sc:[0, 5, 0, 21.6, 8.8, 0.0], fx:["4,9 ★ · 128", "–"], url:"https://alldance.pl", st:[], np:1, pg:"/pl/szkoly/alldance.html"},
+      {name:"DANCE#LOVEit & Corazon", sc:[0, 0, 0, 22.3, 8.0, 0.0], fx:["5,0 ★ · 84", "–"], url:"https://danceloveit.pl", st:[], np:1, pg:"/pl/szkoly/dance-loveit-corazon.html"},
+      {name:"Salsa Bielsko", sc:[0, 0, 0, 19.7, 6.2, 0.0], fx:["5,0 ★ · 30", "–"], url:"https://www.salsa.bielsko.pl", st:[], np:1, pg:"/pl/szkoly/salsa-bielsko.html"},
+      {name:"Szkoła Tańca Cubana", sc:[0, 0, 0, 19.6, 8.0, 0.0], fx:["4,8 ★ · 80", "–"], url:"https://www.cubana.bielsko.pl", st:[], np:1, pg:"/pl/szkoly/szkola-tanca-cubana.html"}
+    ],
+    "tarnow": [
+      {name:"Sun Salsa", sc:[0, 0, 0, 21.2, 8.3, 0.0], fx:["4,9 ★ · 95", "–"], url:"https://sunsalsa.pl", st:[], np:1, pg:"/pl/szkoly/sun-salsa.html"},
+      {name:"Baila Studio Tańca", sc:[0, 0, 0, 18.0, 5.2, 0.0], fx:["5,0 ★ · 17", "–"], url:"https://bailastudio.pl", st:[], np:1, pg:"/pl/szkoly/baila-studio-tanca.html"}
+    ],
+    "ruda-slaska": [
+      {name:"Havana Studio Tańca", sc:[0, 0, 0, 12.0, 4.8, 0.0], fx:["4,1 ★ · 13", "–"], url:"http://havana-rudaslaska.pl", st:[], np:1, pg:"/pl/szkoly/havana-studio-tanca.html"}
+    ],
+    "bytom": [
+      {name:"Salsa Para Siempre", sc:[0, 0, 0, 14.9, 2.9, 0.0], fx:["5,0 ★ · 4", "–"], url:"https://salsaparasiempre.pl", st:[], np:1, pg:"/pl/szkoly/salsa-para-siempre.html"}
+    ],
+    "dabrowa-gornicza": [
+      {name:"Marengo Szkoła Tańca", sc:[0, 0, 0, 20.7, 7.7, 0.0], fx:["4,9 ★ · 70", "–"], url:"https://marengo.net.pl", st:[], np:1, pg:"/pl/szkoly/marengo-szkola-tanca.html"},
+      {name:"Tanecznie Zakręcone", sc:[0, 0, 0, 20.1, 6.5, 0.0], fx:["5,0 ★ · 35", "–"], url:"https://taneczniezakrecone.pl", st:[], np:1, pg:"/pl/szkoly/tanecznie-zakrecone.html"}
+    ],
+    "piotrkow": [
+      {name:"Timbaila", sc:[0, 0, 0, 21.0, 7.1, 0.0], fx:["5,0 ★ · 49", "–"], url:"https://timbaila.pl", st:[], np:1, pg:"/pl/szkoly/timbaila.html"}
+    ],
+    "pruszkow": [
+      {name:"Dance Imperium Nowa Stacja", sc:[0, 0, 0, 16.3, 6.8, 0.0], fx:["4,6 ★ · 42", "–"], url:"https://danceimperium.pl", st:[], np:1, pg:"/pl/szkoly/dance-imperium-nowa-stacja.html"}
+    ],
+    "pila": [
+      {name:"Szkoła Tańca Iskra", sc:[0, 0, 0, 22.2, 8.0, 0.0], fx:["5,0 ★ · 80", "–"], url:"https://taniec.pila.pl", st:[], np:1, pg:"/pl/szkoly/szkola-tanca-iskra.html"}
+    ],
+    "inowroclaw": [
+      {name:"Szkoła Tańca Dance Life Inowrocław", sc:[0, 0, 0, 18.4, 6.7, 0.0], fx:["4,8 ★ · 40", "–"], url:"https://uksdancelife.pl", st:[], np:1, pg:"/pl/szkoly/szkola-tanca-dance-life-inowroclaw.html"}
+    ],
+    "zamosc": [
+      {name:"Szkoła Tańca MYKA", sc:[0, 0, 0, 17.0, 8.1, 0.0], fx:["4,6 ★ · 87", "–"], url:"https://www.taniec.myka.pl", st:[], np:1, pg:"/pl/szkoly/szkola-tanca-myka.html"}
+    ],
+    "siedlce": [
+      {name:"Siedlecka Szkoła Tańca Marek Glinka", sc:[0, 0, 0, 23.6, 9.5, 0.0], fx:["5,0 ★ · 190", "–"], url:"https://taniecsiedlce.com", st:[], np:1, pg:"/pl/szkoly/siedlecka-szkola-tanca-marek-glinka.html"}
+    ],
+    "nowy-sacz": [
+      {name:"Adelante Akademia Tańca", sc:[0, 0, 0, 22.7, 8.4, 0.0], fx:["5,0 ★ · 103", "–"], url:"https://akademiatancaadelante.pl", st:[], np:1, pg:"/pl/szkoly/adelante-akademia-tanca.html"}
+    ],
+    "sosnowiec": [
+      {name:"Salsa Los Amigos", sc:[0, 0, 0, 20.8, 7.8, 0.0], fx:["4,9 ★ · 75", "–"], url:"https://salsa.katowice.pl", st:[], np:1, pg:"/pl/szkoly/salsa-los-amigos.html"}
+    ],
+    "zabrze": [
+      {name:"FLOW Latino Dance Studio", sc:[0, 0, 0, 22.0, 7.8, 0.0], fx:["5,0 ★ · 73", "–"], url:"https://studio-flow.pl", st:[], np:1, pg:"/pl/szkoly/flow-latino-dance-studio.html"}
+    ],
+    "legnica": [
+      {name:"Diamond Dance Studio", sc:[0, 0, 0, 18.4, 8.1, 0.0], fx:["4,7 ★ · 87", "–"], url:"https://szkolatancalegnica.pl", st:[], np:1, pg:"/pl/szkoly/diamond-dance-studio.html"}
+    ],
+    "gorzow": [
+      {name:"Like To Dance", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 45", "–"], url:"https://www.google.com/maps/search/Like+To+Dance+Gorzów+Wielkopolski", st:[], np:1, pg:"/pl/szkoly/like-to-dance.html"}
+    ],
+    "tychy": [
+      {name:"Szkoła Tańca Mohito", sc:[0, 0, 0, 18.8, 8.8, 0.0], fx:["4,7 ★ · 130", "–"], url:"https://mohito.tychy.pl", st:[], np:1, pg:"/pl/szkoly/szkola-tanca-mohito.html"}
+    ],
+    "rybnik": [
+      {name:"Havana Dance Studio", sc:[0, 0, 0, 22.3, 8.0, 0.0], fx:["5,0 ★ · 84", "–"], url:"https://havanasalsaclub.pl", st:[], np:1, pg:"/pl/szkoly/havana-dance-studio.html"},
+      {name:"El Pachanguero", sc:[0, 0, 0, 20.6, 7.7, 0.0], fx:["4,9 ★ · 69", "–"], url:"https://pachanguero.pl", st:[], np:1, pg:"/pl/szkoly/el-pachanguero.html"}
+    ],
+    "madrid": [
+      {name:"Salsabachata", sc:[10, 8, 4, 21.4, 10.0, 0.0], fx:["4,8 ★ · 1042", "–"], url:"https://salsabachata.es/", st:[], np:1, pg:"/es/escuelas/salsabachata.html"},
+      {name:"Premiumdance Clases de Salsa y Bachata", sc:[0, 8, 4, 24.6, 10.0, 0.0], fx:["5,0 ★ · 625", "–"], url:"http://www.clasesdesalsaybachata.com/", st:[], np:1, pg:"/es/escuelas/premiumdance-clases-de-salsa-y-bachata.html"},
+      {name:"RLDance Madrid", sc:[0, 0, 0, 22.6, 8.3, 0.0], fx:["5,0 ★ · 98", "–"], url:"https://rldancemadrid.my.canva.site/", st:[], np:1, pg:"/es/escuelas/rldance-madrid.html"},
+      {name:"Báilalo Madrid Dance Studio", sc:[0, 0, 0, 18.1, 7.7, 0.0], fx:["4,7 ★ · 70", "–"], url:"https://www.bailalomadrid.com", st:[], np:1, pg:"/es/escuelas/bailalo-madrid-dance-studio.html"},
+      {name:"Escuela de Baile Baila Sin Parar", sc:[0, 0, 0, 21.8, 7.6, 0.0], fx:["5,0 ★ · 66", "–"], url:"https://bailasinparar.com", st:[], np:1, pg:"/es/escuelas/escuela-de-baile-baila-sin-parar.html"},
+      {name:"Dancing Boulevard", sc:[0, 0, 0, 22.4, 10.0, 0.0], fx:["4,9 ★ · 270", "–"], url:"https://www.dancingboulevard.com", st:[], np:1, pg:"/es/escuelas/dancing-boulevard.html"},
+      {name:"Evolution Dance School", sc:[0, 0, 0, 22.4, 10.0, 0.0], fx:["4,9 ★ · 263", "–"], url:"https://evolutiondance.es", st:[], np:1, pg:"/es/escuelas/evolution-dance-school.html"},
+      {name:"Yo Bailo Academia de Baile", sc:[0, 0, 0, 23.7, 9.6, 0.0], fx:["5,0 ★ · 197", "–"], url:"https://www.yobailoacademiadebaile.com", st:[], np:1, pg:"/es/escuelas/yo-bailo-academia-de-baile.html"},
+      {name:"BSK Dance Vista Alegre", sc:[0, 0, 0, 16.8, 7.6, 0.0], fx:["4,6 ★ · 67", "–"], url:"https://www.bskdance.com", st:[], np:1, pg:"/es/escuelas/bsk-dance-vista-alegre.html"},
+      {name:"Studio11 Madrid Dance Center", sc:[0, 0, 0, 20.7, 9.6, 0.0], fx:["4,8 ★ · 202", "–"], url:"https://www.studio11madrid.com", st:[], np:1, pg:"/es/escuelas/studio11-madrid-dance-center.html"},
+      {name:"Salsalón Artes Escénicas", sc:[0, 0, 0, 21.1, 8.1, 0.0], fx:["4,9 ★ · 89", "–"], url:"https://www.salsalon.com", st:[], np:1, pg:"/es/escuelas/salsalon-artes-escenicas.html"},
+      {name:"CS Bachata y Salsa", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 44", "–"], url:"https://www.google.com/maps/search/?api=1&query=CS+Bachata+y+Salsa+Madrid", st:[], np:1, pg:"/es/escuelas/cs-bachata-y-salsa.html"},
+      {name:"Clases de Salsa y Bachata Madrid", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://ronierysusalsa.com", st:[], np:1, pg:"/es/escuelas/clases-de-salsa-y-bachata-madrid.html"},
+      {name:"Salsa y Bachata Urbana", sc:[0, 0, 0, 14.4, 2.9, 0.0], fx:["4,8 ★ · 4", "–"], url:"https://www.salsaybachataurbana.com", st:[], np:1, pg:"/es/escuelas/salsa-y-bachata-urbana.html"},
+      {name:"Salsabachata Sol", sc:[10, 8, 4, 21.2, 10.0, 0.0], fx:["4,8 ★ · 622", "–"], url:"https://salsabachata.es/", st:[], np:1, pg:"/es/escuelas/salsabachata-sol.html"},
+      {name:"Salsabachata Avenida de América", sc:[10, 8, 4, 21.4, 10.0, 0.0], fx:["4,8 ★ · 1042", "–"], url:"https://salsabachata.es/", st:[], np:1, pg:"/es/escuelas/salsabachata-avenida-de-america.html"},
+      {name:"Salsabachata Quevedo", sc:[10, 8, 4, 21.4, 10.0, 0.0], fx:["4,8 ★ · 1023", "–"], url:"https://salsabachata.es/", st:[], np:1, pg:"/es/escuelas/salsabachata-quevedo.html"},
+      {name:"Salsabachata Ventas", sc:[10, 8, 4, 22.7, 10.0, 0.0], fx:["4,9 ★ · 373", "–"], url:"https://salsabachata.es/", st:[], np:1, pg:"/es/escuelas/salsabachata-ventas.html"},
+      {name:"Dame2Salsa", sc:[0, 0, 0, 22.3, 8.0, 0.0], fx:["5,0 ★ · 84", "–"], url:"https://dame2salsa.com/", st:[], np:1, pg:"/es/escuelas/dame2salsa.html"},
+      {name:"Orishas Dance Bailes Cubanos", sc:[0, 0, 0, 20.6, 9.5, 0.0], fx:["4,8 ★ · 194", "–"], url:"https://academiadebaileorishasdance.com/", st:[], np:1, pg:"/es/escuelas/orishas-dance-bailes-cubanos.html"},
+      {name:"LV Dance School Salsa y Bachata", sc:[0, 0, 0, 22.8, 8.4, 0.0], fx:["5,0 ★ · 105", "–"], url:"https://lvdancesalsaybachata.com/", st:[], np:1, pg:"/es/escuelas/lv-dance-school-salsa-y-bachata.html"},
+      {name:"Baila con Estilo", sc:[0, 0, 0, 18.0, 6.4, 0.0], fx:["4,8 ★ · 33", "–"], url:"https://bailaconestilo.com/", st:[], np:1, pg:"/es/escuelas/baila-con-estilo.html"},
+      {name:"Daniel Saez Bailes de Salón y Latino", sc:[0, 0, 0, 19.8, 6.3, 0.0], fx:["5,0 ★ · 31", "–"], url:"https://bailesdesalondanielsaez.es/", st:[], np:1, pg:"/es/escuelas/daniel-saez-bailes-de-salon-y-latino.html"},
+      {name:"Calle Son", sc:[0, 0, 0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 118", "–"], url:"https://calleson.es/", st:[], np:1, pg:"/es/escuelas/calle-son.html"},
+      {name:"Aquí se Baila", sc:[0, 0, 0, 21.2, 7.2, 0.0], fx:["5,0 ★ · 51", "–"], url:"https://aquisebailamadrid.com/", st:[], np:1, pg:"/es/escuelas/aqui-se-baila.html"},
+      {name:"LGTBAILAMOS", sc:[0, 0, 0, 23.6, 9.4, 0.0], fx:["5,0 ★ · 178", "–"], url:"https://lgtbailamos.com/", st:[], np:1, pg:"/es/escuelas/lgtbailamos.html"},
+      {name:"Where Can I Dance Salsa & Bachata Social", sc:[0, 0, 0, 18.5, 5.5, 0.0], fx:["5,0 ★ · 20", "–"], url:"https://wherecanidance.es/", st:[], np:1, pg:"/es/escuelas/where-can-i-dance-salsa-bachata-social.html"},
+      {name:"Enchufla Club de Salsa", sc:[0, 0, 0, 18.8, 8.8, 0.0], fx:["4,7 ★ · 126", "–"], url:"https://www.google.com/maps/search/?api=1&query=Enchufla+Club+de+Salsa+Madrid", st:[], np:1, pg:"/es/escuelas/enchufla-club-de-salsa.html"},
+      {name:"Aquí Se Baila A Lo Cubano", sc:[0, 0, 0, 22.6, 8.3, 0.0], fx:["5,0 ★ · 95", "–"], url:"https://aquisebailaalocubano.es/", st:[], np:1, pg:"/es/escuelas/aqui-se-baila-a-lo-cubano.html"},
+      {name:"Clases de Bachata y Heels", sc:[0, 0, 0, 19.0, 5.8, 0.0], fx:["5,0 ★ · 24", "–"], url:"https://beacons.ai/", st:[], np:1, pg:"/es/escuelas/clases-de-bachata-y-heels.html"}
+    ],
+    "barcelona": [
+      {name:"Marcando el Paso", sc:[0, 0, 0, 22.0, 9.3, 0.0], fx:["4,9 ★ · 171", "–"], url:"http://marcandoelpaso.eu/", st:[], np:1, pg:"/es/escuelas/marcando-el-paso.html"},
+      {name:"Seven Dance", sc:[10, 10, 7, 14.6, 10.0, 0.0], fx:["4,4 ★ · 680", "–"], url:"https://www.sevendance.com/", st:[], np:1, pg:"/es/escuelas/seven-dance.html"},
+      {name:"Bcn Baila", sc:[0, 0, 0, 22.2, 9.7, 0.0], fx:["4,9 ★ · 209", "–"], url:"https://bcnbaila.es/", st:[], np:1, pg:"/es/escuelas/bcn-baila.html"},
+      {name:"Barcelona Bachata School", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://www.barcelonabachata.com/", st:[], np:1, pg:"/es/escuelas/barcelona-bachata-school.html"},
+      {name:"Salsabana", sc:[0, 0, 0, 20.8, 10.0, 0.0], fx:["4,8 ★ · 248", "–"], url:"https://www.salsabana.es/", st:[], np:1, pg:"/es/escuelas/salsabana.html"},
+      {name:"BCN Dancing", sc:[0, 0, 0, 21.8, 7.6, 0.0], fx:["5,0 ★ · 67", "–"], url:"https://bcndancing.com", st:[], np:1, pg:"/es/escuelas/bcn-dancing.html"},
+      {name:"BailaBarcelona", sc:[0, 0, 0, 22.0, 7.8, 0.0], fx:["5,0 ★ · 73", "–"], url:"http://www.bailabarcelona.com", st:[], np:1, pg:"/es/escuelas/bailabarcelona.html"},
+      {name:"Ritmos Barcelona", sc:[0, 0, 0, 19.8, 8.3, 0.0], fx:["4,8 ★ · 95", "–"], url:"http://www.ritmosbarcelona.com", st:[], np:1, pg:"/es/escuelas/ritmos-barcelona.html"},
+      {name:"Así Se Baila Dance Studio", sc:[0, 0, 0, 20.9, 10.0, 0.0], fx:["4,8 ★ · 294", "–"], url:"https://asisebaila.com", st:[], np:1, pg:"/es/escuelas/asi-se-baila-dance-studio.html"},
+      {name:"Bailongu", sc:[10, 8, 7, 17.9, 10.0, 0.0], fx:["4,6 ★ · 569", "–"], url:"https://www.bailongu.com", st:[], np:1, pg:"/es/escuelas/bailongu.html"},
+      {name:"Farray's International Dance Center", sc:[0, 0, 0, 21.2, 10.0, 0.0], fx:["4,8 ★ · 540", "–"], url:"https://www.farrayscenter.com", st:[], np:1, pg:"/es/escuelas/farray-s-international-dance-center.html"},
+      {name:"Antilla Salsa Barcelona", sc:[0, 8, 4, 9.6, 10.0, 0.0], fx:["4,1 ★ · 1115", "–"], url:"https://antillasalsa.com", st:[], np:1, pg:"/es/escuelas/antilla-salsa-barcelona.html"},
+      {name:"Multicultural Salsa y Bachata Barcelona", sc:[0, 0, 0, 18.5, 6.0, 0.0], fx:["4,9 ★ · 27", "–"], url:"https://www.google.com/maps/search/?api=1&query=Multicultural+Salsa+y+Bachata+Barcelona+Barcelona", st:[], np:1, pg:"/es/escuelas/multicultural-salsa-y-bachata-barcelona.html"},
+      {name:"udance Sagrada Familia", sc:[0, 0, 0, 10.2, 8.7, 0.0], fx:["4,1 ★ · 119", "–"], url:"https://www.udance.es", st:[], np:1, pg:"/es/escuelas/udance-sagrada-familia.html"},
+      {name:"Sergi y Lourdes Dance", sc:[0, 0, 0, 22.4, 10.0, 0.0], fx:["4,9 ★ · 246", "–"], url:"https://www.escueladebailesergilourdes.com", st:[], np:1, pg:"/es/escuelas/sergi-y-lourdes-dance.html"},
+      {name:"Escola de dansa i batxata Marcant el pas", sc:[0, 0, 0, 22.0, 9.3, 0.0], fx:["4,9 ★ · 171", "–"], url:"https://marcandoelpaso.eu/", st:[], np:1, pg:"/es/escuelas/escola-de-dansa-i-batxata-marcant-el-pas.html"},
+      {name:"Ay Mi Salsa", sc:[0, 0, 0, 19.3, 6.6, 0.0], fx:["4,9 ★ · 38", "–"], url:"https://aymisalsa.com/", st:[], np:1, pg:"/es/escuelas/ay-mi-salsa.html"},
+      {name:"La Casa del Ritmo Barcelona", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://lacasadelritmo.org/", st:[], np:1, pg:"/es/escuelas/la-casa-del-ritmo-barcelona.html"},
+      {name:"Baila Baila", sc:[0, 0, 0, 21.0, 8.0, 0.0], fx:["4,9 ★ · 83", "–"], url:"https://baila-baila.com/", st:[], np:1, pg:"/es/escuelas/baila-baila.html"},
+      {name:"DanceLab School", sc:[0, 0, 0, 22.5, 10.0, 0.0], fx:["4,9 ★ · 302", "–"], url:"https://dancelab.es/", st:[], np:1, pg:"/es/escuelas/dancelab-school.html"},
+      {name:"SalsaCongrés Dance Academy", sc:[0, 0, 0, 19.8, 6.3, 0.0], fx:["5,0 ★ · 31", "–"], url:"https://www.google.com/maps/search/?api=1&query=SalsaCongrés+Dance+Academy+Barcelona", st:[], np:1, pg:"/es/escuelas/salsacongres-dance-academy.html"},
+      {name:"udance Lesseps", sc:[0, 0, 0, 16.9, 7.8, 0.0], fx:["4,6 ★ · 72", "–"], url:"https://udancelesseps.es/", st:[], np:1, pg:"/es/escuelas/udance-lesseps.html"},
+      {name:"EMDSTUDIO Salsa Caleña", sc:[0, 0, 0, 22.0, 9.3, 0.0], fx:["4,9 ★ · 167", "–"], url:"https://emdclass.com/", st:[], np:1, pg:"/es/escuelas/emdstudio-salsa-calena.html"},
+      {name:"Alocubano Associació de Ball", sc:[0, 0, 0, 20.4, 9.1, 0.0], fx:["4,8 ★ · 153", "–"], url:"https://a-locubano.com/", st:[], np:1, pg:"/es/escuelas/alocubano-associacio-de-ball.html"},
+      {name:"Salsa del Barrio", sc:[0, 0, 0, 16.4, 4.5, 0.0], fx:["4,9 ★ · 11", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+del+Barrio+Barcelona", st:[], np:1, pg:"/es/escuelas/salsa-del-barrio.html"}
+    ],
+    "valencia": [
+      {name:"Bachata Studio Valencia", sc:[0, 0, 0, 17.7, 5.0, 0.0], fx:["5,0 ★ · 15", "–"], url:"https://bachatastudiovalencia.com/", st:[], np:1, pg:"/es/escuelas/bachata-studio-valencia.html"},
+      {name:"Andrés y Marta Bachata School", sc:[0, 0, 0, 24.2, 10.0, 0.0], fx:["5,0 ★ · 320", "–"], url:"https://bachataschool.com/", st:[], np:1, pg:"/es/escuelas/andres-y-marta-bachata-school.html"},
+      {name:"Academia de Baile Luis Chávez", sc:[0, 0, 0, 21.7, 8.9, 0.0], fx:["4,9 ★ · 136", "–"], url:"http://www.academiadebaileluischavez.com/", st:[], np:1, pg:"/es/escuelas/academia-de-baile-luis-chavez.html"},
+      {name:"123 y a Bailar", sc:[0, 0, 0, 22.2, 9.6, 0.0], fx:["4,9 ★ · 197", "–"], url:"https://123yabailar.com/", st:[], np:1, pg:"/es/escuelas/123-y-a-bailar.html"},
+      {name:"IO Dance", sc:[0, 0, 0, 22.1, 9.4, 0.0], fx:["4,9 ★ · 178", "–"], url:"https://iodance.es/", st:[], np:1, pg:"/es/escuelas/io-dance.html"},
+      {name:"Stylos Dance Academy", sc:[0, 0, 0, 20.6, 9.4, 0.0], fx:["4,8 ★ · 181", "–"], url:"http://www.stylosdanceacademy.com", st:[], np:1, pg:"/es/escuelas/stylos-dance-academy.html"},
+      {name:"Pas a Pas Valencia", sc:[0, 0, 0, 20.4, 9.2, 0.0], fx:["4,8 ★ · 160", "–"], url:"https://www.pasapasvalencia.com", st:[], np:1, pg:"/es/escuelas/pas-a-pas-valencia.html"},
+      {name:"Ecuahey Escuela de Baile", sc:[0, 0, 0, 23.4, 9.2, 0.0], fx:["5,0 ★ · 158", "–"], url:"https://www.ecuahey.com", st:[], np:1, pg:"/es/escuelas/ecuahey-escuela-de-baile.html"},
+      {name:"Miky House Valencia", sc:[0, 0, 0, 16.1, 9.8, 0.0], fx:["4,5 ★ · 223", "–"], url:"https://www.mikyhouse.net", st:[], np:1, pg:"/es/escuelas/miky-house-valencia.html"},
+      {name:"Derek Bachata Pasión", sc:[0, 0, 0, 16.4, 4.2, 0.0], fx:["5,0 ★ · 9", "–"], url:"https://bachatapasion.com", st:[], np:1, pg:"/es/escuelas/derek-bachata-pasion.html"},
+      {name:"Baila con Ben", sc:[0, 0, 0, 24.2, 10.0, 0.0], fx:["5,0 ★ · 349", "–"], url:"https://con-ben.com", st:[], np:1, pg:"/es/escuelas/baila-con-ben.html"},
+      {name:"Academia Baila y Punto Valencia", sc:[0, 0, 0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 56", "–"], url:"https://bailaypunto.com/", st:[], np:1, pg:"/es/escuelas/academia-baila-y-punto-valencia.html"},
+      {name:"IO Dance Salsa y Bachata", sc:[0, 0, 0, 22.1, 9.4, 0.0], fx:["4,9 ★ · 179", "–"], url:"https://iodance.es/", st:[], np:1, pg:"/es/escuelas/io-dance-salsa-y-bachata.html"},
+      {name:"Escuela de Baile Ritmos", sc:[0, 0, 0, 17.3, 8.8, 0.0], fx:["4,6 ★ · 128", "–"], url:"https://escueladebaileritmos.com/", st:[], np:1, pg:"/es/escuelas/escuela-de-baile-ritmos.html"},
+      {name:"Rumbaché Escuela de Baile", sc:[0, 0, 0, 21.7, 8.9, 0.0], fx:["4,9 ★ · 137", "–"], url:"https://www.google.com/maps/search/?api=1&query=Rumbaché+Escuela+de+Baile+Valencia", st:[], np:1, pg:"/es/escuelas/rumbache-escuela-de-baile.html"},
+      {name:"Loco Valencia Salsa", sc:[0, 0, 0, 16.6, 6.0, 0.0], fx:["4,7 ★ · 26", "–"], url:"https://loco-valencia-salsa.es/", st:[], np:1, pg:"/es/escuelas/loco-valencia-salsa.html"},
+      {name:"Baila amb mi", sc:[0, 0, 0, 21.1, 8.1, 0.0], fx:["4,9 ★ · 89", "–"], url:"https://ballaambmi.com/", st:[], np:1, pg:"/es/escuelas/baila-amb-mi.html"},
+      {name:"Magic Dance Academy", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.magicdance.es/horario-magic-dance/", st:[], np:1, un:1, pg:"/es/escuelas/magic-dance-academy.html"}
+    ],
+    "sevilla": [
+      {name:"Bailarte", sc:[0, 0, 0, 19.4, 7.8, 0.0], fx:["4,8 ★ · 72", "–"], url:"https://www.bailarte.net/", st:[], np:1, pg:"/es/escuelas/bailarte.html"},
+      {name:"Los Reyes del Mambo", sc:[0, 0, 0, 19.7, 8.1, 0.0], fx:["4,8 ★ · 89", "–"], url:"https://www.escuelalosreyesdelmambo.com/", st:[], np:1, pg:"/es/escuelas/los-reyes-del-mambo.html"},
+      {name:"Doble Giro", sc:[0, 0, 0, 15.3, 5.3, 0.0], fx:["4,6 ★ · 18", "–"], url:"http://www.doblegiro.com/", st:[], np:1, pg:"/es/escuelas/doble-giro.html"},
+      {name:"Academia Bailamos", sc:[0, 0, 0, 17.2, 6.6, 0.0], fx:["4,7 ★ · 38", "–"], url:"http://www.academiabailamos.es", st:[], np:1, pg:"/es/escuelas/academia-bailamos.html"},
+      {name:"Feeling Dance Studio", sc:[0, 0, 0, 19.7, 6.9, 0.0], fx:["4,9 ★ · 44", "–"], url:"https://feelingdancestudio.com", st:[], np:1, pg:"/es/escuelas/feeling-dance-studio.html"},
+      {name:"The Mambo Kings", sc:[0, 0, 0, 19.7, 8.1, 0.0], fx:["4,8 ★ · 89", "–"], url:"https://escuelalosreyesdelmambo.com/", st:[], np:1, pg:"/es/escuelas/the-mambo-kings.html"},
+      {name:"Bailamos Academia de Bailes Latinos", sc:[0, 0, 0, 17.2, 6.6, 0.0], fx:["4,7 ★ · 38", "–"], url:"https://academiabailamos.es/", st:[], np:1, pg:"/es/escuelas/bailamos-academia-de-bailes-latinos.html"},
+      {name:"Academia de Baile Bachata SVQ", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://sevilla-este.com/", st:[], np:1, pg:"/es/escuelas/academia-de-baile-bachata-svq.html"}
+    ],
+    "malaga": [
+      {name:"Baila con Sandra y Quique", sc:[0, 0, 0, 24.4, 10.0, 0.0], fx:["5,0 ★ · 456", "–"], url:"https://www.sandracarbonell.es", st:[], np:1, pg:"/es/escuelas/baila-con-sandra-y-quique.html"},
+      {name:"Pura Pasión Escuela de Baile", sc:[0, 0, 0, 22.5, 10.0, 0.0], fx:["4,9 ★ · 316", "–"], url:"https://www.google.com/maps/search/?api=1&query=Pura+Pasión+Escuela+de+Baile+Málaga", st:[], np:1, pg:"/es/escuelas/pura-pasion-escuela-de-baile.html"},
+      {name:"MálagaSalsa", sc:[0, 0, 0, 20.3, 8.9, 0.0], fx:["4,8 ★ · 134", "–"], url:"http://www.malagasalsa.com", st:[], np:1, pg:"/es/escuelas/malagasalsa.html"},
+      {name:"Suárez y Carmen Bachata", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://www.google.com/maps/search/?api=1&query=Suárez+y+Carmen+Bachata+Málaga", st:[], np:1, pg:"/es/escuelas/suarez-y-carmen-bachata.html"},
+      {name:"MálagaSalsa Escuela de Baile", sc:[0, 0, 0, 20.3, 8.9, 0.0], fx:["4,8 ★ · 134", "–"], url:"https://malagasalsa.com/", st:[], np:1, pg:"/es/escuelas/malagasalsa-escuela-de-baile.html"},
+      {name:"Quique y Sandra Salsa y Bachata", sc:[0, 0, 0, 23.7, 9.6, 0.0], fx:["5,0 ★ · 204", "–"], url:"https://qsdancemalaga.es/", st:[], np:1, pg:"/es/escuelas/quique-y-sandra-salsa-y-bachata.html"},
+      {name:"Suárez&Carmen Bachata Málaga", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://www.google.com/maps/search/?api=1&query=Suárez&Carmen+Bachata+Málaga+Málaga", st:[], np:1, pg:"/es/escuelas/suarez-carmen-bachata-malaga.html"},
+      {name:"Saoco Dance Center", sc:[0, 0, 0, 20.0, 7.2, 0.0], fx:["4,9 ★ · 52", "–"], url:"https://saocodancecenter.com/", st:[], np:1, pg:"/es/escuelas/saoco-dance-center.html"},
+      {name:"Bachata&Friends", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://bachatafriends.com/", st:[], np:1, pg:"/es/escuelas/bachata-friends.html"},
+      {name:"Astro Latino Escuela de Baile", sc:[0, 0, 0, 19.3, 6.0, 0.0], fx:["5,0 ★ · 26", "–"], url:"https://www.google.com/maps/search/?api=1&query=Astro+Latino+Escuela+de+Baile+Málaga", st:[], np:1, pg:"/es/escuelas/astro-latino-escuela-de-baile.html"},
+      {name:"Salsa Cubana en Málaga", sc:[0, 0, 0, 22.8, 8.5, 0.0], fx:["5,0 ★ · 107", "–"], url:"https://salsacubanaenmalaga.es/", st:[], np:1, pg:"/es/escuelas/salsa-cubana-en-malaga.html"},
+      {name:"BSD Bailas Social Dance Málaga Centro", sc:[0, 0, 0, 17.2, 6.6, 0.0], fx:["4,7 ★ · 38", "–"], url:"https://bailasmalagacentro.com/", st:[], np:1, pg:"/es/escuelas/bsd-bailas-social-dance-malaga-centro.html"},
+      {name:"Parque del Oeste Salsa", sc:[0, 0, 0, 17.9, 6.3, 0.0], fx:["4,8 ★ · 32", "–"], url:"https://salsa.org.es/", st:[], np:1, pg:"/es/escuelas/parque-del-oeste-salsa.html"},
+      {name:"Salsa y Bachata en el Palo", sc:[0, 0, 0, 18.0, 5.2, 0.0], fx:["5,0 ★ · 17", "–"], url:"https://salsamalaga.com/", st:[], np:1, pg:"/es/escuelas/salsa-y-bachata-en-el-palo.html"},
+      {name:"Escuela de Baile Malaga Kizomba", sc:[0, 0, 0, 23.6, 9.4, 0.0], fx:["5,0 ★ · 182", "–"], url:"https://malagakizomba.es/", st:[], np:1, pg:"/es/escuelas/escuela-de-baile-malaga-kizomba.html"},
+      {name:"Andy Moreno Bachata", sc:[0, 0, 0, 21.8, 7.6, 0.0], fx:["5,0 ★ · 65", "–"], url:"https://andymoreno.es/", st:[], np:1, pg:"/es/escuelas/andy-moreno-bachata.html"},
+      {name:"Blanca Sánchez Baile & Ritmos latinos", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://www.google.com/maps/search/?api=1&query=Blanca+Sánchez+Baile+&+Ritmos+latinos+Málaga", st:[], np:1, pg:"/es/escuelas/blanca-sanchez-baile-ritmos-latinos.html"},
+      {name:"En Clave De Danza", sc:[0, 0, 0, 22.4, 8.1, 0.0], fx:["5,0 ★ · 87", "–"], url:"https://enclavededanza.com/", st:[], np:1, pg:"/es/escuelas/en-clave-de-danza.html"}
+    ],
+    "alicante": [
+      {name:"Escuela de Baile La Terreta", sc:[0, 0, 0, 21.7, 8.8, 0.0], fx:["4,9 ★ · 129", "–"], url:"http://escueladebailelaterreta.com/", st:[], np:1, pg:"/es/escuelas/escuela-de-baile-la-terreta.html"},
+      {name:"Estudio Alicante", sc:[0, 0, 0, 16.4, 6.9, 0.0], fx:["4,6 ★ · 44", "–"], url:"https://www.estudioalicante.com/", st:[], np:1, pg:"/es/escuelas/estudio-alicante.html"},
+      {name:"Sabor Dinámico School Alicante", sc:[0, 0, 0, 16.4, 5.7, 0.0], fx:["4,7 ★ · 22", "–"], url:"https://www.google.com/maps/search/?api=1&query=Sabor+Dinámico+School+Alicante+Alicante", st:[], np:1, pg:"/es/escuelas/sabor-dinamico-school-alicante.html"},
+      {name:"Elegancia con Sabor", sc:[0, 0, 0, 17.6, 7.0, 0.0], fx:["4,7 ★ · 47", "–"], url:"https://eleganciaconsabor.com/", st:[], np:1, pg:"/es/escuelas/elegancia-con-sabor.html"},
+      {name:"Sabor Dinámico School", sc:[0, 0, 0, 16.4, 5.7, 0.0], fx:["4,7 ★ · 22", "–"], url:"https://www.google.com/maps/search/?api=1&query=Sabor+Dinámico+School+Alicante", st:[], np:1, pg:"/es/escuelas/sabor-dinamico-school.html"},
+      {name:"Academia de baile Qué te mueve", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/1746/academia-de-baile-que-te-mueve", st:[], np:1, un:1, pg:"/es/escuelas/academia-de-baile-que-te-mueve.html"}
+    ],
+    "zaragoza": [
+      {name:"Bachata Room Zaragoza", sc:[0, 0, 0, 21.7, 7.5, 0.0], fx:["5,0 ★ · 63", "–"], url:"https://www.bachataroomzaragoza.com/", st:[], np:1, pg:"/es/escuelas/bachata-room-zaragoza.html"},
+      {name:"Sabor a Salsa", sc:[0, 0, 0, 22.8, 8.5, 0.0], fx:["5,0 ★ · 109", "–"], url:"https://www.saborasalsazaragoza.com/", st:[], np:1, pg:"/es/escuelas/sabor-a-salsa.html"},
+      {name:"Escuela de Baile El Almacén", sc:[0, 0, 0, 19.3, 7.7, 0.0], fx:["4,8 ★ · 68", "–"], url:"https://escueladebaileelalmacen.com/", st:[], np:1, pg:"/es/escuelas/escuela-de-baile-el-almacen.html"},
+      {name:"Salsaragón", sc:[0, 0, 0, 21.5, 8.7, 0.0], fx:["4,9 ★ · 119", "–"], url:"http://www.salsaragon.es/", st:[], np:1, pg:"/es/escuelas/salsaragon.html"},
+      {name:"Salson Escuela de Baile", sc:[0, 0, 0, 21.0, 8.0, 0.0], fx:["4,9 ★ · 84", "–"], url:"https://salsonescuela.es/", st:[], np:1, pg:"/es/escuelas/salson-escuela-de-baile.html"},
+      {name:"Timba y Son", sc:[0, 0, 0, 21.3, 7.3, 0.0], fx:["5,0 ★ · 54", "–"], url:"https://www.timbayson.com", st:[], np:1, pg:"/es/escuelas/timba-y-son.html"},
+      {name:"Kizz and Beat", sc:[0, 0, 0, 18.5, 5.5, 0.0], fx:["5,0 ★ · 20", "–"], url:"https://kizzandbeat.com", st:[], np:1, pg:"/es/escuelas/kizz-and-beat.html"},
+      {name:"Unibaila Academia de Baile", sc:[0, 0, 0, 20.7, 7.7, 0.0], fx:["4,9 ★ · 71", "–"], url:"https://unibaila.com", st:[], np:1, pg:"/es/escuelas/unibaila-academia-de-baile.html"},
+      {name:"Unibaila Goya", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://unibaila.com/", st:[], np:1, pg:"/es/escuelas/unibaila-goya.html"},
+      {name:"Zaragozando a lo Cubano", sc:[0, 0, 0, 16.1, 4.0, 0.0], fx:["5,0 ★ · 8", "–"], url:"https://www.google.com/maps/search/?api=1&query=Zaragozando+a+lo+Cubano+Zaragoza", st:[], np:1, pg:"/es/escuelas/zaragozando-a-lo-cubano.html"},
+      {name:"Bailaran Art Academy", sc:[0, 0, 0, 16.7, 7.3, 0.0], fx:["4,6 ★ · 57", "–"], url:"https://bailaran.es/", st:[], np:1, pg:"/es/escuelas/bailaran-art-academy.html"},
+      {name:"Academia Virginia Bernabeu", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/es/event/spain/aragon/zaragoza/virginia-bernabeu-salsa-bachata-classes/", st:[], np:1, un:1, pg:"/es/escuelas/academia-virginia-bernabeu.html"},
+      {name:"Baile Zaragoza", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.bailezaragoza.com/clases-de-bachata-en-zaragoza-bachata-sensual-parejas-y-estilo-chicas/", st:[], np:1, un:1, pg:"/es/escuelas/baile-zaragoza.html"}
+    ],
+    "bilbao": [
+      {name:"Bizkaisalsa", sc:[0, 0, 0, 24.0, 10.0, 0.0], fx:["5,0 ★ · 267", "–"], url:"http://www.bizkaisalsa.com", st:[], np:1, pg:"/es/escuelas/bizkaisalsa.html"},
+      {name:"Escuela de Bachata Bilbao Infinity", sc:[0, 0, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://www.google.com/maps/search/?api=1&query=Escuela+de+Bachata+Bilbao+Infinity+Bilbao", st:[], np:1, pg:"/es/escuelas/escuela-de-bachata-bilbao-infinity.html"},
+      {name:"Tumbao Escuela de Baile Bilbao", sc:[0, 0, 0, 18.5, 8.3, 0.0], fx:["4,7 ★ · 99", "–"], url:"https://escuelatumbao.com/", st:[], np:1, pg:"/es/escuelas/tumbao-escuela-de-baile-bilbao.html"},
+      {name:"BilbaoBaila Dantza Eskola", sc:[0, 0, 0, 21.0, 8.1, 0.0], fx:["4,9 ★ · 86", "–"], url:"https://bilbaobaila.com/", st:[], np:1, pg:"/es/escuelas/bilbaobaila-dantza-eskola.html"},
+      {name:"Bachata Bilbao Infinity", sc:[0, 0, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bachata+Bilbao+Infinity+Bilbao", st:[], np:1, pg:"/es/escuelas/bachata-bilbao-infinity.html"}
+    ],
+    "palma": [
+      {name:"Victory's Dance", sc:[0, 0, 0, 17.8, 10.0, 0.0], fx:["4,6 ★ · 323", "–"], url:"https://victorysdance.com", st:[], np:1, pg:"/es/escuelas/victory-s-dance.html"},
+      {name:"InfiniT Dance School", sc:[0, 0, 0, 23.4, 9.1, 0.0], fx:["5,0 ★ · 154", "–"], url:"https://infinitdance.com", st:[], np:1, pg:"/es/escuelas/infinit-dance-school.html"},
+      {name:"Centre Ball Mallorca", sc:[0, 0, 0, 17.2, 6.6, 0.0], fx:["4,7 ★ · 38", "–"], url:"http://www.centreballmallorca.es", st:[], np:1, pg:"/es/escuelas/centre-ball-mallorca.html"},
+      {name:"Bat Club Academia de Baile", sc:[0, 0, 0, 13.0, 9.9, 0.0], fx:["4,3 ★ · 241", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bat+Club+Academia+de+Baile+Palma+de+Mallorca", st:[], np:1, pg:"/es/escuelas/bat-club-academia-de-baile.html"},
+      {name:"Mzouk Mallorca", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://www.google.com/maps/search/?api=1&query=Mzouk+Mallorca+Palma+de+Mallorca", st:[], np:1, pg:"/es/escuelas/mzouk-mallorca.html"},
+      {name:"Aloha Dance School", sc:[0, 0, 0, 22.4, 8.1, 0.0], fx:["5,0 ★ · 88", "–"], url:"https://alohamallorca.com/", st:[], np:1, pg:"/es/escuelas/aloha-dance-school.html"},
+      {name:"ZOUK Clases de baile en Mallorca", sc:[0, 0, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://clasesdebailemallorca.com/", st:[], np:1, pg:"/es/escuelas/zouk-clases-de-baile-en-mallorca.html"}
+    ],
+    "murcia": [
+      {name:"Murcia Latin Dance Salsa y Bachata", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://murcialatindancesalsaybachata.my.canva.site", st:[], np:1, pg:"/es/escuelas/murcia-latin-dance-salsa-y-bachata.html"},
+      {name:"Murciafusion", sc:[0, 0, 0, 22.8, 8.5, 0.0], fx:["5,0 ★ · 107", "–"], url:"https://murciafusion.net", st:[], np:1, pg:"/es/escuelas/murciafusion.html"},
+      {name:"Clases de Salsa y Bachata en Murcia", sc:[0, 0, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://clasessalsaybachata.es", st:[], np:1, pg:"/es/escuelas/clases-de-salsa-y-bachata-en-murcia.html"},
+      {name:"Majao Dance Studio", sc:[0, 0, 0, 21.2, 8.3, 0.0], fx:["4,9 ★ · 95", "–"], url:"https://majaodancestudio.com", st:[], np:1, pg:"/es/escuelas/majao-dance-studio.html"},
+      {name:"Feel The Beat", sc:[0, 0, 0, 21.0, 7.1, 0.0], fx:["5,0 ★ · 49", "–"], url:"https://www.google.com/maps/search/?api=1&query=Feel+The+Beat+Murcia", st:[], np:1, pg:"/es/escuelas/feel-the-beat.html"},
+      {name:"Academia a bailar", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://www.google.com/maps/search/?api=1&query=Academia+a+bailar+Murcia", st:[], np:1, pg:"/es/escuelas/academia-a-bailar.html"},
+      {name:"Alfonso y Mónica Bachata y Salsa", sc:[0, 0, 0, 18.8, 5.7, 0.0], fx:["5,0 ★ · 22", "–"], url:"https://alfonsoymonica.com/", st:[], np:1, pg:"/es/escuelas/alfonso-y-monica-bachata-y-salsa.html"},
+      {name:"Carmen Romero Academia de Baile (Murcia)", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/1712/carmen-romero-academia-de-baile-murcia", st:[], np:1, un:1, pg:"/es/escuelas/carmen-romero-academia-de-baile-murcia.html"}
+    ],
+    "las-palmas": [
+      {name:"Clave y Tacón Las Palmas", sc:[0, 0, 0, 24.4, 10.0, 0.0], fx:["5,0 ★ · 501", "–"], url:"https://www.google.com/maps/search/?api=1&query=Clave+y+Tacón+Las+Palmas+Las+Palmas+de+Gran+Canaria", st:[], np:1, pg:"/es/escuelas/clave-y-tacon-las-palmas.html"},
+      {name:"Escuela de Baile Latinnova", sc:[0, 0, 0, 20.5, 7.6, 0.0], fx:["4,9 ★ · 64", "–"], url:"http://www.escueladebailelaspalmas.com", st:[], np:1, pg:"/es/escuelas/escuela-de-baile-latinnova.html"},
+      {name:"Paso a Paso Las Palmas", sc:[0, 0, 0, 21.8, 9.0, 0.0], fx:["4,9 ★ · 140", "–"], url:"http://www.pasoapasolaspalmas.com", st:[], np:1, pg:"/es/escuelas/paso-a-paso-las-palmas.html"},
+      {name:"Aquisebaila Bailes Latinos", sc:[0, 0, 0, 21.8, 9.0, 0.0], fx:["4,9 ★ · 140", "–"], url:"https://aquisebaila.es/", st:[], np:1, pg:"/es/escuelas/aquisebaila-bailes-latinos.html"},
+      {name:"Latinnova Dance School", sc:[0, 0, 0, 20.5, 7.6, 0.0], fx:["4,9 ★ · 64", "–"], url:"https://escueladebailelaspalmas.com/", st:[], np:1, pg:"/es/escuelas/latinnova-dance-school.html"},
+      {name:"Sabor a Salsa Escuela de Baile", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://www.google.com/maps/search/?api=1&query=Sabor+a+Salsa+Escuela+de+Baile+Las+Palmas+de+Gran+Canaria", st:[], np:1, pg:"/es/escuelas/sabor-a-salsa-escuela-de-baile.html"},
+      {name:"Ven y Baila", sc:[0, 0, 0, 19.3, 6.0, 0.0], fx:["5,0 ★ · 26", "–"], url:"https://www.google.com/maps/search/?api=1&query=Ven+y+Baila+Las+Palmas+de+Gran+Canaria", st:[], np:1, pg:"/es/escuelas/ven-y-baila.html"},
+      {name:"Bailando con Clase", sc:[0, 0, 0, 13.1, 6.3, 0.0], fx:["4,3 ★ · 31", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bailando+con+Clase+Las+Palmas", st:[], np:1, pg:"/es/escuelas/bailando-con-clase.html"},
+      {name:"Clases de bailes de salon latinos y caribeños", sc:[0, 0, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://clasesdebailes.com/", st:[], np:1, pg:"/es/escuelas/clases-de-bailes-de-salon-latinos-y-caribenos.html"}
+    ],
+    "granada": [
+      {name:"Baila2 Dance Studio", sc:[0, 0, 0, 23.3, 9.0, 0.0], fx:["5,0 ★ · 143", "–"], url:"https://www.baila2.com", st:[], np:1, pg:"/es/escuelas/baila2-dance-studio.html"},
+      {name:"Granada Dance Project", sc:[0, 0, 0, 19.2, 5.9, 0.0], fx:["5,0 ★ · 25", "–"], url:"https://www.granadadanceproject.es", st:[], np:1, pg:"/es/escuelas/granada-dance-project.html"},
+      {name:"Clases de Salsa y Bachata Granada", sc:[0, 0, 0, 21.1, 8.2, 0.0], fx:["4,9 ★ · 92", "–"], url:"https://www.google.com/maps/search/?api=1&query=Clases+de+Salsa+y+Bachata+Granada+Granada", st:[], np:1, pg:"/es/escuelas/clases-de-salsa-y-bachata-granada.html"},
+      {name:"Global Dance Academia de bailes latinos", sc:[0, 0, 0, 18.9, 6.3, 0.0], fx:["4,9 ★ · 32", "–"], url:"https://www.google.com/maps/search/?api=1&query=Global+Dance+Academia+de+bailes+latinos+Granada", st:[], np:1, pg:"/es/escuelas/global-dance-academia-de-bailes-latinos.html"},
+      {name:"Al Son de Grana", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/event/spain/andalucia/granada/salsa-and-bachata-classes-at-al-son-de-grana/", st:[], np:1, un:1, pg:"/es/escuelas/al-son-de-grana.html"},
+      {name:"Marcos&Candela BS", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/2594/marcos-candela-bs", st:[], np:1, un:1, pg:"/es/escuelas/marcos-candela-bs.html"}
+    ],
+    "cordoba": [
+      {name:"Academia de Baile Ángel Guirao", sc:[0, 0, 0, 23.1, 8.8, 0.0], fx:["5,0 ★ · 128", "–"], url:"https://academiabaileangelguiraocordoba.es", st:[], np:1, pg:"/es/escuelas/academia-de-baile-angel-guirao.html"},
+      {name:"Salsa Con Clase", sc:[0, 0, 0, 19.7, 6.9, 0.0], fx:["4,9 ★ · 44", "–"], url:"https://www.salsaconclase.es", st:[], np:1, pg:"/es/escuelas/salsa-con-clase.html"},
+      {name:"Escuela de Baile Xanadú", sc:[0, 0, 0, 20.0, 8.5, 0.0], fx:["4,8 ★ · 106", "–"], url:"http://www.escuelaxanadu.es", st:[], np:1, pg:"/es/escuelas/escuela-de-baile-xanadu.html"},
+      {name:"Sala Ritmo", sc:[0, 0, 0, 15.6, 7.7, 0.0], fx:["4,5 ★ · 68", "–"], url:"https://www.google.com/maps/search/?api=1&query=Sala+Ritmo+Córdoba", st:[], np:1, pg:"/es/escuelas/sala-ritmo.html"},
+      {name:"Sabor Latino Academia de Danzas", sc:[0, 0, 0, 19.1, 7.4, 0.0], fx:["4,8 ★ · 59", "–"], url:"https://www.google.com/maps/search/?api=1&query=Sabor+Latino+Academia+de+Danzas+Córdoba", st:[], np:1, pg:"/es/escuelas/sabor-latino-academia-de-danzas.html"},
+      {name:"Academia Bailaconmigo", sc:[0, 0, 0, 20.9, 8.0, 0.0], fx:["4,9 ★ · 80", "–"], url:"https://baila-conmigo-cordoba.jimdosite.com/", st:[], np:1, pg:"/es/escuelas/academia-bailaconmigo.html"},
+      {name:"Escuela de Danzas Mundo Latino", sc:[0, 0, 0, 18.6, 6.1, 0.0], fx:["4,9 ★ · 28", "–"], url:"https://www.google.com/maps/search/?api=1&query=Escuela+de+Danzas+Mundo+Latino+Córdoba", st:[], np:1, pg:"/es/escuelas/escuela-de-danzas-mundo-latino.html"},
+      {name:"A Tiempo Escuela de Baile", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/2512/a-tiempo-escuela-de-baile", st:[], np:1, un:1, pg:"/es/escuelas/a-tiempo-escuela-de-baile.html"}
+    ],
+    "pamplona": [
+      {name:"Academia BailaSalsero", sc:[0, 0, 0, 22.0, 9.3, 0.0], fx:["4,9 ★ · 173", "–"], url:"https://www.bailasalsero.com", st:[], np:1, pg:"/es/escuelas/academia-bailasalsero.html"},
+      {name:"En Clave de Son", sc:[0, 0, 0, 19.3, 7.6, 0.0], fx:["4,8 ★ · 65", "–"], url:"https://www.escueladebailepamplona.com", st:[], np:1, pg:"/es/escuelas/en-clave-de-son.html"},
+      {name:"Baila con Eneko", sc:[0, 0, 0, 22.0, 9.3, 0.0], fx:["4,9 ★ · 172", "–"], url:"http://www.bailaconeneko.com", st:[], np:1, pg:"/es/escuelas/baila-con-eneko.html"},
+      {name:"La Sueka", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://lasueka.com/", st:[], np:1, pg:"/es/escuelas/la-sueka.html"},
+      {name:"Alber y Ari Baila", sc:[0, 0, 0, 17.0, 5.0, 0.0], fx:["4,9 ★ · 15", "–"], url:"https://www.google.com/maps/search/?api=1&query=Alber+y+Ari+Baila+Pamplona", st:[], np:1, pg:"/es/escuelas/alber-y-ari-baila.html"},
+      {name:"Bailamos RyR", sc:[0, 0, 0, 16.0, 5.3, 0.0], fx:["4,7 ★ · 18", "–"], url:"https://bailamosryr.com/", st:[], np:1, pg:"/es/escuelas/bailamos-ryr.html"}
+    ],
+    "valladolid": [
+      {name:"Baila Salsa Valladolid", sc:[0, 0, 0, 19.2, 5.9, 0.0], fx:["5,0 ★ · 25", "–"], url:"http://www.bailasalsa.es", st:[], np:1, pg:"/es/escuelas/baila-salsa-valladolid.html"},
+      {name:"Escuela de Baile Ritmolatino", sc:[0, 0, 0, 21.4, 7.3, 0.0], fx:["5,0 ★ · 57", "–"], url:"https://ritmolatinovalladolid.es/", st:[], np:1, pg:"/es/escuelas/escuela-de-baile-ritmolatino.html"},
+      {name:"Danzaye", sc:[0, 0, 0, 14.9, 4.6, 0.0], fx:["4,6 ★ · 12", "–"], url:"https://www.google.com/maps/search/?api=1&query=Danzaye+Valladolid", st:[], np:1, pg:"/es/escuelas/danzaye.html"},
+      {name:"Bailarte Centro de Arte y Danza", sc:[0, 0, 0, 19.1, 7.4, 0.0], fx:["4,8 ★ · 59", "–"], url:"https://bailarte.es/", st:[], np:1, pg:"/es/escuelas/bailarte-centro-de-arte-y-danza.html"}
+    ],
+    "santa-cruz-de-tenerife": [
+      {name:"MMDanza", sc:[0, 0, 0, 14.4, 8.1, 0.0], fx:["4,4 ★ · 87", "–"], url:"https://mmdanza.com", st:[], np:1, pg:"/es/escuelas/mmdanza.html"},
+      {name:"Pura Salsa y Sabor", sc:[0, 0, 0, 18.1, 6.5, 0.0], fx:["4,8 ★ · 35", "–"], url:"http://purasalsaysabor.com", st:[], np:1, pg:"/es/escuelas/pura-salsa-y-sabor.html"},
+      {name:"Orbital Mambo", sc:[0, 0, 0, 17.9, 6.3, 0.0], fx:["4,8 ★ · 31", "–"], url:"https://www.google.com/maps/search/?api=1&query=Orbital+Mambo+Santa+Cruz+de+Tenerife", st:[], np:1, pg:"/es/escuelas/orbital-mambo.html"},
+      {name:"Julio Fernández Bailes Latinos", sc:[0, 0, 0, 17.2, 5.1, 0.0], fx:["4,9 ★ · 16", "–"], url:"https://juliofernandezdance.com/", st:[], np:1, pg:"/es/escuelas/julio-fernandez-bailes-latinos.html"},
+      {name:"Bachata Sensual Tenerife", sc:[0, 0, 0, 20.7, 7.8, 0.0], fx:["4,9 ★ · 72", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bachata+Sensual+Tenerife+Santa+Cruz+de+Tenerife", st:[], np:1, pg:"/es/escuelas/bachata-sensual-tenerife.html"},
+      {name:"Tenerife Baila", sc:[0, 0, 0, 21.3, 7.3, 0.0], fx:["5,0 ★ · 54", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tenerife+Baila+Santa+Cruz+de+Tenerife", st:[], np:1, pg:"/es/escuelas/tenerife-baila.html"},
+      {name:"Elite Salsa Tenerife", sc:[0, 0, 0, 19.6, 6.2, 0.0], fx:["5,0 ★ · 29", "–"], url:"https://elitesalsatenerife.es/", st:[], np:1, pg:"/es/escuelas/elite-salsa-tenerife.html"}
+    ],
+    "vigo": [
+      {name:"Galidancia", sc:[0, 0, 0, 21.0, 8.1, 0.0], fx:["4,9 ★ · 86", "–"], url:"http://galidancia.com", st:[], np:1, pg:"/es/escuelas/galidancia.html"},
+      {name:"IDLS Escuela de Baile", sc:[0, 0, 0, 20.4, 9.2, 0.0], fx:["4,8 ★ · 156", "–"], url:"https://idlsescueladebaile.com", st:[], np:1, pg:"/es/escuelas/idls-escuela-de-baile.html"},
+      {name:"Ritmo Vigo", sc:[0, 0, 0, 21.7, 8.9, 0.0], fx:["4,9 ★ · 138", "–"], url:"https://www.google.com/maps/search/?api=1&query=Ritmo+Vigo+Vigo", st:[], np:1, pg:"/es/escuelas/ritmo-vigo.html"}
+    ],
+    "elche": [
+      {name:"Salsabor Escuela de Baile", sc:[0, 0, 0, 22.0, 9.3, 0.0], fx:["4,9 ★ · 168", "–"], url:"https://salsaborelche.es", st:[], np:1, pg:"/es/escuelas/salsabor-escuela-de-baile.html"},
+      {name:"Elche Love Salsa", sc:[0, 0, 0, 22.1, 9.5, 0.0], fx:["4,9 ★ · 185", "–"], url:"https://elchelovesalsa.es", st:[], np:1, pg:"/es/escuelas/elche-love-salsa.html"},
+      {name:"Academia de Baile Dairen", sc:[0, 0, 0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 58", "–"], url:"https://www.google.com/maps/search/?api=1&query=Academia+de+Baile+Dairen+Elche", st:[], np:1, pg:"/es/escuelas/academia-de-baile-dairen.html"},
+      {name:"BienBailao", sc:[0, 0, 0, 20.4, 6.7, 0.0], fx:["5,0 ★ · 39", "–"], url:"https://bienbailao.com/", st:[], np:1, pg:"/es/escuelas/bienbailao.html"}
+    ],
+    "castellon": [
+      {name:"Zergyo y Eva Latin Dance Studio", sc:[0, 0, 0, 23.1, 8.8, 0.0], fx:["5,0 ★ · 130", "–"], url:"https://www.zyelatindancestudio.com", st:[], np:1, pg:"/es/escuelas/zergyo-y-eva-latin-dance-studio.html"},
+      {name:"Papa Rumba Escuela de Baile", sc:[0, 0, 0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 115", "–"], url:"https://www.papa-rumba.com", st:[], np:1, pg:"/es/escuelas/papa-rumba-escuela-de-baile.html"},
+      {name:"Castellon Baila", sc:[0, 0, 0, 19.7, 8.1, 0.0], fx:["4,8 ★ · 86", "–"], url:"https://castellonbaila.com/", st:[], np:1, pg:"/es/escuelas/castellon-baila.html"},
+      {name:"Academia Ritmo Latino Castellón", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/2261/academia-ritmo-latino", st:[], np:1, un:1, pg:"/es/escuelas/academia-ritmo-latino-castellon.html"}
+    ],
+    "tarragona": [
+      {name:"Salsaburu", sc:[0, 0, 0, 22.5, 8.2, 0.0], fx:["5,0 ★ · 94", "–"], url:"https://www.salsaburu.com", st:[], np:1, pg:"/es/escuelas/salsaburu.html"},
+      {name:"Ritmos Tarragona", sc:[0, 0, 0, 21.3, 8.4, 0.0], fx:["4,9 ★ · 102", "–"], url:"https://ritmostarragona.com", st:[], np:1, pg:"/es/escuelas/ritmos-tarragona.html"},
+      {name:"Salsixto", sc:[0, 0, 0, 17.3, 4.8, 0.0], fx:["5,0 ★ · 13", "–"], url:"https://salsixto.com/", st:[], np:1, pg:"/es/escuelas/salsixto.html"}
+    ],
+    "girona": [
+      {name:"mrDANCE", sc:[0, 0, 0, 18.8, 7.1, 0.0], fx:["4,8 ★ · 50", "–"], url:"https://www.mrdancegirona.com", st:[], np:1, pg:"/es/escuelas/mrdance.html"},
+      {name:"Instep", sc:[0, 0, 0, 20.7, 7.8, 0.0], fx:["4,9 ★ · 73", "–"], url:"https://www.instepdansa.com", st:[], np:1, pg:"/es/escuelas/instep.html"},
+      {name:"Liados Salsa & Bachata", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://www.google.com/maps/search/?api=1&query=Liados+Salsa+&+Bachata+Girona", st:[], np:1, pg:"/es/escuelas/liados-salsa-bachata.html"}
+    ],
+    "gijon": [
+      {name:"Sergio Alcón Bailes Latinos", sc:[0, 0, 0, 19.3, 6.0, 0.0], fx:["5,0 ★ · 26", "–"], url:"https://sergioalconlatinos.es", st:[], np:1, pg:"/es/escuelas/sergio-alcon-bailes-latinos.html"},
+      {name:"Norte Latino", sc:[0, 0, 0, 19.2, 7.5, 0.0], fx:["4,8 ★ · 63", "–"], url:"https://nortelatino.es/", st:[], np:1, pg:"/es/escuelas/norte-latino.html"}
+    ],
+    "marbella": [
+      {name:"Rafa León Clases de Salsa y Bachata", sc:[0, 0, 0, 23.0, 8.7, 0.0], fx:["5,0 ★ · 122", "–"], url:"https://www.rafaleon.com", st:[], np:1, pg:"/es/escuelas/rafa-leon-clases-de-salsa-y-bachata.html"},
+      {name:"Fábrica de Arte Marbella", sc:[0, 0, 0, 22.3, 8.0, 0.0], fx:["5,0 ★ · 83", "–"], url:"https://fabricadeartemarbella.com", st:[], np:1, pg:"/es/escuelas/fabrica-de-arte-marbella.html"},
+      {name:"La Clave Bailes Latinos", sc:[0, 0, 0, 19.3, 7.6, 0.0], fx:["4,8 ★ · 67", "–"], url:"https://www.laclavemarbella.com", st:[], np:1, pg:"/es/escuelas/la-clave-bailes-latinos.html"},
+      {name:"Asociación Ven y Baila", sc:[0, 0, 0, 22.9, 8.5, 0.0], fx:["5,0 ★ · 111", "–"], url:"https://www.google.com/maps/search/?api=1&query=Asociación+Ven+y+Baila+Marbella", st:[], np:1, pg:"/es/escuelas/asociacion-ven-y-baila.html"},
+      {name:"Marbella Baila", sc:[0, 0, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 39", "–"], url:"https://www.google.com/maps/search/?api=1&query=Marbella+Baila+Marbella", st:[], np:1, pg:"/es/escuelas/marbella-baila.html"}
+    ],
+    "almeria": [
+      {name:"Academia de Baile Guararé", sc:[0, 0, 0, 24.4, 10.0, 0.0], fx:["5,0 ★ · 464", "–"], url:"https://www.bailaparaserfeliz.es", st:[], np:1, pg:"/es/escuelas/academia-de-baile-guarare.html"},
+      {name:"Mundo Salsero Almería", sc:[0, 0, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://mundosalseroalmeria.es", st:[], np:1, pg:"/es/escuelas/mundo-salsero-almeria.html"},
+      {name:"Academia de Baile Damhsa", sc:[0, 0, 0, 22.4, 8.1, 0.0], fx:["5,0 ★ · 87", "–"], url:"https://damhsa.es", st:[], np:1, pg:"/es/escuelas/academia-de-baile-damhsa.html"},
+      {name:"Almería Baila", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/131/almeria-baila", st:[], np:1, un:1, pg:"/es/escuelas/almeria-baila.html"}
+    ],
+    "san-sebastian": [
+      {name:"Leyre Mendoza Escuela de Baile", sc:[0, 0, 0, 20.9, 8.0, 0.0], fx:["4,9 ★ · 82", "–"], url:"https://www.leyremendoza.com", st:[], np:1, pg:"/es/escuelas/leyre-mendoza-escuela-de-baile.html"}
+    ],
+    "salamanca": [
+      {name:"Laguez Salamanca Bachata Academy", sc:[0, 0, 0, 20.8, 7.8, 0.0], fx:["4,9 ★ · 74", "–"], url:"https://www.google.com/maps/search/?api=1&query=Laguez+Salamanca+Bachata+Academy+Salamanca", st:[], np:1, pg:"/es/escuelas/laguez-salamanca-bachata-academy.html"},
+      {name:"DG Dance Academy", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://dgdanceacademy.es", st:[], np:1, pg:"/es/escuelas/dg-dance-academy.html"},
+      {name:"Mi Pequeña Habana", sc:[0, 0, 0, 22.4, 8.1, 0.0], fx:["5,0 ★ · 88", "–"], url:"https://xn--mipequeahabana-wnb.es/", st:[], np:1, pg:"/es/escuelas/mi-pequena-habana.html"},
+      {name:"Laguez Salamanca Salsa Academy", sc:[0, 0, 0, 21.2, 7.2, 0.0], fx:["5,0 ★ · 52", "–"], url:"https://salamancabachata.org/", st:[], np:1, pg:"/es/escuelas/laguez-salamanca-salsa-academy.html"}
+    ],
+    "logrono": [
+      {name:"Akokan Dance Studio", sc:[0, 0, 0, 18.5, 5.5, 0.0], fx:["5,0 ★ · 20", "–"], url:"https://akokandancestudio.com", st:[], np:1, pg:"/es/escuelas/akokan-dance-studio.html"},
+      {name:"El Taller de la Danza", sc:[0, 0, 0, 22.0, 7.7, 0.0], fx:["5,0 ★ · 71", "–"], url:"https://eltallerdeladanza.com", st:[], np:1, pg:"/es/escuelas/el-taller-de-la-danza.html"}
+    ],
+    "getafe": [
+      {name:"Disfruta Bailando", sc:[0, 0, 0, 21.7, 8.9, 0.0], fx:["4,9 ★ · 137", "–"], url:"https://disfrutabailando.com", st:[], np:1, pg:"/es/escuelas/disfruta-bailando.html"},
+      {name:"Ritmo Dance Getafe", sc:[0, 0, 0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 56", "–"], url:"https://www.google.com/maps/search/?api=1&query=Ritmo+Dance+Getafe+Getafe", st:[], np:1, pg:"/es/escuelas/ritmo-dance-getafe.html"}
+    ],
+    "alcala-de-henares": [
+      {name:"Bachata Alcalá de Henares New Dance Generation", sc:[0, 0, 0, 17.5, 4.9, 0.0], fx:["5,0 ★ · 14", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bachata+Alcalá+de+Henares+New+Dance+Generation+Alcalá+de+Henares", st:[], np:1, pg:"/es/escuelas/bachata-alcala-de-henares-new-dance-generation.html"},
+      {name:"Escuela de Baile La Clave", sc:[0, 0, 0, 23.8, 9.8, 0.0], fx:["5,0 ★ · 224", "–"], url:"https://www.escueladebaileenalcala.com", st:[], np:1, pg:"/es/escuelas/escuela-de-baile-la-clave.html"},
+      {name:"Escuela de Baile La Malanga", sc:[0, 0, 0, 22.4, 10.0, 0.0], fx:["4,9 ★ · 272", "–"], url:"https://www.escueladebailelamalanga.com", st:[], np:1, pg:"/es/escuelas/escuela-de-baile-la-malanga.html"},
+      {name:"Escuela de Baile Paso a Paso Alcalá de Henares", sc:[0, 0, 0, 23.2, 8.9, 0.0], fx:["5,0 ★ · 135", "–"], url:"https://escueladebaileenalcaladehenares.com", st:[], np:1, pg:"/es/escuelas/escuela-de-baile-paso-a-paso-alcala-de-henares.html"},
+      {name:"El Ocho Escuela de Baile", sc:[0, 0, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 39", "–"], url:"https://www.elochoescueladebaile.es", st:[], np:1, pg:"/es/escuelas/el-ocho-escuela-de-baile.html"},
+      {name:"New Dance Generation", sc:[0, 0, 0, 17.5, 4.9, 0.0], fx:["5,0 ★ · 14", "–"], url:"https://www.google.com/maps/search/?api=1&query=New+Dance+Generation+Alcalá+de+Henares", st:[], np:1, pg:"/es/escuelas/new-dance-generation.html"}
+    ],
+    "burgos": [
+      {name:"Academia Kímbala", sc:[0, 0, 0, 21.6, 8.8, 0.0], fx:["4,9 ★ · 126", "–"], url:"https://academiakimbala.com", st:[], np:1, pg:"/es/escuelas/academia-kimbala.html"}
+    ],
+    "jerez": [
+      {name:"Latinoson Jerez", sc:[0, 0, 0, 19.6, 7.9, 0.0], fx:["4,8 ★ · 78", "–"], url:"https://latinoson-jerez.ueniweb.com", st:[], np:1, pg:"/es/escuelas/latinoson-jerez.html"},
+      {name:"Bembé Dance Club", sc:[0, 0, 0, 18.9, 7.2, 0.0], fx:["4,8 ★ · 52", "–"], url:"https://www.bembedanceclub.com", st:[], np:1, pg:"/es/escuelas/bembe-dance-club.html"},
+      {name:"Muxasalsa Jerez", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/999/muxasalsa-jerez", st:[], np:1, un:1, pg:"/es/escuelas/muxasalsa-jerez.html"}
+    ],
+    "fuengirola": [
+      {name:"Labuenavibra", sc:[0, 0, 0, 23.0, 8.7, 0.0], fx:["5,0 ★ · 123", "–"], url:"https://www.labuenavibra.es", st:[], np:1, pg:"/es/escuelas/labuenavibra.html"},
+      {name:"Baila con Sara", sc:[0, 0, 0, 23.8, 9.7, 0.0], fx:["5,0 ★ · 212", "–"], url:"https://kizzlatindance.com/", st:[], np:1, pg:"/es/escuelas/baila-con-sara.html"}
+    ],
+    "benidorm": [
+      {name:"Conuco Dance", sc:[0, 0, 0, 19.9, 8.4, 0.0], fx:["4,8 ★ · 100", "–"], url:"https://www.conucodance.com", st:[], np:1, pg:"/es/escuelas/conuco-dance.html"}
+    ],
+    "torremolinos": [
+      {name:"Salsa y Bachata Torremolinos", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 42", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+y+Bachata+Torremolinos+Torremolinos", st:[], np:1, pg:"/es/escuelas/salsa-y-bachata-torremolinos.html"}
+    ],
+    "terrassa": [
+      {name:"Mambo Dance Factory", sc:[0, 0, 0, 22.8, 8.5, 0.0], fx:["5,0 ★ · 110", "–"], url:"https://mambodancefactory.com", st:[], np:1, pg:"/es/escuelas/mambo-dance-factory.html"},
+      {name:"Bailemos Academy", sc:[0, 0, 0, 21.6, 7.5, 0.0], fx:["5,0 ★ · 61", "–"], url:"https://bailemosacademy.com", st:[], np:1, pg:"/es/escuelas/bailemos-academy.html"},
+      {name:"Txiki Bastida Escuelas de Baile", sc:[0, 8, 0, 23.2, 10.0, 0.0], fx:["4,9 ★ · 2278", "–"], url:"https://txikibastida.com", st:[], np:1, pg:"/es/escuelas/txiki-bastida-escuelas-de-baile.html"},
+      {name:"ADB Dance Academy", sc:[0, 0, 0, 21.3, 8.4, 0.0], fx:["4,9 ★ · 102", "–"], url:"https://amicsdelballterrassa.com", st:[], np:1, pg:"/es/escuelas/adb-dance-academy.html"},
+      {name:"Ball Vallès", sc:[0, 0, 0, 13.0, 9.9, 0.0], fx:["4,3 ★ · 240", "–"], url:"https://www.ballvalles.com", st:[], np:1, pg:"/es/escuelas/ball-valles.html"},
+      {name:"Egara Dance Studio", sc:[0, 0, 0, 22.8, 8.5, 0.0], fx:["5,0 ★ · 110", "–"], url:"https://www.google.com/maps/search/?api=1&query=Egara+Dance+Studio+Terrassa", st:[], np:1, pg:"/es/escuelas/egara-dance-studio.html"}
+    ],
+    "mataro": [
+      {name:"Ritmo y Tumbao", sc:[0, 0, 0, 20.1, 7.3, 0.0], fx:["4,9 ★ · 54", "–"], url:"https://www.ritmoytumbao-ds.es", st:[], np:1, pg:"/es/escuelas/ritmo-y-tumbao.html"},
+      {name:"La Clave Mataró", sc:[0, 0, 0, 14.6, 10.0, 0.0], fx:["4,4 ★ · 725", "–"], url:"https://www.google.com/maps/search/?api=1&query=La+Clave+Mataró+Mataró", st:[], np:1, pg:"/es/escuelas/la-clave-mataro.html"},
+      {name:"Bailanama", sc:[0, 0, 0, 21.3, 7.3, 0.0], fx:["5,0 ★ · 55", "–"], url:"https://bailanama.es/", st:[], np:1, pg:"/es/escuelas/bailanama.html"}
+    ],
+    "lleida": [
+      {name:"Dame Una Social Dance", sc:[0, 0, 0, 21.6, 7.5, 0.0], fx:["5,0 ★ · 61", "–"], url:"https://www.dameuna.es", st:[], np:1, pg:"/es/escuelas/dame-una-social-dance.html"},
+      {name:"Dancescape", sc:[0, 0, 0, 15.6, 7.7, 0.0], fx:["4,5 ★ · 68", "–"], url:"https://www.dancescape.es", st:[], np:1, pg:"/es/escuelas/dancescape.html"},
+      {name:"Factoria D", sc:[0, 0, 0, 18.9, 7.2, 0.0], fx:["4,8 ★ · 53", "–"], url:"https://www.factoriad.com", st:[], np:1, pg:"/es/escuelas/factoria-d.html"}
+    ],
+    "mostoles": [
+      {name:"Escuela de Baile Elena López", sc:[0, 0, 0, 20.8, 7.9, 0.0], fx:["4,9 ★ · 76", "–"], url:"https://www.escuelaelenalopez.com", st:[], np:1, pg:"/es/escuelas/escuela-de-baile-elena-lopez.html"}
+    ],
+    "jaen": [
+      {name:"La Carismática", sc:[0, 0, 0, 23.4, 9.2, 0.0], fx:["5,0 ★ · 162", "–"], url:"https://www.lacarismatica.com", st:[], np:1, pg:"/es/escuelas/la-carismatica.html"}
+    ],
+    "albacete": [
+      {name:"Palladium Academy", sc:[0, 0, 0, 20.0, 8.4, 0.0], fx:["4,8 ★ · 104", "–"], url:"https://palladium.academy", st:[], np:1, pg:"/es/escuelas/palladium-academy.html"},
+      {name:"Life Dance Studio", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/es/event/spain/castilla-la-mancha/albacete/salsa-classes-at-life-dance-studio/", st:[], np:1, un:1, pg:"/es/escuelas/life-dance-studio.html"}
+    ],
+    "alcobendas": [
+      {name:"Salsebastian", sc:[0, 0, 0, 22.5, 10.0, 0.0], fx:["4,9 ★ · 314", "–"], url:"https://www.salsebastian.es", st:[], np:1, pg:"/es/escuelas/salsebastian.html"},
+      {name:"Dystinto Danza", sc:[0, 0, 0, 19.6, 8.0, 0.0], fx:["4,8 ★ · 80", "–"], url:"https://www.dystintodanza.com", st:[], np:1, pg:"/es/escuelas/dystinto-danza.html"}
+    ],
+    "leganes": [
+      {name:"Bailando Soñarás", sc:[0, 0, 0, 21.8, 7.6, 0.0], fx:["5,0 ★ · 66", "–"], url:"https://bailandosonaras.com", st:[], np:1, pg:"/es/escuelas/bailando-sonaras.html"},
+      {name:"Escuela Pasos de Baile", sc:[0, 0, 0, 19.9, 8.3, 0.0], fx:["4,8 ★ · 98", "–"], url:"https://www.escuelapasosdebaile.com", st:[], np:1, pg:"/es/escuelas/escuela-pasos-de-baile.html"}
+    ],
+    "hospitalet": [
+      {name:"OleTuSalsa", sc:[0, 0, 0, 16.5, 7.1, 0.0], fx:["4,6 ★ · 50", "–"], url:"https://escueladebaileenhospitalet.com", st:[], np:1, pg:"/es/escuelas/oletusalsa.html"},
+      {name:"Hospitalet Baila Casino", sc:[0, 0, 0, 23.0, 8.6, 0.0], fx:["5,0 ★ · 118", "–"], url:"https://www.google.com/maps/search/?api=1&query=Hospitalet+Baila+Casino+Hospitalet", st:[], np:1, pg:"/es/escuelas/hospitalet-baila-casino.html"},
+      {name:"Fusión Dance Standard Latino", sc:[0, 0, 0, 20.6, 9.5, 0.0], fx:["4,8 ★ · 189", "–"], url:"https://standardlatino.es/", st:[], np:1, pg:"/es/escuelas/fusion-dance-standard-latino.html"},
+      {name:"SalsaPrat", sc:[0, 0, 0, 21.3, 7.2, 0.0], fx:["5,0 ★ · 53", "–"], url:"https://salsaprat.es/", st:[], np:1, pg:"/es/escuelas/salsaprat.html"}
+    ],
+    "granollers": [
+      {name:"Bambú Escola de Dansa", sc:[0, 0, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 40", "–"], url:"https://www.escolabambu.com", st:[], np:1, pg:"/es/escuelas/bambu-escola-de-dansa.html"},
+      {name:"Danger Dance", sc:[0, 0, 0, 22.9, 8.5, 0.0], fx:["5,0 ★ · 111", "–"], url:"https://dangerdance.com", st:[], np:1, pg:"/es/escuelas/danger-dance.html"},
+      {name:"Casino Salsa club", sc:[0, 0, 0, 20.7, 7.8, 0.0], fx:["4,9 ★ · 72", "–"], url:"https://www.google.com/maps/search/?api=1&query=Casino+Salsa+club+Granollers", st:[], np:1, pg:"/es/escuelas/casino-salsa-club.html"}
+    ],
+    "santiago": [
+      {name:"Vladimir Cossio Clases de Baile", sc:[0, 0, 0, 21.1, 7.1, 0.0], fx:["5,0 ★ · 50", "–"], url:"https://clasesdebailesantiago.com", st:[], np:1, pg:"/es/escuelas/vladimir-cossio-clases-de-baile.html"},
+      {name:"David y Aylin Bachata", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 45", "–"], url:"https://davidyaylin.com", st:[], np:1, pg:"/es/escuelas/david-y-aylin-bachata.html"}
+    ],
+    "sant-cugat": [
+      {name:"SCD Academy", sc:[0, 0, 0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 116", "–"], url:"https://www.scdacademy.com", st:[], np:1, pg:"/es/escuelas/scd-academy.html"}
+    ],
+    "torrent": [
+      {name:"Art i Ball Dance Studio", sc:[0, 0, 0, 17.8, 7.3, 0.0], fx:["4,7 ★ · 54", "–"], url:"https://artiball.com", st:[], np:1, pg:"/es/escuelas/art-i-ball-dance-studio.html"}
+    ],
+    "gandia": [
+      {name:"La Clave del Cuarto", sc:[0, 0, 0, 20.3, 8.9, 0.0], fx:["4,8 ★ · 135", "–"], url:"https://www.laclavedelcuarto.com", st:[], np:1, pg:"/es/escuelas/la-clave-del-cuarto.html"},
+      {name:"Gandía Baila", sc:[0, 0, 0, 18.7, 6.2, 0.0], fx:["4,9 ★ · 30", "–"], url:"https://gandiabaila.es", st:[], np:1, pg:"/es/escuelas/gandia-baila.html"}
+    ],
+    "reus": [
+      {name:"Recchiadanza", sc:[0, 0, 0, 23.2, 8.9, 0.0], fx:["5,0 ★ · 134", "–"], url:"https://recchiadanza.com", st:[], np:1, pg:"/es/escuelas/recchiadanza.html"},
+      {name:"Rompe Escuela de Baile", sc:[0, 0, 0, 19.8, 6.3, 0.0], fx:["5,0 ★ · 31", "–"], url:"https://rompeescueladebaile.com", st:[], np:1, pg:"/es/escuelas/rompe-escuela-de-baile.html"}
+    ],
+    "badajoz": [
+      {name:"Dame La Clave", sc:[0, 0, 0, 22.2, 7.9, 0.0], fx:["5,0 ★ · 78", "–"], url:"https://www.damelaclave.com", st:[], np:1, pg:"/es/escuelas/dame-la-clave.html"},
+      {name:"Bailame", sc:[0, 0, 0, 19.8, 6.3, 0.0], fx:["5,0 ★ · 31", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bailame+Badajoz", st:[], np:1, pg:"/es/escuelas/bailame.html"},
+      {name:"Baila Que Baila MarioyEli", sc:[0, 0, 0, 20.3, 6.6, 0.0], fx:["5,0 ★ · 37", "–"], url:"https://www.google.com/maps/search/?api=1&query=Baila+Que+Baila+MarioyEli+Badajoz", st:[], np:1, pg:"/es/escuelas/baila-que-baila-marioyeli.html"},
+      {name:"Latinfeeling", sc:[0, 0, 0, 23.1, 8.8, 0.0], fx:["5,0 ★ · 127", "–"], url:"https://www.google.com/maps/search/?api=1&query=Latinfeeling+Badajoz", st:[], np:1, pg:"/es/escuelas/latinfeeling.html"}
+    ],
+    "leon": [
+      {name:"Escuela Muévelow", sc:[0, 0, 0, 21.4, 8.5, 0.0], fx:["4,9 ★ · 107", "–"], url:"https://www.escuelamuevelow.com", st:[], np:1, pg:"/es/escuelas/escuela-muevelow.html"}
+    ],
+    "sabadell": [
+      {name:"Manisero Dance School", sc:[0, 0, 0, 17.8, 10.0, 0.0], fx:["4,6 ★ · 338", "–"], url:"https://school.manisero.es", st:[], np:1, pg:"/es/escuelas/manisero-dance-school.html"}
+    ],
+    "santander": [
+      {name:"Mama Rumba Dance & Drink", sc:[0, 0, 0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 113", "–"], url:"https://mamarumba.es/", st:[], np:1, pg:"/es/escuelas/mama-rumba-dance-drink.html"},
+      {name:"IgoryRocio", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/1413/igoryrocio", st:[], np:1, un:1, pg:"/es/escuelas/igoryrocio.html"}
+    ],
+    "a-coruna": [
+      {name:"Asociación Cultural SalsaNova", sc:[0, 0, 0, 20.6, 7.7, 0.0], fx:["4,9 ★ · 68", "–"], url:"https://salsanova.es/", st:[], np:1, pg:"/es/escuelas/asociacion-cultural-salsanova.html"},
+      {name:"World Dance Center", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/975/world-dance-center", st:[], np:1, un:1, pg:"/es/escuelas/world-dance-center.html"},
+      {name:"DANZA10", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/schools/1547-danza10", st:[], np:1, un:1, pg:"/es/escuelas/danza10.html"}
+    ],
+    "vitoria": [
+      {name:"Bailalo Dancenter", sc:[0, 0, 0, 16.7, 7.4, 0.0], fx:["4,6 ★ · 58", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bailalo+Dancenter+Vitoria", st:[], np:1, pg:"/es/escuelas/bailalo-dancenter.html"},
+      {name:"Bailando Boix", sc:[0, 0, 0, 21.7, 7.5, 0.0], fx:["5,0 ★ · 63", "–"], url:"https://bailandoboix.com/", st:[], np:1, pg:"/es/escuelas/bailando-boix.html"}
+    ],
+    "cadiz": [
+      {name:"Habana Mía", sc:[0, 0, 0, 18.8, 9.0, 0.0], fx:["4,7 ★ · 140", "–"], url:"https://www.google.com/maps/search/?api=1&query=Habana+Mía+Cádiz", st:[], np:1, pg:"/es/escuelas/habana-mia.html"},
+      {name:"Bailasalsa Puerto", sc:[0, 0, 0, 17.2, 5.1, 0.0], fx:["4,9 ★ · 16", "–"], url:"https://bailasalsapuerto.es/", st:[], np:1, pg:"/es/escuelas/bailasalsa-puerto.html"},
+      {name:"Sony Lus Dance Studio", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/es/event/spain/andalucia/cadiz/cadiz-city/weekly-salsa-bachata-classes-at-sony-lus-dance-studio/", st:[], np:1, un:1, pg:"/es/escuelas/sony-lus-dance-studio.html"},
+      {name:"Shangó Dance Studio", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/es/event/spain/andalucia/cadiz/cadiz-city/weekly-salsa-bachata-classes-at-shango-dance-studio/", st:[], np:1, un:1, pg:"/es/escuelas/shango-dance-studio.html"}
+    ],
+    "huelva": [
+      {name:"All-in Dance Bachata Academy", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 41", "–"], url:"https://www.google.com/maps/search/?api=1&query=All-in+Dance+Bachata+Academy+Huelva", st:[], np:1, pg:"/es/escuelas/all-in-dance-bachata-academy.html"},
+      {name:"Abailarhuelva", sc:[0, 0, 0, 20.4, 6.6, 0.0], fx:["5,0 ★ · 38", "–"], url:"https://abailarhuelva.jimdo.com/", st:[], np:1, pg:"/es/escuelas/abailarhuelva.html"},
+      {name:"Doble A Dance", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/2122/doble-a-dance-adrian-adriana", st:[], np:1, un:1, pg:"/es/escuelas/doble-a-dance.html"}
+    ],
+    "toledo": [
+      {name:"Sabor y Baile", sc:[0, 0, 0, 22.5, 10.0, 0.0], fx:["4,9 ★ · 292", "–"], url:"https://saborybaile.com/", st:[], np:1, pg:"/es/escuelas/sabor-y-baile.html"}
+    ],
+    "cartagena": [
+      {name:"Mambo Legacy Dance Studio", sc:[0, 0, 0, 21.3, 7.3, 0.0], fx:["5,0 ★ · 55", "–"], url:"https://crespoymarina.com/", st:[], np:1, pg:"/es/escuelas/mambo-legacy-dance-studio.html"}
+    ],
+    "lugo": [
+      {name:"Ritmolugo", sc:[0, 0, 0, 20.4, 7.5, 0.0], fx:["4,9 ★ · 63", "–"], url:"https://www.google.com/maps/search/?api=1&query=Ritmolugo+Lugo", st:[], np:1, pg:"/es/escuelas/ritmolugo.html"},
+      {name:"Magie Dance School", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://magiedance.com/", st:[], np:1, un:1, pg:"/es/escuelas/magie-dance-school.html"}
+    ],
+    "pontevedra": [
+      {name:"Baila con Gabi", sc:[0, 0, 0, 18.7, 6.2, 0.0], fx:["4,9 ★ · 30", "–"], url:"https://www.google.com/maps/search/?api=1&query=Baila+con+Gabi+Pontevedra", st:[], np:1, pg:"/es/escuelas/baila-con-gabi.html"}
+    ],
+    "caceres": [
+      {name:"DanCeres Academia de Baile Latino", sc:[0, 0, 0, 20.0, 6.4, 0.0], fx:["5,0 ★ · 33", "–"], url:"https://www.google.com/maps/search/?api=1&query=DanCeres+Academia+de+Baile+Latino+Cáceres", st:[], np:1, pg:"/es/escuelas/danceres-academia-de-baile-latino.html"}
+    ],
+    "lanzarote": [
+      {name:"Ritmos Lanzarote", sc:[0, 0, 0, 22.3, 8.0, 0.0], fx:["5,0 ★ · 83", "–"], url:"https://ritmoslanzarote.es/", st:[], np:1, pg:"/es/escuelas/ritmos-lanzarote.html"}
+    ],
+    "fuerteventura": [
+      {name:"Sol y Salsa Academy", sc:[0, 0, 0, 22.5, 8.2, 0.0], fx:["5,0 ★ · 91", "–"], url:"https://solysalsa.com/", st:[], np:1, pg:"/es/escuelas/sol-y-salsa-academy.html"},
+      {name:"Dale Ritmo Fuerteventura", sc:[0, 0, 0, 20.7, 7.8, 0.0], fx:["4,9 ★ · 73", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dale+Ritmo+Fuerteventura+Fuerteventura", st:[], np:1, pg:"/es/escuelas/dale-ritmo-fuerteventura.html"}
+    ],
+    "dos-hermanas": [
+      {name:"Tumbao Latino Dance Center", sc:[0, 0, 0, 19.3, 6.6, 0.0], fx:["4,9 ★ · 38", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tumbao+Latino+Dance+Center+Dos+Hermanas", st:[], np:1, pg:"/es/escuelas/tumbao-latino-dance-center.html"}
+    ],
+    "orihuela": [
+      {name:"A-Mambo Almoradí", sc:[0, 0, 0, 20.0, 6.4, 0.0], fx:["5,0 ★ · 33", "–"], url:"https://academiadebaileamambo.es/", st:[], np:1, pg:"/es/escuelas/a-mambo-almoradi.html"}
+    ],
+    "estepona": [
+      {name:"No Solo Salsa Dance", sc:[0, 0, 0, 20.8, 10.0, 0.0], fx:["4,8 ★ · 264", "–"], url:"https://nosolosalsa.es/", st:[], np:1, pg:"/es/escuelas/no-solo-salsa-dance.html"}
+    ],
+    "roquetas-de-mar": [
+      {name:"Palladium Salsa", sc:[0, 0, 0, 18.7, 7.0, 0.0], fx:["4,8 ★ · 46", "–"], url:"https://palladiumsalsa.es/", st:[], np:1, pg:"/es/escuelas/palladium-salsa.html"}
+    ],
+    "alcorcon": [
+      {name:"Clases de baile La Clave", sc:[0, 0, 0, 18.8, 5.7, 0.0], fx:["5,0 ★ · 22", "–"], url:"https://www.google.com/maps/search/?api=1&query=Clases+de+baile+La+Clave+Alcorcón", st:[], np:1, pg:"/es/escuelas/clases-de-baile-la-clave.html"},
+      {name:"Clases de bachata Alcorcón", sc:[0, 0, 0, 17.2, 5.1, 0.0], fx:["4,9 ★ · 16", "–"], url:"https://www.google.com/maps/search/?api=1&query=Clases+de+bachata+Alcorcón+Alcorcón", st:[], np:1, pg:"/es/escuelas/clases-de-bachata-alcorcon.html"}
+    ],
+    "parla": [
+      {name:"Tablao y Tumbao", sc:[0, 0, 0, 17.9, 7.4, 0.0], fx:["4,7 ★ · 58", "–"], url:"https://tablaoytumbao.com/", st:[], np:1, pg:"/es/escuelas/tablao-y-tumbao.html"},
+      {name:"Asociación Cultural Baila Conmigo", sc:[0, 0, 0, 19.8, 6.3, 0.0], fx:["5,0 ★ · 31", "–"], url:"https://bailaconmigoparla.es/", st:[], np:1, pg:"/es/escuelas/asociacion-cultural-baila-conmigo.html"}
+    ],
+    "rivas-vaciamadrid": [
+      {name:"Latin Quarter Dance", sc:[0, 0, 0, 23.3, 9.0, 0.0], fx:["5,0 ★ · 147", "–"], url:"https://lqdance.com/", st:[], np:1, pg:"/es/escuelas/latin-quarter-dance.html"}
+    ],
+    "manresa": [
+      {name:"Bailame Escola de Ball", sc:[0, 0, 0, 21.9, 7.7, 0.0], fx:["5,0 ★ · 70", "–"], url:"https://bailame.es/", st:[], np:1, pg:"/es/escuelas/bailame-escola-de-ball.html"}
+    ],
+    "vilanova-i-la-geltru": [
+      {name:"Bimba Dance", sc:[0, 0, 0, 21.0, 7.0, 0.0], fx:["5,0 ★ · 48", "–"], url:"https://bimbadance.com/", st:[], np:1, pg:"/es/escuelas/bimba-dance.html"},
+      {name:"Nexus VNG", sc:[0, 0, 0, 19.5, 6.1, 0.0], fx:["5,0 ★ · 28", "–"], url:"https://nexusvng.es/", st:[], np:1, pg:"/es/escuelas/nexus-vng.html"}
+    ],
+    "castelldefels": [
+      {name:"El Malecón de la Salsa", sc:[0, 0, 0, 23.6, 9.5, 0.0], fx:["5,0 ★ · 186", "–"], url:"https://elmalecondelasalsa.com/", st:[], np:1, pg:"/es/escuelas/el-malecon-de-la-salsa.html"}
+    ],
+    "motril": [
+      {name:"Campanilla Dance Latin Studio", sc:[0, 0, 0, 20.4, 7.5, 0.0], fx:["4,9 ★ · 61", "–"], url:"https://campanilladancelatinestudio.es/", st:[], np:1, pg:"/es/escuelas/campanilla-dance-latin-studio.html"}
+    ],
+    "telde": [
+      {name:"Latin Dance Telde", sc:[0, 0, 0, 20.0, 6.4, 0.0], fx:["5,0 ★ · 33", "–"], url:"https://latindancetelde.com/", st:[], np:1, pg:"/es/escuelas/latin-dance-telde.html"}
+    ],
+    "molina-de-segura": [
+      {name:"SalsaMania", sc:[0, 0, 0, 19.8, 7.0, 0.0], fx:["4,9 ★ · 46", "–"], url:"https://salsamania.es/", st:[], np:1, pg:"/es/escuelas/salsamania.html"}
+    ],
+    "elda": [
+      {name:"Academia Bailas", sc:[0, 0, 0, 22.0, 9.3, 0.0], fx:["4,9 ★ · 168", "–"], url:"https://bailasacademy.com/", st:[], np:1, pg:"/es/escuelas/academia-bailas.html"}
+    ],
+    "segovia": [
+      {name:"Escuela Ociobaile", sc:[0, 0, 0, 14.8, 5.8, 0.0], fx:["4,5 ★ · 24", "–"], url:"https://ociobaile.com/", st:[], np:1, pg:"/es/escuelas/escuela-ociobaile.html"}
+    ],
+    "guadalajara": [
+      {name:"Babel Dance Company", sc:[0, 0, 0, 22.1, 7.8, 0.0], fx:["5,0 ★ · 75", "–"], url:"https://babeldc.com/", st:[], np:1, pg:"/es/escuelas/babel-dance-company.html"},
+      {name:"Sabaki Academy Dance Studio", sc:[0, 0, 0, 20.2, 8.9, 0.0], fx:["4,8 ★ · 132", "–"], url:"https://sabaki.academy/", st:[], np:1, pg:"/es/escuelas/sabaki-academy-dance-studio.html"},
+      {name:"Coco Style Guadalajara", sc:[0, 0, 0, 21.0, 8.0, 0.0], fx:["4,9 ★ · 83", "–"], url:"https://www.google.com/maps/search/?api=1&query=Coco+Style+Guadalajara+Guadalajara", st:[], np:1, pg:"/es/escuelas/coco-style-guadalajara.html"}
+    ],
+    "ciudad-real": [
+      {name:"Pedro G. Clases de Baile", sc:[0, 0, 0, 21.0, 7.0, 0.0], fx:["5,0 ★ · 48", "–"], url:"https://misclasesdebaile.es/", st:[], np:1, pg:"/es/escuelas/pedro-g-clases-de-baile.html"}
+    ],
+    "ourense": [
+      {name:"Don't Stop Escuela de Baile", sc:[0, 0, 0, 19.3, 7.6, 0.0], fx:["4,8 ★ · 67", "–"], url:"https://dontstopescueladebaile.es/", st:[], np:1, pg:"/es/escuelas/don-t-stop-escuela-de-baile.html"},
+      {name:"Moovett Academia de Baile", sc:[0, 0, 0, 15.4, 7.3, 0.0], fx:["4,5 ★ · 55", "–"], url:"https://moovett.es/", st:[], np:1, pg:"/es/escuelas/moovett-academia-de-baile.html"},
+      {name:"Kumba SBK", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/es/event/spain/galicia/ourense/salsa-casinobachata-kizomba-classes-at-kumba-sbk/", st:[], np:1, un:1, pg:"/es/escuelas/kumba-sbk.html"}
+    ],
+    "zamora": [
+      {name:"Salsón Dance", sc:[0, 0, 0, 19.9, 7.1, 0.0], fx:["4,9 ★ · 49", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsón+Dance+Zamora", st:[], np:1, pg:"/es/escuelas/salson-dance.html"}
+    ],
+    "huesca": [
+      {name:"Bailalé", sc:[0, 8, 4, 24.6, 10.0, 0.0], fx:["5,0 ★ · 710", "–"], url:"https://bailale.es/", st:[], np:1, pg:"/es/escuelas/bailale.html"},
+      {name:"Siéntelo Salsa y Bachata", sc:[0, 0, 0, 19.8, 7.0, 0.0], fx:["4,9 ★ · 47", "–"], url:"https://www.google.com/maps/search/?api=1&query=Siéntelo+Salsa+y+Bachata+Huesca", st:[], np:1, pg:"/es/escuelas/sientelo-salsa-y-bachata.html"}
+    ],
+    "arona": [
+      {name:"Academia de baile Dile Que Si", sc:[0, 0, 0, 18.5, 6.8, 0.0], fx:["4,8 ★ · 42", "–"], url:"https://www.google.com/maps/search/?api=1&query=Academia+de+baile+Dile+Que+Si+Costa+Adeje", st:[], np:1, pg:"/es/escuelas/academia-de-baile-dile-que-si.html"}
+    ],
+    "ferrol": [
+      {name:"Orishas Dance School Ferrol", sc:[0, 0, 0, 19.6, 6.8, 0.0], fx:["4,9 ★ · 43", "–"], url:"https://www.google.com/maps/search/?api=1&query=Orishas+Dance+School+Ferrol+Ferrol", st:[], np:1, pg:"/es/escuelas/orishas-dance-school-ferrol.html"}
+    ],
+    "talavera": [
+      {name:"Sala Cachet Escuela de Baile", sc:[0, 0, 0, 17.1, 8.2, 0.0], fx:["4,6 ★ · 92", "–"], url:"https://salacachet.com/", st:[], np:1, pg:"/es/escuelas/sala-cachet-escuela-de-baile.html"},
+      {name:"Baisalon", sc:[0, 0, 0, 20.7, 6.8, 0.0], fx:["5,0 ★ · 43", "–"], url:"https://baisalon.com/", st:[], np:1, pg:"/es/escuelas/baisalon.html"},
+      {name:"Society Dance Studio", sc:[0, 0, 0, 17.7, 7.2, 0.0], fx:["4,7 ★ · 52", "–"], url:"https://societydancestudio.com/", st:[], np:1, pg:"/es/escuelas/society-dance-studio.html"},
+      {name:"Sundance Academia de Baile", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/1553/sundance-academia-de-baile", st:[], np:1, un:1, pg:"/es/escuelas/sundance-academia-de-baile.html"}
+    ],
+    "ponferrada": [
+      {name:"Master Dance", sc:[0, 0, 0, 21.9, 7.7, 0.0], fx:["5,0 ★ · 68", "–"], url:"https://masterdance.es/", st:[], np:1, pg:"/es/escuelas/master-dance.html"},
+      {name:"B-Dance Academia de Baile", sc:[0, 0, 0, 21.0, 7.1, 0.0], fx:["5,0 ★ · 49", "–"], url:"https://www.google.com/maps/search/?api=1&query=B-Dance+Academia+de+Baile+Ponferrada", st:[], np:1, pg:"/es/escuelas/b-dance-academia-de-baile.html"}
+    ],
+    "oviedo": [
+      {name:"Escuela de Baile Norte Latino", sc:[0, 0, 0, 19.2, 7.5, 0.0], fx:["4,8 ★ · 63", "–"], url:"https://nortelatino.es/", st:[], np:1, pg:"/es/escuelas/escuela-de-baile-norte-latino.html"}
+    ],
+    "mijas": [
+      {name:"La Buena Vibra Academia de Baile", sc:[0, 0, 0, 23.0, 8.7, 0.0], fx:["5,0 ★ · 123", "–"], url:"https://labuenavibra.es/", st:[], np:1, pg:"/es/escuelas/la-buena-vibra-academia-de-baile.html"},
+      {name:"Dance With Freedom", sc:[0, 0, 0, 21.3, 8.4, 0.0], fx:["4,9 ★ · 100", "–"], url:"https://dancewithfreedom.com/", st:[], np:1, pg:"/es/escuelas/dance-with-freedom.html"},
+      {name:"Indance Studio", sc:[0, 0, 0, 20.1, 7.2, 0.0], fx:["4,9 ★ · 53", "–"], url:"https://indancestudio.es/", st:[], np:1, pg:"/es/escuelas/indance-studio.html"},
+      {name:"Bailaconmigo Mijas", sc:[0, 0, 0, 20.1, 8.6, 0.0], fx:["4,8 ★ · 117", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bailaconmigo+Mijas+Mijas", st:[], np:1, pg:"/es/escuelas/bailaconmigo-mijas.html"}
+    ],
+    "algeciras": [
+      {name:"Al Son Cubero", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/event/spain/andalucia/cadiz/algeciras/introduction-to-salsa-bachata-classes-at-al-son-cubero/", st:[], np:1, un:1, pg:"/es/escuelas/al-son-cubero.html"}
+    ],
+    "ibiza": [
+      {name:"La Negra Salsa Ibiza", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.lanegrasalsa.com/es/clases-de-baile-en-ibiza", st:[], np:1, un:1, pg:"/es/escuelas/la-negra-salsa-ibiza.html"}
+    ],
+    "atarfe": [
+      {name:"Contradanza Atarfe", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/2582/contradanza-atarfe", st:[], np:1, un:1, pg:"/es/escuelas/contradanza-atarfe.html"}
+    ],
+    "san-fernando": [
+      {name:"Nueva Isla Latina Escuela de Baile", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/651/nueva-isla-latina-escuela-de-baile", st:[], np:1, un:1, pg:"/es/escuelas/nueva-isla-latina-escuela-de-baile.html"}
+    ],
+    "alcantarilla": [
+      {name:"Carmen Romero Academia de Baile (Alcantarilla)", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/1713/carmen-romero-academia-de-baile-alcantarilla", st:[], np:1, un:1, pg:"/es/escuelas/carmen-romero-academia-de-baile-alcantarilla.html"}
+    ],
+    "neda": [
+      {name:"Escuela latina de baile CubaSon", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/1688/escuela-latina-de-baile-cubason", st:[], np:1, un:1, pg:"/es/escuelas/escuela-latina-de-baile-cubason.html"}
+    ],
+    "altea": [
+      {name:"¡Deberías Estar Bailando!", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/1250/deberias-estar-bailando", st:[], np:1, un:1, pg:"/es/escuelas/deberias-estar-bailando.html"}
+    ],
+    "arrecife": [
+      {name:"M&D Escuela de Baile", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/schools/1554-m-d-escuela-de-baile", st:[], np:1, un:1, pg:"/es/escuelas/m-d-escuela-de-baile.html"}
+    ],
+    "villarrobledo": [
+      {name:"Udance Academy", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/1740/udance-academy", st:[], np:1, un:1, pg:"/es/escuelas/udance-academy.html"}
+    ],
+    "ubeda": [
+      {name:"Escuela de Danza y Pilates Rocío", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/1618/escuela-de-danza-y-pilates-rocio", st:[], np:1, un:1, pg:"/es/escuelas/escuela-de-danza-y-pilates-rocio.html"}
+    ],
+    "milano": [
+      {name:"AKADEMIA LATINA", sc:[0, 0, 0, 18.4, 6.7, 0.0], fx:["4,8 ★ · 40", "–"], url:"https://akademialatina.it", st:[], np:1, pg:"/it/scuole/akademia-latina.html"},
+      {name:"Phoenix Studio Dance", sc:[0, 0, 0, 22.4, 10.0, 0.0], fx:["4,9 ★ · 274", "–"], url:"https://www.phoenixstudiodance.com", st:[], np:1, pg:"/it/scuole/phoenix-studio-dance.html"},
+      {name:"Baila Conmigo Milano", sc:[0, 0, 0, 17.7, 6.2, 0.0], fx:["4,8 ★ · 29", "–"], url:"https://bailaconmigomilano.it/", st:[], np:1, pg:"/it/scuole/baila-conmigo-milano.html"},
+      {name:"Scuola di Ballo Latino americano Caraibici", sc:[0, 0, 0, 14.7, 3.8, 0.0], fx:["4,7 ★ · 7", "–"], url:"https://www.google.com/maps/search/?api=1&query=Scuola+di+Ballo+Latino+americano+Caraibici+Milano", st:[], np:1, pg:"/it/scuole/scuola-di-ballo-latino-americano-caraibici.html"},
+      {name:"La Vuelta", sc:[0, 0, 0, 16.4, 4.2, 0.0], fx:["5,0 ★ · 9", "–"], url:"https://lavueltamilano.it/", st:[], np:1, pg:"/it/scuole/la-vuelta.html"},
+      {name:"Salsabeatdance", sc:[0, 0, 0, 13.8, 5.0, 0.0], fx:["4,4 ★ · 15", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsabeatdance+Milano", st:[], np:1, pg:"/it/scuole/salsabeatdance.html"},
+      {name:"Sangre Latino", sc:[0, 0, 0, 16.2, 6.6, 0.0], fx:["4,6 ★ · 37", "–"], url:"https://sangrelatino.it/", st:[], np:1, pg:"/it/scuole/sangre-latino.html"},
+      {name:"Red Latin Studio", sc:[0, 0, 0, 19.8, 6.3, 0.0], fx:["5,0 ★ · 31", "–"], url:"https://redlatin.it/", st:[], np:1, pg:"/it/scuole/red-latin-studio.html"},
+      {name:"I Re Del Mambo", sc:[0, 0, 0, 20.0, 7.2, 0.0], fx:["4,9 ★ · 51", "–"], url:"https://www.google.com/maps/search/?api=1&query=I+Re+Del+Mambo+Milano", st:[], np:1, pg:"/it/scuole/i-re-del-mambo.html"},
+      {name:"Vinci Dance Academy Bonola", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/milan/weekly-classes-at-vinci-dance-academy-bonola/", st:[], np:1, un:1, pg:"/it/scuole/vinci-dance-academy-bonola.html"},
+      {name:"ABC Studios Milano", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/milan/weekly-salsa-bachata-classes-at-abc-studios-milano/", st:[], np:1, un:1, pg:"/it/scuole/abc-studios-milano.html"},
+      {name:"Bandits Dance Studio Milano", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/milan/salsa-bachata-classes-at-bandits-dance-studio-milano/", st:[], np:1, un:1, pg:"/it/scuole/bandits-dance-studio-milano.html"},
+      {name:"Dance 2Be Milano", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/milan/salsa-bachata-classes-at-dance-2be-milan/", st:[], np:1, un:1, pg:"/it/scuole/dance-2be-milano.html"},
+      {name:"Studio Gem Milano", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/milan/weekly-salsa-bachata-classes-at-studio-gem-milano/", st:[], np:1, un:1, pg:"/it/scuole/studio-gem-milano.html"}
+    ],
+    "roma": [
+      {name:"Social Dance Roma", sc:[0, 0, 0, 23.1, 8.8, 0.0], fx:["5,0 ★ · 130", "–"], url:"https://www.socialdanceroma.com", st:[], np:1, pg:"/it/scuole/social-dance-roma.html"},
+      {name:"Havana Cultura", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 45", "–"], url:"https://www.havanacultura.it", st:[], np:1, pg:"/it/scuole/havana-cultura.html"},
+      {name:"RomaSalsaSchool", sc:[0, 0, 0, 17.0, 8.1, 0.0], fx:["4,6 ★ · 86", "–"], url:"https://www.romasalsaschool.it", st:[], np:1, pg:"/it/scuole/romasalsaschool.html"},
+      {name:"Viva Dance Studio", sc:[0, 0, 0, 22.9, 8.6, 0.0], fx:["5,0 ★ · 117", "–"], url:"https://www.vivadancestudio.it", st:[], np:1, pg:"/it/scuole/viva-dance-studio.html"},
+      {name:"Latintouch Roma", sc:[0, 0, 0, 19.4, 7.8, 0.0], fx:["4,8 ★ · 72", "–"], url:"https://www.google.com/maps/search/?api=1&query=Latintouch+Roma+Roma", st:[], np:1, pg:"/it/scuole/latintouch-roma.html"},
+      {name:"Salsadiferente", sc:[0, 0, 0, 16.4, 4.5, 0.0], fx:["4,9 ★ · 11", "–"], url:"https://www.salsadiferente.com", st:[], np:1, pg:"/it/scuole/salsadiferente.html"},
+      {name:"Salsa e Bachata con Roberto e Assia", sc:[0, 0, 0, 19.2, 5.9, 0.0], fx:["5,0 ★ · 25", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+e+Bachata+con+Roberto+e+Assia+Roma", st:[], np:1, pg:"/it/scuole/salsa-e-bachata-con-roberto-e-assia.html"},
+      {name:"Latintouch Scuola di Salsa e Bachata Roma", sc:[0, 0, 0, 19.4, 7.8, 0.0], fx:["4,8 ★ · 72", "–"], url:"https://www.google.com/maps/search/?api=1&query=Latintouch+Scuola+di+Salsa+e+Bachata+Roma+Roma", st:[], np:1, pg:"/it/scuole/latintouch-scuola-di-salsa-e-bachata-roma.html"},
+      {name:"Salsa e Bachata di Simone e Alessia", sc:[0, 0, 0, 23.0, 8.6, 0.0], fx:["5,0 ★ · 118", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+e+Bachata+di+Simone+e+Alessia+Roma", st:[], np:1, pg:"/it/scuole/salsa-e-bachata-di-simone-e-alessia.html"},
+      {name:"Salsamundi", sc:[0, 0, 0, 22.1, 7.9, 0.0], fx:["5,0 ★ · 77", "–"], url:"https://salsamundi.it/", st:[], np:1, pg:"/it/scuole/salsamundi.html"},
+      {name:"BARRIO DE LA SALSA", sc:[0, 0, 0, 15.3, 5.3, 0.0], fx:["4,6 ★ · 18", "–"], url:"https://barriodelasalsa.it/", st:[], np:1, pg:"/it/scuole/barrio-de-la-salsa.html"},
+      {name:"Juntos Social Dance", sc:[0, 0, 0, 23.0, 8.7, 0.0], fx:["5,0 ★ · 122", "–"], url:"https://juntosroma.it/", st:[], np:1, pg:"/it/scuole/juntos-social-dance.html"},
+      {name:"SalsaRomaClub", sc:[0, 0, 0, 22.0, 7.7, 0.0], fx:["5,0 ★ · 71", "–"], url:"https://salsaromaclub.it/", st:[], np:1, pg:"/it/scuole/salsaromaclub.html"},
+      {name:"Latin District", sc:[0, 0, 0, 17.3, 4.8, 0.0], fx:["5,0 ★ · 13", "–"], url:"https://www.google.com/maps/search/?api=1&query=Latin+District+Roma", st:[], np:1, pg:"/it/scuole/latin-district.html"},
+      {name:"Baila Dance", sc:[10, 0, 4, 22.8, 10.0, 0.0], fx:["4,9 ★ · 476", "–"], url:"https://bailadance.it/", st:[], np:1, pg:"/it/scuole/baila-dance.html"},
+      {name:"Dancing ConneXion", sc:[0, 0, 0, 20.0, 7.2, 0.0], fx:["4,9 ★ · 52", "–"], url:"https://dancingconnexion.it/", st:[], np:1, pg:"/it/scuole/dancing-connexion.html"},
+      {name:"F&G Salsaenonsolo", sc:[0, 0, 0, 16.5, 7.1, 0.0], fx:["4,6 ★ · 49", "–"], url:"https://salsaenonsolo.it/", st:[], np:1, pg:"/it/scuole/f-g-salsaenonsolo.html"},
+      {name:"Tribu' Salsera Roma", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://tribusalseraroma.it/", st:[], np:1, pg:"/it/scuole/tribu-salsera-roma.html"},
+      {name:"Bailando Cubano Academy", sc:[0, 0, 0, 21.0, 7.0, 0.0], fx:["5,0 ★ · 48", "–"], url:"https://bailandocubanoacademy.com/", st:[], np:1, pg:"/it/scuole/bailando-cubano-academy.html"},
+      {name:"ASD Portocubano", sc:[0, 0, 0, 20.5, 6.7, 0.0], fx:["5,0 ★ · 40", "–"], url:"https://portocubano.it/", st:[], np:1, pg:"/it/scuole/asd-portocubano.html"},
+      {name:"Havana Mod", sc:[0, 0, 0, 15.6, 3.5, 0.0], fx:["5,0 ★ · 6", "–"], url:"https://havanafusion.com/", st:[], np:1, pg:"/it/scuole/havana-mod.html"},
+      {name:"Centro Afro Latino Roma School", sc:[0, 0, 0, 15.5, 4.2, 0.0], fx:["4,8 ★ · 9", "–"], url:"https://www.google.com/maps/search/?api=1&query=Centro+Afro+Latino+Roma+School+Roma", st:[], np:1, pg:"/it/scuole/centro-afro-latino-roma-school.html"},
+      {name:"Scuola di salsa monteverde", sc:[0, 0, 0, 18.9, 6.3, 0.0], fx:["4,9 ★ · 32", "–"], url:"https://fitnessplay.eu/", st:[], np:1, pg:"/it/scuole/scuola-di-salsa-monteverde.html"},
+      {name:"Havana Freestyle Scuola di ballo", sc:[0, 0, 0, 19.7, 6.9, 0.0], fx:["4,9 ★ · 44", "–"], url:"https://havanafreestyle.com/", st:[], np:1, pg:"/it/scuole/havana-freestyle-scuola-di-ballo.html"},
+      {name:"Fusion Project Salsa e Bachata", sc:[0, 0, 0, 18.5, 5.5, 0.0], fx:["5,0 ★ · 20", "–"], url:"https://fusionproject.it/", st:[], np:1, pg:"/it/scuole/fusion-project-salsa-e-bachata.html"},
+      {name:"A.S.D. Tres Lab", sc:[0, 0, 0, 17.1, 6.5, 0.0], fx:["4,7 ★ · 35", "–"], url:"https://www.google.com/maps/search/?api=1&query=A.S.D.+Tres+Lab+Roma", st:[], np:1, pg:"/it/scuole/a-s-d-tres-lab.html"},
+      {name:"Salsa Fantasy", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/rome/salsa-urban-dance-courses-at-salsa-fantasy/", st:[], np:1, un:1, pg:"/it/scuole/salsa-fantasy.html"}
+    ],
+    "torino": [
+      {name:"Scuola di Ballo Latino Torino Santa Rita", sc:[0, 0, 0, 20.7, 7.8, 0.0], fx:["4,9 ★ · 73", "–"], url:"https://www.scuoladiballotorino.it", st:[], np:1, pg:"/it/scuole/scuola-di-ballo-latino-torino-santa-rita.html"},
+      {name:"Timba Tumba Dance Academy", sc:[10, 10, 7, 24.6, 10.0, 0.0], fx:["5,0 ★ · 723", "–"], url:"https://www.timbatumbadanceacademy.it", st:[], np:1, pg:"/it/scuole/timba-tumba-dance-academy.html"},
+      {name:"Scuola di Ballo Sampaoli", sc:[10, 8, 0, 22.9, 10.0, 0.0], fx:["4,9 ★ · 645", "–"], url:"https://www.scuoladiballosampaoli.com", st:[], np:1, pg:"/it/scuole/scuola-di-ballo-sampaoli.html"},
+      {name:"Salsa Torino", sc:[0, 0, 0, 21.9, 7.7, 0.0], fx:["5,0 ★ · 68", "–"], url:"https://salsatorino.dance/", st:[], np:1, pg:"/it/scuole/salsa-torino.html"},
+      {name:"La Nena Latina Academia de Baile", sc:[0, 0, 0, 16.0, 4.6, 0.0], fx:["4,8 ★ · 12", "–"], url:"https://www.google.com/maps/search/?api=1&query=La+Nena+Latina+Academia+de+Baile+Torino", st:[], np:1, pg:"/it/scuole/la-nena-latina-academia-de-baile.html"},
+      {name:"A.S.D Latin Flair", sc:[0, 0, 0, 17.5, 4.9, 0.0], fx:["5,0 ★ · 14", "–"], url:"https://www.google.com/maps/search/?api=1&query=A.S.D+Latin+Flair+Torino", st:[], np:1, pg:"/it/scuole/a-s-d-latin-flair.html"},
+      {name:"Movimento Diferente Kizomba", sc:[0, 0, 0, 15.8, 4.5, 0.0], fx:["4,8 ★ · 11", "–"], url:"https://www.google.com/maps/search/?api=1&query=Movimento+Diferente+Kizomba+Torino", st:[], np:1, pg:"/it/scuole/movimento-diferente-kizomba.html"},
+      {name:"La Cubanita Dance", sc:[0, 0, 0, 17.1, 8.3, 0.0], fx:["4,6 ★ · 95", "–"], url:"https://lacubanita.dance/", st:[], np:1, pg:"/it/scuole/la-cubanita-dance.html"},
+      {name:"Scuola di Ballo Regina Latina", sc:[0, 0, 0, 17.1, 5.6, 0.0], fx:["4,8 ★ · 21", "–"], url:"https://www.google.com/maps/search/?api=1&query=Scuola+di+Ballo+Regina+Latina+Torino", st:[], np:1, pg:"/it/scuole/scuola-di-ballo-regina-latina.html"},
+      {name:"Arthur Murray Torino", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/turin/salsa-latin-dance-program-at-arthur-murray-torino/", st:[], np:1, un:1, pg:"/it/scuole/arthur-murray-torino.html"},
+      {name:"Scuola di Danza Ivan e Genny", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/turin/salsa-bachata-ivan-and-genny-dance-school/", st:[], np:1, un:1, pg:"/it/scuole/scuola-di-danza-ivan-e-genny.html"}
+    ],
+    "bologna": [
+      {name:"Aguanilebbe Dance Studio", sc:[0, 0, 0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 113", "–"], url:"https://www.aguanilebbe.net", st:[], np:1, pg:"/it/scuole/aguanilebbe-dance-studio.html"},
+      {name:"B Dance Studio Bologna", sc:[0, 0, 0, 15.3, 3.2, 0.0], fx:["5,0 ★ · 5", "–"], url:"https://www.google.com/maps/search/?api=1&query=B+Dance+Studio+Bologna+Bologna", st:[], np:1, pg:"/it/scuole/b-dance-studio-bologna.html"},
+      {name:"Scuola di Ballo Latino51 Academy a.s.d.", sc:[0, 0, 0, 22.1, 9.5, 0.0], fx:["4,9 ★ · 188", "–"], url:"https://latino51.it/", st:[], np:1, pg:"/it/scuole/scuola-di-ballo-latino51-academy-a-s-d.html"},
+      {name:"B Dance Studio", sc:[0, 0, 0, 15.3, 3.2, 0.0], fx:["5,0 ★ · 5", "–"], url:"https://www.google.com/maps/search/?api=1&query=B+Dance+Studio+Bologna", st:[], np:1, pg:"/it/scuole/b-dance-studio.html"},
+      {name:"Resaca de Salsa", sc:[0, 0, 0, 16.8, 5.3, 0.0], fx:["4,8 ★ · 18", "–"], url:"https://www.google.com/maps/search/?api=1&query=Resaca+de+Salsa+Bologna", st:[], np:1, pg:"/it/scuole/resaca-de-salsa.html"},
+      {name:"Ritmo y Fuego asd", sc:[0, 0, 0, 18.0, 5.2, 0.0], fx:["5,0 ★ · 17", "–"], url:"https://ritmoyfuegoasd.it/", st:[], np:1, pg:"/it/scuole/ritmo-y-fuego-asd.html"},
+      {name:"Kizomba Kirevs", sc:[0, 0, 0, 16.9, 4.9, 0.0], fx:["4,9 ★ · 14", "–"], url:"https://kirevs.it/", st:[], np:1, pg:"/it/scuole/kizomba-kirevs.html"},
+      {name:"Team Cuba", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/bologna/team-cuba-salsa-bachata-courses/", st:[], np:1, un:1, pg:"/it/scuole/team-cuba.html"}
+    ],
+    "napoli": [
+      {name:"Ivano Esposito", sc:[0, 0, 0, 22.8, 8.5, 0.0], fx:["5,0 ★ · 106", "–"], url:"https://www.ivano-esposito.it", st:[], np:1, pg:"/it/scuole/ivano-esposito.html"},
+      {name:"Bachata con Sentimiento Nico y Rebs", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://nicoyrebs.netlify.app", st:[], np:1, pg:"/it/scuole/bachata-con-sentimiento-nico-y-rebs.html"},
+      {name:"Na Academy", sc:[0, 0, 0, 20.2, 6.5, 0.0], fx:["5,0 ★ · 36", "–"], url:"https://www.google.com/maps/search/?api=1&query=Na+Academy+Napoli", st:[], np:1, pg:"/it/scuole/na-academy.html"},
+      {name:"Salsa & Bachata Academy Andrea y Rosa", sc:[0, 0, 0, 21.2, 7.2, 0.0], fx:["5,0 ★ · 51", "–"], url:"https://salsabachataacademy.it", st:[], np:1, pg:"/it/scuole/salsa-bachata-academy-andrea-y-rosa.html"},
+      {name:"Na Academy- Salsa, Bachata e Danza al Vomero", sc:[0, 0, 0, 20.2, 6.5, 0.0], fx:["5,0 ★ · 36", "–"], url:"https://www.google.com/maps/search/?api=1&query=Na+Academy-+Salsa,+Bachata+e+Danza+al+Vomero+Napoli", st:[], np:1, pg:"/it/scuole/na-academy-salsa-bachata-e-danza-al-vomero.html"},
+      {name:"Accademia Salsata", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://www.google.com/maps/search/?api=1&query=Accademia+Salsata+Napoli", st:[], np:1, pg:"/it/scuole/accademia-salsata.html"},
+      {name:"Scuola di Ballo Latin Style, latini di coppia, b", sc:[0, 0, 0, 13.2, 3.5, 0.0], fx:["4,3 ★ · 6", "–"], url:"https://www.google.com/maps/search/?api=1&query=Scuola+di+Ballo+Latin+Style,+latini+di+coppia,+b+Napoli", st:[], np:1, pg:"/it/scuole/scuola-di-ballo-latin-style-latini-di-coppia-b.html"},
+      {name:"Scuola di ballo Napoli Accademia Cubana Asd", sc:[0, 0, 0, 16.1, 4.0, 0.0], fx:["5,0 ★ · 8", "–"], url:"https://www.google.com/maps/search/?api=1&query=Scuola+di+ballo+Napoli+Accademia+Cubana+Asd+Napoli", st:[], np:1, pg:"/it/scuole/scuola-di-ballo-napoli-accademia-cubana-asd.html"},
+      {name:"Scuola Non Solo Salsa Napoli", sc:[0, 0, 0, 16.5, 4.6, 0.0], fx:["4,9 ★ · 12", "–"], url:"https://www.google.com/maps/search/?api=1&query=Scuola+Non+Solo+Salsa+Napoli+Napoli", st:[], np:1, pg:"/it/scuole/scuola-non-solo-salsa-napoli.html"},
+      {name:"DANCE ACADEMY LA PASION CUBANA", sc:[0, 0, 0, 18.9, 7.2, 0.0], fx:["4,8 ★ · 52", "–"], url:"https://www.google.com/maps/search/?api=1&query=DANCE+ACADEMY+LA+PASION+CUBANA+Napoli", st:[], np:1, pg:"/it/scuole/dance-academy-la-pasion-cubana.html"},
+      {name:"Salsa Dura Napoli", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/naples-italy/salsa-bachata-classes-at-salsa-dura-napoli/", st:[], np:1, un:1, pg:"/it/scuole/salsa-dura-napoli.html"}
+    ],
+    "firenze": [
+      {name:"Bailando Salsa", sc:[0, 0, 0, 21.9, 9.2, 0.0], fx:["4,9 ★ · 157", "–"], url:"https://bailandosalsa.net", st:[], np:1, pg:"/it/scuole/bailando-salsa.html"},
+      {name:"La Salsa Cubana", sc:[0, 0, 0, 18.6, 5.6, 0.0], fx:["5,0 ★ · 21", "–"], url:"https://lasalsacubana.it", st:[], np:1, pg:"/it/scuole/la-salsa-cubana.html"},
+      {name:"Royal Caribe", sc:[0, 0, 0, 21.4, 7.3, 0.0], fx:["5,0 ★ · 57", "–"], url:"https://www.royalcaribe.it", st:[], np:1, pg:"/it/scuole/royal-caribe.html"},
+      {name:"Almasabrosa Scuola di Salsa", sc:[0, 0, 0, 15.9, 3.8, 0.0], fx:["5,0 ★ · 7", "–"], url:"https://almasabrosa.com/", st:[], np:1, pg:"/it/scuole/almasabrosa-scuola-di-salsa.html"},
+      {name:"Salsa Caliente", sc:[0, 0, 0, 13.2, 4.0, 0.0], fx:["4,3 ★ · 8", "–"], url:"https://salsacaliente.it/", st:[], np:1, pg:"/it/scuole/salsa-caliente.html"},
+      {name:"Somos Cubanos asd", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://somoscubanos.it/", st:[], np:1, pg:"/it/scuole/somos-cubanos-asd.html"},
+      {name:"Latin Lab", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/florence/salsa-bachata-weekly-courses-at-latin-lab/", st:[], np:1, un:1, pg:"/it/scuole/latin-lab.html"}
+    ],
+    "genova": [
+      {name:"Karisma Studios", sc:[0, 0, 0, 17.6, 5.4, 0.0], fx:["4,9 ★ · 19", "–"], url:"https://karismastudios.it", st:[], np:1, pg:"/it/scuole/karisma-studios.html"},
+      {name:"FBS Latin Empire", sc:[0, 0, 0, 16.1, 4.0, 0.0], fx:["5,0 ★ · 8", "–"], url:"https://sites.google.com/", st:[], np:1, pg:"/it/scuole/fbs-latin-empire.html"},
+      {name:"Venerdi Salsa Bachata e Kizomba al Cezanne", sc:[0, 0, 0, 15.0, 4.9, 0.0], fx:["4,6 ★ · 14", "–"], url:"https://www.google.com/maps/search/?api=1&query=Venerdi+Salsa+Bachata+e+Kizomba+al+Cezanne+Genova", st:[], np:1, pg:"/it/scuole/venerdi-salsa-bachata-e-kizomba-al-cezanne.html"}
+    ],
+    "verona": [
+      {name:"Imperio Latino Dance Academy", sc:[0, 0, 0, 20.2, 6.5, 0.0], fx:["5,0 ★ · 36", "–"], url:"https://imperiolatino.org", st:[], np:1, pg:"/it/scuole/imperio-latino-dance-academy.html"},
+      {name:"Los Varaderos", sc:[0, 0, 0, 19.9, 6.3, 0.0], fx:["5,0 ★ · 32", "–"], url:"https://www.losvaraderos.it", st:[], np:1, pg:"/it/scuole/los-varaderos.html"},
+      {name:"Quieres Bailar scuola di ballo", sc:[0, 0, 0, 14.7, 4.3, 0.0], fx:["4,6 ★ · 10", "–"], url:"https://www.google.com/maps/search/?api=1&query=Quieres+Bailar+scuola+di+ballo+Verona", st:[], np:1, pg:"/it/scuole/quieres-bailar-scuola-di-ballo.html"},
+      {name:"Suegno Latino Danza", sc:[0, 0, 0, 18.8, 7.2, 0.0], fx:["4,8 ★ · 51", "–"], url:"https://suegnolatino.it/", st:[], np:1, pg:"/it/scuole/suegno-latino-danza.html"}
+    ],
+    "padova": [
+      {name:"M&M's Salsa", sc:[0, 0, 0, 21.1, 8.2, 0.0], fx:["4,9 ★ · 92", "–"], url:"https://www.mmsalsa.it", st:[], np:1, pg:"/it/scuole/m-m-s-salsa.html"},
+      {name:"CubaLinda de mi Vida", sc:[0, 0, 0, 20.5, 7.6, 0.0], fx:["4,9 ★ · 65", "–"], url:"https://www.cubalinda.eu", st:[], np:1, pg:"/it/scuole/cubalinda-de-mi-vida.html"},
+      {name:"Rueda Loca", sc:[0, 0, 0, 20.0, 7.2, 0.0], fx:["4,9 ★ · 51", "–"], url:"https://www.ruedaloca.it", st:[], np:1, pg:"/it/scuole/rueda-loca.html"},
+      {name:"STH Latin Dance Academy", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 45", "–"], url:"https://sthlatindanceacademy.it", st:[], np:1, pg:"/it/scuole/sth-latin-dance-academy.html"},
+      {name:"Future Dance School", sc:[0, 0, 0, 17.4, 6.8, 0.0], fx:["4,7 ★ · 41", "–"], url:"https://www.futuredancepd.it", st:[], np:1, pg:"/it/scuole/future-dance-school.html"},
+      {name:"Latin Project a.s.d. Scuola di ballo a Padova", sc:[0, 0, 0, 19.8, 6.3, 0.0], fx:["5,0 ★ · 31", "–"], url:"https://latinprojectpadova.netlify.app/", st:[], np:1, pg:"/it/scuole/latin-project-a-s-d-scuola-di-ballo-a-padova.html"},
+      {name:"Eleonora e Davide Universo Danza", sc:[0, 0, 0, 21.2, 7.2, 0.0], fx:["5,0 ★ · 52", "–"], url:"https://eleonoradavide.com/", st:[], np:1, pg:"/it/scuole/eleonora-e-davide-universo-danza.html"},
+      {name:"Salsa del Sol", sc:[0, 0, 0, 17.5, 5.3, 0.0], fx:["4,9 ★ · 18", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+del+Sol+Padova", st:[], np:1, pg:"/it/scuole/salsa-del-sol.html"}
+    ],
+    "palermo": [
+      {name:"Salvo Raccardi Salsa & Bachata", sc:[0, 0, 0, 23.4, 9.1, 0.0], fx:["5,0 ★ · 155", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salvo+Raccardi+Salsa+&+Bachata+Palermo", st:[], np:1, pg:"/it/scuole/salvo-raccardi-salsa-bachata.html"},
+      {name:"Scuola di Danza Studio D", sc:[0, 0, 0, 18.3, 8.0, 0.0], fx:["4,7 ★ · 81", "–"], url:"https://www.scuoladanzastudiod.it", st:[], np:1, pg:"/it/scuole/scuola-di-danza-studio-d.html"},
+      {name:"Salvo Raccardi", sc:[0, 0, 0, 23.4, 9.1, 0.0], fx:["5,0 ★ · 155", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salvo+Raccardi+Palermo", st:[], np:1, pg:"/it/scuole/salvo-raccardi.html"},
+      {name:"Tumbao Dance Academy", sc:[0, 0, 0, 21.6, 8.7, 0.0], fx:["4,9 ★ · 122", "–"], url:"https://tumbaodanceacademy.com/", st:[], np:1, pg:"/it/scuole/tumbao-dance-academy.html"},
+      {name:"Vulcano Latino Nikita", sc:[0, 0, 0, 14.8, 4.5, 0.0], fx:["4,6 ★ · 11", "–"], url:"https://www.google.com/maps/search/?api=1&query=Vulcano+Latino+Nikita+Palermo", st:[], np:1, pg:"/it/scuole/vulcano-latino-nikita.html"}
+    ],
+    "catania": [
+      {name:"Punto Latino", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 42", "–"], url:"https://www.puntolatino.it", st:[], np:1, pg:"/it/scuole/punto-latino.html"},
+      {name:"Accademia Fuego Latino", sc:[0, 0, 0, 18.1, 7.7, 0.0], fx:["4,7 ★ · 69", "–"], url:"https://www.google.com/maps/search/?api=1&query=Accademia+Fuego+Latino+Catania", st:[], np:1, pg:"/it/scuole/accademia-fuego-latino.html"},
+      {name:"Baila salsa academia de Baile", sc:[0, 0, 0, 19.4, 6.0, 0.0], fx:["5,0 ★ · 27", "–"], url:"https://academiabailasalsa.it/", st:[], np:1, pg:"/it/scuole/baila-salsa-academia-de-baile.html"},
+      {name:"Battito Latino", sc:[0, 0, 0, 20.7, 6.8, 0.0], fx:["5,0 ★ · 43", "–"], url:"https://www.google.com/maps/search/?api=1&query=Battito+Latino+Catania", st:[], np:1, pg:"/it/scuole/battito-latino.html"},
+      {name:"Barrio Cubano", sc:[0, 0, 0, 19.3, 6.0, 0.0], fx:["5,0 ★ · 26", "–"], url:"https://www.google.com/maps/search/?api=1&query=Barrio+Cubano+Catania", st:[], np:1, pg:"/it/scuole/barrio-cubano.html"}
+    ],
+    "brescia": [
+      {name:"Zero in Condotta", sc:[0, 0, 0, 18.0, 7.6, 0.0], fx:["4,7 ★ · 65", "–"], url:"https://www.zeroincondottaballo.it", st:[], np:1, pg:"/it/scuole/zero-in-condotta.html"},
+      {name:"Scuola di Danza On-Stage", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/brescia/on-stage-latino-americano-salsa-and-bachata-course/", st:[], np:1, un:1, pg:"/it/scuole/scuola-di-danza-on-stage.html"},
+      {name:"Brixia Dance School", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/brescia/brixia-dance-school-salsa-and-bachata-course/", st:[], np:1, un:1, pg:"/it/scuole/brixia-dance-school.html"}
+    ],
+    "rimini": [
+      {name:"Club Latino", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://www.clublatino.it", st:[], np:1, pg:"/it/scuole/club-latino.html"},
+      {name:"InDanza Show Academy", sc:[0, 0, 0, 23.3, 9.0, 0.0], fx:["5,0 ★ · 145", "–"], url:"https://indanzashowacademy.it", st:[], np:1, pg:"/it/scuole/indanza-show-academy.html"},
+      {name:"Archileo y Karen Infinita Pasion", sc:[0, 0, 0, 20.0, 6.4, 0.0], fx:["5,0 ★ · 33", "–"], url:"https://www.infinitapasion.com", st:[], np:1, pg:"/it/scuole/archileo-y-karen-infinita-pasion.html"},
+      {name:"LyF Lorenzo y Federica", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/rimini/salsa-and-bachata-classes-at-lyf-in-rimini/", st:[], np:1, un:1, pg:"/it/scuole/lyf-lorenzo-y-federica.html"}
+    ],
+    "trieste": [
+      {name:"ASD Aztecan Academy", sc:[0, 0, 0, 23.7, 9.6, 0.0], fx:["5,0 ★ · 204", "–"], url:"https://aztecanacademy.it", st:[], np:1, pg:"/it/scuole/asd-aztecan-academy.html"},
+      {name:"Meta Caraibica", sc:[0, 0, 0, 19.1, 6.5, 0.0], fx:["4,9 ★ · 35", "–"], url:"https://www.metacaraibica.it", st:[], np:1, pg:"/it/scuole/meta-caraibica.html"},
+      {name:"Dance House Academy", sc:[0, 0, 0, 21.0, 7.0, 0.0], fx:["5,0 ★ · 48", "–"], url:"https://dancehouseacademy.net", st:[], np:1, pg:"/it/scuole/dance-house-academy.html"},
+      {name:"L'officina della Salsa", sc:[0, 0, 0, 23.9, 10.0, 0.0], fx:["5,0 ★ · 246", "–"], url:"https://officinadellasalsa.it/", st:[], np:1, pg:"/it/scuole/l-officina-della-salsa.html"},
+      {name:"SalsaCocola di Simone & Anna", sc:[0, 0, 0, 17.5, 4.9, 0.0], fx:["5,0 ★ · 14", "–"], url:"https://www.google.com/maps/search/?api=1&query=SalsaCocola+di+Simone+&+Anna+Trieste", st:[], np:1, pg:"/it/scuole/salsacocola-di-simone-anna.html"}
+    ],
+    "parma": [
+      {name:"Ataca Dance Parma", sc:[0, 0, 0, 22.6, 8.3, 0.0], fx:["5,0 ★ · 98", "–"], url:"https://www.atacadanceparma.com", st:[], np:1, pg:"/it/scuole/ataca-dance-parma.html"},
+      {name:"EMOZIONE LATINA A.S.D.", sc:[0, 0, 0, 21.6, 7.4, 0.0], fx:["5,0 ★ · 60", "–"], url:"https://emozionelatina.com/", st:[], np:1, pg:"/it/scuole/emozione-latina-a-s-d.html"}
+    ],
+    "modena": [
+      {name:"Latin Dance Studio", sc:[0, 0, 0, 16.5, 4.6, 0.0], fx:["4,9 ★ · 12", "–"], url:"https://www.latindancestudio.it", st:[], np:1, pg:"/it/scuole/latin-dance-studio.html"},
+      {name:"Anthony y Laura Bachata", sc:[0, 0, 0, 20.0, 6.4, 0.0], fx:["5,0 ★ · 34", "–"], url:"https://www.google.com/maps/search/?api=1&query=Anthony+y+Laura+Bachata+Modena", st:[], np:1, pg:"/it/scuole/anthony-y-laura-bachata.html"},
+      {name:"J'LATINOS DANCE SCHOOL", sc:[0, 0, 0, 19.0, 6.4, 0.0], fx:["4,9 ★ · 33", "–"], url:"https://jlatinos.it/", st:[], np:1, pg:"/it/scuole/j-latinos-dance-school.html"},
+      {name:"Polisportiva Madonnina", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/modena/corso-caraibici-salsa-cubana-bachata-polisportiva-madonnina/", st:[], np:1, un:1, pg:"/it/scuole/polisportiva-madonnina.html"}
+    ],
+    "perugia": [
+      {name:"Salsamundo", sc:[0, 0, 0, 19.6, 6.8, 0.0], fx:["4,9 ★ · 42", "–"], url:"https://www.salsamundo.it", st:[], np:1, pg:"/it/scuole/salsamundo.html"},
+      {name:"Cubamemucho", sc:[0, 0, 0, 17.3, 4.8, 0.0], fx:["5,0 ★ · 13", "–"], url:"https://www.cubamemucho.it", st:[], np:1, pg:"/it/scuole/cubamemucho.html"},
+      {name:"Salsa Style ASD", sc:[0, 0, 0, 15.7, 4.9, 0.0], fx:["4,7 ★ · 14", "–"], url:"https://salsastyleasdperugia.it", st:[], np:1, pg:"/it/scuole/salsa-style-asd.html"}
+    ],
+    "pisa": [
+      {name:"Corsi di Salsa e Bachata con SalsaShaker", sc:[0, 0, 0, 18.6, 5.6, 0.0], fx:["5,0 ★ · 21", "–"], url:"https://www.google.com/maps/search/?api=1&query=Corsi+di+Salsa+e+Bachata+con+SalsaShaker+Pisa", st:[], np:1, pg:"/it/scuole/corsi-di-salsa-e-bachata-con-salsashaker.html"},
+      {name:"Pasito Pa'lante", sc:[0, 0, 0, 19.5, 6.1, 0.0], fx:["5,0 ★ · 28", "–"], url:"https://www.pasitopalante.com", st:[], np:1, pg:"/it/scuole/pasito-pa-lante.html"},
+      {name:"Baila Corazon", sc:[0, 0, 0, 18.5, 5.5, 0.0], fx:["5,0 ★ · 20", "–"], url:"https://www.bailacorazon.it", st:[], np:1, pg:"/it/scuole/baila-corazon.html"},
+      {name:"Sombras Latinas Dance Studio", sc:[0, 0, 0, 19.0, 5.8, 0.0], fx:["5,0 ★ · 24", "–"], url:"https://www.google.com/maps/search/?api=1&query=Sombras+Latinas+Dance+Studio+Pisa", st:[], np:1, pg:"/it/scuole/sombras-latinas-dance-studio.html"},
+      {name:"Latin Sensation", sc:[0, 0, 0, 20.0, 6.4, 0.0], fx:["5,0 ★ · 34", "–"], url:"https://salsanuevacallesf.com/", st:[], np:1, pg:"/it/scuole/latin-sensation.html"}
+    ],
+    "lecce": [
+      {name:"Puerta del Sol Cohiba", sc:[0, 0, 0, 20.4, 6.7, 0.0], fx:["5,0 ★ · 39", "–"], url:"https://www.puerta.it", st:[], np:1, pg:"/it/scuole/puerta-del-sol-cohiba.html"},
+      {name:"Bailadora A.S.D. accademia di ballo", sc:[0, 0, 0, 19.6, 6.2, 0.0], fx:["5,0 ★ · 29", "–"], url:"https://accademiabailadora.it/", st:[], np:1, pg:"/it/scuole/bailadora-a-s-d-accademia-di-ballo.html"}
+    ],
+    "monza": [
+      {name:"Bailaconmigo", sc:[0, 0, 0, 16.1, 4.8, 0.0], fx:["4,8 ★ · 13", "–"], url:"https://bailaconmigo.it", st:[], np:1, pg:"/it/scuole/bailaconmigo.html"},
+      {name:"Be Fusion", sc:[0, 0, 0, 19.6, 7.9, 0.0], fx:["4,8 ★ · 79", "–"], url:"https://www.befusion.it", st:[], np:1, pg:"/it/scuole/be-fusion.html"}
+    ],
+    "cagliari": [
+      {name:"Tres Tiempos Salsa Cubana e Bachata", sc:[0, 0, 0, 23.2, 8.9, 0.0], fx:["5,0 ★ · 134", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tres+Tiempos+Salsa+Cubana+e+Bachata+Cagliari", st:[], np:1, pg:"/it/scuole/tres-tiempos-salsa-cubana-e-bachata.html"},
+      {name:"Salsa Cubana e Bachata scuola da ballo Tres Tie", sc:[0, 0, 0, 23.2, 8.9, 0.0], fx:["5,0 ★ · 134", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+Cubana+e+Bachata+scuola+da+ballo+Tres+Tie+Cagliari", st:[], np:1, pg:"/it/scuole/salsa-cubana-e-bachata-scuola-da-ballo-tres-tie.html"}
+    ],
+    "trento": [
+      {name:"Sabor Timbero Academy", sc:[0, 0, 0, 20.4, 6.6, 0.0], fx:["5,0 ★ · 38", "–"], url:"https://www.sabortimbero.com", st:[], np:1, pg:"/it/scuole/sabor-timbero-academy.html"},
+      {name:"Baila Trentino Dance Academy", sc:[0, 0, 0, 15.7, 4.0, 0.0], fx:["4,9 ★ · 8", "–"], url:"https://bailatrentinodanceacademy.it", st:[], np:1, pg:"/it/scuole/baila-trentino-dance-academy.html"},
+      {name:"Ritmomisto", sc:[0, 0, 0, 17.5, 6.9, 0.0], fx:["4,7 ★ · 45", "–"], url:"https://ritmomisto.it/", st:[], np:1, pg:"/it/scuole/ritmomisto.html"}
+    ],
+    "varese": [
+      {name:"Latin Paradise Club", sc:[0, 0, 0, 20.5, 9.3, 0.0], fx:["4,8 ★ · 166", "–"], url:"https://www.latinparadise.it", st:[], np:1, pg:"/it/scuole/latin-paradise-club.html"}
+    ],
+    "pescara": [
+      {name:"Agua Academy", sc:[0, 0, 0, 22.1, 7.9, 0.0], fx:["5,0 ★ · 77", "–"], url:"https://www.aguaacademy.it", st:[], np:1, pg:"/it/scuole/agua-academy.html"},
+      {name:"Star Dance", sc:[0, 0, 0, 20.4, 7.5, 0.0], fx:["4,9 ★ · 63", "–"], url:"https://www.stardance.org", st:[], np:1, pg:"/it/scuole/star-dance.html"},
+      {name:"Academy Caribbean Latin Dance 2.0", sc:[0, 0, 0, 23.2, 8.9, 0.0], fx:["5,0 ★ · 138", "–"], url:"https://sites.google.com/", st:[], np:1, pg:"/it/scuole/academy-caribbean-latin-dance-2-0.html"},
+      {name:"Armada Latina Pescara A.s.d.", sc:[0, 0, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://www.google.com/maps/search/?api=1&query=Armada+Latina+Pescara+A.s.d.+Pescara", st:[], np:1, pg:"/it/scuole/armada-latina-pescara-a-s-d.html"},
+      {name:"Ritmo Latino", sc:[0, 0, 0, 20.5, 6.7, 0.0], fx:["5,0 ★ · 40", "–"], url:"https://asdritmolatinonewdance.mooplan.it/", st:[], np:1, pg:"/it/scuole/ritmo-latino.html"},
+      {name:"I Love Salsa", sc:[0, 0, 0, 18.2, 6.6, 0.0], fx:["4,8 ★ · 37", "–"], url:"https://www.google.com/maps/search/?api=1&query=I+Love+Salsa+Pescara", st:[], np:1, pg:"/it/scuole/i-love-salsa.html"}
+    ],
+    "salerno": [
+      {name:"Starlight Dance", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://starlightdancesalerno.it", st:[], np:1, pg:"/it/scuole/starlight-dance.html"},
+      {name:"Scuola di ballo Baila Latino di Ciko Latino", sc:[0, 0, 0, 14.0, 6.0, 0.0], fx:["4,4 ★ · 27", "–"], url:"https://cikolatino.it/", st:[], np:1, pg:"/it/scuole/scuola-di-ballo-baila-latino-di-ciko-latino.html"}
+    ],
+    "treviso": [
+      {name:"JAcademy", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 44", "–"], url:"https://jacademyasd.it", st:[], np:1, pg:"/it/scuole/jacademy.html"},
+      {name:"Over Dance", sc:[0, 0, 0, 21.9, 9.2, 0.0], fx:["4,9 ★ · 159", "–"], url:"https://www.overdance.it", st:[], np:1, pg:"/it/scuole/over-dance.html"},
+      {name:"RH Positivo Salsa", sc:[0, 0, 0, 15.3, 6.9, 0.0], fx:["4,5 ★ · 44", "–"], url:"https://www.google.com/maps/search/?api=1&query=RH+Positivo+Salsa+Treviso", st:[], np:1, pg:"/it/scuole/rh-positivo-salsa.html"},
+      {name:"A.S.D. RitmoVivo", sc:[0, 0, 0, 20.0, 7.2, 0.0], fx:["4,9 ★ · 51", "–"], url:"https://ritmovivotreviso.com/", st:[], np:1, pg:"/it/scuole/a-s-d-ritmovivo.html"},
+      {name:"La Sarabanda Latina", sc:[0, 0, 0, 18.4, 5.4, 0.0], fx:["5,0 ★ · 19", "–"], url:"https://www.google.com/maps/search/?api=1&query=La+Sarabanda+Latina+Treviso", st:[], np:1, pg:"/it/scuole/la-sarabanda-latina.html"}
+    ],
+    "udine": [
+      {name:"Federica Bachata Fusion", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://federicabachatafusion.com", st:[], np:1, pg:"/it/scuole/federica-bachata-fusion.html"},
+      {name:"Jackson Cabezas Bachata y Salsa", sc:[0, 0, 0, 16.1, 4.0, 0.0], fx:["5,0 ★ · 8", "–"], url:"https://www.google.com/maps/search/?api=1&query=Jackson+Cabezas+Bachata+y+Salsa+Udine", st:[], np:1, pg:"/it/scuole/jackson-cabezas-bachata-y-salsa.html"}
+    ],
+    "bolzano": [
+      {name:"Salsa C'È & Bachata", sc:[0, 0, 0, 22.7, 8.4, 0.0], fx:["5,0 ★ · 103", "–"], url:"https://salsace.carrd.com", st:[], np:1, pg:"/it/scuole/salsa-c-e-bachata.html"},
+      {name:"Salsa Star Dance Studio", sc:[0, 0, 0, 22.0, 7.8, 0.0], fx:["5,0 ★ · 72", "–"], url:"https://www.salsastar.it", st:[], np:1, pg:"/it/scuole/salsa-star-dance-studio.html"}
+    ],
+    "vicenza": [
+      {name:"Gallego Dance Academy", sc:[0, 0, 0, 17.6, 5.4, 0.0], fx:["4,9 ★ · 19", "–"], url:"https://www.gallegodanceacademy.com", st:[], np:1, pg:"/it/scuole/gallego-dance-academy.html"},
+      {name:"Salsamerika Company Vicenza", sc:[0, 0, 0, 19.3, 6.0, 0.0], fx:["5,0 ★ · 26", "–"], url:"https://salsamerika.it/", st:[], np:1, pg:"/it/scuole/salsamerika-company-vicenza.html"},
+      {name:"Barrio Latino", sc:[0, 0, 0, 13.0, 9.9, 0.0], fx:["4,3 ★ · 231", "–"], url:"https://www.google.com/maps/search/?api=1&query=Barrio+Latino+Vicenza", st:[], np:1, pg:"/it/scuole/barrio-latino.html"}
+    ],
+    "novara": [
+      {name:"Yda e Gabry Dance Academy", sc:[0, 0, 0, 23.4, 9.1, 0.0], fx:["5,0 ★ · 153", "–"], url:"https://ydaegabry.it", st:[], np:1, pg:"/it/scuole/yda-e-gabry-dance-academy.html"},
+      {name:"Latin Soul Akademy", sc:[0, 0, 0, 21.6, 7.5, 0.0], fx:["5,0 ★ · 61", "–"], url:"https://www.latinsoulakademy.it", st:[], np:1, pg:"/it/scuole/latin-soul-akademy.html"},
+      {name:"Me Encanta Bailar", sc:[0, 0, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://www.google.com/maps/search/?api=1&query=Me+Encanta+Bailar+Novara", st:[], np:1, pg:"/it/scuole/me-encanta-bailar.html"}
+    ],
+    "bari": [
+      {name:"Grupo Habana Danze Caraibiche", sc:[0, 0, 0, 21.6, 7.5, 0.0], fx:["5,0 ★ · 61", "–"], url:"https://www.google.com/maps/search/?api=1&query=Grupo+Habana+Danze+Caraibiche+Bari", st:[], np:1, pg:"/it/scuole/grupo-habana-danze-caraibiche.html"}
+    ],
+    "livorno": [
+      {name:"SABOR LATINO DANCE EXPERIENCE", sc:[0, 0, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://saborlatinolivorno.com/", st:[], np:1, pg:"/it/scuole/sabor-latino-dance-experience.html"}
+    ],
+    "foggia": [
+      {name:"La Isla Tropical", sc:[0, 0, 0, 17.5, 4.9, 0.0], fx:["5,0 ★ · 14", "–"], url:"https://www.google.com/maps/search/?api=1&query=La+Isla+Tropical+Foggia", st:[], np:1, pg:"/it/scuole/la-isla-tropical.html"}
+    ],
+    "taranto": [
+      {name:"Dance Academy Mundo Latino", sc:[0, 0, 0, 24.0, 10.0, 0.0], fx:["5,0 ★ · 278", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dance+Academy+Mundo+Latino+Taranto", st:[], np:1, pg:"/it/scuole/dance-academy-mundo-latino.html"},
+      {name:"A.S.D. Baila Conmigo Scuola di ballo", sc:[0, 0, 0, 20.9, 7.0, 0.0], fx:["5,0 ★ · 46", "–"], url:"https://www.google.com/maps/search/?api=1&query=A.S.D.+Baila+Conmigo+Scuola+di+ballo+Taranto", st:[], np:1, pg:"/it/scuole/a-s-d-baila-conmigo-scuola-di-ballo.html"},
+      {name:"Vivir Bailando Salsa", sc:[0, 0, 0, 18.0, 5.2, 0.0], fx:["5,0 ★ · 17", "–"], url:"https://www.google.com/maps/search/?api=1&query=Vivir+Bailando+Salsa+Taranto", st:[], np:1, pg:"/it/scuole/vivir-bailando-salsa.html"}
+    ],
+    "sassari": [
+      {name:"G&S Latin Dance", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 42", "–"], url:"https://geslatindance.wordpress.com/", st:[], np:1, pg:"/it/scuole/g-s-latin-dance.html"}
+    ],
+    "lucca": [
+      {name:"Scuola di Danze Caraibiche Paso Latino Corsi di", sc:[0, 0, 0, 23.2, 8.9, 0.0], fx:["5,0 ★ · 135", "–"], url:"https://www.google.com/maps/search/?api=1&query=Scuola+di+Danze+Caraibiche+Paso+Latino+Corsi+di+Lucca", st:[], np:1, pg:"/it/scuole/scuola-di-danze-caraibiche-paso-latino-corsi-di.html"}
+    ],
+    "messina": [
+      {name:"Connessione Latina Academy", sc:[0, 0, 0, 18.0, 5.2, 0.0], fx:["5,0 ★ · 17", "–"], url:"https://www.google.com/maps/search/?api=1&query=Connessione+Latina+Academy+Messina", st:[], np:1, pg:"/it/scuole/connessione-latina-academy.html"},
+      {name:"A.S.D. Mambo y Son Dance Academy", sc:[0, 0, 0, 19.2, 5.9, 0.0], fx:["5,0 ★ · 25", "–"], url:"https://www.google.com/maps/search/?api=1&query=A.S.D.+Mambo+y+Son+Dance+Academy+Messina", st:[], np:1, pg:"/it/scuole/a-s-d-mambo-y-son-dance-academy.html"}
+    ],
+    "pavia": [
+      {name:"Idea Latina", sc:[0, 0, 0, 20.8, 7.8, 0.0], fx:["4,9 ★ · 74", "–"], url:"https://idealatina.it/", st:[], np:1, pg:"/it/scuole/idea-latina.html"}
+    ],
+    "piacenza": [
+      {name:"Scuola di Ballo LATIN LOVER ASD", sc:[0, 0, 0, 19.2, 6.5, 0.0], fx:["4,9 ★ · 36", "–"], url:"https://www.google.com/maps/search/?api=1&query=Scuola+di+Ballo+LATIN+LOVER+ASD+Piacenza", st:[], np:1, pg:"/it/scuole/scuola-di-ballo-latin-lover-asd.html"}
+    ],
+    "reggio-calabria": [
+      {name:"Kizomba Reggio Calabria & Danze Caraibiche", sc:[0, 0, 0, 18.4, 5.4, 0.0], fx:["5,0 ★ · 19", "–"], url:"https://www.google.com/maps/search/?api=1&query=Kizomba+Reggio+Calabria+&+Danze+Caraibiche+Reggio+Calabria", st:[], np:1, pg:"/it/scuole/kizomba-reggio-calabria-danze-caraibiche.html"}
+    ],
+    "arezzo": [
+      {name:"Salsa Na' Ma' SSD a rl", sc:[0, 0, 0, 18.6, 5.6, 0.0], fx:["5,0 ★ · 21", "–"], url:"https://salsanama.it/", st:[], np:1, pg:"/it/scuole/salsa-na-ma-ssd-a-rl.html"}
+    ],
+    "prato": [
+      {name:"SCUOLA DI BALLO BARRIO LATINO S.S.D.R.L.", sc:[0, 0, 0, 20.9, 7.9, 0.0], fx:["4,9 ★ · 78", "–"], url:"https://barriolatinoacademy.it/", st:[], np:1, pg:"/it/scuole/scuola-di-ballo-barrio-latino-s-s-d-r-l.html"},
+      {name:"Diablo Latino International", sc:[0, 0, 0, 14.8, 5.8, 0.0], fx:["4,5 ★ · 24", "–"], url:"https://diablolatinointernational.it/", st:[], np:1, pg:"/it/scuole/diablo-latino-international.html"},
+      {name:"A.S.D. Cento x Cento Latino Scuola di Ballo", sc:[0, 0, 0, 17.1, 5.6, 0.0], fx:["4,8 ★ · 21", "–"], url:"https://www.google.com/maps/search/?api=1&query=A.S.D.+Cento+x+Cento+Latino+Scuola+di+Ballo+Prato", st:[], np:1, pg:"/it/scuole/a-s-d-cento-x-cento-latino-scuola-di-ballo.html"},
+      {name:"Ritmo Loco 2.0 Associazione Sportiva Dilettantis", sc:[0, 0, 0, 23.0, 8.7, 0.0], fx:["5,0 ★ · 122", "–"], url:"https://www.google.com/maps/search/?api=1&query=Ritmo+Loco+2.0+Associazione+Sportiva+Dilettantis+Prato", st:[], np:1, pg:"/it/scuole/ritmo-loco-2-0-associazione-sportiva-dilettantis.html"}
+    ],
+    "forli": [
+      {name:"Scuola di ballo Baila", sc:[0, 0, 0, 20.1, 6.5, 0.0], fx:["5,0 ★ · 35", "–"], url:"https://baila.info/", st:[], np:1, pg:"/it/scuole/scuola-di-ballo-baila.html"},
+      {name:"Scuola di ballo Pueblo Latino", sc:[0, 0, 0, 15.6, 3.5, 0.0], fx:["5,0 ★ · 6", "–"], url:"https://www.google.com/maps/search/?api=1&query=Scuola+di+ballo+Pueblo+Latino+Forlì", st:[], np:1, pg:"/it/scuole/scuola-di-ballo-pueblo-latino.html"}
+    ],
+    "cesena": [
+      {name:"Scuola di Ballo Havana Club Latino Amici della D", sc:[0, 0, 0, 14.7, 5.6, 0.0], fx:["4,5 ★ · 21", "–"], url:"https://havanaclublatino.it/", st:[], np:1, pg:"/it/scuole/scuola-di-ballo-havana-club-latino-amici-della-d.html"}
+    ],
+    "ancona": [
+      {name:"Kasino Latino", sc:[0, 0, 0, 15.7, 4.9, 0.0], fx:["4,7 ★ · 14", "–"], url:"https://kasinolatino.it/", st:[], np:1, pg:"/it/scuole/kasino-latino.html"},
+      {name:"Asd Salsa Style Ancona", sc:[0, 0, 0, 17.2, 5.1, 0.0], fx:["4,9 ★ · 16", "–"], url:"https://www.google.com/maps/search/?api=1&query=Asd+Salsa+Style+Ancona+Ancona", st:[], np:1, pg:"/it/scuole/asd-salsa-style-ancona.html"},
+      {name:"Boricua Salsa Style", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/ancona/boricua-salsa-style-dance-classes/", st:[], np:1, un:1, pg:"/it/scuole/boricua-salsa-style.html"}
+    ],
+    "andria": [
+      {name:"Asd Vivo Latino Andria", sc:[0, 0, 0, 14.7, 4.3, 0.0], fx:["4,6 ★ · 10", "–"], url:"https://www.google.com/maps/search/?api=1&query=Asd+Vivo+Latino+Andria+Andria", st:[], np:1, pg:"/it/scuole/asd-vivo-latino-andria.html"}
+    ],
+    "la-spezia": [
+      {name:"Racconto Latino RL Dance Studio", sc:[0, 0, 0, 17.2, 6.5, 0.0], fx:["4,7 ★ · 36", "–"], url:"https://rldancestudio.it/", st:[], np:1, pg:"/it/scuole/racconto-latino-rl-dance-studio.html"},
+      {name:"Salsa Gaia", sc:[0, 0, 0, 15.4, 4.6, 0.0], fx:["4,7 ★ · 12", "–"], url:"https://salsagaia.com/", st:[], np:1, pg:"/it/scuole/salsa-gaia.html"}
+    ],
+    "brindisi": [
+      {name:"Mamacita Latin Dance School", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://www.google.com/maps/search/?api=1&query=Mamacita+Latin+Dance+School+Brindisi", st:[], np:1, pg:"/it/scuole/mamacita-latin-dance-school.html"}
+    ],
+    "caserta": [
+      {name:"Baila Caliente a.s.d.", sc:[0, 0, 0, 23.5, 9.3, 0.0], fx:["5,0 ★ · 172", "–"], url:"https://bailacalienteasd.it/", st:[], np:1, pg:"/it/scuole/baila-caliente-a-s-d.html"}
+    ],
+    "lecco": [
+      {name:"Llamada Latina a.s.d.", sc:[0, 0, 0, 21.7, 8.9, 0.0], fx:["4,9 ★ · 137", "–"], url:"https://llamadalatina.it/", st:[], np:1, pg:"/it/scuole/llamada-latina-a-s-d.html"}
+    ],
+    "savona": [
+      {name:"Oasi Latina", sc:[0, 0, 0, 22.8, 8.5, 0.0], fx:["5,0 ★ · 107", "–"], url:"https://oasilatina.com/", st:[], np:1, pg:"/it/scuole/oasi-latina.html"}
+    ],
+    "asti": [
+      {name:"A.S.D. Salsabor Scuola di Ballo", sc:[0, 0, 0, 21.4, 8.5, 0.0], fx:["4,9 ★ · 111", "–"], url:"https://salsaborasti.it/", st:[], np:1, pg:"/it/scuole/a-s-d-salsabor-scuola-di-ballo.html"}
+    ],
+    "viareggio": [
+      {name:"Ritmo Caliente Balli Caraibici", sc:[0, 0, 0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 56", "–"], url:"https://www.google.com/maps/search/?api=1&query=Ritmo+Caliente+Balli+Caraibici+Viareggio", st:[], np:1, pg:"/it/scuole/ritmo-caliente-balli-caraibici.html"}
+    ],
+    "pordenone": [
+      {name:"Latin Love Asd", sc:[0, 0, 0, 21.9, 7.7, 0.0], fx:["5,0 ★ · 70", "–"], url:"https://latinloveasd.it/", st:[], np:1, pg:"/it/scuole/latin-love-asd.html"}
+    ],
+    "matera": [
+      {name:"Sentimento Cubano Latin Dance Academy", sc:[0, 0, 0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 55", "–"], url:"https://sentimentocubano.com/", st:[], np:1, pg:"/it/scuole/sentimento-cubano-latin-dance-academy.html"}
+    ],
+    "crotone": [
+      {name:"Alma Cubana", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://almacubana.it/", st:[], np:1, pg:"/it/scuole/alma-cubana.html"}
+    ],
+    "trapani": [
+      {name:"Latin Dream dance school", sc:[0, 0, 0, 16.8, 5.3, 0.0], fx:["4,8 ★ · 18", "–"], url:"https://www.google.com/maps/search/?api=1&query=Latin+Dream+dance+school+Trapani", st:[], np:1, pg:"/it/scuole/latin-dream-dance-school.html"}
+    ],
+    "ravenna": [
+      {name:"Habanera Social Club", sc:[0, 0, 0, 17.5, 4.9, 0.0], fx:["5,0 ★ · 14", "–"], url:"https://www.google.com/maps/search/?api=1&query=Habanera+Social+Club+Ravenna", st:[], np:1, pg:"/it/scuole/habanera-social-club.html"},
+      {name:"Dance Planet Ravenna", sc:[0, 0, 0, 17.2, 5.1, 0.0], fx:["4,9 ★ · 16", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dance+Planet+Ravenna+Ravenna", st:[], np:1, pg:"/it/scuole/dance-planet-ravenna.html"}
+    ],
+    "ferrara": [
+      {name:"Caribe Club", sc:[0, 0, 0, 21.7, 8.9, 0.0], fx:["4,9 ★ · 137", "–"], url:"https://caribeclub.it/", st:[], np:1, pg:"/it/scuole/caribe-club.html"},
+      {name:"Los Rumberos", sc:[0, 0, 0, 18.9, 7.2, 0.0], fx:["4,8 ★ · 53", "–"], url:"https://losrumberos.net/", st:[], np:1, pg:"/it/scuole/los-rumberos.html"}
+    ],
+    "reggio-emilia": [
+      {name:"Dance Studio Reggio Emilia", sc:[0, 0, 0, 17.2, 5.1, 0.0], fx:["4,9 ★ · 16", "–"], url:"https://dancestudioreggioemilia.it/", st:[], np:1, pg:"/it/scuole/dance-studio-reggio-emilia.html"}
+    ],
+    "bergamo": [
+      {name:"Gabri & Chiara", sc:[0, 0, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://gabriychiara.it/", st:[], np:1, pg:"/it/scuole/gabri-chiara.html"},
+      {name:"B.Music School", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/bergamo/salsa-and-bachata-classes-at-b-music-school/", st:[], np:1, un:1, pg:"/it/scuole/b-music-school.html"},
+      {name:"Baila Conmigo Bergamo", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/bergamo/salsa-and-bachata-classes-at-baila-conmigo-bergamo/", st:[], np:1, un:1, pg:"/it/scuole/baila-conmigo-bergamo.html"}
+    ],
+    "cuneo": [
+      {name:"Imperial Dance Cuneo", sc:[0, 0, 0, 22.7, 8.4, 0.0], fx:["5,0 ★ · 102", "–"], url:"https://imperial-dance.it/", st:[], np:1, pg:"/it/scuole/imperial-dance-cuneo.html"}
+    ],
+    "terni": [
+      {name:"Pachanga Terni", sc:[0, 0, 0, 16.1, 4.8, 0.0], fx:["4,8 ★ · 13", "–"], url:"https://lapachanga.it/", st:[], np:1, pg:"/it/scuole/pachanga-terni.html"}
+    ],
+    "cosenza": [
+      {name:"Dancing Club Cosenza", sc:[0, 0, 0, 19.2, 7.5, 0.0], fx:["4,8 ★ · 62", "–"], url:"https://accademiadancingclub.it/", st:[], np:1, pg:"/it/scuole/dancing-club-cosenza.html"},
+      {name:"Cosenza Dance Center", sc:[0, 0, 0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 55", "–"], url:"https://cosenzadancecenter.it/", st:[], np:1, pg:"/it/scuole/cosenza-dance-center.html"},
+      {name:"Accademia Clave Na Ma", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/cosenza/salsa-bachata-lessons-at-clave-na-ma-academy/", st:[], np:1, un:1, pg:"/it/scuole/accademia-clave-na-ma.html"}
+    ],
+    "siracusa": [
+      {name:"Yeswedance", sc:[0, 0, 0, 22.3, 8.0, 0.0], fx:["5,0 ★ · 83", "–"], url:"https://yeswedanceacademy.it/", st:[], np:1, pg:"/it/scuole/yeswedance.html"}
+    ],
+    "alessandria": [
+      {name:"Cuban Club Alessandria", sc:[0, 0, 0, 23.3, 9.0, 0.0], fx:["5,0 ★ · 147", "–"], url:"https://cubanclubalessandria.com/", st:[], np:1, pg:"/it/scuole/cuban-club-alessandria.html"}
+    ],
+    "mantova": [
+      {name:"Lesotica Scuola di Ballo", sc:[0, 0, 0, 22.3, 9.9, 0.0], fx:["4,9 ★ · 241", "–"], url:"https://lesoticascuoladiballo.it/", st:[], np:1, pg:"/it/scuole/lesotica-scuola-di-ballo.html"}
+    ],
+    "cremona": [
+      {name:"CremonaDance&Co", sc:[0, 0, 0, 17.9, 5.6, 0.0], fx:["4,9 ★ · 21", "–"], url:"https://cremonadanceco.it/", st:[], np:1, pg:"/it/scuole/cremonadance-co.html"},
+      {name:"Balla&Snella Cremona", sc:[0, 0, 0, 17.7, 5.0, 0.0], fx:["5,0 ★ · 15", "–"], url:"https://ballaesnellacremona.com/", st:[], np:1, pg:"/it/scuole/balla-snella-cremona.html"}
+    ],
+    "voghera": [
+      {name:"Max Latino Dance School", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.goandance.com/en/school/2259/max-latino", st:[], np:1, un:1, pg:"/it/scuole/max-latino-dance-school.html"}
+    ],
+    "venezia": [
+      {name:"Baile Vital", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/venice/baile-vital-salsa-and-bachata-classes/", st:[], np:1, un:1, pg:"/it/scuole/baile-vital.html"},
+      {name:"ASSOKÈRE", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/venice/assokere-cuban-salsa-and-bachata-classes-2/", st:[], np:1, un:1, pg:"/it/scuole/assokere.html"},
+      {name:"Agua Salsa Venezia", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/venice/agua-salsa-venezia-weekly-classes/", st:[], np:1, un:1, pg:"/it/scuole/agua-salsa-venezia.html"}
+    ],
+    "castelfranco-emilia": [
+      {name:"Danza Lerose", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/castelfranco-emilia/salsa-and-bachata-classes-at-danza-lerose/", st:[], np:1, un:1, pg:"/it/scuole/danza-lerose.html"}
+    ],
+    "ascoli-piceno": [
+      {name:"Muevete Dance Academy", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/it/event/italy/ascoli-piceno/salsa-and-bachata-classes-at-muevete-dance-academy/", st:[], np:1, un:1, pg:"/it/scuole/muevete-dance-academy.html"}
+    ],
+    "lisboa": [
+      {name:"Estúdio Sabor & Dança", sc:[0, 0, 0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 116", "–"], url:"https://www.estudiosaboredanca.pt", st:[], np:1, pg:"/pt/escolas/estudio-sabor-danca.html"},
+      {name:"Dança e Companhia", sc:[0, 0, 0, 18.4, 5.4, 0.0], fx:["5,0 ★ · 19", "–"], url:"https://www.dancacompanhia.com", st:[], np:1, pg:"/pt/escolas/danca-e-companhia.html"},
+      {name:"Latin Dance Hub", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://www.google.com/maps/search/?api=1&query=Latin+Dance+Hub+Lisboa", st:[], np:1, pg:"/pt/escolas/latin-dance-hub.html"},
+      {name:"UDance School", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.udance.pt/estilos-dancas-sociais", st:[], np:1, un:1, pg:"/pt/escolas/udance-school.html"}
+    ],
+    "porto": [
+      {name:"Porto com Salsa", sc:[0, 0, 0, 24.2, 10.0, 0.0], fx:["5,0 ★ · 350", "–"], url:"https://www.portocomsalsa.com", st:[], np:1, pg:"/pt/escolas/porto-com-salsa.html"},
+      {name:"Aleks & Dasha (Furiosa Dance)", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://aleksydasha.com/en#aulas", st:[], np:1, un:1, pg:"/pt/escolas/aleks-dasha-furiosa-dance.html"}
+    ],
+    "faro": [
+      {name:"Academia Salsa Algarve", sc:[0, 0, 0, 22.9, 8.6, 0.0], fx:["5,0 ★ · 114", "–"], url:"https://www.salsa-algarve.com", st:[], np:1, pg:"/pt/escolas/academia-salsa-algarve.html"},
+      {name:"Marcos Figueirinha", sc:[0, 0, 0, 21.8, 7.6, 0.0], fx:["5,0 ★ · 67", "–"], url:"https://www.marcosfigueirinha.dance", st:[], np:1, pg:"/pt/escolas/marcos-figueirinha.html"}
+    ],
+    "oeiras": [
+      {name:"Oeiras Dance Academy", sc:[0, 0, 0, 18.1, 7.7, 0.0], fx:["4,7 ★ · 71", "–"], url:"https://www.oeirasdance.pt", st:[], np:1, pg:"/pt/escolas/oeiras-dance-academy.html"}
+    ],
+    "braga": [
+      {name:"Nuno y Rita", sc:[0, 0, 0, 20.6, 7.7, 0.0], fx:["4,9 ★ · 69", "–"], url:"https://nunoyrita.com/", st:[], np:1, pg:"/pt/escolas/nuno-y-rita.html"},
+      {name:"Ent'Artes Escola de Dança", sc:[0, 0, 0, 20.0, 8.5, 0.0], fx:["4,8 ★ · 109", "–"], url:"https://entartes.pt/", st:[], np:1, pg:"/pt/escolas/ent-artes-escola-de-danca.html"},
+      {name:"Backstage Escola de Dança", sc:[0, 0, 0, 21.7, 8.9, 0.0], fx:["4,9 ★ · 136", "–"], url:"https://backstage.com.pt/", st:[], np:1, pg:"/pt/escolas/backstage-escola-de-danca.html"},
+      {name:"Bracara Team", sc:[0, 0, 0, 21.4, 8.5, 0.0], fx:["4,9 ★ · 110", "–"], url:"https://bracarateam.com/", st:[], np:1, pg:"/pt/escolas/bracara-team.html"},
+      {name:"Danças Latinas UMinho", sc:[0, 0, 0, 16.8, 5.3, 0.0], fx:["4,8 ★ · 18", "–"], url:"https://www.google.com/maps/search/?api=1&query=Danças+Latinas+UMinho+Braga", st:[], np:1, pg:"/pt/escolas/dancas-latinas-uminho.html"}
+    ],
+    "coimbra": [
+      {name:"Escola de Dança Ritmo Latino", sc:[0, 0, 0, 14.7, 5.5, 0.0], fx:["4,5 ★ · 20", "–"], url:"https://ritmolatino.pt/", st:[], np:1, pg:"/pt/escolas/escola-de-danca-ritmo-latino.html"}
+    ],
+    "aveiro": [
+      {name:"Dancenter Academia", sc:[0, 0, 0, 21.4, 8.5, 0.0], fx:["4,9 ★ · 109", "–"], url:"https://dancenter.pt/", st:[], np:1, pg:"/pt/escolas/dancenter-academia.html"},
+      {name:"Academia R&D", sc:[0, 0, 0, 21.6, 8.8, 0.0], fx:["4,9 ★ · 127", "–"], url:"https://academiard.com/", st:[], np:1, pg:"/pt/escolas/academia-r-d.html"},
+      {name:"Dance Soul Academy", sc:[0, 0, 0, 18.6, 6.9, 0.0], fx:["4,8 ★ · 45", "–"], url:"https://dancesoulacademy.pt/", st:[], np:1, pg:"/pt/escolas/dance-soul-academy.html"},
+      {name:"Lpstudio", sc:[0, 0, 0, 17.4, 5.9, 0.0], fx:["4,8 ★ · 25", "–"], url:"https://lpstudio.pt/", st:[], np:1, pg:"/pt/escolas/lpstudio.html"},
+      {name:"Escola de Dança Sandra Leite", sc:[0, 0, 0, 19.2, 6.5, 0.0], fx:["4,9 ★ · 36", "–"], url:"https://escolasandraleite.pt/", st:[], np:1, pg:"/pt/escolas/escola-de-danca-sandra-leite.html"}
+    ],
+    "funchal": [
+      {name:"OpenDance Madeira", sc:[0, 0, 0, 19.1, 6.5, 0.0], fx:["4,9 ★ · 35", "–"], url:"https://opendancemadeira.com/", st:[], np:1, pg:"/pt/escolas/opendance-madeira.html"}
+    ],
+    "almada": [
+      {name:"AS Dance Studios", sc:[0, 0, 0, 18.5, 5.5, 0.0], fx:["5,0 ★ · 20", "–"], url:"https://asdancestudios.pt/", st:[], np:1, pg:"/pt/escolas/as-dance-studios.html"}
+    ],
+    "leiria": [
+      {name:"Passocubano", sc:[0, 0, 0, 19.1, 7.4, 0.0], fx:["4,8 ★ · 59", "–"], url:"https://www.google.com/maps/search/?api=1&query=Passocubano+Leiria", st:[], np:1, pg:"/pt/escolas/passocubano.html"},
+      {name:"noRITMO", sc:[0, 0, 0, 16.5, 4.6, 0.0], fx:["4,9 ★ · 12", "–"], url:"https://gonza-rodrigues.pt/", st:[], np:1, pg:"/pt/escolas/noritmo.html"}
+    ],
+    "sintra": [
+      {name:"Escola de Dança Sintra", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://www.google.com/maps/search/?api=1&query=Escola+de+Dança+Sintra+Sintra", st:[], np:1, pg:"/pt/escolas/escola-de-danca-sintra.html"},
+      {name:"Sintra Dance Academy", sc:[0, 0, 0, 17.6, 7.0, 0.0], fx:["4,7 ★ · 47", "–"], url:"https://aiadanca.com/", st:[], np:1, pg:"/pt/escolas/sintra-dance-academy.html"},
+      {name:"Soul Dance", sc:[0, 0, 0, 18.7, 7.0, 0.0], fx:["4,8 ★ · 47", "–"], url:"https://souldancestudio.pt/", st:[], np:1, pg:"/pt/escolas/soul-dance.html"},
+      {name:"Dance Factory Studios", sc:[0, 0, 0, 17.5, 9.4, 0.0], fx:["4,6 ★ · 177", "–"], url:"https://dancefactory.com.pt/", st:[], np:1, pg:"/pt/escolas/dance-factory-studios.html"}
+    ],
+    "portimao": [
+      {name:"Dança Mais", sc:[0, 0, 0, 21.9, 7.7, 0.0], fx:["5,0 ★ · 70", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dança+Mais+Portimão", st:[], np:1, pg:"/pt/escolas/danca-mais.html"}
+    ],
+    "setubal": [
+      {name:"Setubailas", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/pt/event/portugal/setubal/new-salsa-bachata-and-kizomba-class-at-setubailas/", st:[], np:1, un:1, pg:"/pt/escolas/setubailas.html"}
+    ],
+    "paris": [
+      {name:"SalsaNueva Paris", sc:[0, 8, 7, 22.7, 10.0, 0.0], fx:["4,9 ★ · 443", "–"], url:"https://www.salsanueva.fr", st:[], np:1, pg:"/fr/ecoles/salsanueva-paris.html"},
+      {name:"Salsabor Paris", sc:[0, 0, 0, 20.5, 9.3, 0.0], fx:["4,8 ★ · 171", "–"], url:"https://salsabor.fr", st:[], np:1, pg:"/fr/ecoles/salsabor-paris.html"},
+      {name:"Salsa con Elegua", sc:[10, 10, 7, 24.3, 10.0, 0.0], fx:["5,0 ★ · 409", "–"], url:"https://www.elegua.fr", st:[], np:1, pg:"/fr/ecoles/salsa-con-elegua.html"},
+      {name:"VueltaSol", sc:[0, 0, 0, 21.0, 7.1, 0.0], fx:["5,0 ★ · 49", "–"], url:"https://vueltasol.com", st:[], np:1, pg:"/fr/ecoles/vueltasol.html"},
+      {name:"Bachata Vibe Paris", sc:[0, 0, 0, 18.0, 6.4, 0.0], fx:["4,8 ★ · 33", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bachata+Vibe+Paris+Paris", st:[], np:1, pg:"/fr/ecoles/bachata-vibe-paris.html"},
+      {name:"ÉCOLE DES DANSES LATINES ET TROPICALES", sc:[0, 0, 0, 19.4, 10.0, 0.0], fx:["4,7 ★ · 385", "–"], url:"https://salsadanse.com/", st:[], np:1, pg:"/fr/ecoles/ecole-des-danses-latines-et-tropicales.html"},
+      {name:"Bachata Paris Unighted Academie", sc:[0, 0, 0, 15.6, 3.5, 0.0], fx:["5,0 ★ · 6", "–"], url:"https://bachataunighted.com/", st:[], np:1, pg:"/fr/ecoles/bachata-paris-unighted-academie.html"},
+      {name:"Paris Bachatero — Cours de Bachata à Paris", sc:[0, 0, 0, 22.0, 7.7, 0.0], fx:["5,0 ★ · 71", "–"], url:"https://parisbachatero.com/", st:[], np:1, pg:"/fr/ecoles/paris-bachatero-cours-de-bachata-a-paris.html"},
+      {name:"MarieBSalsa", sc:[0, 0, 0, 21.7, 7.6, 0.0], fx:["5,0 ★ · 64", "–"], url:"https://mariebsalsa.com/", st:[], np:1, pg:"/fr/ecoles/mariebsalsa.html"},
+      {name:"Camilo", sc:[0, 0, 0, 20.3, 6.6, 0.0], fx:["5,0 ★ · 37", "–"], url:"https://www.google.com/maps/search/?api=1&query=Camilo+Paris", st:[], np:1, pg:"/fr/ecoles/camilo.html"},
+      {name:"SALSALIANZA _ STUDIO BLEU", sc:[0, 0, 0, 17.9, 7.4, 0.0], fx:["4,7 ★ · 59", "–"], url:"https://salsalianza.fr/", st:[], np:1, pg:"/fr/ecoles/salsalianza-studio-bleu.html"},
+      {name:"My Salsa Paris", sc:[0, 0, 0, 23.0, 8.7, 0.0], fx:["5,0 ★ · 120", "–"], url:"https://billetweb.fr/", st:[], np:1, pg:"/fr/ecoles/my-salsa-paris.html"},
+      {name:"Paris Bachata School", sc:[0, 0, 0, 17.3, 4.8, 0.0], fx:["5,0 ★ · 13", "–"], url:"https://parisbachataschool.fr/", st:[], np:1, pg:"/fr/ecoles/paris-bachata-school.html"},
+      {name:"Bachatamore", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://bachatamore.fr/", st:[], np:1, pg:"/fr/ecoles/bachatamore.html"},
+      {name:"Salsa Con Ti", sc:[0, 0, 0, 14.8, 4.5, 0.0], fx:["4,6 ★ · 11", "–"], url:"https://salsaconti.com/", st:[], np:1, pg:"/fr/ecoles/salsa-con-ti.html"},
+      {name:"Muevete! Salsa Paris", sc:[0, 0, 0, 16.4, 4.2, 0.0], fx:["5,0 ★ · 9", "–"], url:"https://muevete.fr/", st:[], np:1, pg:"/fr/ecoles/muevete-salsa-paris.html"},
+      {name:"SBK92 SALSA-BACHATA-KIZOMBA Tous Niveaux Cours C", sc:[0, 0, 0, 23.0, 8.7, 0.0], fx:["5,0 ★ · 123", "–"], url:"https://sbk92.com/", st:[], np:1, pg:"/fr/ecoles/sbk92-salsa-bachata-kizomba-tous-niveaux-cours-c.html"},
+      {name:"Calisabor", sc:[0, 0, 0, 17.9, 6.3, 0.0], fx:["4,8 ★ · 32", "–"], url:"https://calisabor.fr/", st:[], np:1, pg:"/fr/ecoles/calisabor.html"},
+      {name:"LatinFlow Dance School 17ème", sc:[0, 0, 0, 15.4, 5.5, 0.0], fx:["4,6 ★ · 20", "–"], url:"https://latinflow.fr/", st:[], np:1, pg:"/fr/ecoles/latinflow-dance-school-17eme.html"},
+      {name:"Para la Salsa", sc:[0, 0, 0, 19.7, 6.2, 0.0], fx:["5,0 ★ · 30", "–"], url:"https://paralasalsa.com/", st:[], np:1, pg:"/fr/ecoles/para-la-salsa.html"},
+      {name:"Camilo Cours de Bachata", sc:[0, 0, 0, 20.3, 6.6, 0.0], fx:["5,0 ★ · 37", "–"], url:"https://www.google.com/maps/search/?api=1&query=Camilo+Cours+de+Bachata+Paris", st:[], np:1, pg:"/fr/ecoles/camilo-cours-de-bachata.html"},
+      {name:"Mambo Salsa", sc:[0, 0, 0, 14.9, 5.9, 0.0], fx:["4,5 ★ · 25", "–"], url:"https://mambosalsa.fr/", st:[], np:1, pg:"/fr/ecoles/mambo-salsa.html"},
+      {name:"Cage Projets", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.helloasso.com/associations/cage-projets/evenements/bachata-2026-2027", st:[], np:1, un:1, pg:"/fr/ecoles/cage-projets.html"}
+    ],
+    "lyon": [
+      {name:"Lyon Salsa Bachata", sc:[0, 0, 0, 20.5, 7.6, 0.0], fx:["4,9 ★ · 65", "–"], url:"https://lyonsalsabachata.com", st:[], np:1, pg:"/fr/ecoles/lyon-salsa-bachata.html"},
+      {name:"Studio Dime Que Si", sc:[0, 0, 0, 18.2, 6.5, 0.0], fx:["4,8 ★ · 36", "–"], url:"https://www.dimequesi.fr", st:[], np:1, pg:"/fr/ecoles/studio-dime-que-si.html"},
+      {name:"Full Dance", sc:[0, 0, 0, 22.8, 8.5, 0.0], fx:["5,0 ★ · 109", "–"], url:"https://www.full-dance.com", st:[], np:1, pg:"/fr/ecoles/full-dance.html"},
+      {name:"Salsaddict", sc:[0, 0, 0, 15.8, 6.1, 0.0], fx:["4,6 ★ · 28", "–"], url:"https://www.salsaddict.fr", st:[], np:1, pg:"/fr/ecoles/salsaddict.html"},
+      {name:"Cindy Martin Danseuse", sc:[0, 0, 0, 23.8, 9.8, 0.0], fx:["5,0 ★ · 229", "–"], url:"https://danselyon.fr", st:[], np:1, pg:"/fr/ecoles/cindy-martin-danseuse.html"},
+      {name:"Salsa Hip Tap", sc:[0, 0, 0, 15.8, 5.0, 0.0], fx:["4,7 ★ · 15", "–"], url:"https://salsahiptap.com/", st:[], np:1, pg:"/fr/ecoles/salsa-hip-tap.html"}
+    ],
+    "marseille": [
+      {name:"Latin Wave", sc:[0, 0, 0, 18.8, 7.1, 0.0], fx:["4,8 ★ · 50", "–"], url:"https://www.latinwave.fr", st:[], np:1, pg:"/fr/ecoles/latin-wave.html"},
+      {name:"Marseille Danse Academy", sc:[0, 0, 0, 18.7, 8.7, 0.0], fx:["4,7 ★ · 122", "–"], url:"https://marseille-danse-academy.fr", st:[], np:1, pg:"/fr/ecoles/marseille-danse-academy.html"},
+      {name:"Latin Project", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 44", "–"], url:"https://www.latinproject.fr", st:[], np:1, pg:"/fr/ecoles/latin-project.html"},
+      {name:"Studio 2000", sc:[0, 0, 0, 19.1, 7.4, 0.0], fx:["4,8 ★ · 60", "–"], url:"https://studio-2000.net", st:[], np:1, pg:"/fr/ecoles/studio-2000.html"},
+      {name:"Salsamars", sc:[0, 0, 0, 21.9, 7.7, 0.0], fx:["5,0 ★ · 69", "–"], url:"https://www.salsamars.com", st:[], np:1, pg:"/fr/ecoles/salsamars.html"},
+      {name:"Salsa Sensation Marseille", sc:[0, 0, 0, 17.1, 5.6, 0.0], fx:["4,8 ★ · 21", "–"], url:"https://salsa-sensation-marseille.com/", st:[], np:1, pg:"/fr/ecoles/salsa-sensation-marseille.html"},
+      {name:"SALSA 13 EMOCION MARSEILLE", sc:[0, 0, 0, 20.3, 6.6, 0.0], fx:["5,0 ★ · 37", "–"], url:"https://salsa13emocion.com/", st:[], np:1, pg:"/fr/ecoles/salsa-13-emocion-marseille.html"},
+      {name:"Anwale", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://anwale.fr/", st:[], np:1, pg:"/fr/ecoles/anwale.html"},
+      {name:"Salsason", sc:[0, 0, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 39", "–"], url:"https://salsason.org/", st:[], np:1, pg:"/fr/ecoles/salsason.html"},
+      {name:"Mambocha", sc:[0, 0, 0, 19.3, 7.6, 0.0], fx:["4,8 ★ · 67", "–"], url:"https://mambocha.com/", st:[], np:1, pg:"/fr/ecoles/mambocha.html"}
+    ],
+    "toulouse": [
+      {name:"Latino Caliente", sc:[0, 0, 0, 14.1, 6.7, 0.0], fx:["4,4 ★ · 39", "–"], url:"https://www.latinocaliente.fr", st:[], np:1, pg:"/fr/ecoles/latino-caliente.html"},
+      {name:"Encas-Danses Studio", sc:[0, 0, 4, 22.6, 10.0, 0.0], fx:["4,9 ★ · 364", "–"], url:"https://www.encas-danses.com", st:[], np:1, pg:"/fr/ecoles/encas-danses-studio.html"},
+      {name:"PuntaTalon Academy", sc:[0, 0, 0, 19.6, 6.2, 0.0], fx:["5,0 ★ · 29", "–"], url:"https://www.puntatalonacademy.com", st:[], np:1, pg:"/fr/ecoles/puntatalon-academy.html"},
+      {name:"Salsatheque Toulouse", sc:[0, 0, 0, 14.7, 5.6, 0.0], fx:["4,5 ★ · 21", "–"], url:"https://studiodancefor2.com/", st:[], np:1, pg:"/fr/ecoles/salsatheque-toulouse.html"},
+      {name:"Latin'Clave", sc:[0, 0, 0, 15.7, 5.8, 0.0], fx:["4,6 ★ · 24", "–"], url:"https://latinclave.fr/", st:[], np:1, pg:"/fr/ecoles/latin-clave.html"},
+      {name:"SALSACOLOR association Cours de salsa cubaine/sa", sc:[0, 0, 0, 19.3, 6.0, 0.0], fx:["5,0 ★ · 26", "–"], url:"https://salsacolor.fr/", st:[], np:1, pg:"/fr/ecoles/salsacolor-association-cours-de-salsa-cubaine-sa.html"},
+      {name:"Âm Métis", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://danse-cours.com/", st:[], np:1, pg:"/fr/ecoles/am-metis.html"},
+      {name:"Amanda Bachata Toulouse", sc:[0, 0, 0, 20.9, 7.0, 0.0], fx:["5,0 ★ · 46", "–"], url:"https://amandadanse.com/", st:[], np:1, pg:"/fr/ecoles/amanda-bachata-toulouse.html"},
+      {name:"100 % Latino dance factory", sc:[0, 0, 0, 17.3, 4.8, 0.0], fx:["5,0 ★ · 13", "–"], url:"https://www.google.com/maps/search/?api=1&query=100+%+Latino+dance+factory+Toulouse", st:[], np:1, pg:"/fr/ecoles/100-latino-dance-factory.html"},
+      {name:"Swing & Latino", sc:[0, 0, 0, 15.5, 4.8, 0.0], fx:["4,7 ★ · 13", "–"], url:"https://swingetlatino.jimdofree.com/", st:[], np:1, pg:"/fr/ecoles/swing-latino.html"},
+      {name:"Soul Dance Studio Toulouse", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/fr/event/france/toulouse/soul-dance-studio-toulouse-weekly-salsa-bachata-classes/", st:[], np:1, un:1, pg:"/fr/ecoles/soul-dance-studio-toulouse.html"}
+    ],
+    "bordeaux": [
+      {name:"Republica Latina", sc:[0, 0, 0, 16.5, 4.6, 0.0], fx:["4,9 ★ · 12", "–"], url:"https://republicalatinafr.blogspot.com", st:[], np:1, pg:"/fr/ecoles/republica-latina.html"},
+      {name:"Free Salsa", sc:[0, 0, 0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 59", "–"], url:"https://freesalsa.fr/", st:[], np:1, pg:"/fr/ecoles/free-salsa.html"},
+      {name:"Salsaderue bordeaux", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 41", "–"], url:"https://salsaderue.fr/", st:[], np:1, pg:"/fr/ecoles/salsaderue-bordeaux.html"},
+      {name:"Studio Mambo", sc:[0, 0, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://studio-mambo.fr/", st:[], np:1, pg:"/fr/ecoles/studio-mambo.html"},
+      {name:"Ecole de Danse de Salsa", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://salsawiths.com/", st:[], np:1, pg:"/fr/ecoles/ecole-de-danse-de-salsa.html"},
+      {name:"Havanastyle", sc:[0, 0, 0, 15.9, 3.8, 0.0], fx:["5,0 ★ · 7", "–"], url:"https://havanastyleasso.fr/", st:[], np:1, pg:"/fr/ecoles/havanastyle.html"},
+      {name:"Salsa Academy", sc:[0, 0, 0, 16.2, 4.3, 0.0], fx:["4,9 ★ · 10", "–"], url:"https://salsa-academy.com/", st:[], np:1, pg:"/fr/ecoles/salsa-academy.html"},
+      {name:"AM'Latine", sc:[0, 0, 0, 18.6, 6.1, 0.0], fx:["4,9 ★ · 28", "–"], url:"https://amlatine.com/", st:[], np:1, pg:"/fr/ecoles/am-latine.html"},
+      {name:"Corazon Bachata Studio", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.helloasso.com/associations/corazon-bachata-studio", st:[], np:1, un:1, pg:"/fr/ecoles/corazon-bachata-studio.html"}
+    ],
+    "strasbourg": [
+      {name:"Bachata Fusion Strasbourg", sc:[0, 0, 0, 23.8, 9.7, 0.0], fx:["5,0 ★ · 211", "–"], url:"https://www.bachatafusionstrasbourg.fr", st:[], np:1, pg:"/fr/ecoles/bachata-fusion-strasbourg.html"},
+      {name:"Momoa Bachata", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 42", "–"], url:"https://www.strasbourgbachata.com", st:[], np:1, pg:"/fr/ecoles/momoa-bachata.html"},
+      {name:"Bachata Club Strasbourg", sc:[0, 0, 0, 16.4, 4.2, 0.0], fx:["5,0 ★ · 9", "–"], url:"https://www.bachataclub.fr", st:[], np:1, pg:"/fr/ecoles/bachata-club-strasbourg.html"},
+      {name:"Salsa Loca", sc:[0, 0, 0, 19.3, 6.6, 0.0], fx:["4,9 ★ · 37", "–"], url:"https://salsaloca.fr/", st:[], np:1, pg:"/fr/ecoles/salsa-loca.html"},
+      {name:"SauceCubaine", sc:[0, 0, 0, 21.7, 7.5, 0.0], fx:["5,0 ★ · 63", "–"], url:"https://saucecubaine.fr/", st:[], np:1, pg:"/fr/ecoles/saucecubaine.html"},
+      {name:"Bachata Connection Studio Strasbourg", sc:[0, 0, 0, 18.0, 5.2, 0.0], fx:["5,0 ★ · 17", "–"], url:"https://sites.google.com/", st:[], np:1, pg:"/fr/ecoles/bachata-connection-studio-strasbourg.html"},
+      {name:"Ecole de Bachata", sc:[0, 0, 0, 19.5, 6.1, 0.0], fx:["5,0 ★ · 28", "–"], url:"https://danse-bachata-strasbourg.fr/", st:[], np:1, pg:"/fr/ecoles/ecole-de-bachata.html"},
+      {name:"AHINAMA SALSA STRASBOURG", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://ahinama.fr/", st:[], np:1, pg:"/fr/ecoles/ahinama-salsa-strasbourg.html"},
+      {name:"Salsa Guarachando Strasbourg", sc:[0, 0, 0, 20.5, 6.7, 0.0], fx:["5,0 ★ · 40", "–"], url:"https://salsa-guarachando.fr/", st:[], np:1, pg:"/fr/ecoles/salsa-guarachando-strasbourg.html"},
+      {name:"Bachata Connection Studio", sc:[0, 0, 0, 18.0, 5.2, 0.0], fx:["5,0 ★ · 17", "–"], url:"https://sites.google.com/", st:[], np:1, pg:"/fr/ecoles/bachata-connection-studio.html"}
+    ],
+    "montpellier": [
+      {name:"Ritmo Loco", sc:[0, 0, 0, 20.4, 7.5, 0.0], fx:["4,9 ★ · 63", "–"], url:"https://www.ritmoloco.fr", st:[], np:1, pg:"/fr/ecoles/ritmo-loco.html"},
+      {name:"Alma Dance", sc:[0, 0, 0, 22.2, 9.6, 0.0], fx:["4,9 ★ · 205", "–"], url:"https://www.almadance.fr", st:[], np:1, pg:"/fr/ecoles/alma-dance.html"},
+      {name:"Urban Latino Dance Studio", sc:[0, 0, 0, 22.0, 9.4, 0.0], fx:["4,9 ★ · 175", "–"], url:"https://urbanlatinoacademy.com", st:[], np:1, pg:"/fr/ecoles/urban-latino-dance-studio.html"},
+      {name:"MISTICA Salsa Academy", sc:[0, 0, 0, 21.2, 7.2, 0.0], fx:["5,0 ★ · 52", "–"], url:"https://salsamistica.com/", st:[], np:1, pg:"/fr/ecoles/mistica-salsa-academy.html"},
+      {name:"École de Danse Bachata Montpellier", sc:[0, 0, 0, 20.1, 6.5, 0.0], fx:["5,0 ★ · 35", "–"], url:"https://www.google.com/maps/search/?api=1&query=École+de+Danse+Bachata+Montpellier+Montpellier", st:[], np:1, pg:"/fr/ecoles/ecole-de-danse-bachata-montpellier.html"},
+      {name:"World Dance&Sport Club Montpellier", sc:[0, 0, 0, 19.5, 6.1, 0.0], fx:["5,0 ★ · 28", "–"], url:"https://jasminsicard.fr/", st:[], np:1, pg:"/fr/ecoles/world-dance-sport-club-montpellier.html"},
+      {name:"Salsa Flubb", sc:[0, 0, 0, 22.3, 8.1, 0.0], fx:["5,0 ★ · 85", "–"], url:"https://salsa-flubb.com/", st:[], np:1, pg:"/fr/ecoles/salsa-flubb.html"},
+      {name:"AbonDanse Bachata", sc:[0, 0, 0, 20.1, 6.5, 0.0], fx:["5,0 ★ · 35", "–"], url:"https://www.google.com/maps/search/?api=1&query=AbonDanse+Bachata+Montpellier", st:[], np:1, pg:"/fr/ecoles/abondanse-bachata.html"}
+    ],
+    "rennes": [
+      {name:"Salsolyk's Dance Company", sc:[0, 0, 0, 14.7, 3.2, 0.0], fx:["4,8 ★ · 5", "–"], url:"https://www.salsolyk.com", st:[], np:1, pg:"/fr/ecoles/salsolyk-s-dance-company.html"},
+      {name:"Bailasi Rennes", sc:[0, 0, 0, 17.5, 4.9, 0.0], fx:["5,0 ★ · 14", "–"], url:"https://www.bailasi.fr", st:[], np:1, pg:"/fr/ecoles/bailasi-rennes.html"},
+      {name:"Los Loquitos de la Salsa", sc:[0, 0, 0, 15.5, 3.8, 0.0], fx:["4,9 ★ · 7", "–"], url:"https://losloquitos.com/", st:[], np:1, pg:"/fr/ecoles/los-loquitos-de-la-salsa.html"},
+      {name:"Qué Rico Mambo", sc:[0, 0, 0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 55", "–"], url:"https://quericomambo.fr/", st:[], np:1, pg:"/fr/ecoles/que-rico-mambo.html"}
+    ],
+    "grenoble": [
+      {name:"Kosta Danse", sc:[0, 0, 0, 19.3, 10.0, 0.0], fx:["4,7 ★ · 252", "–"], url:"https://www.ecole-kosta-danse.fr", st:[], np:1, pg:"/fr/ecoles/kosta-danse.html"},
+      {name:"Studio Garlisi", sc:[0, 0, 0, 20.9, 10.0, 0.0], fx:["4,8 ★ · 290", "–"], url:"https://www.studio-garlisi.fr", st:[], np:1, pg:"/fr/ecoles/studio-garlisi.html"},
+      {name:"Centre de Danse Salsa Grenoble", sc:[0, 0, 0, 14.1, 6.5, 0.0], fx:["4,4 ★ · 35", "–"], url:"https://salsa-grenoble.fr/", st:[], np:1, pg:"/fr/ecoles/centre-de-danse-salsa-grenoble.html"},
+      {name:"Danse avec moi salsa Grenoble", sc:[0, 0, 0, 18.5, 5.5, 0.0], fx:["5,0 ★ · 20", "–"], url:"https://anthoniofernandezdanse.com/", st:[], np:1, pg:"/fr/ecoles/danse-avec-moi-salsa-grenoble.html"}
+    ],
+    "nice": [
+      {name:"Salsa Nice", sc:[0, 0, 0, 13.1, 6.4, 0.0], fx:["4,3 ★ · 34", "–"], url:"https://salsa-nice.fr/", st:[], np:1, pg:"/fr/ecoles/salsa-nice.html"}
+    ],
+    "nantes": [
+      {name:"Latin Groove", sc:[0, 0, 0, 23.0, 8.7, 0.0], fx:["5,0 ★ · 119", "–"], url:"https://salsa-nantes.fr/", st:[], np:1, pg:"/fr/ecoles/latin-groove.html"},
+      {name:"Ritmo Social Club", sc:[0, 0, 0, 18.4, 5.4, 0.0], fx:["5,0 ★ · 19", "–"], url:"https://ritmosocialclub-salsa-bachata-nantes.fr/", st:[], np:1, pg:"/fr/ecoles/ritmo-social-club.html"},
+      {name:"Shiny Clave", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://shinyclave.fr/", st:[], np:1, pg:"/fr/ecoles/shiny-clave.html"},
+      {name:"Feeling Mambo", sc:[0, 0, 0, 18.4, 5.4, 0.0], fx:["5,0 ★ · 19", "–"], url:"https://feelingmambo.com/", st:[], np:1, pg:"/fr/ecoles/feeling-mambo.html"},
+      {name:"Latin'Dance Nantes", sc:[0, 0, 0, 16.9, 4.9, 0.0], fx:["4,9 ★ · 14", "–"], url:"https://latindance.fr/", st:[], np:1, pg:"/fr/ecoles/latin-dance-nantes.html"},
+      {name:"Salsa En Su Casa", sc:[0, 0, 0, 12.6, 4.8, 0.0], fx:["4,2 ★ · 13", "–"], url:"https://salsacasa.com/", st:[], np:1, pg:"/fr/ecoles/salsa-en-su-casa.html"},
+      {name:"Sensations Latines", sc:[0, 0, 0, 16.4, 4.2, 0.0], fx:["5,0 ★ · 9", "–"], url:"https://www.google.com/maps/search/?api=1&query=Sensations+Latines+Nantes", st:[], np:1, pg:"/fr/ecoles/sensations-latines.html"},
+      {name:"GAMA BACHATA", sc:[0, 0, 0, 17.7, 5.0, 0.0], fx:["5,0 ★ · 15", "–"], url:"https://gamabachata-nantes.my.canva.site/", st:[], np:1, pg:"/fr/ecoles/gama-bachata.html"},
+      {name:"Bailar Latino à Nantes", sc:[0, 0, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://bailarlatino.fr/", st:[], np:1, pg:"/fr/ecoles/bailar-latino-a-nantes.html"},
+      {name:"Calle de la salsa", sc:[0, 0, 0, 14.9, 3.5, 0.0], fx:["4,8 ★ · 6", "–"], url:"https://calledelasalsa.fr/", st:[], np:1, pg:"/fr/ecoles/calle-de-la-salsa.html"}
+    ],
+    "lille": [
+      {name:"Salsa Picante", sc:[0, 0, 0, 15.5, 7.5, 0.0], fx:["4,5 ★ · 61", "–"], url:"https://salsa-picante.fr/", st:[], np:1, pg:"/fr/ecoles/salsa-picante.html"},
+      {name:"Sabor Latino", sc:[0, 0, 0, 13.5, 3.2, 0.0], fx:["4,4 ★ · 5", "–"], url:"https://saborlatino-lille.fr/", st:[], np:1, pg:"/fr/ecoles/sabor-latino.html"}
+    ],
+    "toulon": [
+      {name:"Salsa Conga", sc:[0, 0, 0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 114", "–"], url:"https://salsaconga.odoo.com/", st:[], np:1, pg:"/fr/ecoles/salsa-conga.html"},
+      {name:"LATIN'ALMA. Cours Salsa-Bachata-Kizomba à La Gar", sc:[0, 0, 0, 19.4, 6.0, 0.0], fx:["5,0 ★ · 27", "–"], url:"https://latinalma.fr/", st:[], np:1, pg:"/fr/ecoles/latin-alma-cours-salsa-bachata-kizomba-a-la-gar.html"}
+    ],
+    "dijon": [
+      {name:"STUDIO 16 by Salsa Emocion", sc:[0, 0, 0, 23.8, 9.8, 0.0], fx:["5,0 ★ · 228", "–"], url:"https://studio16dijon.fr/", st:[], np:1, pg:"/fr/ecoles/studio-16-by-salsa-emocion.html"},
+      {name:"SALSA DIJON Union Latina", sc:[0, 0, 0, 15.7, 4.0, 0.0], fx:["4,9 ★ · 8", "–"], url:"https://www.google.com/maps/search/?api=1&query=SALSA+DIJON+Union+Latina+Dijon", st:[], np:1, pg:"/fr/ecoles/salsa-dijon-union-latina.html"}
+    ],
+    "angers": [
+      {name:"Baila con Amigos", sc:[0, 0, 0, 19.3, 7.6, 0.0], fx:["4,8 ★ · 66", "–"], url:"https://bailaconamigos.com/", st:[], np:1, pg:"/fr/ecoles/baila-con-amigos.html"}
+    ],
+    "nimes": [
+      {name:"Ahi nama salsa cubaine", sc:[0, 0, 0, 17.7, 6.1, 0.0], fx:["4,8 ★ · 28", "–"], url:"https://www.google.com/maps/search/?api=1&query=Ahi+nama+salsa+cubaine+Nîmes", st:[], np:1, pg:"/fr/ecoles/ahi-nama-salsa-cubaine.html"}
+    ],
+    "clermont-ferrand": [
+      {name:"U SHINE Clermont-Ferrand", sc:[0, 0, 0, 19.4, 6.0, 0.0], fx:["5,0 ★ · 27", "–"], url:"https://www.google.com/maps/search/?api=1&query=U+SHINE+Clermont-Ferrand+Clermont-Ferrand", st:[], np:1, pg:"/fr/ecoles/u-shine-clermont-ferrand.html"}
+    ],
+    "aix-en-provence": [
+      {name:"Just Latino", sc:[0, 0, 0, 15.6, 3.5, 0.0], fx:["5,0 ★ · 6", "–"], url:"https://justlatino.net/", st:[], np:1, pg:"/fr/ecoles/just-latino.html"},
+      {name:"Latina Way", sc:[0, 0, 0, 16.0, 4.6, 0.0], fx:["4,8 ★ · 12", "–"], url:"https://latinaway.fr/", st:[], np:1, pg:"/fr/ecoles/latina-way.html"}
+    ],
+    "brest": [
+      {name:"Brest Salsa Academy", sc:[0, 0, 0, 20.4, 6.6, 0.0], fx:["5,0 ★ · 38", "–"], url:"https://salsa-brest.fr/", st:[], np:1, pg:"/fr/ecoles/brest-salsa-academy.html"},
+      {name:"Tumbao Bachata Brest", sc:[0, 0, 0, 18.8, 5.7, 0.0], fx:["5,0 ★ · 22", "–"], url:"https://tumbaobrest.fr/", st:[], np:1, pg:"/fr/ecoles/tumbao-bachata-brest.html"}
+    ],
+    "tours": [
+      {name:"Guillaume Bachateo", sc:[0, 0, 0, 21.1, 7.1, 0.0], fx:["5,0 ★ · 50", "–"], url:"https://bachateo.fr/", st:[], np:1, pg:"/fr/ecoles/guillaume-bachateo.html"},
+      {name:"Salsa rica association", sc:[0, 0, 0, 16.1, 4.8, 0.0], fx:["4,8 ★ · 13", "–"], url:"https://salsarica.fr/", st:[], np:1, pg:"/fr/ecoles/salsa-rica-association.html"}
+    ],
+    "amiens": [
+      {name:"Association Casa Latina", sc:[0, 0, 0, 17.2, 6.6, 0.0], fx:["4,7 ★ · 38", "–"], url:"https://casa-latina.fr/", st:[], np:1, pg:"/fr/ecoles/association-casa-latina.html"}
+    ],
+    "annecy": [
+      {name:"Annecy Bachata", sc:[0, 0, 0, 16.8, 6.2, 0.0], fx:["4,7 ★ · 29", "–"], url:"https://annecybachata.com/", st:[], np:1, pg:"/fr/ecoles/annecy-bachata.html"},
+      {name:"KiZYA", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://kizya-annecy-kizomba.fr/", st:[], np:1, pg:"/fr/ecoles/kizya.html"}
+    ],
+    "perpignan": [
+      {name:"DILE QUE SALSA", sc:[0, 0, 0, 15.8, 4.5, 0.0], fx:["4,8 ★ · 11", "–"], url:"https://dilequesalsa.com/", st:[], np:1, pg:"/fr/ecoles/dile-que-salsa.html"}
+    ],
+    "metz": [
+      {name:"Bachata Feeling Metz", sc:[0, 0, 0, 19.9, 6.3, 0.0], fx:["5,0 ★ · 32", "–"], url:"https://bachatafeelingmetz.fr/", st:[], np:1, pg:"/fr/ecoles/bachata-feeling-metz.html"},
+      {name:"Latin' Sensations By Jack.", sc:[0, 0, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 39", "–"], url:"https://www.google.com/maps/search/?api=1&query=Latin'+Sensations+By+Jack.+Metz", st:[], np:1, pg:"/fr/ecoles/latin-sensations-by-jack.html"}
+    ],
+    "besancon": [
+      {name:"Ange et Flo Salsafever Besançon", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 42", "–"], url:"https://angeetflo.com/", st:[], np:1, pg:"/fr/ecoles/ange-et-flo-salsafever-besancon.html"},
+      {name:"SALSAMOONDO", sc:[0, 0, 0, 14.7, 3.2, 0.0], fx:["4,8 ★ · 5", "–"], url:"https://www.google.com/maps/search/?api=1&query=SALSAMOONDO+Besançon", st:[], np:1, pg:"/fr/ecoles/salsamoondo.html"}
+    ],
+    "orleans": [
+      {name:"Ecole de danse DANZA CUBANA", sc:[0, 0, 0, 18.9, 7.2, 0.0], fx:["4,8 ★ · 52", "–"], url:"https://danzacubana.fr/", st:[], np:1, pg:"/fr/ecoles/ecole-de-danse-danza-cubana.html"}
+    ],
+    "caen": [
+      {name:"LE HANG'ART", sc:[0, 0, 0, 16.4, 7.0, 0.0], fx:["4,6 ★ · 47", "–"], url:"https://normandiesalsa.com/", st:[], np:1, pg:"/fr/ecoles/le-hang-art.html"}
+    ],
+    "poitiers": [
+      {name:"Mouv'toi", sc:[0, 0, 0, 19.4, 6.0, 0.0], fx:["5,0 ★ · 27", "–"], url:"https://mouvtoi.fr/", st:[], np:1, pg:"/fr/ecoles/mouv-toi.html"},
+      {name:"Yepadance", sc:[0, 0, 0, 17.6, 5.4, 0.0], fx:["4,9 ★ · 19", "–"], url:"https://yepadance.jimdofree.com/", st:[], np:1, pg:"/fr/ecoles/yepadance.html"}
+    ],
+    "pau": [
+      {name:"Pau Bachata Dance", sc:[0, 0, 0, 23.2, 8.9, 0.0], fx:["5,0 ★ · 138", "–"], url:"https://paubachatadance.fr/", st:[], np:1, pg:"/fr/ecoles/pau-bachata-dance.html"},
+      {name:"LS Bachata Dance Studio", sc:[0, 0, 0, 16.4, 4.2, 0.0], fx:["5,0 ★ · 9", "–"], url:"https://www.google.com/maps/search/?api=1&query=LS+Bachata+Dance+Studio+Pau", st:[], np:1, pg:"/fr/ecoles/ls-bachata-dance-studio.html"},
+      {name:"Herencia Dance Experience", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://herenciadance.fr/", st:[], np:1, pg:"/fr/ecoles/herencia-dance-experience.html"},
+      {name:"Studio Latin'Amor", sc:[0, 0, 0, 15.9, 5.1, 0.0], fx:["4,7 ★ · 16", "–"], url:"https://latinamor-salsa.fr/", st:[], np:1, pg:"/fr/ecoles/studio-latin-amor.html"}
+    ],
+    "la-rochelle": [
+      {name:"Salsa Pimente", sc:[0, 0, 0, 16.9, 7.8, 0.0], fx:["4,6 ★ · 73", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+Pimente+La+Rochelle", st:[], np:1, pg:"/fr/ecoles/salsa-pimente.html"},
+      {name:"Danza Latina La Rochelle", sc:[0, 0, 0, 15.3, 3.2, 0.0], fx:["5,0 ★ · 5", "–"], url:"https://www.google.com/maps/search/?api=1&query=Danza+Latina+La+Rochelle+La+Rochelle", st:[], np:1, pg:"/fr/ecoles/danza-latina-la-rochelle.html"},
+      {name:"Afro Latina Roxane et Corentin Kizomba / Bachata", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://afrolatina.fr/", st:[], np:1, pg:"/fr/ecoles/afro-latina-roxane-et-corentin-kizomba-bachata.html"}
+    ],
+    "cannes": [
+      {name:"Estrella Dance (Salsa, Bachata)", sc:[0, 0, 0, 19.3, 6.0, 0.0], fx:["5,0 ★ · 26", "–"], url:"https://estrella-dance.com/", st:[], np:1, pg:"/fr/ecoles/estrella-dance-salsa-bachata.html"},
+      {name:"Latin Xperience Events", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://latinxperienceevents.fr/", st:[], np:1, pg:"/fr/ecoles/latin-xperience-events.html"}
+    ],
+    "antibes": [
+      {name:"SBK06 Latin Dance School Antibes", sc:[0, 0, 0, 14.6, 5.3, 0.0], fx:["4,5 ★ · 18", "–"], url:"https://sbk06.com/", st:[], np:1, pg:"/fr/ecoles/sbk06-latin-dance-school-antibes.html"}
+    ],
+    "bayonne": [
+      {name:"Association Salsa Timbayonne", sc:[0, 0, 0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 59", "–"], url:"https://timbayonne.com/", st:[], np:1, pg:"/fr/ecoles/association-salsa-timbayonne.html"},
+      {name:"CUBANAMA STUDIO", sc:[0, 0, 0, 13.9, 5.5, 0.0], fx:["4,4 ★ · 20", "–"], url:"https://cubanamadanse.com/", st:[], np:1, pg:"/fr/ecoles/cubanama-studio.html"}
+    ],
+    "valence": [
+      {name:"Latin'addiction Danses et Fitness", sc:[0, 0, 0, 19.6, 8.0, 0.0], fx:["4,8 ★ · 81", "–"], url:"https://latinaddiction.fr/", st:[], np:1, pg:"/fr/ecoles/latin-addiction-danses-et-fitness.html"},
+      {name:"Le Bailando Valence", sc:[0, 0, 0, 18.6, 5.6, 0.0], fx:["5,0 ★ · 21", "–"], url:"https://lebailando.com/", st:[], np:1, pg:"/fr/ecoles/le-bailando-valence.html"}
+    ],
+    "troyes": [
+      {name:"Latinea", sc:[0, 0, 0, 16.4, 4.2, 0.0], fx:["5,0 ★ · 9", "–"], url:"https://latinea.fr/", st:[], np:1, pg:"/fr/ecoles/latinea.html"}
+    ],
+    "quimper": [
+      {name:"Loéma Bachata", sc:[0, 0, 0, 18.6, 5.6, 0.0], fx:["5,0 ★ · 21", "–"], url:"https://www.google.com/maps/search/?api=1&query=Loéma+Bachata+Quimper", st:[], np:1, pg:"/fr/ecoles/loema-bachata.html"},
+      {name:"Kemp Latino Rock", sc:[0, 0, 0, 18.8, 6.3, 0.0], fx:["4,9 ★ · 31", "–"], url:"https://kempdanse.fr/", st:[], np:1, pg:"/fr/ecoles/kemp-latino-rock.html"},
+      {name:"SALSADERUE", sc:[0, 0, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://salsaderue.fr/", st:[], np:1, pg:"/fr/ecoles/salsaderue.html"}
+    ],
+    "boulogne-billancourt": [
+      {name:"Soy Cuba Salsa", sc:[0, 0, 0, 19.0, 6.4, 0.0], fx:["4,9 ★ · 33", "–"], url:"https://soy-cuba.fr/", st:[], np:1, pg:"/fr/ecoles/soy-cuba-salsa.html"}
+    ],
+    "vannes": [
+      {name:"Bachata Passion 56", sc:[0, 0, 0, 18.5, 5.5, 0.0], fx:["5,0 ★ · 20", "–"], url:"https://bachatapassion56.sportsregions.fr/", st:[], np:1, pg:"/fr/ecoles/bachata-passion-56.html"}
+    ],
+    "beziers": [
+      {name:"Manuela salsa", sc:[0, 0, 0, 13.2, 4.6, 0.0], fx:["4,3 ★ · 12", "–"], url:"https://www.google.com/maps/search/?api=1&query=Manuela+salsa+Béziers", st:[], np:1, pg:"/fr/ecoles/manuela-salsa.html"},
+      {name:"Sandrine Skiz Kizomba et danse orientale", sc:[0, 0, 0, 17.5, 5.3, 0.0], fx:["4,9 ★ · 18", "–"], url:"https://www.google.com/maps/search/?api=1&query=Sandrine+Skiz+Kizomba+et+danse+orientale+Béziers", st:[], np:1, pg:"/fr/ecoles/sandrine-skiz-kizomba-et-danse-orientale.html"}
+    ],
+    "merignac": [
+      {name:"L'Atelier Danse Club", sc:[0, 8, 7, 16.3, 10.0, 0.0], fx:["4,5 ★ · 506", "–"], url:"https://latelierdanseclub.com/", st:[], np:1, pg:"/fr/ecoles/l-atelier-danse-club.html"}
+    ],
+    "rouen": [
+      {name:"La Descarga", sc:[0, 0, 0, 20.7, 7.7, 0.0], fx:["4,9 ★ · 70", "–"], url:"https://ladescarga.fr/", st:[], np:1, pg:"/fr/ecoles/la-descarga.html"}
+    ],
+    "saint-etienne": [
+      {name:"Studio 7", sc:[0, 8, 4, 24.3, 10.0, 0.0], fx:["5,0 ★ · 403", "–"], url:"https://studio7dancecomplexe.com/", st:[], np:1, pg:"/fr/ecoles/studio-7.html"},
+      {name:"Temponoi", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://temponoi.com/", st:[], np:1, pg:"/fr/ecoles/temponoi.html"}
+    ],
+    "limoges": [
+      {name:"Timbacaraibes", sc:[0, 0, 0, 14.8, 4.5, 0.0], fx:["4,6 ★ · 11", "–"], url:"https://timbacaraibes.fr/", st:[], np:1, pg:"/fr/ecoles/timbacaraibes.html"},
+      {name:"Vibrations Corporelles et Culturelles", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.helloasso.com/associations/vibrations-corporelles-et-culturelles", st:[], np:1, un:1, pg:"/fr/ecoles/vibrations-corporelles-et-culturelles.html"}
+    ],
+    "avignon": [
+      {name:"Dance Center Richard Amar", sc:[0, 0, 0, 21.2, 8.3, 0.0], fx:["4,9 ★ · 97", "–"], url:"https://danse-avignon.fr/", st:[], np:1, pg:"/fr/ecoles/dance-center-richard-amar.html"},
+      {name:"Asso Le Tempo", sc:[0, 0, 0, 20.5, 6.7, 0.0], fx:["5,0 ★ · 40", "–"], url:"https://assotempo.com/", st:[], np:1, pg:"/fr/ecoles/asso-le-tempo.html"}
+    ],
+    "le-havre": [
+      {name:"Prevel Swing Danse Studio", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 41", "–"], url:"https://prevelswingdanse.fr/", st:[], np:1, pg:"/fr/ecoles/prevel-swing-danse-studio.html"}
+    ],
+    "mennecy": [
+      {name:"Latino Caminando", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.helloasso.com/associations/latino-caminando", st:[], np:1, un:1, pg:"/fr/ecoles/latino-caminando.html"}
+    ],
+    "portet-sur-garonne": [
+      {name:"La Candela", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.helloasso.com/associations/la-candela", st:[], np:1, un:1, pg:"/fr/ecoles/la-candela.html"}
+    ],
+    "niort": [
+      {name:"Y'A'K'DANSE'C", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.helloasso.com/associations/y-a-k-danse-c", st:[], np:1, un:1, pg:"/fr/ecoles/y-a-k-danse-c.html"}
+    ],
+    "l-aigle": [
+      {name:"MJC Le Rond-Point", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.helloasso.com/associations/mjc-le-rond-point/adhesions/duo-salsa-et-bachata-2026-2027", st:[], np:1, un:1, pg:"/fr/ecoles/mjc-le-rond-point.html"}
+    ],
+    "bressuire": [
+      {name:"Salsa Bressuire", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.helloasso.com/associations/salsa-bressuire", st:[], np:1, un:1, pg:"/fr/ecoles/salsa-bressuire.html"}
+    ],
+    "conflans-sainte-honorine": [
+      {name:"Julian Teran Production", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.helloasso.com/associations/julian-teran-production", st:[], np:1, un:1, pg:"/fr/ecoles/julian-teran-production.html"}
+    ],
+    "thoiry": [
+      {name:"Los Diablitos", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.helloasso.com/associations/los-diablitos", st:[], np:1, un:1, pg:"/fr/ecoles/los-diablitos.html"}
+    ],
+    "colmar": [
+      {name:"Studio Danse Colmar", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://studio-danse.fr/horaires-tarifs/", st:[], np:1, un:1, pg:"/fr/ecoles/studio-danse-colmar.html"},
+      {name:"MJC Colmar", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/fr/event/france/colmar/puerto-rican-salsa-and-bachata-classes-at-mjc-colmar/", st:[], np:1, un:1, pg:"/fr/ecoles/mjc-colmar.html"}
+    ],
+    "nancy": [
+      {name:"Yog Touch Nancy", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.yog-touch.fr/salsa-bachata/", st:[], np:1, un:1, pg:"/fr/ecoles/yog-touch-nancy.html"}
+    ],
+    "rodez": [
+      {name:"École de danse Nadège Cayron", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/fr/event/france/rodez/salsa-and-bachata-classes-at-ecole-nadege-cayron/", st:[], np:1, un:1, pg:"/fr/ecoles/ecole-de-danse-nadege-cayron.html"}
+    ],
+    "montauban": [
+      {name:"Coeur 2 Danse", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.tourisme-tarnetgaronne.fr/en/offers/sbk-evening-bachata-classes-montauban-en-5997446", st:[], np:1, un:1, pg:"/fr/ecoles/coeur-2-danse.html"}
+    ],
+    "ploeren": [
+      {name:"Asso Boom Latino", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.helloasso.com/associations/asso-boom-latino/evenements/cours-de-danses-latines", st:[], np:1, un:1, pg:"/fr/ecoles/asso-boom-latino.html"}
+    ],
+    "aubagne": [
+      {name:"Instant Danse", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.helloasso.com/associations/instant-danse", st:[], np:1, un:1, pg:"/fr/ecoles/instant-danse.html"}
+    ],
+    "la-ciotat": [
+      {name:"Elegancia Dance Studio", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.helloasso.com/associations/elegancia-dance-studio", st:[], np:1, un:1, pg:"/fr/ecoles/elegancia-dance-studio.html"}
+    ],
+    "pessac": [
+      {name:"LatinDance Academie", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://latindanceacademie.com", st:[], np:1, un:1, pg:"/fr/ecoles/latindance-academie.html"}
+    ],
+    "amsterdam": [
+      {name:"Salsa4Fun", sc:[0, 0, 0, 22.8, 8.5, 0.0], fx:["5,0 ★ · 107", "–"], url:"https://salsa4fun.com/", st:[], np:1, pg:"/nl/scholen/salsa4fun.html"},
+      {name:"Baila Bel Air", sc:[0, 0, 0, 17.5, 7.0, 0.0], fx:["4,7 ★ · 46", "–"], url:"http://www.bailabelair.nl/", st:[], np:1, pg:"/nl/scholen/baila-bel-air.html"},
+      {name:"Salsa District", sc:[0, 0, 0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 115", "–"], url:"https://www.salsadistrict.nl/", st:[], np:1, pg:"/nl/scholen/salsa-district.html"},
+      {name:"Onda Latin Dance", sc:[0, 0, 0, 19.4, 6.0, 0.0], fx:["5,0 ★ · 27", "–"], url:"https://ondadance.nl/", st:[], np:1, pg:"/nl/scholen/onda-latin-dance.html"},
+      {name:"Extremos Salsa & Bachata", sc:[0, 0, 0, 21.0, 10.0, 0.0], fx:["4,8 ★ · 333", "–"], url:"https://www.google.com/maps/search/?api=1&query=Extremos+Salsa+&+Bachata+Amsterdam", st:[], np:1, pg:"/nl/scholen/extremos-salsa-bachata.html"},
+      {name:"Salsa te Gusta", sc:[0, 8, 4, 24.3, 10.0, 0.0], fx:["5,0 ★ · 394", "–"], url:"https://salsategusta.com/", st:[], np:1, pg:"/nl/scholen/salsa-te-gusta.html"},
+      {name:"Punto Cubano Salsa Amsterdam", sc:[10, 10, 7, 22.7, 10.0, 0.0], fx:["4,9 ★ · 378", "–"], url:"https://puntocubano.nl/", st:[], np:1, pg:"/nl/scholen/punto-cubano-salsa-amsterdam.html"},
+      {name:"La Salsa Dansschool", sc:[0, 0, 0, 14.2, 7.3, 0.0], fx:["4,4 ★ · 55", "–"], url:"https://www.google.com/maps/search/?api=1&query=La+Salsa+Dansschool+Amsterdam", st:[], np:1, pg:"/nl/scholen/la-salsa-dansschool.html"},
+      {name:"Latin Art & Culture Amsterdam", sc:[0, 0, 0, 13.1, 7.7, 0.0], fx:["4,3 ★ · 69", "–"], url:"https://www.google.com/maps/search/?api=1&query=Latin+Art+&+Culture+Amsterdam+Amsterdam", st:[], np:1, pg:"/nl/scholen/latin-art-culture-amsterdam.html"},
+      {name:"SalsAmsterdam", sc:[0, 0, 0, 17.3, 5.2, 0.0], fx:["4,9 ★ · 17", "–"], url:"https://salsamsterdam.nl/", st:[], np:1, pg:"/nl/scholen/salsamsterdam.html"},
+      {name:"Salsaschool Sabroso", sc:[0, 0, 0, 17.0, 5.5, 0.0], fx:["4,8 ★ · 20", "–"], url:"https://sabroso.nl/", st:[], np:1, pg:"/nl/scholen/salsaschool-sabroso.html"},
+      {name:"THIAZ Salsa y Bachata", sc:[0, 0, 0, 19.7, 6.2, 0.0], fx:["5,0 ★ · 30", "–"], url:"https://thiaz.com/", st:[], np:1, pg:"/nl/scholen/thiaz-salsa-y-bachata.html"},
+      {name:"Sabor de Cuba", sc:[0, 0, 0, 19.7, 6.2, 0.0], fx:["5,0 ★ · 30", "–"], url:"https://sabordecuba.nl/", st:[], np:1, pg:"/nl/scholen/sabor-de-cuba.html"},
+      {name:"Ponche Cuban Dance", sc:[0, 0, 0, 21.9, 7.7, 0.0], fx:["5,0 ★ · 68", "–"], url:"https://ponchecubandance.nl/", st:[], np:1, pg:"/nl/scholen/ponche-cuban-dance.html"},
+      {name:"SalsaFactory", sc:[0, 0, 0, 17.2, 6.5, 0.0], fx:["4,7 ★ · 36", "–"], url:"https://salsafactory.nl/", st:[], np:1, pg:"/nl/scholen/salsafactory.html"}
+    ],
+    "rotterdam": [
+      {name:"Typical Tropical Events", sc:[0, 0, 0, 18.9, 7.2, 0.0], fx:["4,8 ★ · 53", "–"], url:"https://typicaltropical.nl/", st:[], np:1, pg:"/nl/scholen/typical-tropical-events.html"},
+      {name:"Latin Bootcamp", sc:[0, 0, 0, 21.3, 8.4, 0.0], fx:["4,9 ★ · 101", "–"], url:"https://latinbootcamp.nl/", st:[], np:1, pg:"/nl/scholen/latin-bootcamp.html"},
+      {name:"Dansschool MamboMike", sc:[0, 0, 0, 16.6, 5.2, 0.0], fx:["4,8 ★ · 17", "–"], url:"https://www.mambomike.nl/", st:[], np:1, pg:"/nl/scholen/dansschool-mambomike.html"},
+      {name:"Latin Supreme", sc:[0, 0, 0, 23.7, 9.6, 0.0], fx:["5,0 ★ · 200", "–"], url:"http://www.latinsupreme.nl/", st:[], np:1, pg:"/nl/scholen/latin-supreme.html"},
+      {name:"Salsadansschool SuriHarold", sc:[0, 0, 0, 20.6, 7.7, 0.0], fx:["4,9 ★ · 69", "–"], url:"http://www.suriharold4salsa.nl/", st:[], np:1, pg:"/nl/scholen/salsadansschool-suriharold.html"},
+      {name:"Salsability", sc:[0, 0, 0, 14.2, 6.9, 0.0], fx:["4,4 ★ · 45", "–"], url:"https://salsability.nl/", st:[], np:1, pg:"/nl/scholen/salsability.html"},
+      {name:"Salsa Caleña Netherlands", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://salsacalenanetherlands.nl/", st:[], np:1, pg:"/nl/scholen/salsa-calena-netherlands.html"}
+    ],
+    "utrecht": [
+      {name:"Union Dance Company", sc:[0, 0, 0, 18.6, 8.5, 0.0], fx:["4,7 ★ · 107", "–"], url:"http://www.unionsalsadancecompany.nl/", st:[], np:1, pg:"/nl/scholen/union-dance-company.html"},
+      {name:"Nova Dance Utrecht", sc:[0, 0, 0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 118", "–"], url:"https://www.novadance.nl/", st:[], np:1, pg:"/nl/scholen/nova-dance-utrecht.html"},
+      {name:"Bachata Passion Utrecht", sc:[0, 0, 0, 18.6, 5.6, 0.0], fx:["5,0 ★ · 21", "–"], url:"https://www.bachata-passion.com/utrecht", st:[], np:1, pg:"/nl/scholen/bachata-passion-utrecht.html"},
+      {name:"MUSIQUITA Dance Community", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 45", "–"], url:"https://musiquita.nl/", st:[], np:1, pg:"/nl/scholen/musiquita-dance-community.html"},
+      {name:"Salsachun", sc:[10, 8, 4, 17.8, 10.0, 0.0], fx:["4,6 ★ · 351", "–"], url:"https://salsachun.nl/", st:[], np:1, pg:"/nl/scholen/salsachun.html"},
+      {name:"Salsa Project", sc:[0, 0, 0, 19.2, 5.9, 0.0], fx:["5,0 ★ · 25", "–"], url:"https://salsaproject.nl/", st:[], np:1, pg:"/nl/scholen/salsa-project.html"},
+      {name:"Synergy Dance Academy", sc:[0, 0, 0, 20.9, 7.0, 0.0], fx:["5,0 ★ · 46", "–"], url:"https://synergydanceacademy.nl/", st:[], np:1, pg:"/nl/scholen/synergy-dance-academy.html"},
+      {name:"Latinavibes", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://latinavibes.nl/", st:[], np:1, pg:"/nl/scholen/latinavibes.html"}
+    ],
+    "denhaag": [
+      {name:"La Bodeguita", sc:[0, 0, 0, 17.4, 8.9, 0.0], fx:["4,6 ★ · 138", "–"], url:"http://www.labodeguita.nl/", st:[], np:1, pg:"/nl/scholen/la-bodeguita.html"},
+      {name:"Dansschool El Ritmo", sc:[0, 0, 0, 19.3, 6.0, 0.0], fx:["5,0 ★ · 26", "–"], url:"https://www.elritmo.nl/", st:[], np:1, pg:"/nl/scholen/dansschool-el-ritmo.html"},
+      {name:"Bachata Passion Den Haag", sc:[0, 0, 0, 21.6, 8.7, 0.0], fx:["4,9 ★ · 121", "–"], url:"http://www.bachata-passion.com/den-haag", st:[], np:1, pg:"/nl/scholen/bachata-passion-den-haag.html"},
+      {name:"Salsa Prisiri", sc:[0, 0, 0, 17.3, 5.8, 0.0], fx:["4,8 ★ · 23", "–"], url:"http://www.salsaprisiri.nl/", st:[], np:1, pg:"/nl/scholen/salsa-prisiri.html"},
+      {name:"Latin Soul Dance", sc:[0, 0, 0, 20.7, 7.8, 0.0], fx:["4,9 ★ · 73", "–"], url:"https://latinsouldance.com/", st:[], np:1, pg:"/nl/scholen/latin-soul-dance.html"},
+      {name:"Bachata Romantica", sc:[0, 0, 0, 21.4, 8.5, 0.0], fx:["4,9 ★ · 109", "–"], url:"https://bachata-romantica.com/", st:[], np:1, pg:"/nl/scholen/bachata-romantica.html"},
+      {name:"Cubania Den Haag", sc:[0, 0, 0, 18.6, 5.6, 0.0], fx:["5,0 ★ · 21", "–"], url:"https://cubania.nl/", st:[], np:1, pg:"/nl/scholen/cubania-den-haag.html"},
+      {name:"Oye Salsa", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://oye-salsa.nl/", st:[], np:1, pg:"/nl/scholen/oye-salsa.html"},
+      {name:"Salsaventura", sc:[0, 0, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 39", "–"], url:"https://sayahsalsa.nl/", st:[], np:1, pg:"/nl/scholen/salsaventura.html"}
+    ],
+    "eindhoven": [
+      {name:"The Latin Dance Studio", sc:[0, 0, 0, 19.5, 7.8, 0.0], fx:["4,8 ★ · 75", "–"], url:"https://www.thelatindancestudio.nl/", st:[], np:1, pg:"/nl/scholen/the-latin-dance-studio.html"},
+      {name:"Salsa Sensation Dansschool", sc:[0, 0, 0, 20.5, 7.6, 0.0], fx:["4,9 ★ · 65", "–"], url:"https://salsasensation.online/", st:[], np:1, pg:"/nl/scholen/salsa-sensation-dansschool.html"},
+      {name:"Passion2Dance", sc:[0, 0, 0, 20.6, 7.7, 0.0], fx:["4,9 ★ · 68", "–"], url:"https://www.passion2dance.nl/", st:[], np:1, pg:"/nl/scholen/passion2dance.html"},
+      {name:"Salsapati", sc:[0, 0, 0, 16.9, 5.4, 0.0], fx:["4,8 ★ · 19", "–"], url:"https://salsapati.nl/", st:[], np:1, pg:"/nl/scholen/salsapati.html"},
+      {name:"Urban Salsa", sc:[0, 0, 0, 17.2, 5.7, 0.0], fx:["4,8 ★ · 22", "–"], url:"https://urbansalsa.nl/", st:[], np:1, pg:"/nl/scholen/urban-salsa.html"}
+    ],
+    "groningen": [
+      {name:"Bachata Dansschool El Bachatero", sc:[0, 0, 0, 16.1, 4.0, 0.0], fx:["5,0 ★ · 8", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bachata+Dansschool+El+Bachatero+Groningen", st:[], np:1, pg:"/nl/scholen/bachata-dansschool-el-bachatero.html"},
+      {name:"Salsa Juan Carlos", sc:[0, 0, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 40", "–"], url:"https://salsajuancarlos.nl/", st:[], np:1, pg:"/nl/scholen/salsa-juan-carlos.html"},
+      {name:"Clavela Salsa Dance School", sc:[0, 0, 0, 16.6, 5.2, 0.0], fx:["4,8 ★ · 17", "–"], url:"https://www.google.com/maps/search/?api=1&query=Clavela+Salsa+Dance+School+Groningen", st:[], np:1, pg:"/nl/scholen/clavela-salsa-dance-school.html"},
+      {name:"MaisQ'Kizomba", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://kizombales.nl/", st:[], np:1, pg:"/nl/scholen/maisq-kizomba.html"}
+    ],
+    "tilburg": [
+      {name:"Latin Touch Dance Academy", sc:[0, 0, 0, 19.6, 6.2, 0.0], fx:["5,0 ★ · 29", "–"], url:"https://latintouch.nl/", st:[], np:1, pg:"/nl/scholen/latin-touch-dance-academy.html"},
+      {name:"Marlon Salsipuedes", sc:[0, 0, 0, 23.6, 9.4, 0.0], fx:["5,0 ★ · 177", "–"], url:"http://www.dansenintilburg.nl/", st:[], np:1, pg:"/nl/scholen/marlon-salsipuedes.html"},
+      {name:"Salsa Sensual Dance Company", sc:[0, 0, 0, 18.1, 5.8, 0.0], fx:["4,9 ★ · 23", "–"], url:"https://salsasensual.nl/", st:[], np:1, pg:"/nl/scholen/salsa-sensual-dance-company.html"},
+      {name:"Salsa Familia Dance Company", sc:[0, 0, 0, 19.4, 6.0, 0.0], fx:["5,0 ★ · 27", "–"], url:"https://salsafamilia.com/", st:[], np:1, pg:"/nl/scholen/salsa-familia-dance-company.html"}
+    ],
+    "breda": [
+      {name:"ZoukMotion", sc:[0, 0, 0, 12.4, 5.4, 0.0], fx:["4,2 ★ · 19", "–"], url:"https://www.zoukmotion.nl/", st:[], np:1, pg:"/nl/scholen/zoukmotion.html"},
+      {name:"Salsa in Breda", sc:[0, 0, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 39", "–"], url:"https://salsainbreda.nl/", st:[], np:1, pg:"/nl/scholen/salsa-in-breda.html"},
+      {name:"Latin Secrets", sc:[0, 0, 0, 20.1, 6.5, 0.0], fx:["5,0 ★ · 35", "–"], url:"https://latinsecrets.nl/", st:[], np:1, pg:"/nl/scholen/latin-secrets.html"},
+      {name:"Bailamos Latino", sc:[0, 0, 0, 16.0, 4.6, 0.0], fx:["4,8 ★ · 12", "–"], url:"https://bailamoslatino.nl/", st:[], np:1, pg:"/nl/scholen/bailamos-latino.html"}
+    ],
+    "nijmegen": [
+      {name:"Bachata Passion Nijmegen", sc:[0, 0, 0, 18.5, 5.5, 0.0], fx:["5,0 ★ · 20", "–"], url:"http://www.bachata-passion.com/nijmegen", st:[], np:1, pg:"/nl/scholen/bachata-passion-nijmegen.html"},
+      {name:"Amanné Caribisch Centrum", sc:[0, 0, 0, 18.7, 7.0, 0.0], fx:["4,8 ★ · 48", "–"], url:"https://amanne.nl/", st:[], np:1, pg:"/nl/scholen/amanne-caribisch-centrum.html"},
+      {name:"Salsa Tipica", sc:[0, 0, 0, 16.6, 5.9, 0.0], fx:["4,7 ★ · 25", "–"], url:"https://salsatipica.nl/", st:[], np:1, pg:"/nl/scholen/salsa-tipica.html"},
+      {name:"Fusion Latina", sc:[0, 0, 0, 20.0, 7.2, 0.0], fx:["4,9 ★ · 52", "–"], url:"https://fusionlatina.nl/", st:[], np:1, pg:"/nl/scholen/fusion-latina.html"}
+    ],
+    "arnhem": [
+      {name:"Watapana Dance Company", sc:[0, 0, 0, 22.2, 8.0, 0.0], fx:["5,0 ★ · 81", "–"], url:"https://watapanadc.com/", st:[], np:1, pg:"/nl/scholen/watapana-dance-company.html"},
+      {name:"Salsa Contigo", sc:[0, 0, 0, 21.9, 9.2, 0.0], fx:["4,9 ★ · 159", "–"], url:"https://www.salsacontigo.nl/", st:[], np:1, pg:"/nl/scholen/salsa-contigo.html"}
+    ],
+    "apeldoorn": [
+      {name:"Salsafever Apeldoorn", sc:[0, 0, 0, 17.1, 6.4, 0.0], fx:["4,7 ★ · 34", "–"], url:"https://salsafever-apeldoorn.nl/", st:[], np:1, pg:"/nl/scholen/salsafever-apeldoorn.html"}
+    ],
+    "haarlem": [
+      {name:"Ritmo Dance Academy", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 44", "–"], url:"https://ritmo-dance.com/", st:[], np:1, pg:"/nl/scholen/ritmo-dance-academy.html"}
+    ],
+    "enschede": [
+      {name:"Salsafever Enschede", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 45", "–"], url:"https://salsafever-enschede.nl/", st:[], np:1, pg:"/nl/scholen/salsafever-enschede.html"},
+      {name:"Salsafever Hengelo", sc:[0, 0, 0, 21.3, 7.3, 0.0], fx:["5,0 ★ · 54", "–"], url:"https://salsafever-hengelo.nl/", st:[], np:1, pg:"/nl/scholen/salsafever-hengelo.html"},
+      {name:"El Centro de la Salsa", sc:[0, 0, 0, 19.3, 6.6, 0.0], fx:["4,9 ★ · 37", "–"], url:"https://elcentro-delasalsa.nl/", st:[], np:1, pg:"/nl/scholen/el-centro-de-la-salsa.html"}
+    ],
+    "amersfoort": [
+      {name:"Salsamas", sc:[0, 0, 0, 17.6, 5.4, 0.0], fx:["4,9 ★ · 19", "–"], url:"https://salsamas.nl/", st:[], np:1, pg:"/nl/scholen/salsamas.html"}
+    ],
+    "den-bosch": [
+      {name:"Cubania Den Bosch", sc:[0, 0, 0, 18.1, 6.5, 0.0], fx:["4,8 ★ · 35", "–"], url:"https://cubania.nl/", st:[], np:1, pg:"/nl/scholen/cubania-den-bosch.html"},
+      {name:"Salsa LA", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://salsa-la.nl/", st:[], np:1, pg:"/nl/scholen/salsa-la.html"},
+      {name:"LatinJoy Dance Company", sc:[0, 0, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 39", "–"], url:"https://latinjoydancecompany.nl/", st:[], np:1, pg:"/nl/scholen/latinjoy-dance-company.html"}
+    ],
+    "zwolle": [
+      {name:"Descarga Salsa Zwolle", sc:[0, 0, 0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 114", "–"], url:"https://descargasalsa.nl/", st:[], np:1, pg:"/nl/scholen/descarga-salsa-zwolle.html"}
+    ],
+    "leiden": [
+      {name:"Dos Bailadores", sc:[0, 0, 0, 17.5, 6.9, 0.0], fx:["4,7 ★ · 44", "–"], url:"https://dosbailadores.nl/", st:[], np:1, pg:"/nl/scholen/dos-bailadores.html"}
+    ],
+    "maastricht": [
+      {name:"Salsa Brisa", sc:[0, 0, 0, 18.6, 6.1, 0.0], fx:["4,9 ★ · 28", "–"], url:"https://salsabrisa.nl/", st:[], np:1, pg:"/nl/scholen/salsa-brisa.html"}
+    ],
+    "delft": [
+      {name:"TotallyZouk & TotallyLatin", sc:[0, 0, 0, 17.7, 6.2, 0.0], fx:["4,8 ★ · 29", "–"], url:"https://totallyzouk.nl/", st:[], np:1, pg:"/nl/scholen/totallyzouk-totallylatin.html"}
+    ],
+    "deventer": [
+      {name:"Salsa Viva", sc:[0, 0, 0, 13.1, 5.8, 0.0], fx:["4,3 ★ · 24", "–"], url:"https://salsaviva.nl/", st:[], np:1, pg:"/nl/scholen/salsa-viva.html"}
+    ],
+    "amstelveen": [
+      {name:"Latin Breeze", sc:[0, 0, 0, 15.3, 6.9, 0.0], fx:["4,5 ★ · 45", "–"], url:"https://latinbreeze.nl/", st:[], np:1, pg:"/nl/scholen/latin-breeze.html"},
+      {name:"Bailarico", sc:[0, 0, 0, 17.5, 6.9, 0.0], fx:["4,7 ★ · 45", "–"], url:"https://bailarico.nl/", st:[], np:1, pg:"/nl/scholen/bailarico.html"}
+    ],
+    "almere": [
+      {name:"U Can Dance", sc:[0, 0, 0, 18.9, 6.3, 0.0], fx:["4,9 ★ · 32", "–"], url:"https://soofos.nl/", st:[], np:1, pg:"/nl/scholen/u-can-dance.html"}
+    ],
+    "zoetermeer": [
+      {name:"Salsaventura Zoetermeer", sc:[0, 0, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 39", "–"], url:"https://sayahsalsa.nl/", st:[], np:1, pg:"/nl/scholen/salsaventura-zoetermeer.html"}
+    ],
+    "alkmaar": [
+      {name:"Danscentrum De Bruijn Bonel", sc:[0, 0, 0, 21.7, 8.8, 0.0], fx:["4,9 ★ · 130", "–"], url:"https://debruijnbonel.nl/", st:[], np:1, pg:"/nl/scholen/danscentrum-de-bruijn-bonel.html"}
+    ],
+    "helmond": [
+      {name:"Dansschool Reniers", sc:[0, 0, 0, 17.1, 6.5, 0.0], fx:["4,7 ★ · 35", "–"], url:"https://dansschoolreniers.nl/", st:[], np:1, pg:"/nl/scholen/dansschool-reniers.html"}
+    ],
+    "emmen": [
+      {name:"Salsa Emmen", sc:[0, 0, 0, 15.2, 4.3, 0.0], fx:["4,7 ★ · 10", "–"], url:"https://salsainemmen.nl/", st:[], np:1, pg:"/nl/scholen/salsa-emmen.html"}
+    ],
+    "leeuwarden": [
+      {name:"NextDance", sc:[0, 0, 0, 21.0, 7.1, 0.0], fx:["5,0 ★ · 49", "–"], url:"https://nextdance.nl/", st:[], np:1, pg:"/nl/scholen/nextdance.html"},
+      {name:"Danssportcentrum Saco Velt", sc:[0, 0, 0, 16.9, 7.8, 0.0], fx:["4,6 ★ · 73", "–"], url:"https://sacovelt.nl/", st:[], np:1, pg:"/nl/scholen/danssportcentrum-saco-velt.html"},
+      {name:"Dance Centre Omar Smids", sc:[0, 0, 0, 18.3, 6.6, 0.0], fx:["4,8 ★ · 38", "–"], url:"https://omarsmids.nl/", st:[], np:1, pg:"/nl/scholen/dance-centre-omar-smids.html"},
+      {name:"Dance Company 058", sc:[0, 0, 0, 19.2, 7.6, 0.0], fx:["4,8 ★ · 64", "–"], url:"https://dc058.nl/", st:[], np:1, pg:"/nl/scholen/dance-company-058.html"}
+    ],
+    "gouda": [
+      {name:"Salsaventura Gouda", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://salsaventura.nl/", st:[], np:1, pg:"/nl/scholen/salsaventura-gouda.html"}
+    ],
+    "hilversum": [
+      {name:"Esencia Dance Studio", sc:[0, 0, 0, 19.2, 7.5, 0.0], fx:["4,8 ★ · 62", "–"], url:"https://esencia.nl/", st:[], np:1, pg:"/nl/scholen/esencia-dance-studio.html"}
+    ],
+    "london": [
+      {name:"Salsatropical Dance Company", sc:[10, 8, 7, 21.2, 10.0, 0.0], fx:["4,8 ★ · 507", "–"], url:"https://salsa-tropical.com/", st:[], np:1, pg:"/uk/schools/salsatropical-dance-company.html"},
+      {name:"Salsateca Dance School", sc:[0, 0, 0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 113", "–"], url:"http://www.salsateca.co.uk/", st:[], np:1, pg:"/uk/schools/salsateca-dance-school.html"},
+      {name:"Rhythm & Vibes Dance Co", sc:[0, 0, 0, 16.6, 7.2, 0.0], fx:["4,6 ★ · 53", "–"], url:"https://rvdance.co.uk/events-and-dates/kizomba-party-in-london/", st:[], np:1, pg:"/uk/schools/rhythm-vibes-dance-co.html"},
+      {name:"Hammersmith Salsa & Bachata Club", sc:[0, 0, 0, 22.3, 9.9, 0.0], fx:["4,9 ★ · 239", "–"], url:"https://www.incognitodance.com/wednesdays-at-hammersmith-salsa-club-hammersmith-london/", st:[], np:1, pg:"/uk/schools/hammersmith-salsa-bachata-club.html"},
+      {name:"Pura Nights Ealing", sc:[0, 0, 0, 23.2, 8.9, 0.0], fx:["5,0 ★ · 137", "–"], url:"https://linktr.ee/pura.nights", st:[], np:1, pg:"/uk/schools/pura-nights-ealing.html"},
+      {name:"Caramelo Latin Dance Academy", sc:[0, 0, 0, 18.8, 8.9, 0.0], fx:["4,7 ★ · 136", "–"], url:"https://caramelolatindance.co.uk/", st:[], np:1, pg:"/uk/schools/caramelo-latin-dance-academy.html"},
+      {name:"Rogue Bachata", sc:[0, 0, 0, 15.7, 4.0, 0.0], fx:["4,9 ★ · 8", "–"], url:"https://roguebachata.com/", st:[], np:1, pg:"/uk/schools/rogue-bachata.html"},
+      {name:"Salsa & Bachata Dance Club", sc:[0, 0, 0, 23.2, 8.9, 0.0], fx:["5,0 ★ · 137", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+&+Bachata+Dance+Club+London", st:[], np:1, pg:"/uk/schools/salsa-bachata-dance-club.html"},
+      {name:"Dancebuzz Salsa Classes", sc:[0, 0, 0, 23.2, 8.9, 0.0], fx:["5,0 ★ · 137", "–"], url:"https://dancebuzz.co.uk/", st:[], np:1, pg:"/uk/schools/dancebuzz-salsa-classes.html"},
+      {name:"Nelson Batista Salsa", sc:[0, 0, 0, 16.1, 4.8, 0.0], fx:["4,8 ★ · 13", "–"], url:"https://london-salsa.com/", st:[], np:1, pg:"/uk/schools/nelson-batista-salsa.html"},
+      {name:"Colindale Salsa Bachata & Fitness", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 41", "–"], url:"https://colindalesalsabachata.mystrikingly.com/", st:[], np:1, pg:"/uk/schools/colindale-salsa-bachata-fitness.html"},
+      {name:"Latino Flava", sc:[0, 0, 0, 14.4, 3.8, 0.0], fx:["4,6 ★ · 7", "–"], url:"https://thelatindance.co.uk/", st:[], np:1, pg:"/uk/schools/latino-flava.html"},
+      {name:"North London Salsa Club", sc:[0, 0, 0, 21.1, 8.1, 0.0], fx:["4,9 ★ · 89", "–"], url:"https://northlondonsalsaclub.com/", st:[], np:1, pg:"/uk/schools/north-london-salsa-club.html"},
+      {name:"Club Azucar", sc:[0, 0, 0, 23.1, 8.8, 0.0], fx:["5,0 ★ · 129", "–"], url:"https://clubazucar.co.uk/", st:[], np:1, pg:"/uk/schools/club-azucar.html"},
+      {name:"Loco London Salsa", sc:[0, 0, 0, 18.0, 5.2, 0.0], fx:["5,0 ★ · 17", "–"], url:"https://loco-london-salsa.co.uk/", st:[], np:1, pg:"/uk/schools/loco-london-salsa.html"},
+      {name:"Melitta Salsa & Bachata", sc:[0, 0, 0, 18.8, 5.7, 0.0], fx:["5,0 ★ · 22", "–"], url:"https://melittasiomos.com/", st:[], np:1, pg:"/uk/schools/melitta-salsa-bachata.html"},
+      {name:"Hola Salsa", sc:[0, 0, 0, 15.6, 3.5, 0.0], fx:["5,0 ★ · 6", "–"], url:"https://holasalsa.co.uk/", st:[], np:1, pg:"/uk/schools/hola-salsa.html"},
+      {name:"Ritmo Latino Dance Studio", sc:[0, 0, 0, 16.6, 5.2, 0.0], fx:["4,8 ★ · 17", "–"], url:"https://ritmolatinolondon.com/", st:[], np:1, pg:"/uk/schools/ritmo-latino-dance-studio.html"},
+      {name:"No Limit Salsa Academy", sc:[0, 0, 0, 16.4, 4.2, 0.0], fx:["5,0 ★ · 9", "–"], url:"https://nolimitacademy.co.uk/", st:[], np:1, pg:"/uk/schools/no-limit-salsa-academy.html"},
+      {name:"The London Academy of Dance", sc:[0, 0, 0, 17.4, 6.8, 0.0], fx:["4,7 ★ · 41", "–"], url:"https://thelondonacademyofdance.com/", st:[], np:1, pg:"/uk/schools/the-london-academy-of-dance.html"},
+      {name:"The Latin Passion", sc:[0, 0, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://thelatinpassion.co.uk/", st:[], np:1, pg:"/uk/schools/the-latin-passion.html"},
+      {name:"Cuban Vibes Dance School", sc:[0, 0, 0, 22.3, 8.0, 0.0], fx:["5,0 ★ · 84", "–"], url:"https://cubanvibes.com/", st:[], np:1, pg:"/uk/schools/cuban-vibes-dance-school.html"},
+      {name:"JB Dance Fitness Chiswick", sc:[0, 0, 0, 20.3, 6.6, 0.0], fx:["5,0 ★ · 37", "–"], url:"https://jelenabubon.com/", st:[], np:1, pg:"/uk/schools/jb-dance-fitness-chiswick.html"},
+      {name:"Step By Me Dance Studios", sc:[0, 0, 0, 23.7, 9.6, 0.0], fx:["5,0 ★ · 202", "–"], url:"https://stepbymedancestudios.co.uk/", st:[], np:1, pg:"/uk/schools/step-by-me-dance-studios.html"}
+    ],
+    "manchester": [
+      {name:"Salsa Freedom Dance Classes", sc:[0, 0, 0, 22.1, 9.4, 0.0], fx:["4,9 ★ · 182", "–"], url:"https://salsamanchester.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-freedom-dance-classes.html"},
+      {name:"La Suerte Dance School", sc:[0, 0, 0, 19.4, 7.7, 0.0], fx:["4,8 ★ · 71", "–"], url:"http://www.salsa-manchester.co.uk/", st:[], np:1, pg:"/uk/schools/la-suerte-dance-school.html"},
+      {name:"Floridita Dance", sc:[0, 0, 0, 20.4, 6.6, 0.0], fx:["5,0 ★ · 38", "–"], url:"https://www.floriditadance.com/", st:[], np:1, pg:"/uk/schools/floridita-dance.html"},
+      {name:"Salsa de Cuba", sc:[0, 0, 0, 17.0, 5.5, 0.0], fx:["4,8 ★ · 20", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+de+Cuba+Manchester", st:[], np:1, pg:"/uk/schools/salsa-de-cuba.html"},
+      {name:"Salsa En Manchester", sc:[0, 0, 0, 13.1, 5.8, 0.0], fx:["4,3 ★ · 23", "–"], url:"https://salsaenmanchester.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-en-manchester.html"},
+      {name:"Solar Salsa", sc:[0, 0, 0, 18.8, 5.7, 0.0], fx:["5,0 ★ · 22", "–"], url:"https://solarsalsa.org.uk/", st:[], np:1, pg:"/uk/schools/solar-salsa.html"}
+    ],
+    "bristol": [
+      {name:"Bristol Bachata", sc:[0, 0, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 39", "–"], url:"https://bristolbachata.co.uk/", st:[], np:1, pg:"/uk/schools/bristol-bachata.html"},
+      {name:"Bachatify", sc:[0, 0, 0, 21.5, 7.4, 0.0], fx:["5,0 ★ · 59", "–"], url:"http://www.salsify.co.uk/bachatify", st:[], np:1, pg:"/uk/schools/bachatify.html"},
+      {name:"Salsa Souls", sc:[0, 0, 0, 20.9, 8.0, 0.0], fx:["4,9 ★ · 82", "–"], url:"https://www.salsasouls.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-souls.html"},
+      {name:"Salsa Is Life", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 41", "–"], url:"https://salsaislife.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-is-life.html"},
+      {name:"Abanico Salsa Bristol", sc:[0, 0, 0, 16.9, 4.9, 0.0], fx:["4,9 ★ · 14", "–"], url:"https://abanicosalsa.com/", st:[], np:1, pg:"/uk/schools/abanico-salsa-bristol.html"},
+      {name:"SalsaJoy", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://salsajoy.co.uk/", st:[], np:1, pg:"/uk/schools/salsajoy.html"},
+      {name:"Bristol SalsaFix", sc:[0, 0, 0, 20.1, 6.5, 0.0], fx:["5,0 ★ · 35", "–"], url:"https://bristolsalsafix.co.uk/", st:[], np:1, pg:"/uk/schools/bristol-salsafix.html"}
+    ],
+    "glasgow": [
+      {name:"Dance4Water Glasgow", sc:[0, 0, 0, 16.2, 4.3, 0.0], fx:["4,9 ★ · 10", "–"], url:"http://4water.org/glasgow/dance", st:[], np:1, pg:"/uk/schools/dance4water-glasgow.html"},
+      {name:"Academia de Salsa", sc:[0, 0, 0, 17.5, 6.0, 0.0], fx:["4,8 ★ · 26", "–"], url:"http://www.academiadesalsa.com/", st:[], np:1, pg:"/uk/schools/academia-de-salsa.html"},
+      {name:"Glasgow Kizomba School", sc:[0, 0, 0, 13.2, 3.5, 0.0], fx:["4,3 ★ · 6", "–"], url:"https://glasgowkizomba.co.uk/", st:[], np:1, pg:"/uk/schools/glasgow-kizomba-school.html"}
+    ],
+    "edinburgh": [
+      {name:"Latin Roots", sc:[0, 0, 0, 22.1, 9.4, 0.0], fx:["4,9 ★ · 179", "–"], url:"https://latinroots.co.uk/", st:[], np:1, pg:"/uk/schools/latin-roots.html"},
+      {name:"Bachata Blues Edinburgh", sc:[0, 0, 0, 14.2, 6.9, 0.0], fx:["4,4 ★ · 45", "–"], url:"https://www.bachatablues.com/", st:[], np:1, pg:"/uk/schools/bachata-blues-edinburgh.html"},
+      {name:"Bailarte Dance Academy", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 41", "–"], url:"https://bailarte.co.uk/", st:[], np:1, pg:"/uk/schools/bailarte-dance-academy.html"},
+      {name:"Latin Dance Edinburgh", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 44", "–"], url:"https://www.google.com/maps/search/?api=1&query=Latin+Dance+Edinburgh+Edinburgh", st:[], np:1, pg:"/uk/schools/latin-dance-edinburgh.html"},
+      {name:"Salsa Club Edinburgh", sc:[0, 0, 0, 23.3, 9.0, 0.0], fx:["5,0 ★ · 144", "–"], url:"https://salsaedi.com/", st:[], np:1, pg:"/uk/schools/salsa-club-edinburgh.html"},
+      {name:"John y Emma Bachata Edinburgh", sc:[0, 0, 0, 15.9, 3.8, 0.0], fx:["5,0 ★ · 7", "–"], url:"https://yinyangbachata.com/", st:[], np:1, pg:"/uk/schools/john-y-emma-bachata-edinburgh.html"},
+      {name:"Bachata Society", sc:[0, 0, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://bachatasociety.com/", st:[], np:1, pg:"/uk/schools/bachata-society.html"}
+    ],
+    "nottingham": [
+      {name:"La Clave Salsa & Bachata", sc:[0, 0, 0, 17.6, 5.4, 0.0], fx:["4,9 ★ · 19", "–"], url:"https://www.laclaveevents.co.uk/", st:[], np:1, pg:"/uk/schools/la-clave-salsa-bachata.html"},
+      {name:"Salsa Bachata UK", sc:[0, 0, 0, 18.9, 6.3, 0.0], fx:["4,9 ★ · 32", "–"], url:"https://salsabachata.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-bachata-uk.html"},
+      {name:"Todo Latino Dance Co", sc:[0, 0, 0, 19.0, 5.8, 0.0], fx:["5,0 ★ · 24", "–"], url:"https://todo-latino.co.uk/", st:[], np:1, pg:"/uk/schools/todo-latino-dance-co.html"},
+      {name:"Salsaché", sc:[0, 0, 0, 17.5, 5.3, 0.0], fx:["4,9 ★ · 18", "–"], url:"https://salsache.uk/", st:[], np:1, pg:"/uk/schools/salsache.html"},
+      {name:"Strictly Ballroom & Latin", sc:[0, 0, 0, 13.7, 4.2, 0.0], fx:["4,4 ★ · 9", "–"], url:"https://strictlyballroomandlatin.co.uk/", st:[], np:1, pg:"/uk/schools/strictly-ballroom-latin.html"}
+    ],
+    "cardiff": [
+      {name:"Bachata Movement Cardiff", sc:[0, 0, 0, 18.0, 5.2, 0.0], fx:["5,0 ★ · 17", "–"], url:"https://www.bachatamovement.co.uk/", st:[], np:1, pg:"/uk/schools/bachata-movement-cardiff.html"},
+      {name:"Salsa Buena Cardiff", sc:[0, 10, 7, 22.6, 10.0, 0.0], fx:["4,9 ★ · 329", "–"], url:"https://salsabuena.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-buena-cardiff.html"}
+    ],
+    "birmingham": [
+      {name:"Havana Salsa Birmingham", sc:[0, 0, 0, 14.7, 5.5, 0.0], fx:["4,5 ★ · 20", "–"], url:"https://havana-salsa.co.uk/", st:[], np:1, pg:"/uk/schools/havana-salsa-birmingham.html"},
+      {name:"Salsa King", sc:[0, 0, 0, 21.5, 7.4, 0.0], fx:["5,0 ★ · 58", "–"], url:"https://salsaking.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-king.html"},
+      {name:"Champion Latin & Ballroom Dance Studio", sc:[0, 0, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://www.google.com/maps/search/?api=1&query=Champion+Latin+&+Ballroom+Dance+Studio+Birmingham", st:[], np:1, pg:"/uk/schools/champion-latin-ballroom-dance-studio.html"}
+    ],
+    "leeds": [
+      {name:"Salsa Rocks Leeds", sc:[0, 0, 0, 17.0, 5.5, 0.0], fx:["4,8 ★ · 20", "–"], url:"https://salsaleeds.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-rocks-leeds.html"}
+    ],
+    "liverpool": [
+      {name:"Salsa Liverpool", sc:[0, 0, 0, 14.9, 4.6, 0.0], fx:["4,6 ★ · 12", "–"], url:"https://salsaliverpool.com/", st:[], np:1, pg:"/uk/schools/salsa-liverpool.html"}
+    ],
+    "sheffield": [
+      {name:"The Mambo Collective", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://mambocollective.co.uk/", st:[], np:1, pg:"/uk/schools/the-mambo-collective.html"}
+    ],
+    "brighton": [
+      {name:"Salsa & Flow", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 42", "–"], url:"https://salsaandflow.com/", st:[], np:1, pg:"/uk/schools/salsa-flow.html"},
+      {name:"Salsa Zone", sc:[0, 0, 0, 15.9, 4.2, 0.0], fx:["4,9 ★ · 9", "–"], url:"https://salsazone.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-zone.html"}
+    ],
+    "leicester": [
+      {name:"Espiritu Latino Salsa", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://leicestersalsa.co.uk/", st:[], np:1, pg:"/uk/schools/espiritu-latino-salsa.html"},
+      {name:"Havana Salsa Leicester", sc:[0, 0, 0, 13.9, 5.4, 0.0], fx:["4,4 ★ · 19", "–"], url:"https://havana-salsa.co.uk/", st:[], np:1, pg:"/uk/schools/havana-salsa-leicester.html"},
+      {name:"Cuba Linda Salsa Leicester", sc:[0, 0, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://www.google.com/maps/search/?api=1&query=Cuba+Linda+Salsa+Leicester+Leicester", st:[], np:1, pg:"/uk/schools/cuba-linda-salsa-leicester.html"}
+    ],
+    "southampton": [
+      {name:"Tracie's Latin Club", sc:[0, 0, 0, 19.1, 7.4, 0.0], fx:["4,8 ★ · 59", "–"], url:"https://tracieslatinclub.co.uk/", st:[], np:1, pg:"/uk/schools/tracie-s-latin-club.html"},
+      {name:"Salsa Southampton", sc:[0, 0, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://salsasouthampton.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-southampton.html"}
+    ],
+    "oxford": [
+      {name:"SalsaOxford", sc:[0, 0, 0, 15.3, 5.3, 0.0], fx:["4,6 ★ · 18", "–"], url:"https://salsaoxford.com/", st:[], np:1, pg:"/uk/schools/salsaoxford.html"},
+      {name:"Salsafab", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://salsafab.co.uk/", st:[], np:1, pg:"/uk/schools/salsafab.html"},
+      {name:"Onsalsa", sc:[0, 0, 0, 22.0, 7.8, 0.0], fx:["5,0 ★ · 72", "–"], url:"https://onsalsa.com/", st:[], np:1, pg:"/uk/schools/onsalsa.html"}
+    ],
+    "cambridge": [
+      {name:"Bachata Cambridge", sc:[0, 0, 0, 20.1, 6.5, 0.0], fx:["5,0 ★ · 35", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bachata+Cambridge+Cambridge", st:[], np:1, pg:"/uk/schools/bachata-cambridge.html"},
+      {name:"Club Salsa Cambridge", sc:[0, 0, 0, 15.2, 5.1, 0.0], fx:["4,6 ★ · 16", "–"], url:"https://club-salsa.co.uk/", st:[], np:1, pg:"/uk/schools/club-salsa-cambridge.html"}
+    ],
+    "belfast": [
+      {name:"Salsa-NI", sc:[0, 0, 0, 22.5, 8.2, 0.0], fx:["5,0 ★ · 91", "–"], url:"https://salsa-ni.com/", st:[], np:1, pg:"/uk/schools/salsa-ni.html"}
+    ],
+    "reading": [
+      {name:"Salsa Bachata Social Club", sc:[0, 0, 0, 11.8, 5.1, 0.0], fx:["4,1 ★ · 16", "–"], url:"https://salsabachatasocialclub.com/", st:[], np:1, pg:"/uk/schools/salsa-bachata-social-club.html"},
+      {name:"Afrodesia Salsa", sc:[0, 0, 0, 22.8, 8.5, 0.0], fx:["5,0 ★ · 110", "–"], url:"https://afrodesiasalsa.co.uk/", st:[], np:1, pg:"/uk/schools/afrodesia-salsa.html"},
+      {name:"Latin Addiction UK", sc:[0, 0, 0, 17.5, 4.9, 0.0], fx:["5,0 ★ · 14", "–"], url:"https://latinaddiction.co.uk/", st:[], np:1, pg:"/uk/schools/latin-addiction-uk.html"}
+    ],
+    "bath": [
+      {name:"Bath Salsa", sc:[0, 0, 0, 16.2, 4.3, 0.0], fx:["4,9 ★ · 10", "–"], url:"https://bathsalsa.co.uk/", st:[], np:1, pg:"/uk/schools/bath-salsa.html"},
+      {name:"Latin Vibes", sc:[0, 0, 0, 15.9, 3.8, 0.0], fx:["5,0 ★ · 7", "–"], url:"https://latin.dance/", st:[], np:1, pg:"/uk/schools/latin-vibes.html"}
+    ],
+    "norwich": [
+      {name:"Norwich Bachata", sc:[0, 0, 0, 15.3, 3.2, 0.0], fx:["5,0 ★ · 5", "–"], url:"https://norwichlatindance.com/", st:[], np:1, pg:"/uk/schools/norwich-bachata.html"}
+    ],
+    "exeter": [
+      {name:"Abanico Salsa Exeter", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://abanicosalsa.com/", st:[], np:1, pg:"/uk/schools/abanico-salsa-exeter.html"},
+      {name:"Luna Latina", sc:[0, 0, 0, 16.4, 4.2, 0.0], fx:["5,0 ★ · 9", "–"], url:"https://www.google.com/maps/search/?api=1&query=Luna+Latina+Exeter", st:[], np:1, pg:"/uk/schools/luna-latina.html"}
+    ],
+    "york": [
+      {name:"Humba Rumba Salsa", sc:[0, 0, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://humbarumbasalsa.com/", st:[], np:1, pg:"/uk/schools/humba-rumba-salsa.html"}
+    ],
+    "plymouth": [
+      {name:"Misalsacubana", sc:[0, 0, 0, 15.9, 3.8, 0.0], fx:["5,0 ★ · 7", "–"], url:"https://misalsacubana.co.uk/", st:[], np:1, pg:"/uk/schools/misalsacubana.html"}
+    ],
+    "aberdeen": [
+      {name:"Latin Dance Aberdeen", sc:[0, 0, 0, 16.1, 4.8, 0.0], fx:["4,8 ★ · 13", "–"], url:"https://latindanceaberdeen.com/", st:[], np:1, pg:"/uk/schools/latin-dance-aberdeen.html"}
+    ],
+    "portsmouth": [
+      {name:"Salsa Solent Dance Academy", sc:[0, 0, 0, 19.7, 6.2, 0.0], fx:["5,0 ★ · 30", "–"], url:"https://salsasolent.com/", st:[], np:1, pg:"/uk/schools/salsa-solent-dance-academy.html"}
+    ],
+    "milton-keynes": [
+      {name:"Salsa And Bachata Dance MK", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://salsabachatadancemk.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-and-bachata-dance-mk.html"},
+      {name:"CubanSalsa UK", sc:[0, 0, 0, 12.4, 4.0, 0.0], fx:["4,1 ★ · 8", "–"], url:"https://salsaricauk.com/", st:[], np:1, pg:"/uk/schools/cubansalsa-uk.html"},
+      {name:"Rocolla Latin Rhythms", sc:[0, 0, 0, 15.6, 3.5, 0.0], fx:["5,0 ★ · 6", "–"], url:"https://www.google.com/maps/search/?api=1&query=Rocolla+Latin+Rhythms+Milton+Keynes", st:[], np:1, pg:"/uk/schools/rocolla-latin-rhythms.html"}
+    ],
+    "derby": [
+      {name:"JD Dance", sc:[0, 0, 0, 15.6, 3.5, 0.0], fx:["5,0 ★ · 6", "–"], url:"https://jddance.co.uk/", st:[], np:1, pg:"/uk/schools/jd-dance.html"},
+      {name:"Dance Cubana", sc:[0, 0, 0, 14.1, 3.2, 0.0], fx:["4,6 ★ · 5", "–"], url:"https://dance-cubana.co.uk/", st:[], np:1, pg:"/uk/schools/dance-cubana.html"}
+    ],
+    "stoke-on-trent": [
+      {name:"Bachata Inverso", sc:[0, 0, 0, 15.3, 3.2, 0.0], fx:["5,0 ★ · 5", "–"], url:"https://bachatainverso.com/", st:[], np:1, pg:"/uk/schools/bachata-inverso.html"},
+      {name:"Salsa Stoke", sc:[0, 0, 0, 15.3, 3.2, 0.0], fx:["5,0 ★ · 5", "–"], url:"https://salsastoke.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-stoke.html"}
+    ],
+    "bournemouth": [
+      {name:"Bachata Connection", sc:[0, 0, 0, 19.9, 6.3, 0.0], fx:["5,0 ★ · 32", "–"], url:"https://bachataconnection.com/", st:[], np:1, pg:"/uk/schools/bachata-connection.html"},
+      {name:"Just Dance Salsa", sc:[0, 0, 0, 18.5, 5.5, 0.0], fx:["5,0 ★ · 20", "–"], url:"https://justdancesalsa.co.uk/", st:[], np:1, pg:"/uk/schools/just-dance-salsa.html"}
+    ],
+    "hull": [
+      {name:"Club Salsa Hull", sc:[0, 0, 0, 15.6, 3.5, 0.0], fx:["5,0 ★ · 6", "–"], url:"https://clubsalsahull.co.uk/", st:[], np:1, pg:"/uk/schools/club-salsa-hull.html"}
+    ],
+    "guildford": [
+      {name:"Mundo Latino UK", sc:[0, 0, 0, 17.5, 5.3, 0.0], fx:["4,9 ★ · 18", "–"], url:"https://mundolatinouk.com/", st:[], np:1, pg:"/uk/schools/mundo-latino-uk.html"},
+      {name:"Latin Salsa UK", sc:[0, 0, 0, 15.6, 3.5, 0.0], fx:["5,0 ★ · 6", "–"], url:"https://latinsalsa.co.uk/", st:[], np:1, pg:"/uk/schools/latin-salsa-uk.html"}
+    ],
+    "swindon": [
+      {name:"Latin Vibes Swindon", sc:[0, 0, 0, 17.5, 4.9, 0.0], fx:["5,0 ★ · 14", "–"], url:"https://latin.dance/", st:[], np:1, pg:"/uk/schools/latin-vibes-swindon.html"}
+    ],
+    "cheltenham": [
+      {name:"Salsa Squad Cheltenham", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://salsasquad.com/", st:[], np:1, pg:"/uk/schools/salsa-squad-cheltenham.html"}
+    ],
+    "preston": [
+      {name:"Sweet Salsa", sc:[0, 0, 0, 17.7, 5.0, 0.0], fx:["5,0 ★ · 15", "–"], url:"https://sweetsalsa.co.uk/", st:[], np:1, pg:"/uk/schools/sweet-salsa.html"}
+    ],
+    "colchester": [
+      {name:"Planet Katy", sc:[0, 0, 0, 21.1, 7.1, 0.0], fx:["5,0 ★ · 50", "–"], url:"https://planetkaty.com/", st:[], np:1, pg:"/uk/schools/planet-katy.html"}
+    ],
+    "chelmsford": [
+      {name:"Salsa D'Lite", sc:[0, 0, 0, 12.0, 6.9, 0.0], fx:["4,2 ★ · 45", "–"], url:"https://salsadlite.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-d-lite.html"}
+    ],
+    "swansea": [
+      {name:"Salsa Fabrika", sc:[0, 0, 0, 17.3, 4.8, 0.0], fx:["5,0 ★ · 13", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+Fabrika+Swansea", st:[], np:1, pg:"/uk/schools/salsa-fabrika.html"}
+    ],
+    "middlesbrough": [
+      {name:"Tees Valley Salsa", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://teesvalleysalsa.co.uk/", st:[], np:1, pg:"/uk/schools/tees-valley-salsa.html"}
+    ],
+    "croydon": [
+      {name:"Latin Flow Croydon", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://latinflow.co.uk/", st:[], np:1, pg:"/uk/schools/latin-flow-croydon.html"},
+      {name:"Aerolatino Fitness UK", sc:[0, 0, 0, 20.2, 6.5, 0.0], fx:["5,0 ★ · 36", "–"], url:"https://aerolatino.co.uk/", st:[], np:1, pg:"/uk/schools/aerolatino-fitness-uk.html"}
+    ],
+    "lincoln": [
+      {name:"LA Salsa and Bachata Dance Academy", sc:[0, 0, 0, 22.3, 8.1, 0.0], fx:["5,0 ★ · 85", "–"], url:"https://salsabachatalosangeles.com/", st:[], np:1, pg:"/uk/schools/la-salsa-and-bachata-dance-academy.html"}
+    ],
+    "salisbury": [
+      {name:"Salsa Cruz", sc:[0, 0, 0, 21.9, 7.7, 0.0], fx:["5,0 ★ · 70", "–"], url:"https://salsacruz.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-cruz.html"}
+    ],
+    "winchester": [
+      {name:"Alchemy Salsa Dance Academy", sc:[0, 0, 0, 17.3, 5.8, 0.0], fx:["4,8 ★ · 23", "–"], url:"https://alchemydance.co/", st:[], np:1, pg:"/uk/schools/alchemy-salsa-dance-academy.html"}
+    ],
+    "durham": [
+      {name:"Baila Beats Academy", sc:[0, 0, 0, 20.2, 6.5, 0.0], fx:["5,0 ★ · 36", "–"], url:"https://bailabeatsacademy.com/", st:[], np:1, pg:"/uk/schools/baila-beats-academy.html"}
+    ],
+    "crawley": [
+      {name:"Crawley Bachata Salsa Academy", sc:[0, 0, 0, 21.4, 8.5, 0.0], fx:["4,9 ★ · 107", "–"], url:"https://crawleybachatasalsa.com/", st:[], np:1, pg:"/uk/schools/crawley-bachata-salsa-academy.html"}
+    ],
+    "st-albans": [
+      {name:"Salsa Mish", sc:[0, 0, 0, 18.4, 6.8, 0.0], fx:["4,8 ★ · 41", "–"], url:"https://salsamish.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-mish.html"},
+      {name:"Salsa Machine Dance Company", sc:[0, 0, 0, 14.2, 4.5, 0.0], fx:["4,5 ★ · 11", "–"], url:"https://salsamachine.co.uk/", st:[], np:1, pg:"/uk/schools/salsa-machine-dance-company.html"},
+      {name:"Rumba Latina", sc:[0, 0, 0, 18.6, 6.1, 0.0], fx:["4,9 ★ · 28", "–"], url:"https://rumbalatina.co.uk/", st:[], np:1, pg:"/uk/schools/rumba-latina.html"}
+    ],
+    "aberystwyth": [
+      {name:"Aberlatin", sc:[0, 0, 0, 19.6, 6.2, 0.0], fx:["5,0 ★ · 29", "–"], url:"https://aberlatin.com/", st:[], np:1, pg:"/uk/schools/aberlatin.html"}
+    ],
+    "worcester": [
+      {name:"Tumbao Latin Dance", sc:[0, 0, 0, 19.7, 6.2, 0.0], fx:["5,0 ★ · 30", "–"], url:"https://tumbaoworcester.com/", st:[], np:1, pg:"/uk/schools/tumbao-latin-dance.html"}
+    ],
+    "ipswich": [
+      {name:"Lait Dance Club", sc:[0, 0, 0, 17.5, 6.0, 0.0], fx:["4,8 ★ · 26", "–"], url:"https://laitdanceclub.co.uk/", st:[], np:1, pg:"/uk/schools/lait-dance-club.html"}
+    ],
+    "wolverhampton": [
+      {name:"Zig Zag Dance Factory", sc:[0, 0, 0, 19.5, 6.8, 0.0], fx:["4,9 ★ · 41", "–"], url:"https://zigzagdance.co.uk/", st:[], np:1, pg:"/uk/schools/zig-zag-dance-factory.html"}
+    ],
+    "blackpool": [
+      {name:"Wilsons Dance", sc:[0, 0, 0, 21.0, 7.0, 0.0], fx:["5,0 ★ · 48", "–"], url:"https://wilsonsdance.co.uk/", st:[], np:1, pg:"/uk/schools/wilsons-dance.html"}
+    ],
+    "brussels": [
+      {name:"Brussels Dance Project", sc:[0, 0, 0, 18.8, 7.1, 0.0], fx:["4,8 ★ · 50", "–"], url:"https://www.danceproject.be/", st:[], np:1, pg:"/be/schools/brussels-dance-project.html"},
+      {name:"Salsa Bruxelles", sc:[0, 0, 0, 18.5, 8.3, 0.0], fx:["4,7 ★ · 96", "–"], url:"https://www.salsabruxelles.be/", st:[], np:1, pg:"/be/schools/salsa-bruxelles.html"},
+      {name:"Caribbean Dance Brussels", sc:[0, 0, 0, 18.0, 5.2, 0.0], fx:["5,0 ★ · 17", "–"], url:"https://atomidance.com/", st:[], np:1, pg:"/be/schools/caribbean-dance-brussels.html"},
+      {name:"Latin Dance Evolution School", sc:[0, 0, 0, 20.5, 6.7, 0.0], fx:["5,0 ★ · 40", "–"], url:"http://www.latindanceevolution.com/", st:[], np:1, pg:"/be/schools/latin-dance-evolution-school.html"},
+      {name:"Fuego Dance", sc:[0, 0, 0, 17.7, 5.0, 0.0], fx:["5,0 ★ · 15", "–"], url:"http://www.fuegodance.be/", st:[], np:1, pg:"/be/schools/fuego-dance.html"},
+      {name:"The Embassy Room", sc:[5, 8, 7, 14.6, 10.0, 0.0], fx:["4,4 ★ · 335", "–"], url:"https://theembassyroombrussels.be/", st:[], np:1, pg:"/be/schools/the-embassy-room.html"},
+      {name:"BeSalsa", sc:[0, 0, 0, 17.3, 4.8, 0.0], fx:["5,0 ★ · 13", "–"], url:"https://besalsa.com/", st:[], np:1, pg:"/be/schools/besalsa.html"},
+      {name:"Quierobailar", sc:[0, 0, 0, 17.6, 5.4, 0.0], fx:["4,9 ★ · 19", "–"], url:"https://quierobailar.be/", st:[], np:1, pg:"/be/schools/quierobailar.html"},
+      {name:"Bachata Vice Dance School", sc:[0, 0, 0, 19.6, 6.2, 0.0], fx:["5,0 ★ · 29", "–"], url:"https://bachatavice.com/", st:[], np:1, pg:"/be/schools/bachata-vice-dance-school.html"}
+    ],
+    "charleroi": [
+      {name:"Yuka Dance Academy", sc:[0, 0, 0, 22.1, 9.5, 0.0], fx:["4,9 ★ · 192", "–"], url:"https://www.yukadanceacademy.be/", st:[], np:1, pg:"/be/schools/yuka-dance-academy.html"}
+    ],
+    "antwerpen": [
+      {name:"Salsadansen", sc:[0, 0, 0, 19.2, 6.5, 0.0], fx:["4,9 ★ · 36", "–"], url:"https://salsadansen.be/", st:[], np:1, pg:"/be/schools/salsadansen.html"},
+      {name:"Salsa Charanga", sc:[0, 0, 0, 17.3, 5.8, 0.0], fx:["4,8 ★ · 24", "–"], url:"https://deleukstesalsafamilie.be/", st:[], np:1, pg:"/be/schools/salsa-charanga.html"},
+      {name:"Bailando Latino", sc:[0, 0, 0, 17.0, 5.0, 0.0], fx:["4,9 ★ · 15", "–"], url:"https://bailandolatino.be/", st:[], np:1, pg:"/be/schools/bailando-latino.html"}
+    ],
+    "gent": [
+      {name:"WeDance Gent", sc:[0, 0, 0, 17.7, 5.0, 0.0], fx:["5,0 ★ · 15", "–"], url:"https://wedance.be/", st:[], np:1, pg:"/be/schools/wedance-gent.html"}
+    ],
+    "leuven": [
+      {name:"LeuvenSalsa", sc:[0, 0, 0, 20.5, 7.6, 0.0], fx:["4,9 ★ · 64", "–"], url:"https://leuvensalsa.com/", st:[], np:1, pg:"/be/schools/leuvensalsa.html"},
+      {name:"Dance con Emoción", sc:[0, 0, 0, 18.6, 6.1, 0.0], fx:["4,9 ★ · 28", "–"], url:"https://bachataconemocion.be/", st:[], np:1, pg:"/be/schools/dance-con-emocion.html"},
+      {name:"Cuban Salsa Leuven", sc:[0, 0, 0, 21.0, 8.0, 0.0], fx:["4,9 ★ · 83", "–"], url:"https://cubansalsaleuven.be/", st:[], np:1, pg:"/be/schools/cuban-salsa-leuven.html"},
+      {name:"Salsaflash", sc:[0, 0, 0, 19.2, 5.9, 0.0], fx:["5,0 ★ · 25", "–"], url:"https://salsaflash.be/", st:[], np:1, pg:"/be/schools/salsaflash.html"}
+    ],
+    "brugge": [
+      {name:"B-salsa", sc:[0, 0, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://b-salsa.be/", st:[], np:1, pg:"/be/schools/b-salsa.html"}
+    ],
+    "hasselt": [
+      {name:"Ritmo Studio's", sc:[0, 0, 0, 18.1, 7.7, 0.0], fx:["4,7 ★ · 71", "–"], url:"https://ritmostudios.be/", st:[], np:1, pg:"/be/schools/ritmo-studio-s.html"}
+    ],
+    "kortrijk": [
+      {name:"Pura Vida Bachata", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://puravida-bachata.be/", st:[], np:1, pg:"/be/schools/pura-vida-bachata.html"}
+    ],
+    "mons": [
+      {name:"Asisalsa", sc:[0, 0, 0, 17.6, 5.4, 0.0], fx:["4,9 ★ · 19", "–"], url:"https://asisalsa.be/", st:[], np:1, pg:"/be/schools/asisalsa.html"}
+    ],
+    "liege": [
+      {name:"Le Studio24", sc:[0, 0, 0, 17.4, 5.9, 0.0], fx:["4,8 ★ · 25", "–"], url:"https://lestudio24.com/", st:[], np:1, pg:"/be/schools/le-studio24.html"},
+      {name:"Dance4you", sc:[0, 0, 0, 15.2, 6.7, 0.0], fx:["4,5 ★ · 40", "–"], url:"https://dance4you.be/", st:[], np:1, pg:"/be/schools/dance4you.html"}
+    ],
+    "genk": [
+      {name:"Ritmo Latino Genk", sc:[0, 0, 0, 14.1, 6.3, 0.0], fx:["4,4 ★ · 32", "–"], url:"https://salsa.be/", st:[], np:1, pg:"/be/schools/ritmo-latino-genk.html"}
+    ],
+    "dublin": [
+      {name:"Dublin Salsa Academy", sc:[0, 0, 0, 22.7, 10.0, 0.0], fx:["4,9 ★ · 393", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dublin+Salsa+Academy+Dublin", st:[], np:1, pg:"/ie/schools/dublin-salsa-academy.html"}
+    ],
+    "galway": [
+      {name:"Galway Latin Dance", sc:[0, 0, 0, 19.5, 6.1, 0.0], fx:["5,0 ★ · 28", "–"], url:"https://latindance.ie/", st:[], np:1, pg:"/ie/schools/galway-latin-dance.html"}
+    ],
+    "cork": [
+      {name:"Latin Dance Studio Cork", sc:[0, 0, 0, 21.8, 9.0, 0.0], fx:["4,9 ★ · 146", "–"], url:"https://latindancestudiocork.com/", st:[], np:1, pg:"/ie/schools/latin-dance-studio-cork.html"},
+      {name:"The Tribe Dance Academy", sc:[0, 0, 0, 22.2, 7.9, 0.0], fx:["5,0 ★ · 78", "–"], url:"https://thetribeda.com/", st:[], np:1, pg:"/ie/schools/the-tribe-dance-academy.html"}
+    ],
+    "limerick": [
+      {name:"Dance Limerick", sc:[0, 0, 0, 14.8, 5.7, 0.0], fx:["4,5 ★ · 22", "–"], url:"https://dancelimerick.ie/", st:[], np:1, pg:"/ie/schools/dance-limerick.html"},
+      {name:"Dance City", sc:[0, 0, 0, 18.0, 7.6, 0.0], fx:["4,7 ★ · 66", "–"], url:"https://dancecity.ie/", st:[], np:1, pg:"/ie/schools/dance-city.html"}
+    ],
+    "kilkenny": [
+      {name:"The Dance Club Kilkenny", sc:[0, 0, 0, 23.4, 9.2, 0.0], fx:["5,0 ★ · 163", "–"], url:"https://thedanceclubkilkenny.com/", st:[], np:1, pg:"/ie/schools/the-dance-club-kilkenny.html"}
+    ],
+    "vienna": [
+      {name:"Salsa & Latin Studio Julion", sc:[0, 0, 0, 23.5, 9.2, 0.0], fx:["5,0 ★ · 164", "–"], url:"https://www.latinstudio.at/", st:[], np:1, pg:"/at/schools/salsa-latin-studio-julion.html"},
+      {name:"Salsa Vienna", sc:[0, 0, 0, 22.2, 8.0, 0.0], fx:["5,0 ★ · 80", "–"], url:"https://www.salsavienna.at/", st:[], np:1, pg:"/at/schools/salsa-vienna.html"},
+      {name:"MYDANCE Vienna", sc:[0, 0, 0, 20.7, 9.7, 0.0], fx:["4,8 ★ · 208", "–"], url:"https://www.mydance.at/", st:[], np:1, pg:"/at/schools/mydance-vienna.html"},
+      {name:"Salsanena Tanzstudio", sc:[0, 0, 0, 17.3, 8.7, 0.0], fx:["4,6 ★ · 123", "–"], url:"https://salsanena.at/", st:[], np:1, pg:"/at/schools/salsanena-tanzstudio.html"},
+      {name:"Tumbao Dance Studio", sc:[0, 0, 0, 21.1, 8.1, 0.0], fx:["4,9 ★ · 87", "–"], url:"https://www.tumbao.at/", st:[], np:1, pg:"/at/schools/tumbao-dance-studio.html"},
+      {name:"Lento Dance Studio", sc:[0, 0, 0, 24.1, 10.0, 0.0], fx:["5,0 ★ · 297", "–"], url:"https://www.lentodance.at/", st:[], np:1, pg:"/at/schools/lento-dance-studio.html"},
+      {name:"SalsaHouse", sc:[0, 0, 0, 19.5, 6.8, 0.0], fx:["4,9 ★ · 41", "–"], url:"https://salsahouse.at/", st:[], np:1, pg:"/at/schools/salsahouse.html"},
+      {name:"Ritmo Tropical", sc:[0, 0, 0, 16.6, 5.2, 0.0], fx:["4,8 ★ · 17", "–"], url:"https://ritmotropical.at/", st:[], np:1, pg:"/at/schools/ritmo-tropical.html"},
+      {name:"Vienna Salsa Studio", sc:[0, 0, 0, 18.8, 5.7, 0.0], fx:["5,0 ★ · 22", "–"], url:"https://viennasalsastudio.at/", st:[], np:1, pg:"/at/schools/vienna-salsa-studio.html"},
+      {name:"Quimbara Ritmo Latino Events", sc:[0, 0, 0, 14.4, 8.1, 0.0], fx:["4,4 ★ · 87", "–"], url:"https://quimbaralatino.at/", st:[], np:1, pg:"/at/schools/quimbara-ritmo-latino-events.html"},
+      {name:"Tanzstudio Mamborama", sc:[0, 0, 0, 15.4, 7.3, 0.0], fx:["4,5 ★ · 54", "–"], url:"https://mamborama.at/", st:[], np:1, pg:"/at/schools/tanzstudio-mamborama.html"}
+    ],
+    "graz": [
+      {name:"Bachata Bliss by Jules", sc:[0, 0, 0, 19.4, 6.0, 0.0], fx:["5,0 ★ · 27", "–"], url:"https://bachatabliss.at/de/", st:[], np:1, pg:"/at/schools/bachata-bliss-by-jules.html"},
+      {name:"Freude am Tanzen", sc:[0, 0, 0, 21.4, 7.3, 0.0], fx:["5,0 ★ · 57", "–"], url:"https://www.freudeamtanzen.at/", st:[], np:1, pg:"/at/schools/freude-am-tanzen.html"},
+      {name:"Salsa Madras", sc:[0, 0, 0, 18.0, 6.4, 0.0], fx:["4,8 ★ · 33", "–"], url:"https://www.salsamadras.at/", st:[], np:1, pg:"/at/schools/salsa-madras.html"}
+    ],
+    "linz": [
+      {name:"Sara und Sebastian Salsa und Bachata", sc:[0, 0, 0, 19.9, 6.3, 0.0], fx:["5,0 ★ · 32", "–"], url:"https://salsabachatalinz.at/", st:[], np:1, pg:"/at/schools/sara-und-sebastian-salsa-und-bachata.html"},
+      {name:"Love2Salsa", sc:[0, 0, 0, 19.8, 6.3, 0.0], fx:["5,0 ★ · 31", "–"], url:"https://love2salsa.at/", st:[], np:1, pg:"/at/schools/love2salsa.html"},
+      {name:"Tanzsüchtig Bachata Sensual", sc:[0, 0, 0, 19.8, 6.3, 0.0], fx:["5,0 ★ · 31", "–"], url:"https://bachatasensuallinz.at/", st:[], np:1, pg:"/at/schools/tanzsuchtig-bachata-sensual.html"}
+    ],
+    "salzburg": [
+      {name:"Salsa Studio Salzburg", sc:[0, 0, 0, 19.8, 7.0, 0.0], fx:["4,9 ★ · 46", "–"], url:"https://salsastudio.at/", st:[], np:1, pg:"/at/schools/salsa-studio-salzburg.html"},
+      {name:"Latino Mio", sc:[0, 0, 0, 17.8, 6.2, 0.0], fx:["4,8 ★ · 30", "–"], url:"https://latino-mio.com/", st:[], np:1, pg:"/at/schools/latino-mio.html"}
+    ],
+    "innsbruck": [
+      {name:"Club Salsa Libre", sc:[0, 0, 0, 17.7, 7.2, 0.0], fx:["4,7 ★ · 51", "–"], url:"https://salsalibre.at/", st:[], np:1, pg:"/at/schools/club-salsa-libre.html"},
+      {name:"Tropical Swing Innsbruck", sc:[0, 0, 0, 21.6, 7.5, 0.0], fx:["5,0 ★ · 61", "–"], url:"https://tropical-swing.com/", st:[], np:1, pg:"/at/schools/tropical-swing-innsbruck.html"}
+    ],
+    "klagenfurt": [
+      {name:"Salsa Dance Club", sc:[0, 0, 0, 18.7, 7.0, 0.0], fx:["4,8 ★ · 46", "–"], url:"https://salsadance.at/", st:[], np:1, pg:"/at/schools/salsa-dance-club.html"}
+    ],
+    "wiener-neustadt": [
+      {name:"Tanzstudio Salsalabor", sc:[0, 0, 0, 19.4, 6.0, 0.0], fx:["5,0 ★ · 27", "–"], url:"https://salsalabor.com/", st:[], np:1, pg:"/at/schools/tanzstudio-salsalabor.html"}
+    ],
+    "villach": [
+      {name:"Tanzschule Huber", sc:[0, 0, 0, 17.3, 5.8, 0.0], fx:["4,8 ★ · 23", "–"], url:"https://tanzschule-huber.com/", st:[], np:1, pg:"/at/schools/tanzschule-huber.html"},
+      {name:"Tanzzentrum Babsi Koitz", sc:[0, 0, 0, 20.7, 6.8, 0.0], fx:["5,0 ★ · 43", "–"], url:"https://babsi-koitz.at/", st:[], np:1, pg:"/at/schools/tanzzentrum-babsi-koitz.html"},
+      {name:"Valeina Dance Studios", sc:[0, 0, 0, 18.1, 6.5, 0.0], fx:["4,8 ★ · 35", "–"], url:"https://valeinadance.eu/", st:[], np:1, pg:"/at/schools/valeina-dance-studios.html"}
+    ],
+    "wels": [
+      {name:"Tanzschule Hippmann", sc:[0, 0, 0, 21.0, 10.0, 0.0], fx:["4,8 ★ · 350", "–"], url:"https://tanzschule.at/", st:[], np:1, pg:"/at/schools/tanzschule-hippmann.html"},
+      {name:"Dance School Santner", sc:[0, 0, 0, 22.3, 9.9, 0.0], fx:["4,9 ★ · 240", "–"], url:"https://tanzschule-santner.at/", st:[], np:1, pg:"/at/schools/dance-school-santner.html"}
+    ],
+    "st-polten": [
+      {name:"Tanzschule Schwebach", sc:[0, 0, 0, 18.0, 7.5, 0.0], fx:["4,7 ★ · 63", "–"], url:"https://schwebach.at/", st:[], np:1, pg:"/at/schools/tanzschule-schwebach.html"}
+    ],
+    "zurich": [
+      {name:"Salsa People", sc:[0, 0, 0, 19.5, 10.0, 0.0], fx:["4,7 ★ · 499", "–"], url:"https://salsapeople.ch/", st:[], np:1, pg:"/ch/schools/salsa-people.html"},
+      {name:"SalsaRica", sc:[0, 0, 0, 19.1, 9.7, 0.0], fx:["4,7 ★ · 207", "–"], url:"https://www.salsarica.ch/", st:[], np:1, pg:"/ch/schools/salsarica.html"},
+      {name:"BachaSuave", sc:[0, 0, 0, 21.4, 7.3, 0.0], fx:["5,0 ★ · 56", "–"], url:"https://www.bachasuave.com/", st:[], np:1, pg:"/ch/schools/bachasuave.html"},
+      {name:"Fuego y Pasion", sc:[0, 0, 0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 55", "–"], url:"https://www.salsafuegoypasion.ch/", st:[], np:1, pg:"/ch/schools/fuego-y-pasion.html"},
+      {name:"PalBailador Latin Dance Studio", sc:[0, 0, 0, 18.7, 7.0, 0.0], fx:["4,8 ★ · 47", "–"], url:"https://palbailador.ch/", st:[], np:1, pg:"/ch/schools/palbailador-latin-dance-studio.html"},
+      {name:"Rhythmia Salsa Tanzschule", sc:[0, 0, 0, 18.9, 6.3, 0.0], fx:["4,9 ★ · 32", "–"], url:"https://rhythmia.ch/", st:[], np:1, pg:"/ch/schools/rhythmia-salsa-tanzschule.html"},
+      {name:"Latin Dance Passion", sc:[0, 0, 0, 20.0, 7.1, 0.0], fx:["4,9 ★ · 50", "–"], url:"https://latindancepassion.ch/", st:[], np:1, pg:"/ch/schools/latin-dance-passion.html"},
+      {name:"Vive Bailando", sc:[0, 0, 0, 18.0, 5.2, 0.0], fx:["5,0 ★ · 17", "–"], url:"https://vivebailando.ch/", st:[], np:1, pg:"/ch/schools/vive-bailando.html"},
+      {name:"Bailatino Dance Company", sc:[0, 0, 0, 18.6, 5.6, 0.0], fx:["5,0 ★ · 21", "–"], url:"https://bailatino.ch/", st:[], np:1, pg:"/ch/schools/bailatino-dance-company.html"},
+      {name:"Garabato CubanDances", sc:[0, 0, 0, 18.8, 5.7, 0.0], fx:["5,0 ★ · 22", "–"], url:"https://cubandances.ch/", st:[], np:1, pg:"/ch/schools/garabato-cubandances.html"},
+      {name:"Vanesco & Shushu Sensual Bachata", sc:[0, 0, 0, 19.5, 6.1, 0.0], fx:["5,0 ★ · 28", "–"], url:"https://vs-bachata.com/", st:[], np:1, pg:"/ch/schools/vanesco-shushu-sensual-bachata.html"},
+      {name:"Paso Latino", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://pasolatino.ch/", st:[], np:1, pg:"/ch/schools/paso-latino.html"},
+      {name:"el Social Zürich", sc:[0, 0, 0, 18.1, 6.5, 0.0], fx:["4,8 ★ · 35", "–"], url:"https://elsocial.ch/", st:[], np:1, pg:"/ch/schools/el-social-zurich.html"},
+      {name:"Ritmo Cubano", sc:[0, 0, 0, 18.6, 6.1, 0.0], fx:["4,9 ★ · 28", "–"], url:"https://ritmo-cubano.ch/", st:[], np:1, pg:"/ch/schools/ritmo-cubano.html"},
+      {name:"Iron Mams Kizomba", sc:[0, 0, 0, 17.9, 6.3, 0.0], fx:["4,8 ★ · 31", "–"], url:"https://ironmams.ch/", st:[], np:1, pg:"/ch/schools/iron-mams-kizomba.html"}
+    ],
+    "bern": [
+      {name:"Bachata Bern", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://bachata-bern.ch/", st:[], np:1, pg:"/ch/schools/bachata-bern.html"},
+      {name:"Salsaluca", sc:[0, 0, 0, 18.6, 6.9, 0.0], fx:["4,8 ★ · 45", "–"], url:"https://www.salsaluca.ch/", st:[], np:1, pg:"/ch/schools/salsaluca.html"},
+      {name:"Bailamos Salsa", sc:[0, 0, 0, 22.0, 9.3, 0.0], fx:["4,9 ★ · 174", "–"], url:"https://www.bailamos-salsa.ch/", st:[], np:1, pg:"/ch/schools/bailamos-salsa.html"},
+      {name:"Abailar Tanzschule", sc:[0, 0, 0, 18.6, 5.6, 0.0], fx:["5,0 ★ · 21", "–"], url:"https://www.abailar-bern.ch/", st:[], np:1, pg:"/ch/schools/abailar-tanzschule.html"},
+      {name:"Salsa Tanzschule Bern muévete", sc:[0, 0, 0, 17.6, 5.4, 0.0], fx:["4,9 ★ · 19", "–"], url:"https://muevete.ch/", st:[], np:1, pg:"/ch/schools/salsa-tanzschule-bern-muevete.html"},
+      {name:"Danzarte", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 42", "–"], url:"https://danzarte.ch/", st:[], np:1, pg:"/ch/schools/danzarte.html"},
+      {name:"Salsadancers", sc:[0, 0, 0, 18.3, 5.9, 0.0], fx:["4,9 ★ · 25", "–"], url:"https://salsadancers.ch/", st:[], np:1, pg:"/ch/schools/salsadancers.html"}
+    ],
+    "lausanne": [
+      {name:"Aliasalsa", sc:[0, 0, 0, 17.2, 5.1, 0.0], fx:["4,9 ★ · 16", "–"], url:"https://www.aliasalsa.ch/", st:[], np:1, pg:"/ch/schools/aliasalsa.html"},
+      {name:"Salsa y Dulzura", sc:[0, 0, 0, 20.8, 7.9, 0.0], fx:["4,9 ★ · 77", "–"], url:"https://www.salsalausanne.ch/", st:[], np:1, pg:"/ch/schools/salsa-y-dulzura.html"},
+      {name:"K'danse Lausanne", sc:[0, 0, 0, 21.6, 8.7, 0.0], fx:["4,9 ★ · 121", "–"], url:"https://www.kdanse.ch/", st:[], np:1, pg:"/ch/schools/k-danse-lausanne.html"},
+      {name:"Rumba y Salsa Lausanne", sc:[0, 0, 0, 20.4, 6.7, 0.0], fx:["5,0 ★ · 39", "–"], url:"https://rumbaysalsa.ch/", st:[], np:1, pg:"/ch/schools/rumba-y-salsa-lausanne.html"}
+    ],
+    "geneva": [
+      {name:"Bachata Geneva Dance Studio", sc:[0, 0, 0, 22.0, 7.8, 0.0], fx:["5,0 ★ · 73", "–"], url:"https://bachatagenevastudio.com/", st:[], np:1, pg:"/ch/schools/bachata-geneva-dance-studio.html"},
+      {name:"Kizomba Genève", sc:[0, 0, 0, 23.3, 9.0, 0.0], fx:["5,0 ★ · 144", "–"], url:"https://kizomba-geneve.com/", st:[], np:1, pg:"/ch/schools/kizomba-geneve.html"},
+      {name:"Salsa Geneva", sc:[0, 0, 0, 19.1, 6.5, 0.0], fx:["4,9 ★ · 35", "–"], url:"https://salsageneva.com/", st:[], np:1, pg:"/ch/schools/salsa-geneva.html"},
+      {name:"Salsastyle.ch Dance School", sc:[0, 0, 0, 22.9, 8.6, 0.0], fx:["5,0 ★ · 116", "–"], url:"https://salsastyle.ch/", st:[], np:1, pg:"/ch/schools/salsastyle-ch-dance-school.html"},
+      {name:"SalsaVirus", sc:[0, 0, 0, 20.8, 7.9, 0.0], fx:["4,9 ★ · 77", "–"], url:"https://beyoudancestudio.ch/", st:[], np:1, pg:"/ch/schools/salsavirus.html"},
+      {name:"BeSalsa Genève", sc:[0, 0, 0, 17.7, 5.0, 0.0], fx:["5,0 ★ · 15", "–"], url:"https://besalsa.com/", st:[], np:1, pg:"/ch/schools/besalsa-geneve.html"}
+    ],
+    "basel": [
+      {name:"Salsaflow Dance Company", sc:[0, 0, 0, 21.4, 8.5, 0.0], fx:["4,9 ★ · 107", "–"], url:"https://salsaflow-dc.com/", st:[], np:1, pg:"/ch/schools/salsaflow-dance-company.html"},
+      {name:"Bachata Basel", sc:[0, 0, 0, 20.6, 7.6, 0.0], fx:["4,9 ★ · 67", "–"], url:"https://bachata-basel.ch/", st:[], np:1, pg:"/ch/schools/bachata-basel.html"},
+      {name:"Linda Salsa Tanzschule", sc:[0, 0, 0, 21.6, 7.5, 0.0], fx:["5,0 ★ · 61", "–"], url:"https://lindasalsa.com/", st:[], np:1, pg:"/ch/schools/linda-salsa-tanzschule.html"}
+    ],
+    "winterthur": [
+      {name:"Salsa pa' mi", sc:[0, 0, 0, 22.6, 8.3, 0.0], fx:["5,0 ★ · 97", "–"], url:"https://salsapami.ch/", st:[], np:1, pg:"/ch/schools/salsa-pa-mi.html"}
+    ],
+    "luzern": [
+      {name:"Bachata Flow Lucerne", sc:[0, 0, 0, 21.0, 7.0, 0.0], fx:["5,0 ★ · 48", "–"], url:"https://bachataflow.ch/", st:[], np:1, pg:"/ch/schools/bachata-flow-lucerne.html"},
+      {name:"Salsabrosa Luzern", sc:[0, 0, 0, 18.0, 5.2, 0.0], fx:["5,0 ★ · 17", "–"], url:"https://salsabrosa.ch/", st:[], np:1, pg:"/ch/schools/salsabrosa-luzern.html"},
+      {name:"Salsa y mas", sc:[0, 0, 0, 15.0, 4.8, 0.0], fx:["4,6 ★ · 13", "–"], url:"https://salsaymas.ch/", st:[], np:1, pg:"/ch/schools/salsa-y-mas.html"}
+    ],
+    "biel": [
+      {name:"Salsa in Biel", sc:[0, 0, 0, 23.6, 9.5, 0.0], fx:["5,0 ★ · 191", "–"], url:"https://salsainbiel.ch/", st:[], np:1, pg:"/ch/schools/salsa-in-biel.html"},
+      {name:"Bailabien", sc:[0, 0, 0, 20.1, 7.2, 0.0], fx:["4,9 ★ · 53", "–"], url:"https://bailabien.ch/", st:[], np:1, pg:"/ch/schools/bailabien.html"},
+      {name:"Salsalto", sc:[0, 0, 0, 18.8, 5.7, 0.0], fx:["5,0 ★ · 22", "–"], url:"https://salsalto.ch/", st:[], np:1, pg:"/ch/schools/salsalto.html"},
+      {name:"Openair Salsa Biel", sc:[0, 0, 0, 20.3, 6.6, 0.0], fx:["5,0 ★ · 37", "–"], url:"https://openairsalsa-biel.ch/", st:[], np:1, pg:"/ch/schools/openair-salsa-biel.html"}
+    ],
+    "solothurn": [
+      {name:"Latinwelt", sc:[0, 0, 0, 19.6, 6.8, 0.0], fx:["4,9 ★ · 42", "–"], url:"https://latinwelt.net/", st:[], np:1, pg:"/ch/schools/latinwelt.html"}
+    ],
+    "schaffhausen": [
+      {name:"Tu Salsa Studio", sc:[0, 0, 0, 17.0, 5.0, 0.0], fx:["4,9 ★ · 15", "–"], url:"https://tusalsastudio.ch/", st:[], np:1, pg:"/ch/schools/tu-salsa-studio.html"}
+    ],
+    "fribourg": [
+      {name:"Saltango", sc:[0, 0, 0, 19.7, 6.2, 0.0], fx:["5,0 ★ · 30", "–"], url:"https://kizomba-freiburg.com/", st:[], np:1, pg:"/ch/schools/saltango.html"}
+    ],
+    "neuchatel": [
+      {name:"Latin Dancers 2R", sc:[0, 0, 0, 19.5, 6.1, 0.0], fx:["5,0 ★ · 28", "–"], url:"https://latindancers2r.ch/", st:[], np:1, pg:"/ch/schools/latin-dancers-2r.html"},
+      {name:"Neuchâtel Kizomba Connection", sc:[0, 0, 0, 18.4, 5.4, 0.0], fx:["5,0 ★ · 19", "–"], url:"https://www.google.com/maps/search/?api=1&query=Neuchâtel+Kizomba+Connection+Neuchâtel", st:[], np:1, pg:"/ch/schools/neuchatel-kizomba-connection.html"},
+      {name:"Mambomania Danceschool", sc:[0, 0, 0, 20.4, 6.7, 0.0], fx:["5,0 ★ · 39", "–"], url:"https://mambomania.ch/", st:[], np:1, pg:"/ch/schools/mambomania-danceschool.html"}
+    ],
+    "aarau": [
+      {name:"Salsa-Aarau", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 42", "–"], url:"https://salsa-aarau.ch/", st:[], np:1, pg:"/ch/schools/salsa-aarau.html"},
+      {name:"Ritmo Latino GmbH", sc:[0, 0, 0, 18.5, 5.5, 0.0], fx:["5,0 ★ · 20", "–"], url:"https://ritmolatinodance.ch/", st:[], np:1, pg:"/ch/schools/ritmo-latino-gmbh.html"}
+    ],
+    "baden": [
+      {name:"Salsabrosa GmbH", sc:[0, 0, 0, 21.1, 7.1, 0.0], fx:["5,0 ★ · 50", "–"], url:"https://salsabrosa.ch/", st:[], np:1, pg:"/ch/schools/salsabrosa-gmbh.html"},
+      {name:"Tanzschule Salsadom", sc:[0, 0, 0, 16.6, 5.2, 0.0], fx:["4,8 ★ · 17", "–"], url:"https://salsadom.ch/", st:[], np:1, pg:"/ch/schools/tanzschule-salsadom.html"},
+      {name:"Flame Latino", sc:[0, 0, 0, 20.5, 7.6, 0.0], fx:["4,9 ★ · 64", "–"], url:"https://flamelatino.ch/", st:[], np:1, pg:"/ch/schools/flame-latino.html"}
+    ],
+    "st-gallen": [
+      {name:"Dance Center St. Gallen", sc:[0, 0, 0, 13.2, 5.4, 0.0], fx:["4,3 ★ · 19", "–"], url:"https://tanz-zentrum.ch/", st:[], np:1, pg:"/ch/schools/dance-center-st-gallen.html"},
+      {name:"Tanzschule Anliker", sc:[0, 0, 0, 17.5, 5.3, 0.0], fx:["4,9 ★ · 18", "–"], url:"https://anliker-tanz.ch/", st:[], np:1, pg:"/ch/schools/tanzschule-anliker.html"},
+      {name:"AHA Tanzschule", sc:[0, 0, 0, 14.1, 6.4, 0.0], fx:["4,4 ★ · 33", "–"], url:"https://aha-tanzschule.ch/", st:[], np:1, pg:"/ch/schools/aha-tanzschule.html"}
+    ],
+    "lugano": [
+      {name:"DASA Dance Art & Sport Academy", sc:[0, 0, 0, 20.6, 7.6, 0.0], fx:["4,9 ★ · 67", "–"], url:"https://dasalugano.ch/", st:[], np:1, pg:"/ch/schools/dasa-dance-art-sport-academy.html"},
+      {name:"Diamonds Dance Company", sc:[0, 0, 0, 18.2, 6.6, 0.0], fx:["4,8 ★ · 37", "–"], url:"https://diamondsdancecompany.ch/", st:[], np:1, pg:"/ch/schools/diamonds-dance-company.html"}
+    ],
+    "zug": [
+      {name:"DanceMax Tanzschule", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://dancemax.ch/", st:[], np:1, pg:"/ch/schools/dancemax-tanzschule.html"},
+      {name:"Fusion Dance Studios Zug", sc:[0, 0, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://zug.fusiondancestudios.ch/", st:[], np:1, pg:"/ch/schools/fusion-dance-studios-zug.html"}
+    ],
+    "sion": [
+      {name:"Origami Dance", sc:[0, 0, 0, 21.2, 7.2, 0.0], fx:["5,0 ★ · 51", "–"], url:"https://origamidance.ch/", st:[], np:1, pg:"/ch/schools/origami-dance.html"}
+    ],
+    "budapest": [
+      {name:"Bachata Sensual - Hungary", sc:[0, 0, 0, 21.1, 8.2, 0.0], fx:["4,9 ★ · 90", "–"], url:"https://bachatasensual.hu/", st:[], np:1, pg:"/ee/schools/bachata-sensual-hungary.html"},
+      {name:"Salsa Core Tánciskola Keleti", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://salsacore.hu/", st:[], np:1, pg:"/ee/schools/salsa-core-tanciskola-keleti.html"},
+      {name:"Carmen Salsa Dance School", sc:[0, 0, 0, 14.0, 5.8, 0.0], fx:["4,4 ★ · 24", "–"], url:"https://carmen-dance.hu/", st:[], np:1, pg:"/ee/schools/carmen-salsa-dance-school.html"},
+      {name:"Next Generation Salsa", sc:[0, 0, 0, 19.9, 7.1, 0.0], fx:["4,9 ★ · 49", "–"], url:"https://ngsalsa.com/", st:[], np:1, pg:"/ee/schools/next-generation-salsa.html"},
+      {name:"LatinDanceArt Tánciskola", sc:[0, 0, 0, 20.4, 6.6, 0.0], fx:["5,0 ★ · 38", "–"], url:"https://latindanceart.hu/", st:[], np:1, pg:"/ee/schools/latindanceart-tanciskola.html"},
+      {name:"Bachata Club Hungary", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://bachataclubhungary.hu/", st:[], np:1, pg:"/ee/schools/bachata-club-hungary.html"},
+      {name:"I Dance Studio", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://idancestudio.hu/", st:[], np:1, pg:"/ee/schools/i-dance-studio.html"},
+      {name:"Salsa Con Timba", sc:[0, 0, 0, 19.5, 6.1, 0.0], fx:["5,0 ★ · 28", "–"], url:"https://salsacontimba.hu/", st:[], np:1, pg:"/ee/schools/salsa-con-timba.html"},
+      {name:"Tropical Salsa", sc:[0, 0, 0, 17.6, 6.0, 0.0], fx:["4,8 ★ · 27", "–"], url:"https://salsatropical.hu/", st:[], np:1, pg:"/ee/schools/tropical-salsa.html"}
+    ],
+    "bucharest": [
+      {name:"Salsa Factory", sc:[0, 0, 0, 21.3, 7.2, 0.0], fx:["5,0 ★ · 53", "–"], url:"https://salsafactory.ro/", st:[], np:1, pg:"/ee/schools/salsa-factory.html"},
+      {name:"DANCETIME.RO", sc:[0, 0, 0, 23.7, 9.6, 0.0], fx:["5,0 ★ · 202", "–"], url:"https://dancetime.ro/", st:[], np:1, pg:"/ee/schools/dancetime-ro.html"},
+      {name:"Con Sabor Dance School", sc:[0, 0, 0, 18.5, 8.2, 0.0], fx:["4,7 ★ · 94", "–"], url:"https://con-sabor.ro/", st:[], np:1, pg:"/ee/schools/con-sabor-dance-school.html"},
+      {name:"Global Latino Bucharest", sc:[0, 0, 0, 22.6, 8.3, 0.0], fx:["5,0 ★ · 97", "–"], url:"https://globallatino.ro/", st:[], np:1, pg:"/ee/schools/global-latino-bucharest.html"},
+      {name:"Ginga Bucharest", sc:[0, 0, 0, 14.0, 6.1, 0.0], fx:["4,4 ★ · 28", "–"], url:"https://ginga.ro/", st:[], np:1, pg:"/ee/schools/ginga-bucharest.html"}
+    ],
+    "cluj-napoca": [
+      {name:"BAILArte Dance School", sc:[0, 0, 0, 21.0, 8.0, 0.0], fx:["4,9 ★ · 84", "–"], url:"https://bailarte.ro/", st:[], np:1, pg:"/ee/schools/bailarte-dance-school.html"},
+      {name:"Caliente Dance Studio", sc:[0, 0, 0, 20.4, 7.5, 0.0], fx:["4,9 ★ · 61", "–"], url:"https://calientedancestudio.ro/", st:[], np:1, pg:"/ee/schools/caliente-dance-studio.html"},
+      {name:"Latin Beat Dance Company", sc:[0, 0, 0, 19.2, 5.9, 0.0], fx:["5,0 ★ · 25", "–"], url:"https://www.google.com/maps/search/?api=1&query=Latin+Beat+Dance+Company+Cluj-Napoca", st:[], np:1, pg:"/ee/schools/latin-beat-dance-company.html"}
+    ],
+    "timisoara": [
+      {name:"Salsa Rebels Timișoara", sc:[0, 0, 0, 22.5, 8.2, 0.0], fx:["5,0 ★ · 94", "–"], url:"https://salsarebels.ro/", st:[], np:1, pg:"/ee/schools/salsa-rebels-timisoara.html"},
+      {name:"Salsa Addicted", sc:[0, 0, 0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 57", "–"], url:"https://salsaaddicted.ro/", st:[], np:1, pg:"/ee/schools/salsa-addicted.html"},
+      {name:"Baila Na Ma Dance Company", sc:[0, 0, 0, 19.9, 6.3, 0.0], fx:["5,0 ★ · 32", "–"], url:"https://www.google.com/maps/search/?api=1&query=Baila+Na+Ma+Dance+Company+Timișoara", st:[], np:1, pg:"/ee/schools/baila-na-ma-dance-company.html"},
+      {name:"Salsa with Attitude", sc:[0, 0, 0, 20.6, 7.6, 0.0], fx:["4,9 ★ · 67", "–"], url:"https://salsawithattitude.ro/", st:[], np:1, pg:"/ee/schools/salsa-with-attitude.html"}
+    ],
+    "iasi": [
+      {name:"Enoa Dance Art", sc:[0, 0, 0, 21.6, 7.4, 0.0], fx:["5,0 ★ · 60", "–"], url:"https://www.google.com/maps/search/?api=1&query=Enoa+Dance+Art+Iași", st:[], np:1, pg:"/ee/schools/enoa-dance-art.html"},
+      {name:"Ikim Dance", sc:[0, 0, 0, 22.1, 9.5, 0.0], fx:["4,9 ★ · 186", "–"], url:"https://andreiikim.ro/", st:[], np:1, pg:"/ee/schools/ikim-dance.html"},
+      {name:"Pasito Latino", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://www.google.com/maps/search/?api=1&query=Pasito+Latino+Iași", st:[], np:1, pg:"/ee/schools/pasito-latino.html"}
+    ],
+    "brasov": [
+      {name:"Step in2 Salsa Dance Studio", sc:[0, 0, 0, 22.9, 8.6, 0.0], fx:["5,0 ★ · 113", "–"], url:"https://stepin2salsa.ro/", st:[], np:1, pg:"/ee/schools/step-in2-salsa-dance-studio.html"},
+      {name:"Latino Dance Brasov", sc:[0, 0, 0, 18.6, 5.6, 0.0], fx:["5,0 ★ · 21", "–"], url:"https://www.google.com/maps/search/?api=1&query=Latino+Dance+Brasov+Brașov", st:[], np:1, pg:"/ee/schools/latino-dance-brasov.html"}
+    ],
+    "oradea": [
+      {name:"Latino Vibes Dance Academy", sc:[0, 0, 0, 18.0, 6.4, 0.0], fx:["4,8 ★ · 33", "–"], url:"https://latinovibes.ro/", st:[], np:1, pg:"/ee/schools/latino-vibes-dance-academy.html"}
+    ],
+    "prague": [
+      {name:"Tanec v srdci", sc:[0, 0, 0, 18.9, 7.3, 0.0], fx:["4,8 ★ · 54", "–"], url:"https://tanecvsrdci.cz/", st:[], np:1, pg:"/ee/schools/tanec-v-srdci.html"},
+      {name:"Taneční škola La Tropical", sc:[0, 0, 0, 17.5, 9.4, 0.0], fx:["4,6 ★ · 184", "–"], url:"https://latropical.cz/", st:[], np:1, pg:"/ee/schools/tanecni-skola-la-tropical.html"},
+      {name:"RUBEN-DANCE Salsa Bachata", sc:[0, 0, 0, 18.2, 6.5, 0.0], fx:["4,8 ★ · 36", "–"], url:"https://ruben-dance.cz/", st:[], np:1, pg:"/ee/schools/ruben-dance-salsa-bachata.html"},
+      {name:"Salsa-Dance Praha", sc:[0, 0, 0, 19.7, 6.2, 0.0], fx:["5,0 ★ · 30", "–"], url:"https://salsa-dance.cz/", st:[], np:1, pg:"/ee/schools/salsa-dance-praha.html"},
+      {name:"Bohemian Salsa", sc:[0, 0, 0, 17.0, 5.0, 0.0], fx:["4,9 ★ · 15", "–"], url:"https://bohemiansalsa.cz/", st:[], np:1, pg:"/ee/schools/bohemian-salsa.html"},
+      {name:"Yatin & Nikol Bachata Praha", sc:[0, 0, 0, 19.5, 6.1, 0.0], fx:["5,0 ★ · 28", "–"], url:"https://yatinnikolbachata.com/", st:[], np:1, pg:"/ee/schools/yatin-nikol-bachata-praha.html"},
+      {name:"iSalsa", sc:[0, 0, 0, 21.9, 7.7, 0.0], fx:["5,0 ★ · 69", "–"], url:"https://isalsa.cz/", st:[], np:1, pg:"/ee/schools/isalsa.html"},
+      {name:"Studio BAILA", sc:[0, 0, 0, 20.7, 7.8, 0.0], fx:["4,9 ★ · 72", "–"], url:"https://studiobaila.cz/", st:[], np:1, pg:"/ee/schools/studio-baila.html"},
+      {name:"Salsaholics.cz", sc:[0, 0, 0, 14.5, 5.0, 0.0], fx:["4,5 ★ · 15", "–"], url:"https://salsaholics.cz/", st:[], np:1, pg:"/ee/schools/salsaholics-cz.html"}
+    ],
+    "brno": [
+      {name:"Cuban UP", sc:[0, 0, 0, 18.0, 5.2, 0.0], fx:["5,0 ★ · 17", "–"], url:"https://cubanup.cz/", st:[], np:1, pg:"/ee/schools/cuban-up.html"}
+    ],
+    "liberec": [
+      {name:"Bailame caribic", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://bailamecaribic.cz/", st:[], np:1, pg:"/ee/schools/bailame-caribic.html"}
+    ],
+    "bratislava": [
+      {name:"Dance Club Salsa by Norika", sc:[0, 0, 0, 22.4, 10.0, 0.0], fx:["4,9 ★ · 255", "–"], url:"https://norika.sk/", st:[], np:1, pg:"/ee/schools/dance-club-salsa-by-norika.html"},
+      {name:"Salsa, Son, Pasión", sc:[0, 0, 0, 17.7, 5.0, 0.0], fx:["5,0 ★ · 15", "–"], url:"https://salsason.dance/", st:[], np:1, pg:"/ee/schools/salsa-son-pasion.html"}
+    ],
+    "athens": [
+      {name:"Dance Moments Studio", sc:[0, 0, 0, 18.4, 8.1, 0.0], fx:["4,7 ★ · 89", "–"], url:"https://dancemoments.gr/", st:[], np:1, pg:"/ee/schools/dance-moments-studio.html"},
+      {name:"Xristina Dance Academy", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 45", "–"], url:"https://xristina-dance-academy.gr/", st:[], np:1, pg:"/ee/schools/xristina-dance-academy.html"},
+      {name:"The Art of Salsa", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://theartofsalsa.com/", st:[], np:1, pg:"/ee/schools/the-art-of-salsa.html"},
+      {name:"Bachata Vibe Academy", sc:[0, 0, 0, 18.4, 5.4, 0.0], fx:["5,0 ★ · 19", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bachata+Vibe+Academy+Athens", st:[], np:1, pg:"/ee/schools/bachata-vibe-academy.html"}
+    ],
+    "thessaloniki": [
+      {name:"Mambo Lab Dance Studio", sc:[0, 0, 0, 21.1, 8.1, 0.0], fx:["4,9 ★ · 89", "–"], url:"https://mambolab.gr/", st:[], np:1, pg:"/ee/schools/mambo-lab-dance-studio.html"},
+      {name:"Afrocuban Dance School", sc:[0, 0, 0, 21.6, 8.7, 0.0], fx:["4,9 ★ · 123", "–"], url:"https://afrocuban-danceschool.com/", st:[], np:1, pg:"/ee/schools/afrocuban-dance-school.html"},
+      {name:"Art e Danza Cuban Project", sc:[0, 0, 0, 21.1, 7.1, 0.0], fx:["5,0 ★ · 50", "–"], url:"https://artedanzacubanproject.com/", st:[], np:1, pg:"/ee/schools/art-e-danza-cuban-project.html"}
+    ],
+    "patras": [
+      {name:"Salsa Lab Dance Studio", sc:[0, 0, 0, 19.7, 6.2, 0.0], fx:["5,0 ★ · 30", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+Lab+Dance+Studio+Patras", st:[], np:1, pg:"/ee/schools/salsa-lab-dance-studio.html"}
+    ],
+    "zagreb": [
+      {name:"LaTina Dance Studio", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://www.google.com/maps/search/?api=1&query=LaTina+Dance+Studio+Zagreb", st:[], np:1, pg:"/ee/schools/latina-dance-studio.html"},
+      {name:"Bachata Inspire", sc:[0, 0, 0, 22.3, 9.8, 0.0], fx:["4,9 ★ · 225", "–"], url:"https://bachatainspire.com/", st:[], np:1, pg:"/ee/schools/bachata-inspire.html"},
+      {name:"Salsa de Fuego", sc:[0, 0, 0, 21.0, 7.0, 0.0], fx:["5,0 ★ · 48", "–"], url:"https://salsadefuego.net/", st:[], np:1, pg:"/ee/schools/salsa-de-fuego.html"},
+      {name:"Plesni centar Salsa", sc:[0, 0, 0, 23.3, 9.0, 0.0], fx:["5,0 ★ · 143", "–"], url:"https://salsa.hr/", st:[], np:1, pg:"/ee/schools/plesni-centar-salsa.html"},
+      {name:"Bachata Zagreb by Sensual Art Studio", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://sensual-art-studio.com/", st:[], np:1, pg:"/ee/schools/bachata-zagreb-by-sensual-art-studio.html"},
+      {name:"Salsa Fusion by Natasha", sc:[0, 0, 0, 19.5, 6.1, 0.0], fx:["5,0 ★ · 28", "–"], url:"https://salsafusionstudio.com/", st:[], np:1, pg:"/ee/schools/salsa-fusion-by-natasha.html"}
+    ],
+    "split": [
+      {name:"Dance Center Split", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dance+Center+Split+Split", st:[], np:1, pg:"/ee/schools/dance-center-split.html"},
+      {name:"Salsa Studio Split", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://salsastudiosplit.hr/", st:[], np:1, pg:"/ee/schools/salsa-studio-split.html"}
+    ],
+    "rijeka": [
+      {name:"Plesni centar Salsamor", sc:[0, 0, 0, 18.8, 5.7, 0.0], fx:["5,0 ★ · 22", "–"], url:"https://www.google.com/maps/search/?api=1&query=Plesni+centar+Salsamor+Rijeka", st:[], np:1, pg:"/ee/schools/plesni-centar-salsamor.html"}
+    ],
+    "belgrade": [
+      {name:"Timbao Salsa School", sc:[0, 0, 0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 55", "–"], url:"https://timbaocubano.rs/", st:[], np:1, pg:"/ee/schools/timbao-salsa-school.html"}
+    ],
+    "novi-sad": [
+      {name:"Ritmos Del Mundo", sc:[0, 0, 0, 20.9, 7.9, 0.0], fx:["4,9 ★ · 79", "–"], url:"https://ritmosdelmundo.rs/", st:[], np:1, pg:"/ee/schools/ritmos-del-mundo.html"},
+      {name:"Faith Connect Dance Academy", sc:[0, 0, 0, 22.4, 8.1, 0.0], fx:["5,0 ★ · 87", "–"], url:"https://faithconnectdancestudio.com/", st:[], np:1, pg:"/ee/schools/faith-connect-dance-academy.html"},
+      {name:"Plesni klub Ritmo Latino", sc:[0, 0, 0, 19.5, 6.1, 0.0], fx:["5,0 ★ · 28", "–"], url:"https://www.google.com/maps/search/?api=1&query=Plesni+klub+Ritmo+Latino+Novi+Sad", st:[], np:1, pg:"/ee/schools/plesni-klub-ritmo-latino.html"}
+    ],
+    "ljubljana": [
+      {name:"Cubana Ljubljana", sc:[0, 0, 0, 18.3, 5.9, 0.0], fx:["4,9 ★ · 25", "–"], url:"https://cubana.si/", st:[], np:1, pg:"/ee/schools/cubana-ljubljana.html"}
+    ],
+    "sofia": [
+      {name:"Ritmo Dance Studio", sc:[0, 0, 0, 22.2, 9.7, 0.0], fx:["4,9 ★ · 208", "–"], url:"https://ritmo.bg/", st:[], np:1, pg:"/ee/schools/ritmo-dance-studio.html"},
+      {name:"Salsa Con Miguel", sc:[0, 0, 0, 18.9, 7.2, 0.0], fx:["4,8 ★ · 53", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+Con+Miguel+Sofia", st:[], np:1, pg:"/ee/schools/salsa-con-miguel.html"},
+      {name:"Latin Force Dance Studio", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://grafik.latinforce.bg/", st:[], np:1, un:1, pg:"/ee/schools/latin-force-dance-studio.html"},
+      {name:"PaLante Dance Club", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.palante.eu/en/groups/salsa-bachata-beginners-tuesday", st:[], np:1, un:1, pg:"/ee/schools/palante-dance-club.html"},
+      {name:"Pambos Dancing Center", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://pambosalsa.com/", st:[], np:1, un:1, pg:"/ee/schools/pambos-dancing-center.html"},
+      {name:"Paletro Dance Spot", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/event/bulgaria/sofia/salsa-bachata-classes-at-paletro-dance-spot/", st:[], np:1, un:1, pg:"/ee/schools/paletro-dance-spot.html"},
+      {name:"Dance Station Sofia", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/event/bulgaria/sofia/salsa-bachata-classes-at-dance-station-sofia/", st:[], np:1, un:1, pg:"/ee/schools/dance-station-sofia.html"},
+      {name:"Salsa Diva", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/event/bulgaria/sofia/salsa-la-style-bachata-classes-at-salsa-diva/", st:[], np:1, un:1, pg:"/ee/schools/salsa-diva.html"}
+    ],
+    "plovdiv": [
+      {name:"Salsa Maina", sc:[0, 0, 0, 19.6, 6.8, 0.0], fx:["4,9 ★ · 42", "–"], url:"https://salsamaina.com/", st:[], np:1, pg:"/ee/schools/salsa-maina.html"},
+      {name:"Bachata Sense Plovdiv", sc:[0, 0, 0, 17.5, 4.9, 0.0], fx:["5,0 ★ · 14", "–"], url:"https://bachatasense.com/", st:[], np:1, pg:"/ee/schools/bachata-sense-plovdiv.html"},
+      {name:"Art Center Alejandro", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/event/bulgaria/plovdiv/salsa-bachata-classes-at-art-center-alejandro/", st:[], np:1, un:1, pg:"/ee/schools/art-center-alejandro.html"}
+    ],
+    "varna": [
+      {name:"Havana Social Club Varna", sc:[0, 0, 0, 20.7, 6.8, 0.0], fx:["5,0 ★ · 43", "–"], url:"https://havanasocialclub.bg/", st:[], np:1, pg:"/ee/schools/havana-social-club-varna.html"},
+      {name:"Sunny Dance Studio", sc:[0, 0, 0, 21.1, 8.1, 0.0], fx:["4,9 ★ · 89", "–"], url:"https://sunnysalsa.com/", st:[], np:1, pg:"/ee/schools/sunny-dance-studio.html"},
+      {name:"Dance Studio Lets Dance", sc:[0, 0, 0, 17.0, 5.0, 0.0], fx:["4,9 ★ · 15", "–"], url:"https://letsdance.bg/", st:[], np:1, pg:"/ee/schools/dance-studio-lets-dance.html"},
+      {name:"Salsa Club Malambo Varna", sc:[0, 0, 0, 18.6, 6.9, 0.0], fx:["4,8 ★ · 44", "–"], url:"https://salsa-clubmalambo.com/", st:[], np:1, pg:"/ee/schools/salsa-club-malambo-varna.html"},
+      {name:"Brand Dance Varna", sc:[0, 0, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://branddancestudio.com/", st:[], np:1, pg:"/ee/schools/brand-dance-varna.html"}
+    ],
+    "vilnius": [
+      {name:"Bachata Vilnius", sc:[0, 0, 0, 18.2, 6.5, 0.0], fx:["4,8 ★ · 36", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bachata+Vilnius+Vilnius", st:[], np:1, pg:"/ee/schools/bachata-vilnius.html"},
+      {name:"Bachata Academy Vilnius Saltare", sc:[0, 0, 0, 20.4, 6.7, 0.0], fx:["5,0 ★ · 39", "–"], url:"https://saltare.lt/", st:[], np:1, pg:"/ee/schools/bachata-academy-vilnius-saltare.html"},
+      {name:"Salsa One", sc:[0, 0, 0, 19.8, 6.3, 0.0], fx:["5,0 ★ · 31", "–"], url:"https://salsaone.lt/", st:[], np:1, pg:"/ee/schools/salsa-one.html"},
+      {name:"SalsaSisters dance school", sc:[0, 0, 0, 17.3, 5.2, 0.0], fx:["4,9 ★ · 17", "–"], url:"https://salsasisters.lt/", st:[], np:1, pg:"/ee/schools/salsasisters-dance-school.html"},
+      {name:"HavanaSi", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://havanasi.lt/", st:[], np:1, pg:"/ee/schools/havanasi.html"},
+      {name:"Vailamos Salsa", sc:[0, 0, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://vailamos.lt/", st:[], np:1, pg:"/ee/schools/vailamos-salsa.html"},
+      {name:"Cuban Energy", sc:[0, 0, 0, 19.1, 6.4, 0.0], fx:["4,9 ★ · 34", "–"], url:"https://www.google.com/maps/search/?api=1&query=Cuban+Energy+Vilnius", st:[], np:1, pg:"/ee/schools/cuban-energy.html"}
+    ],
+    "kaunas": [
+      {name:"Salsa Kaunas", sc:[0, 0, 0, 19.8, 7.0, 0.0], fx:["4,9 ★ · 47", "–"], url:"https://salsakaune.lt/", st:[], np:1, pg:"/ee/schools/salsa-kaunas.html"}
+    ],
+    "riga": [
+      {name:"Bachata Riga", sc:[0, 0, 0, 18.3, 7.9, 0.0], fx:["4,7 ★ · 78", "–"], url:"https://bachatariga.lv/", st:[], np:1, pg:"/ee/schools/bachata-riga.html"},
+      {name:"SENSUAL Riga", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://www.google.com/maps/search/?api=1&query=SENSUAL+Riga+Riga", st:[], np:1, pg:"/ee/schools/sensual-riga.html"}
+    ],
+    "tallinn": [
+      {name:"Bachata Studio Tallinn", sc:[0, 0, 0, 22.0, 9.4, 0.0], fx:["4,9 ★ · 177", "–"], url:"https://bachatastudio.ee/", st:[], np:1, pg:"/ee/schools/bachata-studio-tallinn.html"},
+      {name:"LATINTIME Salsa & Bachata Studio", sc:[0, 0, 0, 20.4, 7.5, 0.0], fx:["4,9 ★ · 61", "–"], url:"https://latintime.ee/", st:[], np:1, pg:"/ee/schools/latintime-salsa-bachata-studio.html"},
+      {name:"Tallinn Salsa Academy", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://tallinnsalsa.ee/", st:[], np:1, pg:"/ee/schools/tallinn-salsa-academy.html"},
+      {name:"Havanamoderna", sc:[0, 0, 0, 19.5, 6.1, 0.0], fx:["5,0 ★ · 28", "–"], url:"https://havanamoderna.com/", st:[], np:1, pg:"/ee/schools/havanamoderna.html"}
+    ],
+    "tartu": [
+      {name:"Tantsustuudio Latin Passion", sc:[0, 0, 0, 18.3, 5.9, 0.0], fx:["4,9 ★ · 25", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tantsustuudio+Latin+Passion+Tartu", st:[], np:1, pg:"/ee/schools/tantsustuudio-latin-passion.html"}
+    ],
+    "kyiv": [
+      {name:"Lago Family", sc:[0, 0, 0, 22.3, 9.9, 0.0], fx:["4,9 ★ · 241", "–"], url:"https://lagofamily.com.ua/", st:[], np:1, pg:"/ee/schools/lago-family.html"},
+      {name:"SalsaBO", sc:[0, 0, 0, 21.2, 8.3, 0.0], fx:["4,9 ★ · 95", "–"], url:"https://salsabo.com/", st:[], np:1, pg:"/ee/schools/salsabo.html"},
+      {name:"Bachata Blanca Kyiv", sc:[0, 0, 0, 23.9, 9.9, 0.0], fx:["5,0 ★ · 238", "–"], url:"https://bachatablanca.com.ua/", st:[], np:1, pg:"/ee/schools/bachata-blanca-kyiv.html"},
+      {name:"LCD Bachata School", sc:[0, 0, 0, 17.6, 5.4, 0.0], fx:["4,9 ★ · 19", "–"], url:"https://www.google.com/maps/search/?api=1&query=LCD+Bachata+School+Kyiv", st:[], np:1, pg:"/ee/schools/lcd-bachata-school.html"},
+      {name:"CubanoBoom", sc:[0, 0, 0, 23.1, 8.8, 0.0], fx:["5,0 ★ · 126", "–"], url:"https://cubanoboom.kiev.ua/", st:[], np:1, pg:"/ee/schools/cubanoboom.html"},
+      {name:"Ola Dance Studio", sc:[0, 0, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://oladance.kyiv.ua/", st:[], np:1, pg:"/ee/schools/ola-dance-studio.html"},
+      {name:"Kizomba & Bachata Kyiv by Tymur", sc:[0, 0, 0, 17.3, 4.8, 0.0], fx:["5,0 ★ · 13", "–"], url:"https://www.google.com/maps/search/?api=1&query=Kizomba+&+Bachata+Kyiv+by+Tymur+Kyiv", st:[], np:1, pg:"/ee/schools/kizomba-bachata-kyiv-by-tymur.html"},
+      {name:"Mi Corazon Dance School Kyiv", sc:[0, 0, 0, 18.6, 5.6, 0.0], fx:["5,0 ★ · 21", "–"], url:"https://danceschool.kyiv.ua/", st:[], np:1, pg:"/ee/schools/mi-corazon-dance-school-kyiv.html"},
+      {name:"Baila Club Kyiv", sc:[0, 0, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://www.google.com/maps/search/?api=1&query=Baila+Club+Kyiv+Kyiv", st:[], np:1, pg:"/ee/schools/baila-club-kyiv.html"},
+      {name:"Alma Bachata", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://almabachata.com/", st:[], np:1, pg:"/ee/schools/alma-bachata.html"},
+      {name:"BIG Dance", sc:[0, 0, 0, 19.1, 9.6, 0.0], fx:["4,7 ★ · 203", "–"], url:"https://bigdance.com.ua/", st:[], np:1, pg:"/ee/schools/big-dance.html"},
+      {name:"CasaDeRitmo Salsa School", sc:[0, 0, 0, 16.2, 6.7, 0.0], fx:["4,6 ★ · 39", "–"], url:"https://casaderitmo.com/", st:[], np:1, pg:"/ee/schools/casaderitmo-salsa-school.html"},
+      {name:"Salsa Hub Kyiv", sc:[0, 0, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+Hub+Kyiv+Kyiv", st:[], np:1, pg:"/ee/schools/salsa-hub-kyiv.html"},
+      {name:"Ravado Studio", sc:[0, 0, 0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 59", "–"], url:"https://www.google.com/maps/search/?api=1&query=Ravado+Studio+Kyiv", st:[], np:1, pg:"/ee/schools/ravado-studio.html"},
+      {name:"Raices Dance School", sc:[0, 0, 0, 17.1, 5.6, 0.0], fx:["4,8 ★ · 21", "–"], url:"https://www.google.com/maps/search/?api=1&query=Raices+Dance+School+Kyiv", st:[], np:1, pg:"/ee/schools/raices-dance-school.html"},
+      {name:"Tropikana Dance Studio", sc:[0, 0, 0, 19.2, 5.9, 0.0], fx:["5,0 ★ · 25", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tropikana+Dance+Studio+Kyiv", st:[], np:1, pg:"/ee/schools/tropikana-dance-studio.html"},
+      {name:"Selfbalance Dance Studio", sc:[0, 0, 0, 17.3, 5.2, 0.0], fx:["4,9 ★ · 17", "–"], url:"https://selfbalance.com.ua/", st:[], np:1, pg:"/ee/schools/selfbalance-dance-studio.html"},
+      {name:"KvartalDance", sc:[0, 0, 0, 17.1, 5.6, 0.0], fx:["4,8 ★ · 21", "–"], url:"https://kvartaldance.com.ua/", st:[], np:1, pg:"/ee/schools/kvartaldance.html"},
+      {name:"Fola Dance Studio", sc:[0, 0, 0, 20.0, 6.4, 0.0], fx:["5,0 ★ · 33", "–"], url:"https://www.google.com/maps/search/?api=1&query=Fola+Dance+Studio+Kyiv", st:[], np:1, pg:"/ee/schools/fola-dance-studio.html"},
+      {name:"Salsa Swing Kyiv", sc:[0, 0, 0, 19.9, 7.0, 0.0], fx:["4,9 ★ · 48", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+Swing+Kyiv+Kyiv", st:[], np:1, pg:"/ee/schools/salsa-swing-kyiv.html"},
+      {name:"DePo Dance Family", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/event/ukraine/kyiv/salsa-classes-at-depo-dance-family-kyiv/", st:[], np:1, un:1, pg:"/ee/schools/depo-dance-family.html"}
+    ],
+    "lviv": [
+      {name:"Bachata Dance School Lviv", sc:[0, 0, 0, 19.2, 7.5, 0.0], fx:["4,8 ★ · 61", "–"], url:"https://bdslviv.org.ua/", st:[], np:1, pg:"/ee/schools/bachata-dance-school-lviv.html"},
+      {name:"Salsa Club Lviv", sc:[0, 0, 0, 19.6, 8.0, 0.0], fx:["4,8 ★ · 82", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+Club+Lviv+Lviv", st:[], np:1, pg:"/ee/schools/salsa-club-lviv.html"},
+      {name:"La Salsa Lviv", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 45", "–"], url:"https://www.google.com/maps/search/?api=1&query=La+Salsa+Lviv+Lviv", st:[], np:1, pg:"/ee/schools/la-salsa-lviv.html"}
+    ],
+    "kharkiv": [
+      {name:"Salsa Club Kharkiv", sc:[0, 0, 0, 19.5, 6.8, 0.0], fx:["4,9 ★ · 41", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+Club+Kharkiv+Kharkiv", st:[], np:1, pg:"/ee/schools/salsa-club-kharkiv.html"},
+      {name:"E_VIVA Dance School", sc:[0, 0, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://www.google.com/maps/search/?api=1&query=E_VIVA+Dance+School+Kharkiv", st:[], np:1, pg:"/ee/schools/e-viva-dance-school.html"},
+      {name:"Latina Club Kharkiv", sc:[0, 0, 0, 17.0, 5.0, 0.0], fx:["4,9 ★ · 15", "–"], url:"https://latinaclub.org/", st:[], np:1, pg:"/ee/schools/latina-club-kharkiv.html"},
+      {name:"Alma Besso", sc:[0, 0, 0, 18.7, 6.2, 0.0], fx:["4,9 ★ · 30", "–"], url:"https://www.google.com/maps/search/?api=1&query=Alma+Besso+Kharkiv", st:[], np:1, pg:"/ee/schools/alma-besso.html"},
+      {name:"Salsa Loca Kharkiv", sc:[0, 0, 0, 18.8, 5.7, 0.0], fx:["5,0 ★ · 22", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+Loca+Kharkiv+Kharkiv", st:[], np:1, pg:"/ee/schools/salsa-loca-kharkiv.html"},
+      {name:"Latin Motion", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/event/ukraine/kharkiv/salsa-and-bachata-classes-at-latin-motion-kharkiv/", st:[], np:1, un:1, pg:"/ee/schools/latin-motion.html"}
+    ],
+    "dnipro": [
+      {name:"SalsaTusa", sc:[0, 0, 0, 19.2, 6.5, 0.0], fx:["4,9 ★ · 36", "–"], url:"https://www.google.com/maps/search/?api=1&query=SalsaTusa+Dnipro", st:[], np:1, pg:"/ee/schools/salsatusa.html"},
+      {name:"Mova Tila", sc:[0, 0, 0, 18.6, 6.9, 0.0], fx:["4,8 ★ · 44", "–"], url:"https://www.google.com/maps/search/?api=1&query=Mova+Tila+Dnipro", st:[], np:1, pg:"/ee/schools/mova-tila.html"},
+      {name:"Fayna Salsa", sc:[0, 0, 0, 18.5, 6.8, 0.0], fx:["4,8 ★ · 43", "–"], url:"https://www.google.com/maps/search/?api=1&query=Fayna+Salsa+Dnipro", st:[], np:1, pg:"/ee/schools/fayna-salsa.html"}
+    ],
+    "chisinau": [
+      {name:"Flamingo Dance School", sc:[0, 0, 0, 22.1, 9.5, 0.0], fx:["4,9 ★ · 186", "–"], url:"https://flamingo-dance.md/", st:[], np:1, pg:"/ee/schools/flamingo-dance-school.html"},
+      {name:"Select Academy", sc:[0, 0, 0, 17.1, 4.6, 0.0], fx:["5,0 ★ · 12", "–"], url:"https://www.google.com/maps/search/?api=1&query=Select+Academy+Chișinău", st:[], np:1, pg:"/ee/schools/select-academy.html"},
+      {name:"Passion Dance", sc:[0, 0, 0, 19.3, 6.6, 0.0], fx:["4,9 ★ · 38", "–"], url:"https://dansuri.md/", st:[], np:1, pg:"/ee/schools/passion-dance.html"},
+      {name:"Dallas Dance Studio", sc:[0, 0, 0, 14.3, 7.7, 0.0], fx:["4,4 ★ · 71", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dallas+Dance+Studio+Chișinău", st:[], np:1, pg:"/ee/schools/dallas-dance-studio.html"}
+    ],
+    "tbilisi": [
+      {name:"Salsa Sunrise Tbilisi", sc:[0, 0, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 40", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+Sunrise+Tbilisi+Tbilisi", st:[], np:1, pg:"/ee/schools/salsa-sunrise-tbilisi.html"}
+    ],
+    "yerevan": [
+      {name:"Baila Bachata Yerevan", sc:[0, 0, 0, 18.9, 7.2, 0.0], fx:["4,8 ★ · 53", "–"], url:"https://www.google.com/maps/search/?api=1&query=Baila+Bachata+Yerevan+Yerevan", st:[], np:1, pg:"/ee/schools/baila-bachata-yerevan.html"}
+    ],
+    "tirana": [
+      {name:"Te Latini Dance Center", sc:[0, 0, 0, 16.1, 6.5, 0.0], fx:["4,6 ★ · 36", "–"], url:"https://www.google.com/maps/search/?api=1&query=Te+Latini+Dance+Center+Tirana", st:[], np:1, pg:"/ee/schools/te-latini-dance-center.html"},
+      {name:"Via Latina Dance", sc:[0, 0, 0, 22.6, 8.3, 0.0], fx:["5,0 ★ · 98", "–"], url:"https://www.google.com/maps/search/?api=1&query=Via+Latina+Dance+Tirana", st:[], np:1, pg:"/ee/schools/via-latina-dance.html"}
+    ],
+    "banja-luka": [
+      {name:"Salsa Puerto", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 45", "–"], url:"https://salsabanjaluka.com/", st:[], np:1, pg:"/ee/schools/salsa-puerto.html"}
+    ],
+    "podgorica": [
+      {name:"Plesni Klub Sonrisa", sc:[0, 0, 0, 13.2, 4.9, 0.0], fx:["4,3 ★ · 14", "–"], url:"https://www.google.com/maps/search/?api=1&query=Plesni+Klub+Sonrisa+Podgorica", st:[], np:1, pg:"/ee/schools/plesni-klub-sonrisa.html"}
+    ],
+    "ostrava": [
+      {name:"MG Dance Ostrava", sc:[0, 0, 0, 16.1, 4.8, 0.0], fx:["4,8 ★ · 13", "–"], url:"https://mgdance.cz/", st:[], np:1, pg:"/ee/schools/mg-dance-ostrava.html"}
+    ],
+    "plzen": [
+      {name:"Tanec v Plzni", sc:[0, 0, 0, 22.8, 8.5, 0.0], fx:["5,0 ★ · 106", "–"], url:"https://tanecvplzni.cz/", st:[], np:1, pg:"/ee/schools/tanec-v-plzni.html"}
+    ],
+    "olomouc": [
+      {name:"Taneční Studio Mango", sc:[0, 0, 0, 15.9, 5.1, 0.0], fx:["4,7 ★ · 16", "–"], url:"https://ts-mango.cz/", st:[], np:1, pg:"/ee/schools/tanecni-studio-mango.html"},
+      {name:"331 Dance Studio", sc:[0, 0, 0, 17.6, 7.0, 0.0], fx:["4,7 ★ · 47", "–"], url:"https://331.cz/", st:[], np:1, pg:"/ee/schools/331-dance-studio.html"}
+    ],
+    "hradec-kralove": [
+      {name:"Katy Bedliva Dance Projects", sc:[0, 0, 0, 18.8, 5.7, 0.0], fx:["5,0 ★ · 22", "–"], url:"https://katybedliva.cz/", st:[], np:1, pg:"/ee/schools/katy-bedliva-dance-projects.html"},
+      {name:"Dance School Bonstep", sc:[0, 0, 0, 17.5, 7.0, 0.0], fx:["4,7 ★ · 46", "–"], url:"https://bonstep.cz/", st:[], np:1, pg:"/ee/schools/dance-school-bonstep.html"}
+    ],
+    "ceske-budejovice": [
+      {name:"Lastdanceteam", sc:[0, 0, 0, 16.9, 6.3, 0.0], fx:["4,7 ★ · 31", "–"], url:"https://lastdance.cz/", st:[], np:1, pg:"/ee/schools/lastdanceteam.html"}
+    ],
+    "banska-bystrica": [
+      {name:"Tanečná Škola KDANCE", sc:[0, 0, 0, 21.3, 8.4, 0.0], fx:["4,9 ★ · 100", "–"], url:"https://kdance.sk/", st:[], np:1, pg:"/ee/schools/tanecna-skola-kdance.html"},
+      {name:"University Dance Center", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 42", "–"], url:"https://unidc.sk/", st:[], np:1, pg:"/ee/schools/university-dance-center.html"}
+    ],
+    "nitra": [
+      {name:"House of Dance", sc:[0, 0, 0, 18.2, 7.8, 0.0], fx:["4,7 ★ · 72", "–"], url:"https://houseofdance.sk/", st:[], np:1, pg:"/ee/schools/house-of-dance.html"},
+      {name:"NEXUM Promenada", sc:[0, 0, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 40", "–"], url:"https://tsnexum.sk/", st:[], np:1, pg:"/ee/schools/nexum-promenada.html"},
+      {name:"N Dance Company", sc:[0, 0, 0, 19.8, 7.0, 0.0], fx:["4,9 ★ · 47", "–"], url:"https://www.google.com/maps/search/?api=1&query=N+Dance+Company+Nitra", st:[], np:1, pg:"/ee/schools/n-dance-company.html"}
+    ],
+    "debrecen": [
+      {name:"Euphoria Dance Studio", sc:[0, 0, 0, 19.7, 6.2, 0.0], fx:["5,0 ★ · 30", "–"], url:"https://tanc-vilag.hu/", st:[], np:1, pg:"/ee/schools/euphoria-dance-studio.html"}
+    ],
+    "szeged": [
+      {name:"SzegeDance", sc:[0, 0, 0, 18.9, 6.3, 0.0], fx:["4,9 ★ · 32", "–"], url:"https://szegedance.hu/", st:[], np:1, pg:"/ee/schools/szegedance.html"},
+      {name:"Dancefloor Szeged", sc:[0, 0, 0, 19.6, 6.8, 0.0], fx:["4,9 ★ · 42", "–"], url:"https://dancefloorszeged.hu/", st:[], np:1, pg:"/ee/schools/dancefloor-szeged.html"},
+      {name:"X-Treme Tánciskola", sc:[0, 0, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 40", "–"], url:"https://xtremetanciskola.com/", st:[], np:1, pg:"/ee/schools/x-treme-tanciskola.html"}
+    ],
+    "pecs": [
+      {name:"Fordan Tánccentrum", sc:[0, 0, 0, 18.7, 8.7, 0.0], fx:["4,7 ★ · 124", "–"], url:"https://fordantanccentrum.hu/", st:[], np:1, pg:"/ee/schools/fordan-tanccentrum.html"},
+      {name:"Jdance Tánciskola", sc:[0, 0, 0, 19.7, 6.2, 0.0], fx:["5,0 ★ · 30", "–"], url:"https://tanciskolapecs.hu/", st:[], np:1, pg:"/ee/schools/jdance-tanciskola.html"}
+    ],
+    "gyor": [
+      {name:"El Paso Dance & Event Center", sc:[0, 0, 0, 17.9, 7.4, 0.0], fx:["4,7 ★ · 60", "–"], url:"https://elpaso.hu/", st:[], np:1, pg:"/ee/schools/el-paso-dance-event-center.html"},
+      {name:"Flames Tánc- és Mozgásstúdió", sc:[0, 0, 0, 20.4, 7.5, 0.0], fx:["4,9 ★ · 63", "–"], url:"https://flamesstudio.hu/", st:[], np:1, pg:"/ee/schools/flames-tanc-es-mozgasstudio.html"},
+      {name:"Home of Dance", sc:[0, 0, 0, 15.9, 5.2, 0.0], fx:["4,7 ★ · 17", "–"], url:"https://homeofdance.hu/", st:[], np:1, pg:"/ee/schools/home-of-dance.html"}
+    ],
+    "sibiu": [
+      {name:"Hugo Dance Academy", sc:[0, 0, 0, 20.1, 7.3, 0.0], fx:["4,9 ★ · 54", "–"], url:"https://hugodanceacademy.ro/", st:[], np:1, pg:"/ee/schools/hugo-dance-academy.html"}
+    ],
+    "craiova": [
+      {name:"Salsa Dynamyk Dance Club", sc:[0, 0, 0, 17.4, 9.1, 0.0], fx:["4,6 ★ · 150", "–"], url:"https://www.google.com/maps/search/?api=1&query=Salsa+Dynamyk+Dance+Club+Craiova", st:[], np:1, pg:"/ee/schools/salsa-dynamyk-dance-club.html"},
+      {name:"Viva Dance Club", sc:[0, 0, 0, 18.8, 7.2, 0.0], fx:["4,8 ★ · 51", "–"], url:"https://www.google.com/maps/search/?api=1&query=Viva+Dance+Club+Craiova", st:[], np:1, pg:"/ee/schools/viva-dance-club.html"}
+    ],
+    "galati": [
+      {name:"The Latin Club Galați", sc:[0, 0, 0, 17.2, 5.1, 0.0], fx:["4,9 ★ · 16", "–"], url:"https://www.google.com/maps/search/?api=1&query=The+Latin+Club+Galați+Galați", st:[], np:1, pg:"/ee/schools/the-latin-club-galati.html"},
+      {name:"Republica Latino", sc:[0, 0, 0, 16.0, 4.6, 0.0], fx:["4,8 ★ · 12", "–"], url:"https://www.google.com/maps/search/?api=1&query=Republica+Latino+Galați", st:[], np:1, pg:"/ee/schools/republica-latino.html"}
+    ],
+    "ploiesti": [
+      {name:"Latin Love Dance School", sc:[0, 0, 0, 16.9, 5.4, 0.0], fx:["4,8 ★ · 19", "–"], url:"https://latinlovedanceschool.ro/", st:[], np:1, pg:"/ee/schools/latin-love-dance-school.html"},
+      {name:"Elegante Dance Academy", sc:[0, 0, 0, 20.6, 6.8, 0.0], fx:["5,0 ★ · 42", "–"], url:"https://www.google.com/maps/search/?api=1&query=Elegante+Dance+Academy+Ploiești", st:[], np:1, pg:"/ee/schools/elegante-dance-academy.html"}
+    ],
+    "burgas": [
+      {name:"Dance Studio 29", sc:[0, 0, 0, 20.1, 7.2, 0.0], fx:["4,9 ★ · 53", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dance+Studio+29+Burgas", st:[], np:1, pg:"/ee/schools/dance-studio-29.html"}
+    ],
+    "stara-zagora": [
+      {name:"Dance Studio Caribe", sc:[0, 0, 0, 15.0, 4.8, 0.0], fx:["4,6 ★ · 13", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dance+Studio+Caribe+Stara+Zagora", st:[], np:1, pg:"/ee/schools/dance-studio-caribe.html"}
+    ],
+    "nis": [
+      {name:"Konstantin Plesni Centar", sc:[0, 0, 0, 23.0, 8.7, 0.0], fx:["5,0 ★ · 120", "–"], url:"https://www.google.com/maps/search/?api=1&query=Konstantin+Plesni+Centar+Niš", st:[], np:1, pg:"/ee/schools/konstantin-plesni-centar.html"},
+      {name:"Naissus Dance Studio", sc:[0, 0, 0, 21.6, 7.4, 0.0], fx:["5,0 ★ · 60", "–"], url:"https://www.google.com/maps/search/?api=1&query=Naissus+Dance+Studio+Niš", st:[], np:1, pg:"/ee/schools/naissus-dance-studio.html"},
+      {name:"Gallaxis Dance Studio", sc:[0, 0, 0, 19.4, 6.0, 0.0], fx:["5,0 ★ · 27", "–"], url:"https://www.google.com/maps/search/?api=1&query=Gallaxis+Dance+Studio+Niš", st:[], np:1, pg:"/ee/schools/gallaxis-dance-studio.html"},
+      {name:"Fenix Dance Studio", sc:[0, 0, 0, 23.3, 9.0, 0.0], fx:["5,0 ★ · 144", "–"], url:"https://www.google.com/maps/search/?api=1&query=Fenix+Dance+Studio+Niš", st:[], np:1, pg:"/ee/schools/fenix-dance-studio.html"}
+    ],
+    "osijek": [
+      {name:"Plesni Studio Leon", sc:[0, 0, 0, 24.1, 10.0, 0.0], fx:["5,0 ★ · 316", "–"], url:"https://plesni.studio/", st:[], np:1, pg:"/ee/schools/plesni-studio-leon.html"},
+      {name:"Plesni klub D&D", sc:[0, 0, 0, 19.7, 6.2, 0.0], fx:["5,0 ★ · 30", "–"], url:"https://www.google.com/maps/search/?api=1&query=Plesni+klub+D&D+Osijek", st:[], np:1, pg:"/ee/schools/plesni-klub-d-d.html"}
+    ],
+    "pula": [
+      {name:"Studio Dance Company", sc:[0, 0, 0, 17.6, 5.4, 0.0], fx:["4,9 ★ · 19", "–"], url:"https://plesnistudio.hr/", st:[], np:1, pg:"/ee/schools/studio-dance-company.html"}
+    ],
+    "maribor": [
+      {name:"Salsero", sc:[0, 0, 0, 22.8, 8.5, 0.0], fx:["5,0 ★ · 109", "–"], url:"https://salsero.si/", st:[], np:1, pg:"/ee/schools/salsero.html"},
+      {name:"Plesni klub Zapleši si", sc:[0, 0, 0, 18.6, 6.1, 0.0], fx:["4,9 ★ · 28", "–"], url:"https://zaplesi.si/", st:[], np:1, pg:"/ee/schools/plesni-klub-zaplesi-si.html"},
+      {name:"Plesna šola VIBE", sc:[0, 0, 0, 17.3, 4.8, 0.0], fx:["5,0 ★ · 13", "–"], url:"https://plesnasola.si/", st:[], np:1, pg:"/ee/schools/plesna-sola-vibe.html"}
+    ],
+    "zaporizhzhia": [
+      {name:"Casa Latina Zaporizhzhia", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/event/ukraine/zaporizhzhia/salsa-and-bachata-classes-at-casa-latina-zaporizhzhia/", st:[], np:1, un:1, pg:"/ee/schools/casa-latina-zaporizhzhia.html"}
+    ],
+    "odesa": [
+      {name:"Salsa Club Odessa", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/event/ukraine/odesa/salsa-bachata-kizomba-classes-at-salsa-club-odessa/", st:[], np:1, un:1, pg:"/ee/schools/salsa-club-odessa.html"},
+      {name:"Baila con el corazon", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://top20.ua/ru/od/sport-krasota/shkolyi-tantsev/baila-con-el-corazon-salsa-shkola.html", st:[], np:1, un:1, pg:"/ee/schools/baila-con-el-corazon.html"}
+    ],
+    "ternopil": [
+      {name:"Social Dance Club Ternopil", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/event/ukraine/ternopil/salsa-bachata-beginner-classes-at-social-dance-club-ternopil/", st:[], np:1, un:1, pg:"/ee/schools/social-dance-club-ternopil.html"}
+    ],
+    "poltava": [
+      {name:"La Vida Dance School", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/event/ukraine/poltava/bachata-salsa-classes-at-la-vida-dance-school-poltava/", st:[], np:1, un:1, pg:"/ee/schools/la-vida-dance-school.html"}
+    ],
+    "chernivtsi": [
+      {name:"Me Gusta Dance Studio", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://megustacv.com/", st:[], np:1, un:1, pg:"/ee/schools/me-gusta-dance-studio.html"}
+    ],
+    "zhytomyr": [
+      {name:"Latin Dance Studio ValenSia", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/event/ukraine/zhytomyr/salsa-and-bachata-classes-at-latin-dance-studio-valensia-zhytomyr/", st:[], np:1, un:1, pg:"/ee/schools/latin-dance-studio-valensia.html"}
+    ],
+    "cherkasy": [
+      {name:"Flame Dance Studio", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/event/ukraine/cherkasy/latin-dance-at-flame-dance-studio/", st:[], np:1, un:1, pg:"/ee/schools/flame-dance-studio.html"}
+    ],
+    "lutsk": [
+      {name:"Salsa Club Lutsk", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/event/ukraine/lutsk/salsa-bachata-classes-and-latin-parties-at-salsa-club-lutsk/", st:[], np:1, un:1, pg:"/ee/schools/salsa-club-lutsk.html"}
+    ],
+    "stockholm": [
+      {name:"Stockholm Salsa Dance", sc:[0, 0, 0, 17.3, 8.8, 0.0], fx:["4,6 ★ · 125", "–"], url:"https://stockholmsalsadance.com/", st:[], np:1, pg:"/nd/schools/stockholm-salsa-dance.html"},
+      {name:"iDance Studio", sc:[0, 0, 0, 23.8, 9.8, 0.0], fx:["5,0 ★ · 228", "–"], url:"https://idance.se/", st:[], np:1, pg:"/nd/schools/idance-studio.html"},
+      {name:"iDance Studio Söder", sc:[0, 0, 0, 22.6, 10.0, 0.0], fx:["4,9 ★ · 319", "–"], url:"https://idance.se/", st:[], np:1, pg:"/nd/schools/idance-studio-soder.html"},
+      {name:"Studio Salsa", sc:[0, 0, 0, 15.2, 6.7, 0.0], fx:["4,5 ★ · 39", "–"], url:"https://dansasalsa.se/", st:[], np:1, pg:"/nd/schools/studio-salsa.html"},
+      {name:"Karamba Dance Studio", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://karambadancestudio.se/", st:[], np:1, pg:"/nd/schools/karamba-dance-studio.html"},
+      {name:"Keloke Dance Studio", sc:[0, 0, 0, 17.3, 5.2, 0.0], fx:["4,9 ★ · 17", "–"], url:"https://kelokedancestudio.com/", st:[], np:1, pg:"/nd/schools/keloke-dance-studio.html"},
+      {name:"Epic Studios", sc:[0, 0, 0, 17.5, 9.4, 0.0], fx:["4,6 ★ · 179", "–"], url:"https://epic-studios.se/", st:[], np:1, pg:"/nd/schools/epic-studios.html"}
+    ],
+    "goteborg": [
+      {name:"Dance Vida", sc:[0, 0, 0, 16.3, 6.8, 0.0], fx:["4,6 ★ · 43", "–"], url:"https://dancevida.se/", st:[], np:1, pg:"/nd/schools/dance-vida.html"},
+      {name:"Adrianas Danshus", sc:[0, 0, 0, 17.0, 8.0, 0.0], fx:["4,6 ★ · 82", "–"], url:"https://adrianasdanshus.se/", st:[], np:1, pg:"/nd/schools/adrianas-danshus.html"},
+      {name:"Esconde Dance", sc:[0, 0, 0, 20.8, 7.8, 0.0], fx:["4,9 ★ · 74", "–"], url:"https://escondedance.com/", st:[], np:1, pg:"/nd/schools/esconde-dance.html"},
+      {name:"Fuego Dance School", sc:[0, 0, 0, 17.7, 6.2, 0.0], fx:["4,8 ★ · 29", "–"], url:"https://fuegodanceschool.se/", st:[], np:1, pg:"/nd/schools/fuego-dance-school.html"},
+      {name:"Caliente Dance School", sc:[0, 0, 0, 19.5, 6.1, 0.0], fx:["5,0 ★ · 28", "–"], url:"https://calientedanceschool.com/", st:[], np:1, pg:"/nd/schools/caliente-dance-school.html"},
+      {name:"Salsa of Sweden", sc:[0, 0, 0, 23.1, 8.8, 0.0], fx:["5,0 ★ · 131", "–"], url:"https://salsaofsweden.com/", st:[], np:1, pg:"/nd/schools/salsa-of-sweden.html"},
+      {name:"Lázár Dance Studios", sc:[0, 0, 0, 15.4, 7.1, 0.0], fx:["4,5 ★ · 50", "–"], url:"https://lazar.se/", st:[], np:1, pg:"/nd/schools/lazar-dance-studios.html"}
+    ],
+    "malmo": [
+      {name:"Cubabaila2005", sc:[0, 0, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://cubabaila2005.com/", st:[], np:1, pg:"/nd/schools/cubabaila2005.html"}
+    ],
+    "uppsala": [
+      {name:"Uppsala Dance Center", sc:[0, 0, 0, 16.9, 6.3, 0.0], fx:["4,7 ★ · 31", "–"], url:"https://udc.se/", st:[], np:1, pg:"/nd/schools/uppsala-dance-center.html"}
+    ],
+    "orebro": [
+      {name:"Nerikes Dansinstitut", sc:[0, 0, 0, 14.5, 5.0, 0.0], fx:["4,5 ★ · 15", "–"], url:"https://nerikesdansinstitut.se/", st:[], np:1, pg:"/nd/schools/nerikes-dansinstitut.html"}
+    ],
+    "copenhagen": [
+      {name:"Copenhagen Salsa Academy", sc:[0, 0, 0, 21.0, 8.1, 0.0], fx:["4,9 ★ · 86", "–"], url:"https://copenhagensalsaacademy.dk/", st:[], np:1, pg:"/nd/schools/copenhagen-salsa-academy.html"},
+      {name:"Salsa Libre Copenhagen", sc:[0, 0, 0, 17.9, 5.6, 0.0], fx:["4,9 ★ · 21", "–"], url:"https://salsalibre.dk/", st:[], np:1, pg:"/nd/schools/salsa-libre-copenhagen.html"}
+    ],
+    "aarhus": [
+      {name:"La Luna Latina", sc:[0, 0, 0, 18.6, 6.9, 0.0], fx:["4,8 ★ · 44", "–"], url:"https://lalunalatina.dk/", st:[], np:1, pg:"/nd/schools/la-luna-latina.html"}
+    ],
+    "odense": [
+      {name:"Odense Salsaforening", sc:[0, 0, 0, 19.3, 7.6, 0.0], fx:["4,8 ★ · 66", "–"], url:"https://osaf.dk/", st:[], np:1, pg:"/nd/schools/odense-salsaforening.html"}
+    ],
+    "oslo": [
+      {name:"Dancify", sc:[0, 0, 0, 19.2, 7.5, 0.0], fx:["4,8 ★ · 61", "–"], url:"https://dancify.no/", st:[], np:1, pg:"/nd/schools/dancify.html"},
+      {name:"Ewa Trela Dans", sc:[0, 0, 0, 24.0, 10.0, 0.0], fx:["5,0 ★ · 275", "–"], url:"https://ewatreladans.no/", st:[], np:1, pg:"/nd/schools/ewa-trela-dans.html"},
+      {name:"RHYTHM Latin Dance Studio", sc:[0, 0, 0, 23.8, 9.8, 0.0], fx:["5,0 ★ · 226", "–"], url:"https://rhythm.no/", st:[], np:1, pg:"/nd/schools/rhythm-latin-dance-studio.html"},
+      {name:"Fever Dance Oslo", sc:[0, 0, 0, 15.3, 5.3, 0.0], fx:["4,6 ★ · 18", "–"], url:"https://feverdance.no/", st:[], np:1, pg:"/nd/schools/fever-dance-oslo.html"},
+      {name:"Contigo Danseskole", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://contigodans.no/", st:[], np:1, pg:"/nd/schools/contigo-danseskole.html"},
+      {name:"A-custica Dance Academy", sc:[0, 0, 0, 18.6, 5.6, 0.0], fx:["5,0 ★ · 21", "–"], url:"https://a-custica.com/", st:[], np:1, pg:"/nd/schools/a-custica-dance-academy.html"},
+      {name:"Salsakompaniet", sc:[0, 0, 0, 23.8, 9.7, 0.0], fx:["5,0 ★ · 211", "–"], url:"https://salsakompaniet.no/", st:[], np:1, pg:"/nd/schools/salsakompaniet.html"}
+    ],
+    "trondheim": [
+      {name:"Mambo Bachata Trondheim", sc:[0, 0, 0, 17.7, 5.0, 0.0], fx:["5,0 ★ · 15", "–"], url:"https://mambobachatatrondheim.no/", st:[], np:1, pg:"/nd/schools/mambo-bachata-trondheim.html"}
+    ],
+    "stavanger": [
+      {name:"Step of Art", sc:[0, 0, 0, 19.3, 6.6, 0.0], fx:["4,9 ★ · 37", "–"], url:"https://stepofart.no/", st:[], np:1, pg:"/nd/schools/step-of-art.html"}
+    ],
+    "helsinki": [
+      {name:"Bachata Helsinki", sc:[0, 0, 0, 17.5, 4.9, 0.0], fx:["5,0 ★ · 14", "–"], url:"https://bachatahelsinki.fi/", st:[], np:1, pg:"/nd/schools/bachata-helsinki.html"}
+    ],
+    "tampere": [
+      {name:"Tanssikoulu Fabrika", sc:[0, 0, 0, 18.0, 5.2, 0.0], fx:["5,0 ★ · 17", "–"], url:"https://fabrika.fi/", st:[], np:1, pg:"/nd/schools/tanssikoulu-fabrika.html"},
+      {name:"LundDance", sc:[0, 0, 0, 17.9, 6.3, 0.0], fx:["4,8 ★ · 32", "–"], url:"https://lunddance.com/", st:[], np:1, pg:"/nd/schools/lunddance.html"},
+      {name:"Tanssistudio Razzmatazz", sc:[0, 0, 0, 17.7, 6.2, 0.0], fx:["4,8 ★ · 29", "–"], url:"https://razzmatazz.fi/", st:[], np:1, pg:"/nd/schools/tanssistudio-razzmatazz.html"},
+      {name:"Dance Actions Tampere", sc:[0, 0, 0, 14.5, 5.0, 0.0], fx:["4,5 ★ · 15", "–"], url:"https://danceactions.fi/", st:[], np:1, pg:"/nd/schools/dance-actions-tampere.html"},
+      {name:"Tanssikoulu Salsa House", sc:[0, 0, 0, 14.5, 5.0, 0.0], fx:["4,5 ★ · 15", "–"], url:"https://www.google.com/maps/search/?api=1&query=Tanssikoulu+Salsa+House+Tampere", st:[], np:1, pg:"/nd/schools/tanssikoulu-salsa-house.html"}
+    ],
+    "turku": [
+      {name:"Dansstudio Flama", sc:[0, 0, 0, 22.1, 7.9, 0.0], fx:["5,0 ★ · 76", "–"], url:"https://flama.fi/", st:[], np:1, pg:"/nd/schools/dansstudio-flama.html"},
+      {name:"Tanssistudio Centro", sc:[0, 0, 0, 20.0, 6.4, 0.0], fx:["5,0 ★ · 34", "–"], url:"https://tanssistudiocentro.fi/", st:[], np:1, pg:"/nd/schools/tanssistudio-centro.html"},
+      {name:"Studio Reynier Gomez", sc:[0, 0, 0, 17.5, 5.3, 0.0], fx:["4,9 ★ · 18", "–"], url:"https://www.google.com/maps/search/?api=1&query=Studio+Reynier+Gomez+Turku", st:[], np:1, pg:"/nd/schools/studio-reynier-gomez.html"},
+      {name:"Tanssikoulu Play", sc:[0, 0, 0, 19.0, 6.4, 0.0], fx:["4,9 ★ · 33", "–"], url:"https://tanssikouluplay.fi/", st:[], np:1, pg:"/nd/schools/tanssikoulu-play.html"}
+    ],
+    "istanbul": [
+      {name:"DansAdres Dans Kursu", sc:[0, 0, 0, 18.9, 7.2, 0.0], fx:["4,8 ★ · 53", "–"], url:"https://dansadres.com/", st:[], np:1, pg:"/em/schools/dansadres-dans-kursu.html"},
+      {name:"Istanbul Dance Life", sc:[0, 0, 0, 15.1, 6.5, 0.0], fx:["4,5 ★ · 35", "–"], url:"https://istanbuldancelife.com/", st:[], np:1, pg:"/em/schools/istanbul-dance-life.html"},
+      {name:"Istanbul Latin Night", sc:[0, 0, 0, 16.6, 4.3, 0.0], fx:["5,0 ★ · 10", "–"], url:"https://www.google.com/maps/search/?api=1&query=Istanbul+Latin+Night+Istanbul", st:[], np:1, pg:"/em/schools/istanbul-latin-night.html"},
+      {name:"My Dream Dance", sc:[0, 0, 0, 20.2, 7.3, 0.0], fx:["4,9 ★ · 55", "–"], url:"https://mydreamdance.com/", st:[], np:1, pg:"/em/schools/my-dream-dance.html"},
+      {name:"Ve Dans", sc:[0, 0, 0, 22.0, 9.3, 0.0], fx:["4,9 ★ · 170", "–"], url:"https://vedans.com/", st:[], np:1, pg:"/em/schools/ve-dans.html"},
+      {name:"Go Dance Istanbul", sc:[0, 0, 0, 18.0, 5.2, 0.0], fx:["5,0 ★ · 17", "–"], url:"https://godanceistanbul.com/", st:[], np:1, pg:"/em/schools/go-dance-istanbul.html"},
+      {name:"Better Up Dance", sc:[0, 0, 0, 20.3, 7.4, 0.0], fx:["4,9 ★ · 58", "–"], url:"https://betterupdance.com/", st:[], np:1, pg:"/em/schools/better-up-dance.html"},
+      {name:"AfroCubanos", sc:[0, 0, 0, 15.0, 6.3, 0.0], fx:["4,5 ★ · 32", "–"], url:"https://afrolatindans.com/", st:[], np:1, pg:"/em/schools/afrocubanos.html"},
+      {name:"Son Dance Academy", sc:[0, 0, 0, 21.3, 8.4, 0.0], fx:["4,9 ★ · 103", "–"], url:"https://sondanceacademy.com/", st:[], np:1, pg:"/em/schools/son-dance-academy.html"},
+      {name:"Havana Studio", sc:[0, 0, 0, 23.1, 8.8, 0.0], fx:["5,0 ★ · 129", "–"], url:"https://havanastudio.com.tr/", st:[], np:1, pg:"/em/schools/havana-studio.html"},
+      {name:"Büşra & Emek Dans Akademi", sc:[0, 0, 0, 24.3, 10.0, 0.0], fx:["5,0 ★ · 383", "–"], url:"https://bedansakademi.com/", st:[], np:1, pg:"/em/schools/busra-emek-dans-akademi.html"},
+      {name:"Danskeyfi Altunizade", sc:[0, 0, 0, 20.6, 9.5, 0.0], fx:["4,8 ★ · 193", "–"], url:"https://danskeyfialtunizade.com/", st:[], np:1, pg:"/em/schools/danskeyfi-altunizade.html"},
+      {name:"Aytunç Bentürk Dance Academy", sc:[0, 0, 0, 19.4, 6.7, 0.0], fx:["4,9 ★ · 40", "–"], url:"https://abdabakirkoy.com/", st:[], np:1, pg:"/em/schools/aytunc-benturk-dance-academy.html"},
+      {name:"Kadıköy Mustafa Sarı Dans Stüdyosu", sc:[0, 0, 0, 21.2, 8.3, 0.0], fx:["4,9 ★ · 96", "–"], url:"https://www.google.com/maps/search/?api=1&query=Kadıköy+Mustafa+Sarı+Dans+Stüdyosu+Istanbul", st:[], np:1, pg:"/em/schools/kad-koy-mustafa-sar-dans-studyosu.html"},
+      {name:"Havana Social House", sc:[0, 0, 0, 18.3, 8.0, 0.0], fx:["4,7 ★ · 83", "–"], url:"https://www.google.com/maps/search/?api=1&query=Havana+Social+House+Istanbul", st:[], np:1, pg:"/em/schools/havana-social-house.html"},
+      {name:"BAM Dance Academy Taksim", sc:[0, 0, 0, 17.9, 6.3, 0.0], fx:["4,8 ★ · 32", "–"], url:"https://bamdanceacademy.com/", st:[], np:1, pg:"/em/schools/bam-dance-academy-taksim.html"}
+    ],
+    "ankara": [
+      {name:"Salsa Dance Academy Ankara", sc:[0, 0, 0, 21.0, 10.0, 0.0], fx:["4,8 ★ · 372", "–"], url:"https://salsaankaradans.com.tr/", st:[], np:1, pg:"/em/schools/salsa-dance-academy-ankara.html"},
+      {name:"Latino Dans Stüdyosu", sc:[0, 0, 0, 22.1, 9.5, 0.0], fx:["4,9 ★ · 191", "–"], url:"https://latinodans.com/", st:[], np:1, pg:"/em/schools/latino-dans-studyosu.html"},
+      {name:"La Dance Academy", sc:[0, 0, 0, 22.0, 9.4, 0.0], fx:["4,9 ★ · 175", "–"], url:"https://ladansakademi.com/", st:[], np:1, pg:"/em/schools/la-dance-academy.html"},
+      {name:"Trio Dance and Arts Academy", sc:[0, 0, 0, 22.0, 9.3, 0.0], fx:["4,9 ★ · 168", "–"], url:"https://triodans.com/", st:[], np:1, pg:"/em/schools/trio-dance-and-arts-academy.html"},
+      {name:"Dancecholic Academy", sc:[0, 0, 0, 20.6, 7.7, 0.0], fx:["4,9 ★ · 69", "–"], url:"https://dancecholicacademy.com/", st:[], np:1, pg:"/em/schools/dancecholic-academy.html"},
+      {name:"Danzonn Dans Akademisi", sc:[0, 0, 0, 21.9, 9.2, 0.0], fx:["4,9 ★ · 158", "–"], url:"https://danzonn.com/", st:[], np:1, pg:"/em/schools/danzonn-dans-akademisi.html"},
+      {name:"Crypto Dance Academy", sc:[0, 0, 0, 20.6, 9.6, 0.0], fx:["4,8 ★ · 197", "–"], url:"https://cryptodans.com/", st:[], np:1, pg:"/em/schools/crypto-dance-academy.html"},
+      {name:"Flex Dans Akademi", sc:[0, 0, 0, 24.3, 10.0, 0.0], fx:["5,0 ★ · 406", "–"], url:"https://flexakademi.com/", st:[], np:1, pg:"/em/schools/flex-dans-akademi.html"},
+      {name:"Flow Studio Ankara", sc:[0, 0, 0, 17.4, 6.8, 0.0], fx:["4,7 ★ · 43", "–"], url:"https://flowsporkulubu.com/", st:[], np:1, pg:"/em/schools/flow-studio-ankara.html"},
+      {name:"Evrensel Dans Akademi", sc:[0, 0, 0, 24.1, 10.0, 0.0], fx:["5,0 ★ · 319", "–"], url:"https://www.google.com/maps/search/?api=1&query=Evrensel+Dans+Akademi+Ankara", st:[], np:1, pg:"/em/schools/evrensel-dans-akademi.html"},
+      {name:"Siempre Dans Stüdyosu", sc:[0, 0, 0, 19.8, 8.3, 0.0], fx:["4,8 ★ · 95", "–"], url:"https://siempreakademi.com/", st:[], np:1, pg:"/em/schools/siempre-dans-studyosu.html"},
+      {name:"Max Dance Studio", sc:[0, 0, 0, 19.6, 6.8, 0.0], fx:["4,9 ★ · 42", "–"], url:"https://maxdance.com.tr/", st:[], np:1, pg:"/em/schools/max-dance-studio.html"},
+      {name:"Anatolia Dans GSK", sc:[0, 0, 0, 21.6, 7.5, 0.0], fx:["5,0 ★ · 62", "–"], url:"https://www.google.com/maps/search/?api=1&query=Anatolia+Dans+GSK+Ankara", st:[], np:1, pg:"/em/schools/anatolia-dans-gsk.html"},
+      {name:"Rio Dance Studio", sc:[0, 0, 0, 19.7, 6.9, 0.0], fx:["4,9 ★ · 45", "–"], url:"https://www.google.com/maps/search/?api=1&query=Rio+Dance+Studio+Ankara", st:[], np:1, pg:"/em/schools/rio-dance-studio.html"},
+      {name:"Öznacar Müzik Dans Spor Kulübü", sc:[0, 0, 0, 20.6, 7.6, 0.0], fx:["4,9 ★ · 67", "–"], url:"https://www.google.com/maps/search/?api=1&query=Öznacar+Müzik+Dans+Spor+Kulübü+Ankara", st:[], np:1, pg:"/em/schools/oznacar-muzik-dans-spor-kulubu.html"}
+    ],
+    "izmir": [
+      {name:"Cuib Dance Center", sc:[0, 0, 0, 21.4, 8.5, 0.0], fx:["4,9 ★ · 108", "–"], url:"https://www.google.com/maps/search/?api=1&query=Cuib+Dance+Center+İzmir", st:[], np:1, pg:"/em/schools/cuib-dance-center.html"},
+      {name:"Elada Dans ve Spor Merkezi", sc:[0, 0, 0, 23.1, 8.8, 0.0], fx:["5,0 ★ · 129", "–"], url:"https://www.google.com/maps/search/?api=1&query=Elada+Dans+ve+Spor+Merkezi+İzmir", st:[], np:1, pg:"/em/schools/elada-dans-ve-spor-merkezi.html"},
+      {name:"Dance Garage", sc:[0, 0, 0, 20.2, 8.7, 0.0], fx:["4,8 ★ · 122", "–"], url:"https://dancegarage.co/", st:[], np:1, pg:"/em/schools/dance-garage.html"},
+      {name:"Hayat Dans Spor Kulübü", sc:[0, 0, 0, 20.5, 7.6, 0.0], fx:["4,9 ★ · 66", "–"], url:"https://hayatdans.com/", st:[], np:1, pg:"/em/schools/hayat-dans-spor-kulubu.html"},
+      {name:"Crystals Dance Academy", sc:[0, 0, 0, 17.4, 6.8, 0.0], fx:["4,7 ★ · 42", "–"], url:"https://crystalsdanceacademy.com/", st:[], np:1, pg:"/em/schools/crystals-dance-academy.html"},
+      {name:"Okudans", sc:[0, 0, 0, 17.2, 6.5, 0.0], fx:["4,7 ★ · 36", "–"], url:"https://okudans.com/", st:[], np:1, pg:"/em/schools/okudans.html"},
+      {name:"Mambo Dans Akademi", sc:[0, 0, 0, 19.3, 7.6, 0.0], fx:["4,8 ★ · 66", "–"], url:"https://www.google.com/maps/search/?api=1&query=Mambo+Dans+Akademi+İzmir", st:[], np:1, pg:"/em/schools/mambo-dans-akademi.html"},
+      {name:"Dans Stop", sc:[0, 0, 0, 19.0, 7.3, 0.0], fx:["4,8 ★ · 57", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dans+Stop+İzmir", st:[], np:1, pg:"/em/schools/dans-stop.html"},
+      {name:"İzmir Dance Studio", sc:[0, 0, 0, 14.8, 5.8, 0.0], fx:["4,5 ★ · 24", "–"], url:"https://www.google.com/maps/search/?api=1&query=İzmir+Dance+Studio+İzmir", st:[], np:1, pg:"/em/schools/izmir-dance-studio.html"},
+      {name:"CapulloDans", sc:[0, 0, 0, 20.2, 6.5, 0.0], fx:["5,0 ★ · 36", "–"], url:"https://www.google.com/maps/search/?api=1&query=CapulloDans+İzmir", st:[], np:1, pg:"/em/schools/capullodans.html"},
+      {name:"Dansapoli", sc:[0, 0, 0, 21.3, 7.3, 0.0], fx:["5,0 ★ · 54", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dansapoli+İzmir", st:[], np:1, pg:"/em/schools/dansapoli.html"},
+      {name:"Future Dance Buca", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 44", "–"], url:"https://futuredance.com.tr/", st:[], np:1, pg:"/em/schools/future-dance-buca.html"},
+      {name:"Yumlu Akademi", sc:[0, 0, 0, 18.3, 8.0, 0.0], fx:["4,7 ★ · 82", "–"], url:"https://yumluakademi.com/", st:[], np:1, pg:"/em/schools/yumlu-akademi.html"},
+      {name:"Ala Art Life Academy", sc:[0, 0, 0, 19.8, 8.2, 0.0], fx:["4,8 ★ · 92", "–"], url:"https://www.google.com/maps/search/?api=1&query=Ala+Art+Life+Academy+İzmir", st:[], np:1, pg:"/em/schools/ala-art-life-academy.html"},
+      {name:"Mehtap Göl Dans Kursu", sc:[0, 0, 0, 24.5, 10.0, 0.0], fx:["5,0 ★ · 510", "–"], url:"https://www.google.com/maps/search/?api=1&query=Mehtap+Göl+Dans+Kursu+İzmir", st:[], np:1, pg:"/em/schools/mehtap-gol-dans-kursu.html"},
+      {name:"İzmir Dans Atölyesi", sc:[0, 0, 0, 14.1, 6.4, 0.0], fx:["4,4 ★ · 34", "–"], url:"https://izmirdansatolyesi.com/", st:[], np:1, pg:"/em/schools/izmir-dans-atolyesi.html"},
+      {name:"Tuğba Danspor", sc:[0, 0, 0, 21.9, 9.1, 0.0], fx:["4,9 ★ · 152", "–"], url:"https://tugbadanspor.com/", st:[], np:1, pg:"/em/schools/tugba-danspor.html"}
+    ],
+    "antalya": [
+      {name:"Antalya Dance Academy", sc:[0, 0, 0, 19.2, 9.8, 0.0], fx:["4,7 ★ · 229", "–"], url:"https://antalyadansakademi.com/", st:[], np:1, pg:"/em/schools/antalya-dance-academy.html"},
+      {name:"Shine Dans Antalya", sc:[0, 0, 0, 19.0, 6.4, 0.0], fx:["4,9 ★ · 33", "–"], url:"https://shinedansantalya.com/", st:[], np:1, pg:"/em/schools/shine-dans-antalya.html"},
+      {name:"Sense Army Antalya Bachata", sc:[0, 0, 0, 18.9, 9.0, 0.0], fx:["4,7 ★ · 145", "–"], url:"https://www.google.com/maps/search/?api=1&query=Sense+Army+Antalya+Bachata+Antalya", st:[], np:1, pg:"/em/schools/sense-army-antalya-bachata.html"},
+      {name:"Big Dance Family", sc:[0, 0, 0, 20.7, 7.8, 0.0], fx:["4,9 ★ · 73", "–"], url:"https://bigdancefamily.com/", st:[], np:1, pg:"/em/schools/big-dance-family.html"},
+      {name:"Dance Universe Antalya", sc:[0, 0, 0, 20.0, 6.4, 0.0], fx:["5,0 ★ · 33", "–"], url:"https://danceuniverse.co/", st:[], np:1, pg:"/em/schools/dance-universe-antalya.html"},
+      {name:"Los Diablos Dans ve Sanat Merkezi", sc:[0, 0, 0, 19.2, 5.9, 0.0], fx:["5,0 ★ · 25", "–"], url:"https://www.google.com/maps/search/?api=1&query=Los+Diablos+Dans+ve+Sanat+Merkezi+Antalya", st:[], np:1, pg:"/em/schools/los-diablos-dans-ve-sanat-merkezi.html"}
+    ],
+    "bursa": [
+      {name:"Ega Dance Course", sc:[0, 0, 0, 21.9, 9.1, 0.0], fx:["4,9 ★ · 151", "–"], url:"https://bursadadans.com/", st:[], np:1, pg:"/em/schools/ega-dance-course.html"},
+      {name:"Bursa Nilüfer Dans Kursu", sc:[0, 0, 0, 22.8, 10.0, 0.0], fx:["4,9 ★ · 552", "–"], url:"https://niluferdans.com/", st:[], np:1, pg:"/em/schools/bursa-nilufer-dans-kursu.html"},
+      {name:"Nuans Dance and Art House", sc:[0, 0, 0, 18.8, 8.8, 0.0], fx:["4,7 ★ · 128", "–"], url:"https://nuansdans.com.tr/", st:[], np:1, pg:"/em/schools/nuans-dance-and-art-house.html"},
+      {name:"Bursa Dansevi", sc:[0, 0, 0, 18.4, 8.1, 0.0], fx:["4,7 ★ · 87", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bursa+Dansevi+Bursa", st:[], np:1, pg:"/em/schools/bursa-dansevi.html"},
+      {name:"SAİ Dans ve Spor Merkezi", sc:[0, 0, 0, 20.5, 9.4, 0.0], fx:["4,8 ★ · 175", "–"], url:"https://www.google.com/maps/search/?api=1&query=SAİ+Dans+ve+Spor+Merkezi+Bursa", st:[], np:1, pg:"/em/schools/sai-dans-ve-spor-merkezi.html"},
+      {name:"Via Dance Bursa", sc:[0, 0, 0, 20.4, 9.0, 0.0], fx:["4,8 ★ · 146", "–"], url:"https://viadance.com.tr/", st:[], np:1, pg:"/em/schools/via-dance-bursa.html"}
+    ],
+    "bodrum": [
+      {name:"Bodrum Dance Club", sc:[0, 0, 0, 16.8, 7.6, 0.0], fx:["4,6 ★ · 67", "–"], url:"https://bodrumdans.com/", st:[], np:1, pg:"/em/schools/bodrum-dance-club.html"},
+      {name:"Bodrum Ada Dans", sc:[0, 0, 0, 17.3, 6.7, 0.0], fx:["4,7 ★ · 40", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bodrum+Ada+Dans+Bodrum", st:[], np:1, pg:"/em/schools/bodrum-ada-dans.html"}
+    ],
+    "limassol": [
+      {name:"Bailando Salsa School", sc:[0, 0, 0, 17.3, 4.8, 0.0], fx:["5,0 ★ · 13", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bailando+Salsa+School+Limassol", st:[], np:1, pg:"/em/schools/bailando-salsa-school.html"},
+      {name:"Movimiento Dance Studio", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://movimientodancestudio.com/", st:[], np:1, pg:"/em/schools/movimiento-dance-studio.html"},
+      {name:"Bailamor Dance School", sc:[0, 0, 0, 17.5, 4.9, 0.0], fx:["5,0 ★ · 14", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bailamor+Dance+School+Limassol", st:[], np:1, pg:"/em/schools/bailamor-dance-school.html"},
+      {name:"Salsa Latina Dance Academy Cyprus", sc:[0, 0, 0, 19.2, 5.9, 0.0], fx:["5,0 ★ · 25", "–"], url:"https://salsalatina.cy/", st:[], np:1, pg:"/em/schools/salsa-latina-dance-academy-cyprus.html"}
+    ],
+    "nicosia": [
+      {name:"Bailemos Dance School", sc:[0, 0, 0, 24.3, 10.0, 0.0], fx:["5,0 ★ · 372", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bailemos+Dance+School+Nicosia", st:[], np:1, pg:"/em/schools/bailemos-dance-school.html"}
+    ],
+    "larnaca": [
+      {name:"DanzAddiction Dance Studio", sc:[0, 0, 0, 23.1, 8.8, 0.0], fx:["5,0 ★ · 127", "–"], url:"https://www.google.com/maps/search/?api=1&query=DanzAddiction+Dance+Studio+Larnaca", st:[], np:1, pg:"/em/schools/danzaddiction-dance-studio.html"}
+    ],
+    "paphos": [
+      {name:"The ZONE Dance Center", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 44", "–"], url:"https://www.google.com/maps/search/?api=1&query=The+ZONE+Dance+Center+Paphos", st:[], np:1, pg:"/em/schools/the-zone-dance-center.html"},
+      {name:"Beatz Dance School", sc:[0, 0, 0, 21.9, 7.7, 0.0], fx:["5,0 ★ · 70", "–"], url:"https://www.google.com/maps/search/?api=1&query=Beatz+Dance+School+Paphos", st:[], np:1, pg:"/em/schools/beatz-dance-school.html"}
+    ],
+    "valletta": [
+      {name:"Bachata Sensual Academy Malta", sc:[0, 0, 0, 17.9, 5.1, 0.0], fx:["5,0 ★ · 16", "–"], url:"https://www.google.com/maps/search/?api=1&query=Bachata+Sensual+Academy+Malta+Malta", st:[], np:1, pg:"/em/schools/bachata-sensual-academy-malta.html"},
+      {name:"Barrio Latino Malta", sc:[0, 0, 0, 16.1, 9.8, 0.0], fx:["4,5 ★ · 218", "–"], url:"https://barriolatinomalta.com/", st:[], np:1, pg:"/em/schools/barrio-latino-malta.html"},
+      {name:"Connexion Studio", sc:[0, 0, 0, 20.0, 7.2, 0.0], fx:["4,9 ★ · 52", "–"], url:"https://connexion.studio/", st:[], np:1, pg:"/em/schools/connexion-studio.html"},
+      {name:"10X Dance Studio", sc:[0, 0, 0, 18.6, 6.1, 0.0], fx:["4,9 ★ · 28", "–"], url:"https://www.google.com/maps/search/?api=1&query=10X+Dance+Studio+Malta", st:[], np:1, pg:"/em/schools/10x-dance-studio.html"}
+    ],
+    "telaviv": [
+      {name:"Dance Tel Aviv", sc:[0, 0, 0, 16.2, 6.6, 0.0], fx:["4,6 ★ · 38", "–"], url:"https://dancetelaviv.co.il/", st:[], np:1, pg:"/em/schools/dance-tel-aviv.html"},
+      {name:"G Studio Bachata", sc:[0, 0, 0, 18.2, 5.3, 0.0], fx:["5,0 ★ · 18", "–"], url:"https://gstudiodance.com/", st:[], np:1, pg:"/em/schools/g-studio-bachata.html"},
+      {name:"Hola La Havana Club", sc:[0, 0, 0, 20.3, 6.6, 0.0], fx:["5,0 ★ · 37", "–"], url:"https://havanaclub.co.il/", st:[], np:1, pg:"/em/schools/hola-la-havana-club.html"},
+      {name:"Alma de Cuba", sc:[0, 0, 0, 14.3, 7.7, 0.0], fx:["4,4 ★ · 68", "–"], url:"https://www.google.com/maps/search/?api=1&query=Alma+de+Cuba+Tel+Aviv", st:[], np:1, pg:"/em/schools/alma-de-cuba.html"},
+      {name:"Latin Groove", sc:[0, 0, 0, 20.8, 6.9, 0.0], fx:["5,0 ★ · 44", "–"], url:"https://latingroovebachata.com/", st:[], np:1, pg:"/em/schools/latin-groove.html"},
+      {name:"Capital Latina", sc:[0, 0, 0, 23.2, 8.9, 0.0], fx:["5,0 ★ · 136", "–"], url:"https://salsa-jerusalem.co.il/", st:[], np:1, pg:"/em/schools/capital-latina.html"},
+      {name:"FAY Dance Studio", sc:[0, 0, 0, 21.0, 7.0, 0.0], fx:["5,0 ★ · 48", "–"], url:"https://faydancestudio.com/", st:[], np:1, pg:"/em/schools/fay-dance-studio.html"},
+      {name:"Leyzer Dance Studio", sc:[0, 0, 0, 20.5, 7.6, 0.0], fx:["4,9 ★ · 66", "–"], url:"https://leyzerdance.co.il/", st:[], np:1, pg:"/em/schools/leyzer-dance-studio.html"}
+    ],
+    "jerusalem": [
+      {name:"JDance", sc:[0, 0, 0, 19.7, 6.9, 0.0], fx:["4,9 ★ · 44", "–"], url:"https://jdance.co.il/", st:[], np:1, pg:"/em/schools/jdance.html"},
+      {name:"JLMambo", sc:[0, 0, 0, 22.8, 8.4, 0.0], fx:["5,0 ★ · 105", "–"], url:"https://jlmambo.com/", st:[], np:1, pg:"/em/schools/jlmambo.html"}
+    ],
+    "haifa": [
+      {name:"Latino Mind Dance Company", sc:[0, 0, 0, 20.0, 8.4, 0.0], fx:["4,8 ★ · 105", "–"], url:"https://latino-mind.com/", st:[], np:1, pg:"/em/schools/latino-mind-dance-company.html"}
+    ]
+  };
