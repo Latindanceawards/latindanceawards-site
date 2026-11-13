@@ -361,11 +361,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://latindanceawards.com/schools/bachatacademy</loc>
-    <lastmod>2026-10-26</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://latindanceawards.com/schools/bachatasalsahamburg</loc>
     <lastmod>2026-10-26</lastmod>
     <priority>0.5</priority>
@@ -633,7 +628,6 @@
   <url><loc>https://latindanceawards.com/schools/tanzstudio-chemnitz</loc></url>
   <url><loc>https://latindanceawards.com/schools/timbalaye</loc></url>
   <url><loc>https://latindanceawards.com/schools/annelieses-tanzschule</loc></url>
-  <url><loc>https://latindanceawards.com/schools/bachata-academy-potsdam</loc></url>
   <url><loc>https://latindanceawards.com/schools/bachataraum</loc></url>
   <url><loc>https://latindanceawards.com/schools/bachatasaar</loc></url>
   <url><loc>https://latindanceawards.com/schools/bailamos-wuerzburg</loc></url>
@@ -4310,11 +4304,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://latindanceawards.com/en/schools/bachatacademy</loc>
-    <lastmod>2026-10-26</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://latindanceawards.com/en/schools/bachatasalsahamburg</loc>
     <lastmod>2026-10-26</lastmod>
     <priority>0.5</priority>
@@ -4582,7 +4571,6 @@
   <url><loc>https://latindanceawards.com/en/schools/tanzstudio-chemnitz</loc></url>
   <url><loc>https://latindanceawards.com/en/schools/timbalaye</loc></url>
   <url><loc>https://latindanceawards.com/en/schools/annelieses-tanzschule</loc></url>
-  <url><loc>https://latindanceawards.com/en/schools/bachata-academy-potsdam</loc></url>
   <url><loc>https://latindanceawards.com/en/schools/bachataraum</loc></url>
   <url><loc>https://latindanceawards.com/en/schools/bachatasaar</loc></url>
   <url><loc>https://latindanceawards.com/en/schools/bailamos-wuerzburg</loc></url>
