@@ -22,11 +22,11 @@ CSS = ('<style>.cta{padding:8px 0 56px}.cta-box{max-width:980px;margin:0 auto;pa
 def block(slug):
     import json
     ref = ('?school=' + slug) if slug else ''
-    de = dict(n='15.000+', s='Besucher pro Monat', h='Deine Schule ist hier schon gelistet. Mach daraus neue Schüler.',
+    de = dict(n='Ziel: 15.000', s='Besucher pro Monat bis Dezember 2026', h='Deine Schule ist hier schon gelistet. Mach daraus neue Schüler.',
       l1='Anfragen für Probestunden direkt per WhatsApp oder E-Mail', l2='Fotos, Videos und das Häkchen „geprüft“',
       l3='Ganz oben in deiner Stadt (mit Spotlight)', l4='Ab 2027 neue Stimmen im Ranking sammeln',
       b='Pläne ansehen · ab 5 €', m='Jederzeit kündbar · <a href="/preise">Alle Vorteile ansehen</a>')
-    en = dict(n='15,000+', s='visitors per month', h='Your school is already listed here. Turn it into new students.',
+    en = dict(n='Goal: 15,000', s='visitors per month by December 2026', h='Your school is already listed here. Turn it into new students.',
       l1='Trial-class requests straight to your WhatsApp or e-mail', l2='Photos, videos and the verified check mark',
       l3='Top of your city (with Spotlight)', l4='Collect new votes in the ranking from 2027',
       b='See plans · from €5', m='Cancel anytime · <a href="/preise">See everything included</a>')
