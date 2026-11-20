@@ -22,10 +22,8 @@ _ESH = B.HEADER
 _ESH = _ESH.replace('<a class="brand" href="index.html"', '<a class="brand" href="/"', 1)
 _ESH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="es/#ranking" data-i18n="sn1">Ranking</a></li>
-        <li><a href="es/#ciudades" data-i18n="sn2">Ciudades</a></li>
-        <li><a href="es/#metodo" data-i18n="sn3">Método</a></li>
         <li><a href="index.html" data-i18n="sn4">Europa</a></li>
-        <li><a href="deutschland.html" data-i18n="sn5">Alemania</a></li>
+        <li><a href="/preise">Planes</a></li>
       </ul>''', _ESH, count=1, flags=re.S)
 _ESH = _ESH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">ES<')
 _ESH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="sn6">Inscribir escuela</a>', _ESH, count=1)

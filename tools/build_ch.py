@@ -22,10 +22,8 @@ _CHH = B.HEADER
 _CHH = _CHH.replace('<a class="brand" href="index.html"', '<a class="brand" href="/"', 1)
 _CHH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="ch/#ranking" data-i18n="sn1">Ranking</a></li>
-        <li><a href="ch/#cities" data-i18n="sn2">Cities</a></li>
-        <li><a href="ch/#metodo" data-i18n="sn3">Method</a></li>
         <li><a href="index.html" data-i18n="sn4">Europe</a></li>
-        <li><a href="deutschland.html" data-i18n="sn5">Germany</a></li>
+        <li><a href="/preise">Plans</a></li>
       </ul>''', _CHH, count=1, flags=re.S)
 _CHH = _CHH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">CH<')
 _CHH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="sn6">Enter a school</a>', _CHH, count=1)

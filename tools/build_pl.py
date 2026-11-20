@@ -21,10 +21,8 @@ _PLH = B.HEADER
 _PLH = _PLH.replace('<a class="brand" href="index.html"', '<a class="brand" href="/"', 1)
 _PLH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="pl/#ranking" data-i18n="pn1">Ranking</a></li>
-        <li><a href="pl/#miasta" data-i18n="pn2">Miasta</a></li>
-        <li><a href="pl/#metoda" data-i18n="pn3">Metoda</a></li>
         <li><a href="index.html" data-i18n="pn4">Europa</a></li>
-        <li><a href="deutschland.html" data-i18n="pn5">Niemcy</a></li>
+        <li><a href="/preise">Plany</a></li>
       </ul>''', _PLH, count=1, flags=re.S)
 _PLH = _PLH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">PL<')
 _PLH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="pn6">Zgłoś szkołę</a>', _PLH, count=1)

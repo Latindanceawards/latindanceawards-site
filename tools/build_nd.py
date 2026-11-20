@@ -22,10 +22,8 @@ _NDH = B.HEADER
 _NDH = _NDH.replace('<a class="brand" href="index.html"', '<a class="brand" href="/"', 1)
 _NDH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="nd/#ranking" data-i18n="sn1">Ranking</a></li>
-        <li><a href="nd/#cities" data-i18n="sn2">Cities</a></li>
-        <li><a href="nd/#metodo" data-i18n="sn3">Method</a></li>
         <li><a href="index.html" data-i18n="sn4">Europe</a></li>
-        <li><a href="deutschland.html" data-i18n="sn5">Germany</a></li>
+        <li><a href="/preise">Plans</a></li>
       </ul>''', _NDH, count=1, flags=re.S)
 _NDH = _NDH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">ND<')
 _NDH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="sn6">Enter a school</a>', _NDH, count=1)

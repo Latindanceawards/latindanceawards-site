@@ -22,10 +22,8 @@ _FRH = B.HEADER
 _FRH = _FRH.replace('<a class="brand" href="index.html"', '<a class="brand" href="/"', 1)
 _FRH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="fr/#ranking" data-i18n="sn1">Classement</a></li>
-        <li><a href="fr/#villes" data-i18n="sn2">Villes</a></li>
-        <li><a href="fr/#metodo" data-i18n="sn3">Méthode</a></li>
         <li><a href="index.html" data-i18n="sn4">Europe</a></li>
-        <li><a href="deutschland.html" data-i18n="sn5">Allemagne</a></li>
+        <li><a href="/preise">Offres</a></li>
       </ul>''', _FRH, count=1, flags=re.S)
 _FRH = _FRH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">FR<')
 _FRH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="sn6">Inscrire une école</a>', _FRH, count=1)

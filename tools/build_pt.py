@@ -22,10 +22,8 @@ _PTH = B.HEADER
 _PTH = _PTH.replace('<a class="brand" href="index.html"', '<a class="brand" href="/"', 1)
 _PTH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="pt/#ranking" data-i18n="sn1">Classificação</a></li>
-        <li><a href="pt/#cidades" data-i18n="sn2">Cidades</a></li>
-        <li><a href="pt/#metodo" data-i18n="sn3">Método</a></li>
         <li><a href="index.html" data-i18n="sn4">Europa</a></li>
-        <li><a href="deutschland.html" data-i18n="sn5">Alemanha</a></li>
+        <li><a href="/preise">Planos</a></li>
       </ul>''', _PTH, count=1, flags=re.S)
 _PTH = _PTH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">PT<')
 _PTH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="sn6">Inscrever escola</a>', _PTH, count=1)

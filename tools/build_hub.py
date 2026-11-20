@@ -311,11 +311,8 @@ H0 = B.HEADER
 _a = H0.index('<ul id="mnav">'); _b = H0.index('</ul>', _a) + 5
 nav = '''<ul id="mnav">
         <li><a href="#ranking" data-i18n="en1">Europa-Ranking</a></li>
-        <li><a href="#laender" data-i18n="en2">Länder</a></li>
-        <li><a href="#methode" data-i18n="en3">Bewertung</a></li>
         <li><a href="reisen.html" data-i18n="nav_trip">Tanzreise</a></li>
-        <li><a href="lehrer-djs.html" data-i18n="nav_tdj">Lehrer &amp; DJs</a></li>
-        <li><a href="bewerbung.html" data-i18n="nav_apply">Bewerben</a></li>
+        <li><a href="/preise" data-i18n="nav_plans">Pläne</a></li>
       </ul>'''
 B.HEADER = H0[:_a] + nav + H0[_b:]
 B.HEADER = B.HEADER.replace('<a class="brand" href="index.html"', '<a class="brand" href="#top"', 1)

@@ -22,10 +22,8 @@ _NLH = B.HEADER
 _NLH = _NLH.replace('<a class="brand" href="index.html"', '<a class="brand" href="/"', 1)
 _NLH = re.sub(r'<ul id="mnav">.*?</ul>', '''<ul id="mnav">
         <li><a href="nl/#ranking" data-i18n="sn1">Ranglijst</a></li>
-        <li><a href="nl/#steden" data-i18n="sn2">Steden</a></li>
-        <li><a href="nl/#metodo" data-i18n="sn3">Methode</a></li>
         <li><a href="index.html" data-i18n="sn4">Europa</a></li>
-        <li><a href="deutschland.html" data-i18n="sn5">Duitsland</a></li>
+        <li><a href="/preise">Pakketten</a></li>
       </ul>''', _NLH, count=1, flags=re.S)
 _NLH = _NLH.replace('data-lang="de" aria-pressed="true">DE<', 'data-lang="de" aria-pressed="true">NL<')
 _NLH = re.sub(r'<a class="btn btn-gold" href="bewerbung.html" data-i18n="t5">.*?</a>', '<a class="btn btn-gold" href="bewerbung.html?lang=en" data-i18n="sn6">School aanmelden</a>', _NLH, count=1)

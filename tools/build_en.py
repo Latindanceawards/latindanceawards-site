@@ -136,6 +136,7 @@ def build_en(s, p):
     if not m: return None
     en = json.loads(m.group(1))
     en.setdefault('nav_countries', 'Country rankings')
+    en.setdefault('nav_plans', 'Plans')
     meta = re.search(r'en:\{\s*title:(".*?"),\s*desc:(".*?")\s*\}', s)
     t_en = json.loads(meta.group(1)) if meta else None
     d_en = json.loads(meta.group(2)) if meta else None
