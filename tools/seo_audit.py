@@ -96,6 +96,8 @@ PAGES = {  # page: (main keyword, target word count from competitor research or 
     'bachata-workshop.html': ('Bachata Workshop', 850),
     'bachata-kurs-in-der-naehe.html': ('Bachata Kurs in der Nähe', 800),
     'bachata-solo.html': ('Bachata Solo', 800),
+    'bachata-aussprache.html': ('Bachata Aussprache', 600),
+    'tanzkurs-kleidung.html': ('Was anziehen zum Tanzkurs', 700),
     'bachata-was-ist-das.html': ('Was ist Bachata', 1300),
     'salsa-tanzen.html': ('Salsa tanzen', 1300),
     'bachata-hochzeitstanz.html': ('Bachata Hochzeitstanz', 800),

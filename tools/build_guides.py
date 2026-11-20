@@ -41,6 +41,8 @@ TOPIC_PAGES = [('bachata-tanzen', 'Bachata tanzen lernen', 'Learn to dance Bacha
                ('bachata-kurs-in-der-naehe', 'Bachata Kurs in der Nähe', 'Bachata class near you'),
                ('bachata-solo', 'Bachata Solo', 'Bachata solo'),
                ('bachata-was-ist-das', 'Was ist Bachata', 'What is Bachata'),
+               ('bachata-aussprache', 'Bachata Aussprache', 'How to pronounce Bachata'),
+               ('tanzkurs-kleidung', 'Was anziehen zum Tanzkurs', 'What to wear to a dance class'),
                ('salsa-tanzen', 'Salsa tanzen', 'Dancing Salsa'),
                ('bachata-hochzeitstanz', 'Bachata Hochzeitstanz', 'Bachata wedding dance'),
                ('bachata-kurs-berlin', 'Bachata Kurs Berlin', 'Bachata class Berlin'),
@@ -1934,6 +1936,9 @@ mus_sections = [
  ]),
 ]
 mus_faq = [
+ ('Was ist Bachata Musik?', 'What is Bachata music?',
+  'Bachata ist eine Musikrichtung aus der Dominikanischen Republik. Sie wird von Gitarren getragen, dazu kommen Bongos, Güira, Bass und Gesang im 4/4-Takt. Die Texte handeln oft von Liebe und Liebeskummer.',
+  'Bachata is a style of music from the Dominican Republic. It is carried by guitars, with bongos, güira, bass and vocals in 4/4 time. The lyrics are often about love and heartbreak.'),
  ('Woher kommt Bachata Musik?', 'Where does Bachata music come from?',
   'Aus der Dominikanischen Republik. Sie entstand Anfang der 1960er-Jahre und entwickelte sich laut UNESCO aus dem Bolero und anderen afro-antillanischen Genres.',
   'From the Dominican Republic. It emerged in the early 1960s and, according to UNESCO, developed from bolero and other Afro-Antillean genres.'),
@@ -2891,6 +2896,15 @@ was_faq = [
  ('Was ist der Unterschied zwischen Bachata und Salsa?', 'What is the difference between Bachata and Salsa?',
   'Andere Wurzeln, andere Musik, anderer Grundschritt. Details im Ratgeber <a href="bachata-salsa-unterschied.html">Salsa und Bachata</a>.',
   'Different roots, different music, different basic step. Details in the guide <a href="bachata-salsa-unterschied.html">Salsa and Bachata</a>.'),
+ ('Wie alt ist Bachata?', 'How old is Bachata?',
+  'Als aufgenommene Musik ist Bachata über 60 Jahre alt: Als erste Bachata-Aufnahmen gelten Lieder von 1962. Der Tanz entwickelte sich in den folgenden Jahrzehnten. Seit 2019 steht Bachata auf der UNESCO-Liste des immateriellen Kulturerbes.',
+  'As recorded music Bachata is more than 60 years old: songs from 1962 are regarded as the first Bachata recordings. The dance developed in the following decades. Since 2019 Bachata has been on the UNESCO list of intangible cultural heritage.'),
+ ('Wie spricht man Bachata aus?', 'How do you pronounce Bachata?',
+  'Etwa „ba-TSCHA-ta“, mit der Betonung auf der mittleren Silbe. Mehr dazu auf der Seite <a href="bachata-aussprache.html">Bachata Aussprache</a>.',
+  'Roughly “ba-CHA-ta”, with the stress on the middle syllable. More on the page <a href="bachata-aussprache.html">How to pronounce Bachata</a>.'),
+ ('Tanzen Mexikaner Bachata?', 'Do Mexicans dance Bachata?',
+  'Ja, Bachata wird weit über die Dominikanische Republik hinaus getanzt, auch in Mexiko, wo sie zum Beispiel neben Salsa und Merengue unterrichtet wird. Umgekehrt hat mexikanische Ranchera-Musik laut <a href="https://www.wlrn.org/arts-culture/2025-07-30/how-bachata-rose-from-dominican-republics-brothels-and-shantytowns-to-become-a-global-sensation" rel="noopener nofollow" target="_blank">WLRN</a> den gitarrenbetonten Klang der Bachata mitgeprägt.',
+  'Yes, Bachata is danced far beyond the Dominican Republic, including in Mexico, where it is taught alongside Salsa and Merengue, for example. In the other direction, Mexican ranchera music helped shape the guitar-led sound of Bachata, according to <a href="https://www.wlrn.org/arts-culture/2025-07-30/how-bachata-rose-from-dominican-republics-brothels-and-shantytowns-to-become-a-global-sensation" rel="noopener nofollow" target="_blank">WLRN</a>.'),
  _rank_faq,
 ]
 guide_page('bachata-was-ist-das', 'bwi',
@@ -3113,6 +3127,142 @@ guide_page('bachata-kurs-wien', 'bkw',
    'What Viennese schools publish about level, prices and dates, and what to ask before you sign up. Based on the schools’ own websites.'),
   [('check', 'Websites gelesen im <b>November 2026</b>', 'Websites read in <b>November 2026</b>'), ('cal', f'<b>{len(_wv)} Schulen</b> in Wien', f'<b>{len(_wv)} schools</b> in Vienna')],
   wien_sections, wien_faq)
+
+# ---- Bachata Aussprache (added 2026-11-21) ----
+_DUDEN = '<a href="https://www.duden.de/rechtschreibung/Bachata" rel="noopener nofollow" target="_blank">Duden</a>'
+_WIKT = '<a href="https://en.wiktionary.org/wiki/bachata" rel="noopener nofollow" target="_blank">Wiktionary</a>'
+aus_sections = [
+ ('Bachata richtig aussprechen', 'How to pronounce Bachata', [
+   ('p', 'Bachata sprichst du „ba-TSCHA-ta“ aus, mit der Betonung auf der mittleren Silbe. Das „ch“ klingt wie das „tsch“ in „Tschüss“. Es ist also kein hartes „ch“ wie in „Bach“ oder „ach“. Das ist ein typischer Stolperstein für deutsche Muttersprachler.',
+         'You say Bachata “ba-CHA-ta”, with the stress on the middle syllable. The “ch” sounds like the “ch” in “church”. It is not the hard German “ch” of “Bach”, a typical stumbling block for German speakers.'),
+   ('ul', [
+     ('<strong>Silben:</strong> Ba · cha · ta, drei Silben.', '<strong>Syllables:</strong> Ba · cha · ta, three syllables.'),
+     ('<strong>Betonung:</strong> auf „cha“. Alle drei „a“ klingen offen.', '<strong>Stress:</strong> on “cha”. All three “a” sounds are open.'),
+     ('<strong>Lautschrift (Spanisch):</strong> [baˈtʃata]. Das „tʃ“ ist der „tsch“-Laut.', '<strong>Phonetic spelling (Spanish):</strong> [baˈtʃata]. The “tʃ” is the “ch” sound of “church”.'),
+   ]),
+   ('p', f'Auch {_DUDEN} gibt die Silbentrennung Ba-cha-ta an und zeigt den langen „tscha“-Laut in der Mitte. Viele Englischsprachige sagen „bah-CHAH-tah“. Das ist in Ordnung, solange das „ch“ weich bleibt.',
+         f'{_DUDEN} also gives the hyphenation Ba-cha-ta and shows the long “cha” sound in the middle. Many English speakers say “bah-CHAH-tah”. That is fine, as long as the “ch” stays soft.'),
+ ]),
+ ('Bachata richtig schreiben', 'How to spell Bachata', [
+   ('p', 'Bachata schreibst du in einem Wort: B-A-C-H-A-T-A. Das „ch“ bleibt ein „ch“, es gibt kein „tch“ und kein doppeltes „t“. Im Deutschen ist es ein Nomen und wird großgeschrieben, im Spanischen steht es kleingeschrieben („la bachata“).',
+         'You spell Bachata as one word: B-A-C-H-A-T-A. The “ch” stays “ch”, with no “tch” and no double “t”. In English both “bachata” and “Bachata” are in use, and this site writes it with a capital.'),
+   ('p', f'Nach {_DUDEN} heißt es „die Bachata“, der Plural ist „die Bachatas“. Wer Bachata spielt oder tanzt, wird im Spanischen oft „bachatero“ genannt.',
+         f'According to {_DUDEN} the German noun is feminine, “die Bachata”, with the plural “Bachatas”. Someone who plays or dances Bachata is often called a “bachatero” in Spanish.'),
+ ]),
+ ('Was bedeutet das Wort Bachata?', 'What does the word Bachata mean?', [
+   ('p', f'Das Wort kommt aus dem karibischen Spanisch und bedeutet nach {_WIKT} „Fest“ oder „gute Zeit“. Es ist laut diesem Eintrag eine Kurzform von „cumbanchata“, einer Vergrößerungsform von „cumbancha“ („Fest, Trubel“). Heute steht Bachata für zwei Dinge: eine Musikrichtung aus der Dominikanischen Republik und den Tanz dazu.',
+         f'The word comes from Caribbean Spanish and, according to {_WIKT}, means “party” or “good time”. That entry describes it as a shortening of “cumbanchata”, an augmentative of “cumbancha” (“merrymaking”). Today Bachata stands for two things: a style of music from the Dominican Republic and the dance that goes with it.'),
+   ('p', 'Mehr zur Geschichte steht im Ratgeber <a href="bachata-was-ist-das.html">Was ist Bachata</a>, mehr zur Musik unter <a href="bachata-musik.html">Bachata Musik</a>.',
+         'More on the history is in the guide <a href="bachata-was-ist-das.html">What is Bachata</a>, and more on the music under <a href="bachata-musik.html">Bachata music</a>.'),
+ ]),
+ ('Die Stilnamen richtig sagen', 'Saying the style names correctly', [
+   ('p', 'Die Namen der Stile sind spanische Wörter. Das hilft, wenn du in der Schule nach dem passenden Kurs fragst:',
+         'The names of the styles are Spanish words. This helps when you ask a school for the right class:'),
+   ('ul', [
+     ('<strong>Dominicana:</strong> do-mi-ni-KA-na. Siehe <a href="bachata-dominicana.html">Bachata Dominicana</a>.', '<strong>Dominicana:</strong> do-mi-ni-KA-na. See <a href="bachata-dominicana.html">Bachata Dominicana</a>.'),
+     ('<strong>Moderna:</strong> mo-DER-na. Siehe <a href="bachata-moderna.html">Bachata Moderna</a>.', '<strong>Moderna:</strong> mo-DER-na. See <a href="bachata-moderna.html">Bachata Moderna</a>.'),
+     ('<strong>Sensual:</strong> sen-SUAL, auf Spanisch mit Betonung auf der letzten Silbe. Siehe <a href="bachata-sensual.html">Bachata Sensual</a>.', '<strong>Sensual:</strong> sen-SUAL, in Spanish stressed on the last syllable. See <a href="bachata-sensual.html">Bachata Sensual</a>.'),
+   ]),
+   ('p', 'Wer anfangen will, findet im Ratgeber <a href="bachata-lernen.html">Bachata lernen</a> den Einstieg und unter <a href="bachata-kurs-in-der-naehe.html">Bachata Kurs in der Nähe</a> den Weg zur Schule.',
+         'If you want to start, the guide <a href="bachata-lernen.html">Learn Bachata</a> is the way in, and <a href="bachata-kurs-in-der-naehe.html">Bachata class near you</a> leads to a school.'),
+ ]),
+]
+aus_faq = [
+ ('Wie spricht man Bachata aus?', 'How do you pronounce Bachata?',
+  'Etwa „ba-TSCHA-ta“, mit der Betonung auf der mittleren Silbe. Das „ch“ ist ein „tsch“-Laut, kein „ch“ wie in „Bach“.',
+  'Roughly “ba-CHA-ta”, with the stress on the middle syllable. The “ch” is the “ch” of “church”, not the German “ch” of “Bach”.'),
+ ('Wie schreibt man Bachata?', 'How do you spell Bachata?',
+  'In einem Wort, B-A-C-H-A-T-A. Es gibt kein „tch“ und kein doppeltes „t“.',
+  'As one word, B-A-C-H-A-T-A. There is no “tch” and no double “t”.'),
+ ('Wird das „ch“ in Bachata wie in „Bach“ gesprochen?', 'Is the “ch” in Bachata like the “ch” in German “Bach”?',
+  'Nein. Es klingt wie „tsch“ in „Tschüss“, also wie das „ch“ im englischen „church“.',
+  'No. It sounds like the “ch” in “church”, not like the hard German “ch” in “Bach”.'),
+ ('Was bedeutet Bachata?', 'What does Bachata mean?',
+  'Ursprünglich „Fest“ oder „gute Zeit“. Heute ist es der Name einer Musikrichtung und eines Tanzes aus der Dominikanischen Republik.',
+  'Originally “party” or “good time”. Today it is the name of a style of music and a dance from the Dominican Republic.'),
+ ('Heißt es der, die oder das Bachata?', 'Is Bachata masculine or feminine?',
+  'Im Deutschen heißt es „die Bachata“ (Plural „die Bachatas“). Im Spanischen ist das Wort ebenfalls weiblich: „la bachata“.',
+  'In German it is “die Bachata” (plural “die Bachatas”). In Spanish the word is also feminine: “la bachata”.'),
+ _rank_faq,
+]
+guide_page('bachata-aussprache', 'bau',
+  'Bachata Aussprache: So sprichst und schreibst du Bachata',
+  'Bachata richtig aussprechen und schreiben: Betonung, der „tsch“-Laut, Schreibweise, Bedeutung des Wortes und die Namen der Stile Dominicana, Moderna und Sensual.',
+  'How to pronounce and spell Bachata',
+  'How to pronounce and spell Bachata: stress, the “ch” sound, spelling, what the word means and the names of the styles Dominicana, Moderna and Sensual.',
+  'Bachata Aussprache', ('Bachata Aussprache · Ratgeber', 'Bachata pronunciation · Guide'),
+  ('Bachata Aussprache: <em class="foil">sprechen und schreiben</em>', 'How to say and <em class="foil">spell Bachata</em>'),
+  ('Ba-TSCHA-ta, mit weichem „ch“ und Betonung in der Mitte. Hier steht, wie du Bachata sagst, schreibst und was das Wort bedeutet.',
+   'Ba-CHA-ta, with a soft “ch” and the stress in the middle. Here is how to say and spell Bachata and what the word means.'),
+  [('check', 'Quellen: <b>Duden, Wiktionary</b>', 'Sources: <b>Duden, Wiktionary</b>'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  aus_sections, aus_faq, sibling_group='topic')
+
+# ---- Was anziehen zum Tanzkurs (added 2026-11-21) ----
+tkl_sections = [
+ ('Die kurze Antwort', 'The short answer', [
+   ('p', 'Für den ersten Salsa- oder Bachata-Kurs brauchst du bequeme Kleidung, in der du dich frei bewegen kannst, und Schuhe, mit denen du auf dem Boden drehen kannst. Mehr ist für den Anfang nicht nötig. Spezielle Tanzschuhe oder Tanzkleidung kannst du später kaufen, wenn dir der Kurs gefällt.',
+         'For your first Salsa or Bachata class you need comfortable clothes you can move freely in and shoes you can turn on the floor in. Nothing more is needed to start. You can buy dance shoes or dance clothing later, once you like the class.'),
+ ]),
+ ('Kleidung für den Kurs', 'Clothing for class', [
+   ('ul', [
+     ('<strong>Dehnbar und atmungsaktiv:</strong> Du bewegst dich, drehst dich und schwitzt. Stoff, der nachgibt, ist angenehmer als Jeans ohne Stretch.', '<strong>Stretchy and breathable:</strong> you move, turn and sweat. Fabric that gives is more comfortable than non-stretch jeans.'),
+     ('<strong>Schichten:</strong> Räume können kühl oder warm sein. Eine leichte Jacke oder ein zweites Shirt hilft.', '<strong>Layers:</strong> rooms can be cool or warm. A light jacket or a second shirt helps.'),
+     ('<strong>Nichts, was hängen bleibt:</strong> Lange Ketten, große Ringe, Armbänder und Gürtelschnallen können beim Drehen den Partner stören.', '<strong>Nothing that can catch:</strong> long necklaces, big rings, bracelets and belt buckles can bother your partner during turns.'),
+     ('<strong>Wenig oder kein Parfüm:</strong> In Paarkursen stehst du nah beieinander.', '<strong>Little or no perfume:</strong> in partner classes you stand close together.'),
+   ]),
+ ]),
+ ('Schuhe für Salsa und Bachata', 'Shoes for Salsa and Bachata', [
+   ('p', 'Die Schuhe entscheiden, wie wohl du dich fühlst. Bei Salsa und Bachata drehst du dich oft auf dem Ballen des Fußes. Eine Sohle, die gleitet, aber nicht rutscht, macht das leichter.',
+         'Your shoes decide how comfortable you feel. In Salsa and Bachata you often turn on the ball of the foot. A sole that glides without slipping makes that easier.'),
+   ('ul', [
+     ('<strong>Gut geeignet:</strong> Schuhe mit glatter Leder- oder Wildledersohle und Tanzschuhe. Auch eine glatte Gummisohle kann gehen.', '<strong>Works well:</strong> shoes with a smooth leather or suede sole, and dance shoes. A smooth rubber sole can also work.'),
+     ('<strong>Eher ungeeignet:</strong> Turnschuhe mit stark profilierter Gummisohle. Sie können am Boden haften bleiben, was Knie und Knöchel beim Drehen belastet.', '<strong>Less suitable:</strong> trainers with a deeply grooved rubber sole. They can grip the floor, which strains knees and ankles in turns.'),
+     ('<strong>Absätze:</strong> Zum Anfang sind niedrige, stabile Absätze besser als hohe. Wechsle erst auf hohe, wenn du sicher stehst.', '<strong>Heels:</strong> at the start low, stable heels are better than high ones. Switch to high heels only once you feel secure.'),
+     ('<strong>Sauberer Schuh:</strong> Manche Schulen bitten um saubere Schuhe für den Tanzboden. Frag vor dem ersten Termin kurz nach.', '<strong>Clean shoes:</strong> some schools ask for clean shoes for the dance floor. Ask briefly before your first class.'),
+   ]),
+ ]),
+ ('Gibt es Unterschiede zwischen Salsa und Bachata?', 'Is there a difference between Salsa and Bachata?', [
+   ('p', 'Für den Kurs gilt in beiden Fällen dasselbe. Bei Salsa drehst du dich meist mehr, die Sohle ist also wichtiger. Bei Bachata Sensual tanzt du enger und bewegst Schultern und Hüfte stärker, hier hilft Kleidung, die nicht einschränkt. Mehr zu den Stilen steht in <a href="salsa-tanzen.html">Salsa tanzen</a> und <a href="bachata-salsa-unterschied.html">Salsa und Bachata</a>.',
+         'For class the same applies to both. In Salsa you usually turn more, so the sole matters more. In Bachata Sensual you dance closer and move shoulders and hips more, so clothing that does not restrict you helps. More on the styles is in <a href="salsa-tanzen.html">Dancing Salsa</a> and <a href="bachata-salsa-unterschied.html">Salsa and Bachata</a>.'),
+ ]),
+ ('Was du mitbringst und was für Partys passt', 'What to bring and what suits a party', [
+   ('ul', [
+     ('<strong>Für den Kurs:</strong> Wasser, ein kleines Handtuch, ein Ersatzshirt und ein Haargummi, wenn du lange Haare hast.', '<strong>For class:</strong> water, a small towel, a spare shirt and a hair tie if you have long hair.'),
+     ('<strong>Für Partys (Socials):</strong> Etwas, in dem du dich gut fühlst und schwitzen kannst. Die Kleidung ist oft etwas schicker als im Kurs, Schuhe sollten Stunden tragbar sein.', '<strong>For parties (socials):</strong> something you feel good in and can sweat in. Outfits are often a little smarter than in class, and shoes should be wearable for hours.'),
+   ]),
+   ('p', 'Wenn du noch keinen Kurs hast, hilft der Ratgeber <a href="bachata-fuer-anfaenger.html">Bachata für Anfänger</a> und die Seite <a href="bachata-kurs-in-der-naehe.html">Bachata Kurs in der Nähe</a>. Was die Schule vor Ort verlangt, steht auf ihrer Website oder du fragst direkt nach.',
+         'If you do not have a class yet, the guide <a href="bachata-fuer-anfaenger.html">Bachata for beginners</a> and the page <a href="bachata-kurs-in-der-naehe.html">Bachata class near you</a> help. What the school expects is on its website, or just ask.'),
+ ]),
+]
+tkl_faq = [
+ ('Was ziehe ich zum ersten Salsa-Kurs an?', 'What should I wear to my first Salsa class?',
+  'Bequeme, dehnbare Kleidung und Schuhe mit glatter Sohle, in denen du dich drehen kannst. Mehr brauchst du nicht.',
+  'Comfortable, stretchy clothes and shoes with a smooth sole you can turn in. You need nothing more.'),
+ ('Brauche ich Tanzschuhe?', 'Do I need dance shoes?',
+  'Nicht für den ersten Kurs. Normale Schuhe mit glatter Sohle reichen. Tanzschuhe lohnen sich, wenn du dabei bleibst.',
+  'Not for your first class. Normal shoes with a smooth sole are enough. Dance shoes are worth it once you stay with it.'),
+ ('Kann ich Turnschuhe tragen?', 'Can I wear trainers?',
+  'Ja, wenn die Sohle nicht stark am Boden haftet. Bei Schuhen mit tiefem Profil kannst du dich schlecht drehen.',
+  'Yes, if the sole does not grip the floor too much. With a deep tread it is hard to turn.'),
+ ('Kann ich Absätze tragen?', 'Can I wear heels?',
+  'Ja, aber zum Anfang sind niedrige, stabile Absätze besser. Wechsle auf hohe, wenn du sicher tanzt.',
+  'Yes, but at the start low, stable heels are better. Switch to high heels when you dance confidently.'),
+ ('Was ziehe ich zu einer Salsa- oder Bachata-Party an?', 'What should I wear to a Salsa or Bachata party?',
+  'Etwas, in dem du dich wohlfühlst und schwitzen kannst, oft etwas schicker als im Kurs. Die Schuhe sollten Stunden tragbar sein.',
+  'Something you feel comfortable in and can sweat in, often a little smarter than for class. Your shoes should be wearable for hours.'),
+ _rank_faq,
+]
+guide_page('tanzkurs-kleidung', 'tkl',
+  'Was anziehen zum Salsa- und Bachata-Kurs? Kleidung und Schuhe',
+  'Was du zum Salsa- oder Bachata-Kurs anziehst: bequeme Kleidung, passende Schuhe, was du mitbringst und was für Partys passt. Mit Antworten auf häufige Fragen.',
+  'What to wear to a Salsa or Bachata class: clothes and shoes',
+  'What to wear to a Salsa or Bachata class: comfortable clothes, the right shoes, what to bring and what suits a party. With answers to common questions.',
+  'Was anziehen zum Tanzkurs', ('Tanzkurs Kleidung · Ratgeber', 'Dance class clothing · Guide'),
+  ('Was anziehen zum Tanzkurs: <em class="foil">Kleidung und Schuhe</em>', 'What to wear to class: <em class="foil">clothes and shoes</em>'),
+  ('Bequeme Kleidung und Schuhe mit glatter Sohle reichen für den Anfang. Hier steht, worauf du bei Salsa und Bachata achtest und was du mitbringst.',
+   'Comfortable clothes and shoes with a smooth sole are enough to start. Here is what to look for in Salsa and Bachata and what to bring.'),
+  [('check', 'Für <b>Salsa und Bachata</b>', 'For <b>Salsa and Bachata</b>'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  tkl_sections, tkl_faq, sibling_group='topic')
 
 # --- Thin-content tiering: city pages with at most 2 listed schools are mostly template text.
 # They stay online and linked from the cities index, but are set to noindex until the 20 Dec ranking gives real data.
