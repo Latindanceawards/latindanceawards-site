@@ -42,6 +42,7 @@ TOPIC_PAGES = [('bachata-tanzen', 'Bachata tanzen lernen', 'Learn to dance Bacha
                ('bachata-solo', 'Bachata Solo', 'Bachata solo'),
                ('bachata-was-ist-das', 'Was ist Bachata', 'What is Bachata'),
                ('bachata-aussprache', 'Bachata Aussprache', 'How to pronounce Bachata'),
+               ('bachata-lernen-wie-lange', 'Bachata lernen: wie lange', 'Learning Bachata: how long'),
                ('tanzkurs-kleidung', 'Was anziehen zum Tanzkurs', 'What to wear to a dance class'),
                ('salsa-tanzen', 'Salsa tanzen', 'Dancing Salsa'),
                ('bachata-hochzeitstanz', 'Bachata Hochzeitstanz', 'Bachata wedding dance'),
@@ -3263,6 +3264,70 @@ guide_page('tanzkurs-kleidung', 'tkl',
    'Comfortable clothes and shoes with a smooth sole are enough to start. Here is what to look for in Salsa and Bachata and what to bring.'),
   [('check', 'Für <b>Salsa und Bachata</b>', 'For <b>Salsa and Bachata</b>'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
   tkl_sections, tkl_faq, sibling_group='topic')
+
+# ---- Bachata: wie lange lernen (added 2026-11-21) ----
+_GAD = '<a href="https://www.goandance.com/en/blog/post/43/6-keys-to-learn-to-dance-bachata-like-a-pro" rel="noopener nofollow" target="_blank">GoAndDance</a>'
+wl_sections = [
+ ('Die kurze Antwort', 'The short answer', [
+   ('p', f'Den Grundschritt lernen die meisten in der ersten Stunde. Für den ersten Social reichen oft einige Wochen regelmäßiger Kurse. Bis du sicher führst oder folgst und die Musik wirklich spürst, vergehen eher Monate. Nach {_GAD} dauert es „ein paar Monate“, bis man mit viel Übung und Anleitung einen ganzen Song mit Partner tanzen kann. Eine feste Zahl nennen wir bewusst nicht, denn sie hängt von dir ab.',
+         f'Most people pick up the basic step in the first class. A few weeks of regular classes are often enough for a first social. Dancing confidently as a leader or follower and really feeling the music takes months rather than weeks. According to {_GAD}, it takes “a few months” of practice and guidance to dance a whole song with a partner. We deliberately give no fixed number, because it depends on you.'),
+ ]),
+ ('Die Etappen beim Bachata lernen', 'The stages of learning Bachata', [
+   ('ul', [
+     ('<strong>Grundschritt:</strong> Drei Schritte und ein Tap auf vier Zählzeiten. Das ist der schnellste Teil. Siehe <a href="bachata-grundschritt.html">Bachata Grundschritt</a>.', '<strong>Basic step:</strong> three steps and a tap over four counts. This is the quickest part. See <a href="bachata-grundschritt.html">Bachata basic step</a>.'),
+     ('<strong>Takt und Musik:</strong> Den Tap auf der vierten Zählzeit hören und mitzählen, bis es von allein läuft. Hilfe gibt der Ratgeber <a href="bachata-musik.html">Bachata Musik</a>.', '<strong>Timing and music:</strong> hearing the tap on the fourth count and counting along until it runs on its own. The guide <a href="bachata-musik.html">Bachata music</a> helps.'),
+     ('<strong>Führen und Folgen:</strong> Mit Partnerwechsel im Kurs lernst du, dich auf verschiedene Partner einzustellen. Das braucht Wochen bis Monate.', '<strong>Leading and following:</strong> with partner rotation in class you learn to adapt to different partners. This takes weeks to months.'),
+     ('<strong>Musikalität und Stil:</strong> Betonungen, Pausen und der Ausdruck wachsen über lange Zeit. Welche Stile es gibt, steht unter <a href="bachata-was-ist-das.html">Was ist Bachata</a>.', '<strong>Musicality and style:</strong> accents, pauses and expression grow over a long time. Which styles exist is explained under <a href="bachata-was-ist-das.html">What is Bachata</a>.'),
+   ]),
+ ]),
+ ('Was dein Tempo beeinflusst', 'What affects your pace', [
+   ('ul', [
+     ('<strong>Regelmäßigkeit:</strong> Wer dranbleibt, kommt schneller voran als jemand, der nach Pausen neu anfängt.', '<strong>Regularity:</strong> if you keep at it you progress faster than someone who starts over after breaks.'),
+     ('<strong>Tanzen gehen:</strong> Laut GoAndDance verbessern sich Leute, die öfter tanzen gehen, deutlich schneller. Tipps zu Partys stehen unter <a href="bachata-party.html">Bachata Party</a>.', '<strong>Going out dancing:</strong> according to GoAndDance, people who go dancing more often improve much faster. Tips on parties are under <a href="bachata-party.html">Bachata party</a>.'),
+     ('<strong>Üben zu Hause:</strong> Wiederhole den Grundschritt, bis du nicht mehr auf die Füße schaust. Siehe <a href="bachata-solo.html">Bachata Solo</a>.', '<strong>Practising at home:</strong> repeat the basic step until you no longer look at your feet. See <a href="bachata-solo.html">Bachata solo</a>.'),
+     ('<strong>Anleitung:</strong> Ein Anfängerkurs mit klarem Plan gibt dir Struktur. Viele Schulen bieten eine Probestunde, frag nach dem Lehrplan.', '<strong>Guidance:</strong> a beginner class with a clear plan gives you structure. Many schools offer a trial class, so ask about the curriculum.'),
+     ('<strong>Vorerfahrung:</strong> Wer schon Rhythmusgefühl oder Tanzerfahrung hat, findet oft schneller hinein. Ohne Vorkenntnisse lernst du trotzdem gut, nur in deinem eigenen Tempo.', '<strong>Prior experience:</strong> if you already have a sense of rhythm or dance experience you often get in faster. Without it you still learn well, just at your own pace.'),
+   ]),
+ ]),
+ ('Woran du deinen Fortschritt erkennst', 'How to tell you are progressing', [
+   ('p', 'Diese Punkte dienen als Orientierung, nicht als Prüfung:',
+         'These points are a guide, not an exam:'),
+   ('ul', [
+     ('Du tanzt den Grundschritt, ohne auf die Füße zu schauen.', 'You dance the basic step without looking at your feet.'),
+     ('Du erkennst den Tap auf der vierten Zählzeit in einem Lied.', 'You recognise the tap on the fourth count in a song.'),
+     ('Du tanzt mit einem Partner ein ganzes Lied, ohne den Schritt zu verlieren.', 'You dance a whole song with a partner without losing the step.'),
+     ('Du fühlst dich auf einem Social wohl und tanzt mit Menschen, die du nicht kennst.', 'You feel at ease at a social and dance with people you do not know.'),
+   ]),
+   ('p', 'Wo du den Einstieg findest, steht im Ratgeber <a href="bachata-fuer-anfaenger.html">Bachata für Anfänger</a>. Kurse in deiner Nähe zeigt die Seite <a href="bachata-kurs-in-der-naehe.html">Bachata Kurs in der Nähe</a>.',
+         'You can find a way in with the guide <a href="bachata-fuer-anfaenger.html">Bachata for beginners</a>. Classes near you are on the page <a href="bachata-kurs-in-der-naehe.html">Bachata class near you</a>.'),
+ ]),
+]
+wl_faq = [
+ ('Wie lange dauert es, Bachata zu lernen?', 'How long does it take to learn Bachata?',
+  'Den Grundschritt lernen die meisten in der ersten Stunde, für den ersten Social brauchst du oft einige Wochen regelmäßiger Kurse, für Sicherheit und Musikalität eher Monate. Eine feste Zahl gibt es nicht.',
+  'Most people learn the basic step in the first class, you often need a few weeks of regular classes for a first social, and months for confidence and musicality. There is no fixed number.'),
+ ('Wie lange dauert der Grundschritt?', 'How long does the basic step take?',
+  'Meist die erste Stunde. Er besteht aus drei Schritten und einem Tap auf vier Zählzeiten.',
+  'Usually the first class. It consists of three steps and a tap over four counts.'),
+ ('Wie lange bis zum ersten Social?', 'How long until my first social?',
+  'Oft reichen einige Wochen regelmäßiger Kurse. Wichtiger als die Dauer ist, dass du dich mit dem Grundschritt und dem Partnerwechsel wohlfühlst.',
+  'A few weeks of regular classes are often enough. More important than the time is that you feel comfortable with the basic step and partner rotation.'),
+ ('Wie kann ich schneller lernen?', 'How can I learn faster?',
+  'Regelmäßig üben, einen Kurs mit klarem Plan besuchen und öfter tanzen gehen. Zu Hause hilft das Wiederholen des Grundschritts.',
+  'Practise regularly, take a class with a clear plan and go dancing more often. Repeating the basic step at home helps.'),
+ _rank_faq,
+]
+guide_page('bachata-lernen-wie-lange', 'bwl',
+  'Wie lange dauert es, Bachata zu lernen? Ein realistischer Überblick',
+  'Wie lange dauert es, Bachata zu lernen? Die Etappen vom Grundschritt bis zum ersten Social, was dein Tempo beeinflusst und woran du Fortschritt erkennst.',
+  'How long does it take to learn Bachata? A realistic overview',
+  'How long does it take to learn Bachata? The stages from the basic step to your first social, what affects your pace and how to tell you are progressing.',
+  'Bachata lernen: wie lange', ('Bachata lernen · Ratgeber', 'Learning Bachata · Guide'),
+  ('Wie lange dauert es, <em class="foil">Bachata zu lernen?</em>', 'How long does it take to <em class="foil">learn Bachata?</em>'),
+  ('Der Grundschritt sitzt oft nach einer Stunde, der erste Social nach einigen Wochen. Hier steht, was dazwischen passiert und was dein Tempo bestimmt.',
+   'The basic step often sits after one class and the first social comes after a few weeks. Here is what happens in between and what sets your pace.'),
+  [('check', 'Ohne <b>feste Zahlen</b>', 'With <b>no fixed numbers</b>'), ('cal', 'Ranking am <b>20. Dezember</b>', 'Ranking on <b>December 20</b>')],
+  wl_sections, wl_faq, sibling_group='topic')
 
 # --- Thin-content tiering: city pages with at most 2 listed schools are mostly template text.
 # They stay online and linked from the cities index, but are set to noindex until the 20 Dec ranking gives real data.
