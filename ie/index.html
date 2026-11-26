@@ -948,21 +948,21 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
   /* PRELIMINARY LIST: schools verified on their own website. Alphabetical, no scores. Not a ranking. */
   var CANDIDATES = {
     "dublin": [
-      {name:"Dublin Salsa Academy", sc:[0, 0, 0, 22.7, 10.0, 0.0], fx:["4,9 ★ · 393", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dublin+Salsa+Academy+Dublin", st:[], np:1, pg:"/ie/schools/dublin-salsa-academy.html"}
+      {name:"Dublin Salsa Academy", sc:[0, 0, 0, 22.7, 10.0, 0.0], fx:["4,9 ★ · 393", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dublin+Salsa+Academy+Dublin", st:[], np:1, pg:"/ie/schools/dublin-salsa-academy"}
     ],
     "galway": [
-      {name:"Galway Latin Dance", sc:[0, 0, 0, 19.5, 6.1, 0.0], fx:["5,0 ★ · 28", "–"], url:"https://latindance.ie/", st:[], np:1, pg:"/ie/schools/galway-latin-dance.html"}
+      {name:"Galway Latin Dance", sc:[0, 0, 0, 19.5, 6.1, 0.0], fx:["5,0 ★ · 28", "–"], url:"https://latindance.ie/", st:[], np:1, pg:"/ie/schools/galway-latin-dance"}
     ],
     "cork": [
-      {name:"Latin Dance Studio Cork", sc:[0, 0, 0, 21.8, 9.0, 0.0], fx:["4,9 ★ · 146", "–"], url:"https://latindancestudiocork.com/", st:[], np:1, pg:"/ie/schools/latin-dance-studio-cork.html"},
-      {name:"The Tribe Dance Academy", sc:[0, 0, 0, 22.2, 7.9, 0.0], fx:["5,0 ★ · 78", "–"], url:"https://thetribeda.com/", st:[], np:1, pg:"/ie/schools/the-tribe-dance-academy.html"}
+      {name:"Latin Dance Studio Cork", sc:[0, 0, 0, 21.8, 9.0, 0.0], fx:["4,9 ★ · 146", "–"], url:"https://latindancestudiocork.com/", st:[], np:1, pg:"/ie/schools/latin-dance-studio-cork"},
+      {name:"The Tribe Dance Academy", sc:[0, 0, 0, 22.2, 7.9, 0.0], fx:["5,0 ★ · 78", "–"], url:"https://thetribeda.com/", st:[], np:1, pg:"/ie/schools/the-tribe-dance-academy"}
     ],
     "limerick": [
-      {name:"Dance Limerick", sc:[0, 0, 0, 14.8, 5.7, 0.0], fx:["4,5 ★ · 22", "–"], url:"https://dancelimerick.ie/", st:[], np:1, pg:"/ie/schools/dance-limerick.html"},
-      {name:"Dance City", sc:[0, 0, 0, 18.0, 7.6, 0.0], fx:["4,7 ★ · 66", "–"], url:"https://dancecity.ie/", st:[], np:1, pg:"/ie/schools/dance-city.html"}
+      {name:"Dance Limerick", sc:[0, 0, 0, 14.8, 5.7, 0.0], fx:["4,5 ★ · 22", "–"], url:"https://dancelimerick.ie/", st:[], np:1, pg:"/ie/schools/dance-limerick"},
+      {name:"Dance City", sc:[0, 0, 0, 18.0, 7.6, 0.0], fx:["4,7 ★ · 66", "–"], url:"https://dancecity.ie/", st:[], np:1, pg:"/ie/schools/dance-city"}
     ],
     "kilkenny": [
-      {name:"The Dance Club Kilkenny", sc:[0, 0, 0, 23.4, 9.2, 0.0], fx:["5,0 ★ · 163", "–"], url:"https://thedanceclubkilkenny.com/", st:[], np:1, pg:"/ie/schools/the-dance-club-kilkenny.html"}
+      {name:"The Dance Club Kilkenny", sc:[0, 0, 0, 23.4, 9.2, 0.0], fx:["5,0 ★ · 163", "–"], url:"https://thedanceclubkilkenny.com/", st:[], np:1, pg:"/ie/schools/the-dance-club-kilkenny"}
     ]
   };
   var VOTE_ENDPOINT = "https://script.google.com/macros/s/AKfycbzAANOuM7cA3QgqeXZXOKZEYumNFsENBZaIicJSaJluR90rTl2iw30Sk522vxIurDsg/exec";
@@ -1071,7 +1071,7 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
           if(e.un){ why='<div class="lk" style="color:var(--muted)">'+esc(en?UNMSG[1]:UNMSG[0])+' <a href="/bewerbung">'+esc(en?"Confirm now":"Confirm now")+' →</a></div>'; }
           why+='<div class="vote"><button type="button" class="btn btn-gold vbtn" data-s="'+esc(e.name)+'" data-c="'+cn(e)+'">&#9733; '+esc(L("vote_btn"))+'</button>'
             +'<form class="vform" hidden novalidate><input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px"><label>'+esc(L("vote_mail"))+'<input type="email" name="email" required autocomplete="email" inputmode="email"></label><label class="newsopt"><input type="checkbox" name="news" value="1"> <span>'+esc(L("news_opt"))+'</span></label><button type="submit" class="btn btn-gold">'+esc(L("vote_send"))+'</button><small>'+esc(L("vote_note"))+'</small></form><p class="vmsg" role="status" hidden></p></div>';
-          why+='<div class="lk"><a href="'+(e.np?e.pg:'schools/'+slug(e.name)+'.html')+'"><b>'+esc(L("page_link"))+' →</b></a></div>';
+          why+='<div class="lk"><a href="'+(e.np?e.pg:'schools/'+slug(e.name))+'"><b>'+esc(L("page_link"))+' →</b></a></div>';
           h+='<li'+(i>=10?' class="more" hidden':'')+'><details class="irk'+g+'"><summary><span class="rk">'+(i===0&&!e.un?CROWN+'<i class="sp a"></i><i class="sp b"></i><i class="sp c"></i><i class="sp d"></i>':'')+(e.un?"–":(i+1))+'</span><span class="who"><b><a href="'+(e.np?e.pg:"schools/"+slug(e.name)+".html")+'">'+esc(e.name)+'</a></b>'
             +(isCountry(c)?'<small>'+cn(e)+'</small>':'')+'</span>'+(e.un?'<span class="score na"><small>'+esc(en?UNFINAL[1]:UNFINAL[0])+'</small></span><span class="meter"></span>':'<span class="score">'+num(e.pts)+'<small> / 100</small></span><span class="meter"><i style="width:'+e.pts+'%"></i></span>')+'</summary>'
             +'<div class="iwhy">'+why+'</div></details></li>';

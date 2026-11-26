@@ -950,60 +950,60 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
   /* PRELIMINARY LIST: schools verified on their own website. Alphabetical, no scores. Not a ranking. */
   var CANDIDATES = {
     "lisboa": [
-      {name:"Estúdio Sabor & Dança", sc:[0, 0, 0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 116", "–"], url:"https://www.estudiosaboredanca.pt", st:[], np:1, pg:"/pt/escolas/estudio-sabor-danca.html"},
-      {name:"Dança e Companhia", sc:[0, 0, 0, 18.4, 5.4, 0.0], fx:["5,0 ★ · 19", "–"], url:"https://www.dancacompanhia.com", st:[], np:1, pg:"/pt/escolas/danca-e-companhia.html"},
-      {name:"Latin Dance Hub", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://www.google.com/maps/search/?api=1&query=Latin+Dance+Hub+Lisboa", st:[], np:1, pg:"/pt/escolas/latin-dance-hub.html"},
-      {name:"UDance School", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.udance.pt/estilos-dancas-sociais", st:[], np:1, un:1, pg:"/pt/escolas/udance-school.html"}
+      {name:"Estúdio Sabor & Dança", sc:[0, 0, 0, 21.5, 8.6, 0.0], fx:["4,9 ★ · 116", "–"], url:"https://www.estudiosaboredanca.pt", st:[], np:1, pg:"/pt/escolas/estudio-sabor-danca"},
+      {name:"Dança e Companhia", sc:[0, 0, 0, 18.4, 5.4, 0.0], fx:["5,0 ★ · 19", "–"], url:"https://www.dancacompanhia.com", st:[], np:1, pg:"/pt/escolas/danca-e-companhia"},
+      {name:"Latin Dance Hub", sc:[0, 0, 0, 16.9, 4.5, 0.0], fx:["5,0 ★ · 11", "–"], url:"https://www.google.com/maps/search/?api=1&query=Latin+Dance+Hub+Lisboa", st:[], np:1, pg:"/pt/escolas/latin-dance-hub"},
+      {name:"UDance School", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.udance.pt/estilos-dancas-sociais", st:[], np:1, un:1, pg:"/pt/escolas/udance-school"}
     ],
     "porto": [
-      {name:"Porto com Salsa", sc:[0, 0, 0, 24.2, 10.0, 0.0], fx:["5,0 ★ · 350", "–"], url:"https://www.portocomsalsa.com", st:[], np:1, pg:"/pt/escolas/porto-com-salsa.html"},
-      {name:"Aleks & Dasha (Furiosa Dance)", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://aleksydasha.com/en#aulas", st:[], np:1, un:1, pg:"/pt/escolas/aleks-dasha-furiosa-dance.html"}
+      {name:"Porto com Salsa", sc:[0, 0, 0, 24.2, 10.0, 0.0], fx:["5,0 ★ · 350", "–"], url:"https://www.portocomsalsa.com", st:[], np:1, pg:"/pt/escolas/porto-com-salsa"},
+      {name:"Aleks & Dasha (Furiosa Dance)", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://aleksydasha.com/en#aulas", st:[], np:1, un:1, pg:"/pt/escolas/aleks-dasha-furiosa-dance"}
     ],
     "faro": [
-      {name:"Academia Salsa Algarve", sc:[0, 0, 0, 22.9, 8.6, 0.0], fx:["5,0 ★ · 114", "–"], url:"https://www.salsa-algarve.com", st:[], np:1, pg:"/pt/escolas/academia-salsa-algarve.html"},
-      {name:"Marcos Figueirinha", sc:[0, 0, 0, 21.8, 7.6, 0.0], fx:["5,0 ★ · 67", "–"], url:"https://www.marcosfigueirinha.dance", st:[], np:1, pg:"/pt/escolas/marcos-figueirinha.html"}
+      {name:"Academia Salsa Algarve", sc:[0, 0, 0, 22.9, 8.6, 0.0], fx:["5,0 ★ · 114", "–"], url:"https://www.salsa-algarve.com", st:[], np:1, pg:"/pt/escolas/academia-salsa-algarve"},
+      {name:"Marcos Figueirinha", sc:[0, 0, 0, 21.8, 7.6, 0.0], fx:["5,0 ★ · 67", "–"], url:"https://www.marcosfigueirinha.dance", st:[], np:1, pg:"/pt/escolas/marcos-figueirinha"}
     ],
     "oeiras": [
-      {name:"Oeiras Dance Academy", sc:[0, 0, 0, 18.1, 7.7, 0.0], fx:["4,7 ★ · 71", "–"], url:"https://www.oeirasdance.pt", st:[], np:1, pg:"/pt/escolas/oeiras-dance-academy.html"}
+      {name:"Oeiras Dance Academy", sc:[0, 0, 0, 18.1, 7.7, 0.0], fx:["4,7 ★ · 71", "–"], url:"https://www.oeirasdance.pt", st:[], np:1, pg:"/pt/escolas/oeiras-dance-academy"}
     ],
     "braga": [
-      {name:"Nuno y Rita", sc:[0, 0, 0, 20.6, 7.7, 0.0], fx:["4,9 ★ · 69", "–"], url:"https://nunoyrita.com/", st:[], np:1, pg:"/pt/escolas/nuno-y-rita.html"},
-      {name:"Ent'Artes Escola de Dança", sc:[0, 0, 0, 20.0, 8.5, 0.0], fx:["4,8 ★ · 109", "–"], url:"https://entartes.pt/", st:[], np:1, pg:"/pt/escolas/ent-artes-escola-de-danca.html"},
-      {name:"Backstage Escola de Dança", sc:[0, 0, 0, 21.7, 8.9, 0.0], fx:["4,9 ★ · 136", "–"], url:"https://backstage.com.pt/", st:[], np:1, pg:"/pt/escolas/backstage-escola-de-danca.html"},
-      {name:"Bracara Team", sc:[0, 0, 0, 21.4, 8.5, 0.0], fx:["4,9 ★ · 110", "–"], url:"https://bracarateam.com/", st:[], np:1, pg:"/pt/escolas/bracara-team.html"},
-      {name:"Danças Latinas UMinho", sc:[0, 0, 0, 16.8, 5.3, 0.0], fx:["4,8 ★ · 18", "–"], url:"https://www.google.com/maps/search/?api=1&query=Danças+Latinas+UMinho+Braga", st:[], np:1, pg:"/pt/escolas/dancas-latinas-uminho.html"}
+      {name:"Nuno y Rita", sc:[0, 0, 0, 20.6, 7.7, 0.0], fx:["4,9 ★ · 69", "–"], url:"https://nunoyrita.com/", st:[], np:1, pg:"/pt/escolas/nuno-y-rita"},
+      {name:"Ent'Artes Escola de Dança", sc:[0, 0, 0, 20.0, 8.5, 0.0], fx:["4,8 ★ · 109", "–"], url:"https://entartes.pt/", st:[], np:1, pg:"/pt/escolas/ent-artes-escola-de-danca"},
+      {name:"Backstage Escola de Dança", sc:[0, 0, 0, 21.7, 8.9, 0.0], fx:["4,9 ★ · 136", "–"], url:"https://backstage.com.pt/", st:[], np:1, pg:"/pt/escolas/backstage-escola-de-danca"},
+      {name:"Bracara Team", sc:[0, 0, 0, 21.4, 8.5, 0.0], fx:["4,9 ★ · 110", "–"], url:"https://bracarateam.com/", st:[], np:1, pg:"/pt/escolas/bracara-team"},
+      {name:"Danças Latinas UMinho", sc:[0, 0, 0, 16.8, 5.3, 0.0], fx:["4,8 ★ · 18", "–"], url:"https://www.google.com/maps/search/?api=1&query=Danças+Latinas+UMinho+Braga", st:[], np:1, pg:"/pt/escolas/dancas-latinas-uminho"}
     ],
     "coimbra": [
-      {name:"Escola de Dança Ritmo Latino", sc:[0, 0, 0, 14.7, 5.5, 0.0], fx:["4,5 ★ · 20", "–"], url:"https://ritmolatino.pt/", st:[], np:1, pg:"/pt/escolas/escola-de-danca-ritmo-latino.html"}
+      {name:"Escola de Dança Ritmo Latino", sc:[0, 0, 0, 14.7, 5.5, 0.0], fx:["4,5 ★ · 20", "–"], url:"https://ritmolatino.pt/", st:[], np:1, pg:"/pt/escolas/escola-de-danca-ritmo-latino"}
     ],
     "aveiro": [
-      {name:"Dancenter Academia", sc:[0, 0, 0, 21.4, 8.5, 0.0], fx:["4,9 ★ · 109", "–"], url:"https://dancenter.pt/", st:[], np:1, pg:"/pt/escolas/dancenter-academia.html"},
-      {name:"Academia R&D", sc:[0, 0, 0, 21.6, 8.8, 0.0], fx:["4,9 ★ · 127", "–"], url:"https://academiard.com/", st:[], np:1, pg:"/pt/escolas/academia-r-d.html"},
-      {name:"Dance Soul Academy", sc:[0, 0, 0, 18.6, 6.9, 0.0], fx:["4,8 ★ · 45", "–"], url:"https://dancesoulacademy.pt/", st:[], np:1, pg:"/pt/escolas/dance-soul-academy.html"},
-      {name:"Lpstudio", sc:[0, 0, 0, 17.4, 5.9, 0.0], fx:["4,8 ★ · 25", "–"], url:"https://lpstudio.pt/", st:[], np:1, pg:"/pt/escolas/lpstudio.html"},
-      {name:"Escola de Dança Sandra Leite", sc:[0, 0, 0, 19.2, 6.5, 0.0], fx:["4,9 ★ · 36", "–"], url:"https://escolasandraleite.pt/", st:[], np:1, pg:"/pt/escolas/escola-de-danca-sandra-leite.html"}
+      {name:"Dancenter Academia", sc:[0, 0, 0, 21.4, 8.5, 0.0], fx:["4,9 ★ · 109", "–"], url:"https://dancenter.pt/", st:[], np:1, pg:"/pt/escolas/dancenter-academia"},
+      {name:"Academia R&D", sc:[0, 0, 0, 21.6, 8.8, 0.0], fx:["4,9 ★ · 127", "–"], url:"https://academiard.com/", st:[], np:1, pg:"/pt/escolas/academia-r-d"},
+      {name:"Dance Soul Academy", sc:[0, 0, 0, 18.6, 6.9, 0.0], fx:["4,8 ★ · 45", "–"], url:"https://dancesoulacademy.pt/", st:[], np:1, pg:"/pt/escolas/dance-soul-academy"},
+      {name:"Lpstudio", sc:[0, 0, 0, 17.4, 5.9, 0.0], fx:["4,8 ★ · 25", "–"], url:"https://lpstudio.pt/", st:[], np:1, pg:"/pt/escolas/lpstudio"},
+      {name:"Escola de Dança Sandra Leite", sc:[0, 0, 0, 19.2, 6.5, 0.0], fx:["4,9 ★ · 36", "–"], url:"https://escolasandraleite.pt/", st:[], np:1, pg:"/pt/escolas/escola-de-danca-sandra-leite"}
     ],
     "funchal": [
-      {name:"OpenDance Madeira", sc:[0, 0, 0, 19.1, 6.5, 0.0], fx:["4,9 ★ · 35", "–"], url:"https://opendancemadeira.com/", st:[], np:1, pg:"/pt/escolas/opendance-madeira.html"}
+      {name:"OpenDance Madeira", sc:[0, 0, 0, 19.1, 6.5, 0.0], fx:["4,9 ★ · 35", "–"], url:"https://opendancemadeira.com/", st:[], np:1, pg:"/pt/escolas/opendance-madeira"}
     ],
     "almada": [
-      {name:"AS Dance Studios", sc:[0, 0, 0, 18.5, 5.5, 0.0], fx:["5,0 ★ · 20", "–"], url:"https://asdancestudios.pt/", st:[], np:1, pg:"/pt/escolas/as-dance-studios.html"}
+      {name:"AS Dance Studios", sc:[0, 0, 0, 18.5, 5.5, 0.0], fx:["5,0 ★ · 20", "–"], url:"https://asdancestudios.pt/", st:[], np:1, pg:"/pt/escolas/as-dance-studios"}
     ],
     "leiria": [
-      {name:"Passocubano", sc:[0, 0, 0, 19.1, 7.4, 0.0], fx:["4,8 ★ · 59", "–"], url:"https://www.google.com/maps/search/?api=1&query=Passocubano+Leiria", st:[], np:1, pg:"/pt/escolas/passocubano.html"},
-      {name:"noRITMO", sc:[0, 0, 0, 16.5, 4.6, 0.0], fx:["4,9 ★ · 12", "–"], url:"https://gonza-rodrigues.pt/", st:[], np:1, pg:"/pt/escolas/noritmo.html"}
+      {name:"Passocubano", sc:[0, 0, 0, 19.1, 7.4, 0.0], fx:["4,8 ★ · 59", "–"], url:"https://www.google.com/maps/search/?api=1&query=Passocubano+Leiria", st:[], np:1, pg:"/pt/escolas/passocubano"},
+      {name:"noRITMO", sc:[0, 0, 0, 16.5, 4.6, 0.0], fx:["4,9 ★ · 12", "–"], url:"https://gonza-rodrigues.pt/", st:[], np:1, pg:"/pt/escolas/noritmo"}
     ],
     "sintra": [
-      {name:"Escola de Dança Sintra", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://www.google.com/maps/search/?api=1&query=Escola+de+Dança+Sintra+Sintra", st:[], np:1, pg:"/pt/escolas/escola-de-danca-sintra.html"},
-      {name:"Sintra Dance Academy", sc:[0, 0, 0, 17.6, 7.0, 0.0], fx:["4,7 ★ · 47", "–"], url:"https://aiadanca.com/", st:[], np:1, pg:"/pt/escolas/sintra-dance-academy.html"},
-      {name:"Soul Dance", sc:[0, 0, 0, 18.7, 7.0, 0.0], fx:["4,8 ★ · 47", "–"], url:"https://souldancestudio.pt/", st:[], np:1, pg:"/pt/escolas/soul-dance.html"},
-      {name:"Dance Factory Studios", sc:[0, 0, 0, 17.5, 9.4, 0.0], fx:["4,6 ★ · 177", "–"], url:"https://dancefactory.com.pt/", st:[], np:1, pg:"/pt/escolas/dance-factory-studios.html"}
+      {name:"Escola de Dança Sintra", sc:[0, 0, 0, 18.9, 5.8, 0.0], fx:["5,0 ★ · 23", "–"], url:"https://www.google.com/maps/search/?api=1&query=Escola+de+Dança+Sintra+Sintra", st:[], np:1, pg:"/pt/escolas/escola-de-danca-sintra"},
+      {name:"Sintra Dance Academy", sc:[0, 0, 0, 17.6, 7.0, 0.0], fx:["4,7 ★ · 47", "–"], url:"https://aiadanca.com/", st:[], np:1, pg:"/pt/escolas/sintra-dance-academy"},
+      {name:"Soul Dance", sc:[0, 0, 0, 18.7, 7.0, 0.0], fx:["4,8 ★ · 47", "–"], url:"https://souldancestudio.pt/", st:[], np:1, pg:"/pt/escolas/soul-dance"},
+      {name:"Dance Factory Studios", sc:[0, 0, 0, 17.5, 9.4, 0.0], fx:["4,6 ★ · 177", "–"], url:"https://dancefactory.com.pt/", st:[], np:1, pg:"/pt/escolas/dance-factory-studios"}
     ],
     "portimao": [
-      {name:"Dança Mais", sc:[0, 0, 0, 21.9, 7.7, 0.0], fx:["5,0 ★ · 70", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dança+Mais+Portimão", st:[], np:1, pg:"/pt/escolas/danca-mais.html"}
+      {name:"Dança Mais", sc:[0, 0, 0, 21.9, 7.7, 0.0], fx:["5,0 ★ · 70", "–"], url:"https://www.google.com/maps/search/?api=1&query=Dança+Mais+Portimão", st:[], np:1, pg:"/pt/escolas/danca-mais"}
     ],
     "setubal": [
-      {name:"Setubailas", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/pt/event/portugal/setubal/new-salsa-bachata-and-kizomba-class-at-setubailas/", st:[], np:1, un:1, pg:"/pt/escolas/setubailas.html"}
+      {name:"Setubailas", sc:[0, 0, 0, 0, 0, 0], fx:["–", "–"], url:"https://www.salsavida.com/pt/event/portugal/setubal/new-salsa-bachata-and-kizomba-class-at-setubailas/", st:[], np:1, un:1, pg:"/pt/escolas/setubailas"}
     ]
   };
   var VOTE_ENDPOINT = "https://script.google.com/macros/s/AKfycbzAANOuM7cA3QgqeXZXOKZEYumNFsENBZaIicJSaJluR90rTl2iw30Sk522vxIurDsg/exec";
@@ -1112,7 +1112,7 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
           if(e.un){ why='<div class="lk" style="color:var(--muted)">'+esc(en?UNMSG[1]:UNMSG[0])+' <a href="/bewerbung">'+esc(en?"Confirm now":"Confirmar agora")+' →</a></div>'; }
           why+='<div class="vote"><button type="button" class="btn btn-gold vbtn" data-s="'+esc(e.name)+'" data-c="'+cn(e)+'">&#9733; '+esc(L("vote_btn"))+'</button>'
             +'<form class="vform" hidden novalidate><input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px"><label>'+esc(L("vote_mail"))+'<input type="email" name="email" required autocomplete="email" inputmode="email"></label><label class="newsopt"><input type="checkbox" name="news" value="1"> <span>'+esc(L("news_opt"))+'</span></label><button type="submit" class="btn btn-gold">'+esc(L("vote_send"))+'</button><small>'+esc(L("vote_note"))+'</small></form><p class="vmsg" role="status" hidden></p></div>';
-          why+='<div class="lk"><a href="'+(e.np?e.pg:'schools/'+slug(e.name)+'.html')+'"><b>'+esc(L("page_link"))+' →</b></a></div>';
+          why+='<div class="lk"><a href="'+(e.np?e.pg:'schools/'+slug(e.name))+'"><b>'+esc(L("page_link"))+' →</b></a></div>';
           h+='<li'+(i>=10?' class="more" hidden':'')+'><details class="irk'+g+'"><summary><span class="rk">'+(i===0&&!e.un?CROWN+'<i class="sp a"></i><i class="sp b"></i><i class="sp c"></i><i class="sp d"></i>':'')+(e.un?"–":(i+1))+'</span><span class="who"><b><a href="'+(e.np?e.pg:"schools/"+slug(e.name)+".html")+'">'+esc(e.name)+'</a></b>'
             +(isCountry(c)?'<small>'+cn(e)+'</small>':'')+'</span>'+(e.un?'<span class="score na"><small>'+esc(en?UNFINAL[1]:UNFINAL[0])+'</small></span><span class="meter"></span>':'<span class="score">'+num(e.pts)+'<small> / 100</small></span><span class="meter"><i style="width:'+e.pts+'%"></i></span>')+'</summary>'
             +'<div class="iwhy">'+why+'</div></details></li>';

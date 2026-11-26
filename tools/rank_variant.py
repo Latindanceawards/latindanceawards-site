@@ -47,9 +47,9 @@ def polish_entries(P, base='/pl/szkoly/'):
         y, b, ev, f, po, st = P.EXTRA.get(name, (0, 0, 0, 0, 0, []))
         fxs = f'{f:,}'.replace(',', '.') + ' · ' + f'{po:,}'.replace(',', '.') if f else '–'
         if r is None:  # no Google rating collected yet: listed in the ranking, but without points or place
-            out.setdefault(city, []).append(dict(name=name, sc=[0, 0, 0, 0, 0, 0], fx=['–', '–'], url=url, st=[], np=1, un=1, pg=base + pl_slug(name) + '.html'))
+            out.setdefault(city, []).append(dict(name=name, sc=[0, 0, 0, 0, 0, 0], fx=['–', '–'], url=url, st=[], np=1, un=1, pg=base + pl_slug(name)))
             continue
-        out.setdefault(city, []).append(dict(name=name, sc=[y, b, ev, g, rv, social(f, po)], fx=[fx_str(r, v), fxs], url=url, st=st, np=1, pg=base + pl_slug(name) + '.html'))
+        out.setdefault(city, []).append(dict(name=name, sc=[y, b, ev, g, rv, social(f, po)], fx=[fx_str(r, v), fxs], url=url, st=st, np=1, pg=base + pl_slug(name)))
     return out
 
 def total(e): return round(sum(e['sc']), 1)
@@ -119,7 +119,7 @@ def make_js(scope, groups, tx, cands, quick, scale, pl=False, extra=None, code='
     # schools without an own page here link to their website
     js = sub1(js, '<b><a href="schools/\'+slug(e.name)+\'.html">',
               '<b><a href="\'+(e.np?e.pg:"schools/"+slug(e.name)+".html")+\'">')
-    js = sub1(js, "why+='<div class=\"lk\"><a href=\"schools/'+slug(e.name)+'.html\">", "why+='<div class=\"lk\"><a href=\"'+(e.np?e.pg:'schools/'+slug(e.name)+'.html')+'\">")
+    js = sub1(js, "why+='<div class=\"lk\"><a href=\"schools/'+slug(e.name)+'.html\">", "why+='<div class=\"lk\"><a href=\"'+(e.np?e.pg:'schools/'+slug(e.name))+'\">")
     # factors that no country has collected yet are shown as "to be confirmed"
     old_tbc = re.search(r'var TBC=en\?\[.*?\]\]:\[\[.*?\]\];', js, re.S).group(0)
     ff = extra['tbc']
