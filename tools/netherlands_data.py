@@ -130,4 +130,7 @@ EXTRA = {
  'Salsachun': (10, 8, 4, 0, 0, []),
  'Salsa te Gusta': (0, 8, 4, 0, 0, []),
  'Punto Cubano Salsa Amsterdam': (10, 10, 7, 0, 0, []),
+ 'Bachata Passion Den Haag': (0, 8, 7, 0, 0, []),  # reply 26 Nov: beginner classes, monthly events in Rijswijk & Utrecht
+ 'Bachata Passion Utrecht': (0, 8, 7, 0, 0, []),
+ 'Bachata Passion Nijmegen': (0, 8, 0, 0, 0, []),
 }
