@@ -133,4 +133,5 @@ EXTRA = {
  'Bachata Passion Den Haag': (0, 8, 7, 0, 0, []),  # reply 26 Nov: beginner classes, monthly events in Rijswijk & Utrecht
  'Bachata Passion Utrecht': (0, 8, 7, 0, 0, []),
  'Bachata Passion Nijmegen': (0, 8, 0, 0, 0, []),
+ 'Bachata Romantica': (5, 10, 10, 0, 0, []),  # reply 27 Nov: founded 2018, beginner pack + weekly social, monthly Bachata Wonderland + quarterly weekender
 }

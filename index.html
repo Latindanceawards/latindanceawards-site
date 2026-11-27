@@ -1215,7 +1215,7 @@ try{var sv=localStorage.getItem("lda-gt");if(sv&&sv!=="orig"&&L.indexOf(sv)>-1){
   window.addEventListener("hashchange",function(){ var c=location.hash.slice(1); if(TX.cities[c]){ select(c,false); document.querySelector(".tabs").scrollIntoView({behavior:"smooth",block:"start"}); } });
   document.addEventListener("langchange",function(){ syncPicker(); render(); });
   select((location.hash||"").slice(1)||SCOPE,false);
-  (function(){var s=document.createElement("script");s.src="/data/candidates.f4e83964.js";s.async=true;s.onload=function(){if(window.__CAND){CANDIDATES=window.__CAND;try{syncPicker();}catch(e){}render();}};document.head.appendChild(s);})();
+  (function(){var s=document.createElement("script");s.src="/data/candidates.bb1aa6a6.js";s.async=true;s.onload=function(){if(window.__CAND){CANDIDATES=window.__CAND;try{syncPicker();}catch(e){}render();}};document.head.appendChild(s);})();
 
   // Countdown
   var cells={}; document.querySelectorAll("#countdown b").forEach(function(b){ cells[b.dataset.u]=b; });
